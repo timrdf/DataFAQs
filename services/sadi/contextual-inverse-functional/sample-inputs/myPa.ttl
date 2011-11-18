@@ -1,0 +1,4 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix : <http://example.org/id/myPA#> .
+
+:myPA dcterms:identifier "PA" .
