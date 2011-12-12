@@ -1,7 +1,25 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix :     <http://purl.org/twc/vocab/datafaqs#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix ov:      <http://open.vocab.org/terms/> .
+@prefix moat:    <http://moat-project.org/ns#> .
+@prefix :        <http://purl.org/twc/vocab/datafaqs#> .
 
+:CKANDataset
+   a owl:Class;
+   rdfs:label   "CKAN Dataset";
+   rdfs:comment "A dataset listed at thedatahub.org, whether or not it is encoded in RDF or is part of the lodcloud group.";
+.
 
+:Tagged
+   a owl:Class;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty moat:taggedWith;
+      owl:minCardinality 1;
+   ];
+.
