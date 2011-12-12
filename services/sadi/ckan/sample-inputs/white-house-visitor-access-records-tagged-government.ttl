@@ -1,0 +1,19 @@
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix sioc:     <http://rdfs.org/sioc/ns#> .
+@prefix ov:       <http://open.vocab.org/terms/> .
+@prefix moat:     <http://moat-project.org/ns#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://dsi.lod-cloud.net/dataset/white-house-visitor-access-records> 
+   a datafaqs:CKANDataset;
+   foaf:isPrimaryTopicOf <http://thedatahub.org/dataset/white-house-visitor-access-records>;
+   dcterms:identifier "e59f5df0-05b4-40e5-99b1-f801c15e6e93";
+
+   ov:shortName       "white-house-visitor-access-records";
+   a ov:DigitalAsset;
+
+   a datafaqs:TaggedCKANDataset;
+   moat:taggedWithTag "government";
+   a sioc:Item;
+.
