@@ -23,3 +23,8 @@
       owl:minCardinality 1;
    ];
 .
+
+:TaggedCKANDataset
+   a owl:Class;
+   owl:intersectionOf ( :Tagged :CKANDataset );
+.
