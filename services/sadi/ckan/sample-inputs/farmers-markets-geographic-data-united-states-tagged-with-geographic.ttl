@@ -1,0 +1,19 @@
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix sioc:     <http://rdfs.org/sioc/ns#> .
+@prefix ov:       <http://open.vocab.org/terms/> .
+@prefix moat:     <http://moat-project.org/ns#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://dsi.lod-cloud.net/dataset/farmers-markets-geographic-data-united-states> 
+   a datafaqs:CKANDataset;
+   foaf:isPrimaryTopicOf <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>;
+   dcterms:identifier "91d2c0de-75a4-4bb6-b260-bc2946e1be8b";
+
+   ov:shortName       "farmers-markets-geographic-data-united-states";
+   a ov:DigitalAsset;
+
+   a datafaqs:TaggedCKANDataset;
+   moat:taggedWithTag <http://lod-cloud.net/tag/geographic>;
+   a sioc:Item;
+.

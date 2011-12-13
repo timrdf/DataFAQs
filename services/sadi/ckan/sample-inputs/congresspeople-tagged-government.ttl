@@ -5,16 +5,15 @@
 @prefix moat:     <http://moat-project.org/ns#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
-<http://dsi.lod-cloud.net/dataset/white-house-visitor-access-records> 
+<http://dsi.lod-cloud.net/dataset/congresspeople> 
    a datafaqs:CKANDataset;
-   foaf:isPrimaryTopicOf <http://thedatahub.org/dataset/white-house-visitor-access-records>;
-   dcterms:identifier "e59f5df0-05b4-40e5-99b1-f801c15e6e93";
+   foaf:isPrimaryTopicOf <http://thedatahub.org/dataset/congresspeople>;
+   dcterms:identifier "f4c2a8bb-6580-4919-98aa-617feb766b6c";
 
-   ov:shortName       "white-house-visitor-access-records";
+   ov:shortName       "congresspeople";
    a ov:DigitalAsset;
 
    a datafaqs:TaggedCKANDataset;
    moat:taggedWithTag <http://lod-cloud.net/tag/government>;
-   moat:taggedWithTag <http://lod-cloud.net/tag/format-foaf>;
    a sioc:Item;
 .
