@@ -24,7 +24,21 @@
    ];
 .
 
+:Modified
+   a owl:Class;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty dcterms:modified;
+      owl:minCardinality 1;
+   ];
+.
+
 :TaggedCKANDataset
    a owl:Class;
    owl:intersectionOf ( :Tagged :CKANDataset );
+.
+
+:ModifiedCKANDataset
+   a owl:Class;
+   owl:intersectionOf ( :Modified :CKANDataset );
 .
