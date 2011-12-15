@@ -79,6 +79,18 @@ class TagCKANDataset(sadi.Service):
         self.ckan.package_entity_get(ckan_id)
         dataset = self.ckan.last_message
 
+        # Core: author
+        #for author in input.dcterms_author:
+        #   dataset['author'].append(author)
+        #   dataset['author_email'].append(author)
+
+        # Core: groups
+        # ?d dc:isPartOf <http://ckan.net/group/datafaqs> . <http://ckan.net/group/datafaqs> a datafaqs:CKANGroup .
+        for ckan_group in input.dcterms_isPartOf:
+           if ns.DATAFAQS['CKANGroup'] in ckan_group.rdf_type and \
+              str(ckan_group) != 'http://ckan.net/group/lodcloud':
+               dataset['groups'].append(ckan_group.replace('http://ckan.net/group/','')
+
         # Extra: shortName
         if input.ov_shortName:
            dataset['extras']['shortname'] = input.ov_shortName.first
@@ -91,22 +103,28 @@ class TagCKANDataset(sadi.Service):
         if input.void_triples:
            dataset['extras']['triples'] = input.void_triples.first
 
-        # Extra: link:*
         linksQuery = '''
-select distinct ?bubble ?otherbubble ?triples where
-?bubble
-   void:subset [
-      a void:Linkset;
-      void:target  ?bubble,
-                   ?otherbubble;
-      void:triples ?triples;
-   ] .
+prefix void: <http://rdfs.org/ns/void#>
+select distinct ?otherbubble ?triples 
+where { 
+   <''' + input.subject + '''>
+      void:subset [
+         a void:Linkset;
+         void:target  <''' + input.subject + '''>,
+                      ?otherbubble;
+         void:triples ?triples;
+      ] .
+   filter(regex(str(?otherbubble),'^http://thedatahub.org/dataset/'))
+}
 '''
-        #query = select("?triples").where(("?s", ns.VOID["triples"], "?triples"))
-        #results = input.session.execute(query)
-        #for subset in input.void_subset:
-        #   if subset.void_triples > 0:
-        #      print subset + ' ' + str(subset.void_triples)
+        # Extra: link:*
+        results = input.session.default_store.execute_sparql(linksQuery)
+        for bindings in results['results']['bindings']:
+            otherbubble = str(bindings['otherbubble']['value'])
+            if otherbubble != str(input.subject): # TODO: why is input.subject appearing?
+               attribute = 'links:' + otherbubble.replace('http://thedatahub.org/dataset/','')
+               print attribute + ' = ' + bindings['triples']['value']
+               dataset['extras'][attribute] = bindings['triples']['value']
 
         # Tags
         for tag_uri in input.moat_taggedWithTag:
