@@ -42,3 +42,11 @@
    a owl:Class;
    owl:intersectionOf ( :Modified :CKANDataset );
 .
+
+:namespace
+   a owl:ObjectProperty;
+   rdfs:domain :CKANDataset;
+   rdfs:comment "The namespace of instances within this lodcloud bubble.";
+   rdfs:seeAlso <http://wiki.ckan.org/Extras/namespace>,
+                <http://www.w3.org/wiki/TaskForces/CommunityProjects/LinkingOpenData/DataSets/CKANmetainformation>;
+.
