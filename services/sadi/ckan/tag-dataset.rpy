@@ -52,7 +52,7 @@ class TagCKANDataset(sadi.Service):
         
         # Instantiate the CKAN client.
         # http://docs.python.org/library/configparser.html (could use this technique)
-        key = os.environ['X-CKAN-API-Key']
+        key = os.environ['X_CKAN_API_Key']
         if len(key) <= 1:
             print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
             sys.exit(1)
