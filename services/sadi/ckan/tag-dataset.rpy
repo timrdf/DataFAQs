@@ -135,16 +135,16 @@ where {
                 dataset['tags'].append(tag)
 
         # Tags: format-*
-#        for vocab in input.void_vocabulary:
-#            # http://prefix.cc/?q=http://www.w3.org/2003/01/geo/wgs84_pos 
-#            # 302s to http://prefix.cc/geo
-#            response = getResponse('http://prefix.cc/?' + urllib.urlencode({'q':vocab}))
-#            if response.status == 302:
-#                prefix_tag = 'format-' + response.msg.dict['location'].replace('http://prefix.cc/','')
-#                print str(response.status) + ' ' + vocab + ' ' + response.msg.dict['location'] + ' ' + prefix_tag
-#                dataset['tags'].append(prefix_tag)
-#            else:
-#                print str(response.status) + ' ' + vocab
+        for vocab in input.void_vocabulary:
+            # http://prefix.cc/?q=http://www.w3.org/2003/01/geo/wgs84_pos 
+            # 302s to http://prefix.cc/geo
+            response = getResponse('http://prefix.cc/?' + urllib.urlencode({'q':vocab}))
+            if response.status == 302:
+                prefix_tag = 'format-' + response.msg.dict['location'].replace('http://prefix.cc/','')
+                print str(response.status) + ' ' + vocab + ' ' + response.msg.dict['location'] + ' ' + prefix_tag
+                dataset['tags'].append(prefix_tag)
+            else:
+                print str(response.status) + ' ' + vocab
 
         # POST the new details of the dataset.
         self.ckan.package_entity_put(dataset)
