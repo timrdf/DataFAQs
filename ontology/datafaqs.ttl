@@ -7,6 +7,7 @@
 @prefix sioc:    <http://rdfs.org/sioc/ns#> .
 @prefix ov:      <http://open.vocab.org/terms/> .
 @prefix moat:    <http://moat-project.org/ns#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
 @prefix :        <http://purl.org/twc/vocab/datafaqs#> .
 
 :CKANDataset
@@ -50,3 +51,34 @@
    rdfs:seeAlso <http://wiki.ckan.org/Extras/namespace>,
                 <http://www.w3.org/wiki/TaskForces/CommunityProjects/LinkingOpenData/DataSets/CKANmetainformation>;
 .
+
+:CKANGroup
+   a owl:Class;
+   rdfs:seeAlso <http://thedatahub.org/group/lodcloud>;
+.
+
+:SizedDataset
+   rdfs:subClassOf void:Dataset;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty void:triples;
+      owl:minCardinality 1;
+   ];
+. 
+
+:internet_domain
+   a owl:ObjectProperty;
+   rdfs:comment
+"""A PLD is an internet domain that requires payment at a generic top-level domain (gTLD) or country code top-level domain (ccTLD) registrar. PLDs are usually one level below the corresponding gTLD (e.g., dbpedia.org vs. org), with certain exceptions for cc-TLDs (e.g., ebay.co.uk, det.wa.edu.au)""",
+"""A pay-level domain (PLD) is any domain that requires payment at a TLD or cc-TLD registrar. PLDs are usually one level below the correspond- ing TLD (e.g., amazon.com), with certain exceptions for cc- TLDs (e.g., ebay.co.uk, det.wa.edu.au)""";
+   rdfs:seeAlso <http://dx.doi.org.libproxy.rpi.edu/10.1145/1367497.1367556>;
+.
+
+:DatasetWithInternetDomain
+   rdfs:subClassOf void:Dataset;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty :internet_domain;
+      owl:minCardinality 1;
+   ];
+. 
