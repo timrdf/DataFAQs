@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:Description rdf:about="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity"><rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/></rdf:Description>
+<rdf:Description rdf:about="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity"><void:subset xmlns:void="http://rdfs.org/ns/void#" rdf:resource="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25"/></rdf:Description>
+<rdf:Description rdf:about="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25"><rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/></rdf:Description>
+<rdf:Description rdf:about="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25/conversion/raw"><rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/></rdf:Description>
+<rdf:Description rdf:about="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25"><void:subset xmlns:void="http://rdfs.org/ns/void#" rdf:resource="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25/conversion/raw"/></rdf:Description>
+<rdf:Description rdf:about="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25/conversion/enhancement/1"><rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/></rdf:Description>
+<rdf:Description rdf:about="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25"><void:subset xmlns:void="http://rdfs.org/ns/void#" rdf:resource="http://logd.tw.rpi.edu/source/grinstein-cs-uml-edu/dataset/obesity/version/2011-Oct-25/conversion/enhancement/1"/></rdf:Description>
+</rdf:RDF>

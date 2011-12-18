@@ -8,6 +8,7 @@
 @prefix ov:      <http://open.vocab.org/terms/> .
 @prefix moat:    <http://moat-project.org/ns#> .
 @prefix void:    <http://rdfs.org/ns/void#> .
+@prefix moby:    <http://www.mygrid.org.uk/mygrid-moby-service#> .
 @prefix :        <http://purl.org/twc/vocab/datafaqs#> .
 
 :CKANDataset
@@ -94,4 +95,25 @@
 .
 :Unsatisfactory
    a owl:Class;
+.
+
+:resolved_triples
+   a owl:DatatypeProperty;
+   rdfs:comment "The number of triples returned by dereferencing the subject URI.";
+.
+
+:FAqTService
+   a owl:Class;
+   rdfs:subClassOf moby:serviceDescription;
+   rdfs:comment "A SADI service that evaluates a given dataset and provides an RDF-encoded report using the FAqT Vocabulary.";
+.
+
+:DatasetWithDump
+   a owl:Class;
+   rdfs:subClassOf void:Dataset;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty void:dataDump;
+      owl:minCardinality 1;
+   ];
 .
