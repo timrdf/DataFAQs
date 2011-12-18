@@ -1,0 +1,11 @@
+@prefix dcterms:  <http://purl.org/dc/terms/>           .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/>          .
+@prefix sioc:     <http://rdfs.org/sioc/ns#>            .
+@prefix ov:       <http://open.vocab.org/terms/>        .
+@prefix void:     <http://rdfs.org/ns/void#>            .
+@prefix moat:     <http://moat-project.org/ns#>         .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://logd.tw.rpi.edu/test/redirect_loop_1_of_4> 
+   a void:Dataset ;
+.

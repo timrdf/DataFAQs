@@ -83,3 +83,15 @@
       owl:minCardinality 1;
    ];
 . 
+
+:EvaluatedDataset
+   a owl:Class;
+   owl:disjointUnion ( :Satisfactory :Unsatisfactory );
+.
+:Satisfactory
+   a owl:Class;
+   owl:disjointWith :Unsatisfactory;
+.
+:Unsatisfactory
+   a owl:Class;
+.
