@@ -71,7 +71,8 @@
    rdfs:comment
 """A PLD is an internet domain that requires payment at a generic top-level domain (gTLD) or country code top-level domain (ccTLD) registrar. PLDs are usually one level below the corresponding gTLD (e.g., dbpedia.org vs. org), with certain exceptions for cc-TLDs (e.g., ebay.co.uk, det.wa.edu.au)""",
 """A pay-level domain (PLD) is any domain that requires payment at a TLD or cc-TLD registrar. PLDs are usually one level below the correspond- ing TLD (e.g., amazon.com), with certain exceptions for cc- TLDs (e.g., ebay.co.uk, det.wa.edu.au)""";
-   rdfs:seeAlso <http://dx.doi.org.libproxy.rpi.edu/10.1145/1367497.1367556>;
+   rdfs:seeAlso <http://dx.doi.org/10.1145/1367497.1367556>,
+                <http://iswc2010.semanticweb.org/pdf/318.pdf>;
 .
 
 :DatasetWithInternetDomain
