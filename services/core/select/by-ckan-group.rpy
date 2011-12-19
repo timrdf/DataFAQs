@@ -41,7 +41,7 @@ class DatasetsByCKANGroup(sadi.Service):
 
       # Instantiate the CKAN client.
       # http://docs.python.org/library/configparser.html (could use this technique)
-      key = os.environ['X_CKAN_API_Key']
+      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
       if len(key) <= 1:
           print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
           sys.exit(1)
@@ -65,10 +65,13 @@ class DatasetsByCKANGroup(sadi.Service):
       ckan_instance = re.sub('group/.*','group/',input.subject)
       ckan_group_id = re.sub(ckan_instance,'',input.subject)
 
-      Thing = input.session.get_class(surf.ns.OWL.Thing)
+      Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
       for dataset_id in self.ckan.group_entity_get(ckan_group_id)['packages']:
          ckan_uri = 'http://thedatahub.org/dataset/' + dataset_id
-         output.dcterms_hasPart.append(Thing(ckan_uri))
+         dataset = Dataset(ckan_uri)
+         dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
+         dataset.save()
+         output.dcterms_hasPart.append(dataset)
 
       output.save()
 
