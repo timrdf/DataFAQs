@@ -33,7 +33,7 @@ class InternetDomain(sadi.Service):
       return ns.VOID['Dataset']
 
    def getOutputClass(self):
-      return ns.DATAFAQS['DatasetWithInternetDomain']
+      return 'http://sparql.tw.rpi.edu/test/datafaqs.owl#DatasetWithInternetDomain' #ns.DATAFAQS['DatasetWithInternetDomain']
 
    def process(self, input, output):
       parsed = urlparse(input.subject)
