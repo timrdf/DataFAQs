@@ -7,8 +7,8 @@ import sadi
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(void='http://rdfs.org/ns/void#')
-#ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
-ns.register(datafaqs='http://sparql.tw.rpi.edu/test/datafaqs.owl#')
+ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
+#ns.register(datafaqs='http://sparql.tw.rpi.edu/test/datafaqs.owl#')
 
 # The Service itself
 class InternetDomain(sadi.Service):
