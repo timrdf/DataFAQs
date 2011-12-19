@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:moat="http://moat-project.org/ns#" xmlns:moby="http://www.mygrid.org.uk/mygrid-moby-service#" xmlns:ov="http://open.vocab.org/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:void="http://rdfs.org/ns/void#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="http://purl.org/twc/vocab/datafaqs#">
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#CKANDataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#CKANDataset">
+    <rdfs:label>CKAN Dataset</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#CKANDataset">
+    <rdfs:comment>A dataset listed at thedatahub.org, whether or not it is encoded in RDF or is part of the lodcloud group.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:onProperty rdf:resource="http://moat-project.org/ns#taggedWith"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Tagged">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Tagged">
+    <rdfs:subClassOf rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:onProperty rdf:resource="http://purl.org/dc/terms/modified"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Modified">
+    <rdfs:subClassOf rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:first rdf:resource="http://purl.org/twc/vocab/datafaqs#CKANDataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:first rdf:resource="http://purl.org/twc/vocab/datafaqs#Tagged"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:rest rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#TaggedCKANDataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#TaggedCKANDataset">
+    <owl:intersectionOf rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:first rdf:resource="http://purl.org/twc/vocab/datafaqs#CKANDataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <rdf:first rdf:resource="http://purl.org/twc/vocab/datafaqs#Modified"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <rdf:rest rdf:nodeID="genid5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#ModifiedCKANDataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#ModifiedCKANDataset">
+    <owl:intersectionOf rdf:nodeID="genid6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#namespace">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#namespace">
+    <rdfs:domain rdf:resource="http://purl.org/twc/vocab/datafaqs#CKANDataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#namespace">
+    <rdfs:comment>The namespace of instances within this lodcloud bubble.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#namespace">
+    <rdfs:seeAlso rdf:resource="http://wiki.ckan.org/Extras/namespace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#namespace">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/wiki/TaskForces/CommunityProjects/LinkingOpenData/DataSets/CKANmetainformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#CKANGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#CKANGroup">
+    <rdfs:seeAlso rdf:resource="http://thedatahub.org/group/lodcloud"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:onProperty rdf:resource="http://rdfs.org/ns/void#triples"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#SizedDataset">
+    <rdfs:subClassOf rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#SizedDataset">
+    <rdfs:subClassOf rdf:nodeID="genid7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#internet_domain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#internet_domain">
+    <rdfs:comment>A PLD is an internet domain that requires payment at a generic top-level domain (gTLD) or country code top-level domain (ccTLD) registrar. PLDs are usually one level below the corresponding gTLD (e.g., dbpedia.org vs. org), with certain exceptions for cc-TLDs (e.g., ebay.co.uk, det.wa.edu.au)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#internet_domain">
+    <rdfs:comment>A pay-level domain (PLD) is any domain that requires payment at a TLD or cc-TLD registrar. PLDs are usually one level below the correspond- ing TLD (e.g., amazon.com), with certain exceptions for cc- TLDs (e.g., ebay.co.uk, det.wa.edu.au)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#internet_domain">
+    <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.1145/1367497.1367556"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#internet_domain">
+    <rdfs:seeAlso rdf:resource="http://iswc2010.semanticweb.org/pdf/318.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:onProperty rdf:resource="http://purl.org/twc/vocab/datafaqs#internet_domain"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetWithInternetDomain">
+    <rdfs:subClassOf rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetWithInternetDomain">
+    <rdfs:subClassOf rdf:nodeID="genid8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <rdf:first rdf:resource="http://purl.org/twc/vocab/datafaqs#Unsatisfactory"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:first rdf:resource="http://purl.org/twc/vocab/datafaqs#Satisfactory"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:rest rdf:nodeID="genid9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#EvaluatedDataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#EvaluatedDataset">
+    <owl:disjointUnion rdf:nodeID="genid10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Satisfactory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Satisfactory">
+    <owl:disjointWith rdf:resource="http://purl.org/twc/vocab/datafaqs#Unsatisfactory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Unsatisfactory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#resolved_triples">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#resolved_triples">
+    <rdfs:comment>The number of triples returned by dereferencing the subject URI.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTService">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTService">
+    <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service#serviceDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTService">
+    <rdfs:comment>A SADI service that evaluates a given dataset and provides an RDF-encoded report using the FAqT Vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <owl:onProperty rdf:resource="http://rdfs.org/ns/void#dataDump"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetWithDump">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetWithDump">
+    <rdfs:subClassOf rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetWithDump">
+    <rdfs:subClassOf rdf:nodeID="genid11"/>
+  </rdf:Description>
+</rdf:RDF>
