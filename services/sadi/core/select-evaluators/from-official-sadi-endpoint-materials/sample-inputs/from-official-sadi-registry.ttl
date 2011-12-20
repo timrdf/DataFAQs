@@ -1,0 +1,53 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :         <#> .
+
+<apply>
+   a datafaqs:QueryToApply;
+   datafaqs:query   <query>;
+   datafaqs:dataset <dataset>;
+   rdfs:seeAlso <http://spinrdf.org/>;
+.
+
+<query>
+   a datafaqs:SPARQLQuery;
+   rdf:value
+"""prefix moby:     <http://www.mygrid.org.uk/mygrid-moby-service#>
+prefix void:     <http://rdfs.org/ns/void#>
+prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#>
+
+select distinct ?service
+where {
+   graph <http://sadiframework.org/registry/> {
+      ?service
+         moby:hasOperation [
+            a moby:operation;
+            moby:inputParameter [
+               moby:objectType void:Dataset;
+            ];
+            moby:outputParameter [
+               moby:objectType datafaqs:EvaluatedDataset;
+            ]
+         ]
+      .
+   }
+}""";
+.
+
+<dataset>
+   a sd:Dataset;
+   sd:namedGraph <graph>;
+. 
+
+<graph>
+   a sd:NamedGraph;
+   sd:name <http://sadiframework.org/registry/>;
+.
+
+<bionet-sparql-service> 
+   a sd:Service; 
+   sd:availableGraphDescriptions <dataset>;
+   sd:endpoint  <http://biordf.net/sparql>;
+.
