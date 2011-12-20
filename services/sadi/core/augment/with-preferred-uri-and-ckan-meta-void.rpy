@@ -31,8 +31,8 @@ class WithPreferredURIAndCKANMetaVoid(sadi.Service):
 
    # Service metadata.
    label                  = 'with-preferred-uri-and-ckan-meta-void'
-   serviceDescriptionText = 'Reference locations that describe the given void:Datasets.'
-   comment                = ''
+   serviceDescriptionText = 'Augment void:Datasets with references to other resources that describe the dataset.'
+   comment                = 'References CKAN extra "preferred_uri" and resource "meta/void".'
    serviceNameText        = 'with-preferred-uri-and-ckan-meta-void' # Convention: Match 'name' below.
    name                   = 'with-preferred-uri-and-ckan-meta-void' # This value determines the service URI relative to http://localhost:9090/
                                                                     # Convention: Use the name of this file for this value.
