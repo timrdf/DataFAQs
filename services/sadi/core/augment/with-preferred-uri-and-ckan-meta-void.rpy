@@ -40,12 +40,8 @@ class WithPreferredURIAndCKANMetaVoid(sadi.Service):
       sadi.Service.__init__(self)
 
       # Instantiate the CKAN client.
-      # http://docs.python.org/library/configparser.html (could use this technique)
-      key = os.environ['X_CKAN_API_Key']
-      if len(key) <= 1:
-          print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-          sys.exit(1)
-      self.ckan = ckanclient.CkanClient(api_key=key)
+      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      self.ckan = ckanclient.CkanClient(api_key = key)
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -72,22 +68,20 @@ class WithPreferredURIAndCKANMetaVoid(sadi.Service):
       # Dereference the preferred URI (denoted via a CKAN "extra")
       Thing = session.get_class(surf.ns.OWL.Thing)
       prefixes = "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-      query = 'select ?uri where { <'+input.subject+'> <http://semantic.ckan.net/schema#extra> [ rdf:value ?uri; rdfs:label "sparql_graph_name"; ] }' # TODO: change to preferred_uri when it shows up.
+      query = 'select ?uri where { <'+input.subject+'> <http://semantic.ckan.net/schema#extra> [ rdf:value ?uri; rdfs:label "preferred_uri"; ] }'
       for row in store.execute_sparql(prefixes+query)['results']['bindings']:
          preferred_uri = row['uri']['value']
+         print '  preferred uri: ' + preferred_uri
          output.rdfs_seeAlso.append(Thing(preferred_uri))
 
 
       # Include the CKAN "resource" with "format" "meta/void"
       prefixes = 'prefix dc: <http://purl.org/dc/terms/> prefix dcat: <http://www.w3.org/ns/dcat#> prefix moat: <http://moat-project.org/ns#> '
-      query = 'select ?uri where { <'+input.subject+'> dcat:distribution [ a dcat:Distribution; dcat:accessURL ?uri; dc:format [ a dc:IMT; moat:taggedWithTag [ a moat:Tag; moat:name "meta/void" ] ] ] }'
+      query = 'select ?uri where { <'+input.subject+'> dcat:distribution [ dcat:accessURL ?uri; dc:format [ moat:taggedWithTag [ moat:name "meta/void" ]]] }'
       for row in store.execute_sparql(prefixes+query)['results']['bindings']:
          void_uri = row['uri']['value']
-         print 'void uri: ' + void_uri
+         print '  void uri: ' + void_uri
          output.rdfs_seeAlso.append(Thing(void_uri))
-         #store.load_triples(source = void_uri) # TODO: craps out on turtle parsing.
-         #print str(store.size()-last_size) + ' triples from ' + void_uri
-         #last_size = store.size()
 
       output.save()
 
