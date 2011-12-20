@@ -6,12 +6,12 @@
 
 <apply>
    a datafaqs:QueryToApply;
-   datafaqs:query   <query>;
+   datafaqs:query   <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-evaluators/via-sparql-query-materials/sample-inputs/from-official-sadi-registry.rq>;
    datafaqs:dataset <dataset>;
    rdfs:seeAlso <http://spinrdf.org/>;
 .
 
-<query>
+<https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-evaluators/via-sparql-query-materials/sample-inputs/from-official-sadi-registry.rq>
    a datafaqs:SPARQLQuery;
    rdf:value
 """prefix moby:     <http://www.mygrid.org.uk/mygrid-moby-service#>
