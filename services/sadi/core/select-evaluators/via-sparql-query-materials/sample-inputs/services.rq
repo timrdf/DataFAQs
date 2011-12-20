@@ -1,0 +1,22 @@
+# apply against http://biordf.net/sparql
+
+prefix moby:     <http://www.mygrid.org.uk/mygrid-moby-service#>
+prefix void:     <http://rdfs.org/ns/void#>
+prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#>
+
+select distinct ?service
+where {
+   graph <http://sadiframework.org/registry/> {
+      ?service
+         moby:hasOperation [
+            a moby:operation;
+            moby:inputParameter [
+               moby:objectType void:Dataset;
+            ];
+            moby:outputParameter [
+               moby:objectType datafaqs:EvaluatedDataset;
+            ]
+         ]
+      .
+   }
+}
