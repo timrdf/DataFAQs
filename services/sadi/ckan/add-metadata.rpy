@@ -20,11 +20,10 @@ connections = {'http' :httplib.HTTPConnection,
 
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
-ns.register(cif='http://purl.org/twc/ontology/cif.owl#')
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
-ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 ns.register(void='http://rdfs.org/ns/void#')
+ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 THEDATAHUB = 'http://thedatahub.org/dataset/'
 
@@ -44,9 +43,9 @@ class AddCKANMetadata(sadi.Service):
     label                  = 'Update CKAN Dataset Metadata'
     serviceDescriptionText = 'Modifies an existing CKAN dataset listing based on the MOAT tags and VoID POSTed to this service.'
     comment                = ''
-    serviceNameText        = 'add-metadata'
+    serviceNameText        = 'add-metadata' # Convention: same as 'name' below.
     name                   = 'add-metadata' # This value determines the service URI relative to http://localhost:9090/
-
+                                            # Convention: same as filename.
     def __init__(self): 
         sadi.Service.__init__(self)
         
@@ -72,6 +71,7 @@ class AddCKANMetadata(sadi.Service):
         return ns.DATAFAQS['ModifiedCKANDataset']
 
     def process(self, input, output):
+        print input
         ckan_id = input.dcterms_identifier.first
         print 'processing ' + input.subject + ' ckan_id ' + ckan_id
       
