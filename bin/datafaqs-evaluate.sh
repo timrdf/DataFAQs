@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# datafaqs-evaluate.sh
+# https://github.com/timrdf/DataFAQs/blob/master/bin/datafaqs-evaluate.sh
 
 if [ "$1" == "--help" ]; then
    echo "usage: `basename $0` [-n] [--force]"
