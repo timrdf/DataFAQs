@@ -138,7 +138,7 @@ popd &> /dev/null
 
 else
    epoch="2011-Dec-20_17_14_17"
-   epochDir="/Users/lebot/afrl/phd/projects/DataFAQs/faqt-brick/datafaqs.localhost/epochs/2011-Dec-20_17_14_17" 
+   epochDir="`pwd`/datafaqs.localhost/epochs/2011-Dec-20_17_14_17" 
    numDatasets=3
    numFAqTs=2
    echo
