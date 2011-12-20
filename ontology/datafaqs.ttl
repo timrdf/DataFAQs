@@ -9,6 +9,7 @@
 @prefix moat:    <http://moat-project.org/ns#> .
 @prefix void:    <http://rdfs.org/ns/void#> .
 @prefix moby:    <http://www.mygrid.org.uk/mygrid-moby-service#> .
+@prefix sd:      <http://www.w3.org/ns/sparql-service-description#> .
 @prefix :        <http://purl.org/twc/vocab/datafaqs#> .
 
 :CKANDataset
@@ -56,6 +57,15 @@
 :CKANGroup
    a owl:Class;
    rdfs:seeAlso <http://thedatahub.org/group/lodcloud>;
+.
+
+:Composite
+   a owl:Class;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty dcterms:hasPart;
+      owl:minCardinality 1;
+   ];
 .
 
 :SizedDataset
@@ -108,6 +118,20 @@
    rdfs:comment "A SADI service that evaluates a given dataset and provides an RDF-encoded report using the FAqT Vocabulary.";
 .
 
+:FAqTServiceCollection
+   a owl:Class;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty dcterms:hasPart;
+      owl:minCardinality 1;
+   ];
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty dcterms:hasPart;
+      owl:someValuesFrom :FAqTService;
+   ];
+. 
+
 :DatasetWithDump
    a owl:Class;
    rdfs:subClassOf void:Dataset;
@@ -116,4 +140,24 @@
       owl:onProperty void:dataDump;
       owl:minCardinality 1;
    ];
+.
+
+
+:QueryToApply;
+   a owl:Class;
+.
+:query
+   a owl:ObjectProperty;
+   rdfs:domain :QueryToApply;
+   rdfs:range :SPARQLQuery, <http://spinrdf.org/sp#Ask>;
+.
+:SPARQLQuery
+   a owl:Class;
+   rdfs:comment "Need to reconcile with SPIN http://spinrdf.org/sp#";
+   rdfs:seeAlso <http://spinrdf.org/>;
+.
+:dataset
+   a owl:ObjectProperty;
+   rdfs:domain :QueryToApply;
+   rdfs:range sd:Dataset;
 .
