@@ -1,5 +1,0 @@
-@prefix void: <http://rdfs.org/ns/void#> .
-
-<http://thedatahub.org/dataset/congresspeople> 
-	a void:Dataset;	
-	void:dataDump <https://commondatastorage.googleapis.com/ckannet-storage/2011-11-01T195324/triples.nt> .
