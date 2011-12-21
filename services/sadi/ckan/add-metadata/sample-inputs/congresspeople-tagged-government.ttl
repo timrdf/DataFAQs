@@ -7,9 +7,10 @@
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
 <http://dsi.lod-cloud.net/dataset/congresspeople> 
+#<http://thedatahub.org/dataset/congresspeople>
     a datafaqs:CKANDataset ;
    datafaqs:namespace <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress>;
-   foaf:isPrimaryTopicOf <http://thedatahub.org/dataset/congresspeople>;
+   foaf:isPrimaryTopicOf <http://dsi.lod-cloud.net/dataset/congresspeople>;
    dcterms:identifier "f4c2a8bb-6580-4919-98aa-617feb766b6c";
 
    ov:shortName       "congresspeople";
@@ -43,7 +44,7 @@
    # links:dbpedia 67
    void:subset [
       a void:Linkset;
-      void:target <http://thedatahub.org/dataset/congresspeople>, 
+      void:target <http://dsi.lod-cloud.net/dataset/congresspeople>, 
                   <http://thedatahub.org/dataset/dbpedia> ;
       # http://dbpedia.org/resource
       void:triples 67;
@@ -52,7 +53,7 @@
    # links:geonames-semantic-web 50
    void:subset [
       a void:Linkset;
-      void:target <http://thedatahub.org/dataset/congresspeople>, 
+      void:target <http://dsi.lod-cloud.net/dataset/congresspeople>, 
                   <http://thedatahub.org/dataset/geonames-semantic-web> ;
       # http://sws.geonames.org
       void:triples 50;
@@ -61,9 +62,13 @@
    # links:govtrack 56
    void:subset [
       a void:Linkset;
-      void:target <http://thedatahub.org/dataset/congresspeople>, 
+      void:target <http://dsi.lod-cloud.net/dataset/congresspeople>, 
                   <http://thedatahub.org/dataset/govtrack> ;
       # http://www.rdfabout.com/rdf/usgov
       void:triples 56;
    ];
+
+   dcterms:isPartOf <http://ckan.net/group/datafaqs>;
 .
+
+<http://ckan.net/group/datafaqs> a datafaqs:CKANGroup .
