@@ -21,6 +21,7 @@ connections = {'http' :httplib.HTTPConnection,
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
+ns.register(con='http://www.w3.org/2000/10/swap/pim/contact#')
 ns.register(ov='http://open.vocab.org/terms/')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
@@ -102,6 +103,10 @@ class AddCKANMetadata(sadi.Service):
         # Extra: triples
         if input.void_triples:
            dataset['extras']['triples'] = input.void_triples.first
+
+        # Extra: preferred_uri
+        if input.con_preferredURI:
+            dataset['extras']['preferred_uri'] = input.con_preferredURI.first
 
         linksQuery = '''
 prefix void: <http://rdfs.org/ns/void#>

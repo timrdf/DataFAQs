@@ -3,13 +3,14 @@
 @prefix sioc:     <http://rdfs.org/sioc/ns#>            .
 @prefix ov:       <http://open.vocab.org/terms/>        .
 @prefix void:     <http://rdfs.org/ns/void#>            .
+@prefix con:      <http://www.w3.org/2000/10/swap/pim/contact#> .
 @prefix moat:     <http://moat-project.org/ns#>         .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
 <http://dsi.lod-cloud.net/dataset/congresspeople> 
-#<http://thedatahub.org/dataset/congresspeople>
-    a datafaqs:CKANDataset ;
-   datafaqs:namespace <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress>;
+   a datafaqs:CKANDataset ;
+   datafaqs:namespace <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress/>;
+   con:preferredURI   <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress>;
    foaf:isPrimaryTopicOf <http://dsi.lod-cloud.net/dataset/congresspeople>;
    dcterms:identifier "f4c2a8bb-6580-4919-98aa-617feb766b6c";
 
@@ -38,33 +39,26 @@
                    <http://inference-web.org/2.0/pml-provenance.owl#>,
                    <http://inference-web.org/2.0/pml-justification.owl#>,
                    <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress/vocab/>,
-                   <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress/vocab/enhancement/1/>;
+                   <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress/vocab/enhancement/1/> ; 
    a void:Dataset;
-
-   # links:dbpedia 67
    void:subset [
       a void:Linkset;
       void:target <http://dsi.lod-cloud.net/dataset/congresspeople>, 
                   <http://thedatahub.org/dataset/dbpedia> ;
-      # http://dbpedia.org/resource
       void:triples 67;
    ];
 
-   # links:geonames-semantic-web 50
    void:subset [
       a void:Linkset;
       void:target <http://dsi.lod-cloud.net/dataset/congresspeople>, 
                   <http://thedatahub.org/dataset/geonames-semantic-web> ;
-      # http://sws.geonames.org
       void:triples 50;
    ];
 
-   # links:govtrack 56
    void:subset [
       a void:Linkset;
       void:target <http://dsi.lod-cloud.net/dataset/congresspeople>, 
                   <http://thedatahub.org/dataset/govtrack> ;
-      # http://www.rdfabout.com/rdf/usgov
       void:triples 56;
    ];
 
