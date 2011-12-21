@@ -45,7 +45,7 @@ class VoIDProperties(sadi.Service):
 
    # Service metadata.
    label = 'void-properties'
-   serviceDescriptionText = 'Determines how many different predicates are there in the dataset.'
+   serviceDescriptionText = 'Determines whether the datadump is resolvable and whether there are triples there.'
    comment = ''
    serviceNameText = 'void-properties' # Convention: Match 'name' below.
    name = 'void-properties' # This value determines the service URI relative to http://localhost:9090/
