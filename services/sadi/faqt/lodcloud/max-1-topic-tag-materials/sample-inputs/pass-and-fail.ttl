@@ -1,0 +1,13 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix moat: <http://moat-project.org/ns#> .
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+   a void:Dataset;
+    moat:taggedWithTag <http://ckan.net/tag/geographic>;
+    moat:taggedWithTag <http://ckan.net/tag/socialweb>;
+.
+
+<http://thedatahub.org/dataset/congresspeople>
+   a void:Dataset;
+   moat:taggedWithTag <http://ckan.net/tag/geographic>;
+. 
