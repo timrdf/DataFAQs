@@ -64,11 +64,13 @@ class MaxOneTopicTag(sadi.Service):
    topics = ['media', 'geographic', 'lifesciences', 'publications', 'government', 'ecommerce', 'socialweb', 'usergeneratedcontent', 'schemata', 'crossdomain']
 
    def process(self, input, output):
+
+      print 'processing ' + input.subject
  
       tags = []
       for tag_uri in input.moat_taggedWithTag:
-         tag = re.sub('http://.*tag/','',tag_uri)
-         print tag_uri + ' -> ' + tag
+         tag = re.sub('http://.*tag/','',tag_uri.subject)
+         print '  ' + tag_uri.subject + ' -> ' + tag
          tags.append(tag)
 
       count = 0
@@ -90,4 +92,6 @@ resource = MaxOneTopicTag()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
-   sadi.publishTwistedService(resource, port=9104)
+   port = 9104
+   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(port) + '/' + resource.name
+   sadi.publishTwistedService(resource, port=port)
