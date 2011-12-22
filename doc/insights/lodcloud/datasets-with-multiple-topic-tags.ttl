@@ -1,3 +1,11 @@
+# According to http://www.w3.org/wiki/TaskForces/CommunityProjects/LinkingOpenData/DataSets/CKANmetainformation
+# lodcloud datasets http://thedatahub.org/group/lodcloud
+# should have "one of" the tags:
+# ['media', 'geographic', 'lifesciences', 'publications', 'government', 'ecommerce', 'socialweb', 'usergeneratedcontent', 'schemata', 'crossdomain']
+# Does that mean one and only one?
+# If so, these datasets violate the FAqT evaluation performed by http://sparql.tw.rpi.edu/services/datafaqs/faqt/lodcloud/max-1-topic-tag
+# (source code available at https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/lodcloud/max-1-topic-tag.rpy)
+
 <http://thedatahub.org/dataset/agrovoc-skos> a <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
 <http://thedatahub.org/dataset/amsterdam-museum-as-edm-lod> a <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
 <http://thedatahub.org/dataset/bluk-bnb> a <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
