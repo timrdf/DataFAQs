@@ -61,10 +61,23 @@ class TEMPLATE-CLASS-NAME(sadi.Service):
 
       print 'processing ' + input.subject
 
-      if False:
+      ####
+      # Query a SPARQL endpoint
+      store = Store(reader = 'sparql_protocol', endpoint = endpoint)
+      session = Session(store)
+      session.enable_logging = False
+      result = session.default_store.execute_sparql(self.query)
+      if result:
+         for binding in result['results']['bindings']:
+            graph  = binding['graph']['value']
+            print graph
+      ####
+
+      if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
-      else:
-         output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+ 
+      if ns.DATAFAQS['Unsatisfactory'] not in output.rdf_type:
+      output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 
       output.save()
 
@@ -73,5 +86,6 @@ resource = TEMPLATE-CLASS-NAME()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
+   print resource.name + ' running on port ' + resource.dev_port + '. Invoke it with:'
    print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
    sadi.publishTwistedService(resource, port=resource.dev_port)
