@@ -1,13 +1,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sd:   <http://www.w3.org/ns/sparql-service-description#> .
 
-<http://labs.mondeca.com/endpoint/lov>
+<http://data.semanticweb.org/sparql>
    a sd:Service;
-   rdfs:comment "listed at http://labs.mondeca.com/sparqlEndpointsStatus/";
+   rdfs:comment "Example where the sd:Service is valid and has named graphs.";
 .
 
-<http://example.org/someendpoint>
+<http://data.oceandrilling.org/sparql>
    a sd:Service;
-   rdfs:comment "Example where sd:url should be used if the subject URI is not an endpoint.";
+.
+
+<http://labs.mondeca.com/endpoint/lov>
+   rdfs:comment "listed at http://labs.mondeca.com/sparqlEndpointsStatus/";
+   rdfs:comment "Example where the sd:Service is valid but has no named graphs";
+.
+
+<http://example.org/a-service>
    sd:url <http://data.oceandrilling.org/sparql>;
+   rdfs:comment "Example where the sd:Service does not respond but its sd:url does.";
 .
