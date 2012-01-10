@@ -36,8 +36,8 @@ class SDNamedGraphs(sadi.Service):
 
    # Service metadata.
    label                  = 'named-graphs'
-   serviceDescriptionText = ''
-   comment                = ''
+   serviceDescriptionText = 'Describes the given sd:Service with the sd:NamedGraphs it offers.'
+   comment                = 'Provides global URIs for the named graphs that are contextualized by the sd:Service.'
    serviceNameText        = 'named-graphs' # Convention: Match 'name' below.
    name                   = 'named-graphs' # This value determines the service URI relative to http://localhost:9090/
                                            # Convention: Use the name of this file for this value.
@@ -101,7 +101,7 @@ class SDNamedGraphs(sadi.Service):
 
       dataset = GraphCollection()
       output.sd_url.append(endpoint)
-      output.sd_defaultDatasetDescription = dataset
+      output.sd_availableGraphDescriptions = dataset
       output.save()
       for binding in result['results']['bindings']:
          gname = binding['graph']['value']
