@@ -1,0 +1,10 @@
+prefix ends: <http://labs.mondeca.com/vocab/endpointStatus#>
+prefix void: <http://rdfs.org/ns/void#>
+prefix sd:   <http://www.w3.org/ns/sparql-service-description#>
+
+construct { ?endpoint a sd:Service }
+where {
+   [] void:sparqlEndpoint ?endpointL;
+      ends:status [ ends:statusIsAvailable true ]
+   bind(IRI(?endpointL) as ?endpoint)
+}
