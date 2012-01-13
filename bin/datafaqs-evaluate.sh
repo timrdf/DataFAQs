@@ -26,25 +26,25 @@ if [ "$1" == "--help" ]; then
    echo "`echo \`basename $0\` | sed 's/./ /g'`             [--faqts    <rdf-file> <service-uri>]"
    echo "`echo \`basename $0\` | sed 's/./ /g'`             [--datasets <rdf-file> <service-uri>]"
    echo
-   echo "            -n: perform dry run (not implemented yet)."
+   echo "            -n : perform dry run (not implemented yet)."
    echo
-   echo " --force-epoch: force new epoch; ignore 'once per day' convention."
+   echo "    --datasets : override the service-uri and its input (to evaluate a different set of datasets)."
+   echo "                   default service-uri: $datasets_service"
+   echo "                   default input:       $datasets_input"
+   echo "                   e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-datasets/by-ckan-group-materials/sample-inputs/thedatahub-lodcloud.ttl"
    echo
-   echo " --reuse-epoch: reapply FAqT evaluation services to datasets in existing epoch. Takes precedence over --force-epoch."
-   echo "                  e.g.:  datafaqs-evaluate.sh --reuse-epoch                           2011-Dec-21_20_22_42"
-   echo "                  e.g.:  datafaqs-evaluate.sh --reuse-epoch datafaqs.localhost/epochs/2011-Dec-21_20_22_42"
-   echo "                  e.g.:  datafaqs-evaluate.sh --reuse-epoch datafaqs:latest"
+   echo "       --faqts : override the service-uri and its input (to evaluate with a different set of FAqT evaluation services)."
+   echo "                   default service-uri: $faqts_service"
+   echo "                   default input:       $faqts_input"
+   echo "                   e.g.    service-uri: $service_base/datafaqs/core/select-faqts/identity"
+   echo "                   e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-faqts/identity-materials/sample-inputs/max-1-topic-tag.ttl"
    echo
-   echo "       --faqts: override the service-uri and its input (to evaluate with a different set of FAqT evaluation services)."
-   echo "                  default service-uri: $faqts_service"
-   echo "                  default input:       $faqts_input"
-   echo "                  e.g.    service-uri: $service_base/datafaqs/core/select-faqts/identity"
-   echo "                  e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-faqts/identity-materials/sample-inputs/max-1-topic-tag.ttl"
+   echo " --force-epoch : force new epoch; ignore 'once per day' convention."
    echo
-   echo "    --datasets: override the service-uri and its input (to evaluate a different set of datasets)."
-   echo "                  default service-uri: $datasets_service"
-   echo "                  default input:       $datasets_input"
-   echo "                  e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-datasets/by-ckan-group-materials/sample-inputs/thedatahub-lodcloud.ttl"
+   echo " --reuse-epoch : reapply FAqT evaluation services to datasets in existing epoch. Takes precedence over --force-epoch."
+   echo "                   e.g.:  datafaqs-evaluate.sh --reuse-epoch                           2011-Dec-21_20_22_42"
+   echo "                   e.g.:  datafaqs-evaluate.sh --reuse-epoch datafaqs.localhost/epochs/2011-Dec-21_20_22_42"
+   echo "                   e.g.:  datafaqs-evaluate.sh --reuse-epoch datafaqs:latest"
    exit 0
 fi
 
@@ -67,7 +67,7 @@ if [ "$1" == "--force-epoch" ]; then
    shift
 fi
 
-epoch=`date +%Y-%b-%d`
+epoch=`date +%Y-%m-%d`
 if [ "$1" == "--reuse-epoch" ]; then
    if [ $# -lt 2 ]; then
       echo "[ERROR] --reuse-epoch argument must be followed by the name of an epoch."
@@ -94,7 +94,7 @@ elif [[ -e datafaqs.localhost/epochs/$epoch && $force_epoch == "false" ]]; then
    echo "Start one tomorrow, use --force-epoch to create another one today, or use --help."
    exit 1
 elif [[ -e datafaqs.localhost/epochs/$epoch && $force_epoch == "true" ]]; then
-   epoch=`date +%Y-%b-%d_%H_%M_%S`
+   epoch=`date +%Y-%m-%d_%H_%M_%S`
 fi
 
 epochDir="`pwd`/datafaqs.localhost/epochs/$epoch"
