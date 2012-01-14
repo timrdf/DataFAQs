@@ -7,4 +7,13 @@
 :MyClass
    a owl:Class;
    rdfs:comment "This class is defined within a namepace that resolves to an incorrectly-typed RDFS/OWL file.";
+   rdfs:comment """The 'text/plain' from github should be 'text/turtle':
+bash-3.2$ curl -LI http://purl.org/twc/vocab/resolves-to-incorrect-content-type
+HTTP/1.1 302 Moved Temporarily
+Location: https://raw.github.com/timrdf/DataFAQs/master/ontology/resolves-to-incorrect-content-type.ttl
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 326
+
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8""";
 .
