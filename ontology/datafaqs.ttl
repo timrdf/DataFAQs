@@ -168,6 +168,6 @@
 .
 
 :evaluation_error
-   a owl:DatatypeProperty
+   a owl:DatatypeProperty;
    rdfs:comment "FAqTs can include an evaluation error if they run into problems.";
 .

@@ -93,3 +93,4 @@ _:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 <http://purl.org/twc/vocab/datafaqs#dataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/datafaqs#QueryToApply> .
 <http://purl.org/twc/vocab/datafaqs#dataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sparql-service-description#Dataset> .
 <http://purl.org/twc/vocab/datafaqs#evaluation_error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/twc/vocab/datafaqs#evaluation_error> <http://www.w3.org/2000/01/rdf-schema#comment> "FAqTs can include an evaluation error if they run into problems." .

@@ -285,4 +285,7 @@
   <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#evaluation_error">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#evaluation_error">
+    <rdfs:comment>FAqTs can include an evaluation error if they run into problems.</rdfs:comment>
+  </rdf:Description>
 </rdf:RDF>
