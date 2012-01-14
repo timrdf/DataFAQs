@@ -17,3 +17,8 @@ Content-Length: 326
 HTTP/1.1 200 OK
 Content-Type: text/plain; charset=utf-8""";
 .
+
+:myclass 
+   a :MyClass;
+   rdfs:comment "An instance so that the vocabulary will be checked.";
+.
