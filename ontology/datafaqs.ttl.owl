@@ -168,10 +168,10 @@
   <rdf:Description rdf:nodeID="genid11">
     <rdf:rest rdf:nodeID="genid10"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#EvaluatedDataset">
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Evaluated">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#EvaluatedDataset">
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Evaluated">
     <owl:disjointUnion rdf:nodeID="genid11"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Satisfactory">
@@ -182,6 +182,15 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Unsatisfactory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#EvaluatedDataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#EvaluatedDataset">
+    <rdfs:subClassOf rdf:resource="http://purl.org/twc/vocab/datafaqs#Evaluated"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#EvaluatedDataset">
+    <rdfs:subClassOf rdf:resource="http://rdfs.org/ns/void#Dataset"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#resolved_triples">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -272,5 +281,8 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#dataset">
     <rdfs:range rdf:resource="http://www.w3.org/ns/sparql-service-description#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#evaluation_error">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 </rdf:RDF>

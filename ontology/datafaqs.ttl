@@ -95,7 +95,7 @@
    ];
 . 
 
-:EvaluatedDataset
+:Evaluated
    a owl:Class;
    owl:disjointUnion ( :Satisfactory :Unsatisfactory );
 .
@@ -105,6 +105,11 @@
 .
 :Unsatisfactory
    a owl:Class;
+.
+
+:EvaluatedDataset
+   a owl:Class;
+   rdfs:subClassOf :Evaluated, void:Dataset;
 .
 
 :resolved_triples
@@ -160,4 +165,9 @@
    a owl:ObjectProperty;
    rdfs:domain :QueryToApply;
    rdfs:range sd:Dataset;
+.
+
+:evaluation_error
+   a owl:DatatypeProperty
+   rdfs:comment "FAqTs can include an evaluation error if they run into problems.";
 .
