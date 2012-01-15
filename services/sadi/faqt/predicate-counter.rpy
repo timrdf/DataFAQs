@@ -76,6 +76,7 @@ class VoIDProperties(sadi.Service):
       
       print 'processing ' + input.subject
 
+      predicate_counter = 0
       if input.void_dataDump:
          print 'processing ' + input.void_dataDump.first
      
@@ -94,7 +95,6 @@ class VoIDProperties(sadi.Service):
          #  output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
          result = temp_graph.query("SELECT DISTINCT ?p WHERE {[] ?p []} LIMIT 20")
          
-         predicate_counter = 0
          for row in result:
              predicate_counter = predicate_counter + 1
              print row
