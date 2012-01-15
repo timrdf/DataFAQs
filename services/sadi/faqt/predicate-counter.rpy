@@ -104,7 +104,7 @@ class VoIDProperties(sadi.Service):
     
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
-         print "Too few predicate in " + input.subject + ", only " + str(predicator_counter) + " spotted"
+         print "Too few predicate in " + input.subject + ", only " + str(predicate_counter) + " spotted"
 
       output.save()
 
