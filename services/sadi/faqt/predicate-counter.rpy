@@ -74,29 +74,33 @@ class VoIDProperties(sadi.Service):
 
    def process(self, input, output):
       
-      print 'processing ' + input.void_dataDump.first
-      
-      download_url = input.void_dataDump.first
-      temp_graph = Graph()
-        
-      if(download_url.endswith(".nt")):
-          temp_graph.parse(download_url, format='nt')
-      elif(download_url.endswith(".rdf")):
-          temp_graph.parse(download_url, format='rdf')
-      elif(download_url.endswith(".n3")):
-          temp_graph.parse(download_url, format='n3')
+      print 'processing ' + input
 
-      #if len(temp_graph) > 0:
-      #  output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
-      result = temp_graph.query("SELECT DISTINCT ?p WHERE {[] ?p []} LIMIT 20")
-      
-      predicate_counter = 0
-      for row in result:
-          predicate_counter = predicate_counter + 1
-          print row
-          
-      if predicate_counter > 10:
-          output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+      if input.void_dataDump:
+         print 'processing ' + input.void_dataDump.first
+     
+       
+         download_url = input.void_dataDump.first
+         temp_graph = Graph()
+           
+         if(download_url.endswith(".nt")):
+             temp_graph.parse(download_url, format='nt')
+         elif(download_url.endswith(".rdf")):
+             temp_graph.parse(download_url, format='rdf')
+         elif(download_url.endswith(".n3")):
+             temp_graph.parse(download_url, format='n3')
+
+         #if len(temp_graph) > 0:
+         #  output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+         result = temp_graph.query("SELECT DISTINCT ?p WHERE {[] ?p []} LIMIT 20")
+         
+         predicate_counter = 0
+         for row in result:
+             predicate_counter = predicate_counter + 1
+             print row
+             
+         if predicate_counter > 10:
+             output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
     
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
