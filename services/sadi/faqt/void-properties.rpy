@@ -73,24 +73,26 @@ class VoIDProperties(sadi.Service):
 
    def process(self, input, output):
       
-      print 'processing ' + input.void_dataDump.first
-      
-      download_url = input.void_dataDump.first
-      temp_graph = Graph()
-        
-      if(download_url.endswith(".nt")):
-          temp_graph.parse(download_url, format='nt')
-      elif(download_url.endswith(".rdf")):
-          temp_graph.parse(download_url, format='rdf')
-      elif(download_url.endswith(".n3")):
-          temp_graph.parse(download_url, format='n3')
+      print 'processing ' + input
+      if input.void_dataDump.first:
+         print 'processing ' + input.void_dataDump.first
+         
+         download_url = input.void_dataDump.first
+         temp_graph = Graph()
+           
+         if(download_url.endswith(".nt")):
+             temp_graph.parse(download_url, format='nt')
+         elif(download_url.endswith(".rdf")):
+             temp_graph.parse(download_url, format='rdf')
+         elif(download_url.endswith(".n3")):
+             temp_graph.parse(download_url, format='n3')
 
-      if len(temp_graph) > 0:
-        output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+         if len(temp_graph) > 0:
+           output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
-         print str(store.size()) + ' dereferenced RDF triples, but no void:triples asserted for ' + input.subject
+         #print str(store.size()) + ' dereferenced RDF triples, but no void:triples asserted for ' + input.subject
 
       output.save()
 
