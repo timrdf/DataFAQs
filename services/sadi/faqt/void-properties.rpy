@@ -73,7 +73,7 @@ class VoIDProperties(sadi.Service):
 
    def process(self, input, output):
       
-      print 'processing ' + input
+      print 'processing ' + input.subject
       if input.void_dataDump.first:
          print 'processing ' + input.void_dataDump.first
          
