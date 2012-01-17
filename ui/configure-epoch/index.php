@@ -32,10 +32,10 @@ $(document).ready(function() {
      }
    } order by desc(?datetime)
 ______________________________;
-   DATASET_URI='http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29'
+   $DATASET_URI='http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29'
    $query = C9D::bind_variable($query,'?:dataset',$DATASET_URI);
 
-   ENDPOINT='http://logd.tw.rpi.edu/sparql'
+   $ENDPOINT='http://logd.tw.rpi.edu/sparql'
    // TODO: echo '<code style="display:none">'.$query.'</code>';
    $result = C9D::request_query($query, $ENDPOINT);
 
