@@ -15,7 +15,7 @@ static function prepare_query($query, $endpoint) {
 }
 
 static function request_query($query, $endpoint) {
-   return json_decode(file_get_contents(prepare_query($query, $endpoint)), true);
+   return json_decode(file_get_contents(C9D::prepare_query($query, $endpoint)), true);
 }
 }
 ?>
