@@ -1,22 +1,26 @@
 <?php
 class C9D {
 
-/* Utility functions */
-static function bind_variable($template, $variable, $binding) {
-   return str_replace($variable,'<'.$binding.'>',$template);
-}
+   /* Utility functions */
+   static function bind_variable($template, $variable, $binding) {
+      return str_replace($variable,'<'.$binding.'>',$template);
+   }
 
-static function prepare_query($query, $endpoint) {
-   $params           = array();
-   $params["query"]  = $query;
-   $params["output"] = 'sparql';
-   $query= $endpoint . '?' . http_build_query($params,'','&') ;
-   return $query;
-}
+   static function prepare_query($query, $endpoint) {
+      $params           = array();
+      $params["query"]  = $query;
+      $params["output"] = 'sparql';
+      $query= $endpoint . '?' . http_build_query($params,'','&') ;
+      return $query;
+   }
 
-static function request_query($query, $endpoint) {
-   return json_decode(file_get_contents(C9D::prepare_query($query, $endpoint)), true);
-}
+   static function pretty_date($XSD_DATETIME) {
+      return substr($XSD_DATETIME,0,10) . ' at ' . substr($XSD_DATETIME,11,5);
+   }
+
+   static function request_query($query, $endpoint) {
+      return json_decode(file_get_contents(C9D::prepare_query($query, $endpoint)), true);
+   }
 }
 ?>
 
