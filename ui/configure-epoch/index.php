@@ -1,5 +1,5 @@
 <?php
-class C9D {
+//class C9D {
 
 /* Utility functions */
 static function bind_variable($template, $variable, $binding) {
@@ -17,7 +17,7 @@ static function prepare_query($query, $endpoint) {
 static function request_query($query, $endpoint) {
    return json_decode(file_get_contents(prepare_query($query, $endpoint)), true);
 }
-}
+//}
 ?>
 
 <html> 
@@ -51,11 +51,11 @@ $(document).ready(function() {
    } order by desc(?datetime)
 ______________________________;
    $DATASET_URI='http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29'
-   $query = C9D::bind_variable($query,'?:dataset',$DATASET_URI);
+   $query = bind_variable($query,'?:dataset',$DATASET_URI);
 
    $ENDPOINT='http://logd.tw.rpi.edu/sparql'
    // TODO: echo '<code style="display:none">'.$query.'</code>';
-   $result = C9D::request_query($query, $ENDPOINT);
+   $result = request_query($query, $ENDPOINT);
 
    echo '<div>';
    if( isset($result['results']['bindings']) ) {
