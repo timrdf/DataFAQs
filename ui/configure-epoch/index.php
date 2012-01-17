@@ -55,7 +55,7 @@ ______________________________;
    echo $query;
    $query = C9D::bind_variable($query,'?:dataset',$DATASET_URI);
 
-   $ENDPOINT='http://logd.tw.rpi.edu/sparql'
+   $ENDPOINT='http://logd.tw.rpi.edu/sparql';
    // TODO: echo '<code style="display:none">'.$query.'</code>';
    $result = C9D::request_query($query, $ENDPOINT);
 
