@@ -1,5 +1,23 @@
 <?php
-   require_once('c9d.php');
+class C9D {
+
+/* Utility functions */
+static function bind_variable($template, $variable, $binding) {
+   return str_replace($variable,'<'.$binding.'>',$template);
+}
+
+static function prepare_query($query, $endpoint) {
+   $params           = array();
+   $params["query"]  = $query;
+   $params["output"] = 'sparql';
+   $query= $endpoint . '?' . http_build_query($params,'','&') ;
+   return $query;
+}
+
+static function request_query($query, $endpoint) {
+   return json_decode(file_get_contents(prepare_query($query, $endpoint)), true);
+}
+}
 ?>
 
 <html> 
