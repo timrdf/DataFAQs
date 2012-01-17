@@ -73,18 +73,27 @@ class C9D {
    </script>                                                               
    </head>                                                              
    <body>                                                               
-      <center>
-         <a href="https://github.com/timrdf/DataFAQs/wiki">
-            <img src="https://github.com/timrdf/DataFAQs/raw/master/doc/DataFAQs.png" alt="DataFAQs logo"/ width="60%">
-         </a>
-      </center>
+      <div>
+         <center>
+            <a href="https://github.com/timrdf/DataFAQs/wiki">
+               <img src="https://github.com/timrdf/DataFAQs/raw/master/doc/DataFAQs.png" alt="DataFAQs logo"/ width="60%"/>
+            </a>
+         </center>
+      </div>
 
-      <div id="epoch">
+      <div id="epoch" class="configuration">
+         <p>
+            <span class="step-num">1</span> <span class="step-title">Name the epoch</span>
+         </p>
          <span><?php echo date('Y-m-d')?></span>
       </div>
 
-      <div id="select-faqts">
-         <a href="">Link</a>
+      <div id="select-faqts" class="faqts configuration">
+         <p>
+            <span class="step-num">2</span> <span class="step-title">Select evaluation services to apply</span>
+         </p>
+         <p class="step-description">The following SADI services will return lists of FAqT evaluation services. Choose one service and its appropriate input.
+         </p>
          <?php
             $query  = C9D::bind_variable($queryT,'?:output','datafaqs:FAqTServiceCollection');
             $result = C9D::request_query($query, $ENDPOINT);
@@ -96,13 +105,9 @@ class C9D {
                foreach( $result['results']['bindings'] as $binding ) {
                   $service = $binding['service']['value'];
                   $input = $binding['input']['value'];
-                  echo "  <tr>";
-                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$service."'>".$service."</a></td>";
-                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$input."'>".$input."</a></td>";
-                  if( isset($binding['datetime']) ) {
-                     $date = $binding['datetime']['value'];
-                     echo "  <td property='conversion:todo'>".C9D::pretty_date($date)."</td>";
-                  }
+                  echo "  <tr>\n";
+                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$service."'>".$service."</a></td>\n";
+                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$input."'>".$input."</a></td>\n";
                   echo "  </tr>\n";
                }
                echo "</table>";
@@ -112,11 +117,10 @@ class C9D {
             echo '<div>';
             if( isset($result['results']['bindings']) ) {
                echo '<select>';
-               echo '  <tr><th>select-faqts</th></tr>';
                foreach( $result['results']['bindings'] as $binding ) {
                   $service = $binding['service']['value'];
                   $input = $binding['input']['value'];
-                  echo "  <option value='".$service."'>".$service."</option>";
+                  echo "  <option value='".$service."'>".$service."</option>\n";
                }
                echo "</select>";
             }
@@ -132,7 +136,10 @@ class C9D {
          </select>
       </div>
 
-      <div id="select-datasets">
+      <div id="select-datasets" class="datasets configuration">
+         <p>
+            <span class="step-num">3</span> <span class="step-title">Select datasets to evaluate</span>
+         </p>
          <?php
             $query  = C9D::bind_variable($queryT,'?:output','datafaqs:DatasetCollection');
             $result = C9D::request_query($query, $ENDPOINT);
@@ -140,18 +147,14 @@ class C9D {
             echo '<div>';
             if( isset($result['results']['bindings']) ) {
                echo '<table about="'.$DATASET_URI.'">';
-               echo '  <tr><th>select-datasets</th><th>Requires input type</th></tr>';
+               echo "  <tr><th>select-datasets</th><th>Requires input type</th></tr>\n";
                foreach( $result['results']['bindings'] as $binding ) {
                   $service = $binding['service']['value'];
                   $input = $binding['input']['value'];
-                  echo "  <tr>";
-                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$service."'>".$service."</a></td>";
-                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$input."'>".$input."</a></td>";
-                  if( isset($binding['datetime']) ) {
-                     $date = $binding['datetime']['value'];
-                     echo "  <td property='conversion:todo'>".C9D::pretty_date($date)."</td>";
-                  }
-                  echo "  </tr>";
+                  echo "  <tr>\n";
+                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$service."'>".$service."</a></td>\n";
+                  echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$input."'>".$input."</a></td>\n";
+                  echo "  </tr>\n";
                }
                echo "</table>";
             }
@@ -160,11 +163,10 @@ class C9D {
             echo '<div>';
             if( isset($result['results']['bindings']) ) {
                echo '<select>';
-               echo '  <tr><th>select-faqts</th></tr>';
                foreach( $result['results']['bindings'] as $binding ) {
                   $service = $binding['service']['value'];
                   $input = $binding['input']['value'];
-                  echo "  <option value='".$service."'>".$service."</option>";
+                  echo "  <option value='".$service."'>".$service."</option>\n";
                }
                echo "</select>";
             }
@@ -180,8 +182,12 @@ class C9D {
          </select>
 
 
-         <div id="augment-datasets" class="configuration">
-            Augment dataset descriptions: <input type="checkbox" name="augment-datasets" />
+         <div id="augment-datasets" class="datasets configuration">
+            <p>
+               <span class="step-num">3.1</span> 
+               <input type="checkbox" name="augment-datasets" />
+               <span class="step-title">Augment dataset descriptions</span>
+            </p>
             <?php
                $query  = C9D::bind_variable($queryT,'?:output','datafaqs:WithReferences');
                $result = C9D::request_query($query, $ENDPOINT);
@@ -189,18 +195,14 @@ class C9D {
                echo '<div>';
                if( isset($result['results']['bindings']) ) {
                   echo '<table about="'.$DATASET_URI.'">';
-                  echo '  <tr><th>augment-datasets</th><th>Requires input type</th></tr>';
+                  echo "  <tr><th>augment-datasets</th><th>Requires input type</th></tr>\n";
                   foreach( $result['results']['bindings'] as $binding ) {
                      $service = $binding['service']['value'];
                      $input = $binding['input']['value'];
-                     echo "  <tr>";
-                     echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$service."'>".$service."</a></td>";
-                     echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$input."'>".$input."</a></td>";
-                     if( isset($binding['datetime']) ) {
-                        $date = $binding['datetime']['value'];
-                        echo "  <td property='conversion:todo'>".C9D::pretty_date($date)."</td>";
-                     }
-                     echo "  </tr>";
+                     echo "  <tr>\n";
+                     echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$service."'>".$service."</a></td>\n";
+                     echo "     <td property='conversion:todo'><a rel='conversion:todo' href='".$input."'>".$input."</a></td>\n";
+                     echo "  </tr>\n";
                   }
                   echo "</table>";
                }
@@ -209,11 +211,10 @@ class C9D {
                echo '<div>';
                if( isset($result['results']['bindings']) ) {
                   echo '<select>';
-                  echo '  <tr><th>select-faqts</th></tr>';
                   foreach( $result['results']['bindings'] as $binding ) {
                      $service = $binding['service']['value'];
                      $input = $binding['input']['value'];
-                     echo "  <option value='".$service."'>".$service."</option>";
+                     echo "  <option value='".$service."'>".$service."</option>\n";
                   }
                   echo "</select>";
                }
