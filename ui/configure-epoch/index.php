@@ -50,7 +50,7 @@ $(document).ready(function() {
      }
    } order by desc(?datetime)
 ______________________________;
-   $DATASET_URI='http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29'
+   $DATASET_URI='http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29';
    echo $DATASET_URI
    echo $query
    $query = C9D::bind_variable($query,'?:dataset',$DATASET_URI);
