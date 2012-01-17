@@ -58,7 +58,7 @@ class DatasetsByCKANGroup(sadi.Service):
       return ns.DATAFAQS['CKANGroup']
 
    def getOutputClass(self):
-      return ns.DATAFAQS['Composite']
+      return ns.DATAFAQS['DatasetCollection']
 
    def process(self, input, output):
    
@@ -80,4 +80,6 @@ resource = DatasetsByCKANGroup()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
-   sadi.publishTwistedService(resource, port=9098)
+   port = 9098
+   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(port) + '/' + resource.name
+   sadi.publishTwistedService(resource, port=port)
