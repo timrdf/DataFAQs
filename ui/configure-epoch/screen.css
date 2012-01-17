@@ -87,14 +87,49 @@ h3 { margin: 5px 0; }
 }
 
 table {
-	border: 1px solid #666;
+	/*border: 1px solid #666;*/
 	margin: 20px 0 20px 0 !important;
+}
+
+th {
+	border: 1px solid #666;
 }
 
 th, td {
 	padding: 2px 4px 2px 4px !important;
 	text-align: left;
 	vertical-align: top;
+}
+
+div.configuration {
+   border: 1px solid #CCC;
+   margin: 30px;
+   padding-top: 10px;
+   padding-left: 10px;
+}
+
+div.faqts th {
+	background-color: #D6DBFD;
+}
+
+div.datasets th {
+	background-color: #FEFDB5;
+}
+
+span.step-num {
+   font-size: 35;
+}
+
+span.step-num + input {
+   margin-left: 10;
+}
+
+span.step-title {
+   margin-left: 10;
+   font-size: 20;
+}
+
+p.step-description {
 }
 
 th {
