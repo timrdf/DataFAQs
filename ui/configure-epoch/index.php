@@ -124,7 +124,7 @@ with input: (new) <input type="text" name="lname" /> or previous: <select>
 
 
 
-
+<div id="select-datasets">
 <?php
    $query = <<<______________________________
 prefix moby: <http://www.mygrid.org.uk/mygrid-moby-service#>
@@ -199,7 +199,8 @@ with input: (new) <input type="text" name="lname" /> or previous: <select>
 </select>
 
 
-
+<div id="augment-datasets" class="configuration">
+Augment dataset descriptions: <input type="checkbox" name="augment-datasets" />
 <?php
    $query = <<<______________________________
 prefix moby: <http://www.mygrid.org.uk/mygrid-moby-service#>
@@ -271,6 +272,9 @@ with input: (new) <input type="text" name="lname" /> or previous: <select>
 <option value='history 4'>history 4</option>
 <option value='history 5'>history 5</option>
 </select>
+</div>
+
+</div> <!-- select-datasets -->
 
     </body>                                                              
 </html>
