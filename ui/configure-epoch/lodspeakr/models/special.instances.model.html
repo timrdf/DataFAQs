@@ -1,0 +1,6 @@
+{%for h in base.header %}
+PREFIX {{h.prefix}}: <{{h.ns}}> 
+{%endfor%}
+SELECT DISTINCT ?resource WHERE {
+  	?resource a {{base.args.arg0}} .
+}
