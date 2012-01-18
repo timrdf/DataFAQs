@@ -2,6 +2,7 @@ prefix moby: <http://www.mygrid.org.uk/mygrid-moby-service#>
 prefix void: <http://rdfs.org/ns/void#>
 prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#>
 
+
 select distinct ?service ?input
 where {
    graph <http://sadiframework.org/registry/> {
