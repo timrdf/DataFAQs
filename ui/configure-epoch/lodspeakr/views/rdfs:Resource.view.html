@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" {% for i, ns in base.ns %}xmlns:{{i}}="{{ns}}" 
+    {%endfor%}version="XHTML+RDFa 1.0" xml:lang="en">
+    <head>
+    <title>Page about {{base.this.value}}</title>
+    <link href="{{base.baseUrl}}/lodspeakr/css/basic.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+  <body about="{{base.this.value}}"> 
+    <h1>Page about <a href='{{base.this.value}}'>{{base.this.curie}}</a></h1>
+  <div>
+    <h2>Information from {{base.this.curie}}</h2>
+    <table> 
+    {% for row in r %}
+
+      {% if row.s1%}
+      <tr>
+        <td><a href='{{row.s1.value}}'>{{row.s1.curie}}</a></td>
+    
+        {% if row.p1.uri == 1 %}
+        <td><a rel='{{row.s1.curie}}' href='{{row.p1.value}}'>{{row.p1.curie}}</a></td>
+        {% else %}
+        <td><span property='{{row.s1.curie}}'>{{row.p1.value}}</span></td>
+        {% endif %}
+     
+        </tr>
+      {% endif %}
+    {% endfor %}
+    </table>
+    
+    <br/><br/>
+    <h2>Information pointing to {{base.this.curie}}</h2>
+    <table> 
+    {% for row in r %}
+      {% if row.s2%}
+     <tr>
+        <td><a href='{{row.s2.value}}'>{{row.s2.curie}}</a></td>
+        <td><a rev='[{{row.p2.curie}}]' href='{{row.s2.value}}'>{{row.p2.curie}}</a></td>
+    </tr>
+    {%endif %}
+    {% endfor %}
+    </table>
+    </div>
+  </body>
+</html>
+

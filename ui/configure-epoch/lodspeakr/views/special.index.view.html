@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" {% for i, ns in base.ns %}xmlns:{{i}}="{{ns}}" 
+    {%endfor%}version="XHTML+RDFa 1.0" xml:lang="en">
+  <head>
+    <title>Classes available</title>
+    <link href="{{base.baseUrl}}/lodspeakr/css/basic.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+  <body>
+    <h1>Classes available</h1>
+	<ul>
+	{% if r.resource.value != null %}
+	    <!-- Only one class available -->
+        <li><a href='{{base.baseUrl}}special/instances/{{ r.resource.curie }}'>{{r.resource.curie}}</a></li>
+    {% endif %}
+    {% for row in r %}
+      {% if row.resource.value %}
+        <li><a href='{{base.baseUrl}}special/instances/{{ row.resource.curie }}'>{{row.resource.curie}}</a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </body>
+</html>
+
