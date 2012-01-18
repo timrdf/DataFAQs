@@ -4,17 +4,17 @@ prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#>
 
 select distinct ?service ?input
 where {
-graph <http://sadiframework.org/registry/> {
-?service
-moby:hasOperation [
-a moby:operation;
-moby:inputParameter [
-moby:objectType ?input;
-];
-moby:outputParameter [
-moby:objectType {{base.args.arg0}};
-]
-]
-.
-}
+   graph <http://sadiframework.org/registry/> {
+      ?service
+         moby:hasOperation [
+            a moby:operation;
+            moby:inputParameter [
+               moby:objectType ?input;
+            ];
+            moby:outputParameter [
+               moby:objectType {{base.args.arg0}};
+            ]
+         ]
+      .
+   }
 }
