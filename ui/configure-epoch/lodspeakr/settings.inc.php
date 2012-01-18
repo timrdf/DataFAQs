@@ -1,6 +1,7 @@
 <?
 
 $conf['endpoint']['local'] = 'http://sparql.tw.rpi.edu:3030/datafaqs/query';
+$conf['endpoint']['biordf'] = 'http://biordf.net/sparql';
 $conf['home'] = '/Applications/XAMPP/xamppfiles/htdocs/hello/lodspeakr/';
 $conf['basedir'] = 'http://localhost/hello/';
 $conf['debug'] = false;
