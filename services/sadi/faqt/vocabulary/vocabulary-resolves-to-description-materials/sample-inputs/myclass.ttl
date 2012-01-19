@@ -1,0 +1,19 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix :     <http://purl.org/twc/vocab/resolves-to-incorrect-content-type#> .
+
+:myclass 
+   a :MyClass;
+   rdfs:comment "An instance so that the vocabulary will be checked.";
+   rdfs:comment """The 'text/plain' from github should be 'text/turtle':
+bash-3.2$ curl -LI http://purl.org/twc/vocab/resolves-to-incorrect-content-type
+HTTP/1.1 302 Moved Temporarily
+Location: https://raw.github.com/timrdf/DataFAQs/master/ontology/resolves-to-incorrect-content-type.ttl
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 326
+
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8""";
+.

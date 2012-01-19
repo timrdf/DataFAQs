@@ -37,7 +37,7 @@ class RedirectLoop(sadi.Service):
       sadi.Service.__init__(self)
 
    def getOrganization(self):
-      result                      = self.Organization('http://tw.rpi.edu')
+      result                      = self.Organization()
       result.mygrid_authoritative = True
       result.protegedc_creator    = 'lebot@rpi.edu'
       result.save()
