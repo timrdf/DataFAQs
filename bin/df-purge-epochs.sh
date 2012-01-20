@@ -8,9 +8,25 @@ if [[ $# -lt 1 || "$1" == "--help" ]]; then
    exit 1
 fi
 
+dryRun="true"
+if [ "$1" == "-w" ]; then
+   dryRun="false"
+   shift
+elif [ "$1" == "-n" ]; then
+   shift
+else
+   echo "must specify -n or -w"
+   exit 1
+fi
+
 while [ $# -gt 0 ]; do
-   if [[ ${#1} -gt 0 && ( -d "$1" || -d __PIVOT_epoch/"$1" ) ]]; then
-      echo orphaning $1
-      echo df-purge-orphaned-epochs.sh -w
+   epoch="$1"
+   if [[ ${#epoch} -gt 0 && ( -d "$epoch" || -d __PIVOT_epoch/"$epoch" ) ]]; then
+      echo "Purging $epoch"
+      if [ "$dryRun" == "false" ]; then
+         rm -rf $epoch __PIVOT_epoch/$epoch &> /dev/null
+         df-purge-orphaned-epochs.sh -w
+      fi
    fi
+   shift
 done
