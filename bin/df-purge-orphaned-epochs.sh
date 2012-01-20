@@ -7,7 +7,7 @@ if [[ "$1" == "--help" || $# -ne 1 ]]; then
    echo "usage: `basename $0` <-n | -w>"
    echo
    echo "  -n: perform dry run; do not modify anything."
-   echo "  -w: remove all epochs that are not listed in datafaqs.localhost/epochs/"
+   echo "  -w: remove all epochs that are not listed in __PIVOT_epoch/"
    exit 0
 fi
 
@@ -26,9 +26,9 @@ if [ "$1" == "-w" ]; then
    shift
 fi
 
-keep_these="`pwd`/datafaqs.localhost/epochs/"
+keep_these="`pwd`/__PIVOT_epoch/"
 
-for pivot_epoch in `find . -name "__PIVOT_epoch"`; do
+for pivot_epoch in `find * -name "__PIVOT_epoch"`; do
    pushd $pivot_epoch &> /dev/null
       for epoch in `$CSV2RDF4LOD_HOME/bin/util/directories.sh`; do
          if [ ! -d $keep_these/$epoch ]; then
