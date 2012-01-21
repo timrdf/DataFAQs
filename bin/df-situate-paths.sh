@@ -13,13 +13,13 @@ if [ ! `which df-epoch.sh` ]; then
    missing=$missing$DATAFAQS_HOME/bin
 fi
 
-#if [ ! `which prefixes2flags.sh` ]; then
-#   if [ ${#missing} -gt 0 ]; then
-#      missing=$missing":"
-#   fi
-#   missing=$missing$DATAFAQS_HOME/bin/dup
-#fi
-#
+if [[ ! `which tdbloader` && -d "$TDB_HOME" ]]; then
+   if [ ${#missing} -gt 0 ]; then
+      missing=$missing":"
+   fi
+   missing=$missing$TDB_HOME/bin
+fi
+
 #if [ ! `which pcurl.sh` ]; then export PATH=$PATH:$DATAFAQS_HOME/bin/util
 #   if [ ${#missing} -gt 0 ]; then
 #      missing=$missing":"
