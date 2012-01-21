@@ -7,9 +7,15 @@
 #   Invokes evaluation services with dataset information, and
 #   Stores the results in a datacube-like directory structure.
 
+if [ -e datafaqs-source-me.sh ]; then
+   source datafaqs-source-me.sh
+fi
+
 DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/wiki/Installing-DataFAQs"}
 CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv2rdf4lod-automation/wiki/CSV2RDF4LOD-not-set"}
 DATAFAQS_BASE_URI=${DATAFAQS_BASE_URI:?"not set; see https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-envrionment-variables"}
+
+metadata_name=${DATAFAQS_PUBLISH_METADATA_GRAPH_NAME:-'http://www.w3.org/ns/sparql-service-description#NamedGraph'}
 
 local="$DATAFAQS_HOME/services/sadi"
 service_base='http://sparql.tw.rpi.edu/services'
@@ -144,6 +150,11 @@ if [ "$1" == "--datasets" ]; then
    fi 
 fi
 
+if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
+   mkdir tdb &> /dev/null
+   export DATAFAQS_PUBLISH_TDB_DIR=`pwd`/tdb
+fi
+
 # # # # Hard coded parameters
 
 ACCEPT_HEADER="Accept: text/turtle; application/rdf+xml; q=0.8, text/plain; q=0.6"
@@ -183,6 +194,15 @@ if [ "$epoch_existed" != "true" ]; then
    df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}                 > $epochDir/dataset-references.meta.ttl
    rapper -q -g -o ntriples $epochDir/dataset-references.ttl | sed 's/<//g; s/>//g'                                                        > $epochDir/dataset-references.ttl.nt
    cat $epochDir/dataset-references.ttl.nt | grep "vocab/datafaqs#WithReferences *\." | awk '{print $1}' | grep "^http://" | sort -u       > $epochDir/datasets.ttl.csv
+
+   if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+      df-load-triple-store.sh --graph `cat $epochDir/faqt-services.ttl.sd_name`      $epochDir/faqt-services.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph `cat $epochDir/datasets.ttl.sd_name`           $epochDir/datasets.ttl                | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph `cat $epochDir/dataset-references.ttl.sd_name` $epochDir/dataset-references.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph $metadata_name                                 $epochDir/faqt-services.meta.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph $metadata_name                                 $epochDir/datasets.meta.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph $metadata_name                                 $epochDir/dataset-references.meta.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+   fi
 else
    echo "[INFO] Reusing dataset listing and descriptions from __PIVOT_epoch/$epoch"
 fi
@@ -262,6 +282,10 @@ if [ "$epoch_existed" != "true" ]; then
          triples=`void-triples.sh faqt-service.ttl`
          dump=$faqtDir/__PIVOT_epoch/$epoch/faqt-service.ttl
          df-epoch-metadata.py faqt-service $DATAFAQS_BASE_URI $epoch $faqt $f $dump text/turtle ${triples:-0} > faqt-service.meta.ttl # faqt-service.meta.ttl
+         if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+            df-load-triple-store.sh --graph `cat faqt-service.ttl.sd_name` faqt-service.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+            df-load-triple-store.sh --graph $metadata_name faqt-service.meta.ttl            | awk '{print "[INFO] loaded",$0,"triples"}'
+         fi
       popd &> /dev/null
    done
 
@@ -303,13 +327,16 @@ if [ "$epoch_existed" != "true" ]; then
                head -1 $file | awk '{print "      "$0}'
                extension=`guess-syntax.sh --inspect "$file" extension`
                mimetype=`guess-syntax.sh --inspect "$file" mime`
-               mv $file $file.$extension                                                                                   # part-1,2,3...
+               mv $file $file.$extension                                                                                   # part-{1,2,3,...}.{ttl,rdf,nt}
                rapper -q -g -o turtle $file.$extension >> post.ttl                                                         # post.ttl
-               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"   > post.ttl.sd_name                             # post.ttl.sd_name 
-               echo "<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d>" > post.meta.ttl                               
-               triples=`void-triples.sh post.ttl`
-               df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump $mimetype $triples > post.meta.ttl # post.meta.ttl 
             done
+            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d" > post.ttl.sd_name                             # post.ttl.sd_name 
+            triples=`void-triples.sh post.ttl`
+            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump $mimetype $triples > post.meta.ttl # post.meta.ttl 
+            if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+               df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+               df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
+            fi
             rapper -q -g -o rdfxml post.ttl > post.ttl.rdf                                                                 # post.ttl.rdf
          popd &> /dev/null
          echo
@@ -366,6 +393,10 @@ for dataset in $datasetsRandom; do
          triples=`void-triples.sh $rename`
          echo "# df-epoch-metadata.py evaluation $DATAFAQS_BASE_URI $epoch $faqt $f $dataset $d $dump ${mimetype:-.} ${triples:-0}" > $meta
          df-epoch-metadata.py evaluation $DATAFAQS_BASE_URI $epoch $faqt $f $dataset $d $dump ${mimetype:-.} ${triples:-0}         >> $meta # evaluation.{ttl,rdf,nt}.meta
+         if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+            df-load-triple-store.sh --graph `cat $rename.sd_name` $rename | awk '{print "[INFO] loaded",$0,"triples"}'
+            df-load-triple-store.sh --graph $metadata_name $meta          | awk '{print "[INFO] loaded",$0,"triples"}'
+         fi
       popd &> /dev/null
       echo
    done
