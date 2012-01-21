@@ -13,11 +13,11 @@ if [ ! `which df-epoch.sh` ]; then
    missing=$missing$DATAFAQS_HOME/bin
 fi
 
-if [[ ! `which tdbloader` && -d "$TDB_HOME" ]]; then
+if [[ ! `which tdbloader` && -d "$TDBROOT" ]]; then
    if [ ${#missing} -gt 0 ]; then
       missing=$missing":"
    fi
-   missing=$missing$TDB_HOME/bin
+   missing=$missing$TDBROOT/bin
 fi
 
 #if [ ! `which pcurl.sh` ]; then export PATH=$PATH:$DATAFAQS_HOME/bin/util
