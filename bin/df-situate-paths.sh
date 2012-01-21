@@ -3,7 +3,7 @@
 # 
 #
 # Usage:
-#   export PATH=$PATH`$DATAFAQS_HOME/bin/util/df-situate-paths.sh`
+#   export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 #   (can be repeated indefinately, once paths are in PATH, nothing is returned.)
 
 missing=""
