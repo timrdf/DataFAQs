@@ -12,13 +12,21 @@ if [ -e datafaqs-source-me.sh ]; then
 fi
 
 DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/wiki/Installing-DataFAQs"}
+export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
+
 CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv2rdf4lod-automation/wiki/CSV2RDF4LOD-not-set"}
+export PATH=$PATH`$CSV2RDF4LOD_HOME/bin/util/cr-situate-paths.sh`
+
+if [ "$DATAFAQS_PUBLISH_TDB" == "true" && ! `which tdbloader` ]; then
+   if [ -d "${TDB_HOME}" ]; then
+      export PATH="$PATH:$TDB_HOME/bin"
+   else
+      echo "[WARNING]: DATAFAQS_PUBLISH_TDB = true but tdbloader not on path and TDB_HOME not set. Will not be able to load tdb triple store."
+   fi
+fi
+
 DATAFAQS_BASE_URI=${DATAFAQS_BASE_URI:?"not set; see https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-envrionment-variables"}
 
-echo $PATH
-export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
-echo
-echo $PATH
 
 metadata_name=${DATAFAQS_PUBLISH_METADATA_GRAPH_NAME:-'http://www.w3.org/ns/sparql-service-description#NamedGraph'}
 
