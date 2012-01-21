@@ -15,7 +15,10 @@ DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/
 CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv2rdf4lod-automation/wiki/CSV2RDF4LOD-not-set"}
 DATAFAQS_BASE_URI=${DATAFAQS_BASE_URI:?"not set; see https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-envrionment-variables"}
 
+echo $PATH
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
+echo
+echo $PATH
 
 metadata_name=${DATAFAQS_PUBLISH_METADATA_GRAPH_NAME:-'http://www.w3.org/ns/sparql-service-description#NamedGraph'}
 
