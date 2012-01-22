@@ -4,7 +4,7 @@
 <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/default/faqt-brick/epoch.ttl> .
 
 # # # # # # # # # #
-:_select_faqt_services # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
+_:select_faqt_services # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
    a prov:Activity;
    prov:used
       <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/via-sparql-query-materials/sample-inputs/from-official-sadi-registry.ttl>;
@@ -24,7 +24,7 @@
 
 
 # # # # # # # # # #
-:_select_datasets 
+_:select_datasets 
    a prov:Activity;
    prov:used 
       <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-group-materials/sample-inputs/thedatahub-datafaqs.ttl>;
@@ -44,7 +44,7 @@
 
 
 # # # # # # # # # #
-:_augment_datasets
+_:augment_datasets
    a prov:Activity;
    prov:used
       <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-group-materials/sample-inputs/thedatahub-datafaqs.ttl>;
