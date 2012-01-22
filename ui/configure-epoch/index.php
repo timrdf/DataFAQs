@@ -230,5 +230,11 @@ class C9D {
          </div>
 
       </div> <!-- select-datasets -->
+
+      <center>
+         <a href="http://test.ckan.net/"><img src="https://github.com/timrdf/DataFAQs/raw/master/doc/ckan/ckan_logo_box.png" alt="Powered by CKAN" width="80px"/></a>
+         <a href="http://sadiframework.org/content/"><img src="https://github.com/timrdf/DataFAQs/raw/master/doc/sadi/sadi-header.png" alt="Powered by SADI" width="150px"/></a>
+         <a href="http://code.google.com/p/surfrdf/"><img src="http://surfrdf.googlecode.com/files/surf-logo-poweredby.png" alt="Powered by SuRF" width="150px"/></a>
+      </center>
    </body>                                                              
 </html>
