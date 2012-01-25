@@ -179,10 +179,31 @@ echo "[INFO] ${reusing-U}sing __PIVOT_epoch/$epoch $latest_requested"
 
 if [ "$epoch_existed" != "true" ]; then
 
+   if [ -e epoch.ttl ]; then
+      rapper -q -g -o rdfxml epoch.ttl > epoch.ttl.rdf
+      faqts_input=`df-core.py epoch.ttl.rdf faqt-services | awk '{print $2}' | head -1`
+      faqts_service=`df-core.py epoch.ttl.rdf faqt-services | awk '{print $1}' | head -1`
+
+      datasets_input=`df-core.py epoch.ttl.rdf datasets | awk '{print $2}' | head -1`
+      datasets_service=`df-core.py epoch.ttl.rdf datasets | awk '{print $1}' | head -1`
+
+      references_service=`df-core.py epoch.ttl.rdf dataset-augmenters | head -1`
+      cp epoch.ttl $epochDir/epoch.ttl
+      perl -pi -e "s|_:faqt_list|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services>|g"         $epochDir/epoch.ttl
+      perl -pi -e "s|_:dataset_list|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets>|g"           $epochDir/epoch.ttl
+      perl -pi -e "s|_:seeAlso_list|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references>|g" $epochDir/epoch.ttl
+      echo "<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch> a datafaqs:Epoch ."                               >> $epochDir/epoch.ttl            # epoch.ttl
+      echo $metadata_name                                                                                 > $epochDir/epoch.ttl.sd_name    # epoch.ttl.sd_name
+   fi
+
    dir="__PIVOT_epoch/$epoch"
 
    echo "[INFO] Requesting FAqT services from        $faqts_service"
-   echo "curl -s -H 'Content-Type: text/turtle' -H 'Accept: text/turtle' -d @$faqts_input $faqts_service"                                                       > $epochDir/faqt-services.sh
+   pushd $epochDir &> /dev/null; 
+      pcurl.sh $faqts_input -n faqt-services.post -e ttl &> /dev/null
+      rapper -q `guess-syntax.sh --inspect faqt-services.post.ttl rapper` -o turtle $faqts_input > faqt-services.post.ttl; 
+   popd &> /dev/null
+   echo "curl -s -H 'Content-Type: text/turtle' -H 'Accept: text/turtle' -d @$epochDir/faqt-services.post.ttl $faqts_service"                                   > $epochDir/faqt-services.sh
    source $epochDir/faqt-services.sh                                                                                                                            > $epochDir/faqt-services.ttl
    triples=`void-triples.sh $dir/faqt-services.ttl`
    df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                                                > $epochDir/faqt-services.meta.ttl
@@ -190,12 +211,16 @@ if [ "$epoch_existed" != "true" ]; then
    rapper -q -g -o ntriples $epochDir/faqt-services.ttl | sed 's/<//g;s/>//g' | grep "purl.org/dc/terms/hasPart" | awk '{print $3}' | grep "^http://" | sort -u > $epochDir/faqt-services.ttl.csv
 
    echo "[INFO] Requesting datasets from             $datasets_service"
-   mime=`guess-syntax.sh $datasets_input mime`
-   echo "curl -s -H \"Content-Type: $mime\" -H 'Accept: text/turtle' -d @$datasets_input $datasets_service"                                        > $epochDir/datasets.sh
-   source $epochDir/datasets.sh                                                                                                                    > $epochDir/datasets.ttl
+   pushd $epochDir &> /dev/null; 
+      pcurl.sh $datasets_input -n datasets.post -e ttl &> /dev/null; 
+      rapper -q `guess-syntax.sh --inspect datasets.post.ttl rapper` -o turtle $datasets_input > datasets.post.ttl; 
+   popd &> /dev/null
+   mime=`guess-syntax.sh $epochDir/datasets.post.ttl mime`
+   echo "curl -s -H \"Content-Type: $mime\" -H 'Accept: text/turtle' -d @$epochDir/datasets.post.ttl $datasets_service"                             > $epochDir/datasets.sh
+   source $epochDir/datasets.sh                                                                                                                     > $epochDir/datasets.ttl
    triples=`void-triples.sh $dir/datasets.ttl`
-   df-epoch-metadata.py datasets $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl text/turtle ${triples:-0}                                             > $epochDir/datasets.meta.ttl
-   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                                 > $epochDir/datasets.ttl.sd_name
+   df-epoch-metadata.py datasets $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl text/turtle ${triples:-0}                                              > $epochDir/datasets.meta.ttl
+   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                                  > $epochDir/datasets.ttl.sd_name
 
    echo "[INFO] Requesting dataset descriptions from $references_service"
    send="$epochDir/datasets.ttl"
@@ -209,6 +234,7 @@ if [ "$epoch_existed" != "true" ]; then
    cat $epochDir/dataset-references.ttl.nt | grep "vocab/datafaqs#WithReferences *\." | awk '{print $1}' | grep "^http://" | sort -u       > $epochDir/datasets.ttl.csv
 
    if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+      df-load-triple-store.sh --graph `cat $epochDir/epoch.ttl.sd_name`              $epochDir/epoch.ttl                   | awk '{print "[INFO] loaded",$0,"triples"}'
       df-load-triple-store.sh --graph `cat $epochDir/faqt-services.ttl.sd_name`      $epochDir/faqt-services.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
       df-load-triple-store.sh --graph `cat $epochDir/datasets.ttl.sd_name`           $epochDir/datasets.ttl                | awk '{print "[INFO] loaded",$0,"triples"}'
       df-load-triple-store.sh --graph `cat $epochDir/dataset-references.ttl.sd_name` $epochDir/dataset-references.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
