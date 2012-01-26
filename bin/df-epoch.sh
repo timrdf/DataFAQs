@@ -29,6 +29,7 @@ DATAFAQS_BASE_URI=${DATAFAQS_BASE_URI:?"not set; see https://github.com/timrdf/D
 
 
 metadata_name=${DATAFAQS_PUBLISH_METADATA_GRAPH_NAME:-'http://www.w3.org/ns/sparql-service-description#NamedGraph'}
+export DATAFAQS_LOG_DIR=${DATAFAQS_LOG_DIR:-`pwd`/log}
 
 local="$DATAFAQS_HOME/services/sadi"
 service_base='http://sparql.tw.rpi.edu/services'
@@ -189,9 +190,9 @@ if [ "$epoch_existed" != "true" ]; then
 
       references_service=`df-core.py epoch.ttl.rdf dataset-augmenters | head -1`
       cp epoch.ttl $epochDir/epoch.ttl
-      perl -pi -e "s|_:faqt_list|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services>|g"         $epochDir/epoch.ttl
-      perl -pi -e "s|_:dataset_list|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets>|g"           $epochDir/epoch.ttl
-      perl -pi -e "s|_:seeAlso_list|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references>|g" $epochDir/epoch.ttl
+      perl -pi -e "s|_:faqtlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services>|g"          $epochDir/epoch.ttl
+      perl -pi -e "s|_:datasetlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets>|g"            $epochDir/epoch.ttl
+      perl -pi -e "s|_:seeAlsolist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references>|g"  $epochDir/epoch.ttl
       echo "<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch> a datafaqs:Epoch ."                               >> $epochDir/epoch.ttl            # epoch.ttl
       echo $metadata_name                                                                                 > $epochDir/epoch.ttl.sd_name    # epoch.ttl.sd_name
    fi
@@ -421,7 +422,7 @@ for dataset in $datasetsRandom; do
          rename=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh -v $output`                                                                 # evaluation.{ttl,rdf,nt}
          # Meta
          if [[ "$rename" == "$output" || "$rename" == "" ]]; then
-            meta=$output.meta # There was no extension
+            meta=$output.meta.ttl # There was no extension
             rename="$output"
          else
             # blah.blah.rdf -> blah.blah.meta.rdf 
