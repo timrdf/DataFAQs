@@ -3,8 +3,8 @@
 # publishes into DATAFAQS_PUBLISH_TDB_DIR if DATAFAQS_PUBLISH_TDB = true
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
-if [[ ${#DATAFAQS_LOG_DIR} -gt 1 && ! -e $DATAFAQS_LOG_DIR/`basename $0` ]]; then
-   mkdir -p `basename $log`
+if [[ ${#DATAFAQS_LOG_DIR} -gt 1 ]]; then
+   mkdir -p `basename $log` &> /dev/null
 fi
 
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
