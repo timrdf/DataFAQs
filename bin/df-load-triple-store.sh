@@ -2,6 +2,11 @@
 #
 # publishes into DATAFAQS_PUBLISH_TDB_DIR if DATAFAQS_PUBLISH_TDB = true
 
+log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
+if [[ ${#DATAFAQS_LOG_DIR} -gt 1 && ! -e $DATAFAQS_LOG_DIR/`basename $0` ]]; then
+   mkdir -p `basename $log`
+fi
+
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
    echo "usage: `basename $0` ( --recursive-by-sd-name | [--graph graph-name] file )"
    exit 1
@@ -48,9 +53,15 @@ if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
    if [[ ${#DATAFAQS_PUBLISH_TDB_DIR} -gt 0 ]]; then
       if [[ -d "$DATAFAQS_PUBLISH_TDB_DIR" ]]; then
          if [ ${#graph} -gt 0 ]; then
-            tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file 2>&1 | grep "loaded in" | awk '{print $1}'
+            echo >> $log
+            pwd >> $log
+            echo tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file 2>> $log 1>> $log
+            tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file      2>> $log 1>> $log
          else
-            tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file 2>&1 | grep "loaded in" | awk '{print $1}'
+            echo >> $log
+            pwd >> $log
+            echo tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file 2>> $log 1>> $log
+            tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file      2>> $log 1>> $log
          fi
       else
          echo "$DATAFAQS_PUBLISH_TDB_DIR does not exist; skipping tdb triple store load."
