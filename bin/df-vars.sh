@@ -38,7 +38,7 @@ if [ ${1:-"no"} != "CLEAR" ]; then
 #   echo "DATAFAQS_CONVERT_PERSON_URI                           ${DATAFAQS_CONVERT_PERSON_URI:="(not required, but recommended! see https://github.com/timrdf/csv2rdf4lod-automation/wiki/DATAFAQS_CONVERT_PERSON_URI)"}"
 
    echo "  "
-#   echo "DATAFAQS_CONVERT_DATA_ROOT                            ${DATAFAQS_CONVERT_DATA_ROOT:="(not required)"}"
+   echo "DATAFAQS_LOG_DIR                            ${DATAFAQS_LOG_DIR:="(not required)"}"
 #   echo "DATAFAQS_CONVERT_OMIT_RAW_LAYER                       ${DATAFAQS_CONVERT_OMIT_RAW_LAYER:="(will default to: false)"}"
 #   echo "DATAFAQS_CONVERT_SAMPLE_NUMBER_OF_ROWS                ${DATAFAQS_CONVERT_SAMPLE_NUMBER_OF_ROWS:="(will default to: 2)"}"
 #   echo "DATAFAQS_CONVERT_SAMPLE_SUBSET_ONLY                   ${DATAFAQS_CONVERT_SAMPLE_SUBSET_ONLY:="(will default to: false)"}"
@@ -138,7 +138,7 @@ else
    export DATAFAQS_CONVERT_MACHINE_URI=""           
    export DATAFAQS_CONVERT_PERSON_URI=""           
 
-   export DATAFAQS_CONVERT_DATA_ROOT=""
+   export DATAFAQS_LOG_DIR=""
    export DATAFAQS_CONVERT_OMIT_RAW_LAYER=""
    export DATAFAQS_CONVERT_SAMPLE_NUMBER_OF_ROWS=""
    export DATAFAQS_CONVERT_SAMPLE_SUBSET_ONLY=""
