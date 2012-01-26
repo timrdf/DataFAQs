@@ -3,9 +3,7 @@
 # publishes into DATAFAQS_PUBLISH_TDB_DIR if DATAFAQS_PUBLISH_TDB = true
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
-if [[ ${#DATAFAQS_LOG_DIR} -gt 1 ]]; then
-   mkdir -p `basename $log` &> /dev/null
-fi
+mkdir -p `basename $log` &> /dev/null
 
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
    echo "usage: `basename $0` ( --recursive-by-sd-name | [--graph graph-name] file )"
