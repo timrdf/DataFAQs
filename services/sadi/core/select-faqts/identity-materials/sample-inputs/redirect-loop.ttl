@@ -1,0 +1,2 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+<http://sparql.tw.rpi.edu/services/datafaqs/faqt/redirect-loop> a datafaqs:FAqTService . 
