@@ -48,6 +48,8 @@ schemas = {
 templates = {
 'faqt-service' : '''
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix void:     <http://rdfs.org/ns/void#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
@@ -82,6 +84,7 @@ templates = {
 
 'dataset' : '''
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix void:     <http://rdfs.org/ns/void#> .
