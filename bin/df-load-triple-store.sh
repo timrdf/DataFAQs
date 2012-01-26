@@ -4,6 +4,7 @@
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
 if [ ! -e `basename $log` ]; then
+   echo mkdir -p `basename $log`
    mkdir -p `basename $log`
 fi
 
