@@ -200,7 +200,7 @@ if [ "$epoch_existed" != "true" ]; then
 
    echo "[INFO] Requesting FAqT services from        $faqts_service"
    pushd $epochDir &> /dev/null; 
-      pcurl.sh $faqts_input -n faqt-services.post -e ttl &> /dev/null
+      pcurl.sh $faqts_input -n faqt-services.post &> /dev/null
       rapper -q `guess-syntax.sh --inspect faqt-services.post.ttl rapper` -o turtle $faqts_input > faqt-services.post.ttl; 
    popd &> /dev/null
    echo "curl -s -H 'Content-Type: text/turtle' -H 'Accept: text/turtle' -d @$epochDir/faqt-services.post.ttl $faqts_service"                                   > $epochDir/faqt-services.sh
@@ -212,7 +212,7 @@ if [ "$epoch_existed" != "true" ]; then
 
    echo "[INFO] Requesting datasets from             $datasets_service"
    pushd $epochDir &> /dev/null; 
-      pcurl.sh $datasets_input -n datasets.post -e ttl &> /dev/null; 
+      pcurl.sh $datasets_input -n datasets.post &> /dev/null; 
       rapper -q `guess-syntax.sh --inspect datasets.post.ttl rapper` -o turtle $datasets_input > datasets.post.ttl; 
    popd &> /dev/null
    mime=`guess-syntax.sh $epochDir/datasets.post.ttl mime`
