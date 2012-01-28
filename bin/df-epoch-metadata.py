@@ -66,6 +66,7 @@ templates = {
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>;
    sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description>;
    rdfs:comment "The local copy of {{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
+   rdfs:comment "The sd:Graph that describes the FAqT is different than the FAqT itself, so sd:graph cannot be just the FAqT URI.";
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description>
    a prov:Account, sd:Graph, void:Graph;
@@ -113,6 +114,7 @@ templates = {
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}>;
    sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
    rdfs:comment "The local copy of {{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
+   rdfs:comment "The sd:Graph that describes the analyzed void:Dataset is different than the void:Dataset itself, so sd:graph cannot be just the void:Dataset URI.";
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
    a prov:Account, sd:Graph, void:Graph;
@@ -172,10 +174,11 @@ if sys.argv[1] in ["faqt-services", "datasets", "dataset-references"]:
 @prefix void:     <http://rdfs.org/ns/void#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 
-[]
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/config/{{CORE_GRAPH}}/local-copy>
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/config/{{CORE_GRAPH}}>;
    sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/config/{{CORE_GRAPH}}>;
+   rdfs:comment "{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/config/{{CORE_GRAPH}} is just a graph.";
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>
    a void:Dataset;
