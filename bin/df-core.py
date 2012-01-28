@@ -83,7 +83,7 @@ graph = Graph()
 graph.parse(epoch)
 results = graph.query(queries[type], initNs=prefixes)
 
-if type = 'datasets':
+if type == 'datasets':
    for bindings in results:
       print bindings[0] + ' a ' + bindings[1] + ' .'
 else
