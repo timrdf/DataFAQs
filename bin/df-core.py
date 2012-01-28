@@ -28,6 +28,7 @@ if len(sys.argv) != 3:
    sys.exit(1)
 
 ns.register(prov='http://www.w3.org/ns/prov-o/')
+ns.register(void='http://rdfs.org/ns/void#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 epoch = sys.argv[1]
