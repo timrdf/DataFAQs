@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-#
+# https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch-metadata.py
 
 import sys
 from collections import deque
@@ -56,22 +56,31 @@ templates = {
 @prefix formats:  <http://www.w3.org/ns/formats/media_type> .
 @prefix prov:     <http://www.w3.org/ns/prov-o/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
-[]
+
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>
+   a datafaqs:Epoch, void:Dataset;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description>;
+.
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description/local-copy>
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>;
-   sd:graph [ 
-      a prov:Account, sd:Graph, void:Graph;
-      void:triples          {{TRIPLES}};
-      prov:wasAttributedTo <{{FAQT}}>;
-      foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>;
-      void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
-   ]
+   sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description>;
+   rdfs:comment "The local copy of {{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
+.
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description>
+   a prov:Account, sd:Graph, void:Graph;
+   void:triples          {{TRIPLES}};
+   prov:wasAttributedTo <{{FAQT}}>;
+   foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>;
+   void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
+   rdfs:comment "The abstract RDF graph received from the FAqTService during epoch {{EPOCH}}. This can appear in any SPARQL endpoint.";
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>
    a datafaqs:FAqTService;
    prov:specializationOf <{{FAQT}}>;
    dcterms:date "{{EPOCH}}"^^xsd:date;
 .
+<{{FAQT}}> a datafaqs:FAqTService .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
    formats:media_type <http://www.w3.org/ns/formats/Turtle>;
@@ -81,6 +90,8 @@ templates = {
    dcterms:identifier "text/turtle";
 .
 ''',
+
+
 
 'dataset' : '''
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
@@ -93,25 +104,32 @@ templates = {
 @prefix formats:  <http://www.w3.org/ns/formats/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
- []
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>
+   a datafaqs:Epoch, void:Dataset;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
+.
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions/local-copy>; 
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}>;
-   sd:graph [ 
-      a prov:Account, sd:Graph, void:Graph;
-      void:triples {{TRIPLES}};
-      prov:wasDerivedFrom 
-         <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
-         <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29>,
-         <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.void.ttl>;
-      foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/1>;
-      void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
-   ]
+   sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
+   rdfs:comment "The local copy of {{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
+.
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
+   a prov:Account, sd:Graph, void:Graph;
+   void:triples {{TRIPLES}};
+   prov:wasDerivedFrom 
+      <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-statesTODO-STUBBED>,
+      <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29TODO-STUBBED>,
+      <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.void.ttlTODO-STUBBED>;
+   foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}>;
+   void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}>
    a void:Dataset;
    prov:specializationOf <{{DATASET}}>;
    dcterms:date "{{EPOCH}}"^^xsd:date;
 .
+<{{DATASET}}> a void:Dataset .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
    formats:media_type <http://www.w3.org/ns/formats/Turtle>;
@@ -164,7 +182,7 @@ if sys.argv[1] in ["faqt-services", "datasets", "dataset-references"]:
    void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/config/{{CORE_GRAPH}}>;
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/config/{{CORE_GRAPH}}>
-   a void:Dataset, sd:Graph;
+   a void:Dataset, sd:Graph, datafaqs:EpochConfigurationGraph;
    void:triples {{TRIPLES}};
    void:dataDump <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
 .
@@ -230,22 +248,25 @@ elif sys.argv[1] == "evaluation":
 @prefix prov:     <http://www.w3.org/ns/prov-o/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
-[]
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation/local-copy>
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
-   sd:graph [ 
-      a prov:Account, sd:Graph, void:Graph, datafaqs:Evaluation;
-      void:triples          {{TRIPLES}};
-      prov:wasAttributedTo <{{FAQT}}>;
-      foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
-      void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
-   ]
+   sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation>;
+   rdfs:comment "The local copy of {DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
+.
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation>
+   a prov:Account, sd:Graph, void:Graph, datafaqs:Evaluation;
+   void:triples          {{TRIPLES}};
+   prov:wasAttributedTo <{{FAQT}}>;
+   foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
+   void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
+   rdfs:comment "The abstract RDF graph received from the FAqTService during epoch {{EPOCH}}. This can appear in any SPARQL endpoint.";
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>
    a void:Dataset;
    prov:specializationOf <{{DATASET}}>;
    dcterms:date "{{EPOCH}}"^^xsd:date;
-   dcterms:identifier     {{DATASET_ID}};
+   dcterms:identifier {{DATASET_ID}};
 .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
@@ -260,7 +281,7 @@ elif sys.argv[1] == "evaluation":
    a datafaqs:FAqTService;
    prov:specializationOf <{{FAQT}}>;
    dcterms:date "{{EPOCH}}"^^xsd:date;
-   dcterms:identifier     {{FAQT_ID}};
+   dcterms:identifier {{FAQT_ID}};
 .
 '''
       for param in evaluation.keys():
