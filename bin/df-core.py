@@ -86,7 +86,7 @@ results = graph.query(queries[type], initNs=prefixes)
 if type == 'datasets':
    for bindings in results:
       print bindings[0] + ' a ' + bindings[1] + ' .'
-else
+else:
    for bindings in results:
       if len(bindings) == 2:
          print bindings[0] + ' ' + bindings[1]
