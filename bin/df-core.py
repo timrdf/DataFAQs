@@ -40,7 +40,7 @@ type  = sys.argv[2]
 #query = select("?service", "?input").where( ("?service", a, surf.ns.DATAFAQS['FAqTService']))
 #results = session.default_store.execute(query)
 
-prefixes = dict(prov=str(ns.PROV),datafaqs=str(ns.DATAFAQS))
+prefixes = dict(prov=str(ns.PROV),datafaqs=str(ns.DATAFAQS),void=str(ns.VOID))
 
 queries = {
    'faqt-selectors' : '''
