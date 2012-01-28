@@ -280,6 +280,7 @@ for faqt in $faqtsRandom; do
    # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/
    echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."  > $faqtDir/service.ttl
    echo "<$faqt> a datafaqs:FAqTService ."                          >> $faqtDir/service.ttl                             # service.ttl
+   echo "$faqt"                                                      > $faqtDir/service.ttl.sd_name                     # service.ttl.sd_name
 
    # Where the dataset evaluations will be stored.
    pushd $faqtDir/__PIVOT_dataset &> /dev/null
@@ -292,6 +293,7 @@ for faqt in $faqtsRandom; do
          # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
          echo "@prefix void: <http://rdfs.org/ns/void#> ."  > $datasetDir/dataset.ttl
          echo "<$dataset> a void:Dataset ."                >> $datasetDir/dataset.ttl                                   # dataset.ttl
+         echo "$dataset"                                    > $datasetDir/dataset.ttl.sd_name                           # dataset.ttl.sd_name
       done
    popd &> /dev/null
 done
