@@ -73,7 +73,7 @@ select distinct ?service where {
 
    'datasets' : '''
 select distinct ?dataset ?type where {
-   ?service a ?type .
+   ?dataset a ?type .
    filter(?type = datafaqs:CKANDataset || ?type = void:Dataset)
 }
 '''
