@@ -89,8 +89,11 @@ WHERE {
          results = faqt_catalog_store.execute_sparql(query)
          for result in results['results']['bindings']:
             faqt_service = result['service']['value']
-            print '   ' + faqt_service
-            output.dcterms_hasPart.append(FAqTService(faqt_service))
+            #print '   ' + faqt_service
+            faqt_service_r = FAqTService(faqt_service)
+            faqt_service_r.rdf_type.append(ns.DATAFAQS['FAqtService'])
+            faqt_service_r.save()
+            output.dcterms_hasPart.append(faqt_service_r)
 
       output.save()
 
@@ -99,4 +102,6 @@ resource = ViaSPARQLQuery()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
-   sadi.publishTwistedService(resource, port=9101)
+   port = 9101
+   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(port) + '/' + resource.name
+   sadi.publishTwistedService(resource, port=port)
