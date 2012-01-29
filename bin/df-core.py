@@ -94,7 +94,7 @@ select distinct ?dataset where {
    results = graph.query(query, initNs=prefixes)
    block = 1 # dear coding gods: I am so sorry.
    count = 0
-   size = 2
+   size = 50
    for bindings in results:
       if count == 0:
          if block > 1:
