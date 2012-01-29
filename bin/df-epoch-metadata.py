@@ -119,6 +119,7 @@ templates = {
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions> 
    a prov:Account, sd:Graph, void:Graph;
    void:triples {{TRIPLES}};
+   prov:wasAttributedTo <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions/referencing-service>;
    prov:wasDerivedFrom 
       <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-statesTODO-STUBBED>,
       <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29TODO-STUBBED>,
@@ -133,6 +134,10 @@ templates = {
 .
 <{{DATASET}}> a void:Dataset .
 
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions/referencing-service>
+   a datafaqs:DatasetReferencer;
+   rdfs:comment "The SADI service that provided a list of rdfs:seeAlso references about the dataset, which was invoked during epoch initialization.";
+.
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
    formats:media_type <http://www.w3.org/ns/formats/Turtle>;
 .
