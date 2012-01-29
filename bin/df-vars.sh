@@ -29,16 +29,16 @@ if [ ${1:-"no"} != "CLEAR" ]; then
    #echo "CLASSPATH                             $CLASSPATH"
    #echo "PATH                                  $PATH"
 
-   echo "  "
+#   echo "  "
    echo "DATAFAQS_HOME                                         ${DATAFAQS_HOME:-"!!! -- MUST BE SET -- !!! source datafaqs-source-me.sh"}"
    echo "DATAFAQS_BASE_URI                                     ${DATAFAQS_BASE_URI:-"!!! -- MUST BE SET -- !!! source datafaqs-source-me.sh"}"
 #   echo "DATAFAQS_BASE_URI_OVERRIDE                            ${DATAFAQS_BASE_URI_OVERRIDE:="(not required, \$DATAFAQS_BASE_URI will be used.)"}"
-   echo "  "
+#   echo "  "
 #   echo "DATAFAQS_CONVERT_MACHINE_URI                          ${DATAFAQS_CONVERT_MACHINE_URI:="(not required, but recommended! see https://github.com/timrdf/csv2rdf4lod-automation/wiki/DATAFAQS_CONVERT_PERSON_URI)"}"
 #   echo "DATAFAQS_CONVERT_PERSON_URI                           ${DATAFAQS_CONVERT_PERSON_URI:="(not required, but recommended! see https://github.com/timrdf/csv2rdf4lod-automation/wiki/DATAFAQS_CONVERT_PERSON_URI)"}"
 
    echo "  "
-   echo "DATAFAQS_LOG_DIR                            ${DATAFAQS_LOG_DIR:="(not required)"}"
+   echo "DATAFAQS_LOG_DIR                                      ${DATAFAQS_LOG_DIR:="(not required)"}"
 #   echo "DATAFAQS_CONVERT_OMIT_RAW_LAYER                       ${DATAFAQS_CONVERT_OMIT_RAW_LAYER:="(will default to: false)"}"
 #   echo "DATAFAQS_CONVERT_SAMPLE_NUMBER_OF_ROWS                ${DATAFAQS_CONVERT_SAMPLE_NUMBER_OF_ROWS:="(will default to: 2)"}"
 #   echo "DATAFAQS_CONVERT_SAMPLE_SUBSET_ONLY                   ${DATAFAQS_CONVERT_SAMPLE_SUBSET_ONLY:="(will default to: false)"}"
@@ -61,19 +61,19 @@ if [ ${1:-"no"} != "CLEAR" ]; then
 #   echo "DATAFAQS_PUBLISH_RDFXML                               ${DATAFAQS_PUBLISH_RDFXML:-"(will default to: false)"}"
 #   echo "DATAFAQS_PUBLISH_COMPRESS                             ${DATAFAQS_PUBLISH_COMPRESS:-"(will default to: false)"}"
 
-   echo "  "
+#   echo "  "
 #   echo "DATAFAQS_PUBLISH_SUBSET_VOID                          ${DATAFAQS_PUBLISH_SUBSET_VOID:="(will default to: true)"}"
 #   echo "DATAFAQS_PUBLISH_SUBSET_VOID_NAMED_GRAPH              ${DATAFAQS_PUBLISH_SUBSET_VOID_NAMED_GRAPH:="(will default to: auto)"}"
 #   echo "DATAFAQS_PUBLISH_SUBSET_SAMEAS                        ${DATAFAQS_PUBLISH_SUBSET_SAMEAS:="(will default to: false)"}"
 #   echo "DATAFAQS_PUBLISH_SUBSET_SAMEAS_NAMED_GRAPH            ${DATAFAQS_PUBLISH_SUBSET_SAMEAS_NAMED_GRAPH:="(will default to: auto)"}"
 #   echo "DATAFAQS_PUBLISH_SUBSET_SAMPLES                       ${DATAFAQS_PUBLISH_SUBSET_SAMPLES:="(will default to: false)"}"
 
-   echo "  "
+#   echo "  "
 #   echo "DATAFAQS_PUBLISH_OUR_SOURCE_ID                        ${DATAFAQS_PUBLISH_OUR_SOURCE_ID:="(will not archive conversion metadata into versioned dataset.)"}"
 #   echo "DATAFAQS_PUBLISH_OUR_DATASET_ID                       ${DATAFAQS_PUBLISH_OUR_DATASET_ID:="(will not archive conversion metadata into versioned dataset.)"}"
 #   echo "DATAFAQS_PUBLISH_CONVERSION_PARAMS_NAMED_GRAPH        ${DATAFAQS_PUBLISH_CONVERSION_PARAMS_NAMED_GRAPH:="(will default to: auto)"}"
 
-   echo "  "
+#   echo "  "
 
 #   echo "DATAFAQS_PUBLISH_LOD_MATERIALIZATION_WWW_ROOT         ${DATAFAQS_PUBLISH_LOD_MATERIALIZATION_WWW_ROOT:-"(will default to: VVV/publish/lod-mat/)"}"
 #   echo "DATAFAQS_PUBLISH_VARWWW_DUMP_FILES                    ${DATAFAQS_PUBLISH_VARWWW_DUMP_FILES:-"(will default to: false)"}"
@@ -91,12 +91,10 @@ if [ ${1:-"no"} != "CLEAR" ]; then
 
    echo "  "
    echo "DATAFAQS_PUBLISH_TDB                                  ${DATAFAQS_PUBLISH_TDB:-"(will default to: false)"}"
-
    echo "DATAFAQS_PUBLISH_TDB_DIR                              ${DATAFAQS_PUBLISH_TDB_DIR:-"(will default to: VVV/publish/tdb/)"}"
-
 #   echo "DATAFAQS_PUBLISH_TDB_INDIV                            ${DATAFAQS_PUBLISH_TDB_INDIV:-"(will default to: false)"}"
 
-   echo "  "
+#   echo "  "
 #   echo "DATAFAQS_PUBLISH_4STORE                               ${DATAFAQS_PUBLISH_4STORE:-"(will default to: false)"}"
 #   if [ "$DATAFAQS_PUBLISH_4STORE" == "true" -o $show_all == "yes" ]; then
 #   echo "DATAFAQS_PUBLISH_4STORE_KB                            ${DATAFAQS_PUBLISH_4STORE_KB:-"(will default to: csv2rdf4lod -- leading to /var/lib/4store/csv2rdf4lod)"}" 
@@ -105,14 +103,15 @@ if [ ${1:-"no"} != "CLEAR" ]; then
 #   fi
 
    echo "  "
-#   echo "DATAFAQS_PUBLISH_VIRTUOSO                             ${DATAFAQS_PUBLISH_VIRTUOSO:-"(will default to: false)"}"
-                                                    virtuoso_home=${DATAFAQS_PUBLISH_VIRTUOSO_HOME:-"/opt/virtuoso"}
+   echo "DATAFAQS_PUBLISH_VIRTUOSO                             ${DATAFAQS_PUBLISH_VIRTUOSO:-"(will default to: false)"}"
+                                                    virtuoso_home=${CSV2RDF4LOD_PUBLISH_VIRTUOSO_HOME:-"/opt/virtuoso"}
 #   if [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" -o $show_all == "yes" ]; then
-#   echo "DATAFAQS_PUBLISH_VIRTUOSO_HOME                        ${DATAFAQS_PUBLISH_VIRTUOSO_HOME:-"(will default to: /opt/virtuoso)"}"
-#   echo "DATAFAQS_PUBLISH_VIRTUOSO_ISQL_PATH                   ${DATAFAQS_PUBLISH_VIRTUOSO_ISQL_PATH:-"(will default to: $virtuoso_home/bin/isql)"}"
-#   echo "DATAFAQS_PUBLISH_VIRTUOSO_PORT                        ${DATAFAQS_PUBLISH_VIRTUOSO_PORT:-"(will default to: 1111)"}"
-#   echo "DATAFAQS_PUBLISH_VIRTUOSO_USERNAME                    ${DATAFAQS_PUBLISH_VIRTUOSO_USERNAME:-"(will default to: dba)"}"
-#   echo "DATAFAQS_PUBLISH_VIRTUOSO_PASSWORD                    ${DATAFAQS_PUBLISH_VIRTUOSO_PASSWORD:-"(will default to: dba)"}"
+   echo "CSV2RDF4LOD_CONVERT_DATA_ROOT                         ${CSV2RDF4LOD_CONVERT_DATA_ROOT:-"(not required, but vload will copy files to load)"}"
+   echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_HOME                     ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_HOME:-"(will default to: /opt/virtuoso)"}"
+   echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH                ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH:-"(will default to: $virtuoso_home/bin/isql)"}"
+   echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT                     ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT:-"(will default to: 1111)"}"
+   echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME                 ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME:-"(will default to: dba)"}"
+   echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD                 ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD:-"(will default to: dba)"}"
 #   echo "DATAFAQS_PUBLISH_VIRTUOSO_INI_PATH                    ${DATAFAQS_PUBLISH_VIRTUOSO_INI_PATH:-"(will default to: $virtuoso_home/var/lib/virtuoso/db/virtuoso.ini)"}"
 #   echo "DATAFAQS_PUBLISH_VIRTUOSO_SCRIPT_PATH                 ${DATAFAQS_PUBLISH_VIRTUOSO_SCRIPT_PATH:-"(DEPRECATED. will default to: /opt/virtuoso/scripts/vload)"}"
 #   else
@@ -126,7 +125,7 @@ if [ ${1:-"no"} != "CLEAR" ]; then
 
    if [ ${#DATAFAQS_HOME} -gt 0 ]; then
       echo "  "
-      echo "see documentation for variables in:"
+      echo "see documentation for variables in: https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-environment-variables"
    fi
 else
 
