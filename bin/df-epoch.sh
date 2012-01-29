@@ -182,11 +182,11 @@ if [ "$epoch_existed" != "true" ]; then
 
    if [ -e epoch.ttl ]; then
       rapper -q -g -o rdfxml epoch.ttl > epoch.ttl.rdf
-      faqts_input=`df-core.py epoch.ttl.rdf faqt-services | awk '{print $2}' | head -1`
-      faqts_service=`df-core.py epoch.ttl.rdf faqt-services | awk '{print $1}' | head -1`
+      faqts_input=`df-core.py epoch.ttl.rdf faqt-selectors | awk '{print $2}' | head -1`
+      faqts_service=`df-core.py epoch.ttl.rdf faqt-selectors | awk '{print $1}' | head -1`
 
-      datasets_input=`df-core.py epoch.ttl.rdf datasets | awk '{print $2}' | head -1`
-      datasets_service=`df-core.py epoch.ttl.rdf datasets | awk '{print $1}' | head -1`
+      datasets_input=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $2}' | head -1`
+      datasets_service=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $1}' | head -1`
 
       references_service=`df-core.py epoch.ttl.rdf dataset-augmenters | head -1`
       cp epoch.ttl $epochDir/epoch.ttl
@@ -223,11 +223,17 @@ if [ "$epoch_existed" != "true" ]; then
    df-epoch-metadata.py datasets $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl text/turtle ${triples:-0}                                              > $epochDir/datasets.meta.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                                  > $epochDir/datasets.ttl.sd_name
 
-   echo "[INFO] Requesting dataset descriptions from $references_service"
+   echo "[INFO] Requesting dataset references from $references_service"
    send="$epochDir/datasets.ttl"
    mime=`guess-syntax.sh $send mime`
+   rsyn=`guess-syntax.sh $send rapper`
    echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $references_service"                                          > $epochDir/dataset-references.sh
-   source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
+   rapper -g $rsyn -o rdfxml > datasets.ttl.rdf
+   df-core.py datasets.ttl.rdf datasets # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
+   for post in dataset-references.post*; do
+      curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$send $references_service >> $epochDir/dataset-references.ttl
+   done
+   # 502s: source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
    triples=`void-triples.sh $dir/dataset-references.ttl`
    df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}                 > $epochDir/dataset-references.meta.ttl
