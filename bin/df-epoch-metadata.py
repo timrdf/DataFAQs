@@ -264,23 +264,23 @@ elif sys.argv[1] == "evaluation":
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>
    a datafaqs:Epoch, void:Dataset;
-   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation>;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
 .
-<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation/local-copy>
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/local-copy>
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
-   sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation>;
-   rdfs:comment "The local copy of {DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
+   sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
+   rdfs:comment "The local copy of evaluation graph {DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}} in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
 .
-<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation>
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>
    a prov:Account, sd:Graph, void:Graph, datafaqs:Evaluation;
    void:triples          {{TRIPLES}};
-   prov:wasAttributedTo <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
-   foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
+   prov:wasAttributedTo <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>;
+   foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}>;
    void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
    rdfs:comment "The abstract RDF graph received from the FAqTService during epoch {{EPOCH}}. This can appear in any SPARQL endpoint.";
 .
-<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}>
    a void:Dataset;
    prov:specializationOf <{{DATASET}}>;
    dcterms:date "{{EPOCH}}"^^xsd:date;
