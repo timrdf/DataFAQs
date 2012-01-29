@@ -231,6 +231,7 @@ if [ "$epoch_existed" != "true" ]; then
    rapper -g -i $rsyn -o rdfxml > datasets.ttl.rdf
    df-core.py datasets.ttl.rdf datasets # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
    for post in dataset-references.post*; do
+      echo $post
       curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$send $references_service >> $epochDir/dataset-references.ttl
    done
    # 502s: source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
