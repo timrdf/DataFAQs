@@ -85,7 +85,7 @@ graph.parse(epoch)
 results = graph.query(queries[type], initNs=prefixes)
 
 if type == 'datasets':
-   print results 
+   print str(len(results))
    for bindings in results:
       print bindings[0] + ' a ' + bindings[1] + ' .'
 else: # faqt-selectors and dataset-selectors and dataset-augmenters
