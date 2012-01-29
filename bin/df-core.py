@@ -95,7 +95,7 @@ select distinct ?dataset where {
 '''
    results = graph.query(query, initNs=prefixes)
    for bindings in results:
-      print bindings[0] + ' a <http://rdfs.org/ns/void#> .'
+      print '<' + bindings + '> a <http://rdfs.org/ns/void#> .'
 
    query = '''
 select distinct ?dataset where {
@@ -104,7 +104,7 @@ select distinct ?dataset where {
 '''
    results = graph.query(query, initNs=prefixes)
    for bindings in results:
-      print bindings[0] + ' a <http://purl.org/twc/vocab/datafaqs#CKANDataset> .'
+      print '<' + bindings + '> a <http://purl.org/twc/vocab/datafaqs#CKANDataset> .'
 
 else: # faqt-selectors and dataset-selectors and dataset-augmenters
    for bindings in results:
