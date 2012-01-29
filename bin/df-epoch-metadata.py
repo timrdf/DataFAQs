@@ -71,7 +71,7 @@ templates = {
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description>
    a prov:Account, sd:Graph, void:Graph;
    void:triples          {{TRIPLES}};
-   prov:wasAttributedTo <{{FAQT}}>;
+   prov:wasAttributedTo <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>;
    foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}>;
    void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
    rdfs:comment "The abstract RDF graph received from the FAqTService during epoch {{EPOCH}}. This can appear in any SPARQL endpoint.";
@@ -174,6 +174,7 @@ if sys.argv[1] in ["faqt-services", "datasets", "dataset-references"]:
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void:     <http://rdfs.org/ns/void#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/config/{{CORE_GRAPH}}/local-copy>
    a sd:NamedGraph;
@@ -265,7 +266,7 @@ elif sys.argv[1] == "evaluation":
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation>
    a prov:Account, sd:Graph, void:Graph, datafaqs:Evaluation;
    void:triples          {{TRIPLES}};
-   prov:wasAttributedTo <{{FAQT}}>;
+   prov:wasAttributedTo <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
    foaf:primaryTopic    <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
    void:dataDump        <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
    rdfs:comment "The abstract RDF graph received from the FAqTService during epoch {{EPOCH}}. This can appear in any SPARQL endpoint.";
