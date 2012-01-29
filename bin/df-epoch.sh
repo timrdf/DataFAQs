@@ -212,7 +212,7 @@ if [ "$epoch_existed" != "true" ]; then
    rapper -q -g -o ntriples $epochDir/faqt-services.ttl | sed 's/<//g;s/>//g' | grep "purl.org/dc/terms/hasPart" | awk '{print $3}' | grep "^http://" | sort -u > $epochDir/faqt-services.ttl.csv
 
    echo "[INFO] Requesting datasets from             $datasets_service"
-   pushd $epochDir &> /dev/null; 
+   pushd $epochDir &> /dev/null
       pcurl.sh $datasets_input -n datasets.post &> /dev/null; 
       rapper -q `guess-syntax.sh --inspect datasets.post rapper` -o turtle $datasets_input > datasets.post.ttl; 
    popd &> /dev/null
@@ -229,11 +229,13 @@ if [ "$epoch_existed" != "true" ]; then
    rsyn=`guess-syntax.sh $send rapper`
    echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $references_service"                                          > $epochDir/dataset-references.sh
    rapper -q $rsyn -o rdfxml $send > $epochDir/datasets.ttl.rdf
-   df-core.py $epochDir/datasets.ttl.rdf datasets # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
-   for post in $epochDir/dataset-references.post*; do
-      echo $post
-      curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $references_service >> $epochDir/dataset-references.ttl
-   done
+   pushd $epochDir &> /dev/null
+      df-core.py datasets.ttl.rdf datasets # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
+      for post in dataset-references.post*; do
+         echo $post
+         curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $references_service >> dataset-references.ttl
+      done
+   popd &> /dev/null
    # 502s: source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
    triples=`void-triples.sh $dir/dataset-references.ttl`
