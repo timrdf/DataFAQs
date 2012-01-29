@@ -60,6 +60,7 @@ templates = {
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>
    a datafaqs:Epoch, void:Dataset;
    void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description>;
+   dcterms:date "{{EPOCH}}"^^xsd:date;
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/self-description/local-copy>
    a sd:NamedGraph;
