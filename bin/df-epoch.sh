@@ -228,11 +228,11 @@ if [ "$epoch_existed" != "true" ]; then
    mime=`guess-syntax.sh $send mime`
    rsyn=`guess-syntax.sh $send rapper`
    echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $references_service"                                          > $epochDir/dataset-references.sh
-   rapper $rsyn -o rdfxml datasets.ttl > datasets.ttl.rdf
+   rapper $rsyn -o rdfxml $send > $epochDir/datasets.ttl.rdf
    df-core.py datasets.ttl.rdf datasets # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
-   for post in dataset-references.post*; do
+   for post in $epochDir/dataset-references.post*; do
       echo $post
-      curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$send $references_service >> $epochDir/dataset-references.ttl
+      curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $references_service >> $epochDir/dataset-references.ttl
    done
    # 502s: source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
