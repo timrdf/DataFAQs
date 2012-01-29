@@ -100,7 +100,7 @@ templates = {
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix void:     <http://rdfs.org/ns/void#> .
-@prefix prov:     <http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceOntology.owl#> .
+@prefix prov:     <http://www.w3.org/ns/prov-o/> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix formats:  <http://www.w3.org/ns/formats/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
