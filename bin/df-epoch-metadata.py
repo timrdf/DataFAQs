@@ -251,6 +251,10 @@ elif sys.argv[1] == "evaluation":
 @prefix prov:     <http://www.w3.org/ns/prov-o/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>
+   a datafaqs:Epoch, void:Dataset;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation>;
+.
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}/evaluation/local-copy>
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
