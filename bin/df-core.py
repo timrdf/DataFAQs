@@ -76,7 +76,7 @@ select distinct ?dataset ?type where {
    ?dataset a ?type .
    filter(?type = datafaqs:CKANDataset || ?type = void:Dataset)
 }
-'''
+''' # rdflib can't handle this query.
 }
 
 graph = Graph()
@@ -85,18 +85,33 @@ graph.parse(epoch)
 results = graph.query(queries[type], initNs=prefixes)
 
 if type == 'datasets':
-   print str(len(results))
-   for bindings in results:
-      print bindings[0] + ' a ' + bindings[1] + ' .'
+   # Hack b/c rdflib can't handle the filter ||
    query = '''
 select distinct ?dataset where {
    ?dataset a void:Dataset .
 }
 '''
    results = graph.query(query, initNs=prefixes)
+   block = 1 # dear coding gods: I am so sorry.
+   count = 0
+   size = 2
    for bindings in results:
-      print '<' + bindings + '> a <http://rdfs.org/ns/void#> .'
+      if count == 0:
+         if block > 1:
+            post.close()
+         filename = 'dataset-references.post.'+str(block)+'.ttl'
+         if not(os.path.exists(filename)):
+            print filename
+            post = open(filename, 'w')
+         else:
+            print filename + " already exists. Not modifying."
+      count += 1
+      post.write('<' + bindings + '> a <http://rdfs.org/ns/void#> .\n')
+      if count == size:
+         count = 0
+         block += 1
 
+   # Hack b/c rdflib can't handle the filter ||
    query = '''
 select distinct ?dataset where {
    ?dataset a datafaqs:CKANDataset .
@@ -104,7 +119,20 @@ select distinct ?dataset where {
 '''
    results = graph.query(query, initNs=prefixes)
    for bindings in results:
-      print '<' + bindings + '> a <http://purl.org/twc/vocab/datafaqs#CKANDataset> .'
+      if count == 0:
+         if block > 1:
+            post.close()
+         filename = 'dataset-references.post.'+str(block)+'.ttl'
+         if not(os.path.exists(filename)):
+            print filename
+            post = open(filename, 'w')
+         else:
+            print filename + " already exists. Not modifying."
+      count += 1
+      post.write('<' + bindings + '> a <http://purl.org/twc/vocab/datafaqs#CKANDataset> .\n')
+      if count == size:
+         count = 0
+         block += 1
 
 else: # faqt-selectors and dataset-selectors and dataset-augmenters
    for bindings in results:
