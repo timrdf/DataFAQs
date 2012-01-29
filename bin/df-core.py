@@ -88,6 +88,24 @@ if type == 'datasets':
    print str(len(results))
    for bindings in results:
       print bindings[0] + ' a ' + bindings[1] + ' .'
+   query = '''
+select distinct ?dataset where {
+   ?dataset a void:Dataset .
+}
+'''
+   results = graph.query(query, initNs=prefixes)
+   for bindings in results:
+      print bindings[0] + ' a <http://rdfs.org/ns/void#> .'
+
+   query = '''
+select distinct ?dataset where {
+   ?dataset a datafaqs:CKANDataset .
+}
+'''
+   results = graph.query(query, initNs=prefixes)
+   for bindings in results:
+      print bindings[0] + ' a <http://purl.org/twc/vocab/datafaqs#CKANDataset> .'
+
 else: # faqt-selectors and dataset-selectors and dataset-augmenters
    for bindings in results:
       if len(bindings) == 2:
