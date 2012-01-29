@@ -109,14 +109,14 @@ templates = {
    a datafaqs:Epoch, void:Dataset;
    void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
 .
-<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions/local-copy>; 
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions/local-copy> 
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}>;
    sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
    rdfs:comment "The local copy of {{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
    rdfs:comment "The sd:Graph that describes the analyzed void:Dataset is different than the void:Dataset itself, so sd:graph cannot be just the void:Dataset URI.";
 .
-<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions>; 
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions> 
    a prov:Account, sd:Graph, void:Graph;
    void:triples {{TRIPLES}};
    prov:wasDerivedFrom 
@@ -211,10 +211,14 @@ elif sys.argv[1] in ["faqt-service", "dataset"]:
       template = templates[sys.argv[1]]
       print fill_template(template, attrvals)
    else:
-      print '# [ERROR]: ' + sys.argv[1] + ' requires ' + str(len(schema)) + ' arguments (given ' + str(len(values)) + '):'
+      print '# [ERROR]: ' + sys.argv[1] + ' requires ' + str(len(schema)) + ' arguments:'
       print '# ',
       for attr in schema:
          print ' ',attr.lower(),
+      print '# given ' + str(len(values)) + '):'
+      print '# ',
+      for arg in sys.argv:
+         print ' ',arg,
 
 elif sys.argv[1] == "evaluation":
    if len(sys.argv) == 11:
