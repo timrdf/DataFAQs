@@ -171,6 +171,7 @@ if sys.argv[1] in ["faqt-services", "datasets", "dataset-references"]:
    if len(values) == len(schema):
       attrvals = fill_values(schema, values) 
       metadata = '''
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void:     <http://rdfs.org/ns/void#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 
