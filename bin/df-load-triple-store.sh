@@ -1,6 +1,12 @@
 #!/bin/bash
 #
 # publishes into DATAFAQS_PUBLISH_TDB_DIR if DATAFAQS_PUBLISH_TDB = true
+# if DATAFAQS_PUBLISH_VIRTUOSO = true publishes into 
+#     CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT
+#     using
+#     CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH
+#     CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME
+#     CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
 if [ ! -e `basename $log` ]; then
@@ -72,7 +78,16 @@ if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
 
 elif [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" ]; then
 
-   echo TODO virtuoso
+   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT
+   # using
+   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH
+   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME
+   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
+   # CSV2RDF4LOD_CONVERT_DATA_ROOT
+
+   # usage: vload [--target] {rdf, ttl, nt, nq} <data_file> <graph_uri> [-v | --verbose]
+   $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
+
 elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
 
    echo TODO ag
