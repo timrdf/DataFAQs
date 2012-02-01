@@ -86,6 +86,6 @@ resource = TEMPLATE-CLASS-NAME()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
-   print resource.name + ' running on port ' + resource.dev_port + '. Invoke it with:'
+   print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
    print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
    sadi.publishTwistedService(resource, port=resource.dev_port)
