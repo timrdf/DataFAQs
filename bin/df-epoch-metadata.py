@@ -221,6 +221,7 @@ elif sys.argv[1] in ["faqt-service", "dataset"]:
       print '# ',
       for attr in schema:
          print ' ',attr.lower(),
+      print ''
       print '# given ' + str(len(values)) + '):'
       print '# ',
       for arg in sys.argv:
