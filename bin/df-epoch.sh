@@ -381,9 +381,10 @@ if [ "$epoch_existed" != "true" ]; then
                mv $file $file.$extension                                                                                   # part-{1,2,3,...}.{ttl,rdf,nt}
                rapper -q -g -o turtle $file.$extension >> post.ttl                                                         # post.ttl
             done
-            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d" > post.ttl.sd_name                             # post.ttl.sd_name 
+            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d" > post.ttl.sd_name                                  # post.ttl.sd_name 
             triples=`void-triples.sh post.ttl`
-            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump $mimetype $triples > post.meta.ttl # post.meta.ttl 
+            dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
+            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples > post.meta.ttl  # post.meta.ttl 
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
                df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
