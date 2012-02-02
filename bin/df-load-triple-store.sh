@@ -11,10 +11,10 @@
 #     CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
-echo `basename $log`
+echo `dirname $log`
 echo $log
-if [ ! -e `basename $log` ]; then
-   mkdir -p `basename $log`
+if [ ! -e `dirname $log` ]; then
+   mkdir -p `dirname $log`
 fi
 
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
