@@ -11,6 +11,7 @@
 #     CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
+echo `basename $log`
 echo $log
 if [ ! -e `basename $log` ]; then
    mkdir -p `basename $log`
