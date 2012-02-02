@@ -30,6 +30,7 @@ if [ ${1:-"no"} != "CLEAR" ]; then
    #echo "PATH                                  $PATH"
 
 #   echo "  "
+   echo "CSV2RDF4LOD_HOME                                      ${CSV2RDF4LOD_HOME:-"!!! -- MUST BE SET -- !!! source datafaqs-source-me.sh"}"
    echo "DATAFAQS_HOME                                         ${DATAFAQS_HOME:-"!!! -- MUST BE SET -- !!! source datafaqs-source-me.sh"}"
    echo "DATAFAQS_BASE_URI                                     ${DATAFAQS_BASE_URI:-"!!! -- MUST BE SET -- !!! source datafaqs-source-me.sh"}"
 #   echo "DATAFAQS_BASE_URI_OVERRIDE                            ${DATAFAQS_BASE_URI_OVERRIDE:="(not required, \$DATAFAQS_BASE_URI will be used.)"}"
@@ -47,7 +48,7 @@ if [ ${1:-"no"} != "CLEAR" ]; then
 #   echo "DATAFAQS_CONVERT_DUMP_FILE_EXTENSIONS                 \"${DATAFAQS_CONVERT_DUMP_FILE_EXTENSIONS}\" => ${extensions:="(void:dataDump URLs will not have file extensions)"}"
 #   echo "DATAFAQS_CONVERT_PROVENANCE_GRANULAR                  ${DATAFAQS_CONVERT_PROVENANCE_GRANULAR:="(will default to: false)"}"
 #   echo "DATAFAQS_CONVERT_PROVENANCE_FRBR                      ${DATAFAQS_CONVERT_PROVENANCE_FRBR:="(will default to: false)"}"
-#   echo "DATAFAQS_CONVERT_DEBUG_LEVEL                          ${DATAFAQS_CONVERT_DEBUG_LEVEL:="(will default to: none \{none,fine,finer,finest\})"}"
+
 
 #   echo "  "
 #   echo "DATAFAQS_PUBLISH                                      ${DATAFAQS_PUBLISH:-"(will default to: true)"}"
