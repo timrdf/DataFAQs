@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-# publishes into DATAFAQS_PUBLISH_TDB_DIR if DATAFAQS_PUBLISH_TDB = true
+# if DATAFAQS_PUBLISH_TDB = true, publish into
+#     DATAFAQS_PUBLISH_TDB_DIR
+#
 # if DATAFAQS_PUBLISH_VIRTUOSO = true publishes into 
 #     CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT
 #     using
@@ -9,6 +11,7 @@
 #     CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
+echo $log
 if [ ! -e `basename $log` ]; then
    mkdir -p `basename $log`
 fi
