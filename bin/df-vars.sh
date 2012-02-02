@@ -113,6 +113,7 @@ if [ ${1:-"no"} != "CLEAR" ]; then
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT                     ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT:-"(will default to: 1111)"}"
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME                 ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME:-"(will default to: dba)"}"
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD                 ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD:-"(will default to: dba)"}"
+   echo "CSV2RDF4LOD_CONCURRENCY                               ${CSV2RDF4LOD_CONCURRENCY:-"(will default to: 1)"}"
 #   echo "DATAFAQS_PUBLISH_VIRTUOSO_INI_PATH                    ${DATAFAQS_PUBLISH_VIRTUOSO_INI_PATH:-"(will default to: $virtuoso_home/var/lib/virtuoso/db/virtuoso.ini)"}"
 #   echo "DATAFAQS_PUBLISH_VIRTUOSO_SCRIPT_PATH                 ${DATAFAQS_PUBLISH_VIRTUOSO_SCRIPT_PATH:-"(DEPRECATED. will default to: /opt/virtuoso/scripts/vload)"}"
 #   else
