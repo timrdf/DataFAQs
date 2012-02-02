@@ -16,7 +16,7 @@ if [ ! -e `dirname $log` ]; then
 fi
 
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
-   echo "usage: `basename $0` ( --recursive-by-sd-name | [--graph graph-name] file )"
+   echo "usage: `basename $0` ( --recursive-by-sd-name | [--graph graph-name] ( --recursive-meta | file ) )"
    exit 1
 fi
 
@@ -51,47 +51,58 @@ if [ "$1" == "--graph" ]; then
    fi
 fi
 
-file="$1"
-shift
+if [ "$1" == "--recursive-meta" ]; then
+   meta_paths=`find . -name "*.meta.ttl"`
+   for meta in $meta_paths; do
+      if [ ${#graph} -gt 0 ]; then
+         $0 --graph $graph $meta
+      else
+         $0 $meta
+      fi
+   done
+else
+   file="$1"
+   shift
 
-if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
+   if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
 
-   if [ ! `which tdbloader` ]; then
-      echo "tdbloader not on path; skipping tdb triple store load."
-   fi
-   if [[ ${#DATAFAQS_PUBLISH_TDB_DIR} -gt 0 ]]; then
-      if [[ -d "$DATAFAQS_PUBLISH_TDB_DIR" ]]; then
-         if [ ${#graph} -gt 0 ]; then
-            echo >> $log
-            pwd  >> $log
-            echo "tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file" 2>> $log 1>> $log
-                  tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file  2>> $log 1>> $log
+      if [ ! `which tdbloader` ]; then
+         echo "tdbloader not on path; skipping tdb triple store load."
+      fi
+      if [[ ${#DATAFAQS_PUBLISH_TDB_DIR} -gt 0 ]]; then
+         if [[ -d "$DATAFAQS_PUBLISH_TDB_DIR" ]]; then
+            if [ ${#graph} -gt 0 ]; then
+               echo >> $log
+               pwd  >> $log
+               echo "tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file" 2>> $log 1>> $log
+                     tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file  2>> $log 1>> $log
+            else
+               echo >> $log
+               pwd  >> $log
+               echo "tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file" 2>> $log 1>> $log
+                     tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file  2>> $log 1>> $log
+            fi
          else
-            echo >> $log
-            pwd  >> $log
-            echo "tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file" 2>> $log 1>> $log
-                  tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file  2>> $log 1>> $log
+            echo "$DATAFAQS_PUBLISH_TDB_DIR does not exist; skipping tdb triple store load."
          fi
       else
-         echo "$DATAFAQS_PUBLISH_TDB_DIR does not exist; skipping tdb triple store load."
+         echo DATAFAQS_PUBLISH_TDB_DIR not set, trying to use context to find a tdb directory.
       fi
-   else
-      echo DATAFAQS_PUBLISH_TDB_DIR not set, trying to use context to find a tdb directory.
+
+   elif [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" ]; then
+
+      # CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT
+      # using
+      # CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH
+      # CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME
+      # CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
+      # CSV2RDF4LOD_CONVERT_DATA_ROOT
+
+      # usage: vload [--target] {rdf, ttl, nt, nq} <data_file> <graph_uri> [-v | --verbose]
+      echo $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
+           $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
+
+   elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
+      echo TODO ag
    fi
-
-elif [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" ]; then
-
-   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT
-   # using
-   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH
-   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME
-   # CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
-   # CSV2RDF4LOD_CONVERT_DATA_ROOT
-
-   # usage: vload [--target] {rdf, ttl, nt, nq} <data_file> <graph_uri> [-v | --verbose]
-   echo $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
-        $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
-
-elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
-   echo TODO ag
 fi
