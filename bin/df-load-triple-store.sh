@@ -37,6 +37,7 @@ if [ "$1" == "--recursive-by-sd-name" ]; then
          fi
       popd &> /dev/null
    done
+   exit
 fi
 
 graph=""
@@ -62,14 +63,14 @@ if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
       if [[ -d "$DATAFAQS_PUBLISH_TDB_DIR" ]]; then
          if [ ${#graph} -gt 0 ]; then
             echo >> $log
-            pwd >> $log
-            echo tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file 2>> $log 1>> $log
-            tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file      2>> $log 1>> $log
+            pwd  >> $log
+            echo "tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file" 2>> $log 1>> $log
+                  tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR --graph=$graph $file  2>> $log 1>> $log
          else
             echo >> $log
-            pwd >> $log
-            echo tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file 2>> $log 1>> $log
-            tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file      2>> $log 1>> $log
+            pwd  >> $log
+            echo "tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file" 2>> $log 1>> $log
+                  tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR $file  2>> $log 1>> $log
          fi
       else
          echo "$DATAFAQS_PUBLISH_TDB_DIR does not exist; skipping tdb triple store load."
@@ -88,9 +89,9 @@ elif [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" ]; then
    # CSV2RDF4LOD_CONVERT_DATA_ROOT
 
    # usage: vload [--target] {rdf, ttl, nt, nq} <data_file> <graph_uri> [-v | --verbose]
-   $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
+   echo $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
+        $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
 
 elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
-
    echo TODO ag
 fi
