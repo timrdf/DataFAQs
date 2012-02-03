@@ -1,0 +1,5 @@
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+
+<http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29>
+    a conversion:VersionedDataset, dcat:Dataset . 

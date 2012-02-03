@@ -9,14 +9,15 @@ from surf.query import select
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(void='http://rdfs.org/ns/void#')
+ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class IdentityCKANDataset(sadi.Service):
+class IdentityDatasetSelector(sadi.Service):
 
    # Service metadata.
    label                  = 'dataset-identity'
-   serviceDescriptionText = 'Return the void:CKANDataset FAqT services given.'
+   serviceDescriptionText = 'Return the same dcat:Datasets given to this service (the identity function).'
    comment                = ''
    serviceNameText        = 'identity-dataset' # Convention: Match 'name' below.
    name                   = 'identity-dataset' # This value determines the service URI relative to http://localhost:9090/
@@ -34,25 +35,22 @@ class IdentityCKANDataset(sadi.Service):
       return result
 
    def getInputClass(self):
-      return ns.DATAFAQS['CKANDataset']
+      return ns.DCAT['Dataset']
 
    def getOutputClass(self):
-      return ns.DATAFAQS['CKANDataset']
+      return ns.DCAT['Dataset']
 
    def process(self, input, output):
   
       print input.subject
 
-      CKANDataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
-      dataset = CKANDataset(input.subject)
-      dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
-      dataset.save()
-      output.dcterms_hasPart.append(dataset)
+      for type in input.rdf_type:
+         output.rdf_type.append(type)
 
       output.save()
 
 # Used when Twistd invokes this service b/c it is sitting in a deployed directory.
-resource = IdentityCKANDataset()
+resource = IdentityDatasetSelector()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
