@@ -28,6 +28,7 @@ if len(sys.argv) != 3:
    sys.exit(1)
 
 ns.register(prov='http://www.w3.org/ns/prov-o/')
+ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
@@ -40,7 +41,10 @@ type  = sys.argv[2]
 #query = select("?service", "?input").where( ("?service", a, surf.ns.DATAFAQS['FAqTService']))
 #results = session.default_store.execute(query)
 
-prefixes = dict(prov=str(ns.PROV),datafaqs=str(ns.DATAFAQS),void=str(ns.VOID))
+prefixes = dict(prov=str(ns.PROV),
+                datafaqs=str(ns.DATAFAQS),
+                dcat=str(ns.DCAT),
+                void=str(ns.VOID))
 
 queries = {
    'faqt-selectors' : '''
@@ -76,7 +80,7 @@ select distinct ?dataset ?type where {
    ?dataset a ?type .
    filter(?type = datafaqs:CKANDataset || ?type = void:Dataset)
 }
-''' # rdflib can't handle this query.
+''' # rdflib can't handle this query. # TODO: rework to only do dcat:Dataset.
 }
 
 graph = Graph()
@@ -88,7 +92,7 @@ if type == 'datasets':
    # Hack b/c rdflib can't handle the filter ||
    query = '''
 select distinct ?dataset where {
-   ?dataset a void:Dataset .
+   ?dataset a dcat:Dataset .
 }
 '''
    results = graph.query(query, initNs=prefixes)
@@ -106,33 +110,33 @@ select distinct ?dataset where {
          else:
             print filename + " already exists. Not modifying."
       count += 1
-      post.write('<' + bindings + '> a <http://rdfs.org/ns/void#> .\n')
+      post.write('<' + bindings + '> a <http://www.w3.org/ns/dcat#Dataset> .\n')
       if count == size:
          count = 0
          block += 1
 
    # Hack b/c rdflib can't handle the filter ||
-   query = '''
-select distinct ?dataset where {
-   ?dataset a datafaqs:CKANDataset .
-}
-'''
-   results = graph.query(query, initNs=prefixes)
-   for bindings in results:
-      if count == 0:
-         if block > 1:
-            post.close()
-         filename = 'dataset-references.post.'+str(block)+'.ttl'
-         if not(os.path.exists(filename)):
-            print filename
-            post = open(filename, 'w')
-         else:
-            print filename + " already exists. Not modifying."
-      count += 1
-      post.write('<' + bindings + '> a <http://purl.org/twc/vocab/datafaqs#CKANDataset> .\n')
-      if count == size:
-         count = 0
-         block += 1
+#   query = '''
+#select distinct ?dataset where {
+#   ?dataset a datafaqs:CKANDataset .
+#}
+#'''
+#   results = graph.query(query, initNs=prefixes)
+#   for bindings in results:
+#      if count == 0:
+#         if block > 1:
+#            post.close()
+#         filename = 'dataset-references.post.'+str(block)+'.ttl'
+#         if not(os.path.exists(filename)):
+#            print filename
+#            post = open(filename, 'w')
+#         else:
+#            print filename + " already exists. Not modifying."
+#      count += 1
+#      post.write('<' + bindings + '> a <http://purl.org/twc/vocab/datafaqs#CKANDataset> .\n')
+#      if count == size:
+#         count = 0
+#         block += 1
 
 else: # faqt-selectors and dataset-selectors and dataset-augmenters
    for bindings in results:
