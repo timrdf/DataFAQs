@@ -1,7 +1,7 @@
 @prefix prov:     <http://www.w3.org/ns/prov-o/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
-<> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/default/faqt-brick/epoch.ttl> .
+<> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/doc/examples/lodstat-1-good-1-bad/faqt-brick/epoch.ttl> .
 
 # # # # # # # # # #
 _:selectfaqtservices # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
