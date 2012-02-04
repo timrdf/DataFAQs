@@ -22,6 +22,7 @@ import urllib2
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
+ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
@@ -70,6 +71,7 @@ class DatasetsByCKANGroup(sadi.Service):
          ckan_uri = 'http://thedatahub.org/dataset/' + dataset_id
          dataset = Dataset(ckan_uri)
          dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
+         dataset.rdf_type.append(ns.DCAT['Dataset'])
          dataset.save()
          output.dcterms_hasPart.append(dataset)
 
