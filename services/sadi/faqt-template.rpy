@@ -67,11 +67,11 @@ class TEMPLATE-CLASS-NAME(sadi.Service):
       store = Store(reader = 'sparql_protocol', endpoint = 'http://dbpedia.org/sparql')
       session = Session(store)
       session.enable_logging = False
-      result = session.default_store.execute_sparql('select distinct ?Concept where {[] a ?Concept} limit 2')
+      result = session.default_store.execute_sparql('select distinct ?type where {[] a ?type} limit 2')
       if result:
          for binding in result['results']['bindings']:
-            graph  = binding['graph']['value']
-            print graph
+            type  = binding['type']['value']
+            print type
       ####
 
       if True:
