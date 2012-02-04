@@ -1,3 +1,16 @@
+#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy> .
+#
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
+#3>    a datafaqs:FAqTService .
+#3> []
+#3>   a prov:Activity;
+#3>   prov:hadQualifiedAttribution [
+#3>      a prov:Attribution;
+#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
+#3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
+#3>   ];
+#3> .
+
 import re
 import sadi
 from rdflib import *
@@ -23,6 +36,7 @@ import urllib2
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
 ns.register(void='http://rdfs.org/ns/void#')
+ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
@@ -36,6 +50,8 @@ class WithPreferredURIAndCKANMetaVoid(sadi.Service):
    serviceNameText        = 'with-preferred-uri-and-ckan-meta-void' # Convention: Match 'name' below.
    name                   = 'with-preferred-uri-and-ckan-meta-void' # This value determines the service URI relative to http://localhost:9090/
                                                                     # Convention: Use the name of this file for this value.
+   dev_port = 9099
+
    def __init__(self): 
       sadi.Service.__init__(self)
 
@@ -58,13 +74,15 @@ class WithPreferredURIAndCKANMetaVoid(sadi.Service):
 
    def process(self, input, output):
    
-      # Dereference via thedatahub
+      # Dereference (e.g., from thedatahub.org)
       store   = surf.Store(reader = 'rdflib', writer = 'rdflib', rdflib_store = 'IOMemory')
       session = surf.Session(store)
       store.load_triples(source = input.subject)
       print str(store.size()) + ' triples from ' + input.subject
 
-   
+  
+      # TODO: add in directly asserted PreferredURIs, now that we are accepting any dcat:Dataset
+ 
       # Dereference the preferred URI (denoted via a CKAN "extra")
       Thing = session.get_class(surf.ns.OWL.Thing)
       prefixes = "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
@@ -90,4 +108,6 @@ resource = WithPreferredURIAndCKANMetaVoid()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
-   sadi.publishTwistedService(resource, port=9099)
+   print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
+   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
+   sadi.publishTwistedService(resource, port=resource.dev_port)

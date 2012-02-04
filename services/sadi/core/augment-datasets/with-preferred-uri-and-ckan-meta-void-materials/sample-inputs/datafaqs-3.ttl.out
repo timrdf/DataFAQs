@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://thedatahub.org/dataset/congresspeople> a <http://purl.org/twc/vocab/datafaqs#WithReferences>;
+    rdfs:seeAlso <http://logd.tw.rpi.edu/source/contactingthecongress/dataset/directory-for-the-112th-congress> .
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> a <http://purl.org/twc/vocab/datafaqs#WithReferences>;
+    rdfs:seeAlso <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29>,
+        <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.void.ttl> .
+
+<http://thedatahub.org/dataset/white-house-visitor-access-records> a <http://purl.org/twc/vocab/datafaqs#WithReferences> .
