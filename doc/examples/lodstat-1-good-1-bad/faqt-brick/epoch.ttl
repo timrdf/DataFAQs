@@ -9,6 +9,7 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
    prov:wasAttributedTo
       <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
    prov:used
+      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/access/in-sparql-endpoint.ttl>;
    prov:hadQualifiedAttribution [
       a prov:Attribution;
       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
