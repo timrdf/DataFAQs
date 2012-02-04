@@ -230,10 +230,10 @@ if [ "$epoch_existed" != "true" ]; then
    echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $references_service"                                          > $epochDir/dataset-references.sh
    rapper -q $rsyn -o rdfxml $send > $epochDir/datasets.ttl.rdf
    pushd $epochDir &> /dev/null
-      df-core.py datasets.ttl.rdf datasets # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
+      df-core.py datasets.ttl.rdf datasets &> /dev/null # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
       if [ -e dataset-references.post.1.ttl ]; then
          for post in dataset-references.post*; do
-            echo $post
+            echo "[INFO] Getting rdfs:seeAlso references for datasets listed in $post"
             curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $references_service >> dataset-references.ttl
          done
       else
