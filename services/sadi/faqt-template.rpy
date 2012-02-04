@@ -77,7 +77,7 @@ class TEMPLATE-CLASS-NAME(sadi.Service):
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
  
       if ns.DATAFAQS['Unsatisfactory'] not in output.rdf_type:
-      output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+         output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 
       output.save()
 
