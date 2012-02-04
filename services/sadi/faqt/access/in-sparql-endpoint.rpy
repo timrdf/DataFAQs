@@ -35,8 +35,8 @@ class InSPARQLEndpoint(sadi.Service):
 
    # Service metadata.
    label                  = 'in-sparql-endpoint'
-   serviceDescriptionText = ''
-   comment                = ''
+   serviceDescriptionText = 'Queries into the void:sparqlEndpoint of the dcat:Dataset and reports if the endpoint is there.'
+   comment                = 'Initial purpose was to evaluate LOD datasets.'
    serviceNameText        = 'in-sparql-endpoint' # Convention: Match 'name' below.
    name                   = 'in-sparql-endpoint' # This value determines the service URI relative to http://localhost:9109/
                                             # Convention: Use the name of this file for this value.
