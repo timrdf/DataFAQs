@@ -3,13 +3,13 @@
 #
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/access/in-sparql-endpoint.rpy> .
 #
-#3> <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/access/in-sparql-endpoint>
 #3>    a datafaqs:FAqTService .
 #3> []
 #3>   a prov:Activity;
 #3>   prov:hadQualifiedAttribution [
 #3>      a prov:Attribution;
-#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
+#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/faqt/access/in-sparql-endpoint.rpy>;
 #3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/access/in-sparql-endpoint.rpy>;
 #3>   ];
 #3> .

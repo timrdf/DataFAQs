@@ -17,7 +17,7 @@
 @prefix prov: <http://www.w3.org/ns/prov-o/> .
 @prefix twi: <http://tw.rpi.edu/instances/> .
 
-<http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>
+<http://sparql.tw.rpi.edu/services/datafaqs/faqt/access/in-sparql-endpoint>
     a datafaqs:FAqTService .
 
 <>
@@ -28,6 +28,6 @@
     prov:hadQualifiedAttribution [
         a prov:Attribution ;
         prov:adoptedPlan <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/access/in-sparql-endpoint.rpy> ;
-        prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>
+        prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/faqt/access/in-sparql-endpoint.rpy>
     ] .
 
