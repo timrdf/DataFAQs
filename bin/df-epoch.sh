@@ -231,10 +231,15 @@ if [ "$epoch_existed" != "true" ]; then
    rapper -q $rsyn -o rdfxml $send > $epochDir/datasets.ttl.rdf
    pushd $epochDir &> /dev/null
       df-core.py datasets.ttl.rdf datasets # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
-      for post in dataset-references.post*; do
-         echo $post
-         curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $references_service >> dataset-references.ttl
-      done
+      if [ -e dataset-references.post.1.ttl ]; then
+         for post in dataset-references.post*; do
+            echo $post
+            curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $references_service >> dataset-references.ttl
+         done
+      else
+         echo "[ERROR] $epochDir/datasets.ttl.rdf did not list any datasets."
+         exit 1
+      fi
    popd &> /dev/null
    # 502s: source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
@@ -302,7 +307,7 @@ for faqt in $faqtsRandom; do
          # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
          echo "@prefix void: <http://rdfs.org/ns/void#> ."  > $datasetDir/dataset.ttl
          echo "<$dataset> a void:Dataset ."                >> $datasetDir/dataset.ttl                                   # dataset.ttl
-         echo "$dataset"                                    > $datasetDir/dataset.ttl.sd_name                           # dataset.ttl.sd_name
+         #echo "$dataset"                                    > $datasetDir/dataset.ttl.sd_name                           # dataset.ttl.sd_name
       done
    popd &> /dev/null
 done
