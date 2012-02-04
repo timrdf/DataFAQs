@@ -67,7 +67,7 @@ class WithPreferredURIAndCKANMetaVoid(sadi.Service):
       return result
 
    def getInputClass(self):
-      return ns.DATAFAQS['CKANDataset']
+      return ns.DCAT['Dataset']
 
    def getOutputClass(self):
       return ns.DATAFAQS['WithReferences']
