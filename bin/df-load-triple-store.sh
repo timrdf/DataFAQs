@@ -54,6 +54,7 @@ fi
 if [ "$1" == "--recursive-meta" ]; then
    meta_paths=`find . -name "*.meta.ttl"`
    for meta in $meta_paths; do
+      echo $meta
       if [ ${#graph} -gt 0 ]; then
          $0 --graph $graph $meta
       else
