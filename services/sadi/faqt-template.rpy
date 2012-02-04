@@ -25,6 +25,7 @@ import urllib2
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
 ns.register(void='http://rdfs.org/ns/void#')
+ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
@@ -52,7 +53,7 @@ class TEMPLATE-CLASS-NAME(sadi.Service):
       return result
 
    def getInputClass(self):
-      return ns.VOID['Dataset']
+      return ns.DCAT['Dataset']
 
    def getOutputClass(self):
       return ns.DATAFAQS['EvaluatedDataset']
@@ -63,10 +64,10 @@ class TEMPLATE-CLASS-NAME(sadi.Service):
 
       ####
       # Query a SPARQL endpoint
-      store = Store(reader = 'sparql_protocol', endpoint = endpoint)
+      store = Store(reader = 'sparql_protocol', endpoint = 'http://dbpedia.org/sparql')
       session = Session(store)
       session.enable_logging = False
-      result = session.default_store.execute_sparql(self.query)
+      result = session.default_store.execute_sparql('select distinct ?Concept where {[] a ?Concept} limit 2')
       if result:
          for binding in result['results']['bindings']:
             graph  = binding['graph']['value']
