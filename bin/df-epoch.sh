@@ -459,3 +459,7 @@ for dataset in $datasetsRandom; do
    done
    f=0
 done
+
+if [ -e epoch.ttl.rdf ]; then
+   rm epoch.ttl.rdf
+fi
