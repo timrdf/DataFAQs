@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:gis="http://www.opengis.net/rdf#"
+   xmlns:lic="http://purl.org/okfn/licenses/"
+   xmlns:moat="http://moat-project.org/ns#"
+   xmlns:opmv="http://purl.org/net/opmv/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:rev="http://purl.org/stuff/rev#"
+   xmlns:time="http://www.w3.org/2006/time#"
+   xmlns:void="http://rdfs.org/ns/void#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <moat:Tag rdf:about="http://ckan.net/tag/census">
+    <moat:name>census</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/data">
+    <moat:name>data</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/demographics">
+    <moat:name>demographics</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/deref-vocab">
+    <moat:name>deref-vocab</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/format-dc">
+    <moat:name>format-dc</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/format-geonames">
+    <moat:name>format-geonames</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/format-politico">
+    <moat:name>format-politico</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/format-rdf">
+    <moat:name>format-rdf</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/geographic">
+    <moat:name>geographic</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/linkeddata">
+    <moat:name>linkeddata</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/lod">
+    <moat:name>lod</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/lodcloud.nolinks">
+    <moat:name>lodcloud.nolinks</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/no-license-metadata">
+    <moat:name>no-license-metadata</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/no-provenance-metadata">
+    <moat:name>no-provenance-metadata</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/no-vocab-mappings">
+    <moat:name>no-vocab-mappings</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/population">
+    <moat:name>population</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/published-by-third-party">
+    <moat:name>published-by-third-party</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/rdf">
+    <moat:name>rdf</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/statistics">
+    <moat:name>statistics</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/us">
+    <moat:name>us</moat:name>
+  </moat:Tag>
+  <dcat:CatalogRecord rdf:about="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9">
+    <dc:source rdf:resource="http://ckan.net/"/>
+    <opmv:wasGeneratedBy>
+      <opmv:Process>
+        <opmv:used rdf:resource="http://ckan.net/api/rest/package/2000-us-census-rdf"/>
+        <opmv:used rdf:resource="http://ckan.net/api/rest/revision/fcbad0de-79ea-41bd-8e01-eb832a05b732"/>
+        <opmv:wasControlledBy>
+          <foaf:Agent>
+            <foaf:name>GoLD CKAN 1.0</foaf:name>
+          </foaf:Agent>
+        </opmv:wasControlledBy>
+        <opmv:wasPerformedAt>
+          <time:Instant>
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-02-04T05:41:37Z</time:inXSDDateTime>
+          </time:Instant>
+        </opmv:wasPerformedAt>
+      </opmv:Process>
+    </opmv:wasGeneratedBy>
+    <dcat:dataset rdf:resource="http://thedatahub.org/dataset/2000-us-census-rdf"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.dot"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.html"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.json"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.nt"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.rdf"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.ttl"/>
+  </dcat:CatalogRecord>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.dot">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>text/x-graphviz</rdf:value>
+        <rdfs:label>Graphviz</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.html">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>application/xhtml+xml</rdf:value>
+        <rdfs:label>HTML</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.json">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>text/javascript</rdf:value>
+        <rdfs:label>JSON</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.nt">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>text/plain</rdf:value>
+        <rdfs:label>N-Triples</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.rdf">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>application/rdf+xml</rdf:value>
+        <rdfs:label>RDF/XML</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9.ttl">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>application/turtle</rdf:value>
+        <rdfs:label>Turtle</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/551ec435-f198-4d52-9b56-ec0b0be6aec9"/>
+  </foaf:Document>
+  <dcat:Dataset rdf:about="http://thedatahub.org/dataset/2000-us-census-rdf">
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/census"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/data"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/demographics"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/deref-vocab"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/format-dc"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/format-geonames"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/format-politico"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/format-rdf"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/geographic"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/linkeddata"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/lod"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/lodcloud.nolinks"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/no-license-metadata"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/no-provenance-metadata"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/no-vocab-mappings"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/population"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/published-by-third-party"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/rdf"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/statistics"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/us"/>
+    <dc:contributor>
+      <rdf:Description>
+        <foaf:mbox rdf:resource="mailto:http://razor.occams.info/"/>
+        <foaf:name>Joshua Tauberer</foaf:name>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-08-28T11:00:50Z</dc:created>
+    <dc:description>&lt;p&gt;2000 U.S. Census converted into over a billion RDF triples.
+&lt;/p&gt;
+&lt;p&gt;Population statistics at various geographic levels, from the U.S. as a whole, down through states, counties, sub-counties (roughly, cities and incorporated towns)
+&lt;/p&gt;
+&lt;p&gt;Notes: also found in the of SPARQL Endpoints.
+&lt;/p&gt;
+&lt;p&gt;From home page:
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;ul&gt;
+ &lt;li&gt;&lt;p&gt;For the detailed Census statistics, you'll have to download the raw Census data files from the Census Bureau, my Perl script and the patch file below and run it yourself because the files are too big for me to offer as a download!
+&lt;/p&gt;
+
+ &lt;/li&gt;
+
+ &lt;li&gt;&lt;p&gt;The data and scripts can be reused under Creative Commons Attribution-NonCommercial-ShareAlike.
+&lt;/p&gt;
+
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</dc:description>
+    <dc:identifier>2000-us-census-rdf</dc:identifier>
+    <dc:identifier>551ec435-f198-4d52-9b56-ec0b0be6aec9</dc:identifier>
+    <dc:isPartOf rdf:resource="http://ckan.net/group/lod"/>
+    <dc:isPartOf rdf:resource="http://ckan.net/group/lodcloud"/>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-08-10T12:52:09Z</dc:modified>
+    <dc:rights rdf:resource="http://purl.org/okfn/licenses/cc-nc"/>
+    <dc:title>2000 U.S. Census in RDF (rdfabout.com)</dc:title>
+    <rev:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.50</rev:rating>
+    <void:exampleResource rdf:resource="http://www.rdfabout.com/rdf/usgov/geo/us/ny"/>
+    <void:sparqlEndpoint rdf:resource="http://www.rdfabout.com/sparql"/>
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002848918</void:triples>
+    <ns1:extra xmlns:ns1="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>US Census (rdfabout)</rdf:value>
+        <rdfs:label>shortname</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/shortname"/>
+      </rdf:Description>
+    </ns1:extra>
+    <ns2:extra xmlns:ns2="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>1002848918</rdf:value>
+        <rdfs:label>triples</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/triples"/>
+      </rdf:Description>
+    </ns2:extra>
+    <ns3:extra xmlns:ns3="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>http://www.rdfabout.com/rdf/usgov/geo/</rdf:value>
+        <rdfs:label>namespace</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/namespace"/>
+      </rdf:Description>
+    </ns3:extra>
+    <ns4:json xmlns:ns4="http://semantic.ckan.net/schema#">{"author":"Joshua Tauberer","author_email":"http://razor.occams.info/","ckan_url":"http://thedatahub.org/dataset/2000-us-census-rdf","download_url":"http://www.rdfabout.com/demo/census/","extras":{"namespace":"http://www.rdfabout.com/rdf/usgov/geo/","shortname":"US Census (rdfabout)","triples":"1002848918"},"groups":["lod","lodcloud"],"id":"551ec435-f198-4d52-9b56-ec0b0be6aec9","isopen":false,"license":"Non-OKD Compliant::Creative Commons Non-Commercial (Any)","license_id":"cc-nc","maintainer":null,"maintainer_email":null,"metadata_created":"2007-08-28T11:00:50","metadata_modified":"2011-08-10T12:52:09.200848","name":"2000-us-census-rdf","notes":"2000 U.S. Census converted into over a billion RDF triples.\u000d\u000a\u000d\u000aPopulation statistics at various geographic levels, from the U.S. as a whole, down through states, counties, sub-counties (roughly, cities and incorporated towns)\u000d\u000a\u000d\u000aNotes: also found in the of SPARQL Endpoints.\u000d\u000a\u000d\u000aFrom home page:\u000d\u000a\u000d\u000a&gt; * For the detailed Census statistics, you'll have to download the raw Census data files from the Census Bureau, my Perl script and the patch file below and run it yourself because the files are too big for me to offer as a download!\u000d\u000a&gt; \u000d\u000a&gt; * The data and scripts can be reused under Creative Commons Attribution-NonCommercial-ShareAlike.\u000d\u000a","notes_rendered":"&lt;p&gt;2000 U.S. Census converted into over a billion RDF triples.\u000a&lt;/p&gt;\u000a&lt;p&gt;Population statistics at various geographic levels, from the U.S. as a whole, down through states, counties, sub-counties (roughly, cities and incorporated towns)\u000a&lt;/p&gt;\u000a&lt;p&gt;Notes: also found in the of SPARQL Endpoints.\u000a&lt;/p&gt;\u000a&lt;p&gt;From home page:\u000a&lt;/p&gt;\u000a&lt;blockquote&gt;&lt;ul&gt;\u000a &lt;li&gt;&lt;p&gt;For the detailed Census statistics, you'll have to download the raw Census data files from the Census Bureau, my Perl script and the patch file below and run it yourself because the files are too big for me to offer as a download!\u000a&lt;/p&gt;\u000a\u000a &lt;/li&gt;\u000a\u000a &lt;li&gt;&lt;p&gt;The data and scripts can be reused under Creative Commons Attribution-NonCommercial-ShareAlike.\u000a&lt;/p&gt;\u000a\u000a &lt;/li&gt;\u000a&lt;/ul&gt;\u000a&lt;/blockquote&gt;","ratings_average":3.5,"ratings_count":4,"relationships":[],"resources":[{"cache_last_updated":null,"cache_url":null,"description":"Download","format":"","hash":"","id":"e82817a8-7957-4e61-921c-648b4f39f6fd","last_modified":null,"mimetype":null,"mimetype_inner":null,"name":null,"package_id":"551ec435-f198-4d52-9b56-ec0b0be6aec9","position":0,"resource_group_id":"c30f6b77-3680-a30b-765e-56f4a3eafc55","resource_type":null,"size":null,"url":"http://www.rdfabout.com/demo/census/","webstore_last_updated":null,"webstore_url":null},{"cache_last_updated":null,"cache_url":null,"description":"XML Sitemap","format":"meta/sitemap","hash":"","id":"a790b1f7-60f3-48a4-b37c-98dfb46ebee4","last_modified":null,"mimetype":null,"mimetype_inner":null,"name":null,"package_id":"551ec435-f198-4d52-9b56-ec0b0be6aec9","position":1,"resource_group_id":"c30f6b77-3680-a30b-765e-56f4a3eafc55","resource_type":null,"size":null,"url":"http://www.rdfabout.com/sitemap.xml","webstore_last_updated":null,"webstore_url":null},{"cache_last_updated":null,"cache_url":null,"description":"SPARQL enpdoint","format":"api/sparql","hash":"","id":"0f537771-a36e-4007-9b46-bcb172c99863","last_modified":null,"mimetype":null,"mimetype_inner":null,"name":null,"package_id":"551ec435-f198-4d52-9b56-ec0b0be6aec9","position":2,"resource_group_id":"c30f6b77-3680-a30b-765e-56f4a3eafc55","resource_type":null,"size":null,"url":"http://www.rdfabout.com/sparql","webstore_last_updated":null,"webstore_url":null},{"cache_last_updated":null,"cache_url":null,"description":"Example (RDF/XML)","format":"example/rdf+xml","hash":"","id":"a6e3f96e-0786-41c0-84dd-77aff6ecaf48","last_modified":null,"mimetype":null,"mimetype_inner":null,"name":null,"package_id":"551ec435-f198-4d52-9b56-ec0b0be6aec9","position":3,"resource_group_id":"c30f6b77-3680-a30b-765e-56f4a3eafc55","resource_type":null,"size":null,"url":"http://www.rdfabout.com/rdf/usgov/geo/us/ny","webstore_last_updated":null,"webstore_url":null}],"revision_id":"fcbad0de-79ea-41bd-8e01-eb832a05b732","state":"active","tags":["census","data","demographics","deref-vocab","format-dc","format-geonames","format-politico","format-rdf","geographic","linkeddata","lod","lodcloud.nolinks","no-license-metadata","no-provenance-metadata","no-vocab-mappings","population","published-by-third-party","rdf","statistics","us"],"title":"2000 U.S. Census in RDF (rdfabout.com)","type":null,"url":"http://www.rdfabout.com/demo/census/","version":null}</ns4:json>
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dc:description>Download</dc:description>
+        <dcat:accessURL rdf:resource="http://www.rdfabout.com/demo/census/"/>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dc:description>XML Sitemap</dc:description>
+        <dc:format>
+          <dc:IMT>
+            <moat:taggedWithTag>
+              <moat:Tag>
+                <moat:name>meta/sitemap</moat:name>
+              </moat:Tag>
+            </moat:taggedWithTag>
+          </dc:IMT>
+        </dc:format>
+        <dcat:accessURL rdf:resource="http://www.rdfabout.com/sitemap.xml"/>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dc:description>SPARQL enpdoint</dc:description>
+        <dc:format>
+          <dc:IMT>
+            <moat:taggedWithTag>
+              <moat:Tag>
+                <moat:name>api/sparql</moat:name>
+              </moat:Tag>
+            </moat:taggedWithTag>
+            <rdf:value>application/sparql-results+xml</rdf:value>
+            <rdfs:label>SPARQL</rdfs:label>
+          </dc:IMT>
+        </dc:format>
+        <dcat:accessURL rdf:resource="http://www.rdfabout.com/sparql"/>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dc:description>Example (RDF/XML)</dc:description>
+        <dc:format>
+          <dc:IMT>
+            <moat:taggedWithTag>
+              <moat:Tag>
+                <moat:name>example/rdf+xml</moat:name>
+              </moat:Tag>
+            </moat:taggedWithTag>
+            <rdf:value>application/rdf+xml</rdf:value>
+            <rdfs:label>RDF/XML</rdfs:label>
+          </dc:IMT>
+        </dc:format>
+        <dcat:accessURL rdf:resource="http://www.rdfabout.com/rdf/usgov/geo/us/ny"/>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <foaf:homepage rdf:resource="http://www.rdfabout.com/demo/census/"/>
+  </dcat:Dataset>
+</rdf:RDF>

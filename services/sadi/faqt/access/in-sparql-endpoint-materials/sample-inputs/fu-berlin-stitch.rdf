@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:gis="http://www.opengis.net/rdf#"
+   xmlns:lic="http://purl.org/okfn/licenses/"
+   xmlns:moat="http://moat-project.org/ns#"
+   xmlns:opmv="http://purl.org/net/opmv/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:rev="http://purl.org/stuff/rev#"
+   xmlns:time="http://www.w3.org/2006/time#"
+   xmlns:void="http://rdfs.org/ns/void#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <moat:Tag rdf:about="http://ckan.net/tag/deref-vocab">
+    <moat:name>deref-vocab</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/format-rdf">
+    <moat:name>format-rdf</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/lifesciences">
+    <moat:name>lifesciences</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/lod">
+    <moat:name>lod</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/no-license-metadata">
+    <moat:name>no-license-metadata</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/no-provenance-metadata">
+    <moat:name>no-provenance-metadata</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/published-by-third-party">
+    <moat:name>published-by-third-party</moat:name>
+  </moat:Tag>
+  <moat:Tag rdf:about="http://ckan.net/tag/vocab-mappings">
+    <moat:name>vocab-mappings</moat:name>
+  </moat:Tag>
+  <dcat:CatalogRecord rdf:about="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1">
+    <dc:source rdf:resource="http://ckan.net/"/>
+    <opmv:wasGeneratedBy>
+      <opmv:Process>
+        <opmv:used rdf:resource="http://ckan.net/api/rest/package/fu-berlin-stitch"/>
+        <opmv:used rdf:resource="http://ckan.net/api/rest/revision/92010779-b69a-4844-8147-a1e8aecacdb2"/>
+        <opmv:wasControlledBy>
+          <foaf:Agent>
+            <foaf:name>GoLD CKAN 1.0</foaf:name>
+          </foaf:Agent>
+        </opmv:wasControlledBy>
+        <opmv:wasPerformedAt>
+          <time:Instant>
+            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-02-04T05:44:28Z</time:inXSDDateTime>
+          </time:Instant>
+        </opmv:wasPerformedAt>
+      </opmv:Process>
+    </opmv:wasGeneratedBy>
+    <dcat:dataset rdf:resource="http://thedatahub.org/dataset/fu-berlin-stitch"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.dot"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.html"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.json"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.nt"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.rdf"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.ttl"/>
+  </dcat:CatalogRecord>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.dot">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>text/x-graphviz</rdf:value>
+        <rdfs:label>Graphviz</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.html">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>application/xhtml+xml</rdf:value>
+        <rdfs:label>HTML</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.json">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>text/javascript</rdf:value>
+        <rdfs:label>JSON</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.nt">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>text/plain</rdf:value>
+        <rdfs:label>N-Triples</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.rdf">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>application/rdf+xml</rdf:value>
+        <rdfs:label>RDF/XML</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1.ttl">
+    <dc:format>
+      <dc:IMT>
+        <rdf:value>application/turtle</rdf:value>
+        <rdfs:label>Turtle</rdfs:label>
+      </dc:IMT>
+    </dc:format>
+    <foaf:primaryTopic rdf:resource="http://semantic.ckan.net/record/5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1"/>
+  </foaf:Document>
+  <dcat:Dataset rdf:about="http://thedatahub.org/dataset/fu-berlin-stitch">
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/deref-vocab"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/format-rdf"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/lifesciences"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/lod"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/no-license-metadata"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/no-provenance-metadata"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/published-by-third-party"/>
+    <moat:taggedWithTag rdf:resource="http://ckan.net/tag/vocab-mappings"/>
+    <dc:contributor>
+      <rdf:Description>
+        <foaf:mbox rdf:resource="mailto:anja@anjeve.de"/>
+        <foaf:name>Anja Jentzsch</foaf:name>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-03T10:43:27Z</dc:created>
+    <dc:description>&lt;p&gt;Linked Data version of STITCH which contains information on chemicals and proteins as well as their interactions and links. The links were derived from experiments, databases and the literature. STITCH contains interactions for over 68,000 chemicals and over 1.5 million proteins in 373 species.
+&lt;/p&gt;</dc:description>
+    <dc:identifier>5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1</dc:identifier>
+    <dc:identifier>fu-berlin-stitch</dc:identifier>
+    <dc:isPartOf rdf:resource="http://ckan.net/group/lodcloud"/>
+    <dc:maintainer>
+      <rdf:Description>
+        <foaf:mbox rdf:resource="mailto:anja@anjeve.de"/>
+        <foaf:name>Anja Jentzsch</foaf:name>
+      </rdf:Description>
+    </dc:maintainer>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-07-20T20:07:57Z</dc:modified>
+    <dc:rights rdf:resource="http://purl.org/okfn/licenses/cc-by"/>
+    <dc:title>STITCH: Chemical-Protein Interactions</dc:title>
+    <rev:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.00</rev:rating>
+    <void:exampleResource rdf:resource="http://www4.wiwiss.fu-berlin.de/stitch/resource/organisms/Aeropyrum_pernix"/>
+    <void:sparqlEndpoint rdf:resource="http://www4.wiwiss.fu-berlin.de/stitch/sparql"/>
+    <void:subset>
+      <void:Linkset>
+        <void:target rdf:resource="http://thedatahub.org/dataset/dbpedia"/>
+        <void:target rdf:resource="http://thedatahub.org/dataset/fu-berlin-stitch"/>
+        <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123</void:triples>
+      </void:Linkset>
+    </void:subset>
+    <void:subset>
+      <void:Linkset>
+        <void:target rdf:resource="http://thedatahub.org/dataset/bio2rdf-chebi"/>
+        <void:target rdf:resource="http://thedatahub.org/dataset/fu-berlin-stitch"/>
+        <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6882</void:triples>
+      </void:Linkset>
+    </void:subset>
+    <void:subset>
+      <void:Linkset>
+        <void:target rdf:resource="http://thedatahub.org/dataset/bio2rdf-pubchem"/>
+        <void:target rdf:resource="http://thedatahub.org/dataset/fu-berlin-stitch"/>
+        <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9840</void:triples>
+      </void:Linkset>
+    </void:subset>
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55099700</void:triples>
+    <ns1:extra xmlns:ns1="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>123</rdf:value>
+        <rdfs:label>links:dbpedia</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/links:dbpedia"/>
+      </rdf:Description>
+    </ns1:extra>
+    <ns2:extra xmlns:ns2="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>STITCH</rdf:value>
+        <rdfs:label>shortname</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/shortname"/>
+      </rdf:Description>
+    </ns2:extra>
+    <ns3:extra xmlns:ns3="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>55099700</rdf:value>
+        <rdfs:label>triples</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/triples"/>
+      </rdf:Description>
+    </ns3:extra>
+    <ns4:extra xmlns:ns4="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>6882</rdf:value>
+        <rdfs:label>links:bio2rdf-chebi</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/links:bio2rdf-chebi"/>
+      </rdf:Description>
+    </ns4:extra>
+    <ns5:extra xmlns:ns5="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>9840</rdf:value>
+        <rdfs:label>links:bio2rdf-pubchem</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/links:bio2rdf-pubchem"/>
+      </rdf:Description>
+    </ns5:extra>
+    <ns6:extra xmlns:ns6="http://semantic.ckan.net/schema#">
+      <rdf:Description>
+        <rdf:value>http://www4.wiwiss.fu-berlin.de/stitch/resource/</rdf:value>
+        <rdfs:label>namespace</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.ckan.net/extras/namespace"/>
+      </rdf:Description>
+    </ns6:extra>
+    <ns7:json xmlns:ns7="http://semantic.ckan.net/schema#">{"author":"Anja Jentzsch","author_email":"anja@anjeve.de","ckan_url":"http://thedatahub.org/dataset/fu-berlin-stitch","download_url":"http://www4.wiwiss.fu-berlin.de/stitch/sparql","extras":{"links:bio2rdf-chebi":"6882","links:bio2rdf-pubchem":"9840","links:dbpedia":"123","namespace":"http://www4.wiwiss.fu-berlin.de/stitch/resource/","shortname":"STITCH","triples":"55099700"},"groups":["lodcloud"],"id":"5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1","isopen":true,"license":"OKD Compliant::Creative Commons Attribution","license_id":"cc-by","maintainer":"Anja Jentzsch","maintainer_email":"anja@anjeve.de","metadata_created":"2010-08-03T10:43:27.525137","metadata_modified":"2011-07-20T20:07:57.401962","name":"fu-berlin-stitch","notes":"Linked Data version of STITCH which contains information on chemicals and proteins as well as their interactions and links. The links were derived from experiments, databases and the literature. STITCH contains interactions for over 68,000 chemicals and over 1.5 million proteins in 373 species.","notes_rendered":"&lt;p&gt;Linked Data version of STITCH which contains information on chemicals and proteins as well as their interactions and links. The links were derived from experiments, databases and the literature. STITCH contains interactions for over 68,000 chemicals and over 1.5 million proteins in 373 species.\u000a&lt;/p&gt;","ratings_average":5,"ratings_count":1,"relationships":[],"resources":[{"cache_last_updated":null,"cache_url":null,"description":"SPARQL endpoint","format":"api/sparql","hash":"","id":"2781ef55-8d67-44cc-afb3-949a7468fd6b","last_modified":null,"mimetype":null,"mimetype_inner":null,"name":null,"package_id":"5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1","position":0,"resource_group_id":"9fa6c9c2-3c16-8962-3aca-c7a88a675b6f","resource_type":null,"size":null,"url":"http://www4.wiwiss.fu-berlin.de/stitch/sparql","webstore_last_updated":null,"webstore_url":null},{"cache_last_updated":null,"cache_url":null,"description":"Example resource","format":"example/rdf+xml","hash":"","id":"5b8992a2-8a66-4537-a39e-a0003f384d76","last_modified":null,"mimetype":null,"mimetype_inner":null,"name":null,"package_id":"5bd56fae-3d2a-4dd9-bdcf-8a3451ec81f1","position":1,"resource_group_id":"9fa6c9c2-3c16-8962-3aca-c7a88a675b6f","resource_type":null,"size":null,"url":"http://www4.wiwiss.fu-berlin.de/stitch/resource/organisms/Aeropyrum_pernix","webstore_last_updated":null,"webstore_url":null}],"revision_id":"92010779-b69a-4844-8147-a1e8aecacdb2","state":"active","tags":["deref-vocab","format-rdf","lifesciences","lod","no-license-metadata","no-provenance-metadata","published-by-third-party","vocab-mappings"],"title":"STITCH: Chemical-Protein Interactions","type":null,"url":"http://www4.wiwiss.fu-berlin.de/stitch/","version":""}</ns7:json>
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dc:description>SPARQL endpoint</dc:description>
+        <dc:format>
+          <dc:IMT>
+            <moat:taggedWithTag>
+              <moat:Tag>
+                <moat:name>api/sparql</moat:name>
+              </moat:Tag>
+            </moat:taggedWithTag>
+            <rdf:value>application/sparql-results+xml</rdf:value>
+            <rdfs:label>SPARQL</rdfs:label>
+          </dc:IMT>
+        </dc:format>
+        <dcat:accessURL rdf:resource="http://www4.wiwiss.fu-berlin.de/stitch/sparql"/>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dc:description>Example resource</dc:description>
+        <dc:format>
+          <dc:IMT>
+            <moat:taggedWithTag>
+              <moat:Tag>
+                <moat:name>example/rdf+xml</moat:name>
+              </moat:Tag>
+            </moat:taggedWithTag>
+            <rdf:value>application/rdf+xml</rdf:value>
+            <rdfs:label>RDF/XML</rdfs:label>
+          </dc:IMT>
+        </dc:format>
+        <dcat:accessURL rdf:resource="http://www4.wiwiss.fu-berlin.de/stitch/resource/organisms/Aeropyrum_pernix"/>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <foaf:homepage rdf:resource="http://www4.wiwiss.fu-berlin.de/stitch/"/>
+  </dcat:Dataset>
+</rdf:RDF>

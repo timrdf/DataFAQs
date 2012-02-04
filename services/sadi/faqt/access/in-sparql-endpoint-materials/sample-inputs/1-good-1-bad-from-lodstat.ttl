@@ -1,0 +1,5 @@
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://thedatahub.org/dataset/fu-berlin-stitch>     a dcat:Dataset .
+<http://thedatahub.org/dataset/2000-us-census-rdf>   a dcat:Dataset .
