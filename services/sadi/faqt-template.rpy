@@ -1,6 +1,18 @@
 # 
 # See https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
 #
+#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy> .
+#
+#3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
+#3>    a datafaqs:FAqTService .
+#3> []
+#3>   a prov:Activity;
+#3>   prov:hadQualifiedAttribution [
+#3>      a prov:Attribution;
+#3>      prov:hadQualifiedEntity <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
+#3>      prov:adoptedPlan        <#TEMPLATE/path/to/public/source-code.rpy>;
+#3>   ];
+#3> .
 
 import sadi
 from rdflib import *
