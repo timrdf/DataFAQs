@@ -1,0 +1,296 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gis: <http://www.opengis.net/rdf#> .
+@prefix lic: <http://purl.org/okfn/licenses/> .
+@prefix moat: <http://moat-project.org/ns#> .
+@prefix opmv: <http://purl.org/net/opmv/ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://semantic.ckan.net/schema#> .
+
+<http://ckan.net/tag/deref-vocab>
+    moat:name "deref-vocab" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/format-geo>
+    moat:name "format-geo" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/format-geobuddies>
+    moat:name "format-geobuddies" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/format-ssn>
+    moat:name "format-ssn" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/format-w3c-owl-time>
+    moat:name "format-w3c-owl-time" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/geographic>
+    moat:name "geographic" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/linked-sensor-data>
+    moat:name "linked-sensor-data" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/lod>
+    moat:name "lod" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/meteorology>
+    moat:name "meteorology" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/no-license-metadata>
+    moat:name "no-license-metadata" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/provenance-metadata>
+    moat:name "provenance-metadata" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/published-by-third-party>
+    moat:name "published-by-third-party" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/spain>
+    moat:name "spain" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/ssn-ontology>
+    moat:name "ssn-ontology" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/vocab-mappings>
+    moat:name "vocab-mappings" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/weather>
+    moat:name "weather" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/weather-forecasts>
+    moat:name "weather-forecasts" ;
+    a moat:Tag .
+
+<http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b>
+    dc:source <http://ckan.net/> ;
+    opmv:wasGeneratedBy [
+        opmv:used <http://ckan.net/api/rest/package/aemet>, <http://ckan.net/api/rest/revision/2d5ad6a8-6f5d-45a3-a03b-d1fe8d672cda> ;
+        opmv:wasControlledBy [
+            a foaf:Agent ;
+            foaf:name "GoLD CKAN 1.0"
+        ] ;
+        opmv:wasPerformedAt [
+            a time:Instant ;
+            time:inXSDDateTime "2012-02-04T06:12:00Z"^^xsd:dateTime
+        ] ;
+        a opmv:Process
+    ] ;
+    a dcat:CatalogRecord ;
+    dcat:dataset <http://thedatahub.org/dataset/aemet> ;
+    foaf:isPrimaryTopicOf <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.dot>, <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.html>, <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.json>, <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.nt>, <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.rdf>, <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.ttl> .
+
+<http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.dot>
+    dc:format [
+        a dc:IMT ;
+        rdf:value "text/x-graphviz" ;
+        rdfs:label "Graphviz"
+    ] ;
+    a foaf:Document ;
+    foaf:primaryTopic <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b> .
+
+<http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.html>
+    dc:format [
+        a dc:IMT ;
+        rdf:value "application/xhtml+xml" ;
+        rdfs:label "HTML"
+    ] ;
+    a foaf:Document ;
+    foaf:primaryTopic <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b> .
+
+<http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.json>
+    dc:format [
+        a dc:IMT ;
+        rdf:value "text/javascript" ;
+        rdfs:label "JSON"
+    ] ;
+    a foaf:Document ;
+    foaf:primaryTopic <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b> .
+
+<http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.nt>
+    dc:format [
+        a dc:IMT ;
+        rdf:value "text/plain" ;
+        rdfs:label "N-Triples"
+    ] ;
+    a foaf:Document ;
+    foaf:primaryTopic <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b> .
+
+<http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.rdf>
+    dc:format [
+        a dc:IMT ;
+        rdf:value "application/rdf+xml" ;
+        rdfs:label "RDF/XML"
+    ] ;
+    a foaf:Document ;
+    foaf:primaryTopic <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b> .
+
+<http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b.ttl>
+    dc:format [
+        a dc:IMT ;
+        rdf:value "application/turtle" ;
+        rdfs:label "Turtle"
+    ] ;
+    a foaf:Document ;
+    foaf:primaryTopic <http://semantic.ckan.net/record/c914d16d-91e2-4e0f-8f45-47c52302c38b> .
+
+<http://thedatahub.org/dataset/aemet>
+    moat:taggedWithTag <http://ckan.net/tag/deref-vocab>, <http://ckan.net/tag/format-geo>, <http://ckan.net/tag/format-geobuddies>, <http://ckan.net/tag/format-ssn>, <http://ckan.net/tag/format-w3c-owl-time>, <http://ckan.net/tag/geographic>, <http://ckan.net/tag/linked-sensor-data>, <http://ckan.net/tag/lod>, <http://ckan.net/tag/meteorology>, <http://ckan.net/tag/no-license-metadata>, <http://ckan.net/tag/provenance-metadata>, <http://ckan.net/tag/published-by-third-party>, <http://ckan.net/tag/spain>, <http://ckan.net/tag/ssn-ontology>, <http://ckan.net/tag/vocab-mappings>, <http://ckan.net/tag/weather>, <http://ckan.net/tag/weather-forecasts> ;
+    dc:contributor [
+        foaf:mbox <mailto:dgarijov@gmail.com> ;
+        foaf:name "Ontology Engineering Group, Facultad de Informática, Universidad Politécnica de Madrid."
+    ] ;
+    dc:created "2011-07-14T06:07:46Z"^^xsd:dateTime ;
+    dc:description """<p>AemetLinked Data (.es) is an open initiative of the Ontology Engineering Group (OEG) whose aim is to enrich the Web of Data with Spanish geospatial data. This initiative started off by publishing diverse information sources belonging to the Spanish Meteorological Agency.
+</p>""" ;
+    dc:identifier "aemet", "c914d16d-91e2-4e0f-8f45-47c52302c38b" ;
+    dc:isPartOf <http://ckan.net/group/lodcloud>, <http://ckan.net/group/spain> ;
+    <http://purl.org/openorg/corrections> <mailto:test@example.com>;
+    dc:maintainer [
+        foaf:mbox <mailto:dgarijov@gmail.com> ;
+        foaf:name "Daniel Garijo, Jose Mora and Boris Villazón-Terrazas"
+    ] ;
+    dc:modified "2011-12-06T16:46:06Z"^^xsd:dateTime ;
+    dc:rights lic:notspecified ;
+    dc:title "AEMET metereological dataset" ;
+    void:exampleResource <http://aemet.linkeddata.es/resource/WeatherStation/id08001>, <http://aemet.linkeddata.es/resource/WeatherStation/id08001?output=ttl> ;
+    void:sparqlEndpoint <http://aemet.linkeddata.es/sparql> ;
+    void:subset [
+        void:target <http://thedatahub.org/dataset/aemet>, <http://thedatahub.org/dataset/geolinkeddata> ;
+        void:triples 51 ;
+        a void:Linkset
+    ] ;
+    void:triples 21324148 ;
+    ns1:extra [
+        rdf:value "21324148" ;
+        rdfs:label "triples" ;
+        rdfs:seeAlso <http://wiki.ckan.net/extras/triples>
+    ], [
+        rdf:value "51" ;
+        rdfs:label "links:geolinkeddata" ;
+        rdfs:seeAlso <http://wiki.ckan.net/extras/links:geolinkeddata>
+    ], [
+        rdf:value "http://aemet.linkeddata.es/resource/" ;
+        rdfs:label "namespace" ;
+        rdfs:seeAlso <http://wiki.ckan.net/extras/namespace>
+    ] ;
+    ns1:json "{\"author\":\"Ontology Engineering Group, Facultad de Informática, Universidad Politécnica de Madrid.\",\"author_email\":\"dgarijov@gmail.com\",\"ckan_url\":\"http://thedatahub.org/dataset/aemet\",\"download_url\":\"http://aemet.linkeddata.es/sparql\",\"extras\":{\"links:geolinkeddata\":\"51\",\"namespace\":\"http://aemet.linkeddata.es/resource/\",\"triples\":\"21324148\"},\"groups\":[\"lodcloud\",\"spain\"],\"id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"isopen\":false,\"license\":\"Other::License Not Specified\",\"license_id\":\"notspecified\",\"maintainer\":\"Daniel Garijo, Jose Mora and Boris Villazón-Terrazas\",\"maintainer_email\":\"dgarijov@gmail.com\",\"metadata_created\":\"2011-07-14T06:07:46.480607\",\"metadata_modified\":\"2011-12-06T16:46:06.294419\",\"name\":\"aemet\",\"notes\":\"AemetLinked Data (.es) is an open initiative of the Ontology Engineering Group (OEG) whose aim is to enrich the Web of Data with Spanish geospatial data. This initiative started off by publishing diverse information sources belonging to the Spanish Meteorological Agency.\",\"notes_rendered\":\"<p>AemetLinked Data (.es) is an open initiative of the Ontology Engineering Group (OEG) whose aim is to enrich the Web of Data with Spanish geospatial data. This initiative started off by publishing diverse information sources belonging to the Spanish Meteorological Agency.\\u000a</p>\",\"ratings_average\":null,\"ratings_count\":0,\"relationships\":[],\"resources\":[{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"SPARQL endpoint of the dataset\",\"format\":\"api/sparql\",\"hash\":\"\",\"id\":\"60a0f2ac-1b57-4f3f-8c76-7812d25cdb8f\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":0,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/sparql\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"HTML with the SPARQL endpoint of the dataset\",\"format\":\"RDF/XML, HTML, JSON\",\"hash\":\"\",\"id\":\"40d10058-289d-4c8e-a195-11997d8b2025\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":1,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/sparql_en.html\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"Linked Data application using the endppoint\",\"format\":\"\",\"hash\":\"\",\"id\":\"312dd755-c60f-48ce-a877-f8f371b6902e\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":2,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/browser_en.html\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"Link to an example data item within the dataset (RDF/XML)\",\"format\":\"example/rdf+xml\",\"hash\":\"\",\"id\":\"20c2e09a-f561-44a0-86d2-41797faad85d\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"Example in RDF/XML\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":3,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/resource/WeatherStation/id08001\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"Link to an example data item within the dataset (turtle)\",\"format\":\"example/x-turtle\",\"hash\":\"\",\"id\":\"6873efc3-c4e2-4fa2-81fc-6417bb511b15\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"Example in turtle\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":4,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/resource/WeatherStation/id08001?output=ttl\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"Download (.zip containing all the n-triples)\",\"format\":\"application/x-ntriples\",\"hash\":\"\",\"id\":\"e054cfa7-85cd-491e-b53d-57894dc0b43c\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":5,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/source/rdf/data.zip\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\" RDF schema download (.RAR)\",\"format\":\"meta/rdf-schema\",\"hash\":\"\",\"id\":\"18a0d78c-d9c4-4206-a0d6-32fc01dfc271\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":6,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/files/aemet%20ontology%20network%20v2.rar\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"Mappings (already included in the main schema)\",\"format\":\"mapping/owl\",\"hash\":\"\",\"id\":\"23e8acbd-8ab5-4104-bac0-f6a6007abffe\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":7,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/files/aemet%20ontology%20network%20v2.rar\",\"webstore_last_updated\":null,\"webstore_url\":null},{\"cache_last_updated\":null,\"cache_url\":null,\"description\":\"Void description\",\"format\":\"meta/void\",\"hash\":\"\",\"id\":\"0616b5a9-48a0-44ab-9aa3-eed8a07ca717\",\"last_modified\":null,\"mimetype\":\"\",\"mimetype_inner\":\"\",\"name\":\"\",\"package_id\":\"c914d16d-91e2-4e0f-8f45-47c52302c38b\",\"position\":8,\"resource_group_id\":\"5c462ba6-49db-4699-a5e4-6d6d055b4513\",\"resource_type\":\"\",\"size\":null,\"url\":\"http://aemet.linkeddata.es/metadata\",\"webstore_last_updated\":null,\"webstore_url\":null}],\"revision_id\":\"2d5ad6a8-6f5d-45a3-a03b-d1fe8d672cda\",\"state\":\"active\",\"tags\":[\"deref-vocab\",\"format-geo\",\"format-geobuddies\",\"format-ssn\",\"format-w3c-owl-time\",\"geographic\",\"linked-sensor-data\",\"lod\",\"meteorology\",\"no-license-metadata\",\"provenance-metadata\",\"published-by-third-party\",\"spain\",\"ssn-ontology\",\"vocab-mappings\",\"weather\",\"weather-forecasts\"],\"title\":\"AEMET metereological dataset\",\"type\":null,\"url\":\"http://aemet.linkeddata.es/\",\"version\":\"1.0\"}" ;
+    a dcat:Dataset ;
+    dcat:distribution [
+        dc:description "SPARQL endpoint of the dataset" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "api/sparql" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT ;
+            rdf:value "application/sparql-results+xml" ;
+            rdfs:label "SPARQL"
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/sparql>
+    ], [
+        dc:description "HTML with the SPARQL endpoint of the dataset" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "RDF/XML, HTML, JSON" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/sparql_en.html>
+    ], [
+        dc:description "Linked Data application using the endppoint" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/browser_en.html>
+    ], [
+        dc:description "Link to an example data item within the dataset (RDF/XML)" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "example/rdf+xml" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT ;
+            rdf:value "application/rdf+xml" ;
+            rdfs:label "RDF/XML"
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/resource/WeatherStation/id08001>
+    ], [
+        dc:description "Link to an example data item within the dataset (turtle)" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "example/x-turtle" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/resource/WeatherStation/id08001?output=ttl>
+    ], [
+        dc:description "Download (.zip containing all the n-triples)" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "application/x-ntriples" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/source/rdf/data.zip>
+    ], [
+        dc:description " RDF schema download (.RAR)" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "meta/rdf-schema" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/files/aemet%20ontology%20network%20v2.rar>
+    ], [
+        dc:description "Mappings (already included in the main schema)" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "mapping/owl" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/files/aemet%20ontology%20network%20v2.rar>
+    ], [
+        dc:description "Void description" ;
+        dc:format [
+            moat:taggedWithTag [
+                moat:name "meta/void" ;
+                a moat:Tag
+            ] ;
+            a dc:IMT
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://aemet.linkeddata.es/metadata>
+    ] ;
+    foaf:homepage <http://aemet.linkeddata.es/> .
+
