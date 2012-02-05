@@ -1,3 +1,16 @@
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag.rpy> .
+#
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag>
+#3>    a datafaqs:DatasetSelector .
+#3> []
+#3>   a prov:Activity;
+#3>   prov:hadQualifiedAttribution [
+#3>      a prov:Attribution;
+#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag>;
+#3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag.rpy>;
+#3>   ];
+#3> .
+
 import re
 import sadi
 from rdflib import *

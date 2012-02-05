@@ -1,0 +1,33 @@
+@base <by-ckan-tag.rpy> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix prov: <http://www.w3.org/ns/prov-o/> .
+@prefix twi: <http://tw.rpi.edu/instances/> .
+
+<>
+    prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag.rpy> .
+
+<http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag>
+    a datafaqs:DatasetSelector .
+
+[]
+    a prov:Activity ;
+    prov:hadQualifiedAttribution [
+        a prov:Attribution ;
+        prov:adoptedPlan <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag.rpy> ;
+        prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag>
+    ] .
+
