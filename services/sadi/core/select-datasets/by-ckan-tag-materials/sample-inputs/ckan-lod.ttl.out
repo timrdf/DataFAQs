@@ -1,6 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<http://ckan.net/tag/lod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>;
+<http://ckan.net/tag/lod> a <http://moat-project.org/ns#Tag>;
     dcterms:hasPart <http://thedatahub.org/dataset/2000-us-census-rdf>,
         <http://thedatahub.org/dataset/addgene>,
         <http://thedatahub.org/dataset/aemet>,

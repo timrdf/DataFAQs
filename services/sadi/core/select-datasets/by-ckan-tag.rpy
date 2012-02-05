@@ -61,7 +61,7 @@ class DatasetsByCKANTag(sadi.Service):
       return ns.MOAT['Tag']
 
    def getOutputClass(self):
-      return ns.DATAFAQS['CKANDataset']
+      return ns.MOAT['Tag']
 
    def process(self, input, output):
   
