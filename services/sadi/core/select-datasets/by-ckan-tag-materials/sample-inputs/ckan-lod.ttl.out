@@ -1,0 +1,2004 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://ckan.net/tag/lod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>;
+    dcterms:hasPart <http://thedatahub.org/dataset/2000-us-census-rdf>,
+        <http://thedatahub.org/dataset/addgene>,
+        <http://thedatahub.org/dataset/aemet>,
+        <http://thedatahub.org/dataset/agrovoc-skos>,
+        <http://thedatahub.org/dataset/allen-brain-atlas>,
+        <http://thedatahub.org/dataset/allie-abbreviation-and-long-form-database-in-life-science>,
+        <http://thedatahub.org/dataset/amsterdam-museum-as-edm-lod>,
+        <http://thedatahub.org/dataset/animal-diversity-web>,
+        <http://thedatahub.org/dataset/archiveshub-linkeddata>,
+        <http://thedatahub.org/dataset/austrian_ski_racers>,
+        <http://thedatahub.org/dataset/b3kat>,
+        <http://thedatahub.org/dataset/bams>,
+        <http://thedatahub.org/dataset/bbc-music>,
+        <http://thedatahub.org/dataset/bbc-programmes>,
+        <http://thedatahub.org/dataset/bbc-wildlife-finder>,
+        <http://thedatahub.org/dataset/bbop>,
+        <http://thedatahub.org/dataset/bbop-selected>,
+        <http://thedatahub.org/dataset/beneficiaries-of-the-european-commission>,
+        <http://thedatahub.org/dataset/berlin-offener-haushalt>,
+        <http://thedatahub.org/dataset/bibbase>,
+        <http://thedatahub.org/dataset/bible-ontology>,
+        <http://thedatahub.org/dataset/billion_triples_challenge_dataset2008>,
+        <http://thedatahub.org/dataset/billion_triples_challenge_dataset_2010>,
+        <http://thedatahub.org/dataset/bio2rdf-affymetrix>,
+        <http://thedatahub.org/dataset/bio2rdf-biocyc>,
+        <http://thedatahub.org/dataset/bio2rdf-cas>,
+        <http://thedatahub.org/dataset/bio2rdf-chebi>,
+        <http://thedatahub.org/dataset/bio2rdf-genbank>,
+        <http://thedatahub.org/dataset/bio2rdf-geneid>,
+        <http://thedatahub.org/dataset/bio2rdf-go>,
+        <http://thedatahub.org/dataset/bio2rdf-hgnc>,
+        <http://thedatahub.org/dataset/bio2rdf-homologene>,
+        <http://thedatahub.org/dataset/bio2rdf-interpro>,
+        <http://thedatahub.org/dataset/bio2rdf-kegg-compound>,
+        <http://thedatahub.org/dataset/bio2rdf-kegg-drug>,
+        <http://thedatahub.org/dataset/bio2rdf-kegg-enzyme>,
+        <http://thedatahub.org/dataset/bio2rdf-kegg-glycan>,
+        <http://thedatahub.org/dataset/bio2rdf-kegg-pathway>,
+        <http://thedatahub.org/dataset/bio2rdf-kegg-reaction>,
+        <http://thedatahub.org/dataset/bio2rdf-mgi>,
+        <http://thedatahub.org/dataset/bio2rdf-obo>,
+        <http://thedatahub.org/dataset/bio2rdf-omim>,
+        <http://thedatahub.org/dataset/bio2rdf-pdb>,
+        <http://thedatahub.org/dataset/bio2rdf-pfam>,
+        <http://thedatahub.org/dataset/bio2rdf-prodom>,
+        <http://thedatahub.org/dataset/bio2rdf-prosite>,
+        <http://thedatahub.org/dataset/bio2rdf-pubchem>,
+        <http://thedatahub.org/dataset/bio2rdf-pubmed>,
+        <http://thedatahub.org/dataset/bio2rdf-reactome>,
+        <http://thedatahub.org/dataset/bio2rdf-sgd>,
+        <http://thedatahub.org/dataset/bio2rdf-uniprot>,
+        <http://thedatahub.org/dataset/bio2rdf-uniprot-taxonomy>,
+        <http://thedatahub.org/dataset/bio2rdf-uniprot-uniparc>,
+        <http://thedatahub.org/dataset/bio2rdf-uniprot-unipathway>,
+        <http://thedatahub.org/dataset/bio2rdf-unists>,
+        <http://thedatahub.org/dataset/biographical-directory-of-the-united-states-congress>,
+        <http://thedatahub.org/dataset/bitzi>,
+        <http://thedatahub.org/dataset/bluk-bnb>,
+        <http://thedatahub.org/dataset/brazilian-politicians>,
+        <http://thedatahub.org/dataset/bricklink>,
+        <http://thedatahub.org/dataset/british-museum-collection>,
+        <http://thedatahub.org/dataset/bund-offener-haushalt>,
+        <http://thedatahub.org/dataset/business-data-gov-uk>,
+        <http://thedatahub.org/dataset/calames>,
+        <http://thedatahub.org/dataset/cap-italy-rdf>,
+        <http://thedatahub.org/dataset/chef_moz>,
+        <http://thedatahub.org/dataset/chem2bio2rdf>,
+        <http://thedatahub.org/dataset/chempedia-rdf>,
+        <http://thedatahub.org/dataset/chronicling-america>,
+        <http://thedatahub.org/dataset/clean-energy-data-reegle>,
+        <http://thedatahub.org/dataset/coins-openuplabs>,
+        <http://thedatahub.org/dataset/combined-nomenclature-2012>,
+        <http://thedatahub.org/dataset/core>,
+        <http://thedatahub.org/dataset/cornetto>,
+        <http://thedatahub.org/dataset/cpa-2008>,
+        <http://thedatahub.org/dataset/cpc-2008>,
+        <http://thedatahub.org/dataset/cpv-2003>,
+        <http://thedatahub.org/dataset/cpv-2008>,
+        <http://thedatahub.org/dataset/ctic-public-dataset>,
+        <http://thedatahub.org/dataset/culturalinkeddata>,
+        <http://thedatahub.org/dataset/data-bnf-fr>,
+        <http://thedatahub.org/dataset/data-cnr-it>,
+        <http://thedatahub.org/dataset/data-gov-ie>,
+        <http://thedatahub.org/dataset/data-gov-uk-time-intervals>,
+        <http://thedatahub.org/dataset/data-incubator-climb>,
+        <http://thedatahub.org/dataset/data-incubator-discogs>,
+        <http://thedatahub.org/dataset/data-incubator-metoffice>,
+        <http://thedatahub.org/dataset/data-incubator-moseley>,
+        <http://thedatahub.org/dataset/data-incubator-musicbrainz>,
+        <http://thedatahub.org/dataset/data-incubator-nasa>,
+        <http://thedatahub.org/dataset/data-incubator-our-airports>,
+        <http://thedatahub.org/dataset/data-incubator-pokedex>,
+        <http://thedatahub.org/dataset/data-incubator-smcjournals>,
+        <http://thedatahub.org/dataset/data-open-ac-uk>,
+        <http://thedatahub.org/dataset/datagov-catalog>,
+        <http://thedatahub.org/dataset/datos-bcn-cl>,
+        <http://thedatahub.org/dataset/datos-bne-es>,
+        <http://thedatahub.org/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/dbpedia-el>,
+        <http://thedatahub.org/dataset/dbpedia-lite>,
+        <http://thedatahub.org/dataset/dbpedia-live>,
+        <http://thedatahub.org/dataset/dbpedia-pt>,
+        <http://thedatahub.org/dataset/dbpedia-spotlight>,
+        <http://thedatahub.org/dataset/dbtropes>,
+        <http://thedatahub.org/dataset/dbtune>,
+        <http://thedatahub.org/dataset/dbtune-artists-last-fm>,
+        <http://thedatahub.org/dataset/dbtune-audioscrobbler>,
+        <http://thedatahub.org/dataset/dbtune-classical>,
+        <http://thedatahub.org/dataset/dbtune-john-peel-sessions>,
+        <http://thedatahub.org/dataset/dbtune-magnatune>,
+        <http://thedatahub.org/dataset/dbtune-musicbrainz>,
+        <http://thedatahub.org/dataset/dbtune-myspace>,
+        <http://thedatahub.org/dataset/dclg-openuplabs>,
+        <http://thedatahub.org/dataset/dcs-sheffield>,
+        <http://thedatahub.org/dataset/deutsche-biographie>,
+        <http://thedatahub.org/dataset/deutsche-nationalbibliografie-dnb>,
+        <http://thedatahub.org/dataset/dewey_decimal_classification>,
+        <http://thedatahub.org/dataset/didactalia>,
+        <http://thedatahub.org/dataset/dmoz_rdf_dump>,
+        <http://thedatahub.org/dataset/dnb-gemeinsame-normdatei>,
+        <http://thedatahub.org/dataset/doap_store>,
+        <http://thedatahub.org/dataset/doi>,
+        <http://thedatahub.org/dataset/dutch-national-regulations-metalex>,
+        <http://thedatahub.org/dataset/ecco-tcp-linked-data>,
+        <http://thedatahub.org/dataset/ecs>,
+        <http://thedatahub.org/dataset/education-data-gov-uk>,
+        <http://thedatahub.org/dataset/education-openuplabs>,
+        <http://thedatahub.org/dataset/educationalprograms_sisvu>,
+        <http://thedatahub.org/dataset/eea>,
+        <http://thedatahub.org/dataset/eea-rod>,
+        <http://thedatahub.org/dataset/enakting-co2emission>,
+        <http://thedatahub.org/dataset/enakting-crime>,
+        <http://thedatahub.org/dataset/enakting-energy>,
+        <http://thedatahub.org/dataset/enakting-mortality>,
+        <http://thedatahub.org/dataset/enakting-nhs>,
+        <http://thedatahub.org/dataset/enakting-population>,
+        <http://thedatahub.org/dataset/english-index-of-multiple-deprivation-ranking-2010>,
+        <http://thedatahub.org/dataset/english-index-of-multiple-deprivation-score-2010>,
+        <http://thedatahub.org/dataset/english-indices-of-multiple-deprivation>,
+        <http://thedatahub.org/dataset/englishheritage_places>,
+        <http://thedatahub.org/dataset/enipedia>,
+        <http://thedatahub.org/dataset/entrez_gene>,
+        <http://thedatahub.org/dataset/entrez_gene_extract>,
+        <http://thedatahub.org/dataset/environment-data-gov-uk>,
+        <http://thedatahub.org/dataset/environmental-applications-reference-thesaurus>,
+        <http://thedatahub.org/dataset/esd-standards>,
+        <http://thedatahub.org/dataset/eu-institutions>,
+        <http://thedatahub.org/dataset/eu-parliament-media>,
+        <http://thedatahub.org/dataset/eunis>,
+        <http://thedatahub.org/dataset/eur-lex-rdf>,
+        <http://thedatahub.org/dataset/europeana-lod>,
+        <http://thedatahub.org/dataset/eurostat-rdf>,
+        <http://thedatahub.org/dataset/euskadi-farmacias>,
+        <http://thedatahub.org/dataset/eutc-productions>,
+        <http://thedatahub.org/dataset/event-media>,
+        <http://thedatahub.org/dataset/facebook-lids>,
+        <http://thedatahub.org/dataset/fanhubz>,
+        <http://thedatahub.org/dataset/fao-geopolitical-ontology>,
+        <http://thedatahub.org/dataset/farmbio-chembl>,
+        <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
+        <http://thedatahub.org/dataset/federal-economic-rdf>,
+        <http://thedatahub.org/dataset/feedwrapper-lids>,
+        <http://thedatahub.org/dataset/finnish-municipalities>,
+        <http://thedatahub.org/dataset/fishes-of-texas>,
+        <http://thedatahub.org/dataset/flickr-wrappr>,
+        <http://thedatahub.org/dataset/fly-ted>,
+        <http://thedatahub.org/dataset/flyatlas>,
+        <http://thedatahub.org/dataset/foodista>,
+        <http://thedatahub.org/dataset/freebase>,
+        <http://thedatahub.org/dataset/freebase_rdf_store>,
+        <http://thedatahub.org/dataset/fu-berlin-cordis>,
+        <http://thedatahub.org/dataset/fu-berlin-dailymed>,
+        <http://thedatahub.org/dataset/fu-berlin-dblp>,
+        <http://thedatahub.org/dataset/fu-berlin-diseasome>,
+        <http://thedatahub.org/dataset/fu-berlin-drugbank>,
+        <http://thedatahub.org/dataset/fu-berlin-euraxess>,
+        <http://thedatahub.org/dataset/fu-berlin-eures>,
+        <http://thedatahub.org/dataset/fu-berlin-eurostat>,
+        <http://thedatahub.org/dataset/fu-berlin-medicare>,
+        <http://thedatahub.org/dataset/fu-berlin-project-gutenberg>,
+        <http://thedatahub.org/dataset/fu-berlin-sider>,
+        <http://thedatahub.org/dataset/fu-berlin-stitch>,
+        <http://thedatahub.org/dataset/galen_from_co-odeorg>,
+        <http://thedatahub.org/dataset/gemeenschappelijke-thesaurus-audiovisuele-archieven>,
+        <http://thedatahub.org/dataset/gemet>,
+        <http://thedatahub.org/dataset/geographic-openuplabs>,
+        <http://thedatahub.org/dataset/geolinkeddata>,
+        <http://thedatahub.org/dataset/geological-survey-of-austria-thesaurus>,
+        <http://thedatahub.org/dataset/geonames-semantic-web>,
+        <http://thedatahub.org/dataset/geospecies>,
+        <http://thedatahub.org/dataset/geowordnet>,
+        <http://thedatahub.org/dataset/gesis-thesoz>,
+        <http://thedatahub.org/dataset/glastonbury-2011>,
+        <http://thedatahub.org/dataset/global-hunger-index-2011>,
+        <http://thedatahub.org/dataset/gnoss>,
+        <http://thedatahub.org/dataset/go_annotations_from_ncbi_and_ebi>,
+        <http://thedatahub.org/dataset/googleart-wrapper>,
+        <http://thedatahub.org/dataset/government-web-integration-for-linked-data>,
+        <http://thedatahub.org/dataset/govtrack>,
+        <http://thedatahub.org/dataset/greater-manchester-bus-timetable-linked-data>,
+        <http://thedatahub.org/dataset/grrp>,
+        <http://thedatahub.org/dataset/grrt>,
+        <http://thedatahub.org/dataset/hbz_unioncatalog>,
+        <http://thedatahub.org/dataset/hellenic-fire-brigade>,
+        <http://thedatahub.org/dataset/hellenic-police>,
+        <http://thedatahub.org/dataset/homologene>,
+        <http://thedatahub.org/dataset/hungarian-national-library-catalog>,
+        <http://thedatahub.org/dataset/idreffr>,
+        <http://thedatahub.org/dataset/insemtives>,
+        <http://thedatahub.org/dataset/integrated-human-geography-service-for-lod>,
+        <http://thedatahub.org/dataset/intervalue>,
+        <http://thedatahub.org/dataset/iptc-newscodes>,
+        <http://thedatahub.org/dataset/iserve>,
+        <http://thedatahub.org/dataset/isic-v4>,
+        <http://thedatahub.org/dataset/iso-3166-2-data>,
+        <http://thedatahub.org/dataset/istat-immigration>,
+        <http://thedatahub.org/dataset/italian-public-schools-linkedopendata-it>,
+        <http://thedatahub.org/dataset/iucr-acta-cryst-e>,
+        <http://thedatahub.org/dataset/jamendo-dbtune>,
+        <http://thedatahub.org/dataset/japan-radioactivity-stat>,
+        <http://thedatahub.org/dataset/jisc-cetis-directory>,
+        <http://thedatahub.org/dataset/jiscopenbib-bl_bnb-1>,
+        <http://thedatahub.org/dataset/jita>,
+        <http://thedatahub.org/dataset/john-goodwins-family-tree>,
+        <http://thedatahub.org/dataset/kaken>,
+        <http://thedatahub.org/dataset/kasabi-eumida>,
+        <http://thedatahub.org/dataset/klappstuhlclub>,
+        <http://thedatahub.org/dataset/knoesis-linked-sensor-data>,
+        <http://thedatahub.org/dataset/l3s-dblp>,
+        <http://thedatahub.org/dataset/lcsh>,
+        <http://thedatahub.org/dataset/lcsubjects>,
+        <http://thedatahub.org/dataset/legislation-openuplabs>,
+        <http://thedatahub.org/dataset/lexvo>,
+        <http://thedatahub.org/dataset/libris>,
+        <http://thedatahub.org/dataset/lichfield-spending>,
+        <http://thedatahub.org/dataset/lingvoj>,
+        <http://thedatahub.org/dataset/linked-crunchbase>,
+        <http://thedatahub.org/dataset/linked-edgar>,
+        <http://thedatahub.org/dataset/linked-eurostat>,
+        <http://thedatahub.org/dataset/linked-life-data>,
+        <http://thedatahub.org/dataset/linked-nuts>,
+        <http://thedatahub.org/dataset/linked-open-camera>,
+        <http://thedatahub.org/dataset/linked-open-commerce>,
+        <http://thedatahub.org/dataset/linked-open-data-of-ecology>,
+        <http://thedatahub.org/dataset/linked-open-numbers>,
+        <http://thedatahub.org/dataset/linked-open-piracy>,
+        <http://thedatahub.org/dataset/linked-open-senate>,
+        <http://thedatahub.org/dataset/linked-open-vocabularies-lov>,
+        <http://thedatahub.org/dataset/linked-periodicals>,
+        <http://thedatahub.org/dataset/linked-recipes>,
+        <http://thedatahub.org/dataset/linked-scotland>,
+        <http://thedatahub.org/dataset/linked-user-feedback>,
+        <http://thedatahub.org/dataset/linkedct>,
+        <http://thedatahub.org/dataset/linkedgeodata>,
+        <http://thedatahub.org/dataset/linkedgeodata-aerodromes>,
+        <http://thedatahub.org/dataset/linkedlccn>,
+        <http://thedatahub.org/dataset/linkedmarkmail>,
+        <http://thedatahub.org/dataset/linkedmdb>,
+        <http://thedatahub.org/dataset/linking-open-drug-data>,
+        <http://thedatahub.org/dataset/lista-encabezamientos-materia>,
+        <http://thedatahub.org/dataset/lobid-organisations>,
+        <http://thedatahub.org/dataset/lobid-resources>,
+        <http://thedatahub.org/dataset/loc>,
+        <http://thedatahub.org/dataset/loius>,
+        <http://thedatahub.org/dataset/london-gazette>,
+        <http://thedatahub.org/dataset/los_metar>,
+        <http://thedatahub.org/dataset/lotico>,
+        <http://thedatahub.org/dataset/lower-layer-super-output-areas>,
+        <http://thedatahub.org/dataset/manchester-university-reading-lists>,
+        <http://thedatahub.org/dataset/marc-codes>,
+        <http://thedatahub.org/dataset/massobservationarchivecatalogue>,
+        <http://thedatahub.org/dataset/medline>,
+        <http://thedatahub.org/dataset/meducator>,
+        <http://thedatahub.org/dataset/mesh-finnish>,
+        <http://thedatahub.org/dataset/mesh_headings>,
+        <http://thedatahub.org/dataset/mesh_ipsv_skos_rdf>,
+        <http://thedatahub.org/dataset/mesh_pairs>,
+        <http://thedatahub.org/dataset/mesh_titles>,
+        <http://thedatahub.org/dataset/morelab>,
+        <http://thedatahub.org/dataset/munich-offener-haushalt>,
+        <http://thedatahub.org/dataset/museums-in-italy>,
+        <http://thedatahub.org/dataset/my-experiment>,
+        <http://thedatahub.org/dataset/naics-2007>,
+        <http://thedatahub.org/dataset/naics-2012>,
+        <http://thedatahub.org/dataset/nalt>,
+        <http://thedatahub.org/dataset/national-diet-library-authorities>,
+        <http://thedatahub.org/dataset/near>,
+        <http://thedatahub.org/dataset/neel>,
+        <http://thedatahub.org/dataset/neurocommons_text_mining_pilot>,
+        <http://thedatahub.org/dataset/newsweek>,
+        <http://thedatahub.org/dataset/nhs-jargon>,
+        <http://thedatahub.org/dataset/nlm_2007_mesh>,
+        <http://thedatahub.org/dataset/nomenclator-asturias-2010>,
+        <http://thedatahub.org/dataset/normesh>,
+        <http://thedatahub.org/dataset/nottingham-trent-university-resource-lists>,
+        <http://thedatahub.org/dataset/ntnusc>,
+        <http://thedatahub.org/dataset/nuts-geovocab>,
+        <http://thedatahub.org/dataset/nvd>,
+        <http://thedatahub.org/dataset/nytimes-linked-open-data>,
+        <http://thedatahub.org/dataset/oceandrilling-codices>,
+        <http://thedatahub.org/dataset/oceandrilling-dbseabed>,
+        <http://thedatahub.org/dataset/oceandrilling-forams>,
+        <http://thedatahub.org/dataset/oceandrilling-janus>,
+        <http://thedatahub.org/dataset/oceandrilling-janusamp>,
+        <http://thedatahub.org/dataset/oceandrilling-ldeo>,
+        <http://thedatahub.org/dataset/oclc-fast>,
+        <http://thedatahub.org/dataset/odc>,
+        <http://thedatahub.org/dataset/odc-imd-environment-score>,
+        <http://thedatahub.org/dataset/odc-imd-rank-2007>,
+        <http://thedatahub.org/dataset/odc-lsoa>,
+        <http://thedatahub.org/dataset/odc-population-2005>,
+        <http://thedatahub.org/dataset/offener-haushalt>,
+        <http://thedatahub.org/dataset/ogolod>,
+        <http://thedatahub.org/dataset/ontos-news-portal>,
+        <http://thedatahub.org/dataset/open-data-euskadi>,
+        <http://thedatahub.org/dataset/open-data-thesaurus>,
+        <http://thedatahub.org/dataset/open-election-data-project>,
+        <http://thedatahub.org/dataset/open-energy-info-wiki>,
+        <http://thedatahub.org/dataset/open_directory>,
+        <http://thedatahub.org/dataset/opencalais>,
+        <http://thedatahub.org/dataset/opencorporates>,
+        <http://thedatahub.org/dataset/opencyc>,
+        <http://thedatahub.org/dataset/openlibrary>,
+        <http://thedatahub.org/dataset/openlink-lod-cache>,
+        <http://thedatahub.org/dataset/openlylocal>,
+        <http://thedatahub.org/dataset/openuplabs>,
+        <http://thedatahub.org/dataset/ordnance-survey-linked-data>,
+        <http://thedatahub.org/dataset/pali-english-lexicon>,
+        <http://thedatahub.org/dataset/patents-data-gov-uk>,
+        <http://thedatahub.org/dataset/pleiades>,
+        <http://thedatahub.org/dataset/pokepedia-fr>,
+        <http://thedatahub.org/dataset/prefix-cc>,
+        <http://thedatahub.org/dataset/prelinger_archives>,
+        <http://thedatahub.org/dataset/printed-book-auction-catalogues>,
+        <http://thedatahub.org/dataset/productdb>,
+        <http://thedatahub.org/dataset/productontology>,
+        <http://thedatahub.org/dataset/pscs-catalogue>,
+        <http://thedatahub.org/dataset/psh-subject-headings>,
+        <http://thedatahub.org/dataset/public-record-office-victoria-semantic-wiki>,
+        <http://thedatahub.org/dataset/quotations_book>,
+        <http://thedatahub.org/dataset/radatana>,
+        <http://thedatahub.org/dataset/rdf-book-mashup>,
+        <http://thedatahub.org/dataset/rdfize-lastfm>,
+        <http://thedatahub.org/dataset/rdfohloh>,
+        <http://thedatahub.org/dataset/rechtspraak>,
+        <http://thedatahub.org/dataset/reference-data-gov-uk>,
+        <http://thedatahub.org/dataset/renewable_energy_generators>,
+        <http://thedatahub.org/dataset/research-data-gov-uk>,
+        <http://thedatahub.org/dataset/revyu>,
+        <http://thedatahub.org/dataset/riese>,
+        <http://thedatahub.org/dataset/rkb-explorer-acm>,
+        <http://thedatahub.org/dataset/rkb-explorer-budapest>,
+        <http://thedatahub.org/dataset/rkb-explorer-citeseer>,
+        <http://thedatahub.org/dataset/rkb-explorer-cordis>,
+        <http://thedatahub.org/dataset/rkb-explorer-courseware>,
+        <http://thedatahub.org/dataset/rkb-explorer-crime>,
+        <http://thedatahub.org/dataset/rkb-explorer-crm>,
+        <http://thedatahub.org/dataset/rkb-explorer-curriculum>,
+        <http://thedatahub.org/dataset/rkb-explorer-darmstadt>,
+        <http://thedatahub.org/dataset/rkb-explorer-dblp>,
+        <http://thedatahub.org/dataset/rkb-explorer-deepblue>,
+        <http://thedatahub.org/dataset/rkb-explorer-deploy>,
+        <http://thedatahub.org/dataset/rkb-explorer-digitaleconomy>,
+        <http://thedatahub.org/dataset/rkb-explorer-dotac>,
+        <http://thedatahub.org/dataset/rkb-explorer-ecs>,
+        <http://thedatahub.org/dataset/rkb-explorer-enaktingpsi>,
+        <http://thedatahub.org/dataset/rkb-explorer-eprints>,
+        <http://thedatahub.org/dataset/rkb-explorer-epsrc>,
+        <http://thedatahub.org/dataset/rkb-explorer-era>,
+        <http://thedatahub.org/dataset/rkb-explorer-eurecom>,
+        <http://thedatahub.org/dataset/rkb-explorer-ft>,
+        <http://thedatahub.org/dataset/rkb-explorer-fun>,
+        <http://thedatahub.org/dataset/rkb-explorer-gdlc>,
+        <http://thedatahub.org/dataset/rkb-explorer-ibm>,
+        <http://thedatahub.org/dataset/rkb-explorer-ieee>,
+        <http://thedatahub.org/dataset/rkb-explorer-irit>,
+        <http://thedatahub.org/dataset/rkb-explorer-italy>,
+        <http://thedatahub.org/dataset/rkb-explorer-jisc>,
+        <http://thedatahub.org/dataset/rkb-explorer-kaunas>,
+        <http://thedatahub.org/dataset/rkb-explorer-kisti>,
+        <http://thedatahub.org/dataset/rkb-explorer-laas>,
+        <http://thedatahub.org/dataset/rkb-explorer-lisbon>,
+        <http://thedatahub.org/dataset/rkb-explorer-newcastle>,
+        <http://thedatahub.org/dataset/rkb-explorer-notube>,
+        <http://thedatahub.org/dataset/rkb-explorer-nsf>,
+        <http://thedatahub.org/dataset/rkb-explorer-oai>,
+        <http://thedatahub.org/dataset/rkb-explorer-opencyc>,
+        <http://thedatahub.org/dataset/rkb-explorer-os>,
+        <http://thedatahub.org/dataset/rkb-explorer-photos>,
+        <http://thedatahub.org/dataset/rkb-explorer-pisa>,
+        <http://thedatahub.org/dataset/rkb-explorer-rae2001>,
+        <http://thedatahub.org/dataset/rkb-explorer-resex>,
+        <http://thedatahub.org/dataset/rkb-explorer-risks>,
+        <http://thedatahub.org/dataset/rkb-explorer-roma>,
+        <http://thedatahub.org/dataset/rkb-explorer-roni>,
+        <http://thedatahub.org/dataset/rkb-explorer-southampton>,
+        <http://thedatahub.org/dataset/rkb-explorer-ulm>,
+        <http://thedatahub.org/dataset/rkb-explorer-unlocode>,
+        <http://thedatahub.org/dataset/rkb-explorer-webconf>,
+        <http://thedatahub.org/dataset/rkb-explorer-webscience>,
+        <http://thedatahub.org/dataset/rkb-explorer-wiki>,
+        <http://thedatahub.org/dataset/rkb-explorer-wordnet>,
+        <http://thedatahub.org/dataset/rkb_explorer_data>,
+        <http://thedatahub.org/dataset/rpm_find>,
+        <http://thedatahub.org/dataset/rxnorm>,
+        <http://thedatahub.org/dataset/sadi-semantic-web-services-framework-registry>,
+        <http://thedatahub.org/dataset/sameas-org>,
+        <http://thedatahub.org/dataset/sanskrit-english-lexicon>,
+        <http://thedatahub.org/dataset/santillana_guide_dataset>,
+        <http://thedatahub.org/dataset/schemapedia>,
+        <http://thedatahub.org/dataset/scholarometer>,
+        <http://thedatahub.org/dataset/science_commons>,
+        <http://thedatahub.org/dataset/scotland-pupil-numbers-and-exam-results-2008>,
+        <http://thedatahub.org/dataset/scotland-statistical-geography>,
+        <http://thedatahub.org/dataset/sears>,
+        <http://thedatahub.org/dataset/sec-rdfabout>,
+        <http://thedatahub.org/dataset/secold>,
+        <http://thedatahub.org/dataset/semantic-library>,
+        <http://thedatahub.org/dataset/semantic-profiling-network>,
+        <http://thedatahub.org/dataset/semantic-universe>,
+        <http://thedatahub.org/dataset/semantic-web-dog-food>,
+        <http://thedatahub.org/dataset/semantic-xbrl>,
+        <http://thedatahub.org/dataset/semantic_bible>,
+        <http://thedatahub.org/dataset/semantictweet>,
+        <http://thedatahub.org/dataset/semanticweb-org>,
+        <http://thedatahub.org/dataset/semsol-crunchbase>,
+        <http://thedatahub.org/dataset/simile_data_collection>,
+        <http://thedatahub.org/dataset/sitc-v4>,
+        <http://thedatahub.org/dataset/slideshare2rdf>,
+        <http://thedatahub.org/dataset/smartlink>,
+        <http://thedatahub.org/dataset/socialsemweb-thesaurus>,
+        <http://thedatahub.org/dataset/southampton-ac-uk-apps>,
+        <http://thedatahub.org/dataset/southampton-ecs-eprints>,
+        <http://thedatahub.org/dataset/spqr>,
+        <http://thedatahub.org/dataset/st-andrews-resource-lists>,
+        <http://thedatahub.org/dataset/staff-organograms-and-pay-scottish-government>,
+        <http://thedatahub.org/dataset/staff-organograms-and-pay-thurrock-thames-gateway-development-corporation>,
+        <http://thedatahub.org/dataset/statistics-data-gov-uk>,
+        <http://thedatahub.org/dataset/steak>,
+        <http://thedatahub.org/dataset/stitch-rameau>,
+        <http://thedatahub.org/dataset/stw-thesaurus-for-economics>,
+        <http://thedatahub.org/dataset/sudocfr>,
+        <http://thedatahub.org/dataset/surge-radio>,
+        <http://thedatahub.org/dataset/swedish-open-cultural-heritage>,
+        <http://thedatahub.org/dataset/sweto-dblp>,
+        <http://thedatahub.org/dataset/sztaki-lod>,
+        <http://thedatahub.org/dataset/t4gm-info>,
+        <http://thedatahub.org/dataset/tags2con-delicious>,
+        <http://thedatahub.org/dataset/talis-openlibrary>,
+        <http://thedatahub.org/dataset/taxonconcept>,
+        <http://thedatahub.org/dataset/tcga>,
+        <http://thedatahub.org/dataset/tcmgenedit_dataset>,
+        <http://thedatahub.org/dataset/tekord>,
+        <http://thedatahub.org/dataset/telegraphis>,
+        <http://thedatahub.org/dataset/temple-ov-thee-lemur-datasets>,
+        <http://thedatahub.org/dataset/testee>,
+        <http://thedatahub.org/dataset/texai_lexicon>,
+        <http://thedatahub.org/dataset/the-view-from>,
+        <http://thedatahub.org/dataset/thesaurus-datenwissen>,
+        <http://thedatahub.org/dataset/thesaurus-w>,
+        <http://thedatahub.org/dataset/thesesfr>,
+        <http://thedatahub.org/dataset/traffic-scotland>,
+        <http://thedatahub.org/dataset/transport-data-gov-uk>,
+        <http://thedatahub.org/dataset/transport-openuplabs>,
+        <http://thedatahub.org/dataset/twarql>,
+        <http://thedatahub.org/dataset/twc-data-gov>,
+        <http://thedatahub.org/dataset/twc-logd>,
+        <http://thedatahub.org/dataset/twitter-lids>,
+        <http://thedatahub.org/dataset/ub-mannheim-linked-data>,
+        <http://thedatahub.org/dataset/uberblic>,
+        <http://thedatahub.org/dataset/uk-legislation-api>,
+        <http://thedatahub.org/dataset/uk-postcodes>,
+        <http://thedatahub.org/dataset/umbel>,
+        <http://thedatahub.org/dataset/umthes>,
+        <http://thedatahub.org/dataset/un-hazardous-numbers>,
+        <http://thedatahub.org/dataset/uniprot>,
+        <http://thedatahub.org/dataset/uniref>,
+        <http://thedatahub.org/dataset/university-plymouth-reading-lists>,
+        <http://thedatahub.org/dataset/university-sussex-reading-lists>,
+        <http://thedatahub.org/dataset/uriburner>,
+        <http://thedatahub.org/dataset/us_census_data>,
+        <http://thedatahub.org/dataset/viaf>,
+        <http://thedatahub.org/dataset/vivo>,
+        <http://thedatahub.org/dataset/vivo-cornell-university>,
+        <http://thedatahub.org/dataset/vivo-indiana-university>,
+        <http://thedatahub.org/dataset/vivo-university-of-florida>,
+        <http://thedatahub.org/dataset/vu-wordnet>,
+        <http://thedatahub.org/dataset/vulnerapedia>,
+        <http://thedatahub.org/dataset/w3c-wordnet>,
+        <http://thedatahub.org/dataset/webnmasunotraveler>,
+        <http://thedatahub.org/dataset/wikipedia3>,
+        <http://thedatahub.org/dataset/wikipedia3_>,
+        <http://thedatahub.org/dataset/world-factbook-fu-berlin>,
+        <http://thedatahub.org/dataset/yago>,
+        <http://thedatahub.org/dataset/yahoo_geoplanet>,
+        <http://thedatahub.org/dataset/yale_senselab>,
+        <http://thedatahub.org/dataset/yovisto>,
+        <http://thedatahub.org/dataset/ysa>,
+        <http://thedatahub.org/dataset/zaragoza-datosabiertos>,
+        <http://thedatahub.org/dataset/zaragoza-turismo> .
+
+<http://thedatahub.org/dataset/2000-us-census-rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/addgene> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/aemet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/agrovoc-skos> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/allen-brain-atlas> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/allie-abbreviation-and-long-form-database-in-life-science> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/amsterdam-museum-as-edm-lod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/animal-diversity-web> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/archiveshub-linkeddata> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/austrian_ski_racers> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/b3kat> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bams> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bbc-music> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bbc-programmes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bbc-wildlife-finder> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bbop> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bbop-selected> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/beneficiaries-of-the-european-commission> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/berlin-offener-haushalt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bibbase> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bible-ontology> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/billion_triples_challenge_dataset2008> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/billion_triples_challenge_dataset_2010> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-affymetrix> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-biocyc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-cas> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-chebi> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-genbank> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-geneid> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-go> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-hgnc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-homologene> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-interpro> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-kegg-compound> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-kegg-drug> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-kegg-enzyme> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-kegg-glycan> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-kegg-pathway> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-kegg-reaction> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-mgi> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-obo> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-omim> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-pdb> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-pfam> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-prodom> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-prosite> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-pubchem> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-pubmed> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-reactome> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-sgd> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-uniprot> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-uniprot-taxonomy> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-uniprot-uniparc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-uniprot-unipathway> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bio2rdf-unists> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/biographical-directory-of-the-united-states-congress> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bitzi> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bluk-bnb> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/brazilian-politicians> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bricklink> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/british-museum-collection> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/bund-offener-haushalt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/business-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/calames> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/cap-italy-rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/chef_moz> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/chem2bio2rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/chempedia-rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/chronicling-america> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/clean-energy-data-reegle> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/coins-openuplabs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/combined-nomenclature-2012> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/core> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/cornetto> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/cpa-2008> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/cpc-2008> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/cpv-2003> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/cpv-2008> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ctic-public-dataset> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/culturalinkeddata> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-bnf-fr> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-cnr-it> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-gov-ie> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-gov-uk-time-intervals> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-climb> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-discogs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-metoffice> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-moseley> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-musicbrainz> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-nasa> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-our-airports> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-pokedex> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-incubator-smcjournals> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/data-open-ac-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/datagov-catalog> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/datos-bcn-cl> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/datos-bne-es> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbpedia> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbpedia-el> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbpedia-lite> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbpedia-live> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbpedia-pt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbpedia-spotlight> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtropes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune-artists-last-fm> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune-audioscrobbler> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune-classical> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune-john-peel-sessions> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune-magnatune> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune-musicbrainz> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dbtune-myspace> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dclg-openuplabs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dcs-sheffield> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/deutsche-biographie> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/deutsche-nationalbibliografie-dnb> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dewey_decimal_classification> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/didactalia> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dmoz_rdf_dump> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dnb-gemeinsame-normdatei> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/doap_store> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/doi> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/dutch-national-regulations-metalex> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ecco-tcp-linked-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ecs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/education-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/education-openuplabs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/educationalprograms_sisvu> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eea> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eea-rod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/enakting-co2emission> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/enakting-crime> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/enakting-energy> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/enakting-mortality> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/enakting-nhs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/enakting-population> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/english-index-of-multiple-deprivation-ranking-2010> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/english-index-of-multiple-deprivation-score-2010> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/english-indices-of-multiple-deprivation> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/englishheritage_places> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/enipedia> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/entrez_gene> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/entrez_gene_extract> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/environment-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/environmental-applications-reference-thesaurus> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/esd-standards> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eu-institutions> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eu-parliament-media> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eunis> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eur-lex-rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/europeana-lod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eurostat-rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/euskadi-farmacias> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/eutc-productions> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/event-media> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/facebook-lids> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fanhubz> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fao-geopolitical-ontology> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/farmbio-chembl> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/federal-economic-rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/feedwrapper-lids> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/finnish-municipalities> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fishes-of-texas> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/flickr-wrappr> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fly-ted> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/flyatlas> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/foodista> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/freebase> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/freebase_rdf_store> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-cordis> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-dailymed> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-dblp> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-diseasome> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-drugbank> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-euraxess> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-eures> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-eurostat> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-medicare> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-project-gutenberg> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-sider> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/fu-berlin-stitch> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/galen_from_co-odeorg> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/gemeenschappelijke-thesaurus-audiovisuele-archieven> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/gemet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/geographic-openuplabs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/geolinkeddata> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/geological-survey-of-austria-thesaurus> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/geonames-semantic-web> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/geospecies> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/geowordnet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/gesis-thesoz> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/glastonbury-2011> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/global-hunger-index-2011> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/gnoss> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/go_annotations_from_ncbi_and_ebi> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/googleart-wrapper> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/government-web-integration-for-linked-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/govtrack> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/greater-manchester-bus-timetable-linked-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/grrp> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/grrt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/hbz_unioncatalog> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/hellenic-fire-brigade> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/hellenic-police> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/homologene> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/hungarian-national-library-catalog> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/idreffr> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/insemtives> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/integrated-human-geography-service-for-lod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/intervalue> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/iptc-newscodes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/iserve> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/isic-v4> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/iso-3166-2-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/istat-immigration> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/italian-public-schools-linkedopendata-it> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/iucr-acta-cryst-e> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/jamendo-dbtune> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/japan-radioactivity-stat> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/jisc-cetis-directory> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/jiscopenbib-bl_bnb-1> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/jita> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/john-goodwins-family-tree> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/kaken> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/kasabi-eumida> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/klappstuhlclub> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/knoesis-linked-sensor-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/l3s-dblp> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lcsh> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lcsubjects> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/legislation-openuplabs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lexvo> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/libris> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lichfield-spending> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lingvoj> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-crunchbase> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-edgar> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-eurostat> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-life-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-nuts> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-open-camera> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-open-commerce> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-open-data-of-ecology> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-open-numbers> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-open-piracy> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-open-senate> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-open-vocabularies-lov> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-periodicals> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-recipes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-scotland> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linked-user-feedback> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linkedct> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linkedgeodata> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linkedgeodata-aerodromes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linkedlccn> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linkedmarkmail> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linkedmdb> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/linking-open-drug-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lista-encabezamientos-materia> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lobid-organisations> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lobid-resources> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/loc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/loius> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/london-gazette> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/los_metar> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lotico> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/lower-layer-super-output-areas> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/manchester-university-reading-lists> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/marc-codes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/massobservationarchivecatalogue> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/medline> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/meducator> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/mesh-finnish> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/mesh_headings> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/mesh_ipsv_skos_rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/mesh_pairs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/mesh_titles> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/morelab> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/munich-offener-haushalt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/museums-in-italy> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/my-experiment> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/naics-2007> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/naics-2012> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nalt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/national-diet-library-authorities> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/near> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/neel> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/neurocommons_text_mining_pilot> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/newsweek> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nhs-jargon> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nlm_2007_mesh> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nomenclator-asturias-2010> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/normesh> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nottingham-trent-university-resource-lists> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ntnusc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nuts-geovocab> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nvd> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/nytimes-linked-open-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/oceandrilling-codices> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/oceandrilling-dbseabed> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/oceandrilling-forams> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/oceandrilling-janus> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/oceandrilling-janusamp> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/oceandrilling-ldeo> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/oclc-fast> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/odc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/odc-imd-environment-score> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/odc-imd-rank-2007> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/odc-lsoa> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/odc-population-2005> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/offener-haushalt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ogolod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ontos-news-portal> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/open-data-euskadi> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/open-data-thesaurus> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/open-election-data-project> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/open-energy-info-wiki> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/open_directory> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/opencalais> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/opencorporates> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/opencyc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/openlibrary> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/openlink-lod-cache> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/openlylocal> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/openuplabs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ordnance-survey-linked-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/pali-english-lexicon> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/patents-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/pleiades> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/pokepedia-fr> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/prefix-cc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/prelinger_archives> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/printed-book-auction-catalogues> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/productdb> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/productontology> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/pscs-catalogue> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/psh-subject-headings> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/public-record-office-victoria-semantic-wiki> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/quotations_book> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/radatana> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rdf-book-mashup> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rdfize-lastfm> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rdfohloh> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rechtspraak> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/reference-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/renewable_energy_generators> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/research-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/revyu> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/riese> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-acm> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-budapest> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-citeseer> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-cordis> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-courseware> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-crime> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-crm> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-curriculum> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-darmstadt> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-dblp> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-deepblue> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-deploy> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-digitaleconomy> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-dotac> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-ecs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-enaktingpsi> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-eprints> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-epsrc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-era> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-eurecom> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-ft> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-fun> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-gdlc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-ibm> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-ieee> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-irit> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-italy> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-jisc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-kaunas> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-kisti> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-laas> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-lisbon> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-newcastle> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-notube> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-nsf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-oai> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-opencyc> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-os> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-photos> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-pisa> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-rae2001> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-resex> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-risks> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-roma> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-roni> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-southampton> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-ulm> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-unlocode> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-webconf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-webscience> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-wiki> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb-explorer-wordnet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rkb_explorer_data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rpm_find> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/rxnorm> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sadi-semantic-web-services-framework-registry> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sameas-org> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sanskrit-english-lexicon> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/santillana_guide_dataset> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/schemapedia> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/scholarometer> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/science_commons> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/scotland-pupil-numbers-and-exam-results-2008> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/scotland-statistical-geography> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sears> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sec-rdfabout> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/secold> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semantic-library> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semantic-profiling-network> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semantic-universe> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semantic-web-dog-food> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semantic-xbrl> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semantic_bible> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semantictweet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semanticweb-org> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/semsol-crunchbase> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/simile_data_collection> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sitc-v4> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/slideshare2rdf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/smartlink> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/socialsemweb-thesaurus> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/southampton-ac-uk-apps> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/southampton-ecs-eprints> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/spqr> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/st-andrews-resource-lists> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/staff-organograms-and-pay-scottish-government> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/staff-organograms-and-pay-thurrock-thames-gateway-development-corporation> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/statistics-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/steak> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/stitch-rameau> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/stw-thesaurus-for-economics> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sudocfr> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/surge-radio> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/swedish-open-cultural-heritage> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sweto-dblp> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/sztaki-lod> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/t4gm-info> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/tags2con-delicious> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/talis-openlibrary> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/taxonconcept> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/tcga> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/tcmgenedit_dataset> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/tekord> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/telegraphis> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/temple-ov-thee-lemur-datasets> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/testee> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/texai_lexicon> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/the-view-from> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/thesaurus-datenwissen> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/thesaurus-w> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/thesesfr> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/traffic-scotland> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/transport-data-gov-uk> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/transport-openuplabs> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/twarql> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/twc-data-gov> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/twc-logd> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/twitter-lids> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ub-mannheim-linked-data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/uberblic> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/uk-legislation-api> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/uk-postcodes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/umbel> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/umthes> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/un-hazardous-numbers> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/uniprot> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/uniref> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/university-plymouth-reading-lists> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/university-sussex-reading-lists> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/uriburner> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/us_census_data> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/viaf> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/vivo> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/vivo-cornell-university> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/vivo-indiana-university> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/vivo-university-of-florida> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/vu-wordnet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/vulnerapedia> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/w3c-wordnet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/webnmasunotraveler> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/wikipedia3> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/wikipedia3_> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/world-factbook-fu-berlin> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/yago> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/yahoo_geoplanet> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/yale_senselab> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/yovisto> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/ysa> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/zaragoza-datosabiertos> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
+<http://thedatahub.org/dataset/zaragoza-turismo> a <http://purl.org/twc/vocab/datafaqs#CKANDataset>,
+        <http://www.w3.org/ns/dcat#Dataset> .
+
