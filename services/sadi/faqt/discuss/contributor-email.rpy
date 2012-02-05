@@ -1,16 +1,16 @@
 # 
 # See https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
 #
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy> .
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/discuss/contributor-email.rpy> .
 #
-#3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/discuss/contributor-email>
 #3>    a datafaqs:FAqTService .
 #3> []
 #3>   a prov:Activity;
 #3>   prov:hadQualifiedAttribution [
 #3>      a prov:Attribution;
-#3>      prov:hadQualifiedEntity <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
-#3>      prov:adoptedPlan        <#TEMPLATE/path/to/public/source-code.rpy>;
+#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/faqt/discuss/contributor-email>;
+#3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/discuss/contributor-email.rpy>;
 #3>   ];
 #3> .
 
