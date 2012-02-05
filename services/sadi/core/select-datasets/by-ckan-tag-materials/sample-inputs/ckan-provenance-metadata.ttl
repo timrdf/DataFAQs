@@ -1,0 +1,5 @@
+@prefix moat: <http://moat-project.org/ns#> .
+
+<http://ckan.net/tag/provenance-metadata>
+    moat:name "provenance-metadata" ;
+    a moat:Tag .
