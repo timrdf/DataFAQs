@@ -3,6 +3,25 @@ Created on Jan 27, 2012
 
 @author: yanningchen
 '''
+# 
+# See https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
+#
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/completeness.py> .
+#
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/completeness>
+#3>    a datafaqs:FAqTService .
+#3> []
+#3>   a prov:Activity;
+#3>   prov:hadQualifiedAttribution [
+#3>      a prov:Attribution;
+#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/faqt/completeness>;
+#3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/completeness.py>;
+#3>   ];
+#3> .
+#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/completeness.py>
+#3>    dcterms:created "Jan 27, 2012";
+#3> .
+
 import sadi
 from rdflib import *
 import surf
