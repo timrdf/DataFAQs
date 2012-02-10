@@ -4,6 +4,7 @@
 
 import sys
 from collections import deque
+import hashlib
 
 if len(sys.argv) == 1:
    print "usage: df-epoch-metadata.py {faqt-services, datasets, dataset-references, faqt-service, dataset, evaluation} values"
@@ -83,6 +84,10 @@ templates = {
    dcterms:date "{{EPOCH}}"^^xsd:date;
 .
 <{{FAQT}}> a datafaqs:FAqTService .
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQTHASH}}>
+   a datafaqs:FAqTService;
+   prov:alternateOf <{{FAQT}}>;
+.
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
    formats:media_type <http://www.w3.org/ns/formats/Turtle>;
@@ -214,7 +219,9 @@ elif sys.argv[1] in ["faqt-service", "dataset"]:
    schema = schemas[sys.argv[1]]
    if len(values) == len(schema):
       attrvals = fill_values(schema, values) 
+      attrvals['FAQTHASH'] = hashlib.sha224(attrvals['FAQT']).hexdigest()
       template = templates[sys.argv[1]]
+
       print fill_template(template, attrvals)
    else:
       print '# [ERROR]: ' + sys.argv[1] + ' requires ' + str(len(schema)) + ' arguments:'
