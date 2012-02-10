@@ -31,18 +31,26 @@ offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'easy_install' 'python-setuptools'
 
-echo -n "Try to install python libraries? "
+echo -n "Try to install python libraries? (y/n) "
 read -u 1 install_it
 if [ "$install_it" == "y" ]; then
+   echo
+   echo sudo easy_install pyparsing
    sudo easy_install pyparsing
+   echo sudo easy_install rdfextras
    sudo easy_install rdfextras
+   echo sudo easy_install -U rdflib==3.2.0
    sudo easy_install -U rdflib==3.2.0
+   echo sudo easy_install surf
    sudo easy_install surf
+   echo sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
    sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
 fi
 
-echo -n "Try to install ckanclient? "
+echo -n "Try to install ckanclient? (y/n) "
 read -u 1 install_it
 if [ "$install_it" == "y" ]; then
+   echo
+   echo sudo easy_install http://pypi.python.org/packages/source/c/ckanclient/ckanclient-0.9.tar.gz
    sudo easy_install http://pypi.python.org/packages/source/c/ckanclient/ckanclient-0.9.tar.gz
 fi
