@@ -18,10 +18,10 @@ CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv
 export PATH=$PATH`$CSV2RDF4LOD_HOME/bin/util/cr-situate-paths.sh`
 
 if [[ "$DATAFAQS_PUBLISH_TDB" == "true" && ! `which tdbloader` ]]; then
-   if [ -d "${TDB_HOME}" ]; then
-      export PATH="$PATH:$TDB_HOME/bin"
+   if [ -d "${TDBROOT}" ]; then
+      export PATH="$PATH:$TDBROOT/bin"
    else
-      echo "[WARNING]: DATAFAQS_PUBLISH_TDB = true but tdbloader not on path and TDB_HOME not set. Will not be able to load tdb triple store."
+      echo "[WARNING]: DATAFAQS_PUBLISH_TDB = true but tdbloader not on path and TDBROOT not set. Will not be able to load tdb triple store."
    fi
 fi
 
@@ -188,7 +188,7 @@ if [ "$epoch_existed" != "true" ]; then
       datasets_input=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $2}' | head -1`
       datasets_service=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $1}' | head -1`
 
-      references_service=`df-core.py epoch.ttl.rdf dataset-augmenters | head -1`
+      references_service=`df-core.py epoch.ttl.rdf dataset-referencers | head -1`
       cp epoch.ttl $epochDir/epoch.ttl
       perl -pi -e "s|_:faqtlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services>|g"          $epochDir/epoch.ttl
       perl -pi -e "s|_:datasetlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets>|g"            $epochDir/epoch.ttl
@@ -199,31 +199,83 @@ if [ "$epoch_existed" != "true" ]; then
 
    dir="__PIVOT_epoch/$epoch"
 
-   echo "[INFO] Requesting FAqT services from        $faqts_service"
-   pushd $epochDir &> /dev/null; 
-      pcurl.sh $faqts_input -n faqt-services.post &> /dev/null
-      rapper -q `guess-syntax.sh --inspect faqt-services.post rapper` -o turtle $faqts_input > faqt-services.post.ttl; 
-   popd &> /dev/null
-   echo "curl -s -H 'Content-Type: text/turtle' -H 'Accept: text/turtle' -d @$epochDir/faqt-services.post.ttl $faqts_service"                                   > $epochDir/faqt-services.sh
-   source $epochDir/faqt-services.sh                                                                                                                            > $epochDir/faqt-services.ttl
+   #echo "[INFO] Requesting FAqT services from        $faqts_service"
+   #pushd $epochDir &> /dev/null; 
+   #   pcurl.sh $faqts_input -n faqt-services.post &> /dev/null
+   #   rapper -q `guess-syntax.sh --inspect faqt-services.post rapper` -o turtle $faqts_input                                                                    >           faqt-services.post.ttl
+   #popd &> /dev/null
+   #echo "curl -s -H 'Content-Type: text/turtle' -H 'Accept: text/turtle' -d @$epochDir/faqt-services.post.ttl $faqts_service"                                   > $epochDir/faqt-services.sh
+   #source $epochDir/faqt-services.sh                                                                                                                            > $epochDir/faqt-services.ttl
+
+   faqt_selectors=`df-core.py epoch.ttl.rdf faqt-selectors | awk '{print $1}' | sort -u`
+   s=0 # selector
+   for faqt_selector in $faqt_selectors; do
+      let "s=s+1"
+      mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
+      echo "[INFO] Requesting datasets from        $faqt_selector"
+      i=0 # input to selector
+      for selector_input in `df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector`; do
+         let "i=i+1"
+         mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
+         pushd    "__PIVOT_epoch/$epoch/faqt-services/$s/$i" &> /dev/null; 
+            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"     > get-input.sh
+            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
+            source get-input.sh
+         popd &> /dev/null
+      done 
+   done
+
+   for input in `find $dir/faqt-services -name "selector-input.ttl"`; do 
+      rapper -q -g -o turtle $input                                                                                                                            >> $epochDir/faqt-services.ttl
+   done
+   rapper -q -g -o rdfxml $epochDir/faqt-services.ttl                                                                                                           > $epochDir/faqt-services.ttl.rdf 
    triples=`void-triples.sh $dir/faqt-services.ttl`
    df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                                                > $epochDir/faqt-services.meta.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services"                                                                                         > $epochDir/faqt-services.ttl.sd_name
-   rapper -q -g -o ntriples $epochDir/faqt-services.ttl | sed 's/<//g;s/>//g' | grep "purl.org/dc/terms/hasPart" | awk '{print $3}' | grep "^http://" | sort -u > $epochDir/faqt-services.ttl.csv
+   df-core.py $epochDir/faqt-services.ttl.rdf faqt-services | grep "^http://" | sort -u                                                                         > $epochDir/faqt-services.ttl.csv
+   #rm $epochDir/faqt-services.ttl.rdf
 
-   echo "[INFO] Requesting datasets from             $datasets_service"
-   pushd $epochDir &> /dev/null
-      pcurl.sh $datasets_input -n datasets.post &> /dev/null; 
-      rapper -q `guess-syntax.sh --inspect datasets.post rapper` -o turtle $datasets_input > datasets.post.ttl; 
-   popd &> /dev/null
-   mime=`guess-syntax.sh $epochDir/datasets.post.ttl mime`
-   echo "curl -s -H \"Content-Type: $mime\" -H 'Accept: text/turtle' -d @$epochDir/datasets.post.ttl $datasets_service"                             > $epochDir/datasets.sh
-   source $epochDir/datasets.sh                                                                                                                     > $epochDir/datasets.ttl
+
+
+   #echo  "[INFO] Requesting datasets from             $datasets_service"
+   #pushd $epochDir &> /dev/null
+   #   pcurl.sh $datasets_input -n datasets.post &> /dev/null
+   #   rapper -q `guess-syntax.sh --inspect datasets.post rapper` -o turtle $datasets_input                                                          >           datasets.post.ttl 
+   #popd &> /dev/null
+
+   dataset_selectors=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $1}' | sort -u`
+   s=0 # selector
+   for dataset_selector in $dataset_selectors; do
+      let "s=s+1"
+      mkdir -p "__PIVOT_epoch/$epoch/datasets/$s"
+      echo "[INFO] Requesting datasets from        $dataset_selector"
+      i=0 # input to selector
+      for selector_input in `df-core.py epoch.ttl.rdf dataset-selector-inputs $dataset_selector`; do
+         let "i=i+1"
+         mkdir -p "__PIVOT_epoch/$epoch/datasets/$s/$i"
+         pushd    "__PIVOT_epoch/$epoch/datasets/$s/$i" &> /dev/null; 
+            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"     > get-input.sh
+            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
+            source get-input.sh
+         popd &> /dev/null
+      done 
+   done
+
+   for input in `find $dir/datasets -name "selector-input.ttl"`; do 
+      rapper -q -g -o turtle $input                                                                                                                            >> $epochDir/datasets.ttl
+   done
+   rapper -q -g -o rdfxml $epochDir/datasets.ttl                                                                                                                > $epochDir/datasets.ttl.rdf 
+
+   #mime=`guess-syntax.sh $epochDir/datasets.post.ttl mime`
+   #echo "curl -s -H \"Content-Type: $mime\" -H 'Accept: text/turtle' -d @$epochDir/datasets.post.ttl $datasets_service"                             > $epochDir/datasets.sh
+   #source $epochDir/datasets.sh                                                                                                                     > $epochDir/datasets.ttl
    triples=`void-triples.sh $dir/datasets.ttl`
    df-epoch-metadata.py datasets $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl text/turtle ${triples:-0}                                              > $epochDir/datasets.meta.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                                  > $epochDir/datasets.ttl.sd_name
 
-   echo "[INFO] Requesting dataset references from $references_service"
+
+
+   echo "[INFO] Requesting dataset references from   $references_service"
    send="$epochDir/datasets.ttl"
    mime=`guess-syntax.sh $send mime`
    rsyn=`guess-syntax.sh $send rapper`
@@ -233,7 +285,8 @@ if [ "$epoch_existed" != "true" ]; then
       df-core.py datasets.ttl.rdf datasets &> /dev/null # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
       if [ -e dataset-references.post.1.ttl ]; then
          for post in dataset-references.post*; do
-            echo "[INFO] Getting rdfs:seeAlso references for datasets listed in $post"
+            echo
+            echo "[INFO] Following rdfs:seeAlso references for datasets listed in $post"
             curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $references_service >> dataset-references.ttl
          done
       else
@@ -460,6 +513,6 @@ for dataset in $datasetsRandom; do
    f=0
 done
 
-if [ -e epoch.ttl.rdf ]; then
-   rm epoch.ttl.rdf
-fi
+#if [ -e epoch.ttl.rdf ]; then
+#   rm epoch.ttl.rdf
+#fi
