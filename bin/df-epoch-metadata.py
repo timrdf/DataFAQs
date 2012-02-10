@@ -84,7 +84,7 @@ templates = {
    dcterms:date "{{EPOCH}}"^^xsd:date;
 .
 <{{FAQT}}> a datafaqs:FAqTService .
-<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQTHASH}}>
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_HASH}}>
    a datafaqs:FAqTService;
    prov:alternateOf <{{FAQT}}>;
 .
@@ -139,6 +139,9 @@ templates = {
    dcterms:date "{{EPOCH}}"^^xsd:date;
 .
 <{{DATASET}}> a void:Dataset .
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_HASH}}>
+   a prov:alternateOf <{{DATASET}}>;
+.
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions/referencing-service>
    a datafaqs:DatasetReferencer;
@@ -219,7 +222,11 @@ elif sys.argv[1] in ["faqt-service", "dataset"]:
    schema = schemas[sys.argv[1]]
    if len(values) == len(schema):
       attrvals = fill_values(schema, values) 
-      attrvals['FAQTHASH'] = hashlib.sha224(attrvals['FAQT']).hexdigest()
+      if ( sys.argv[1] == 'faqt-service' ):
+         attrvals['FAQT_HASH']    = hashlib.sha224(attrvals['FAQT']).hexdigest()
+      elif ( sys.argv[1] == 'dataset' ):
+         attrvals['DATASET_HASH'] = hashlib.sha224(attrvals['DATASET']).hexdigest()
+
       template = templates[sys.argv[1]]
 
       print fill_template(template, attrvals)
