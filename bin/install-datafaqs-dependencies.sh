@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 # https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
 
 function offer_install_with_apt {
@@ -30,19 +29,28 @@ offer_install_with_apt 'curl'         'curl'
 offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'easy_install' 'python-setuptools'
+offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 
 echo -n "Try to install python libraries? (y/n) "
 read -u 1 install_it
 if [ "$install_it" == "y" ]; then
    echo
+
    echo sudo easy_install pyparsing
    sudo easy_install pyparsing
+
    echo sudo easy_install rdfextras
    sudo easy_install rdfextras
+
    echo sudo easy_install -U rdflib==3.2.0
    sudo easy_install -U rdflib==3.2.0
+
    echo sudo easy_install surf
    sudo easy_install surf
+
+   echo sudo easy_install -U surf.sparql_protocol
+   sudo easy_install -U surf.sparql_protocol
+
    echo sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
    sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
 fi
