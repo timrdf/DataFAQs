@@ -347,7 +347,7 @@ for faqt in $faqtsRandom; do
    # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/
    echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."  > $faqtDir/service.ttl
    echo "<$faqt> a datafaqs:FAqTService ."                          >> $faqtDir/service.ttl                             # service.ttl
-   echo "$faqt"                                                      > $faqtDir/service.ttl.sd_name                     # service.ttl.sd_name
+   #echo "$faqt"                                                      > $faqtDir/service.ttl.sd_name                     # service.ttl.sd_name
 
    # Where the dataset evaluations will be stored.
    pushd $faqtDir/__PIVOT_dataset &> /dev/null
