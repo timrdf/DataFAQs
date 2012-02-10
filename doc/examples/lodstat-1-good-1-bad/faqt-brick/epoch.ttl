@@ -9,11 +9,12 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
    prov:wasAttributedTo
       <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
    prov:used
-      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/access/in-sparql-endpoint.ttl>;
+      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/access/in-sparql-endpoint.ttl>,
+      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/discuss/contributor-email.ttl>;
    prov:hadQualifiedAttribution [
       a prov:Attribution;
       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
-      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/via-sparql-query.rpy>;
+      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.rpy>;
    ];
    prov:generated _:faqtlist; # the RDF graph that via-sparql-query returns (we don't know the name of it yet until we instantiate the epoch).
 .
