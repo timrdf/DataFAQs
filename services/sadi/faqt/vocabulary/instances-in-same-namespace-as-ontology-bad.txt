@@ -1,0 +1,6 @@
+I just wanted to point out that isn't a generally accepted practice to have your instances and ontology in the namespace:
+
+<http://aquarius.tw.rpi.edu/essi-lod/instances/group_01>
+    a <http://aquarius.tw.rpi.edu/essi-lod/instances/Cluster>
+
+I'd suggest you rename <http://aquarius.tw.rpi.edu/essi-lod/instances/Cluster> to another namespace that is dedicated to your ontology.
