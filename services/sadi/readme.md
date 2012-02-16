@@ -1,4 +1,4 @@
-ckan/ contains SADI services that help get dataset listings into CKAN.
+[ckan/](https://github.com/timrdf/DataFAQs/tree/master/services/sadi/ckan) contains SADI services that help get dataset listings into CKAN.
 
 contextual-inverse-function/ was the first hello world with SADI.
 
