@@ -88,7 +88,10 @@ templates = {
    a datafaqs:FAqTService;
    prov:alternateOf <{{FAQT}}>;
 .
-
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch>
+   a datafaqs:FAqTBrick, void:Dataset;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>;
+.
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
    formats:media_type <http://www.w3.org/ns/formats/Turtle>;
 .
@@ -147,6 +150,10 @@ templates = {
    a datafaqs:DatasetReferencer;
    rdfs:comment "The SADI service that provided a list of rdfs:seeAlso references about the dataset, which was invoked during epoch initialization.";
 .
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch>
+   a datafaqs:FAqTBrick, void:Dataset;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>;
+.
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
    formats:media_type <http://www.w3.org/ns/formats/Turtle>;
 .
@@ -204,6 +211,10 @@ if sys.argv[1] in ["faqt-services", "datasets", "dataset-references"]:
    a void:Dataset, sd:Graph, datafaqs:EpochConfigurationGraph;
    void:triples {{TRIPLES}};
    void:dataDump <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>;
+.
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch>
+   a datafaqs:FAqTBrick, void:Dataset;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>;
 .
    '''
       print fill_template(metadata, attrvals)
@@ -301,6 +312,10 @@ elif sys.argv[1] == "evaluation":
    prov:specializationOf <{{DATASET}}>;
    dcterms:date "{{EPOCH}}"^^xsd:date;
    dcterms:identifier {{DATASET_ID}};
+.
+<{{DATAFAQS_BASE_URI}}/datafaqs/epoch>
+   a datafaqs:FAqTBrick, void:Dataset;
+   void:subset <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>;
 .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/dump/{{DUMP}}>
