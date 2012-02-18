@@ -191,7 +191,7 @@
 
 :Evaluation
    a owl:Class;
-   rdfs:label "Evaluation"
+   rdfs:label "Evaluation";
    rdfs:comment "An RDF graph returned by a FAqT evaluation service.";
    rdfs:subClassOf prov:Account, void:Dataset, sd:Graph;
 .
