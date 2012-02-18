@@ -70,3 +70,70 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
 _:genid12 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/twc/vocab/datafaqs#FAqTService> .
+<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#dataDump> .
+_:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+<http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/datafaqs#QueryToApply> .
+<http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/twc/vocab/datafaqs#SPARQLQuery> .
+<http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/sp#Ask> .
+<http://purl.org/twc/vocab/datafaqs#SPARQLQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#SPARQLQuery> <http://www.w3.org/2000/01/rdf-schema#comment> "Need to reconcile with SPIN http://spinrdf.org/sp#" .
+<http://purl.org/twc/vocab/datafaqs#SPARQLQuery> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://spinrdf.org/> .
+<http://purl.org/twc/vocab/datafaqs#dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/twc/vocab/datafaqs#dataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/datafaqs#QueryToApply> .
+<http://purl.org/twc/vocab/datafaqs#dataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sparql-service-description#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#evaluation_error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/twc/vocab/datafaqs#evaluation_error> <http://www.w3.org/2000/01/rdf-schema#comment> "FAqTs can include an evaluation error if they run into problems." .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation" .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "An RDF graph returned by a FAqT evaluation service." .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov-o/Account> .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sparql-service-description#Graph> .
+<http://purl.org/twc/vocab/datafaqs#SADIService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#CoreService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#CoreService> <http://www.w3.org/2000/01/rdf-schema#label> "CoreService" .
+<http://purl.org/twc/vocab/datafaqs#CoreService> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/timrdf/DataFAQs/wiki/DataFAQs-Core-Services> .
+<http://purl.org/twc/vocab/datafaqs#CoreService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov-o/Agent> .
+<http://purl.org/twc/vocab/datafaqs#CoreServiceInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#CoreServiceInput> <http://www.w3.org/2000/01/rdf-schema#label> "CoreServiceInput" .
+<http://purl.org/twc/vocab/datafaqs#CoreServiceInput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov-o/Entity> .
+<http://purl.org/twc/vocab/datafaqs#FAqTSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#FAqTSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/datafaqs#CoreService> .
+<http://purl.org/twc/vocab/datafaqs#DatasetSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/datafaqs#CoreService> .
+<http://purl.org/twc/vocab/datafaqs#DatasetReferencer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetReferencer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/datafaqs#CoreService> .
+<http://purl.org/twc/vocab/datafaqs#SourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#SourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov-o/Plan> .
+<http://purl.org/twc/vocab/datafaqs#Epoch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#Epoch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#Epoch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov-o/Entity> .
+<http://purl.org/twc/vocab/datafaqs#Epoch> <http://www.w3.org/2000/01/rdf-schema#comment> "An Epoch is one temporal slice of the FAqT Brick. It is comprises the RDF data created during one analysis run." .
+<http://purl.org/twc/vocab/datafaqs#FAqTBrickExplorer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#FAqTBrick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#FAqTBrick> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#powered_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/twc/vocab/datafaqs#powered_by> <http://www.w3.org/2000/01/rdf-schema#label> "Powered By" .
+<http://purl.org/twc/vocab/datafaqs#powered_by> <http://www.w3.org/2000/01/rdf-schema#comment> "Any other Project that this project depends on to function. Asserted as a badge and use to attribute those that provided the dependencies." .
+<http://purl.org/twc/vocab/datafaqs#powered_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://usefulinc.com/ns/doap#Project> .
+<http://purl.org/twc/vocab/datafaqs#powered_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://usefulinc.com/ns/doap#Project> .

@@ -136,7 +136,7 @@
    rdfs:subClassOf [
       a owl:Restriction;
       owl:onProperty dcterms:hasPart;
-      owl:someValuesFrom datafaqs:FAqTService;
+      owl:someValuesFrom :FAqTService;
    ];
 . 
 
