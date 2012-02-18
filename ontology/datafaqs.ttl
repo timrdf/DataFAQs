@@ -4,12 +4,15 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
 @prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix doap:    <http://usefulinc.com/ns/doap#> .
 @prefix ov:      <http://open.vocab.org/terms/> .
 @prefix moat:    <http://moat-project.org/ns#> .
 @prefix void:    <http://rdfs.org/ns/void#> .
 @prefix moby:    <http://www.mygrid.org.uk/mygrid-moby-service#> .
 @prefix sd:      <http://www.w3.org/ns/sparql-service-description#> .
+@prefix prov:    <http://www.w3.org/ns/prov-o/> .
 @prefix :        <http://purl.org/twc/vocab/datafaqs#> .
 
 :CKANDataset
@@ -109,7 +112,7 @@
 
 :EvaluatedDataset
    a owl:Class;
-   rdfs:subClassOf :Evaluated, void:Dataset;
+   rdfs:subClassOf :Evaluated, dcat:Dataset;
 .
 
 :resolved_triples
@@ -134,6 +137,20 @@
       a owl:Restriction;
       owl:onProperty dcterms:hasPart;
       owl:someValuesFrom :FAqTService;
+   ];
+. 
+
+:DatasetCollection
+   a owl:Class;
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty dcterms:hasPart;
+      owl:minCardinality 1;
+   ];
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty dcterms:hasPart;
+      owl:someValuesFrom void:Dataset;
    ];
 . 
 
@@ -170,4 +187,69 @@
 :evaluation_error
    a owl:DatatypeProperty;
    rdfs:comment "FAqTs can include an evaluation error if they run into problems.";
+.
+
+:Evaluation
+   a owl:Class;
+   rdfs:label "Evaluation"
+   rdfs:comment "An RDF graph returned by a FAqT evaluation service.";
+   rdfs:subClassOf prov:Account, void:Dataset, sd:Graph;
+.
+
+:SADIService
+   a owl:Class;
+.
+
+:CoreService
+   a owl:Class;
+   rdfs:label "CoreService";
+   rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/DataFAQs-Core-Services>;
+   rdfs:subClassOf prov:Agent;
+.
+
+:CoreServiceInput
+   a owl:Class;
+   rdfs:label "CoreServiceInput";
+   rdfs:subClassOf prov:Entity;
+.
+
+:FAqTSelector
+   a owl:Class;
+   rdfs:subClassOf :CoreService;
+.
+:DatasetSelector
+   a owl:Class;
+   rdfs:subClassOf :CoreService;
+.
+:DatasetReferencer
+   a owl:Class;
+   rdfs:subClassOf :CoreService;
+.
+
+:SourceCode
+   a owl:Class;
+   rdfs:subClassOf prov:Plan;
+.
+
+:Epoch
+   a owl:Class;
+   rdfs:subClassOf void:Dataset, prov:Entity;
+   rdfs:comment "An Epoch is one temporal slice of the FAqT Brick. It is comprises the RDF data created during one analysis run.";
+.
+
+:FAqTBrickExplorer
+   a owl:Class;
+.
+
+:FAqTBrick
+   a owl:Class;
+   rdfs:subClassOf void:Dataset;
+.
+
+:powered_by
+   a owl:ObjectProperty;
+   rdfs:label "Powered By";
+   rdfs:comment "Any other Project that this project depends on to function. Asserted as a badge and use to attribute those that provided the dependencies.";
+   rdfs:domain doap:Project;
+   rdfs:range doap:Project;
 .

@@ -61,7 +61,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
 <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#EvaluatedDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#EvaluatedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/datafaqs#Evaluated> .
-<http://purl.org/twc/vocab/datafaqs#EvaluatedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#EvaluatedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
 <http://purl.org/twc/vocab/datafaqs#resolved_triples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/twc/vocab/datafaqs#resolved_triples> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of triples returned by dereferencing the subject URI." .
 <http://purl.org/twc/vocab/datafaqs#FAqTService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -77,11 +77,20 @@ _:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/twc/vo
 <http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
 <http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#dataDump> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
 _:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#dataDump> .
+_:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
-<http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+<http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
 <http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/datafaqs#QueryToApply> .
 <http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/twc/vocab/datafaqs#SPARQLQuery> .
@@ -94,3 +103,5 @@ _:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 <http://purl.org/twc/vocab/datafaqs#dataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sparql-service-description#Dataset> .
 <http://purl.org/twc/vocab/datafaqs#evaluation_error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/twc/vocab/datafaqs#evaluation_error> <http://www.w3.org/2000/01/rdf-schema#comment> "FAqTs can include an evaluation error if they run into problems." .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#Evaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation" .
