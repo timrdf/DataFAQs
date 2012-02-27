@@ -1,3 +1,19 @@
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/via-sparql-query.rpy>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/DataFAQs-Core-Services> .
+#3>
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>
+#3>    a datafaqs:FAqTService .
+#3> []
+#3>    a prov:Activity;
+#3>    prov:hadQualifiedAttribution [
+#3>       a prov:Attribution;
+#3>       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
+#3>       prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/via-sparql-query.rpy>;
+#3>    ];
+#3> .
+#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/via-sparql-query.rpy>
+#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/via-sparql-query.rpy> .
+
 import re
 import sadi
 from rdflib import *
@@ -23,7 +39,7 @@ import urllib2
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class ViaSPARQLQuery(sadi.Service):
+class FAqTsViaSPARQLQuery(sadi.Service):
 
    # Service metadata.
    label                  = 'via-sparql-query'
@@ -98,7 +114,7 @@ WHERE {
       output.save()
 
 # Used when Twistd invokes this service b/c it is sitting in a deployed directory.
-resource = ViaSPARQLQuery()
+resource = FAqTsViaSPARQLQuery()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
