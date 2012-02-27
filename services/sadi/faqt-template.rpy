@@ -1,7 +1,5 @@
-# 
-# See https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
-#
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy> .
+#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 #3>
 #3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
 #3>    a datafaqs:FAqTService .
