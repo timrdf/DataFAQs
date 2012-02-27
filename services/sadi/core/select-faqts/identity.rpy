@@ -56,11 +56,13 @@ class IdentityFAqTService(sadi.Service):
   
       print input.subject
 
-      FAqTService = output.session.get_class(ns.DATAFAQS['FAqTService'])
-      faqt_service = FAqTService(input.subject)
-      faqt_service.rdf_type.append(ns.DATAFAQS['FAqtService'])
-      faqt_service.save()
-      output.dcterms_hasPart.append(faqt_service)
+      #FAqTService = output.session.get_class(ns.DATAFAQS['FAqTService'])
+      #faqt_service = output.session.get_resource(output.subject,ns.DATAFAQS['FAqTService']) #FAqTService(output.subject)
+      #faqt_service.rdf_type.append(ns.DATAFAQS['FAqtService'])
+      #faqt_service.save()
+
+      output.rdf_type.append(ns.DATAFAQS['FAqtService'])
+      output.dcterms_hasPart.append(output)
 
       output.save()
 
