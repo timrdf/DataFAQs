@@ -1,3 +1,19 @@
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.rpy>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/DataFAQs-Core-Services> .
+#3>
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>
+#3>    a datafaqs:FAqTService .
+#3> []
+#3>    a prov:Activity;
+#3>    prov:hadQualifiedAttribution [
+#3>       a prov:Attribution;
+#3>       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
+#3>       prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.rpy>;
+#3>    ];
+#3> .
+#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.rpy>
+#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/identity.rpy> .
+
 import re
 import sadi
 from rdflib import *
