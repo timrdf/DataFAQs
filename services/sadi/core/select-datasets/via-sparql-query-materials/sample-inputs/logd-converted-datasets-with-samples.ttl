@@ -1,0 +1,44 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :         <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/logd-converted-datasets-with-samples#> .
+
+:apply
+   a datafaqs:QueryToApply;
+   datafaqs:query   <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/logd-converted-datasets-with-samples.rq>;
+   datafaqs:dataset :dataset;
+.
+
+<https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/logd-converted-datasets-with-samples.rq>
+   a datafaqs:SPARQLQuery;
+   rdfs:comment "One could resolve the URI for this query, or use the given rdf:value";
+   rdf:value
+"""prefix void:       <http://rdfs.org/ns/void#> 
+prefix conversion: <http://purl.org/twc/vocab/conversion/> 
+
+select distinct ?dataset ?type 
+where { 
+  graph ?sample { 
+    ?sample a conversion:DatasetSample . 
+    ?dataset  
+       a conversion:AbstractDataset, ?type; 
+       void:subset [  
+          void:subset [  
+             void:subset ?sample  
+          ]  
+       ] 
+  } 
+} order by ?dataset""";
+.
+
+:dataset
+   a sd:Dataset;
+   rdfs:comment "We want to query the entire endpoint.";
+. 
+
+:logd-sparql-service
+   a sd:Service; 
+   sd:availableGraphDescriptions :dataset;
+   sd:endpoint  <http://logd.tw.rpi.edu/sparql>;
+.

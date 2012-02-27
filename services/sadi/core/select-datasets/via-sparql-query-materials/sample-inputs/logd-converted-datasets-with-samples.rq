@@ -1,16 +1,16 @@
-prefix void:       <http://rdfs.org/ns/void#>
-prefix conversion: <http://purl.org/twc/vocab/conversion/>
+prefix void:       <http://rdfs.org/ns/void#> 
+prefix conversion: <http://purl.org/twc/vocab/conversion/> 
 
-select distinct ?abstract
-where {
-  graph ?sample {
-    ?sample a conversion:DatasetSample .
-    ?abstract 
-       a conversion:AbstractDataset;
-       void:subset [ 
-          void:subset [ 
-             void:subset ?sample 
-          ] 
-       ]
-  }
-} order by ?abstract
+select distinct ?dataset ?type 
+where { 
+  graph ?sample { 
+    ?sample a conversion:DatasetSample . 
+    ?dataset  
+       a conversion:AbstractDataset, ?type; 
+       void:subset [  
+          void:subset [  
+             void:subset ?sample  
+          ]  
+       ] 
+  } 
+} order by ?dataset
