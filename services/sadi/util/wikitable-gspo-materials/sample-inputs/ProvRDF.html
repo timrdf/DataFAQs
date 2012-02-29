@@ -1,0 +1,2600 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr">
+   <head>
+      <meta name="generator"
+            content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net"/>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta http-equiv="Content-Style-Type" content="text/css"/>
+      <meta name="generator" content="MediaWiki 1.15.5"/>
+      <meta name="keywords" content="ProvRDF,TODO,PROV-O"/>
+      <link rel="shortcut icon" href="/favicon.ico"/>
+      <link rel="search" type="application/opensearchdescription+xml"
+            href="/2011/prov/wiki/opensearch_desc.php"
+            title="Provenance WG Wiki (en)"/>
+      <link rel="alternate" type="application/rss+xml" title="Provenance WG Wiki RSS feed"
+            href="/2011/prov/wiki/index.php?title=Special:RecentChanges&amp;feed=rss"/>
+      <link rel="alternate" type="application/atom+xml"
+            title="Provenance WG Wiki Atom feed"
+            href="/2011/prov/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+      <title>ProvRDF - Provenance WG Wiki</title>
+      <link rel="stylesheet" href="/2011/prov/wiki/skins/common/shared.css?207"
+            type="text/css"
+            media="screen"/>
+      <link rel="stylesheet" href="/2011/prov/wiki/skins/common/commonPrint.css?207"
+            type="text/css"
+            media="print"/>
+      <link rel="stylesheet" href="/2011/prov/wiki/skins/w3cmonobook/main.css?207"
+            type="text/css"
+            media="screen"/>
+      <!--[if lt IE 5.5000]><link rel="stylesheet" href="/2011/prov/wiki/skins/w3cmonobook/IE50Fixes.css?207" type="text/css" media="screen" /><![endif]--><!--[if IE 5.5000]><link rel="stylesheet" href="/2011/prov/wiki/skins/w3cmonobook/IE55Fixes.css?207" type="text/css" media="screen" /><![endif]--><!--[if IE 6]><link rel="stylesheet" href="/2011/prov/wiki/skins/w3cmonobook/IE60Fixes.css?207" type="text/css" media="screen" /><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/2011/prov/wiki/skins/w3cmonobook/IE70Fixes.css?207" type="text/css" media="screen" /><![endif]--><link rel="stylesheet"
+            href="/2011/prov/wiki/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000"
+            type="text/css"/>
+      <link rel="stylesheet"
+            href="/2011/prov/wiki/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000"
+            type="text/css"
+            media="print"/>
+      <link rel="stylesheet"
+            href="/2011/prov/wiki/index.php?title=MediaWiki:W3cmonobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000"
+            type="text/css"/>
+      <link rel="stylesheet"
+            href="/2011/prov/wiki/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css"
+            type="text/css"/>
+      <!--[if lt IE 7]><script type="text/javascript" src="/2011/prov/wiki/skins/common/IEFixes.js?207"></script>
+                <meta http-equiv="imagetoolbar" content="no" /><![endif]--><script type="text/javascript" xml:space="preserve">
+/**/
+                var skin = "w3cmonobook";
+                var stylepath = "/2011/prov/wiki/skins";
+                var wgArticlePath = "/2011/prov/wiki/$1";
+                var wgScriptPath = "/2011/prov/wiki";
+                var wgScript = "/2011/prov/wiki/index.php";
+                var wgVariantArticlePath = false;
+                var wgActionPaths = {};
+                var wgServer = "http://www.w3.org";
+                var wgCanonicalNamespace = "";
+                var wgCanonicalSpecialPageName = false;
+                var wgNamespaceNumber = 0;
+                var wgPageName = "ProvRDF";
+                var wgTitle = "ProvRDF";
+                var wgAction = "view";
+                var wgArticleId = "348";
+                var wgIsArticle = true;
+                var wgUserName = null;
+                var wgUserGroups = null;
+                var wgUserLanguage = "en";
+                var wgContentLanguage = "en";
+                var wgBreakFrames = false;
+                var wgCurRevisionId = 5990;
+                var wgVersion = "1.15.5";
+                var wgEnableAPI = true;
+                var wgEnableWriteAPI = true;
+                var wgSeparatorTransformTable = ["", ""];
+                var wgDigitTransformTable = ["", ""];
+                var wgRestrictionEdit = [];
+                var wgRestrictionMove = [];
+                /**/
+</script>
+      <script type="text/javascript" src="/2011/prov/wiki/skins/common/wikibits.js?207"
+              xml:space="preserve">
+//
+&lt;!-- wikibits js --&gt;
+//
+</script>
+      <!-- Head Scripts --><script type="text/javascript" src="/2011/prov/wiki/skins/common/ajax.js?207"
+              xml:space="preserve">
+//
+//
+</script>
+      <script type="text/javascript"
+              src="/2011/prov/wiki/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=w3cmonobook"
+              xml:space="preserve">
+//
+&lt;!-- site js --&gt;
+//
+</script>
+   </head>
+   <body class="mediawiki ltr ns-0 ns-subject page-ProvRDF skin-w3cmonobook">
+      <div id="globalWrapper">
+         <div id="column-content">
+            <div id="content">
+               <a id="top" shape="rect"/> 
+               <h1 id="firstHeading" class="firstHeading">ProvRDF</h1>
+               <div id="bodyContent">
+                  <h3 id="siteSub">From Provenance WG Wiki</h3>
+                  <div id="contentSub"/>
+                  <div id="jump-to-nav">Jump to: <a href="#column-one" shape="rect">navigation</a>, <a href="#searchInput" shape="rect">search</a>
+                  </div>
+                  <!-- start content -->
+<table id="toc" class="toc" summary="Contents">
+                     <tr>
+                        <td rowspan="1" colspan="1">
+                           <div id="toctitle">
+                              <h2>Contents</h2>
+                           </div>
+                           <ul>
+                              <li class="toclevel-1">
+                                 <a href="#Introduction" shape="rect">
+                                    <span class="tocnumber">1</span> 
+                                    <span class="toctext">Introduction</span>
+                                 </a>
+                              </li>
+                              <li class="toclevel-1">
+                                 <a href="#From_PROV-DM_to_PROV-O" shape="rect">
+                                    <span class="tocnumber">2</span> 
+                                    <span class="toctext">From PROV-DM to
+PROV-O</span>
+                                 </a> 
+                                 <ul>
+                                    <li class="toclevel-2">
+                                       <a href="#Mapping_coverage" shape="rect">
+                                          <span class="tocnumber">2.1</span> 
+                                          <span class="toctext">Mapping
+coverage</span>
+                                       </a>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Mapping_goals" shape="rect">
+                                          <span class="tocnumber">2.2</span> 
+                                          <span class="toctext">Mapping
+goals</span>
+                                       </a> 
+                                       <ul>
+                                          <li class="toclevel-3">
+                                             <a href="#Partial_mappings" shape="rect">
+                                                <span class="tocnumber">2.2.1</span> 
+                                                <span class="toctext">Partial
+mappings</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Translating_element_records" shape="rect">
+                                          <span class="tocnumber">2.3</span> 
+                                          <span class="toctext">Translating
+element records</span>
+                                       </a> 
+                                       <ul>
+                                          <li class="toclevel-3">
+                                             <a href="#Entity" shape="rect">
+                                                <span class="tocnumber">2.3.1</span> 
+                                                <span class="toctext">Entity</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Activity" shape="rect">
+                                                <span class="tocnumber">2.3.2</span> 
+                                                <span class="toctext">Activity</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Agent" shape="rect">
+                                                <span class="tocnumber">2.3.3</span> 
+                                                <span class="toctext">Agent</span>
+                                             </a> 
+                                             <ul>
+                                                <li class="toclevel-4">
+                                                   <a href="#Person" shape="rect">
+                                                      <span class="tocnumber">2.3.3.1</span> 
+                                                      <span class="toctext">Person</span>
+                                                   </a>
+                                                </li>
+                                                <li class="toclevel-4">
+                                                   <a href="#Organization" shape="rect">
+                                                      <span class="tocnumber">2.3.3.2</span> 
+                                                      <span class="toctext">Organization</span>
+                                                   </a>
+                                                </li>
+                                                <li class="toclevel-4">
+                                                   <a href="#SoftwareAgent" shape="rect">
+                                                      <span class="tocnumber">2.3.3.3</span> 
+                                                      <span class="toctext">SoftwareAgent</span>
+                                                   </a>
+                                                </li>
+                                             </ul>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Note" shape="rect">
+                                                <span class="tocnumber">2.3.4</span> 
+                                                <span class="toctext">Note</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Translating_relation_formulas" shape="rect">
+                                          <span class="tocnumber">2.4</span> 
+                                          <span class="toctext">Translating
+relation formulas</span>
+                                       </a> 
+                                       <ul>
+                                          <li class="toclevel-3">
+                                             <a href="#Generation" shape="rect">
+                                                <span class="tocnumber">2.4.1</span> 
+                                                <span class="toctext">Generation</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Usage" shape="rect">
+                                                <span class="tocnumber">2.4.2</span> 
+                                                <span class="toctext">Usage</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Agent_Association" shape="rect">
+                                                <span class="tocnumber">2.4.3</span> 
+                                                <span class="toctext">Agent
+Association</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Starting" shape="rect">
+                                                <span class="tocnumber">2.4.4</span> 
+                                                <span class="toctext">Starting</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Ending" shape="rect">
+                                                <span class="tocnumber">2.4.5</span> 
+                                                <span class="toctext">Ending</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Responsibility" shape="rect">
+                                                <span class="tocnumber">2.4.6</span> 
+                                                <span class="toctext">Responsibility</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Derivation" shape="rect">
+                                                <span class="tocnumber">2.4.7</span> 
+                                                <span class="toctext">Derivation</span>
+                                             </a> 
+                                             <ul>
+                                                <li class="toclevel-4">
+                                                   <a href="#precise-1" shape="rect">
+                                                      <span class="tocnumber">2.4.7.1</span> 
+                                                      <span class="toctext">precise-1</span>
+                                                   </a>
+                                                </li>
+                                                <li class="toclevel-4">
+                                                   <a href="#imprecise-1" shape="rect">
+                                                      <span class="tocnumber">2.4.7.2</span> 
+                                                      <span class="toctext">imprecise-1</span>
+                                                   </a>
+                                                </li>
+                                                <li class="toclevel-4">
+                                                   <a href="#imprecise-n" shape="rect">
+                                                      <span class="tocnumber">2.4.7.3</span> 
+                                                      <span class="toctext">imprecise-n</span>
+                                                   </a>
+                                                </li>
+                                                <li class="toclevel-4">
+                                                   <a href="#not_in_DM:_consolidated_derivation_signature" shape="rect">
+                                                      <span class="tocnumber">2.4.7.4</span> 
+                                                      <span class="toctext">not in DM:
+consolidated derivation signature</span>
+                                                   </a>
+                                                </li>
+                                             </ul>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#AlternateOf" shape="rect">
+                                                <span class="tocnumber">2.4.8</span> 
+                                                <span class="toctext">AlternateOf</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#SpecializationOf" shape="rect">
+                                                <span class="tocnumber">2.4.9</span> 
+                                                <span class="toctext">SpecializationOf</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Annotation" shape="rect">
+                                                <span class="tocnumber">2.4.10</span> 
+                                                <span class="toctext">Annotation</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Bundle" shape="rect">
+                                          <span class="tocnumber">2.5</span> 
+                                          <span class="toctext">Bundle</span>
+                                       </a> 
+                                       <ul>
+                                          <li class="toclevel-3">
+                                             <a href="#Account" shape="rect">
+                                                <span class="tocnumber">2.5.1</span> 
+                                                <span class="toctext">Account</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Record_Container" shape="rect">
+                                                <span class="tocnumber">2.5.2</span> 
+                                                <span class="toctext">Record
+Container</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Further_terms_in_records" shape="rect">
+                                          <span class="tocnumber">2.6</span> 
+                                          <span class="toctext">Further terms in
+records</span>
+                                       </a> 
+                                       <ul>
+                                          <li class="toclevel-3">
+                                             <a href="#Attribute" shape="rect">
+                                                <span class="tocnumber">2.6.1</span> 
+                                                <span class="toctext">Attribute</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Identifier" shape="rect">
+                                                <span class="tocnumber">2.6.2</span> 
+                                                <span class="toctext">Identifier</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Literal" shape="rect">
+                                                <span class="tocnumber">2.6.3</span> 
+                                                <span class="toctext">Literal</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Time" shape="rect">
+                                                <span class="tocnumber">2.6.4</span> 
+                                                <span class="toctext">Time</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Asserter" shape="rect">
+                                                <span class="tocnumber">2.6.5</span> 
+                                                <span class="toctext">Asserter</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Namespace_declaration" shape="rect">
+                                                <span class="tocnumber">2.6.6</span> 
+                                                <span class="toctext">Namespace
+declaration</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Location" shape="rect">
+                                                <span class="tocnumber">2.6.7</span> 
+                                                <span class="toctext">Location</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Common_Relations" shape="rect">
+                                          <span class="tocnumber">2.7</span> 
+                                          <span class="toctext">Common
+Relations</span>
+                                       </a> 
+                                       <ul>
+                                          <li class="toclevel-3">
+                                             <a href="#Traceability" shape="rect">
+                                                <span class="tocnumber">2.7.1</span> 
+                                                <span class="toctext">Traceability</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Activity_Ordering" shape="rect">
+                                                <span class="tocnumber">2.7.2</span> 
+                                                <span class="toctext">Activity
+Ordering</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Started_by_activity" shape="rect">
+                                                <span class="tocnumber">2.7.3</span> 
+                                                <span class="toctext">Started by
+activity</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Revision" shape="rect">
+                                                <span class="tocnumber">2.7.4</span> 
+                                                <span class="toctext">Revision</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Attribution" shape="rect">
+                                                <span class="tocnumber">2.7.5</span> 
+                                                <span class="toctext">Attribution</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Quotation" shape="rect">
+                                                <span class="tocnumber">2.7.6</span> 
+                                                <span class="toctext">Quotation</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Summary" shape="rect">
+                                                <span class="tocnumber">2.7.7</span> 
+                                                <span class="toctext">Summary</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Original_Source" shape="rect">
+                                                <span class="tocnumber">2.7.8</span> 
+                                                <span class="toctext">Original
+Source</span>
+                                             </a>
+                                          </li>
+                                          <li class="toclevel-3">
+                                             <a href="#Collections" shape="rect">
+                                                <span class="tocnumber">2.7.9</span> 
+                                                <span class="toctext">Collections</span>
+                                             </a> 
+                                             <ul>
+                                                <li class="toclevel-4">
+                                                   <a href="#Collection_insertion" shape="rect">
+                                                      <span class="tocnumber">2.7.9.1</span> 
+                                                      <span class="toctext">Collection
+insertion</span>
+                                                   </a>
+                                                </li>
+                                                <li class="toclevel-4">
+                                                   <a href="#Collection_removal" shape="rect">
+                                                      <span class="tocnumber">2.7.9.2</span> 
+                                                      <span class="toctext">Collection
+removal</span>
+                                                   </a>
+                                                </li>
+                                                <li class="toclevel-4">
+                                                   <a href="#Collection_literals" shape="rect">
+                                                      <span class="tocnumber">2.7.9.3</span> 
+                                                      <span class="toctext">Collection
+literals</span>
+                                                   </a>
+                                                </li>
+                                             </ul>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Characteristics_of_Object_Properties" shape="rect">
+                                          <span class="tocnumber">2.8</span> 
+                                          <span class="toctext">Characteristics
+of Object Properties</span>
+                                       </a>
+                                    </li>
+                                    <li class="toclevel-2">
+                                       <a href="#Questions.2Fproblems" shape="rect">
+                                          <span class="tocnumber">2.9</span> 
+                                          <span class="toctext">Questions/problems</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="toclevel-1">
+                                 <a href="#From_PROV-O_to_PROV-DM" shape="rect">
+                                    <span class="tocnumber">3</span> 
+                                    <span class="toctext">From PROV-O to
+PROV-DM</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </table>
+                  <script type="text/javascript" xml:space="preserve">
+//
+ if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//
+</script>
+                  <a name="Introduction" id="Introduction" shape="rect"/>
+                  <h1>
+                     <span class="mw-headline">Introduction</span>
+                  </h1>
+                  <p>This document gives a draft translation from PROV-DM to PROV-O,
+and sketches how to go in the reverse direction (i.e. how to
+extract PROV-DM from a RDF graph that includes PROV-O data as well
+as possibly other RDF).</p>
+                  <p>
+                     <b>Guideline:</b> We include all RDF assertions associated with
+a DM assertion, even if some of them wind up being
+redundant/inferrable.</p>
+                  <p>
+                     <b>Guideline:</b> Optional arguments (including attribute lists)
+are in square brackets; if the argument is missing, we generally
+omit the corresponding RDF edges. (In some cases, not currently
+documented, an optional argument to a record corresponds to an
+unknown value that should be generated as a blank node; this
+remains under discussion.)</p>
+                  <a name="From_PROV-DM_to_PROV-O" id="From_PROV-DM_to_PROV-O" shape="rect"/>
+                  <h1>
+                     <span class="mw-headline">From PROV-DM to PROV-O</span>
+                  </h1>
+                  <p>We define a translation from PROV-DM formulas to RDF conforming
+to PROV-O as follows.</p>
+                  <a name="Mapping_coverage" id="Mapping_coverage" shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Mapping coverage</span>
+                  </h2>
+                  <p>The undersigned have reviewed DM WD3 and agree that all ASN
+signatures in WD3 appear as left hand sides of the rules shown on
+this page. Further, the rules here are in the same order as DM WD3
+and no rules appear here without appearing in DM WD3.</p>
+                  <p>
+                     <br clear="none"/>
+                  </p>
+                  <ul>
+                     <li>Daniel Garijo (10-Feb-2012)</li>
+                     <li>Tim Lebo (collections still missing) (13-Feb-2012)</li>
+                     <li>James Cheney (basic stuff is here, collections/accounts is not)
+(16-Feb-2012)</li>
+                  </ul>
+                  <p>The constructs are listed in an order that corresponds to the
+order given in <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/" class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/"
+                        rel="nofollow"
+                        shape="rect">PROV-DM WD3</a>.</p>
+                  <a name="Mapping_goals" id="Mapping_goals" shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Mapping goals</span>
+                  </h2>
+                  <p>1: Maintain Entities and Activities principal subjects.</p>
+                  <p>Subjects of triples are more principal than objects of triples.
+Because Entities and Activities are the two principal topics of
+PROV-DM, the RDF mapping should prefer that Entities and Activities
+be subjects of as many triples as possible. In the case when the
+object instance is ALSO an Entity or Activity, the directionality
+of the triple should point to the Element that "existed earlier".
+For example, :activity prov:used :entity is preferred
+over :entity prov:usedBy :activity because the entity
+existed before it was used by the activity.</p>
+                  <p>2: Avoid proliferating owl:inverseOf.</p>
+                  <p>Although every property could have an inverse, we choose one
+preferred direction to keep the model small and understandable.
+Providing all inverses could be done in a supplemental profile. One
+exception to this rule is prov:wasGeneratedBy's inverse:
+prov:generated, which is included because of goal 1. When an
+asserter is describing an Activity (a principal Element), they
+should be able to describe it as a subject. prov:generated is
+needed to do this.</p>
+                  <p>3. Include _all_ resulting triples, including those resulting
+from inferences.</p>
+                  <a name="Partial_mappings" id="Partial_mappings" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Partial mappings</span>
+                  </h3>
+                  <p>The right hand side of the rules shown on this page are
+intentionally verbose. They are included to see the full
+ramifications of a DM ASN expression.</p>
+                  <p>Note that if an argument is not provided in the ASN, the
+corresponding triples that require that value are NOT produced.
+This means that simple ASN assertions produce simple PROV-O
+assertions.</p>
+                  <p>For instance:</p>
+                  <p>
+                     <br clear="none"/>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasGeneratedBy(e,a) &amp;\to&amp;  \left\{ \begin{array}{lcl}   a &amp; \texttt{a} &amp; \texttt{prov:Activity}\ . \\  e &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  e &amp; \texttt{prov:wasGeneratedBy} &amp; a\ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/c/6/3/c63732031595face7c2bd1af2dd42a53.png"/>
+                  </p>
+                  <a name="Translating_element_records" id="Translating_element_records"
+                     shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Translating element
+records</span>
+                  </h2>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-element"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-element"
+                        rel="nofollow"
+                        shape="rect">PROV-DM Element</a>
+                  </p>
+                  <a name="Entity" id="Entity" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Entity</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#dfn-entity"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#dfn-entity"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (<a href="http://example.org/entity" class="external text"
+                        title="http://example.org/entity"
+                        rel="nofollow"
+                        shape="rect">eg</a>) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#entity"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#entity"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (<a href="http://example.org/entity" class="external text"
+                        title="http://example.org/entity"
+                        rel="nofollow"
+                        shape="rect">eg</a>)</p>
+                  <p>
+                     <br clear="none"/>
+                  </p>
+                  <table class="wikitable" cellpadding="10" style="background: #E8E8E8">
+                     <tr>
+                        <th rowspan="1" colspan="1">PROV-N</th>
+                        <th rowspan="1" colspan="1">sd:name</th>
+                        <th rowspan="1" colspan="1">Subject</th>
+                        <th rowspan="1" colspan="1">Predicate</th>
+                        <th rowspan="1" colspan="1">Object</th>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">entity(id,[attr_1=val_1,...,attr_n=val_n])</td>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"> :id</td>
+                        <td style="background: white" rowspan="1" colspan="1">a</td>
+                        <td style="background: PapayaWhip" rowspan="1" colspan="1">prov:Entity</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"> :id</td>
+                        <td rowspan="1" colspan="1">attr_1</td>
+                        <td rowspan="1" colspan="1">val_1</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1">...</td>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1"> :id</td>
+                        <td rowspan="1" colspan="1">attr_n</td>
+                        <td rowspan="1" colspan="1">val_n</td>
+                     </tr>
+                  </table>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} entity(id,[attr_1=val_1,...,attr_n=val_n]) &amp;\to &amp; \left\{ \begin{array}{lcl} id &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\ id &amp; attr_1 &amp; val_1 \ .\\  \vdots\\ id &amp; attr_n &amp; val_n \ . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/b/3/b/b3b4c218b438131abf8cdf480aee5991.png"/>
+                  </p>
+                  <p>Uses before defined: prov:type</p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>Are Account, Note, Plan and Location subclasses of Entity?
+(Stian) 
+<ul>
+                           <li>Yes to Account, Plan, and Location. Note is the fourth
+(disjoint?) sibling of Element (Tim)</li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <a name="Activity" id="Activity" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Activity</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Activity"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Activity"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (<a href="http://example.org/entity" class="external text"
+                        title="http://example.org/entity"
+                        rel="nofollow"
+                        shape="rect">eg</a>) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#activity"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#activity"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (<a href="http://example.org/entity" class="external text"
+                        title="http://example.org/entity"
+                        rel="nofollow"
+                        shape="rect">eg</a>)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  activity(id,[st],[et],[attr_1=val_1,...,attr_n=val_n]) &amp;\to &amp; \left\{ \begin{array}{lcl}   id &amp; \texttt{a} &amp; \texttt{prov:Activity}\ . \\  id &amp; \texttt{prov:startedAt} &amp; st\ . \\  id &amp; \texttt{prov:endedAt} &amp; et\ .\\  st &amp; \texttt{a} &amp; \texttt{prov:Instant}\ . \\  st &amp; \texttt{a} &amp; \texttt{prov:Time}\ . \\  et &amp; \texttt{a} &amp; \texttt{prov:Instant}\ . \\  et &amp; \texttt{a} &amp; \texttt{prov:Time}\ . \\  id &amp; attr_1 &amp; val_1 \ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n \ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/4/5/9/459e222d1e0d7de8989e7e7d2782db45.png"/>
+                  </p>
+                  <p>Uses before defined: prov:type</p>
+                  <p>Issues (LHS):</p>
+                  <ul>
+                     <li>How is startedAt and endedAt distinct from other
+attribute-value associated with Activity? (Satya)</li>
+                  </ul>
+                  <a name="Agent" id="Agent" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Agent</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Agent"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Agent"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#agent"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#agent"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  agent(id, [attr_1=val_1,...,attr_n=val_n]) &amp;\to &amp; \left\{ \begin{array}{lcl}   id &amp; \texttt{a} &amp; \texttt{prov:Agent}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  id &amp; attr_1 &amp; val_1\ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n\ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/e/e/c/eecd229c7fab73fd530d8e96b3408ce6.png"/>
+                  </p>
+                  <p>
+                     <br clear="none"/>
+                  </p>
+                  <a name="Person" id="Person" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">Person</span>
+                  </h4>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  agent(id, prov:type=prov:Person, [attr_1=val_1,...,attr_n=val_n]) &amp;\to &amp; \left\{ \begin{array}{lcl}   id &amp; \texttt{a} &amp; \texttt{prov:Person}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Agent}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  id &amp; attr_1 &amp; val_1\ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n\ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/b/2/4/b2487f5b9080b401372741e08b399cfe.png"/>
+                  </p>
+                  <p>Uses before defined:</p>
+                  <ul>
+                     <li>prov:type</li>
+                  </ul>
+                  <a name="Organization" id="Organization" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">Organization</span>
+                  </h4>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  agent(id, prov:type=prov:Organization , [attr_1=val_1,...,attr_n=val_n]) &amp;\to &amp; \left\{ \begin{array}{lcl}   id &amp; \texttt{a} &amp; \texttt{prov:Organization}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Agent}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  id &amp; attr_1 &amp; val_1\ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n\ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/2/9/1/291f2c5a0cc41628c75822a7c95570a6.png"/>
+                  </p>
+                  <p>Uses before defined:</p>
+                  <ul>
+                     <li>prov:type</li>
+                  </ul>
+                  <a name="SoftwareAgent" id="SoftwareAgent" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">SoftwareAgent</span>
+                  </h4>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  agent(id, prov:type=prov:SoftwareAgent , [attr_1=val_1,...,attr_n=val_n]) &amp;\to &amp; \left\{ \begin{array}{lcl}   id &amp; \texttt{a} &amp; \texttt{prov:SoftwareAgent}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Agent}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  id &amp; attr_1 &amp; val_1\ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n\ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/d/3/9/d39400e7a39f6e5b4c96ac29e48df38c.png"/>
+                  </p>
+                  <p>Uses before defined:</p>
+                  <ul>
+                     <li>prov:type</li>
+                  </ul>
+                  <a name="Note" id="Note" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Note</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-note"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-note"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="/2011/prov/wiki/index.php?title=TODO&amp;action=edit&amp;redlink=1" class="new"
+                        title="TODO (page does not exist)"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} note(id,[attr_1=val_1,...,attr_n=val_n]) &amp;\to &amp; \left\{ \begin{array}{lcl}   id &amp; \texttt{a} &amp; \texttt{Note}\ .\\  id &amp; attr_1 &amp; val_1\ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n\ .\\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/8/0/f/80f64f4c1d9fda16d72c2bb15921391c.png"/>
+                  </p>
+                  <p>Concerns:</p>
+                  <ul>
+                     <li>Use of notes is reasonable for things like "GUI Color",</li>
+                     <li>but NOT for the much heavier-duty use that DM offers
+(meta-provenance).</li>
+                  </ul>
+                  <p>Uses before defined: hasAnnotation</p>
+                  <a name="Translating_relation_formulas" id="Translating_relation_formulas"
+                     shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Translating relation
+formulas</span>
+                  </h2>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-relation"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-relation"
+                        rel="nofollow"
+                        shape="rect">PROV-DM Relation</a>
+                  </p>
+                  <a name="Generation" id="Generation" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Generation</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Generation"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Generation"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#generation"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#generation"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasGeneratedBy([id],e,[a],[t],[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   a &amp; \texttt{a} &amp; \texttt{prov:Activity}\ . \\  e &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  e &amp; \texttt{prov:wasGeneratedBy} &amp; a\ .\\  e &amp; \texttt{prov:involved} &amp; a\ .\\  e &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Generation}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:ActivityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:activity} &amp; a\ .\\  id &amp; \texttt{prov:hadTemporalExtent} &amp; t\ . \\  id &amp; attr_1 &amp; val_1\ .\\  \vdots\\  id &amp; attr_n &amp; val_n\ .\\  t &amp; \texttt{a} &amp; \texttt{prov:Instant}\ . \\  t &amp; \texttt{a} &amp; \texttt{prov:Time}\ .  \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/4/a/0/4a0a2f0b5e8762f9cb3140c688f45840.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>An entity can only be generated once (Tim's claim, does DM say
+anything about it?):</li>
+                  </ul>
+                  <pre xml:space="preserve">
+prov:Entity owl:subClassOf [ owl:onProperty prov:wasGeneratedAt; owl:maxCardinality 1 ] .
+prov:wasGeneratedby owl:inverseOf prov:generated .
+prov:wasGeneratedBy rdfs:subPropertyOf prov:involved .
+prov:involved a owl:SymmetricProperty .
+</pre>
+
+                  <ul>
+                     <li>For PROV-O, the activity id cannot be optional. (Satya)</li>
+                     <li>Having activity id as optional violates the DM requirement that
+all relations "have two primary elements" (Section 5.3, DM TPWD).
+(Satya)</li>
+                     <li>Why is time [t] listed as a distinct attribute from other
+attribute-value pairs? Isn't time of generation yet another
+attribute? (Satya)</li>
+                  </ul>
+                  <a name="Usage" id="Usage" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Usage</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Usage"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Usage"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#usage"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#usage"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <br clear="none"/>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  used([id],a,e,[t],[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   a &amp; \texttt{prov:used} &amp; e\ .\\  a &amp; \texttt{prov:involved} &amp; e\ .\\  a &amp; \texttt{a} &amp; \texttt{prov:Activity}\ . \\  e &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  a &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; a &amp; \texttt{prov:Usage}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; e\ .\\  id &amp; \texttt{prov:hadTemporalExtent} &amp; t\ .\\  id &amp; attr_1 &amp; val_1\ .\\  \vdots\\  id &amp; attr_n &amp; val_n\ . \\  t &amp; \texttt{a} &amp; \texttt{prov:Instant}\ . \\  t &amp; \texttt{a} &amp; \texttt{prov:Time}\ .  \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/8/a/7/8a7b5348ed07995c22ff57c2e017e64b.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>If activity id is optional for generation record, why is it not
+so for usage record? These two points need to be reconciled either
+way. (Satya)</li>
+                     <li>Similar to generation, time can be "folded" into the
+"attribute" list. (Satya)</li>
+                  </ul>
+                  <p>Notes:</p>
+                  <ul>
+                     <li>a "hadActivity" from the Involvement to the Activity is
+intentionally omitted. It's purpose is performed by its inverse
+"hadQualifiedUsage", which points from an Activity to an
+Involvement. This is done to maintain the design goal of "Entities
+and Activities are principle instances" and that the subjects of
+triples are more principal than objects of triples. -Tim</li>
+                  </ul>
+                  <a name="Agent_Association" id="Agent_Association" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Agent Association</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-ActivityAssociation"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-ActivityAssociation"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#wasAssociatedWith"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html#wasAssociatedWith"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <br clear="none"/>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasAssociatedWith([id],act,ag,[p],[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   act &amp; \texttt{prov:wasAssociatedWith} &amp; ag\ .\\  act &amp; \texttt{prov:involved} &amp; ag\ .\\  act &amp; \texttt{a} &amp; \texttt{prov:Activity}\ . \\  ag &amp; \texttt{a} &amp; \texttt{prov:Agent}\ . \\  ag &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  act &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Association}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; ag\ .\\  id &amp; \texttt{prov:adoptedPlan} &amp; p\ .\\  id &amp; attr_1 &amp; val_1\ .\\  \vdots\\  id &amp; attr_n &amp; val_n\ .\\  p &amp; \texttt{a} &amp; \texttt{prov:Plan}\ . \\  p &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .  \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/7/3/c/73cc8d95cf678305a367dacfb327a4b5.png"/>
+                  </p>
+                  <pre xml:space="preserve">
+prov:Plan rdfs:subClassOf prov:Entity .
+# Furthermore, since plans may evolve over time, it may become 
+# necessary to track their provenance, and hence, plans are entities. WD3
+</pre>
+
+                  <p>
+                     <br clear="none"/>
+Notes:</p>
+                  <p>Uses before defined: prov:type, prov:role</p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>All the descriptions associated with Plan in DM TPWD is in
+context of Activity, then why should be associated with Activity
+and Agent (also raised as Issue-203 by Stephan). (Satya)</li>
+                     <li>why is activity pointing to agent, and not other way around? 
+<ul>
+                           <li>We should follow similar patterns that we have elsewhere in
+core. (Tim)</li>
+                           <li>wasAssociatedWith should follow the same direction as used:
+from the Activity to the Entity. (Tim)</li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <p>Notes:</p>
+                  <ul>
+                     <li>"hadActivity" is excluded; its purpose is fulfilled by
+prov:hadQualifiedAssociation (the preferred inverse)</li>
+                  </ul>
+                  <a name="Starting" id="Starting" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Starting</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Start-End"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Start-End"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O] (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  wasStartedBy([id],a,ag,[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}  a &amp; \texttt{prov:wasStartedBy} &amp; ag.\\  ag &amp; \texttt{a} &amp; \texttt{prov:Agent} . \\  ag &amp; \texttt{a} &amp; \texttt{prov:Entity} . \\  a &amp; \texttt{a} &amp; \texttt{prov:Activity} . \\  a &amp; \texttt{prov:wasAssociatedWith} &amp; ag.\\  a &amp; \texttt{prov:involved} &amp; ag.\\  a &amp; \texttt{prov:qualified} &amp; id.\\  id &amp; \texttt{a} &amp; \texttt{prov:Start}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Association}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:AgentInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; ag.\\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/f/d/5/fd56c40ab52f0c9133725bf7a22d56ac.png"/>
+                  </p>
+                  <p>
+                     <br clear="none"/>
+                  </p>
+                  <pre xml:space="preserve">
+prov:wasStartedBy rdfs:subPropertyOf prov:wasAssociatedWith .
+# Both relations are specialized forms of wasAssociatedWith -WD3
+</pre>
+
+                  <p>
+                     <b>We seemed to agree at F2F2 that 1) who started and 2) when it
+was started would be separated</b>
+                  </p>
+                  <p>
+                     <b>Note: we agreed to left this relationship out of the first
+alignement</b>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>The majority of uses for the qualified start should actually be
+Activities (Tim)</li>
+                     <li>There is a second signature for this at <a href="#Started_by_activity" title="" shape="rect">#Started_by_activity</a>
+                     </li>
+                  </ul>
+                  <a name="Ending" id="Ending" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Ending</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Start-End"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Start-End"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> 
+                     <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O]</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl}  wasEndedBy([id],a,ag,[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   a &amp; \texttt{prov:wasEndedBy} &amp; ag.\\  ag &amp; \texttt{a} &amp; \texttt{prov:Agent} .\\  ag &amp; \texttt{a} &amp; \texttt{prov:Entity} .\\  a &amp; \texttt{a} &amp; \texttt{prov:Activity} . \\  a &amp; \texttt{prov:wasAssociatedWith} &amp; ag.\\  a &amp; \texttt{prov:used} &amp; ag.\\  a &amp; \texttt{prov:qualified} &amp; id.\\  id &amp; \texttt{a} &amp; \texttt{prov:End}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Association}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:AgentInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; ag.\\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/0/7/d/07d8e0db6812a87fe953ee4b73423301.png"/>
+                  </p>
+                  <p>
+                     <br clear="none"/>
+                  </p>
+                  <pre xml:space="preserve">
+prov:wasEndedBy rdfs:subPropertyOf prov:wasAssociatedWith .
+# Both relations are specialized forms of wasAssociatedWith -WD3
+</pre>
+
+                  <p>
+                     <b>We seemed to agree at F2F2 that 1) who started and 2) when it
+was started would be separated</b>
+                  </p>
+                  <p>
+                     <b>Note: we agreed to left this relationship out of the first
+alignement</b>
+                  </p>
+                  <a name="Responsibility" id="Responsibility" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Responsibility</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-responsibility"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-responsibility"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> 
+                     <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#actedOnBehalfOf"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#actedOnBehalfOf"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a>
+                  </p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} actedOnBehalfOf([id],ag2,ag1,[a],[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   ag2 &amp; \texttt{prov:actedOnBehalfOf} &amp; ag1 . \\  ag2 &amp; \texttt{a} &amp; \texttt{prov:Agent} . \\  ag2 &amp; \texttt{a} &amp; \texttt{prov:Entity} . \\  ag1 &amp; \texttt{a} &amp; \texttt{prov:Agent} . \\  ag1 &amp; \texttt{a} &amp; \texttt{prov:Entity} . \\  ag2 &amp; \texttt{prov:involved} &amp; ag1 . \\  ag2 &amp; \texttt{prov:qualified} &amp; id .\\  id &amp; \texttt{a} &amp; \texttt{prov:Responsibility} . \\  id &amp; \texttt{a} &amp; \texttt{prov:AgentInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; ag1 . \\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n .\\  a &amp; \texttt{a} &amp; \texttt{prov:Activity} . \\  id &amp; \texttt{prov:activity} &amp; a . \\  id &amp; \texttt{a} &amp; \texttt{prov:ActivityInvolvement}\ .  \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/6/2/7/627219d447dea13e8b5cbea7099a4df5.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>DM uses "subordinate" and "responsible" as additional
+qualifications for the two agents, but it is not reflected in the
+ASN. (Satya) TODO: Tim add refernces to them within Delegation
+instance.</li>
+                  </ul>
+                  <a name="Derivation" id="Derivation" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Derivation</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#Derivation-Relation"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#Derivation-Relation"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#wasderivedfrom"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#wasderivedfrom"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <a name="precise-1" id="precise-1" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">precise-1</span>
+                  </h4>
+                  <ul>
+                     <li>(Incompletely) mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasDerivedFrom([id], e2, e1, a, g2, u1, [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:wasDerivedFrom} &amp; e1\ .\\  e2 &amp; \texttt{prov:tracedTo} &amp; e1\ .\\  TBD.\\ \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/f/8/5/f852de2e05664a69f514fa0172bb4f54.png"/>
+                     <br clear="none"/>
+Issues:</p>
+                  <ul>
+                     <li>Why should usage and generation "events" be associated with a
+derivation relation? (Satya)</li>
+                     <li>If derivation is representing the relation between two
+entities, why should the intermediate activity(s) associated with
+the two entities be part of the derivation relation? (Satya)</li>
+                     <li>Should we use id prov:steps prov:single or subclasses of
+prov:Derivation? (Stian - prefers subclasses)</li>
+                  </ul>
+                  <a name="imprecise-1" id="imprecise-1" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">imprecise-1</span>
+                  </h4>
+                  <ul>
+                     <li>(Incompletely) mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasDerivedFrom([id], e2,e1, [t], attrs) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:wasDerivedFrom} &amp; e1\ .\\  e2 &amp; \texttt{prov:tracedTo} &amp; e1\ .\\  a &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; attr_1 &amp; val_1\ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n\ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/7/e/c/7ec4b6457486a4ca87e33f11f7d97548.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>Should we use id prov:steps prov:single or subclassing of
+prov:Derivation? (Stian - prefers subclasses)</li>
+                  </ul>
+                  <a name="imprecise-n" id="imprecise-n" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">imprecise-n</span>
+                  </h4>
+                  <ul>
+                     <li>(Incompletely) mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasDerivedFrom([id], e2, e1, [t], [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:wasDerivedFrom} &amp; e1\ .\\  e2 &amp; \texttt{prov:tracedTo} &amp; e1\ .\\ TBD.\\ \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/9/2/7/9274e7c6b70234ec75637137ad38e12a.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>Should we use id prov:steps prov:any or (not) subclassing of
+prov:Derivation? (Stian - prefers subclasses)</li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+                  </p>
+                  <a name="not_in_DM:_consolidated_derivation_signature"
+                     id="not_in_DM:_consolidated_derivation_signature"
+                     shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">not in DM: consolidated derivation
+signature</span>
+                  </h4>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasDerivedFrom([id], e2, e1, [a, [g2], [u1]], [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:wasDerivedFrom} &amp; e1\ .\\  e2 &amp; \texttt{prov:tracedTo} &amp; e1\ .\\  e2 &amp; \texttt{prov:involved} &amp; e1\ .\\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  e1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  a &amp; \texttt{a} &amp; \texttt{prov:Activity}\ . \\  e2 &amp; \texttt{prov:wasGeneratedBy} &amp; a\ . \\  a &amp; \texttt{prov:used} &amp; e1\ . \\  e2 &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Derivation}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; e1\ .\\  id &amp; attr_1 &amp; val_1\ .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n\ . \end{array}\right.  \end{array} "
+                          src="/2011/prov/wiki/images/math/c/7/c/c7c556c3dd8e4609a5cca0eeba95cd06.png"/>
+                  </p>
+                  <p>Note: Daniel used the [a,[g2], [u1]] notation to indicate that
+a, g2, and u1 are optional, but if g2 or u1 are present, then a is
+required as well. (Imprecise and precise derivations are mixed, but
+we could separate them)<br clear="none"/>
+Issues:</p>
+                  <ul>
+                     <li>This should be the only derivation construct supported by
+PROV-O (leaving out all the optional information). (Satya)</li>
+                  </ul>
+                  <pre xml:space="preserve">
+prov:wasDerivedFrom rdfs:subClassOf prov:tracedTo .
+</pre>
+
+                  <a name="AlternateOf" id="AlternateOf" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">AlternateOf</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-alternate-specialization"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-alternate-specialization"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#alternateOf"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#alternateOf"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <ul>
+                     <li>Mapped to OWL (without attributes)</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} alternateOf(alt1,alt2) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e1 &amp; \texttt{prov:alternateOf} &amp; e2 . \\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/7/9/8/798a584a21d4cc9a76227a134d32b995.png"/>
+                  </p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} alternateOf(alt1,alt2,attrs) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e1 &amp; \texttt{prov:alternateOf} &amp; e2 . \\  ag2 &amp; \texttt{prov:qualified} &amp; id .\\  e1 &amp; \texttt{a} &amp; \texttt{prov:Entity} . \\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity} . \\   ?? &amp; \texttt{prov:qualifiedEntity} &amp; e2 . \\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/8/3/4/834c8aad35e44ed327afd238602282a6.png"/>
+                  </p>
+                  <p>
+                     <br clear="none"/>
+                     <b>Note: we agreed to left this relationship out of the first
+alignement</b>
+                  </p>
+                  <p>
+                     <b>It's not clear what <span class="texhtml">
+                           <i>i</i>
+                           <i>d</i>
+                        </span> refers to; we should either
+add an optional id parameter (and an "Alternate" class for the
+relationship) or leave out both the id and attributes
+---James</b>
+                  </p>
+                  <a name="SpecializationOf" id="SpecializationOf" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">SpecializationOf</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-alternate-specialization"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-alternate-specialization"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#specializationOf"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#specializationOf"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <ul>
+                     <li>Mapped to OWL (without attributes)</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} specializationOf(sub,super,[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e1 &amp; \texttt{prov:specializationOf} &amp; e2 . \\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/1/7/9/1791ed26564d2a1fa9391ec24aa62c9c.png"/>
+                  </p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} specializationOf(sub,super,[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e1 &amp; \texttt{prov:specializationOf} &amp; e2 . \\  ag2 &amp; \texttt{prov:qualified} &amp; id .\\  e1 &amp; \texttt{a} &amp; \texttt{prov:Entity} . \\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity} . \\   ?? &amp; \texttt{prov:qualifiedEntity} &amp; e2 . \\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/d/9/1/d911d2ca4af4dafda01a02e43a45149b.png"/>
+                  </p>
+                  <p>
+                     <b>Note: we agreed to left this relationship out of the first
+alignement</b>
+                  </p>
+                  <p>
+                     <b>It's unclear what id refers to: similar issue to alternateOf.
+---James</b>
+                  </p>
+                  <a name="Annotation" id="Annotation" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Annotation</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-annotation"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-annotation"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O] (eg)</p>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} hasAnnotation(r,n,[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   r &amp; \texttt{prov:hasAnnotation} &amp; n .\\  n &amp; \texttt{a} &amp; \texttt{prov:Note} .\\  id &amp; attr_1 &amp; val_1 . \\  &amp; \vdots \\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/3/3/8/3383d994bfc8016784499c364eb8ae8c.png"/>
+                  </p>
+                  <p>Uses before defining: prov:type</p>
+                  <p>Note: we'll be using rdfs:comment and label to handle the
+annotations</p>
+                  <ul>
+                     <li>(Tim disagrees. rdfs:comment and rdfs:label do not handle DM's
+intent. neither handles attribute-values).</li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+Issues:</p>
+                  <ul>
+                     <li>How is Annotation distinct from Notes? (Satya) 
+<ul>
+                           <li>I believe in DM, hasAnnotation is supposed to link an
+entity/agent/activity to a Note. (If that's the case, I don't
+understand why hasAnnotation has additional attributes though,
+unless it's shorthand for attributes on the Note.) [James]</li>
+                        </ul>
+                     </li>
+                     <li>"r" should be renamed to "id" in DM's signature to align with
+the other formulas. (Tim)</li>
+                     <li>There are too many places to put attribute-values (on the
+entity, on the note, AND on the hasAnnotation) (Tim)</li>
+                     <li>"hasAnnotation" does not suit "note" why not hasNote?
+(Tim)</li>
+                     <li>The id/subject/object machinery, and attached attributes above
+seems heavy - too reification-y IMHO. I'd vote for removing the
+attributes from hasAnnotation and using subclassing of Note instead
+to express different kinds of annotations. [James]</li>
+                  </ul>
+                  <a name="Bundle" id="Bundle" shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Bundle</span>
+                  </h2>
+                  <a name="Account" id="Account" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Account</span>
+                  </h3>
+                  <ul>
+                     <li>(Incompletely) mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Account"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Account"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O] (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} Account(id, [asserter], recs, [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcll}   id &amp; \texttt{a} &amp; \texttt{prov:Bundle}\ &amp; nil.\\  id &amp; \texttt{a} &amp; \texttt{sd:NamedGraph}\ &amp; nil.\\  id &amp; \texttt{sd:name} &amp; name\ &amp; nil.\\  id &amp; \texttt{sd:graph} &amp; graph\ &amp; nil.\\  id &amp; \texttt{prov:specializationOf} &amp; graph\ &amp; nil.\\  id &amp; attr_1 &amp; val_1\ &amp; nil. \\  &amp; \vdots \\  id &amp; attr_n &amp; val_n &amp; nil. \\  name RECs_1 &amp; RECp_1 &amp; RECo_1 \\  name RECs_2 &amp; RECp_2 &amp; RECo_3 \\  graph &amp; attr_1 &amp; val_1\ &amp; nil. \\  &amp; \vdots \\  graph &amp; attr_n &amp; val_n &amp; nil. \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/0/4/3/0433a8cf7d06fc8d2a5ca9fa7b1f308e.png"/>
+                  </p>
+                  <pre xml:space="preserve">
+sd:graph rdfs:subPropertyOf prov:specializationOf .
+</pre>
+
+                  <p>
+                     <b>Note: we agreed to left this relationship out of the first
+alignement</b>
+                  </p>
+                  <p>TODO: need four columns in the RHS</p>
+                  <ul>
+                     <li>attrs can go on either the Named Graph or the Graph - each is
+useful.</li>
+                  </ul>
+                  <p>TODO: outline typical named graph handling - the same graph
+spreads into different named graphs across the world.</p>
+                  <a name="Record_Container" id="Record_Container" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Record Container</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#RecordContainer"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#RecordContainer"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O] (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} container namespaceDeclarations (record) + 'end container' &amp;\to&amp;  \left\{ \begin{array}{lcl}  \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/7/8/9/789d556a70df12e7a129d56867df8de9.png"/>
+                  </p>
+                  <p>
+                     <b>This is being removed from WD4. Note: we agreed to left this
+relationship out of the first alignement</b>
+                  </p>
+                  <a name="Further_terms_in_records" id="Further_terms_in_records" shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Further terms in records</span>
+                  </h2>
+                  <p>
+                     <b>It's not clear to me that we need to spell these out as rules
+in the mapping. But, it is good to explain how attributes,
+literals, identifiers, times, etc. in PROV-DM map to
+PROV-O-compliant RDF. ---[James]</b>
+                  </p>
+                  <a name="Attribute" id="Attribute" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Attribute</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL (except prov:steps)</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-attribute"
+                        class="external free"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-attribute"
+                        rel="nofollow"
+                        shape="rect">http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-attribute</a>
+PROV-DM] (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="/2011/prov/wiki/index.php?title=PROV-O&amp;action=edit&amp;redlink=1" class="new"
+                        title="PROV-O (page does not exist)"
+                        shape="rect">PROV-O</a>
+(eg)</p>
+                  <p>
+                     <b>Note that the following patterns are implicit in the above
+rules for the various constructs that carry ids and attributes
+---[James]</b>
+                  </p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} ...(id, ..., ~\texttt{prov:role}=myrole) &amp;\to&amp;  \left\{ \begin{array}{lcl}   id &amp; \texttt{prov:hadRole} &amp; myrole\ .\\  myrole &amp; \texttt{a} &amp; \texttt{prov:Role}\ .\\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/2/7/e/27e366731a8dbce4e2fb2812e4911e0c.png"/>
+                  </p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} ...(id, ..., \texttt{prov:type}=\texttt{prov:SoftwareAgent}) &amp;\to&amp;  \left\{ \begin{array}{lcl}   id &amp; \texttt{a} &amp; \texttt{prov:SoftwareAgent}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Agent}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/7/2/5/72573987766f8024307712cf2213cad7.png"/>
+                  </p>
+                  <p>
+                     <br clear="none"/>
+                  </p>
+                  <p>
+                     <br clear="none"/>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} ...(id, ..., \texttt{prov:steps}=single) &amp;\to&amp;  \left\{ \begin{array}{lcl}   id &amp; \texttt{prov:steps} &amp; \texttt{prov:single}\ .\\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/9/c/e/9cefcbaf0234f0902c019dcb44a0e785.png"/>
+                  </p>
+                  <pre xml:space="preserve">
+prov:steps rdfs:domain [ owl:onProperty prov:steps; owl:maxCardinality 1 ] .
+prov:steps rdfs:range [ owl:oneOf ( prov:single prov:any ) ] .
+</pre>
+
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} ...(id, ..., \texttt{prov:label}=pretty) &amp;\to&amp;  \left\{ \begin{array}{lcl}   id &amp; \texttt{rdfs:label} &amp; pretty\ .\\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/7/8/9/78903de06f2977fb478289dfc60e49fd.png"/>
+                  </p>
+                  <a name="Identifier" id="Identifier" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Identifier</span>
+                  </h3>
+                  <p>As per PROV-DM, an identifier is a qualified name in the same
+sense as in RDF/SPARQL.</p>
+                  <a name="Literal" id="Literal" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Literal</span>
+                  </h3>
+                  <p>PROV-DM literals include values that can be typed by XML Schema
+basic types, and thus can include URIs (unlike RDF's Literals).
+Thus, some care may need to be taken here when mapping PROV-DM
+literals that are URIs.</p>
+                  <a name="Time" id="Time" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Time</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Time"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Time"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#time"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#time"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <a name="Asserter" id="Asserter" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Asserter</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Asserter"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Asserter"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O] (eg)</p>
+                  <p>
+                     <b>Asserter is being removed from Accounts, so is being omitted
+in the current mapping rules.</b>
+                  </p>
+                  <a name="Namespace_declaration" id="Namespace_declaration" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Namespace declaration</span>
+                  </h3>
+                  <p>A PROV-DM namespace declaration should be translated to an XML
+namespace declaration (for RDF/XML); or other RDF serializations
+the appropriate mechanism should be used.</p>
+                  <a name="Location" id="Location" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Location</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Location"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Location"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#location"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#location"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} ...(id, ..., location=loc) &amp;\to&amp;  \left\{ \begin{array}{lcl}   id &amp; \texttt{prov:hadLocation} &amp; loc\ .\\  loc &amp; \texttt{a} &amp; \texttt{prov:Location}\ . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/8/1/9/81927625b2075ff69dd63123286bc60e.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>We agreed in the meeting that hadLocation domain is to be
+owl:Thing for now (Stian)</li>
+                     <li>DM says "Location is an optional attribute of entity records
+and activity records. "</li>
+                     <li>is prov:hadLocation going to be functional? (Daniel) No. The
+location mentioned could be at any variety of granularies (In this
+room, in that chair). (Tim)</li>
+                  </ul>
+                  <a name="Common_Relations" id="Common_Relations" shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Common Relations</span>
+                  </h2>
+                  <a name="Traceability" id="Traceability" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Traceability</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-traceability"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-traceability"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O] (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} tracedTo([id], e2, e1, [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:tracedTo} &amp; e1\ . \\  e1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  e2 &amp; \texttt{prov:involved} &amp; e1\ . \\  e2 &amp; \texttt{prov:qualified} &amp; id\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Trace}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; e1\ . \\  id &amp; attr_1 &amp; val_1\ .\\  \vdots\\  id &amp; attr_n &amp; val_n\ . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/9/b/f/9bf6c9dce1d94a798b80f198d8966757.png"/>
+                  </p>
+                  <a name="Activity_Ordering" id="Activity_Ordering" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Activity Ordering</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-OrderingOfActivities"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-OrderingOfActivities"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#wascheduledafter"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#wascheduledafter"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasInformedBy([id], a2, a1, [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   a2 &amp; \texttt{prov:wasInformedBy} &amp; a1\ .\\  a2 &amp; \texttt{a} &amp; \texttt{prov:Activity}\ .\\  a1 &amp; \texttt{a} &amp; \texttt{prov:Activity}\ .\\  a2 &amp; \texttt{prov:involved} &amp; a1\ .\\  a2 &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Inform}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:ActivityInvolvement}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\  id &amp; \texttt{prov:activity} &amp; a1\ .\\  id &amp; attr_1 &amp; val_1 .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/3/e/0/3e0cd0cf4d709c175ccad1afd51d3935.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>fragid into PROV-O needs to be renamed</li>
+                  </ul>
+                  <a name="Started_by_activity" id="Started_by_activity" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Started by activity</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-OrderingOfActivities"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-OrderingOfActivities"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="/2011/prov/wiki/index.php?title=PROV-O&amp;action=edit&amp;redlink=1" class="new"
+                        title="PROV-O (page does not exist)"
+                        shape="rect">PROV-O</a>
+(eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasStartedBy([id], a2, a1, [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   a2 &amp; \texttt{prov:wasStartedByActivity} &amp; a1\ .\\  a2 &amp; \texttt{a} &amp; \texttt{prov:Activity}\ .\\  a1 &amp; \texttt{a} &amp; \texttt{prov:Activity}\ .\\  a2 &amp; \texttt{prov:involved} &amp; a1\ .\\  a2 &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:StartByActivity}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:ActivityInvolvement}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\  id &amp; \texttt{prov:activity} &amp; a1\ .\\  id &amp; attr_1 &amp; val_1 .\\  &amp; \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/6/4/5/6452461cfe4a01bda2f00f8dad1d9ff1.png"/>
+                  </p>
+                  <p>
+                     <br clear="none"/>
+Notes:</p>
+                  <ul>
+                     <li>There is also the second form of wasStartedBy(a1, ag1) - <a href="#Starting" title="" shape="rect">#Starting</a> which maps to
+prov:wasStartedByActivity 
+<ul>
+                           <li>we can't have prov:wasStartedBy with domain prov:Element -
+because using that would mean that the started by activity would
+also become a prov:Agent, at least as long as prov:wasStartedBy is
+subproperty of prov:wasAssociatedWith (as currently stated in
+DM)</li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+Issues:</p>
+                  <ul>
+                     <li>DM is missing "id" in the signature. Fixed in <a href="http://dvcs.w3.org/hg/prov/raw-file/default/model/working-copy/towards-wd4.html#term-Start-End"
+                           class="external text"
+                           title="http://dvcs.w3.org/hg/prov/raw-file/default/model/working-copy/towards-wd4.html#term-Start-End"
+                           rel="nofollow"
+                           shape="rect">WD4</a>
+                     </li>
+                     <li>There is already different signature for wasStartedBy at <a href="#Starting" title="" shape="rect">#Starting</a>
+                     </li>
+                  </ul>
+                  <a name="Revision" id="Revision" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Revision</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Revision"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Revision"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+[PROV-O] (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasRevisionOf(e1, e2, [ag], [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:wasRevisionOf} &amp; e1\ .\\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  e1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  e2 &amp; \texttt{prov:wasDerivedFrom} &amp; e1\ .\\  e2 &amp; \texttt{prov:tracedTo} &amp; e1\ .\\  e2 &amp; \texttt{prov:involved} &amp; e1\ .\\  e2 &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Revision}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Derivation}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\  id &amp; \texttt{prov:entity} &amp; e1\ .\\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/f/d/5/fd5b582dfed24e4c6d373efac17b0875.png"/>
+                  </p>
+                  <pre xml:space="preserve">
+prov:wasRevisionOf rdfs:subPropertyOf prov:wasDerivedFrom .
+</pre>
+
+                  <p>Issues:</p>
+                  <ul>
+                     <li>DM is missing "id" in signature and enumeration of
+arguments.</li>
+                  </ul>
+                  <a name="Attribution" id="Attribution" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Attribution</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#recod-attribution"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#recod-attribution"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#attribution"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#attribution"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasAttributedTo(e,ag,[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e &amp; \texttt{prov:wasAttributedTo} &amp; ag\ .\\  e &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  ag &amp; \texttt{a} &amp; \texttt{prov:Agent}\ .\\  ag &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  e &amp; \texttt{prov:tracedTo} &amp; ag\ .\\  e &amp; \texttt{prov:involved} &amp; ag\ .\\  e &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Attribution}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:AgentInvolvement}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\  id &amp; \texttt{prov:entity} &amp; ag\ .\\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/7/9/f/79f6b36d385b4b3f4ba59388055a59c4.png"/>
+                  </p>
+                  <pre xml:space="preserve">
+prov:wasAttributedTo rdfs:subPropertyOf prov:tracedTo .
+</pre>
+
+                  <p>Issues:</p>
+                  <ul>
+                     <li>DM is missing "id" to hang attributes from</li>
+                     <li>naming of "was associated with" and "was attributed to" is
+confusing - could one guess the difference by the name?</li>
+                     <li>Is wasAttributedTo subproperty of tracedTo? Seems like it from
+the DM definition of tracedTo. (Stian)</li>
+                     <li>why is prov:Attribution not subclass of prov:Trace? Is it
+because DM does not enforce the attributes to also apply to the
+tracedTo? (Stian)</li>
+                  </ul>
+                  <a name="Quotation" id="Quotation" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Quotation</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-quotation"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-quotation"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#quotation"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#quotation"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasQuotedFrom(e2,e1,[ag2],[ag1],[attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:wasQuotedFrom} &amp; e1\ .\\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\   e1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\   e2 &amp; \texttt{prov:involved} &amp; e1\ .\\  e2 &amp; \texttt{prov:qualified} &amp; id\ .\\   id &amp; \texttt{a} &amp; \texttt{prov:Quotation}\ .\\   id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ .\\   id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\   id &amp; \texttt{prov:entity} &amp; e1\ .\\   ag1 &amp; \texttt{a} &amp; \texttt{prov:Agent}\ .\\   ag1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\   ag2 &amp; \texttt{a} &amp; \texttt{prov:Agent}\ .\\   ag2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\   id &amp; \texttt{prov:hadQuotedAgent} &amp; ag1\ .\\   id &amp; \texttt{prov:hadQuoterAgent} &amp; ag2\ .\\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/4/5/6/456de257b6c24fc82e7b97acdd021e98.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>DM missing "id"</li>
+                     <li>Do we need a subclass of entity, prov:Quote? (Stian)</li>
+                  </ul>
+                  <a name="Summary" id="Summary" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Summary</span>
+                  </h3>
+                  <ul>
+                     <li>Mapped to OWL</li>
+                  </ul>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-summary"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-summary"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#summary"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#summary"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} wasSummaryOf(e2,e1, [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:wasSummaryOf} &amp; e1\ . \\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  e1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ . \\  e2 &amp; \texttt{prov:involved} &amp; e1\ . \\  e2 &amp; \texttt{prov:qualified} &amp; id\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Summarization}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ . \\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ . \\  id &amp; \texttt{prov:entity} &amp; e1\ . \\  id &amp; attr_1 &amp; val_1\ .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/a/6/0/a60371805b7a3b094f862b8a0339c491.png"/>
+                  </p>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>Do we need the subclass prov:Summary?</li>
+                  </ul>
+                  <a name="Original_Source" id="Original_Source" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Original Source</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-orignal-source"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-orignal-source"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+                     <a href="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#originalsource"
+                        class="external text"
+                        title="http://dvcs.w3.org/hg/prov/raw-file/tip/ontology/ProvenanceFormalModel.html#originalsource"
+                        rel="nofollow"
+                        shape="rect">PROV-O</a> (eg)</p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} hadOriginalSource(e2,e1, [attrs]) &amp;\to&amp;  \left\{ \begin{array}{lcl}   e2 &amp; \texttt{prov:hadOriginalSource} &amp; e1\ .\\  e2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  e1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  e2 &amp; \texttt{prov:wasDerivedFrom} &amp; e1\ .\\  e2 &amp; \texttt{prov:tracedTo} &amp; e1\ .\\  e2 &amp; \texttt{prov:involved} &amp; e1\ .\\  e2 &amp; \texttt{prov:qualified} &amp; id\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Source}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Derivation}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ .\\  id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\  id &amp; \texttt{prov:entity} &amp; e1\ .\\  id &amp; attr_1 &amp; val_1 .\\  \vdots\\  id &amp; attr_n &amp; val_n . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/1/2/0/12096117e32b6a31b1621510ac143298.png"/>
+                  </p>
+                  <a name="Collections" id="Collections" shape="rect"/>
+                  <h3>
+                     <span class="mw-headline">Collections</span>
+                  </h3>
+                  <p>
+                     <a href="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Collection"
+                        class="external text"
+                        title="http://www.w3.org/TR/2012/WD-prov-dm-20120202/#record-Collection"
+                        rel="nofollow"
+                        shape="rect">PROV-DM</a> (eg) <img class="tex" alt="\implies"
+                          src="/2011/prov/wiki/images/math/c/2/1/c217c3ce5d41f7fa38673cc1de1f1385.png"/>
+PROV-O</p>
+                  <p>
+                     <b>Out of the scope of the initial mapping since collections are
+still in flux</b>
+                  </p>
+                  <a name="Collection_insertion" id="Collection_insertion" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">Collection insertion</span>
+                  </h4>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} CollectionAfterInsertion(c2,c1, k1, v1) &amp;\to&amp;  \left\{ \begin{array}{lcl}   c2 &amp; \texttt{prov:wasExpandedFrom} &amp; c1\ .\\  c2 &amp; \texttt{prov:wasExpandedWithKey} &amp; k1\ .\\  c2 &amp; \texttt{prov:wasExpandedWithValue} &amp; v1\ .\\  c1 &amp; \texttt{a} &amp; \texttt{prov:Collection}\ .\\  c1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  c2 &amp; \texttt{a} &amp; \texttt{prov:Collection}\ .\\  c2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  k1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  v1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  c2 &amp; \texttt{prov:wasDerivedFrom} &amp; c1\ .\\  c2 &amp; \texttt{prov:tracedTo} &amp; c1\ .\\  c2 &amp; \texttt{prov:involved} &amp; c1\ .\\  c2 &amp; \texttt{prov:wasDerivedFrom} &amp; k1\ .\\  c2 &amp; \texttt{prov:tracedTo} &amp; k1\ .\\  c2 &amp; \texttt{prov:involved} &amp; k1\ .\\  c2 &amp; \texttt{prov:wasDerivedFrom} &amp; v1\ .\\  c2 &amp; \texttt{prov:tracedTo} &amp; v1\ .\\  c2 &amp; \texttt{prov:involved} &amp; v1\ .\\  c2 &amp; \texttt{prov:qualified} &amp; ?id\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:CollectionExpansion}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:CollectionDerivation}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:Derivation}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\   ?id &amp; \texttt{prov:collection} &amp; c1\ .\\   ?id &amp; \texttt{prov:key} &amp; k1\ .\\   ?id &amp; \texttt{prov:value} &amp; v1\ . \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/7/4/a/74aa2a6a1c1488d2f1469b777117ebcd.png"/>
+                  </p>
+                  <p>Notes:</p>
+                  <ul>
+                     <li>Using "expansion" rather than "insertion" as insertion implies
+mutability, and the style "c2 wasInsertedFrom c1" does not work
+well. <a href="http://www.w3.org/2011/prov/track/issues/135" class="external text"
+                           title="http://www.w3.org/2011/prov/track/issues/135"
+                           rel="nofollow"
+                           shape="rect">ISSUE-135</a> (Stian)</li>
+                     <li>Functional properties: prov:wasExpandedFrom,
+prov:wasExpandedWithKey, prov:wasExpandedWithValue,
+prov:collection, prov:key, prov:value (also - a prov:Collection can
+only have one prov:qualified [prov:CollectionDerivation] - but this
+is not expressable in OWL-RL) (Stian)</li>
+                     <li> ?id indicates an anonymous node (b-node) as no ID was
+assigned in DM. (Thus it is not possible to attach notes to
+collection statements, etc in DM)</li>
+                  </ul>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>DM says "source: an identifier collBefore for the collection
+record representing the collection before the insertion". What does
+_source_ mean? (Stian)</li>
+                     <li>Is c2 derived from just c1, or also from k1 and v1?</li>
+                     <li>Should the key/value be stated directly on c2, only
+on ?id, or both? 
+<ul>
+                           <li>Is the prov:CollectionExpansion node needed? DM does not have
+attributes or ID for this derivation.</li>
+                        </ul>
+                     </li>
+                     <li>Can k1 be optional? (For bags). Presumably for a set, one would
+use k1==v1</li>
+                  </ul>
+                  <a name="Collection_removal" id="Collection_removal" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">Collection removal</span>
+                  </h4>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} CollectionAfterRemoval(c2,c1,k1) &amp;\to&amp;  \left\{ \begin{array}{lcl}   c2 &amp; \texttt{prov:wasReducedFrom} &amp; c1\ .\\  c2 &amp; \texttt{prov:wasReducedWithKey} &amp; k1\ .\\  c1 &amp; \texttt{a} &amp; \texttt{prov:Collection}\ .\\  c1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  c2 &amp; \texttt{a} &amp; \texttt{prov:Collection}\ .\\  c2 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  k1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\  c2 &amp; \texttt{prov:wasDerivedFrom} &amp; c1\ .\\  c2 &amp; \texttt{prov:tracedTo} &amp; c1\ .\\  c2 &amp; \texttt{prov:involved} &amp; c1\ .\\  c2 &amp; \texttt{prov:wasDerivedFrom} &amp; k1\ .\\  c2 &amp; \texttt{prov:tracedTo} &amp; k1\ .\\  c2 &amp; \texttt{prov:involved} &amp; k1\ .\\  c2 &amp; \texttt{prov:qualified} &amp; ?id\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:CollectionReduction}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:CollectionDerivation}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:Derivation}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:EntityInvolvement}\ .\\   ?id &amp; \texttt{a} &amp; \texttt{prov:Involvement}\ .\\   ?id &amp; \texttt{prov:collection} &amp; c1\ .\\   ?id &amp; \texttt{prov:key} &amp; k1\ .\\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/f/b/e/fbee551df3f8a30ec4c4403ca1196637.png"/>
+                  </p>
+                  <p>Notes:</p>
+                  <ul>
+                     <li>Uses terminology "reduced" rather than "removed" to indicate
+that c2 does not have something c1 had and avoid implying
+mutability.</li>
+                  </ul>
+                  <p>
+                     <br clear="none"/>
+Issues:</p>
+                  <ul>
+                     <li>Why can't prov:value/prov:wasReducedWithKey be included?
+(Stian) 
+<ul>
+                           <li>What if ":c1 prov:wasGeneratedBy :something" and I want to
+assert that I removed v1? It is the v1 that is important in my
+assertion, not k1. (Stian)</li>
+                        </ul>
+                     </li>
+                     <li>Is it fair to say c2 is derived from k1, when it does not
+contains k1? (Stian)</li>
+                  </ul>
+                  <a name="Collection_literals" id="Collection_literals" shape="rect"/>
+                  <h4>
+                     <span class="mw-headline">Collection literals</span>
+                  </h4>
+                  <p>Prov-DM is ambiguous about literals in collections. One
+suggestion is that literal values should be mapped using a
+prov:Entity with rdf:value.</p>
+                  <p>
+                     <b>Suggestion:</b>
+                  </p>
+                  <p>
+                     <img class="tex"
+                          alt=" \begin{array}{lcl} CollectionAfterInsertion(c2,c1, \texttt{'my\ key'}, \texttt{122.5}) &amp;\to&amp;  \left\{ \begin{array}{lcl}   c2 &amp; \texttt{prov:wasExpandedFrom} &amp; c1\ .\\  c2 &amp; \texttt{prov:wasExpandedWithKey} &amp; ?k1\ .\\  c2 &amp; \texttt{prov:wasExpandedWithValue} &amp; ?v1\ .\\  \vdots\\   ?k1 &amp; \texttt{a} &amp; \texttt{prov:LiteralEntity}\ .\\   ?k1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\   ?k1 &amp; \texttt{rdf:value} &amp; \texttt{'my\ key'}\ .\\   ?k1 &amp; \texttt{a} &amp; \texttt{prov:LiteralEntity}\ .\\   ?v1 &amp; \texttt{a} &amp; \texttt{prov:Entity}\ .\\   ?v1 &amp; \texttt{rdf:value} &amp; \texttt{122.5}\ .\\ \end{array}\right. \end{array} "
+                          src="/2011/prov/wiki/images/math/b/3/3/b33ab0f405c7a90f9efe57028dfb62f0.png"/>
+                  </p>
+                  <p>Notes:</p>
+                  <ul>
+                     <li>Stian modified DM on Collections to state that key/value are
+entities, rather than literals (all examples used entities)</li>
+                     <li>DM does not provide a way to equal entities and literals</li>
+                     <li>prov:LiteralEntity means that rdf:value contains the 'actual'
+entity, typically a string, number, etc. and can be used also
+outside collections.</li>
+                  </ul>
+                  <p>Issues:</p>
+                  <ul>
+                     <li>Should one instead use <a href="http://www.w3.org/TR/Content-in-RDF10/" class="external text"
+                           title="http://www.w3.org/TR/Content-in-RDF10/"
+                           rel="nofollow"
+                           shape="rect">Content in RDF</a>? That does not support floats,
+etc, but does support binaries.</li>
+                  </ul>
+                  <a name="Characteristics_of_Object_Properties"
+                     id="Characteristics_of_Object_Properties"
+                     shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Characteristics of Object
+Properties</span>
+                  </h2>
+                  <p>The table below summarizes the characteristics of the object
+properties that are defined in the OWL ontology. The question mark
+symbol is used to denote that the characteristic in question is
+under discussion by the WG (this is the case for alternateOf where
+an issue was raised to determine if it is transitive), or because I
+am not sure whether the property in question is supported bye the
+object property. I am also using (Yes) and (No) to denote
+properties that I am not sure of, but for which I am inclined to
+say yes or no. These also need to be discussed with the rest of the
+prov-o team. -- khalid</p>
+                  <table style="border-collapse: separate; border-spacing: 0; border-width: 1px; border-style: solid; border-color: #000; padding: 0">
+                     <tr>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1"/>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+Functional</th>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">Reverse
+functional</th>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+Transitive</th>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+Symmetric</th>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+Asymmetric</th>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+Reflexive</th>
+                        <th style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+Irreflexive</th>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+activity</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+adoptedPlan</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+alternateOf</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+endedAt</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+entity</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+hadQuotedAgent</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+hasQuoterAgent</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasGeneratedBy</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+hadRole</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+hadSpacialExtent</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+hasTemporalExtent</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+hasAnnotation</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+involved</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+actedOnBehalf</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+generated</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+tracedTo</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasAttributedTo</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasDerivedFrom</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+hadOriginalSource</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasQuotedFrom</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasRevisionOf</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasSummaryOf</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+used</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasAssociatedWith</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasEndedBy</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+WasStartedBy</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasGeneratedBy</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasInformedBy</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasStartedByActivity</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">?</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+occuredAt</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+occuredDuring</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+wasSpecializationOf</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(Yes)</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">(No)</td>
+                     </tr>
+                     <tr>
+                        <td style="border-style: solid; border-width: 0 1px 1px 0" rowspan="1" colspan="1">
+startedAt</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">No</td>
+                        <td style="border-style: solid; border-width: 0 1px 0 0" rowspan="1" colspan="1">Yes</td>
+                     </tr>
+                  </table>
+                  <a name="Questions.2Fproblems" id="Questions.2Fproblems" shape="rect"/>
+                  <h2>
+                     <span class="mw-headline">Questions/problems</span>
+                  </h2>
+                  <ul>
+                     <li>The activity record is the only one that mentions additional
+things besides attributes. This seems odd. 
+<ul>
+                           <li>Proposal: wasStartedBy, wasEndedBy and activity records / times
+are all under review in PROV-DM, so hopefully this will be
+addressed.</li>
+                        </ul>
+                     </li>
+                     <li>It isn't obvious whether we should emit a triple saying that
+the plan element of an activity is a <img class="tex" alt="\texttt{prov:Plan}"
+                             src="/2011/prov/wiki/images/math/c/e/d/ced48f95dce4622310851cb5bf5ff86a.png"/>.
+I guess this can be inferred if we omit it? 
+<ul>
+                           <li>[Resolved: we give it explicitly]</li>
+                        </ul>
+                     </li>
+                     <li>In the rule for note, there is no class we can assign to the
+id. (The obvious idea of using rdfs:comment doesn't work because
+there's no separate class for the comments, and the range of
+rdfs:comment is Literal.) Is this a problem? 
+<ul>
+                           <li>Proposed solution: add class prov:Note.</li>
+                           <li>Resolved: PROV-O now has class Note</li>
+                        </ul>
+                     </li>
+                     <li>wasGeneratedBy has a time which can be linked to the generated
+entity by <img class="tex" alt="\texttt{prov:wasGeneratedAt}"
+                             src="/2011/prov/wiki/images/math/e/3/4/e34b8d5e2f55281f5c759d55c9713900.png"/>,
+but I think the time should be linked directly to the id. 
+<ul>
+                           <li>Proposed solution: introduce <img class="tex" alt="\texttt{prov:happenedAt}"
+                                   src="/2011/prov/wiki/images/math/a/b/0/ab024272076d1f8adef1e4762d45b299.png"/>,
+define <img class="tex" alt="\texttt{prov:wasGeneratedAt}"
+                                   src="/2011/prov/wiki/images/math/e/3/4/e34b8d5e2f55281f5c759d55c9713900.png"/>
+as the composition of <img class="tex" alt="\texttt{prov:happenedAt}"
+                                   src="/2011/prov/wiki/images/math/a/b/0/ab024272076d1f8adef1e4762d45b299.png"/>
+and <img class="tex" alt="\texttt{prov:hadQualifiedEntity}"
+                                   src="/2011/prov/wiki/images/math/5/a/6/5a66215563a69c74fb784965ff94efe5.png"/>.</li>
+                           <li>Resolved: handling using hadTemporalExtent for now</li>
+                        </ul>
+                     </li>
+                     <li>used has a time and it's not obvious what this should be linked
+to in RDF and how. There is no relation for linking the used id to
+the time. 
+<ul>
+                           <li>Proposed solution: introduce <img class="tex" alt="\texttt{prov:happenedAt}"
+                                   src="/2011/prov/wiki/images/math/a/b/0/ab024272076d1f8adef1e4762d45b299.png"/>.</li>
+                           <li>Resolved: using hadTemporalExtent for now</li>
+                        </ul>
+                     </li>
+                     <li>wasStartedBy and wasEndedBy are treated as events (and they
+have id's and attributes), but there is no class for them. 
+<ul>
+                           <li>Proposed solution: introduce <img class="tex" alt="\texttt{prov:ActivityStart}"
+                                   src="/2011/prov/wiki/images/math/f/8/d/f8d0ff22f9b2aeb1872b1efd564370d9.png"/>
+and <img class="tex" alt="\texttt{prov:ActivityEnd}"
+                                   src="/2011/prov/wiki/images/math/8/e/b/8ebe4703bad92b2e0b950fbac66dd30f.png"/>
+as subclasses of QualifiedInvolvement.</li>
+                           <li>Resolved: using prov:Start and prov:End</li>
+                        </ul>
+                     </li>
+                     <li>In hasAnnotation, should the attributes be connected to r or to
+n? Given that the note n can have arbitrary attributes, why does
+hasAnnotation have additional attributes? 
+<ul>
+                           <li>Proposal: Suggest that DM consider dropping attributes on
+hasAnnotation and instead recommends subclassing Note to express
+different kinds of notes.</li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <a name="From_PROV-O_to_PROV-DM" id="From_PROV-O_to_PROV-DM" shape="rect"/>
+                  <h1>
+                     <span class="mw-headline">From PROV-O to PROV-DM</span>
+                  </h1>
+                  <p>Given an instance of PROV-O, we want to compute an instance of
+PROV-DM that has the "same meaning".</p>
+                  <p>The basic idea is:</p>
+                  <ol>
+                     <li>For each node in the RDF graph, check whether the node is an
+instance of one of the PROV-O classes Entity, Agent, or Activity. 
+<ol>
+                           <li>For each such node, look for the appropriate edges in the prov:
+namespace needed to fill in the fields of the corresponding PROV-DM
+record.</li>
+                           <li>Any additional fields in other namespaces are added as
+attributes.</li>
+                        </ol>
+                     </li>
+                     <li>For each of the edges / graph patterns corresponding to PRO-DM
+relations, look for the corresponding data and generate the
+appropriate relation.</li>
+                  </ol>
+                  <p>[TODO: Flesh this out!]</p>
+                  <!-- 
+NewPP limit report
+Preprocessor node count: 296/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<!-- Saved in parser cache with key wikidb-provwg_:pcache:idhash:348-0!1!0!!en!2!edit=0 and timestamp 20120229134915 -->
+<div class="printfooter">Retrieved from "<a href="http://www.w3.org/2011/prov/wiki/ProvRDF" shape="rect">http://www.w3.org/2011/prov/wiki/ProvRDF</a>"</div>
+                  <!-- end content -->
+</div>
+            </div>
+         </div>
+         <div id="column-one">
+            <div id="p-cactions" class="portlet">
+               <h5>Views</h5>
+               <div class="pBody">
+                  <ul>
+                     <li id="ca-nstab-main" class="selected">
+                        <a href="/2011/prov/wiki/ProvRDF" title="View the content page [c]" accesskey="c"
+                           shape="rect">Page</a>
+                     </li>
+                     <li id="ca-talk">
+                        <a href="/2011/prov/wiki/Talk:ProvRDF"
+                           title="Discussion about the content page [t]"
+                           accesskey="t"
+                           shape="rect">Discussion</a>
+                     </li>
+                     <li id="ca-viewsource">
+                        <a href="/2011/prov/wiki/index.php?title=ProvRDF&amp;action=edit"
+                           title="This page is protected. You can view its source [e]"
+                           accesskey="e"
+                           shape="rect">View source</a>
+                     </li>
+                     <li id="ca-history">
+                        <a href="/2011/prov/wiki/index.php?title=ProvRDF&amp;action=history"
+                           title="Past revisions of this page [h]"
+                           accesskey="h"
+                           shape="rect">History</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="portlet" id="p-personal">
+               <h5>Personal tools</h5>
+               <div class="pBody">
+                  <ul>
+                     <li id="pt-login">
+                        <a href="/2011/prov/wiki/index.php?title=Special:UserLogin&amp;returnto=ProvRDF"
+                           title="You are encouraged to log in; however, it is not mandatory [o]"
+                           accesskey="o"
+                           shape="rect">Log in</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="portlet" id="p-logo">
+               <a style="background-image: url(/Icons/w3c_home);"
+                  href="/2011/prov/wiki/Main_Page"
+                  title="Visit the main page [z]"
+                  accesskey="z"
+                  shape="rect"/>
+            </div>
+            <script type="text/javascript" xml:space="preserve">
+//
+ if (window.isMSIE55) fixalpha(); 
+//
+</script>
+ 
+            <div class="generated-sidebar portlet" id="p-navigation">
+               <h5>Navigation</h5>
+               <div class="pBody">
+                  <ul>
+                     <li id="n-mainpage-description">
+                        <a href="/2011/prov/wiki/Main_Page" shape="rect">Main page</a>
+                     </li>
+                     <li id="n-Charter">
+                        <a href="http://www.w3.org/2011/01/prov-wg-charter" shape="rect">Charter</a>
+                     </li>
+                     <li id="n-Tracker">
+                        <a href="http://www.w3.org/2011/prov/track" shape="rect">Tracker</a>
+                     </li>
+                     <li id="n-E-Mail-Archive">
+                        <a href="http://lists.w3.org/Archives/Public/public-prov-wg/latest" shape="rect">E-Mail
+Archive</a>
+                     </li>
+                     <li id="n-Public-Comments">
+                        <a href="http://lists.w3.org/Archives/Public/public-prov-comments/" shape="rect">Public
+Comments</a>
+                     </li>
+                     <li id="n-recentchanges">
+                        <a href="/2011/prov/wiki/Special:RecentChanges"
+                           title="The list of recent changes in the wiki [r]"
+                           accesskey="r"
+                           shape="rect">Recent changes</a>
+                     </li>
+                     <li id="n-help">
+                        <a href="/2011/prov/wiki/Help:Contents" title="The place to find out" shape="rect">Help</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div id="p-search" class="portlet">
+               <h5>
+                  <label for="searchInput">Search</label>
+               </h5>
+               <div id="searchBody" class="pBody">
+                  <form action="/2011/prov/wiki/index.php" id="searchform" method="get"
+                        enctype="application/x-www-form-urlencoded">
+                     <div>
+                        <input type="hidden" name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text"
+                               title="Search Provenance WG Wiki [f]"
+                               accesskey="f"
+                               value=""/>
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton" value="Go"
+                               title="Go to a page with this exact name if exists"/>  <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton"
+                               value="Search"
+                               title="Search the pages for this text"/>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="portlet" id="p-tb">
+               <h5>Toolbox</h5>
+               <div class="pBody">
+                  <ul>
+                     <li id="t-whatlinkshere">
+                        <a href="/2011/prov/wiki/Special:WhatLinksHere/ProvRDF"
+                           title="List of all wiki pages that link here [j]"
+                           accesskey="j"
+                           shape="rect">What links here</a>
+                     </li>
+                     <li id="t-recentchangeslinked">
+                        <a href="/2011/prov/wiki/Special:RecentChangesLinked/ProvRDF"
+                           title="Recent changes in pages linked from this page [k]"
+                           accesskey="k"
+                           shape="rect">Related changes</a>
+                     </li>
+                     <li id="t-specialpages">
+                        <a href="/2011/prov/wiki/Special:SpecialPages"
+                           title="List of all special pages [q]"
+                           accesskey="q"
+                           shape="rect">Special
+pages</a>
+                     </li>
+                     <li id="t-print">
+                        <a href="/2011/prov/wiki/index.php?title=ProvRDF&amp;printable=yes" rel="alternate"
+                           title="Printable version of this page [p]"
+                           accesskey="p"
+                           shape="rect">Printable version</a>
+                     </li>
+                     <li id="t-permalink">
+                        <a href="/2011/prov/wiki/index.php?title=ProvRDF&amp;oldid=5990"
+                           title="Permanent link to this revision of the page"
+                           shape="rect">Permanent
+link</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- end of the left (by default at least) column -->
+<div id="footer">
+            <div id="f-poweredbyico">
+               <a href="http://www.mediawiki.org/" shape="rect">
+                  <img src="/2011/prov/wiki/skins/common/images/poweredby_mediawiki_88x31.png"
+                       alt="Powered by MediaWiki"/>
+               </a>
+            </div>
+            <ul id="f-list">
+               <li id="lastmod">This page was last modified on 29 February 2012,
+at 13:31.</li>
+               <li id="viewcount">This page has been accessed 2,799 times.</li>
+               <li id="privacy">
+                  <a href="/2011/prov/wiki/Provenance_WG_Wiki:Privacy_policy"
+                     title="Provenance WG Wiki:Privacy policy"
+                     shape="rect">Privacy policy</a>
+               </li>
+               <li id="about">
+                  <a href="/2011/prov/wiki/Provenance_WG_Wiki:About"
+                     title="Provenance WG Wiki:About"
+                     shape="rect">About Provenance WG Wiki</a>
+               </li>
+               <li id="disclaimer">
+                  <a href="/2011/prov/wiki/Provenance_WG_Wiki:General_disclaimer"
+                     title="Provenance WG Wiki:General disclaimer"
+                     shape="rect">Disclaimers</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <script type="text/javascript" xml:space="preserve">
+//
+if (window.runOnloadHook) runOnloadHook();
+//
+</script>
+      <!-- Served in 0.606 secs. -->
+</body>
+</html>
