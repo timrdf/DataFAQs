@@ -109,7 +109,7 @@ class WikiTableGSPO(sadi.Service):
                         error = Error()
                         error.vann_preferredNamespacePrefix = curie[PREFIX]
                         error.save()
-                        output.rdfs_seeAlso.append(error)
+                        output.dcterms_subject.append(error)
                   #else:
                      #if curie[PREFIX] in self.namespaces:
                      #   print '      reusing prefix.cc cached namespace for ' + curie[PREFIX] + ' : ' + self.namespaces[curie[PREFIX]]
