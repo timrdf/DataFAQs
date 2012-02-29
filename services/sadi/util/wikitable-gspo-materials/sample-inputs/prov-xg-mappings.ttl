@@ -1,3 +1,56 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
 
-<http://www.w3.org/2005/Incubator/prov/wiki/Provenance_Vocabulary_Mappings> a foaf:Document .
+<http://www.w3.org/2005/Incubator/prov/wiki/Provenance_Vocabulary_Mappings> 
+   a foaf:Document;
+   dcterms:hasPart <http://www.w3.org/2005/Incubator/prov/wiki/Provenance_Vocabulary_Mappings#Mappings>;
+.
+
+<http://www.w3.org/2005/Incubator/prov/wiki/Provenance_Vocabulary_Mappings#Mappings> 
+   a dcat:Dataset;
+   prov:wasAttributedTo  <http://www.w3.org/2005/Incubator/prov>;
+   prov:specializationOf <http://thedatahub.org/dataset/w3c-provenance-incubator-group-vocabulary-mappings>;
+.
+
+<http://thedatahub.org/dataset/w3c-provenance-incubator-group-vocabulary-mappings>
+   a dcat:Dataset, datafaqs:CKANDataset;
+.
+
+<http://www.w3.org/2005/Incubator/prov> 
+   a prov:Organization;
+   foaf:member <http://data.semanticweb.org/person/satya-s-sahoo>,
+               <http://data.semanticweb.org/person/luc-moreau>,
+               <http://data.semanticweb.org/person/yolanda-gil>;
+.
+
+<https://docs.google.com/spreadsheet/ccc?key=0ArTeDpS4-nUDdFBrQ3ZJMXROUHh4SmxRUVE5V0QwbVE#gid=0> 
+   a dcat:Dataset;
+   dcat:accessURL       <http://spreadsheets.google.com/tq?tqx=out:csv&tq=select%20*&key=0ArTeDpS4-nUDdFBrQ3ZJMXROUHh4SmxRUVE5V0QwbVE>;
+   prov:alternateOf     <http://www.w3.org/2005/Incubator/prov/wiki/Provenance_Vocabulary_Mappings#Mappings>;
+   prov:wasDerivedFrom  <http://www.w3.org/2005/Incubator/prov/wiki/Provenance_Vocabulary_Mappings#Mappings>;
+   prov:wasAttributedTo <http://purl.org/twc/id/person/TimLebo>;
+.
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/prov-xg-mappings-transcription>
+   a void:Dataset, conversion:AbstractDataset;
+   prov:wasDerivedFrom   <https://docs.google.com/spreadsheet/ccc?key=0ArTeDpS4-nUDdFBrQ3ZJMXROUHh4SmxRUVE5V0QwbVE#gid=0>;
+   prov:specializationOf <http://thedatahub.org/dataset/w3c-provenance-incubator-group-vocabulary-mappings>;
+.
+
+<http://www.w3.org/2011/prov>
+   a prov:Organization;
+   foaf:member <http://data.semanticweb.org/person/satya-s-sahoo>,
+               <http://data.semanticweb.org/person/luc-moreau>,
+               <http://data.semanticweb.org/person/yolanda-gil>,
+               <http://data.semanticweb.org/person/timothy-lebo>;
+.
+
+<http://data.semanticweb.org/person/timothy-lebo> 
+   owl:sameAs <http://purl.org/twc/id/person/TimLebo>;
+.
