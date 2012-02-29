@@ -122,9 +122,6 @@ class WikiTableGSPO(sadi.Service):
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
 
-      for missing in self.errors.keys():
-         print 'MISSING ' + missing
-
       output.save()
 
       # <table class="wikitable" cellpadding="10" style="background: #E8E8E8">
