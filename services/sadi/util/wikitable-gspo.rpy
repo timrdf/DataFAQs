@@ -32,6 +32,8 @@ from urlparse import urlparse, urlunparse
 import urllib
 import urllib2
 
+from BeautifulSoup import BeautifulSoup          # For processing HTML
+
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
@@ -73,6 +75,10 @@ class WikiTableGSPO(sadi.Service):
    def process(self, input, output):
 
       print 'processing ' + input.subject
+
+      page = urllib2.urlopen(input.subject)
+      soup = BeautifulSoup(page)
+      print soup.prettify()
 
       if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
