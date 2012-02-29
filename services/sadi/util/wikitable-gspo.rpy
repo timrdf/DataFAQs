@@ -44,6 +44,9 @@ ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
+PREFIX = 0
+LOCAL  = 1
+
 # The Service itself
 class WikiTableGSPO(sadi.Service):
 
@@ -58,6 +61,8 @@ class WikiTableGSPO(sadi.Service):
 
    def __init__(self): 
       sadi.Service.__init__(self)
+      self.regex = re.compile("([a-zA-Z0-9]+):([a-zA-Z0-9]+)")
+      self.namespaces = {}
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -78,13 +83,29 @@ class WikiTableGSPO(sadi.Service):
 
       page = urllib2.urlopen(input.subject)
       soup = BeautifulSoup(page)
-      print soup.prettify()
 
-      if True:
+      Thing = output.session.get_class(ns.OWL['Thing'])
+
+      for table in soup('table'):
+         for tr in table.findAll('tr'):
+            for td in tr.findAll('td'):
+               for curie in self.regex.findall(str(td.string)):
+                  print '   document contained curie ' + curie[PREFIX] + ':' + curie[LOCAL]
+                  if not curie[PREFIX] in self.namespaces:
+                     # Need to find namespace for this prefix, since we haven't seen it before.
+                     # http://prefix.cc/prov.file.txt
+                     prefixcc = urllib2.urlopen('http://prefix.cc/'+curie[PREFIX]+'.file.txt')
+                     namespace = prefixcc.read().split()[1]
+                     self.namespaces[curie[PREFIX]] = namespace
+                     print '      FETCHED prefix.cc namespace for ' + curie[PREFIX] + ' : ' + self.namespaces[curie[PREFIX]]
+                  else:
+                     print '      reusing prefix.cc cached namespace for ' + curie[PREFIX] + ' : ' + self.namespaces[curie[PREFIX]]
+                  topic = Thing(self.namespaces[curie[PREFIX]] + curie[LOCAL])
+                  output.dcterms_subject.append(topic)
+                  output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+
+      if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
- 
-      if ns.DATAFAQS['Unsatisfactory'] not in output.rdf_type:
-         output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 
       output.save()
 
