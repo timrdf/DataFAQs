@@ -31,6 +31,7 @@ import httplib
 from urlparse import urlparse, urlunparse
 import urllib
 import urllib2
+from urllib2 import Request, urlopen, URLError, HTTPError
 
 from BeautifulSoup import BeautifulSoup          # For processing HTML
 
@@ -40,6 +41,7 @@ ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(dcat='http://www.w3.org/ns/dcat#')
+ns.register(vann='http://purl.org/vocab/vann/')
 ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
@@ -63,6 +65,7 @@ class WikiTableGSPO(sadi.Service):
       sadi.Service.__init__(self)
       self.regex = re.compile("([a-zA-Z0-9]+):([a-zA-Z0-9]+)")
       self.namespaces = {}
+      self.errors = {}
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -85,27 +88,42 @@ class WikiTableGSPO(sadi.Service):
       soup = BeautifulSoup(page)
 
       Thing = output.session.get_class(ns.OWL['Thing'])
+      Error = output.session.get_class(ns.DATAFAQS['Error'])
 
       for table in soup('table'):
          for tr in table.findAll('tr'):
             for td in tr.findAll('td'):
                for curie in self.regex.findall(str(td.string)):
                   print '   document contained curie ' + curie[PREFIX] + ':' + curie[LOCAL]
-                  if not curie[PREFIX] in self.namespaces:
+                  if not curie[PREFIX] in self.namespaces and not curie[PREFIX] in self.errors:
                      # Need to find namespace for this prefix, since we haven't seen it before.
                      # http://prefix.cc/prov.file.txt
-                     prefixcc = urllib2.urlopen('http://prefix.cc/'+curie[PREFIX]+'.file.txt')
-                     namespace = prefixcc.read().split()[1]
-                     self.namespaces[curie[PREFIX]] = namespace
-                     print '      FETCHED prefix.cc namespace for ' + curie[PREFIX] + ' : ' + self.namespaces[curie[PREFIX]]
-                  else:
-                     print '      reusing prefix.cc cached namespace for ' + curie[PREFIX] + ' : ' + self.namespaces[curie[PREFIX]]
-                  topic = Thing(self.namespaces[curie[PREFIX]] + curie[LOCAL])
-                  output.dcterms_subject.append(topic)
-                  output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+                     try:
+                        prefixcc = urllib2.urlopen('http://prefix.cc/'+curie[PREFIX]+'.file.txt')
+                        namespace = prefixcc.read().split()[1]
+                        self.namespaces[curie[PREFIX]] = namespace
+                        print '      FETCHED prefix.cc namespace for ' + curie[PREFIX] + ' : ' + self.namespaces[curie[PREFIX]]
+                     except URLError, e:
+                        print '      ERROR prefix.cc ' + curie[PREFIX] + ' ' + str(e.code)
+                        self.errors[curie[PREFIX]] = True
+                        error = Error()
+                        error.vann_preferredNamespacePrefix = curie[PREFIX]
+                        error.save()
+                        output.rdfs_seeAlso.append(error)
+                  #else:
+                     #if curie[PREFIX] in self.namespaces:
+                     #   print '      reusing prefix.cc cached namespace for ' + curie[PREFIX] + ' : ' + self.namespaces[curie[PREFIX]]
+
+                  if curie[PREFIX] in self.namespaces:
+                     topic = Thing(self.namespaces[curie[PREFIX]] + curie[LOCAL])
+                     output.dcterms_subject.append(topic)
+                     output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
+
+      for missing in self.errors.keys():
+         print 'MISSING ' + missing
 
       output.save()
 

@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://dvcs.w3.org/hg/prov/raw-file/default/paq/prov-aq.html> a <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
+
+<http://dvcs.w3.org/hg/prov/raw-file/default/primer/Primer.html> a <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
+
+<http://www.w3.org/2011/prov/wiki/ProvRDF> a <http://purl.org/twc/vocab/datafaqs#Satisfactory>;
+    dcterms:subject <http://www.w3.org/ns/prov-o/Entity> .
+
