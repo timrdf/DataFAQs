@@ -19,8 +19,23 @@ if [ ! -e `dirname $log` ]; then
 fi
 
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
-   echo "usage: `basename $0` ( --recursive-by-sd-name | [--graph graph-name] ( --recursive-meta | file ) )"
+   echo "usage: `basename $0` (--target |  --recursive-by-sd-name | [--graph graph-name] ( --recursive-meta | file ) )"
+   echo ""
+   echo "    --target               : print triple store destination information and quit."
+   echo "    --recursive-by-sd-name : find all RDF files ending in .sd_name and load the corresponding file into the graph specified."
+   echo "    --graph                : load the RDF file into 'graph-name'."
+   echo "    ----recursive-meta     : gonna have to revisit this one."
    exit 1
+fi
+
+if [[ "$1" == "--target" ]]; then
+   if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
+      echo tdb --target $DATAFAQS_PUBLISH_TDB_DIR
+   elif [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" ]; then
+      $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload --target
+   elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
+      echo todo allegrograph --target
+   fi
 fi
 
 name_paths=`find . -name "*.sd_name"`
