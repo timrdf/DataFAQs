@@ -11,6 +11,7 @@
 #     CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD
 
 DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/wiki/Installing-DataFAQs"}
+DATAFAQS_LOG_DIR=${DATAFAQS_LOG_DIR:?"not set; see https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-environment-variables"}
 
 log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
 if [ ! -e `dirname $log` ]; then
