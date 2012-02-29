@@ -35,7 +35,10 @@ if [[ "$1" == "--target" ]]; then
       $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload --target
    elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
       echo todo allegrograph --target
+   else
+      echo "DATAFAQS_PUBLISH_TDB DATAFAQS_PUBLISH_VIRTUOSO and DATAFAQS_PUBLISH_ALLEGROGRAPH all false, will not publish."
    fi
+   exit
 fi
 
 name_paths=`find . -name "*.sd_name"`
