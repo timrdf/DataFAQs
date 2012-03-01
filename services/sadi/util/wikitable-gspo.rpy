@@ -45,6 +45,7 @@ ns.register(vann='http://purl.org/vocab/vann/')
 ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
+ns.register(example='http://example.org/ns#')
 
 PREFIX = 0
 LOCAL  = 1
@@ -53,11 +54,11 @@ LOCAL  = 1
 class WikiTableGSPO(sadi.Service):
 
    # Service metadata.
-   label                  = 'wikitable-gpso'
+   label                  = 'wikitable-gspo'
    serviceDescriptionText = 'Scrapes a mediawiki page for tables created with mediawiki markup to list the RDF classes and properties listed.'
    comment                = ''
-   serviceNameText        = 'wikitable-gpso' # Convention: Match 'name' below.
-   name                   = 'wikitable-gpso' # This value determines the service URI relative to http://localhost:9090/
+   serviceNameText        = 'wikitable-gspo' # Convention: Match 'name' below.
+   name                   = 'wikitable-gspo' # This value determines the service URI relative to http://localhost:9090/
                                              # Convention: Use the name of this file for this value.
    dev_port = 9115
 
@@ -87,7 +88,7 @@ class WikiTableGSPO(sadi.Service):
       page = urllib2.urlopen(input.subject)
       soup = BeautifulSoup(page)
 
-      Thing = output.session.get_class(ns.OWL['Thing'])
+      Thing = output.session.get_class(ns.EXAMPLE['URI'])
       Error = output.session.get_class(ns.DATAFAQS['Error'])
 
       for table in soup('table'):
@@ -116,6 +117,7 @@ class WikiTableGSPO(sadi.Service):
 
                   if curie[PREFIX] in self.namespaces:
                      topic = Thing(self.namespaces[curie[PREFIX]] + curie[LOCAL])
+                     topic.save()
                      output.dcterms_subject.append(topic)
                      output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 

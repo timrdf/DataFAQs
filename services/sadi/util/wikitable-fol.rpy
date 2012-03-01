@@ -46,6 +46,7 @@ ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 ns.register(prov='http://www.w3.org/ns/prov#')
+ns.register(example='http://example.org/ns#')
 
 PREFIX = 0
 LOCAL  = 1
@@ -88,7 +89,7 @@ class WikiTableFOL(sadi.Service):
       page = urllib2.urlopen(input.subject)
       soup = BeautifulSoup(page)
 
-      Thing = output.session.get_class(ns.OWL['Thing'])
+      Thing = output.session.get_class(ns.EXAMPLE['Expression'])
       Error = output.session.get_class(ns.DATAFAQS['Error'])
 
       count = 0
