@@ -24,7 +24,7 @@ if [[ $# -lt 1 || "$1" == "--help" ]]; then
    echo "    --target               : print triple store destination information and quit."
    echo "    --recursive-by-sd-name : find all RDF files ending in .sd_name and load the corresponding file into the graph specified."
    echo "    --graph                : load the RDF file into 'graph-name'."
-   echo "    ----recursive-meta     : gonna have to revisit this one."
+   echo "    --recursive-meta       : load all load all files ending in '.meta.ttl'."
    exit 1
 fi
 
@@ -51,7 +51,7 @@ if [ "$1" == "--recursive-by-sd-name" ]; then
          name=`basename $name_path` 
          rdf=${name%.sd_name}
          if [ -e $rdf ]; then
-            echo "($n/$total)"
+            echo "($n/$total) $rdf $name"
             $0 --graph `cat $name` $rdf
          else
             echo "[WARNING] could not find $rdf for $name"
