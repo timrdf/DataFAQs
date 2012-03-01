@@ -45,6 +45,7 @@ ns.register(vann='http://purl.org/vocab/vann/')
 ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
+ns.register(prov='http://www.w3.org/ns/prov#')
 
 PREFIX = 0
 LOCAL  = 1
@@ -90,13 +91,16 @@ class WikiTableFOL(sadi.Service):
       Thing = output.session.get_class(ns.OWL['Thing'])
       Error = output.session.get_class(ns.DATAFAQS['Error'])
 
+      count = 0
       #for table in soup('table'):
       #   for tr in table.findAll('tr'):
       for td in soup('td'):
          for expression in self.regex.findall(str(td.string)):
+            count = count + 1
             print '   document contained expression ' + expression
             topic = Thing()
             topic.rdf_value = expression
+            topic.prov_hasLocation = count
             topic.save()
             output.dcterms_subject.append(topic)
             output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
