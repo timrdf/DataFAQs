@@ -51,7 +51,7 @@ if [ "$1" == "--recursive-by-sd-name" ]; then
          name=`basename $name_path` 
          rdf=${name%.sd_name}
          if [ -e $rdf ]; then
-            echo "($n/$total) $rdf $name"
+            echo "($n/$total) $rdf `cat $name`"
             $0 --graph `cat $name` $rdf
          else
             echo "[WARNING] could not find $rdf for $name"
