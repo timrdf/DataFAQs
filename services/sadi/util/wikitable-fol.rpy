@@ -110,14 +110,14 @@ class WikiTableFOL(sadi.Service):
       for span in soup('span'):
          for expression in self.regex.findall(str(span.string)):
             count = count + 1
-            print '   document contained expression ' + expression
-            topic = Thing()
-            topic.rdf_value = str(expression).strip()
-            topic.prov_hadLocation = count
-            topic.save()
-            output.dcterms_subject.append(topic)
-            output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
             try:
+               print '   document contained expression ' + expression
+               topic = Thing()
+               topic.rdf_value = expression
+               topic.prov_hadLocation = count
+               topic.save()
+               output.dcterms_subject.append(topic)
+               output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
                output.save()
             except:
                print 'caught exception'
