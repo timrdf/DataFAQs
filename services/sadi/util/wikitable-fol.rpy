@@ -111,7 +111,7 @@ class WikiTableFOL(sadi.Service):
             count = count + 1
             print '   document contained expression ' + expression
             topic = Thing()
-            topic.rdf_value = expression
+            topic.rdf_value = str(expression)
             topic.prov_hadLocation = count
             topic.save()
             output.dcterms_subject.append(topic)
