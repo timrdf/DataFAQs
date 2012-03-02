@@ -119,8 +119,8 @@ class WikiTableFOL(sadi.Service):
             output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
             try:
                output.save()
-            except UnicodeDecodeError as detail:
-               print 'caught unicode'
+            except:
+               print 'caught exception'
 
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
