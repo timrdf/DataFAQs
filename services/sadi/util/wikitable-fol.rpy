@@ -105,6 +105,7 @@ class WikiTableFOL(sadi.Service):
             topic.save()
             output.dcterms_subject.append(topic)
             output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+            output.save()
 
       for span in soup('span'):
          for expression in self.regex.findall(str(span.string)):
@@ -116,11 +117,14 @@ class WikiTableFOL(sadi.Service):
             topic.save()
             output.dcterms_subject.append(topic)
             output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+            try:
+               output.save()
+            except UnicodeDecodeError as detail:
+               print 'caught unicode'
 
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
 
-      output.save()
 
 # Used when Twistd invokes this service b/c it is sitting in a deployed directory.
 resource = WikiTableFOL()
