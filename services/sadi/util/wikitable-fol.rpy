@@ -106,6 +106,17 @@ class WikiTableFOL(sadi.Service):
             output.dcterms_subject.append(topic)
             output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 
+      for span in soup('span'):
+         for expression in self.regex.findall(str(span.string)):
+            count = count + 1
+            print '   document contained expression ' + expression
+            topic = Thing()
+            topic.rdf_value = expression
+            topic.prov_hadLocation = count
+            topic.save()
+            output.dcterms_subject.append(topic)
+            output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
 

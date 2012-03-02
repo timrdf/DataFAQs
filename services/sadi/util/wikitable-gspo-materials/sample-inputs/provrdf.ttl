@@ -1,5 +1,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<http://www.w3.org/2011/prov/wiki/ProvRDF>                       a foaf:Document .
-<http://dvcs.w3.org/hg/prov/raw-file/default/primer/Primer.html> a foaf:Document .
-<http://dvcs.w3.org/hg/prov/raw-file/default/paq/prov-aq.html>   a foaf:Document .
+<http://www.w3.org/TR/2012/WD-prov-dm-20120202/>                                  a foaf:Document .
+<http://www.w3.org/2011/prov/wiki/ProvRDF>                                        a foaf:Document .
+<http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceFormalModel.html> a foaf:Document .
+<http://dvcs.w3.org/hg/prov/raw-file/default/primer/Primer.html>                  a foaf:Document .
+<http://dvcs.w3.org/hg/prov/raw-file/default/paq/prov-aq.html>                    a foaf:Document .
