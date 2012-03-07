@@ -20,7 +20,7 @@ fi
 
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
    echo "usage: `basename $0` (--target |  --recursive-by-sd-name | [--graph graph-name] ( --recursive-meta | file ) )"
-   echo " WARNING: not true. Need to update or flesh in."
+   echo " WARNING: not true. Need to update or flesh in. File doesn't make sense"
    echo "    --target               : print triple store destination information and quit."
    echo "    --recursive-by-sd-name : find all RDF files ending in .sd_name and load the corresponding file into the graph specified."
    echo "    --graph                : load the RDF file into 'graph-name'."
@@ -51,8 +51,8 @@ if [ "$1" == "--recursive-by-sd-name" ]; then
          name=`basename $name_path` 
          rdf=${name%.sd_name}
          if [ -e $rdf ]; then
-            echo "($n/$total) `cat $name` <- $rdf"
-            echo $0 --graph `cat $name` $rdf
+            echo "($n/$total) `cat $name` -> $rdf"
+            $0 --graph `cat $name`
          else
             echo "[WARNING] could not find $rdf for $name"
          fi
