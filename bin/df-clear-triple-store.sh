@@ -61,15 +61,6 @@ if [ "$1" == "--recursive-by-sd-name" ]; then
    exit
 fi
 
-exit 1
-
-
-
-
-
-
-
-
 
 graph=""
 if [ "$1" == "--graph" ]; then
@@ -83,6 +74,7 @@ if [ "$1" == "--graph" ]; then
 fi
 
 if [ "$1" == "--recursive-meta" ]; then
+   echo "not implemented"; exit 1
    meta_paths=`find . -name "*.meta.ttl"`
    for meta in $meta_paths; do
       echo $meta
@@ -97,6 +89,7 @@ else
    shift
 
    if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
+   echo "not implemented"; exit 1
 
       if [ ! `which tdbloader` ]; then
          echo "tdbloader not on path; skipping tdb triple store load."
@@ -131,8 +124,8 @@ else
       # CSV2RDF4LOD_CONVERT_DATA_ROOT
 
       # usage: vload [--target] {rdf, ttl, nt, nq} <data_file> <graph_uri> [-v | --verbose]
-      echo $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
-           $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload `guess-syntax.sh --inspect $file vload` $file $graph 2>> $log 1>> $log
+      echo $CSV2RDF4LOD_HOME/bin/util/virtuoso/vdelete $graph 2>> $log 1>> $log
+           $CSV2RDF4LOD_HOME/bin/util/virtuoso/vdelete $graph 2>> $log 1>> $log
 
    elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
       echo TODO ag
