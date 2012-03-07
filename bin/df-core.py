@@ -139,6 +139,7 @@ select distinct ?dataset where {
    block = 1
    count = 0
    size = 50
+   post = None
    for bindings in results:
       if len(sys.argv) > 3 and sys.argv[3] == 'df:chunk':
          if count == 0:
