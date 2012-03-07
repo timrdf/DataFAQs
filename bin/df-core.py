@@ -44,13 +44,16 @@ if len(sys.argv) < 3 or len(sys.argv) > 4:
    print "usage: df-core.py epoch.rdf  {faqt-selectors,       dataset-selectors,       dataset-referencers} | "
    print "                            ({faqt-selector-inputs, dataset-selector-inputs, dataset-referencer-inputs} <selector-uri>)"
    print
-   print "  epoch.rdf            - an RDF description of the services to invoke with which inputs (RDF/XML only)."
-   print "  faqt-selectors       - print <service_uri> <input_uri> (one per line)."
-   print "  faqt-selector-inputs - print               <input_uri> (one per line)."
-   print "  faqt-services        - "
-   print "  dataset-selectors    - print <service_uri> <input_uri> (one per line)."
-   print "  datasets             - "
-   print "  dataset-referencers  - print <service_uri> <input_uri> (one per line)."
+   print "  epoch.rdf               - an RDF description of the services to invoke with which inputs (RDF/XML only)."
+   print ""
+   print "  faqt-selectors          - print <service_uri> <input_uri> (one per line)."
+   print "  dataset-selectors       - print <service_uri> <input_uri> (one per line)."
+   print "  dataset-referencers     - print <service_uri> <input_uri> (one per line)."
+   print ""
+   print "  faqt-selector-inputs    - print               <input_uri> (one per line)."
+   print "  dataset-selector-inputs - print               <input_uri> (one per line)."
+   print "  faqt-services           - "
+   print "  datasets                - "
    sys.exit(1)
 
 ns.register(prov='http://www.w3.org/ns/prov-o/')
@@ -137,20 +140,23 @@ select distinct ?dataset where {
    count = 0
    size = 50
    for bindings in results:
-      if count == 0:
-         if block > 1:
-            post.close()
-         filename = 'dataset-references.post.'+str(block)+'.ttl' # Separating into separate files to avoid GET timeout.
-         if not(os.path.exists(filename)):
-            print filename
-            post = open(filename, 'w')
-         else:
-            print filename + " already exists. Not modifying."
-      count += 1
-      post.write('<' + bindings + '> a <http://www.w3.org/ns/dcat#Dataset> .\n')
-      if count == size:
-         count = 0
-         block += 1
+      if len(sys.argv) > 3 and sys.argv[3] == 'df:chunk':
+         if count == 0:
+            if block > 1:
+               post.close()
+            filename = 'dataset-references.post.'+str(block)+'.ttl' # Separating into separate files to avoid GET timeout.
+            if not(os.path.exists(filename)):
+               print filename
+               post = open(filename, 'w')
+            else:
+               print filename + " already exists. Not modifying."
+         count += 1
+         post.write('<' + bindings + '> a <http://www.w3.org/ns/dcat#Dataset> .\n')
+         if count == size:
+            count = 0
+            block += 1
+      else:
+         print bindings
 elif type in [ 'faqt-selectors'        'dataset-selectors'        'dataset-referencers' ]:
    results = graph.query(queries[type], initNs=prefixes)
    for bindings in results:
