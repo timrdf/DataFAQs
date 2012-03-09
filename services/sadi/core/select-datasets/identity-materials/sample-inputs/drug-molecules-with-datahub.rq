@@ -1,0 +1,23 @@
+# http://srvgal78.deri.ie:8080/sparql.jsp hits http://srvgal78.deri.ie:8080/granatum/query with:
+
+prefix void: <http://rdfs.org/ns/void#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix dcat: <http://www.w3.org/ns/dcat#>
+
+construct {
+   ?databugSp a void:Dataset ; 
+   a dcat:Dataset; 
+   void:sparqlEndpoint ?sparqlEndpoint .
+}
+
+where {
+   service <http://hcls.deri.org:8080/openrdf-sesame/repositories/memory> {
+      ?sparqlEndpoint void:class ?class .
+                                 ?class rdfs:label ?classLabel .
+   }
+   filter regex(?classLabel, "compound|molecule|drug", "i")
+
+   service <http://semantic.ckan.net/sparql> {
+      ?dataset void:sparqlEndpoint ?sparqlEndpoint . 
+   }
+}

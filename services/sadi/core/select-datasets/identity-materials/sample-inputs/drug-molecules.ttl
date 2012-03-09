@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix efo: <http://efo.svn.sourceforge.net/svnroot/efo/trunk/src/efoinowl/efo.owl> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix b2rpubchem: <http://bio2rdf.org/ns/ns/ns/pubchem#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix granatum: <http://granatum.org/schema/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s3db: <http://www.s3db.org/core#> .
+
+<http://atlas.bio2rdf.org/sparql>
+    void:sparqlEndpoint <http://atlas.bio2rdf.org/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://bind.bio2rdf.org/sparql>
+    void:sparqlEndpoint <http://bind.bio2rdf.org/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://chebi.bio2rdf.org/sparql>
+    void:sparqlEndpoint <http://chebi.bio2rdf.org/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://hcls.deri.org:8080/openrdf-sesame/repositories/hclskb>
+    void:sparqlEndpoint <http://hcls.deri.org:8080/openrdf-sesame/repositories/hclskb> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://kegg.bio2rdf.org/sparql>
+    void:sparqlEndpoint <http://kegg.bio2rdf.org/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://ligand.bio2rdf.org/sparql>
+    void:sparqlEndpoint <http://ligand.bio2rdf.org/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://linkedlifedata.com/sparql>
+    void:sparqlEndpoint <http://linkedlifedata.com/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://pharmgkb.bio2rdf.org/sparql>
+    void:sparqlEndpoint <http://pharmgkb.bio2rdf.org/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
+<http://sparql.neurocommons.org:8890/sparql>
+    void:sparqlEndpoint <http://sparql.neurocommons.org:8890/sparql> ;
+    a void:Dataset, dcat:Dataset .
+
