@@ -1,0 +1,62 @@
+@prefix prov:     <http://www.w3.org/ns/prov-o/> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/default/faqt-brick/epoch.ttl> .
+
+# # # # # # # # # #
+_:selectfaqtservices # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
+   a prov:Activity;
+   prov:wasAttributedTo
+      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
+   prov:used
+      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/access/in-sparql-endpoint.ttl>;
+   prov:hadQualifiedAttribution [
+      a prov:Attribution;
+      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
+      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/identity.rpy>;
+   ];
+   prov:generated _:faqtlist; # the RDF graph that identity returns (we don't know the name of it yet until we instantiate the epoch).
+.
+
+<http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>
+   a datafaqs:FAqTSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
+
+
+# # # # # # # # # #
+_:selectdatasets 
+   a prov:Activity;
+   prov:wasAttributedTo 
+      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/identity>;
+   prov:used 
+      <http://srvgal78.deri.ie:8080/granatum/query?query=%23%20http%3A%2F%2Fsrvgal78.deri.ie%3A8080%2Fsparql.jsp%20hits%20http%3A%2F%2Fsrvgal78.deri.ie%3A8080%2Fgranatum%2Fquery%20with%3A%0D%0A%0D%0Aprefix%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0D%0Aprefix%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0Aprefix%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0D%0Aconstruct%20%7B%0D%0A%3FsparqlEndpoint%20a%20void%3ADataset%20%3B%20a%20dcat%3ADataset%20%3B%20void%3AsparqlEndpoint%20%3FsparqlEndpoint%20.%0D%0A%7D%0D%0Awhere%20%7B%0D%0A%0D%0Aservice%20%3Chttp%3A%2F%2Fhcls.deri.org%3A8080%2Fopenrdf-sesame%2Frepositories%2Fmemory%3E%20%7B%0D%0A%3FsparqlEndpoint%20void%3Aclass%20%3Fclass%20.%0D%0A%3Fclass%20rdfs%3Alabel%20%3FclassLabel%20.%0D%0A%7D%0D%0Afilter%20regex%28%3FclassLabel%2C%20%22compound%7Cmolecule%7Cdrug%22%2C%20%22i%22%29%0D%0A%0D%0A%7D%0D%0A>;
+   prov:hadQualifiedAttribution [
+      a prov:Attribution;
+      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/identity>;
+      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/identity.rpy>;
+   ];
+   prov:generated _:datasetlist; # the RDF graph that by-ckan-group returns (we don't know the name of it yet until we instantiate the epoch).
+.
+
+<http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/identity>
+   a datafaqs:DatasetSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
+
+
+# # # # # # # # # #
+_:referencedatasets
+   a prov:Activity;
+   prov:wasAttributedTo
+      <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+   prov:used _:datasetlist;
+   prov:hadQualifiedAttribution [
+      a prov:Attribution;
+      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
+   ];
+   prov:generated _:seeAlsolist; # the RDF graph that with-preferred-uri-and-ckan-meta-void returns (we don't know the name of it yet until we instantiate the epoch).
+. 
+
+<http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
+   a datafaqs:DatasetReferencer, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
