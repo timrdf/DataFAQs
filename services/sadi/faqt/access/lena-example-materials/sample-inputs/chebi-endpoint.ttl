@@ -1,0 +1,7 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://thedatahub.org/dataset/chebi> 
+   a dcat:Dataset, void:Dataset; 
+   void:sparqlEndpoint <http://chebi.bio2rdf.org/sparql>;
+.
