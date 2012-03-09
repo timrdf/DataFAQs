@@ -107,7 +107,7 @@ WHERE {
             faqt_service = result['service']['value']
             #print '   ' + faqt_service
             faqt_service_r = FAqTService(faqt_service)
-            faqt_service_r.rdf_type.append(ns.DATAFAQS['FAqtService'])
+            faqt_service_r.rdf_type.append(ns.DATAFAQS['FAqTService'])
             faqt_service_r.save()
             output.dcterms_hasPart.append(faqt_service_r)
 
