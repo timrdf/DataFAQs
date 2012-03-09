@@ -12,7 +12,7 @@
 @prefix void:    <http://rdfs.org/ns/void#> .
 @prefix moby:    <http://www.mygrid.org.uk/mygrid-moby-service#> .
 @prefix sd:      <http://www.w3.org/ns/sparql-service-description#> .
-@prefix prov:    <http://www.w3.org/ns/prov-o/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix :        <http://purl.org/twc/vocab/datafaqs#> .
 
 :CKANDataset
@@ -252,4 +252,10 @@
    rdfs:comment "Any other Project that this project depends on to function. Asserted as a badge and use to attribute those that provided the dependencies.";
    rdfs:domain doap:Project;
    rdfs:range doap:Project;
+.
+
+:Error
+   a owl:Class;
+   rdfs:subClassOf prov:Note;
+   rdfs:comment "Unlike datafaqs:Unsatisfactory, which is classifying the dataset. This is an isolated error during evaluation. The error may lead to an Unsatisfactory evaluation. Example: wikitables-gspo.rpy.";
 .
