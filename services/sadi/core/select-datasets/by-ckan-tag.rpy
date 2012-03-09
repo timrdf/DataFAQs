@@ -84,7 +84,7 @@ class DatasetsByCKANTag(sadi.Service):
     
          Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
 
-         self.ckan.package_search('tags:lod')
+         self.ckan.package_search('tags:'+input.moat_name.first)
          tagged = self.ckan.last_message
          for dataset in tagged['results']:
             ckan_uri = 'http://thedatahub.org/dataset/' + dataset
