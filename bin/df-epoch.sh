@@ -300,7 +300,7 @@ if [ "$epoch_existed" != "true" ]; then
             for post in dataset-references.post*; do
                let "count=count+1"
                echo "[INFO] Following rdfs:seeAlso references for datasets listed in $post ($count/$total)"
-               curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $dataset_referencer >> dataset-references.ttl
+               curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $dataset_referencer                                        >> dataset-references.ttl
             done
          else
             echo "[ERROR] $epochDir/datasets.ttl.rdf did not list any datasets."
@@ -317,12 +317,17 @@ if [ "$epoch_existed" != "true" ]; then
 
    if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
       df-load-triple-store.sh --graph `cat $epochDir/epoch.ttl.sd_name`              $epochDir/epoch.ttl                   | awk '{print "[INFO] loaded",$0,"triples"}'
+
       df-load-triple-store.sh --graph `cat $epochDir/faqt-services.ttl.sd_name`      $epochDir/faqt-services.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
-      df-load-triple-store.sh --graph `cat $epochDir/datasets.ttl.sd_name`           $epochDir/datasets.ttl                | awk '{print "[INFO] loaded",$0,"triples"}'
-      df-load-triple-store.sh --graph `cat $epochDir/dataset-references.ttl.sd_name` $epochDir/dataset-references.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
       df-load-triple-store.sh --graph $metadata_name                                 $epochDir/faqt-services.meta.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
+
+      df-load-triple-store.sh --graph `cat $epochDir/datasets.ttl.sd_name`           $epochDir/datasets.ttl                | awk '{print "[INFO] loaded",$0,"triples"}'
       df-load-triple-store.sh --graph $metadata_name                                 $epochDir/datasets.meta.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
-      df-load-triple-store.sh --graph $metadata_name                                 $epochDir/dataset-references.meta.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+
+      if [ -e $epochDir/dataset-references.ttl ]; then
+         df-load-triple-store.sh --graph `cat $epochDir/dataset-references.ttl.sd_name` $epochDir/dataset-references.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
+         df-load-triple-store.sh --graph $metadata_name                                 $epochDir/dataset-references.meta.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+      fi
    fi
 else
    echo "[INFO] Reusing dataset listing and descriptions from __PIVOT_epoch/$epoch"
@@ -429,7 +434,7 @@ if [ "$epoch_existed" != "true" ]; then
          # Where the dataset info is stored. 
          # Becomes the input to FAqT evaluation services.
          mkdir -p __PIVOT_dataset/$datasetDir
-         # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states 
+         # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
             echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."                                                 > dataset.ttl
             echo "<$dataset> a datafaqs:CKANDataset ."                                                                      >> dataset.ttl
