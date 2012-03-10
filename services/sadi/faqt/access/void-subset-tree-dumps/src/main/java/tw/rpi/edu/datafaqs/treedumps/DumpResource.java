@@ -1,6 +1,7 @@
 package tw.rpi.edu.datafaqs.treedumps;
 
 import net.fortytwo.flow.Collector;
+import net.fortytwo.linkeddata.sail.LinkedDataSail;
 import net.fortytwo.ripple.RippleException;
 import net.fortytwo.ripple.model.Model;
 import net.fortytwo.ripple.model.RippleList;
@@ -12,7 +13,10 @@ import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.sail.SailRepository;
 import org.openrdf.rio.RDFFormat;
+import org.openrdf.rio.RDFHandlerException;
 import org.openrdf.rio.RDFParseException;
+import org.openrdf.rio.RDFWriter;
+import org.openrdf.rio.Rio;
 import org.openrdf.sail.Sail;
 import org.openrdf.sail.SailException;
 import org.openrdf.sail.memory.MemoryStore;
@@ -23,12 +27,14 @@ import org.restlet.Response;
 import org.restlet.Restlet;
 import org.restlet.data.MediaType;
 import org.restlet.data.Method;
+import org.restlet.data.Preference;
 import org.restlet.data.Status;
 import org.restlet.representation.Representation;
 import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.ResourceException;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
@@ -38,10 +44,10 @@ import java.util.Collection;
  */
 public class DumpResource extends Restlet {
     @Override
-    public void handle(final Request  request,
+    public void handle(final Request request,
                        final Response response) {
-        
-       /* This is HTTP POSTed to this service:
+
+        /* This is HTTP POSTed to this service:
          @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
          @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
          @prefix void:     <http://rdfs.org/ns/void#> .
@@ -64,20 +70,8 @@ public class DumpResource extends Restlet {
 
         String baseUri = "http://example.org/baseURI/";
 
-        // TODO: obtain http://aquarius.tw.rpi.edu/projects/datafaqs/epoch from POSTed graph
-        // (any instance of void:Dataset)
-
-        // TODO: what should the query do?
-        //
-        // Ripple query 1 of 2:
-        //   Walk the subset hierarhy and collect any void:dataDumps they have.
-        //   <http://aquarius.tw.rpi.edu/projects/datafaqs/epoch> void:subset* distinct.
-        // 
-        // Ripple query 2 of 2:
-        //   Tally the % of void:Datasets that have void:dataDumps.
-        //   <http://aquarius.tw.rpi.edu/projects/datafaqs/epoch> void:subset* void:dataDump. distinct.
-
-        String rippleQuery = "<http://aquarius.tw.rpi.edu/projects/datafaqs/epoch> void:subset* distinct."; // TODO: remove hard code of subject.
+        // Tally the % of void:Datasets that have void:dataDumps.
+        String rippleQuery = "void:Dataset rdf:type~. void:subset* void:dataDump. distinct count. top.";
 
         if (request.getMethod() != Method.POST) {
             throw new ResourceException(Status.CLIENT_ERROR_METHOD_NOT_ALLOWED, "you must *POST* RDF content into this service");
@@ -96,6 +90,8 @@ public class DumpResource extends Restlet {
         if (null == format) {
             throw new ResourceException(Status.CLIENT_ERROR_UNSUPPORTED_MEDIA_TYPE, "not a known RDF format: " + type);
         }
+
+        RDFFormat outFormat = getPreferredRDFFormat(request);
 
         try {
             Sail sail = new MemoryStore();
@@ -116,7 +112,10 @@ public class DumpResource extends Restlet {
                     rc.close();
                 }
 
-                Collection<RippleList> results = doRippleQuery(sail, rippleQuery);
+                LinkedDataSail lds = new LinkedDataSail(sail);
+                lds.initialize();
+
+                Collection<RippleList> results = doRippleQuery(lds, rippleQuery);
 
                 // TODO: what should the result actually look like?
                 // The result should be _all_ of the sail repository.
@@ -125,15 +124,15 @@ public class DumpResource extends Restlet {
                 ValueFactory vf = ValueFactoryImpl.getInstance();
                 try {
                     rc.add(vf.createURI("http://aquarius.tw.rpi.edu/projects/datafaqs/epoch"),
-                           vf.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
-                           vf.createURI("http://purl.org/twc/vocab/datafaqs#"));
+                            vf.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
+                            vf.createURI("http://purl.org/twc/vocab/datafaqs#"));
                     rc.commit();
                 } finally {
                     rc.close();
                 }
 
-                Representation rep = new StringRepresentation(createResponseEntity(results));
-                rep.setMediaType(MediaType.TEXT_PLAIN);
+                Representation rep = createResponseEntity(sail, results, outFormat);
+                response.setEntity(rep);
             } finally {
                 sail.shutDown();
             }
@@ -144,6 +143,9 @@ public class DumpResource extends Restlet {
             e.printStackTrace(System.err);
             throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.toString());
         } catch (IOException e) {
+            e.printStackTrace(System.err);
+            throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.toString());
+        } catch (RDFHandlerException e) {
             e.printStackTrace(System.err);
             throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.toString());
         } catch (RippleException e) {
@@ -172,14 +174,43 @@ public class DumpResource extends Restlet {
         }
     }
 
-    private String createResponseEntity(final Collection<RippleList> results) {
-        StringBuilder sb = new StringBuilder();
+    private Representation createResponseEntity(final Sail sail,
+                                                final Collection<RippleList> results,
+                                                final RDFFormat format) throws IOException, RepositoryException, RDFHandlerException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        try {
+            Repository r = new SailRepository(sail);
+            RepositoryConnection rc = r.getConnection();
+            try {
+                RDFWriter w = Rio.createWriter(format, out);
+                rc.export(w);
+            } finally {
+                rc.close();
+            }
 
-        sb.append("results (in a temporary plain-text format):\n");
-        for (RippleList l : results) {
-            sb.append(l).append("\n");
+            Representation rep = new StringRepresentation(new String(out.toByteArray()));
+            rep.setMediaType(new MediaType(format.getDefaultMIMEType()));
+            return rep;
+        } finally {
+            out.close();
         }
-        
-        return sb.toString();
+    }
+
+    private RDFFormat getPreferredRDFFormat(final Request request) {
+        float maxQuality = -1;
+        RDFFormat best = null;
+
+        for (Preference<MediaType> p : request.getClientInfo().getAcceptedMediaTypes()) {
+            RDFFormat f = RDFFormat.forMIMEType(p.getMetadata().getName());
+            if (null != f) {
+                float q = p.getQuality();
+                if (q > maxQuality) {
+                    best = f;
+                    maxQuality = q;
+                }
+            }
+        }
+
+        return null == best ? RDFFormat.RDFXML : best;
     }
 }

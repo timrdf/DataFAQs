@@ -10,18 +10,15 @@ import org.restlet.routing.VirtualHost;
 public class TreeDumpsRippleService {
 
     public TreeDumpsRippleService() throws Exception {
-        // TODO: make the port number configurable
-        int serverPort = 9119; // https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
+        // https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
+        int serverPort = 9119;
 
         Component component = new Component();
         component.getServers().add(Protocol.HTTP, serverPort);
 
         VirtualHost host = component.getDefaultHost();
 
-        //router = new Router(component.getContext());
-        //context = component.getContext();
-
-        host.attach("/dump", new DumpResource());
+        host.attach("/check", new DumpResource());
 
         component.start();
     }
