@@ -52,11 +52,6 @@
             <version>${ripple.version}</version>
         </dependency>
         <dependency>
-            <groupId>net.fortytwo.sesametools</groupId>
-            <artifactId>linked-data-server</artifactId>
-            <version>1.6</version>
-        </dependency>
-        <dependency>
             <groupId>org.openrdf.sesame</groupId>
             <artifactId>sesame-repository-sail</artifactId>
             <version>${sesame.version}</version>

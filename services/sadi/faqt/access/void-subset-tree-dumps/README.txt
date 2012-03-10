@@ -1,6 +1,7 @@
+# Build the service
+mvn clean install
 
-
-# Run the service
+# Start the service
 ./start.sh
 
 # Issue a request to the service locally
