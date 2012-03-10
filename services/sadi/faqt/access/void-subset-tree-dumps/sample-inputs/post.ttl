@@ -1,0 +1,18 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix void:     <http://rdfs.org/ns/void#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix con:      <http://www.w3.org/2000/10/swap/pim/contact#> .
+
+<http://aquarius.tw.rpi.edu/projects/datafaqs/epoch> 
+   rdf:type void:Dataset, datafaqs:FAqTBrick;
+   void:subset <http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-03-05> ,
+               <http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-03-07> ,
+               <http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-03-09> ,
+               <http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-02-18> .
+
+<http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-02-18> rdf:type datafaqs:Epoch .
+<http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-02-10> rdf:type datafaqs:Epoch .
+<http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-03-05> rdf:type datafaqs:Epoch .
+<http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-03-09> rdf:type datafaqs:Epoch .
+<http://aquarius.tw.rpi.edu/projects/datafaqs/epoch/2012-03-07> rdf:type datafaqs:Epoch .

@@ -11,7 +11,7 @@ public class TreeDumpsRippleService {
 
     public TreeDumpsRippleService() throws Exception {
         // TODO: make the port number configurable
-        int serverPort = 8118;
+        int serverPort = 9119; // https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
 
         Component component = new Component();
         component.getServers().add(Protocol.HTTP, serverPort);
