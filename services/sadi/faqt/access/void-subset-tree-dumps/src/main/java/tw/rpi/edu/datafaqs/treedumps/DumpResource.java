@@ -189,6 +189,8 @@ public class DumpResource extends Restlet {
 
             p.put(query);
 
+            p.close();
+
             return r;
         } finally {
             m.shutDown();
