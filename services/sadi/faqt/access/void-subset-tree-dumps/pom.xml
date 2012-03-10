@@ -38,7 +38,7 @@
         <ripple.version>0.8-SNAPSHOT</ripple.version>
         <restlet.version>2.1-RC3</restlet.version>
         <junit.version>4.5</junit.version>
-   </properties>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -110,6 +110,20 @@
                     <source>1.6</source>
                     <target>1.6</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
