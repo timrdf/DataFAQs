@@ -20,8 +20,6 @@ import org.openrdf.rio.Rio;
 import org.openrdf.sail.Sail;
 import org.openrdf.sail.SailException;
 import org.openrdf.sail.memory.MemoryStore;
-import org.openrdf.model.ValueFactory;
-import org.openrdf.model.impl.ValueFactoryImpl;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.Restlet;
@@ -70,8 +68,18 @@ public class DumpResource extends Restlet {
 
         String baseUri = "http://example.org/baseURI/";
 
+        String findDatasetsQuery = "void:Dataset rdf:type~. void:subset* distinct.";
+        String findDumpsQuery = findDatasetsQuery + " void:dataDump. distinct.";
+
         // Tally the % of void:Datasets that have void:dataDumps.
-        String rippleQuery = "void:Dataset rdf:type~. void:subset* void:dataDump. distinct count. top.";
+        /*String makeAssertionsQuery = "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#>\n" +
+                "void:Dataset rdf:type~. = sets\n" +
+                "sets. void:subset* distinct. = subsets\n" +
+                "subsets apply count. top. = total\n" +
+                "subsets. void:dataDump count. top. = dumps\n" +
+                "dumps. 100 mul. total. div. = coverage\n" +
+                "sets. rdfs:comment coverage. to-string. \"% coverage\" concat. assert.\n" +
+                "sets. coverage. 75 lt. (rdf:type datafaqs:Unsatisfactory assert.) scrap branch.";*/
 
         if (request.getMethod() != Method.POST) {
             throw new ResourceException(Status.CLIENT_ERROR_METHOD_NOT_ALLOWED, "you must *POST* RDF content into this service");
@@ -115,8 +123,21 @@ public class DumpResource extends Restlet {
                 LinkedDataSail lds = new LinkedDataSail(sail);
                 lds.initialize();
 
-                Collection<RippleList> results = doRippleQuery(lds, rippleQuery);
+                Collection<RippleList> datasets = doRippleQuery(lds, findDatasetsQuery);
+                System.out.println("dataset results:");
+                for (RippleList l : datasets) {
+                    System.out.println("\t" + l.getFirst());
+                }
+                
+                Collection<RippleList> dumps = doRippleQuery(lds, findDumpsQuery);
+                System.out.println("data dump results:");
+                for (RippleList l : dumps) {
+                    System.out.println("\t" + l.getFirst());
+                }
 
+                //Collection<RippleList> results = doRippleQuery(lds, makeAssertionsQuery);
+
+                /*
                 // TODO: what should the result actually look like?
                 // The result should be _all_ of the sail repository.
                 // But before returning it, we want to walk the RippleList collection, do some domain-specific logic, 
@@ -129,9 +150,9 @@ public class DumpResource extends Restlet {
                     rc.commit();
                 } finally {
                     rc.close();
-                }
+                } */
 
-                Representation rep = createResponseEntity(sail, results, outFormat);
+                Representation rep = createResponseEntity(sail, outFormat);
                 response.setEntity(rep);
             } finally {
                 sail.shutDown();
@@ -175,7 +196,6 @@ public class DumpResource extends Restlet {
     }
 
     private Representation createResponseEntity(final Sail sail,
-                                                final Collection<RippleList> results,
                                                 final RDFFormat format) throws IOException, RepositoryException, RDFHandlerException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         try {
