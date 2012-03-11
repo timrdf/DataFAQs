@@ -52,13 +52,13 @@ class IdentityFAqTService(sadi.Service):
       desc.rdfs_comment.append('in annotateServiceDescription')
 
       #desc.rdfs_seeAlso(URIRef('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl'))
-
       #Thing = desc.session.get_class(ns.OWL['Thing'])
-      #wiki = Thing('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl')
-      #wiki.save()
+      Thing = self.getClass(ns.OWL['Thing'])
+      #Thing = self.descriptionSession(ns.OWL['Thing'])
+      wiki = Thing('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl')
+      wiki.save()
 
-      wiki = URIRef('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl')
-      desc.rdfs_seeAlso.append(wiki)
+      #desc.foaf_isPrimaryTopicOf.append(wiki) # Adding this destroys 'desc' as a resource in the model.
       desc.save()
 
    def getInputClass(self):
