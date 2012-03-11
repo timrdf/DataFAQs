@@ -48,12 +48,17 @@ class IdentityFAqTService(sadi.Service):
 
    def annotateServiceDescription(self, desc):
 
-      desc.rdfs_comment.append('hi')
+      # Works fine.
+      desc.rdfs_comment.append('in annotateServiceDescription')
+
+      #desc.rdfs_seeAlso(URIRef('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl'))
 
       #Thing = desc.session.get_class(ns.OWL['Thing'])
-      #wiki = Thing('https://github.com/timrdf/DataFAQs/wiki')
-      #desc.rdfs_seeAlso.append(wiki)
-      desc.rdfs_seeAlso(URIRef('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl'))
+      #wiki = Thing('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl')
+      #wiki.save()
+
+      wiki = URIRef('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl')
+      desc.rdfs_seeAlso.append(wiki)
       desc.save()
 
    def getInputClass(self):
