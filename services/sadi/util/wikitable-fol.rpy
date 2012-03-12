@@ -107,20 +107,38 @@ class WikiTableFOL(sadi.Service):
             output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
             output.save()
 
-      for span in soup('span'):
-         for expression in self.regex.findall(str(span.string)):
-            count = count + 1
-            try:
-               print '   document contained expression ' + expression
-               topic = Thing()
-               topic.rdf_value = expression
-               topic.prov_hadLocation = count
-               topic.save()
-               output.dcterms_subject.append(topic)
-               output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
-               output.save()
-            except:
-               print 'caught exception'
+      print str(len(soup.findAll("span", "pnExpression")))
+      for expression in soup.findAll("span", "pnExpression"):
+         count = count + 1
+         try:
+            print expression.string
+            topic = Thing()
+            topic.rdf_value = str(expression.string)
+            topic.prov_hadLocation = count
+            topic.save()
+            output.dcterms_subject.append(topic)
+            output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+            output.save()
+            #print input.subject + '#' + expression['id']
+            #topic.foaf_primaryTopicOf(Thing(input.subject + '#' + expression['id']))
+            #topic.save()
+         except:
+            print 'caught exception'
+
+#      for span in soup('span'):
+#         for expression in self.regex.findall(str(span.string)):
+#            count = count + 1
+#            try:
+#               print '   document contained expression ' + expression
+#               topic = Thing()
+#               topic.rdf_value = expression
+#               topic.prov_hadLocation = count
+#               topic.save()
+#               output.dcterms_subject.append(topic)
+#               output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+#               output.save()
+#            except:
+#               print 'caught exception'
 
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])

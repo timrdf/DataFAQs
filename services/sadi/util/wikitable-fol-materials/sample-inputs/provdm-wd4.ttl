@@ -1,0 +1,3 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://dvcs.w3.org/hg/prov/raw-file/default/model/releases/WD-prov-dm-20120309/prov-dm.html> a foaf:Document .
