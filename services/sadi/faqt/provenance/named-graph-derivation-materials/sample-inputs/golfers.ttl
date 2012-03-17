@@ -1,25 +1,24 @@
-@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-
-
-
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
-@prefix :         <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-evaluators/via-sparql-query-materials/sample-inputs/from-official-sadi-registry.ttl#> .
+@prefix :         <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation-materials/sample-inputs/golfers.ttl#> .
 
 <http://logd.tw.rpi.edu/sparql>
    a sd:Service; 
-   sd:availableGraphDescriptions :dataset;
    sd:endpoint <http://logd.tw.rpi.edu/sparql>;
+   sd:availableGraphDescriptions :dataset;
 .
 
 :dataset
    a sd:Dataset;
-   sd:namedGraph :graph;
+   sd:namedGraph :named-graph;
 .
 
-:graph
+:named-graph
    a sd:NamedGraph;
-   sd:name <http://logd.tw.rpi.edu/source/lebot/dataset/golfers/version/2012-Mar-15>;
+   sd:name  <http://logd.tw.rpi.edu/source/lebot/dataset/golfers/version/2012-Mar-15>;
+   sd:graph :graph;
+   rdfs:comment "We want to know where the triples in here came from.";
+   rdfs:comment "We can associate dump files to :graph to show other places that the graph is located.";
 .
