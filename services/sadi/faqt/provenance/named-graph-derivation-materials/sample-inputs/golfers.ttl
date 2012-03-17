@@ -1,3 +1,5 @@
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation-materials/sample-inputs/golfers.ttl> .
+
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcat:     <http://www.w3.org/ns/dcat#> .
