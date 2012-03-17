@@ -1,4 +1,6 @@
 #!/bin/bash
+# bin/install-datafaqs-dependencies.sh
+#
 # https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
 
 function offer_install_with_apt {
@@ -47,6 +49,9 @@ if [ "$install_it" == "y" ]; then
 
    echo sudo easy_install surf
    sudo easy_install surf
+
+   echo sudo easy_install -U surf.rdflib
+   sudo easy_install -U surf.rdflib
 
    echo sudo easy_install -U surf.sparql_protocol
    sudo easy_install -U surf.sparql_protocol
