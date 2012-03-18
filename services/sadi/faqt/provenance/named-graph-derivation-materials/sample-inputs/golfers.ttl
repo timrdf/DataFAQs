@@ -9,10 +9,10 @@
 :service
    a sd:Service; 
    sd:endpoint <http://logd.tw.rpi.edu/sparql>;
-   sd:availableGraphs :dataset;
+   sd:availableGraphs :collection;
 .
 
-:dataset
+:collection
    a sd:GraphCollection, dcat:Dataset, void:Dataset;
    sd:namedGraph :named-graph;
 .
