@@ -6,14 +6,14 @@
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 @prefix :         <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation-materials/sample-inputs/golfers.ttl#> .
 
-<http://logd.tw.rpi.edu/sparql>
+:service
    a sd:Service; 
    sd:endpoint <http://logd.tw.rpi.edu/sparql>;
-   sd:availableGraphDescriptions :dataset;
+   sd:availableGraphs :dataset;
 .
 
 :dataset
-   a sd:Dataset, dcat:Dataset, void:Dataset;
+   a sd:GraphCollection, dcat:Dataset, void:Dataset;
    sd:namedGraph :named-graph;
 .
 
