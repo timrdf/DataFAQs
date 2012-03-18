@@ -13,15 +13,18 @@
 .
 
 :collection
-   a sd:GraphCollection, dcat:Dataset, void:Dataset;
+   a sd:GraphCollection, dcat:Dataset;
    sd:namedGraph :named-graph;
 .
 
 :named-graph
    a sd:NamedGraph;
    sd:name  <http://logd.tw.rpi.edu/source/lebot/dataset/golfers/version/2012-Mar-17>;
-   sd:graph :graph;
    rdfs:comment "We want to know where the triples in here came from.";
-   rdfs:comment "We can associate dump files to :graph to show other places that the graph is located.";
+   sd:graph :graph;
+   rdfs:comment "We can associate void:dataDump files to :graph to show other places that the graph is located.";
 .
+
+:graph a void:Dataset .
+
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation-materials/sample-inputs/golfers.ttl> .
