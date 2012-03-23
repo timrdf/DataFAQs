@@ -426,4 +426,40 @@
   <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#Error">
     <rdfs:comment>Unlike datafaqs:Unsatisfactory, which is classifying the dataset. This is an isolated error during evaluation. The error may lead to an Unsatisfactory evaluation. Example: wikitables-gspo.rpy.</rdfs:comment>
   </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTSelection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTSelection">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTSelection">
+    <rdfs:comment>The activity that determines what FAqT evaluation services should be used during an evaluation epoch.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetSelection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetSelection">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetSelection">
+    <rdfs:comment>The activity that determines what datasets should be evalutated during an evaluation epoch.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetReferencing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetReferencing">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#DatasetReferencing">
+    <rdfs:comment>The activity that determines rdfs:seeAlso references for datasets that are evaluated during an evaluation epoch.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTReferencing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTReferencing">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/twc/vocab/datafaqs#FAqTReferencing">
+    <rdfs:comment>The activity that determines rdfs:seeAlso references for FAqT evaluation services that are used during an evaluation epoch.</rdfs:comment>
+  </rdf:Description>
 </rdf:RDF>

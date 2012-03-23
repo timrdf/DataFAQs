@@ -140,3 +140,15 @@ _:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 <http://purl.org/twc/vocab/datafaqs#Error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#Error> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Note> .
 <http://purl.org/twc/vocab/datafaqs#Error> <http://www.w3.org/2000/01/rdf-schema#comment> "Unlike datafaqs:Unsatisfactory, which is classifying the dataset. This is an isolated error during evaluation. The error may lead to an Unsatisfactory evaluation. Example: wikitables-gspo.rpy." .
+<http://purl.org/twc/vocab/datafaqs#FAqTSelection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#FAqTSelection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://purl.org/twc/vocab/datafaqs#FAqTSelection> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity that determines what FAqT evaluation services should be used during an evaluation epoch." .
+<http://purl.org/twc/vocab/datafaqs#DatasetSelection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetSelection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://purl.org/twc/vocab/datafaqs#DatasetSelection> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity that determines what datasets should be evalutated during an evaluation epoch." .
+<http://purl.org/twc/vocab/datafaqs#DatasetReferencing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetReferencing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://purl.org/twc/vocab/datafaqs#DatasetReferencing> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity that determines rdfs:seeAlso references for datasets that are evaluated during an evaluation epoch." .
+<http://purl.org/twc/vocab/datafaqs#FAqTReferencing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#FAqTReferencing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://purl.org/twc/vocab/datafaqs#FAqTReferencing> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity that determines rdfs:seeAlso references for FAqT evaluation services that are used during an evaluation epoch." .

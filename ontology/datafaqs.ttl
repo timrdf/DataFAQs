@@ -259,3 +259,27 @@
    rdfs:subClassOf prov:Note;
    rdfs:comment "Unlike datafaqs:Unsatisfactory, which is classifying the dataset. This is an isolated error during evaluation. The error may lead to an Unsatisfactory evaluation. Example: wikitables-gspo.rpy.";
 .
+
+:FAqTSelection
+   a owl:Class;
+   rdfs:subClassOf prov:Activity;
+   rdfs:comment "The activity that determines what FAqT evaluation services should be used during an evaluation epoch.";
+.
+
+:DatasetSelection
+   a owl:Class;
+   rdfs:subClassOf prov:Activity;
+   rdfs:comment "The activity that determines what datasets should be evalutated during an evaluation epoch.";
+.
+
+:DatasetReferencing
+   a owl:Class;
+   rdfs:subClassOf prov:Activity;
+   rdfs:comment "The activity that determines rdfs:seeAlso references for datasets that are evaluated during an evaluation epoch.";
+.
+
+:FAqTReferencing
+   a owl:Class;
+   rdfs:subClassOf prov:Activity;
+   rdfs:comment "The activity that determines rdfs:seeAlso references for FAqT evaluation services that are used during an evaluation epoch.";
+.
