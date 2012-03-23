@@ -328,8 +328,8 @@ where {
                      if dump != False:
                         print 'published: ' + dump
                         dumpR = VOIDGraph(dump)
-                        output.prov_wasDerivedFrom.append(dumpR)
-                        output.save()
+                        ngR.prov_wasDerivedFrom.append(dumpR)
+                        ngR.save()
 
                         result2 = session.default_store.execute_sparql(self.conversionQuery.replace('{{lodspk.args.all|deurifier}}',gname)
                                                                                            .replace('distinct ?dump','distinct')
