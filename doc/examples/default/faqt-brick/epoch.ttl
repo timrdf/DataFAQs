@@ -5,7 +5,7 @@
 
 # # # # # # # # # #
 _:selectfaqtservices # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
-   a prov:Activity;
+   a datafaqs:FAqTSelection, prov:Activity;
    prov:wasAttributedTo
       <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
    prov:used
@@ -25,7 +25,7 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
 
 # # # # # # # # # #
 _:selectdatasets 
-   a prov:Activity;
+   a datafaqs:DatasetSelection, prov:Activity;
    prov:wasAttributedTo 
       <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-group>;
    prov:used 
@@ -45,7 +45,7 @@ _:selectdatasets
 
 # # # # # # # # # #
 _:referencedatasets
-   a prov:Activity;
+   a datafaqs:DatasetReferencing, prov:Activity;
    prov:wasAttributedTo
       <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
    prov:used _:datasetlist;
