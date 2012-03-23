@@ -75,6 +75,14 @@ if [ "$1" == "--help" ]; then
    exit 0
 fi
 
+function noprotocol {
+   url="$1"
+   url=${url#'http://'}
+   url=${url#'https://'}
+   url=${url%#*} # take off fragment identifier
+   echo $url
+}  
+
 # Enforce directory conventions
 if [ `basename \`pwd\`` != "faqt-brick" ]; then
    echo "`basename $0` must be initiated at the faqt-brick root."
@@ -359,7 +367,8 @@ f=0 # faqt evaluation service tally
 for faqt in $faqtsRandom; do
 
    let 'f=f+1'
-   faqtDir="__PIVOT_faqt/${faqt#'http://'}"
+   #faqtDir="__PIVOT_faqt/${faqt#'http://'}" REPLACED by noprotocol
+   faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
    # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset
    mkdir -p $faqtDir/__PIVOT_dataset &> /dev/null
 
@@ -373,7 +382,8 @@ for faqt in $faqtsRandom; do
       d=0 # dataset tally
       for dataset in $datasetsRandom; do
          let 'd=d+1'
-         datasetDir=${dataset#'http://'}
+         #datasetDir=${dataset#'http://'} REPLACED by noprotocol
+         datasetDir=`noprotocol $dataset`
          # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/__PIVOT_epoch/2012-01-14
          mkdir -p $datasetDir/__PIVOT_epoch/$epoch &> /dev/null
          # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
@@ -397,7 +407,8 @@ if [ "$epoch_existed" != "true" ]; then
    # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_epoch
    for faqt in $faqtsRandom; do
       let "f=f+1" 
-      faqtDir="__PIVOT_faqt/${faqt#'http://'}"
+      #faqtDir="__PIVOT_faqt/${faqt#'http://'}" REPLACED by noprotocol
+      faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
       echo "${faqtDir#'__PIVOT_faqt/'} ($f/$numFAqTs)"
       mkdir -p $faqtDir/__PIVOT_epoch/$epoch &> /dev/null
       # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples          
@@ -428,7 +439,8 @@ if [ "$epoch_existed" != "true" ]; then
    pushd $epochDir &> /dev/null
       for dataset in $datasetsRandom; do
          let "d=d+1" 
-         datasetDir=${dataset#'http://'}
+         #datasetDir=${dataset#'http://'} REPLACED by noprotocol
+         datasetDir=`noprotocol $dataset`
          echo "$datasetDir ($d/$numDatasets)"
 
          # Where the dataset info is stored. 
@@ -493,9 +505,11 @@ e=0 # evaluation tally
 # Ordering randomized to distribute load among evaluation services.
 for dataset in $datasetsRandom; do
    let 'd=d+1'
-   datasetDir=${dataset#'http://'}
+   #datasetDir=${dataset#'http://'} REPLACED by noprotocol
+   datasetDir=`noprotocol $dataset`
    for faqt in $faqtsRandom; do
-      faqtDir="__PIVOT_faqt/${faqt#'http://'}"
+      #faqtDir="__PIVOT_faqt/${faqt#'http://'}" REPLACED by noprotocol
+      faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
       let 'f=f+1'
       let 'e=e+1'
       echo "[INFO] dataset $d/$numDatasets, FAqT $f/$numFAqTs ($e/$total total)"
