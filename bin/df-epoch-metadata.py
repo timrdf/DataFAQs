@@ -297,7 +297,7 @@ elif sys.argv[1] == "evaluation":
    a sd:NamedGraph;
    sd:name  <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
    sd:graph <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>;
-   rdfs:comment "The local copy of evaluation graph {DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}} in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
+   rdfs:comment "The local copy of evaluation graph {{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}} in {{DATAFAQS_BASE_URI}}'s SPARQL endpoint.";
 .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/faqt/{{FAQT_ID}}/dataset/{{DATASET_ID}}>
    a prov:Account, sd:Graph, void:Graph, datafaqs:Evaluation;
