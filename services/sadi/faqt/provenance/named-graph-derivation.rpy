@@ -292,6 +292,7 @@ where {
       Document   = output.session.get_class(ns.FOAF['Document'])
       Agent      = output.session.get_class(ns.PROV['Agent'])
 
+      output.rdf_type.append(ns.SD['GraphCollection'])
       for ng in input.sd_namedGraph:
          ngR = NamedGraph(ng.subject)
          output.sd_namedGraph.append(ngR)
