@@ -113,7 +113,7 @@ class WikiTableFOL(sadi.Service):
          try:
             print expression.string
             topic = Thing()
-            topic.rdf_value = str(expression.string)
+            topic.rdf_value = str(expression.string).strip()
             topic.prov_hadLocation = count
             topic.save()
             output.dcterms_subject.append(topic)
