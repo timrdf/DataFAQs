@@ -1,0 +1,33 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix sd:   <http://www.w3.org/ns/sparql-service-description#> .
+@prefix :     <http://example.org#> .
+
+:service 
+   a sd:Service;
+   sd:endpoint <http://logd.tw.rpi.edu/sparql>;
+   sd:availableGraphs :collection;
+.
+:collection
+   a sd:GraphCollection;
+   sd:namedGraph :named-graph-1, :named-graph-2;
+.
+
+:named-graph-1
+   a sd:NamedGraph;
+   sd:name <http://example.org/graphs/1>;
+   sd:graph :graph-1;
+.
+:graph-1
+   a sd:Graph, void:Dataset;
+   void:triples 1;
+.
+
+:named-graph-2
+   a sd:NamedGraph;
+   sd:name <http://example.org/graphs/2>;
+   sd:graph :graph-2;
+.
+:graph-2
+   a sd:Graph, void:Dataset;
+   void:triples 1;
+.
