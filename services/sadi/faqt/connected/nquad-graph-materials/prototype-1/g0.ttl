@@ -1,6 +1,6 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix sd:   <http://www.w3.org/ns/sparql-service-description#> .
-@prefix :     <http://example.org#> .
+@prefix :     <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/nquad-graph-materials/prototype-1/g0.ttl#> .
 
 :service 
    a sd:Service;
