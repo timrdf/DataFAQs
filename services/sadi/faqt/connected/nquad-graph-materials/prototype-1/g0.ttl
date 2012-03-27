@@ -9,7 +9,7 @@
 .
 :collection
    a sd:GraphCollection;
-   sd:namedGraph :named-graph-1, :named-graph-2;
+   sd:namedGraph :named-graph-1, :named-graph-2, :named-graph-meta;
 .
 
 :named-graph-1
@@ -20,6 +20,7 @@
 :graph-1
    a sd:Graph, void:Dataset;
    void:triples 1;
+   void:dataDump <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/nquad-graph-materials/prototype-1/g1.ttl>;
 .
 
 :named-graph-2
@@ -30,4 +31,16 @@
 :graph-2
    a sd:Graph, void:Dataset;
    void:triples 1;
+   void:dataDump <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/nquad-graph-materials/prototype-1/g2.ttl>;
+.
+
+:named-graph-meta
+   a sd:NamedGraph;
+   sd:name <http://example.org/graphs>;
+   sd:graph :graph-meta;
+.
+:graph-meta
+   a sd:Graph, void:Dataset;
+   void:triples 28;
+   void:dataDump <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/nquad-graph-materials/prototype-1/g0.ttl>;
 .
