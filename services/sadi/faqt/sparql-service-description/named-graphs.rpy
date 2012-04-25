@@ -138,17 +138,20 @@ class SDNamedGraphs(sadi.Service):
       wiki = Thing('https://github.com/timrdf/DataFAQs/wiki')
       desc.rdfs_seeAlso.append(wiki)
 
-      code = Thing('https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/sparql-service-description/named-graphs.rpy')
-      desc.rdfs_seeAlso.append(code)
+      #code = Thing('https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/sparql-service-description/named-graphs.rpy')
+      #desc.rdfs_seeAlso.append(code)
       wiki.save()
-      code.save()
+      #code.save()
       desc.save()
 
-         #            mygrid:hasUnitTest
-         #                [ a mygrid:testCase ;
-         #                  mygrid:exampleInput test:hello-param-input.rdf ;
-         #                  mygrid:exampleOutput test:hello-param-output.rdf
-         #                ] 
+      # Desired description:
+      #
+      #  mygrid:hasUnitTest [ 
+      #     a mygrid:testCase ;
+      #     mygrid:exampleInput  test:hello-param-input.rdf ;
+      #     mygrid:exampleOutput test:hello-param-output.rdf
+      #  ] 
+
 #         unitTests = [ ['https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/sparql-service-description/named-graphs-materials/sample-inputs/mondeca.ttl',''],
 #                       ['https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/sparql-service-description/named-graphs-materials/sample-inputs/logd.ttl',''] ]
 #         self.Thing    = self.getClass(ns.OWL['Thing'])
