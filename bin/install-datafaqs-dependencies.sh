@@ -38,26 +38,32 @@ read -u 1 install_it
 if [ "$install_it" == "y" ]; then
    echo
 
-   echo sudo easy_install pyparsing
+   echo sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
+   sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
+   # installed:
+   # surf.rdflib-1.0.0_r338-py2.7.egg 
+   # rdfextras-0.2-py2.7.egg
+   # SuRF-1.1.4_r352-py2.7.egg
+   # rdflib-3.2.1-py2.7.egg
+
+   #echo sudo easy_install surf
+   #sudo easy_install surf
+
+   echo sudo easy_install pyparsing # TODO: consider the dependency chain; figure out which are already done by sadi*.egg above.
    sudo easy_install pyparsing
 
-   echo sudo easy_install rdfextras
-   sudo easy_install rdfextras
+   #echo sudo easy_install rdfextras
+   #sudo easy_install rdfextras
 
-   echo sudo easy_install -U rdflib==3.2.0
-   sudo easy_install -U rdflib==3.2.0
+   #echo sudo easy_install -U rdflib==3.2.0
+   #sudo easy_install -U rdflib==3.2.0
 
-   echo sudo easy_install surf
-   sudo easy_install surf
-
-   echo sudo easy_install -U surf.rdflib
-   sudo easy_install -U surf.rdflib
+   #echo sudo easy_install -U surf.rdflib
+   #sudo easy_install -U surf.rdflib
 
    echo sudo easy_install -U surf.sparql_protocol
    sudo easy_install -U surf.sparql_protocol
 
-   echo sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
-   sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
 fi
 
 echo -n "Try to install ckanclient? (y/n) "
