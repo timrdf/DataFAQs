@@ -38,9 +38,6 @@
 
    moat:taggedWithTag <http://thedatahub.org/tag/lod>,
                       <http://thedatahub.org/tag/lifesciences>,
-                      <http://thedatahub.org/tag/format-efo>,
-                      <http://thedatahub.org/tag/format-prov>,
-                      <http://thedatahub.org/tag/format-obi>,
                       <http://thedatahub.org/tag/no-proprietary-vocab>,
                       <http://thedatahub.org/tag/provenance-metadata>,
                       <http://thedatahub.org/tag/published-by-third-party>;
