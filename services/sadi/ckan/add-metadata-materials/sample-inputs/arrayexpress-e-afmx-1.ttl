@@ -2,11 +2,52 @@
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix con:      <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix moat:     <http://moat-project.org/ns#> .
+@prefix ov:       <http://open.vocab.org/terms/> .
+@prefix void:     <http://rdfs.org/ns/void#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
 <http://thedatahub.org/en/dataset/arrayexpress-e-afmx-1>
    a datafaqs:CKANDataset;
+   dcterms:identifier "arrayexpress-e-afmx-1";
+   con:preferredURI <http://purl.org/twc/arrayexpress/E-AFMX-1>;
+
+   dcterms:title "Transcription profiling of human, chimp and mouse brain";
+   ov:shortName "E-AFMX-1";
+
+   dcterms:description "Microarray technologies allow the identification of large numbers of expression differences within and between species. Although environmental and physiological stimuli are clearly responsible for changes in the expression levels of many genes, it is not known whether the majority of changes of gene expression fixed during evolution between species and between various tissues within a species are caused by Darwinian selection or by stochastic processes. We find the following: (1) expression differences between species accumulate approximately linearly with time; (2) gene expression variation among individuals within a species correlates positively with expression divergence between species; (3) rates of expression divergence between species do not differ significantly between intact genes and expressed pseudogenes; (4) expression differences between brain regions within a species have accumulated approximately linearly with time since these regions emerged during evolution. These results suggest that the majority of expression differences observed between species are selectively neutral or nearly neutral and likely to be of little or no functional significance. Therefore, the identification of gene expression differences between species fixed by selection should be based on null hypotheses assuming functional neutrality. Furthermore, it may be possible to apply a molecular clock based on expression differences to infer the evolutionary history of tissues.";
+
+   void:triples 3014;
+
+   dcterms:contributor [
+      foaf:mbox <mailto:mccusj@rpi.edu>;
+      foaf:name "James McCusker";
+   ];
+
+   dcterms:creator [
+      foaf:mbox <mailto:endre.anderssen@gmail.com>;
+      foaf:name "Endre Anderssen";
+   ];
 
    dcterms:isPartOf <http://thedatahub.org/group/arrayexpress>;
+
+   void:vocabulary <http://www.ebi.ac.uk/efo/>,
+                   <http://purl.obolibrary.org/obo/>,
+                   <http://www.w3.org/ns/prov#>;
+
+   moat:taggedWithTag <http://thedatahub.org/tag/lod>,
+                      <http://thedatahub.org/tag/lifesciences>,
+                      <http://thedatahub.org/tag/format-efo>,
+                      <http://thedatahub.org/tag/format-prov>,
+                      <http://thedatahub.org/tag/format-obi>,
+                      <http://thedatahub.org/tag/no-proprietary-vocab>,
+                      <http://thedatahub.org/tag/provenance-metadata>,
+                      <http://thedatahub.org/tag/published-by-third-party>;
 .
 <http://thedatahub.org/group/arrayexpress> a datafaqs:CKANGroup .
+
+<http://thedatahub.org/tag/lod>                      a moat:Tag; moat:name "lod" .
+<http://thedatahub.org/tag/lifesciences>             a moat:Tag; moat:name "lifesciences" .
+<http://thedatahub.org/tag/no-proprietary-vocab>     a moat:Tag; moat:name "no-proprietary-vocab" .
+<http://thedatahub.org/tag/provenance-metadata>      a moat:Tag; moat:name "provenance-metadata" .
