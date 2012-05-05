@@ -5,8 +5,11 @@
 @prefix con:      <http://www.w3.org/2000/10/swap/pim/contact#> .
 @prefix moat:     <http://moat-project.org/ns#> .
 @prefix ov:       <http://open.vocab.org/terms/> .
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
 @prefix void:     <http://rdfs.org/ns/void#> .
+@prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
 
 <http://thedatahub.org/en/dataset/arrayexpress-e-afmx-1>
    a datafaqs:CKANDataset;
@@ -41,6 +44,17 @@
                       <http://thedatahub.org/tag/no-proprietary-vocab>,
                       <http://thedatahub.org/tag/provenance-metadata>,
                       <http://thedatahub.org/tag/published-by-third-party>;
+
+   void:sparqlEndpoint <http://purl.org/twc/arrayexpress/virtuoso/sparql>;
+   dcat:distribution [
+      a sd:NamedGraph;
+      sd:name  <http://purl.org/twc/arrayexpress/E-MTAB-104>;
+      sd:graph <http://thedatahub.org/en/dataset/arrayexpress-e-afmx-1>;
+      prov:atLocation [ 
+         a sd:Service; 
+         sd:endpoint <http://purl.org/twc/arrayexpress/virtuoso/sparql>; 
+      ];
+   ];
 .
 <http://thedatahub.org/group/arrayexpress> a datafaqs:CKANGroup .
 
