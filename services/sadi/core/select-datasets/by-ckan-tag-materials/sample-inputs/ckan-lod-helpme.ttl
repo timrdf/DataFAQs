@@ -1,0 +1,9 @@
+@prefix moat: <http://moat-project.org/ns#> .
+
+<http://ckan.net/tag/lod>
+    moat:name "lod" ;
+    a moat:Tag .
+
+<http://ckan.net/tag/helpme>
+    moat:name "helpme" ;
+    a moat:Tag .

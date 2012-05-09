@@ -31,6 +31,13 @@ from urlparse import urlparse, urlunparse
 import urllib
 import urllib2
 
+import json
+
+connections = {'http' :httplib.HTTPConnection,
+             'https':httplib.HTTPSConnection}
+
+import datetime
+
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
@@ -45,12 +52,14 @@ class DatasetsByCKANTag(sadi.Service):
 
    # Service metadata.
    label                  = 'by-ckan-tag'
-   serviceDescriptionText = 'Return the datasets in the given CKAN group.'
-   comment                = ''
+   serviceDescriptionText = 'Return the datasets that are tagged with ALL of the moat:Tags given.'
+   comment                = 'This service provides the INTERSECTION of tags. To obtain the UNION, call it multiple times with the individual tags.'
    serviceNameText        = 'by-ckan-tag' # Convention: Match 'name' below.
    name                   = 'by-ckan-tag' # This value determines the service URI relative to http://localhost:9090/
-                                            # Convention: Use the name of this file for this value.
+                                          # Convention: Use the name of this file for this value.
    dev_port = 9110
+   lastCalled  = None
+   intersected = None
 
    def __init__(self): 
       sadi.Service.__init__(self)
@@ -77,23 +86,106 @@ class DatasetsByCKANTag(sadi.Service):
       return ns.MOAT['Tag']
 
    def process(self, input, output):
-  
       print 'processing ' + input.subject
+     
+      # TODO: handle case where moat_name is not present - parse the URI (yuck).
+ 
       if input.moat_name:
          print '   ' + input.moat_name.first
-    
+
+         if self.lastCalled is None:
+            self.lastCalled = datetime.datetime.now()
+
+         else:
+            sinceLast = datetime.datetime.now() - self.lastCalled
+            if sinceLast.seconds < 60:
+               print ' was called before ' + str(sinceLast.seconds) + ' seconds ago (< 60); skipping'
+               self.doIt(output)
+               return
+            else:
+               print 'need to refresh'
+      
          Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
 
-         self.ckan.package_search('tags:'+input.moat_name.first)
-         tagged = self.ckan.last_message
-         for dataset in tagged['results']:
-            ckan_uri = 'http://thedatahub.org/dataset/' + dataset
-            dataset = Dataset(ckan_uri)
-            dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
-            dataset.rdf_type.append(ns.DCAT['Dataset'])
-            dataset.save()
-            output.dcterms_hasPart.append(dataset)
-         output.save()
+         # Original: This does union, but we want intersection.
+
+         # ORIG: self.ckan.package_search('tags:'+input.moat_name.first)
+         # WORKS: self.ckan.package_search('tags:helpme')
+         # DOES NOT WORK: self.ckan.package_search('tags:helpme&tags:lod')
+         # DOES NOT WORK: self.ckan.package_search('tags:helpme&amp;tags:lod')
+         # DOES NOT WORK: self.ckan.package_search(['tags:helpme','tags:lod'])
+#         tagged = self.ckan.last_message
+#         print dir(tagged)
+#         for dataset in tagged['results']:
+#            ckan_uri = 'http://thedatahub.org/dataset/' + dataset
+#            dataset = Dataset(ckan_uri)
+#            dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
+#            dataset.rdf_type.append(ns.DCAT['Dataset'])
+#            dataset.save()
+#            output.dcterms_hasPart.append(dataset)
+#         output.save()
+         # FWIW, http://thedatahub.org/api/search/dataset?tags=helpme&amp;tags=lod 
+         # and
+         #       http://thedatahub.org/api/search/dataset?q=tags:helpme&amp;tags:lod
+         #       searches intersection of tags.
+
+         # Take 2 (failed)
+#
+         Tag     = input.session.get_class(ns.MOAT['Tag'])
+#
+#         query = 'http://thedatahub.org/api/search/dataset?'
+#         amp = ''
+#         for tag in Tag.all():
+#            print 'all: ' + tag.moat_name.first
+#            query = query + amp + 'tags=' + tag.moat_name.first
+#            amp = '&amp;'
+#         print 'query: ' + query
+#
+#         response = self.getResponse('http://thedatahub.org/api/search/dataset?tags=helpme&amp;tags=lod')
+#         if response.status == 200:
+#            print '200!'
+#            print response.msg.dict
+#            text = response.read()
+#            print text
+#            data = json.loads(text)
+#            print 'data! ' + str(data['count'])
+#            print data
+#            for dataset in data['results']:
+#               print '  -> ' + dataset
+
+         # Take 3 - ckan doesn't accept multiple tags in search. (or is too poorly documented)
+         Tag = input.session.get_class(ns.MOAT['Tag'])
+         sets = {}
+         for tag in Tag.all():
+            self.ckan.package_search('tags:'+tag.moat_name.first)
+            tagged = self.ckan.last_message
+
+            sets[tag.moat_name.first] = set()
+            for dataset in tagged['results']:
+               #print tag.moat_name.first + ' : ' + dataset
+               sets[tag.moat_name.first].add(dataset)
+         self.intersected = reduce(lambda x,y: x & y, sets.values())
+         self.doIt(output)
+
+   def doIt(self, output):
+      Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
+      for dataset in self.intersected:
+         ckan_uri = 'http://thedatahub.org/dataset/' + dataset
+         dataset = Dataset(ckan_uri)
+         dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
+         dataset.rdf_type.append(ns.DCAT['Dataset'])
+         dataset.save()
+         output.dcterms_hasPart.append(dataset)
+      output.save()
+
+   def getResponse(self, url):
+      # Ripped from https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/pcurl.py
+      o = urlparse(str(url))
+      #print o
+      connection = connections[o.scheme](o.netloc)
+      fullPath = urlunparse([None,None,o.path,o.params,o.query,o.fragment])
+      connection.request('GET',fullPath)
+      return connection.getresponse()
 
 # Used when Twistd invokes this service b/c it is sitting in a deployed directory.
 resource = DatasetsByCKANTag()
