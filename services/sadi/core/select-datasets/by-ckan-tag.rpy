@@ -46,6 +46,8 @@ ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
+ns.register(prov='http://www.w3.org/ns/prov#')
+ns.register(foaf='http://xmlns.com/foaf/0.1/')
 
 # The Service itself
 class DatasetsByCKANTag(sadi.Service):
@@ -58,6 +60,7 @@ class DatasetsByCKANTag(sadi.Service):
    name                   = 'by-ckan-tag' # This value determines the service URI relative to http://localhost:9090/
                                           # Convention: Use the name of this file for this value.
    dev_port = 9110
+   startedLifeAt = None
    lastCalled  = None
    intersected = None
 
@@ -71,6 +74,7 @@ class DatasetsByCKANTag(sadi.Service):
           print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
           sys.exit(1)
       self.ckan = ckanclient.CkanClient(api_key=key)
+      self.startedLifeAt = datetime.datetime.now()
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -84,6 +88,25 @@ class DatasetsByCKANTag(sadi.Service):
 
    def getOutputClass(self):
       return ns.MOAT['Tag']
+
+   def annotateServiceDescription(self, desc):
+      print 'annotate ' + desc.subject
+      Thing       = desc.session.get_class(ns.OWL['Thing'])
+      Attribution = desc.session.get_class(ns.PROV['Attribution'])
+      Entity      = desc.session.get_class(ns.PROV['Entity'])
+      Plan        = desc.session.get_class(ns.PROV['Plan'])
+      Agent       = desc.session.get_class(ns.PROV['Agent'])
+      Page        = desc.session.get_class(ns.FOAF['Page'])
+      plan = Plan('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag.rpy')
+      plan.foaf_homepage.append(Thing('https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/by-ckan-tag.rpy')) 
+      plan.save()
+      attr = Attribution()
+      attr.prov_entity  = Agent('') #Entity('http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag')
+      attr.prov_hadPlan = plan
+      attr.dcterms_date.append(str(self.startedLifeAt))
+      attr.save()
+      desc.dcterms_subject.append(Agent(''))
+      desc.save()
 
    def process(self, input, output):
       print 'processing ' + input.subject
