@@ -1,0 +1,6 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<http://logd.tw.rpi.edu/source/nci-nih-gov/dataset/tobacco-law-coverage/version/2010-Aug-25/conversion/enhancement/1/subset/sample>
+   a dcat:Dataset .
+<http://logd.tw.rpi.edu/source/data-gov/dataset/1000/version/2010-Aug-30/conversion/enhancement/1/subset/sample>
+   a dcat:Dataset .
