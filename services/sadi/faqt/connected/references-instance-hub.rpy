@@ -1,18 +1,18 @@
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy>;
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/references-instance-hub.rpy>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 #3>
-#3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
+#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/connected/references-instance-hub>
 #3>    a datafaqs:FAqTService .
 #3> []
 #3>    a prov:Activity;
-#3>    prov:hadQualifiedAttribution [
+#3>    prov:qualifiedAttribution [
 #3>       a prov:Attribution;
-#3>       prov:hadQualifiedEntity <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
-#3>       prov:adoptedPlan        <#TEMPLATE/path/to/public/source-code.rpy>;
+#3>       prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/faqt/connected/references-instance-hub>;
+#3>       prov:hadPlan <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/references-instance-hub.rpy>;
 #3>    ];
 #3> .
-#3> <#TEMPLATE/path/to/public/source-code.rpy>
-#3>    foaf:homepage <#TEMPLATE/path/to/public/HOMEPAGE-FOR/source-code.rpy> .
+#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/references-instance-hub.rpy>
+#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/connected/references-instance-hub.rpy> .
 
 import sadi
 from rdflib import *
