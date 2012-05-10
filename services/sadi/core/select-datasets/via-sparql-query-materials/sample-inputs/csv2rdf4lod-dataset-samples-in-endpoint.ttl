@@ -2,15 +2,15 @@
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
-@prefix :         <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/logd-converted-datasets-with-samples#> .
+@prefix :         <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/csv2rdf4lod-dataset-samples-in-endpoint.ttl#> .
 
 :apply
    a datafaqs:QueryToApply;
-   datafaqs:query   <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/logd-converted-datasets-with-samples.rq>;
+   datafaqs:query   <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/csv2rdf4lod-dataset-samples-in-endpoint.rq>;
    datafaqs:dataset :dataset;
 .
 
-<https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/logd-converted-datasets-with-samples.rq>
+<https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/csv2rdf4lod-dataset-samples-in-endpoint.rq>
    a datafaqs:SPARQLQuery;
    rdfs:comment "One could resolve the URI for this query, or use the given rdf:value";
    rdf:value
