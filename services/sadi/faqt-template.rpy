@@ -5,13 +5,14 @@
 #3>    a datafaqs:FAqTService .
 #3> []
 #3>    a prov:Activity;
-#3>    prov:hadQualifiedAttribution [
+#3>    prov:qualifiedAttribution [
 #3>       a prov:Attribution;
-#3>       prov:hadQualifiedEntity <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
-#3>       prov:adoptedPlan        <#TEMPLATE/path/to/public/source-code.rpy>;
+#3>       prov:entity  <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
+#3>       prov:hadPlan <#TEMPLATE/path/to/public/source-code.rpy>;
 #3>    ];
 #3> .
 #3> <#TEMPLATE/path/to/public/source-code.rpy>
+#3>    a prov:Plan;
 #3>    foaf:homepage <#TEMPLATE/path/to/public/HOMEPAGE-FOR/source-code.rpy> .
 
 import sadi
