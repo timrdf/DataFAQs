@@ -1,0 +1,11 @@
+prefix conversion: <http://purl.org/twc/vocab/conversion/>
+select distinct ?sample
+where {
+  graph ?sample {
+    ?sample a conversion:DatasetSample .
+    ?layer 
+      void:subset ?sample; 
+      conversion:conversion_identifier ?id .
+    filter(?id != 'raw')
+  }
+}
