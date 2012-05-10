@@ -1,0 +1,57 @@
+@prefix prov:     <http://www.w3.org/ns/prov-o/> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/default/faqt-brick/epoch.ttl> .
+
+# # # # # # # # # #
+_:selectfaqtservices # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
+   a datafaqs:FAqTSelection, prov:Activity;
+   prov:wasAttributedTo
+      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/towards/ckan-tag>;
+   prov:used
+      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/towards/ckan-tag-materials/sample-inputs/ckan-lodcloud.ttl>;
+   prov:hadQualifiedAttribution [
+      a prov:Attribution;
+      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
+      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/via-sparql-query.rpy>;
+   ];
+   prov:generated _:faqtlist; # the RDF graph that via-sparql-query returns (we don't know the name of it yet until we instantiate the epoch).
+.
+
+<http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/towards/ckan-tag>
+   a datafaqs:FAqTSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
+
+
+# # # # # # # # # #
+_:selectdatasets 
+   a datafaqs:DatasetSelection, prov:Activity;
+   prov:wasAttributedTo 
+      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag>;
+   prov:used 
+      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag-materials/sample-inputs/ckan-lod-helpme.ttl>;
+   prov:generated _:datasetlist; # the RDF graph that by-ckan-group returns (we don't know the name of it yet until we instantiate the epoch).
+.
+
+<http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag>
+   a datafaqs:DatasetSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
+
+
+# # # # # # # # # #
+_:referencedatasets
+   a datafaqs:DatasetReferencing, prov:Activity;
+   prov:wasAttributedTo
+      <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+   prov:used _:datasetlist;
+   prov:hadQualifiedAttribution [
+      a prov:Attribution;
+      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
+   ];
+   prov:generated _:seeAlsolist; # the RDF graph that with-preferred-uri-and-ckan-meta-void returns (we don't know the name of it yet until we instantiate the epoch).
+. 
+
+<http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
+   a datafaqs:DatasetReferencer, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
