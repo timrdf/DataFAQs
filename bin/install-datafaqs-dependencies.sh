@@ -41,10 +41,10 @@ if [ "$install_it" == "y" ]; then
    echo sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
    sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
    # installed:
-   # surf.rdflib-1.0.0_r338-py2.7.egg 
-   # rdfextras-0.2-py2.7.egg
    # SuRF-1.1.4_r352-py2.7.egg
+   # surf.rdflib-1.0.0_r338-py2.7.egg 
    # rdflib-3.2.1-py2.7.egg
+   # rdfextras-0.2-py2.7.egg
 
    #echo sudo easy_install surf
    #sudo easy_install surf
@@ -64,6 +64,11 @@ if [ "$install_it" == "y" ]; then
    echo sudo easy_install -U surf.sparql_protocol
    sudo easy_install -U surf.sparql_protocol
 
+   echo sudo easy_install -U surf.allegro_franz
+   sudo easy_install -U surf.allegro_franz
+
+   # Still need allegrograph... :-(
+   # apt-get install python-cjson python-pycurl
 fi
 
 echo -n "Try to install ckanclient? (y/n) "
