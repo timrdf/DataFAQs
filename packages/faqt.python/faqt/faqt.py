@@ -41,7 +41,7 @@ class Service(sadi.Service):
       plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE + self.serviceNameText + '.rpy'))
       plan.save()
       agent = Agent('#')
-      agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
+      #agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
       agent.save()
       attr = Attribution()
       attr.prov_agent   = agent
