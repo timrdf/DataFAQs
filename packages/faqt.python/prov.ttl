@@ -1,0 +1,10 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<../faqt.python> 
+   prov:wasDerivedFrom <http://sadi.googlecode.com/svn/trunk/python/sadi.python/>;
+   prov:wasAttributedTo <http://tw.rpi.edu/instances/TimLebo>;
+.
+
+<http://sadi.googlecode.com/svn/trunk/python/sadi.python/> 
+   prov:wasAttributedTo <http://tw.rpi.edu/instances/JamesMcCusker>;
+.
