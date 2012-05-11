@@ -7,9 +7,9 @@
 _:selectfaqtservices # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
    a datafaqs:FAqTSelection, prov:Activity;
    prov:wasAttributedTo
-      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/towards/ckan-tag>;
+      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/towards/ckan-group>;
    prov:used
-      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/towards/ckan-tag-materials/sample-inputs/ckan-lodcloud.ttl>;
+      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/towards/ckan-group-materials/sample-inputs/ckan-lodcloud.ttl>;
    prov:hadQualifiedAttribution [
       a prov:Attribution;
       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
@@ -18,7 +18,7 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
    prov:generated _:faqtlist; # the RDF graph that via-sparql-query returns (we don't know the name of it yet until we instantiate the epoch).
 .
 
-<http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/towards/ckan-tag>
+<http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/towards/ckan-group>
    a datafaqs:FAqTSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
 .
 
