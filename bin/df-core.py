@@ -125,16 +125,48 @@ graph = Graph()
 #graph.parse(epoch, format="n3") # :: sigh ::
 graph.parse(epoch)
 
-if type == 'services':
+if type in [ 'faqt-selectors'          'dataset-selectors'        'dataset-referencers'  'faqt-services']:
+   results = graph.query(queries[type], initNs=prefixes)
+   for bindings in results:
+      if len(bindings) == 2:
+         print bindings[0] + ' ' + bindings[1]
+      else:
+         print bindings
+elif type in [ 'faqt-selector-inputs', 'dataset-selector-inputs', 'dataset-referencer-inputs']: 
+   query = '''
+select distinct ?input where {
+   [] 
+      a prov:Activity;
+      prov:used            ?input;
+      prov:wasAttributedTo <'''+sys.argv[3]+'''>
+   .
+}
+'''
+   results = graph.query(query, initNs=prefixes)
+   for input in results:
+      print input[0] # rdflib junk that assumes the variable order in SELECT matters.
+elif type == 'services':
    results = graph.query(queries[type], initNs=prefixes)
    for input in results:
-      print input
+      print input[0]
 elif type == 'datasets':
    query = '''
 select distinct ?dataset where {
    ?dataset a dcat:Dataset .
 }
 '''
+   #To make this easier to read, do this:
+   #def split_by(sequence, length):
+   #   iterable = iter(sequence)
+   #   def yield_length():
+   #       for i in xrange(length):
+   #            yield iterable.next()
+   #   while True:
+   #       res = list(yield_length())
+   #       if not res:
+   ##           raise StopIteration
+   #       yield res
+
    results = graph.query(query, initNs=prefixes)
    block = 1
    count = 0
@@ -158,26 +190,6 @@ select distinct ?dataset where {
             block += 1
       else:
          print bindings
-elif type in [ 'faqt-selectors'        'dataset-selectors'        'dataset-referencers' ]:
-   results = graph.query(queries[type], initNs=prefixes)
-   for bindings in results:
-      if len(bindings) == 2:
-         print bindings[0] + ' ' + bindings[1]
-      else:
-         print bindings
-elif type in [ 'faqt-selector-inputs', 'dataset-selector-inputs', 'dataset-referencer-inputs']: 
-   query = '''
-select distinct ?input where {
-   [] 
-      a prov:Activity;
-      prov:used            ?input;
-      prov:wasAttributedTo <'''+sys.argv[3]+'''>
-   .
-}
-'''
-   results = graph.query(query, initNs=prefixes)
-   for input in results:
-      print input
 else: # faqt-selectors and dataset-selectors and dataset-referencers
    # DEPRECATED use above
    results = graph.query(queries[type], initNs=prefixes)
