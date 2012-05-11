@@ -222,10 +222,12 @@ if [ "$epoch_existed" != "true" ]; then
       mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
       echo "[INFO] Requesting evaluation services from $faqt_selector"
       i=0 # input to selector
+      df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector
       for selector_input in `df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector`; do
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/faqt-services/$s/$i" &> /dev/null; 
+            echo "[INFO]    using input: $selector_input"
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-input.sh
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
             source get-input.sh
