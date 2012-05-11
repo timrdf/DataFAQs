@@ -1,5 +1,0 @@
-@prefix moat: <http://moat-project.org/ns#> .
-
-<http://ckan.net/tag/lodcloud>
-    moat:name "lodcloud" ;
-    a moat:Tag .

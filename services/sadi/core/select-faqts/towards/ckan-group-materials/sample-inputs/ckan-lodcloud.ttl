@@ -1,0 +1,6 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://thedatahub.org/group/lodcloud>
+   a datafaqs:CKANGroup;
+   datafaqs:ckan_identifier "lodcloud";
+.

@@ -46,12 +46,12 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 class TowardsCKANTag(sadi.Service):
 
    # Service metadata.
-   label                  = 'ckan-tag'
-   serviceDescriptionText = 'List FAqT services that guide a set of datasets towards acceptance to a given CKAN tag.'
+   label                  = 'ckan-group'
+   serviceDescriptionText = 'List FAqT services that guide a set of datasets towards acceptance to a given CKAN group.'
    comment                = 'The CKAN tag "lodcloud" is the primary example, but this could be used for other situations.'
-   serviceNameText        = 'ckan-tag' # Convention: Match 'name' below.
-   name                   = 'ckan-tag' # This value determines the service URI relative to http://localhost:9090/
-                                       # Convention: Use the name of this file for this value.
+   serviceNameText        = 'ckan-group' # Convention: Match 'name' below.
+   name                   = 'ckan-group' # This value determines the service URI relative to http://localhost:9090/
+                                         # Convention: Use the name of this file for this value.
    dev_port = 9121
 
    def __init__(self): 
@@ -65,7 +65,7 @@ class TowardsCKANTag(sadi.Service):
       return result
 
    def getInputClass(self):
-      return ns.MOAT['Tag']
+      return ns.DATAFAQS['CKANGroup']
 
    def getOutputClass(self):
       return ns.DATAFAQS['FAqTServiceCollection']
@@ -74,12 +74,15 @@ class TowardsCKANTag(sadi.Service):
 
       print 'processing ' + input.subject
 
-      if len(input.moat_name) > 0:
+      if len(input.datafaqs_ckan_identifier) > 0:
          FAqTService = output.session.get_class(ns.DATAFAQS['FAqTService'])
-         if input.moat_name.first == 'lodcloud':
-            faqt = FAqTService('http://sparql.tw.rpi.edu/services/datafaqs/faqt/lodcloud/max-1-topic-tag')
-            faqt.save()
-            output.dcterms_hasPart.append(faqt)
+         faqts = [ 'http://sparql.tw.rpi.edu/services/datafaqs/faqt/lodcloud/max-1-topic-tag',
+                   'http://sparql.tw.rpi.edu/services/datafaqs/faqt/datascape/size-deprecated' ]
+         if input.datafaqs_ckan_identifier.first == 'lodcloud':
+            for faqt in faqts:
+               faqt = FAqTService(faqt)
+               faqt.save()
+               output.dcterms_hasPart.append(faqt)
 
       ####
       # Query a SPARQL endpoint
