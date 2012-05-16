@@ -56,10 +56,10 @@ class IdentityFAqTService(sadi.Service):
       Thing = self.getClass(ns.OWL['Thing'])
       #Thing = self.descriptionSession(ns.OWL['Thing'])
       wiki = Thing('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl')
-      wiki.save()
+      #wiki.save()
 
-      #desc.foaf_isPrimaryTopicOf.append(wiki) # Adding this destroys 'desc' as a resource in the model.
-      desc.save()
+      desc.foaf_isPrimaryTopicOf.append(wiki) # Adding this destroys 'desc' as a resource in the model.
+      #desc.save()
 
    def getInputClass(self):
       return ns.DATAFAQS['FAqTService']

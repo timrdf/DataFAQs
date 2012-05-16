@@ -116,17 +116,17 @@ class DatasetsByCKANTag(sadi.Service):
       if input.moat_name:
          print '   ' + input.moat_name.first
 
-         if self.lastCalled is None:
-            self.lastCalled = datetime.datetime.now()
+         #if self.lastCalled is None:
+         #   self.lastCalled = datetime.datetime.now()
 
-         else:
-            sinceLast = datetime.datetime.now() - self.lastCalled
-            if sinceLast.seconds < 60:
-               print ' was called before ' + str(sinceLast.seconds) + ' seconds ago (< 60); skipping'
-               self.doIt(output)
-               return
-            else:
-               print 'need to refresh'
+         #else:
+         #   sinceLast = datetime.datetime.now() - self.lastCalled
+         #   if sinceLast.seconds < 60:
+         #      print ' was called before ' + str(sinceLast.seconds) + ' seconds ago (< 60); skipping'
+               #self.doIt(output)
+               #return
+         #   else:
+         #      print 'need to refresh'
       
          Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
 
@@ -178,17 +178,34 @@ class DatasetsByCKANTag(sadi.Service):
 
          # Take 3 - ckan doesn't accept multiple tags in search. (or is too poorly documented)
          Tag = input.session.get_class(ns.MOAT['Tag'])
-         sets = {}
-         for tag in Tag.all():
-            self.ckan.package_search('tags:'+tag.moat_name.first)
-            tagged = self.ckan.last_message
+#         sets = {}
+#         for tag in Tag.all():
+#            self.ckan.package_search('tags:'+tag.moat_name.first)
+#            tagged = self.ckan.last_message
+#
+         #   sets[tag.moat_name.first] = set()
+         #   for dataset in tagged['results']:
+         #      #print tag.moat_name.first + ' : ' + dataset
+         #      sets[tag.moat_name.first].add(dataset)
+         #self.intersected = reduce(lambda x,y: x & y, sets.values())
+         #self.doIt(output)
 
-            sets[tag.moat_name.first] = set()
-            for dataset in tagged['results']:
-               #print tag.moat_name.first + ' : ' + dataset
-               sets[tag.moat_name.first].add(dataset)
-         self.intersected = reduce(lambda x,y: x & y, sets.values())
-         self.doIt(output)
+         # Take 4 - from Sean Hammond
+         query = ''
+         plus = ''
+         for tag in Tag.all():
+            query = query + plus + 'tags:' + tag.moat_name.first
+            plus = '+'
+         self.ckan.package_search(query) #self.ckan.package_search('tags:lod+tags:helpme')
+         tagged = self.ckan.last_message
+         for dataset in tagged['results']:
+            ckan_uri = 'http://thedatahub.org/dataset/' + dataset
+            dataset = Dataset(ckan_uri)
+            dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
+            dataset.rdf_type.append(ns.DCAT['Dataset'])
+            dataset.save()
+            output.dcterms_hasPart.append(dataset)
+         output.save()
 
    def doIt(self, output):
       Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
