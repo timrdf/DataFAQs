@@ -38,13 +38,20 @@ read -u 1 install_it
 if [ "$install_it" == "y" ]; then
    echo
 
-   echo sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
-   sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
+   
+   echo -n "Try to install sadi.py? (y/n) "
+   read -u 1 install_it
+   if [ "$install_it" == "y" ]; then
+      echo
+      echo sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
+      sudo easy_install 'http://sadi.googlecode.com/files/sadi-0.1.4-py2.6.egg' 
+   fi
    # installed:
    # SuRF-1.1.4_r352-py2.7.egg
    # surf.rdflib-1.0.0_r338-py2.7.egg 
    # rdflib-3.2.1-py2.7.egg
    # rdfextras-0.2-py2.7.egg
+   # rm -rf SuRF* surf.rdflib* rdflib* rdfextras*
 
    #echo sudo easy_install surf
    #sudo easy_install surf
@@ -64,11 +71,15 @@ if [ "$install_it" == "y" ]; then
    echo sudo easy_install -U surf.sparql_protocol
    sudo easy_install -U surf.sparql_protocol
 
-   echo sudo easy_install -U surf.allegro_franz
-   sudo easy_install -U surf.allegro_franz
-
-   # Still need allegrograph... :-(
-   # apt-get install python-cjson python-pycurl
+   echo -n "Try to install allegro graph .py? (y/n) "
+   read -u 1 install_it
+   if [ "$install_it" == "y" ]; then
+      echo WARNING: AG is bunk
+      #echo sudo easy_install -U surf.allegro_franz
+      #sudo easy_install -U surf.allegro_franz
+      # Still need allegrograph... :-(
+      # apt-get install python-cjson python-pycurl
+   fi
 fi
 
 echo -n "Try to install ckanclient? (y/n) "
