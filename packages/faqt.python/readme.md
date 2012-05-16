@@ -21,3 +21,7 @@ python setup.py bdist_egg
 to get dist/faqt-0.0.1-py2.7.egg
 
 (the '0.0.1' comes from setup.py's version attribute)
+
+## Install to system
+
+sudo easy_install dist/faqt-0.0.1-py2.7.egg
