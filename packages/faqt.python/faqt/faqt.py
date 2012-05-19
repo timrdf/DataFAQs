@@ -31,9 +31,10 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 class Service(sadi.Service):
 
-   servicePath    = None # This needs to be set by extending classes.
-   CODE_PAGE_BASE = 'https://github.com/timrdf/DataFAQs/blob/master/'
-   CODE_RAW_BASE  = 'https://raw.github.com/timrdf/DataFAQs/master/'
+   baseURI        = None # e.g. http://aquarius.tw.rpi.edu/projects/datafaqs
+   servicePath    = None # e.g. services/sadi/faqt/connected/
+   CODE_PAGE_BASE = None # e.g. https://github.com/timrdf/DataFAQs/blob/master/
+   CODE_RAW_BASE  = None # e.g. https://raw.github.com/timrdf/DataFAQs/master/
 
    startedLifeAt = None
 
@@ -41,10 +42,16 @@ class Service(sadi.Service):
       sadi.Service.__init__(self)
       self.startedLifeAt = datetime.datetime.utcnow()
 
+      self.baseURI = os.environ['DATAFAQS_BASE_URI'] if 'DATAFAQS_BASE_URI' in os.environ else None
+
+      self.CODE_RAW_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_RAW_BASE'] if 'DATAFAQS_PROVENANCE_CODE_RAW_BASE' in os.environ 
+                                                                           else 'https://github.com/timrdf/DataFAQs/blob/master/'
+
+      self.CODE_PAGE_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_PAGE_BASE'] if 'DATAFAQS_PROVENANCE_CODE_PAGE_BASE' in os.environ 
+                                                                             else 'https://raw.github.com/timrdf/DataFAQs/master/'
    def __init__(self, servicePath): 
-      sadi.Service.__init__(self)
+      self.__init__(self)
       self.servicePath   = servicePath
-      self.startedLifeAt = datetime.datetime.utcnow()
 
    def annotateServiceDescription(self, desc):
 
@@ -72,8 +79,9 @@ class Service(sadi.Service):
       Page        = desc.session.get_class(ns.FOAF['Page'])
 
       desc.dcterms_subject.append(Agent(''))
-      baseURI = os.environ['DATAFAQS_BASE_URI'] if 'DATAFAQS_BASE_URI' in os.environ else None
       desc.datafaqs_baseURI.append(str(baseURI))
+      desc.datafaqs_raw.append(str(self.CODE_RAW_BASE))
+      desc.datafaqs_page.append(str(self.CODE_PAGE_BASE))
 
       agent = Agent('')
       #agent.prov_generatedAtTime.append(self.startedLifeAt);
