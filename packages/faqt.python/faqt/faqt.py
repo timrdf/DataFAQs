@@ -47,8 +47,7 @@ class Service(sadi.Service):
 
       self.baseURI = os.environ['DATAFAQS_BASE_URI'] if 'DATAFAQS_BASE_URI' in os.environ else None
 
-      self.CODE_RAW_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_RAW_BASE'] if 'DATAFAQS_PROVENANCE_CODE_RAW_BASE' in os.environ else 'https://github.com/timrdf/DataFAQs/blob/master/'
-
+      self.CODE_RAW_BASE  = os.environ['DATAFAQS_PROVENANCE_CODE_RAW_BASE']  if 'DATAFAQS_PROVENANCE_CODE_RAW_BASE'  in os.environ else 'https://github.com/timrdf/DataFAQs/blob/master/'
       self.CODE_PAGE_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_PAGE_BASE'] if 'DATAFAQS_PROVENANCE_CODE_PAGE_BASE' in os.environ else 'https://raw.github.com/timrdf/DataFAQs/master/'
 
    def annotateServiceDescription(self, desc):
@@ -77,7 +76,7 @@ class Service(sadi.Service):
       Page        = desc.session.get_class(ns.FOAF['Page'])
 
       desc.dcterms_subject.append(Agent(''))
-      desc.datafaqs_baseURI.append(str(baseURI))
+      desc.datafaqs_baseURI.append(str(self.baseURI))
       desc.datafaqs_raw.append(str(self.CODE_RAW_BASE))
       desc.datafaqs_page.append(str(self.CODE_PAGE_BASE))
 
