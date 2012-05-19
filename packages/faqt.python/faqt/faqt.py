@@ -71,7 +71,7 @@ class Service(sadi.Service):
       attr.prov_agent   = agent
       attr.prov_hadPlan = plan
       if self.startedLifeAt is not None:
-         attr.dcterms_date.append(str(self.startedLifeAt))
+         attr.dcterms_date.append(str(self.startedLifeAt).replace(' ','T'))
       attr.save()
       desc.dcterms_subject.append(Agent(''))
       desc.save()
