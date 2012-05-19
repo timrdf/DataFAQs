@@ -86,6 +86,7 @@ class Service(sadi.Service):
          agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
          agent.rdf_type.append(ns.PROV['Agent'])
          agent.rdf_type.append(ns.FOAF['Agent'])
+         agent.rdfs_seeAlso.append(Thing('https://github.com/timrdf/DataFAQs/wiki/FAqT-Service'))
       else:
          agent = Agent('')
       agent.save()
@@ -94,7 +95,6 @@ class Service(sadi.Service):
       if self.servicePath is not None:
          plan = Plan(                    self.CODE_RAW_BASE  +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py')
          plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py'))
-         plan.rdfs_seeAlso.append(Thing('https://github.com/timrdf/DataFAQs/wiki/FAqT-Service'))
          plan.save()
 
       attribution = Attribution()
