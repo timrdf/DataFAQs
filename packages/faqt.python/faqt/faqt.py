@@ -79,9 +79,13 @@ class Service(sadi.Service):
       desc.datafaqs_raw.append(str(self.CODE_RAW_BASE))
       desc.datafaqs_page.append(str(self.CODE_PAGE_BASE))
 
-      agent = Agent('')
-      #agent.prov_generatedAtTime.append(self.startedLifeAt);
-      #agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
+      agent = None
+      if self.baseURI is not None and self.servicePath is not None and self.serviceNameText != '':
+         agent = Agent(self.baseURI +'/'+ self.servicePath +'/'+ self.serviceNameText)
+         agent.prov_generatedAtTime.append(self.startedLifeAt);
+         agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
+      else:
+         agent = Agent('')
       agent.save()
 
       plan = None
