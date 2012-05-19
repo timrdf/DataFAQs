@@ -43,9 +43,10 @@ if [ "$install_it" == "y" ]; then
    read -u 1 install_it
    if [ "$install_it" == "y" ]; then
       pythonV=`python --version 2>&1 | sed -e 's/Python //; s/..$//'`
-      echo
-      echo sudo easy_install "http://sadi.googlecode.com/files/sadi-0.1.4-py$pythonV.egg"
-      sudo easy_install "http://sadi.googlecode.com/files/sadi-0.1.4-py$pythonV.egg"
+      echo "installing sadi.python for python $pythonV"
+      # http://sadi.googlecode.com/files/sadi-0.1.4-py$pythonV.egg
+      echo sudo easy_install "https://github.com/timrdf/DataFAQs/raw/master/lib/sadi.python/sadi-0.1.5-py$pythonV.egg"
+           sudo easy_install "https://github.com/timrdf/DataFAQs/raw/master/lib/sadi.python/sadi-0.1.5-py$pythonV.egg"
    fi
    # installed:
    # SuRF-1.1.4_r352-py2.7.egg
