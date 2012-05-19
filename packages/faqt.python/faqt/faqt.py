@@ -66,6 +66,7 @@ class Service(sadi.Service):
       Page        = desc.session.get_class(ns.FOAF['Page'])
 
       desc.dcterms_subject.append(Agent(''))
+      desc.rdfs_comment.append(self.servicePath)
 
       agent = Agent('')
       #agent.prov_generatedAtTime.append(self.startedLifeAt);
