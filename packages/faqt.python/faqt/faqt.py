@@ -11,6 +11,7 @@ from surf import *
 from surf.query import select
 
 import rdflib
+from rdflib.namespace import XSD
 rdflib.plugin.register('sparql', rdflib.query.Processor,
                        'rdfextras.sparql.processor', 'Processor')
 rdflib.plugin.register('sparql', rdflib.query.Result,
@@ -36,7 +37,8 @@ class Service(sadi.Service):
 
    def __init__(self): 
       sadi.Service.__init__(self)
-      self.startedLifeAt = datetime.datetime.now()
+      #self.startedLifeAt = datetime.datetime.now()
+      self.startedLifeAt = datetime.utcnow()
 
    def annotateServiceDescription(self, desc):
 
@@ -71,7 +73,8 @@ class Service(sadi.Service):
       attr.prov_agent   = agent
       attr.prov_hadPlan = plan
       if self.startedLifeAt is not None:
-         attr.dcterms_date.append(str(self.startedLifeAt).replace(' ','T'))
+         #attr.dcterms_date.append(str(self.startedLifeAt).replace(' ','T'))
+         attr.dcterms_date.append(self.startedLifeAt)
       attr.save()
       desc.dcterms_subject.append(Agent(''))
       desc.save()
