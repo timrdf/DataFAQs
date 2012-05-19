@@ -29,7 +29,7 @@ from surf.query import select
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class IdentityFAqTService(sadi.Service):
+class IdentityFAqTService(faqt.Service):
 
    # Service metadata.
    label                  = 'identity'
