@@ -1,4 +1,5 @@
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy> .
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.py> .
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/DataFAQs-Core-Services> .
 #
 #3> <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
 #3>    a datafaqs:FAqTService .
@@ -10,6 +11,8 @@
 #3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
 #3>   ];
 #3> .
+
+import faqt
 
 import re
 import sadi
@@ -41,7 +44,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class WithPreferredURIAndCKANMetaVoid(sadi.Service):
+class WithPreferredURIAndCKANMetaVoid(faqt.Service):
 
    # Service metadata.
    label                  = 'with-preferred-uri-and-ckan-meta-void'
@@ -52,8 +55,8 @@ class WithPreferredURIAndCKANMetaVoid(sadi.Service):
                                                                     # Convention: Use the name of this file for this value.
    dev_port = 9099
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/core/augment-datasets')
 
       # Instantiate the CKAN client.
       key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
