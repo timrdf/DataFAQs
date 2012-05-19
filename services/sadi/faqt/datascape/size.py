@@ -57,8 +57,8 @@ class Size(faqt.Service):
                                    # Convention: Use the name of this file for this value.
    dev_port = 9223
 
-   def __init__(self): 
-      faqt.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/datascape')
 
    def getOrganization(self):
       result                      = self.Organization()
