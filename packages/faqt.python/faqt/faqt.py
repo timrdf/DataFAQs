@@ -114,13 +114,13 @@ class Service(sadi.Service):
          plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py'))
          plan.save()
 
-      attribution = Attribution('#'+self.uuid+'-activity')
+      attribution = Attribution('#'+str(self.uuid)+'-activity')
       attribution.prov_agent   = agent
       if plan is not None:
          attribution.prov_hadPlan = plan
       attribution.save()
 
-      activity = Activity('#'+self.uuid+'-activity')
+      activity = Activity('#'+str(self.uuid)+'-activity')
       if self.startedLifeAt is not None:
          activity.prov_startedAtTime.append(self.startedLifeAt)
       activity.prov_qualifiedAttribution.append(attribution)
