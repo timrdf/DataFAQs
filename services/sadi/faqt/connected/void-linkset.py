@@ -54,7 +54,8 @@ class VoIDLinkset(faqt.Service):
    dev_port = 9224
 
    def __init__(self): 
-      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/connected')
+      #faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/connected')
+      faqt.Service.__init__(self, 'services/sadi/faqt/connected')
 
    def getOrganization(self):
       result                      = self.Organization()
