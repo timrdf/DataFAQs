@@ -1,0 +1,12 @@
+prefix void: <http://rdfs.org/ns/void#>
+
+select ?from ?to ?overlap
+where {
+   ?from void:subset [ 
+      a void:Linkset; 
+      void:target  ?from, 
+                   ?to; 
+      void:triples ?overlap;
+   ] .
+   filter( ?from != ?to )
+}

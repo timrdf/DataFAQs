@@ -1,0 +1,66 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+    dct:creator [
+        foaf:name "Tim Lebo"
+    ] ;
+    dct:description """Longitude and latitude, state, address, name, and zip code of Farmers Markets in the United States, converted to RDF format.
+
+References [154 URIs](http://logd.tw.rpi.edu/sparql.php?query-option=text&query=PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0D%0APREFIX+conversion%3A+%3Chttp%3A%2F%2Fpurl.org%2Ftwc%2Fvocab%2Fconversion%2F%3E%0D%0ASELECT+distinct+%3Fexternal%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Chttp%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fversion%2F2011-Nov-29%3E++%7B%0D%0A++++%3Flocal+owl%3AsameAs+%3Fexternal%0D%0A++%7D%0D%0A%7D%0D%0Aorder+by+%3Fexternal&service-uri=&output=html&callback=&tqx=&tp=) in DBPedia, GovTrack, and Geonames.
+
+[7,223 farmers market URIs](http://logd.tw.rpi.edu/sparql.php?query-option=text&query=PREFIX+conversion%3A+%3Chttp%3A%2F%2Fpurl.org%2Ftwc%2Fvocab%2Fconversion%2F%3E%0D%0APREFIX+ds4383_vocab%3A+%3Chttp%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fvocab%2F%3E%0D%0ASELECT+distinct+%3Fmarket%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Chttp%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fversion%2F2011-Nov-29%3E+%7B%0D%0A++++%3Fmarket+a+ds4383_vocab%3AFarmersMarket+%0D%0A++%7D%0D%0A%7Dorder+by+%3Fmarket&service-uri=&output=html&callback=&tqx=&tp=) dereference to RDF/XML (e.g., see [vapour report](http://validator.linkeddata.org/vapour?vocabUri=http%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fversion%2F2011-Nov-29%2FfarmersMarket_1019&classUri=http%3A%2F%2F&propertyUri=http%3A%2F%2F&instanceUri=http%3A%2F%2F&defaultResponse=dontmind&userAgent=vapour.sourceforge.net) for [farmersMarket_1019](http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29/farmersMarket_1019)).""" ;
+    dct:identifier "farmers-markets-geographic-data-united-states" ;
+    dct:relation [
+        rdf:value "http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29/" ;
+        rdfs:label "namespace"
+    ], [
+        rdf:value "http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29" ;
+        rdfs:label "preferred_uri"
+    ], [
+        rdf:value "farmers-markets-geographic-data-united-states" ;
+        rdfs:label "shortname"
+    ], [
+        rdf:value "http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29" ;
+        rdfs:label "sparql_graph_name"
+    ], [
+        rdf:value "130005" ;
+        rdfs:label "triples"
+    ], [
+        rdf:value "52" ;
+        rdfs:label "links:dbpedia"
+    ], [
+        rdf:value "50" ;
+        rdfs:label "links:geonames-semantic-web"
+    ], [
+        rdf:value "52" ;
+        rdfs:label "links:govtrack"
+    ] ;
+    dct:rights <http://www.opendefinition.org/licenses/cc-by> ;
+    dct:title "Farmers Markets Geographic Data (United States)" ;
+    a dcat:Dataset ;
+    rdfs:label "farmers-markets-geographic-data-united-states" ;
+    owl:sameAs <urn:uuid:91d2c0de-75a4-4bb6-b260-bc2946e1be8b> ;
+    dcat:distribution [
+        a dcat:Distribution ;
+        dcat:accessURL <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.ttl>
+    ], [
+        a dcat:Distribution ;
+        dcat:accessURL <http://logd.tw.rpi.edu/sparql>
+    ], [
+        a dcat:Distribution ;
+        dcat:accessURL <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.void.ttl>
+    ], [
+        a dcat:Distribution ;
+        dcat:accessURL <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.void.ttl>
+    ], [
+        a dcat:Distribution ;
+        dcat:accessURL <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.e1.sample.ttl>
+    ] ;
+    dcat:keyword "format-con", "format-conversion", "format-dc", "format-ov", "format-owl", "format-void", "format-wgs", "geographic", "lod", "no-deref-vocab", "provenance-metadata", "published-by-third-party", "vocab-mappings" ;
+    foaf:homepage <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> .
+
