@@ -75,9 +75,9 @@ class Service(sadi.Service):
       Page        = desc.session.get_class(ns.FOAF['Page'])
 
       desc.dcterms_subject.append(Agent(''))
-      desc.datafaqs_baseURI.append(str(self.baseURI))
-      desc.datafaqs_raw.append(str(self.CODE_RAW_BASE))
-      desc.datafaqs_page.append(str(self.CODE_PAGE_BASE))
+      desc.datafaqs_x_baseURI.append(str(self.baseURI))
+      desc.datafaqs_x_raw.append(str(self.CODE_RAW_BASE))
+      desc.datafaqs_x_page.append(str(self.CODE_PAGE_BASE))
 
       agent = None
       if self.baseURI is not None and self.servicePath is not None and self.serviceNameText != '':
