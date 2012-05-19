@@ -51,7 +51,7 @@ class Service(sadi.Service):
 
       self.servicePath    = servicePath # No ending slash
 
-      self.uuid           = UUID.uuid()
+      self.uuid           = uuid.uuid()
       self.startedLifeAt  = datetime.datetime.utcnow()
 
       self.baseURI        = os.environ['DATAFAQS_BASE_URI']                  if 'DATAFAQS_BASE_URI'                  in os.environ \
