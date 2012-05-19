@@ -31,10 +31,16 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 class Service(sadi.Service):
 
+   # Shell environment variables override these.
    baseURI        = None # e.g. http://aquarius.tw.rpi.edu/projects/datafaqs
-   servicePath    = None # e.g.                                              services/sadi/faqt/connected
    CODE_PAGE_BASE = None # e.g. https://github.com/timrdf/DataFAQs/blob/master
    CODE_RAW_BASE  = None # e.g. https://raw.github.com/timrdf/DataFAQs/master
+
+   # Passed in by any class extending this class.
+                      #      http://aquarius.tw.rpi.edu/projects/datafaqs
+                      #                                                  /
+   servicePath = None # e.g.                                              services/sadi/faqt/connected
+                      #                                                                               /void-linkset
 
    startedLifeAt = None
 
@@ -80,7 +86,10 @@ class Service(sadi.Service):
       desc.datafaqs_x_page.append(str(self.CODE_PAGE_BASE))
 
       agent = None
-      if self.baseURI is not None and self.servicePath is not None and self.serviceNameText != '':
+      if self.baseURI     is not None and self.baseURI != '' and 
+         self.servicePath is not None and self.servicePath != '' and
+         self.serviceNameText != '':
+         # If we can figure out the URI for this service, talk about it.
          agent = Agent(self.baseURI +'/datafaqs/'+ self.servicePath +'/'+ self.serviceNameText)
          agent.prov_generatedAtTime.append(self.startedLifeAt);
          agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
@@ -88,11 +97,13 @@ class Service(sadi.Service):
          agent.rdf_type.append(ns.FOAF['Agent'])
          agent.rdfs_seeAlso.append(Thing('https://github.com/timrdf/DataFAQs/wiki/FAqT-Service'))
       else:
+         # Otherwise, we can only point to it (and not describe it) because of a SuRF/rdflib error.
          agent = Agent('')
       agent.save()
 
       plan = None
       if self.servicePath is not None:
+         # servicePath is passed in by any class extending faqt.python
          plan = Plan(                    self.CODE_RAW_BASE  +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py')
          plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py'))
          plan.save()
