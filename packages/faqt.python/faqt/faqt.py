@@ -19,6 +19,7 @@ rdflib.plugin.register('sparql', rdflib.query.Result,
 
 import datetime
 import os
+import UUID
 
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
@@ -42,6 +43,7 @@ class Service(sadi.Service):
    servicePath = None # e.g.                                              services/sadi/faqt/connected
                       #                                                                               /void-linkset
 
+   uuid          = None
    startedLifeAt = None
 
    def __init__(self, servicePath): 
@@ -49,6 +51,7 @@ class Service(sadi.Service):
 
       self.servicePath    = servicePath # No ending slash
 
+      self.uuid           = UUID.uuid()
       self.startedLifeAt  = datetime.datetime.utcnow()
 
       self.baseURI        = os.environ['DATAFAQS_BASE_URI']                  if 'DATAFAQS_BASE_URI'                  in os.environ \
@@ -89,7 +92,7 @@ class Service(sadi.Service):
       desc.datafaqs_x_page.append(str(self.CODE_PAGE_BASE))
 
       agent = None
-      if self.baseURI     is not None and self.baseURI != '' and  \
+      if self.baseURI     is not None and self.baseURI     != '' and \
          self.servicePath is not None and self.servicePath != '' and \
          self.serviceNameText != '':
          # If we can figure out the URI for this service, talk about it.
@@ -111,13 +114,13 @@ class Service(sadi.Service):
          plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py'))
          plan.save()
 
-      attribution = Attribution()
+      attribution = Attribution('#'+self.uuid+'-activity')
       attribution.prov_agent   = agent
       if plan is not None:
          attribution.prov_hadPlan = plan
       attribution.save()
 
-      activity = Activity()
+      activity = Activity('#'+self.uuid+'-activity')
       if self.startedLifeAt is not None:
          activity.prov_startedAtTime.append(self.startedLifeAt)
       activity.prov_qualifiedAttribution.append(attribution)
