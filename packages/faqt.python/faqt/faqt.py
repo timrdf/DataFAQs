@@ -32,23 +32,22 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 class Service(sadi.Service):
 
    baseURI        = None # e.g. http://aquarius.tw.rpi.edu/projects/datafaqs
-   servicePath    = None # e.g. services/sadi/faqt/connected/
-   CODE_PAGE_BASE = None # e.g. https://github.com/timrdf/DataFAQs/blob/master/
-   CODE_RAW_BASE  = None # e.g. https://raw.github.com/timrdf/DataFAQs/master/
+   servicePath    = None # e.g.                                              services/sadi/faqt/connected
+   CODE_PAGE_BASE = None # e.g. https://github.com/timrdf/DataFAQs/blob/master
+   CODE_RAW_BASE  = None # e.g. https://raw.github.com/timrdf/DataFAQs/master
 
    startedLifeAt = None
 
    def __init__(self, servicePath): 
       sadi.Service.__init__(self)
 
-      self.servicePath   = servicePath
+      self.servicePath    = servicePath # No ending slash
 
-      self.startedLifeAt = datetime.datetime.utcnow()
+      self.startedLifeAt  = datetime.datetime.utcnow()
 
-      self.baseURI = os.environ['DATAFAQS_BASE_URI'] if 'DATAFAQS_BASE_URI' in os.environ else None
-
-      self.CODE_RAW_BASE  = os.environ['DATAFAQS_PROVENANCE_CODE_RAW_BASE']  if 'DATAFAQS_PROVENANCE_CODE_RAW_BASE'  in os.environ else 'https://github.com/timrdf/DataFAQs/blob/master/'
-      self.CODE_PAGE_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_PAGE_BASE'] if 'DATAFAQS_PROVENANCE_CODE_PAGE_BASE' in os.environ else 'https://raw.github.com/timrdf/DataFAQs/master/'
+      self.baseURI        = os.environ['DATAFAQS_BASE_URI']                  if 'DATAFAQS_BASE_URI'                  in os.environ else None
+      self.CODE_RAW_BASE  = os.environ['DATAFAQS_PROVENANCE_CODE_RAW_BASE']  if 'DATAFAQS_PROVENANCE_CODE_RAW_BASE'  in os.environ else 'https://github.com/timrdf/DataFAQs/blob/master'
+      self.CODE_PAGE_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_PAGE_BASE'] if 'DATAFAQS_PROVENANCE_CODE_PAGE_BASE' in os.environ else 'https://raw.github.com/timrdf/DataFAQs/master'
 
    def annotateServiceDescription(self, desc):
 
@@ -87,8 +86,8 @@ class Service(sadi.Service):
 
       plan = None
       if self.servicePath is not None:
-         plan = Plan(                    self.CODE_RAW_BASE  + self.servicePath + self.serviceNameText + '.py')
-         plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE + self.servicePath + self.serviceNameText + '.py'))
+         plan = Plan(                    self.CODE_RAW_BASE  +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py')
+         plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py'))
          plan.save()
 
       attribution = Attribution()
