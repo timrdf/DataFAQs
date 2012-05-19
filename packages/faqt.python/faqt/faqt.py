@@ -30,8 +30,9 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 class Service(sadi.Service):
 
-   CODE_PAGE_BASE = 'https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/datascape/'
-   CODE_RAW_BASE  = 'https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/datascape/'
+   servicePath    = None # This needs to be set by extending classes.
+   CODE_PAGE_BASE = 'https://github.com/timrdf/DataFAQs/blob/master/'
+   CODE_RAW_BASE  = 'https://raw.github.com/timrdf/DataFAQs/master/'
 
    startedLifeAt = None
 
@@ -67,17 +68,20 @@ class Service(sadi.Service):
       desc.dcterms_subject.append(Agent(''))
 
       agent = Agent('')
-      agent.prov_generatedAtTime.append(self.startedLifeAt);
+      #agent.prov_generatedAtTime.append(self.startedLifeAt);
       #agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
       agent.save()
 
-      plan = Plan(self.CODE_PAGE_BASE + self.serviceNameText + '.py')
-      plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE + self.serviceNameText + '.py'))
-      plan.save()
+      plan = None
+      if self.servicePath is not None:
+         plan = Plan(                    self.CODE_RAW_BASE  + self.servicePath + self.serviceNameText + '.py')
+         plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE + self.servicePath + self.serviceNameText + '.py'))
+         plan.save()
 
       attribution = Attribution()
       attribution.prov_agent   = agent
-      attribution.prov_hadPlan = plan
+      if plan is not None:
+         attribution.prov_hadPlan = plan
       attribution.save()
 
       activity = Activity()
