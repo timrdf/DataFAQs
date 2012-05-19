@@ -72,7 +72,7 @@ class Service(sadi.Service):
       Page        = desc.session.get_class(ns.FOAF['Page'])
 
       desc.dcterms_subject.append(Agent(''))
-      baseURI = os.environ['DATAFAQS_BASE_URI']
+      baseURI = 'DATAFAQS_BASE_URI' in os.environ ? os.environ['DATAFAQS_BASE_URI'] : None
       desc.datafaqs_baseURI.append(str(baseURI))
 
       agent = Agent('')
