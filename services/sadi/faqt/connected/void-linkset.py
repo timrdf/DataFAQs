@@ -45,7 +45,6 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 class VoIDLinkset(faqt.Service):
 
    # Service metadata.
-   servicePath            = 'services/sadi/faqt/connected/'
    label                  = 'void-linkset'
    serviceDescriptionText = 'Passes datasets that have void:subset [ a void:Linkset; void:target ?t; void:triples ?x ].'
    comment                = 'Only looks at the metadata given; does not analyze the data elements themselves.'
@@ -56,6 +55,7 @@ class VoIDLinkset(faqt.Service):
 
    def __init__(self): 
       faqt.Service.__init__(self)
+      servicePath = 'services/sadi/faqt/connected/'
 
    def getOrganization(self):
       result                      = self.Organization()
