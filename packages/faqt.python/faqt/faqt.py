@@ -40,6 +40,10 @@ class Service(sadi.Service):
       sadi.Service.__init__(self)
       self.startedLifeAt = datetime.datetime.utcnow()
 
+   def __init__(self, servicePath): 
+      __init__(self)
+      self.servicePath = servicePath
+
    def annotateServiceDescription(self, desc):
 
       #3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
