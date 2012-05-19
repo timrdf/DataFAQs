@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/packages/faqt.python/faqt/faqt.py> .
+#3>
+#3> <https://raw.github.com/timrdf/DataFAQs/master/packages/faqt.python/faqt/faqt.py>
+#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/packages/faqt.python/faqt/faqt.py> .
+
 import sadi
 from rdflib import *
 import surf
@@ -25,12 +30,29 @@ class Service(sadi.Service):
    CODE_PAGE_BASE = 'https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/datascape/'
    CODE_RAW_BASE  = 'https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/datascape/'
 
-   startedLifeAt = 'TODO' #None
+   startedLifeAt = None
 
    def __init__(self): 
       sadi.Service.__init__(self)
+      self.startedLifeAt = datetime.datetime.now()
 
    def annotateServiceDescription(self, desc):
+
+      #3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
+      #3>    a datafaqs:FAqTService .
+      #3> []
+      #3>    a prov:Activity;
+      #3>    prov:qualifiedAttribution [
+      #3>       a prov:Attribution;
+      #3>       prov:entity  <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
+      #3>       prov:hadPlan <#TEMPLATE/path/to/public/source-code.rpy>;
+      #3>    ];
+      #3> .
+      #3> <#TEMPLATE/path/to/public/source-code.rpy>
+      #3>    a prov:Plan;
+      #3>    foaf:homepage <#TEMPLATE/path/to/public/HOMEPAGE-FOR/source-code.rpy>;
+      #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
       Thing       = desc.session.get_class(ns.OWL['Thing'])
       Attribution = desc.session.get_class(ns.PROV['Attribution'])
       Entity      = desc.session.get_class(ns.PROV['Entity'])
@@ -46,7 +68,8 @@ class Service(sadi.Service):
       attr = Attribution()
       attr.prov_agent   = agent
       attr.prov_hadPlan = plan
-      attr.dcterms_date.append(str(self.startedLifeAt))
+      if self.startedLifeAt is not None:
+         attr.dcterms_date.append(str(self.startedLifeAt))
       attr.save()
       desc.dcterms_subject.append(Agent(''))
       desc.save()
