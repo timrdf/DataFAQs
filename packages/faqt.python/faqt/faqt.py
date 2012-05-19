@@ -19,7 +19,7 @@ rdflib.plugin.register('sparql', rdflib.query.Result,
 
 import datetime
 import os
-import UUID
+import uuid
 
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
