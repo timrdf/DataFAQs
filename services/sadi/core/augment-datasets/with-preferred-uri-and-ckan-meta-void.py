@@ -59,8 +59,9 @@ class WithPreferredURIAndCKANMetaVoid(faqt.Service):
       faqt.Service.__init__(self, servicePath = 'services/sadi/core/augment-datasets')
 
       # Instantiate the CKAN client.
-      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-      self.ckan = ckanclient.CkanClient(api_key = key)
+      #key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #self.ckan = ckanclient.CkanClient(api_key = key)
+      self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
       result                      = self.Organization()
