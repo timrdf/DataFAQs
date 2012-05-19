@@ -38,7 +38,7 @@ class Service(sadi.Service):
    def __init__(self): 
       sadi.Service.__init__(self)
       #self.startedLifeAt = datetime.datetime.now()
-      self.startedLifeAt = datetime.utcnow()
+      self.startedLifeAt = datetime.datetime.utcnow()
 
    def annotateServiceDescription(self, desc):
 
