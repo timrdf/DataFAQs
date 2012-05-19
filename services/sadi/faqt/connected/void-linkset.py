@@ -45,9 +45,10 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 class VoIDLinkset(faqt.Service):
 
    # Service metadata.
+   servicePath            = 'services/sadi/faqt/connected/'
    label                  = 'void-linkset'
    serviceDescriptionText = 'Passes datasets that have void:subset [ a void:Linkset; void:target ?t; void:triples ?x ].'
-   comment                = 'Only looks at the metadata give; does not analyze the data elements themselves.'
+   comment                = 'Only looks at the metadata given; does not analyze the data elements themselves.'
    serviceNameText        = 'void-linkset' # Convention: Match 'name' below.
    name                   = 'void-linkset' # This value determines the service URI relative to http://localhost:9090/
                                            # Convention: Use the name of this file for this value.
