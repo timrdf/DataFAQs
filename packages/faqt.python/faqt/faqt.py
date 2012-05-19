@@ -51,7 +51,7 @@ class Service(sadi.Service):
 
       self.servicePath    = servicePath # No ending slash
 
-      self.uuid           = uuid.uuid1()
+      self.uuid           = str(uuid.uuid1())
       self.startedLifeAt  = datetime.datetime.utcnow()
 
       self.baseURI        = os.environ['DATAFAQS_BASE_URI']                  if 'DATAFAQS_BASE_URI'                  in os.environ \
@@ -114,13 +114,13 @@ class Service(sadi.Service):
          plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE +'/'+ self.servicePath +'/'+ self.serviceNameText + '.py'))
          plan.save()
 
-      attribution = Attribution('#'+str(self.uuid)+'-activity')
+      attribution = Attribution('#attribution-'+self.uuid)
       attribution.prov_agent   = agent
       if plan is not None:
          attribution.prov_hadPlan = plan
       attribution.save()
 
-      activity = Activity('#'+str(self.uuid)+'-activity')
+      activity = Activity('#activity'+self.uuid)
       if self.startedLifeAt is not None:
          activity.prov_startedAtTime.append(self.startedLifeAt)
       activity.prov_qualifiedAttribution.append(attribution)
