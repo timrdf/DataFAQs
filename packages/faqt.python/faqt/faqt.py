@@ -120,7 +120,7 @@ class Service(sadi.Service):
          attribution.prov_hadPlan = plan
       attribution.save()
 
-      activity = Activity('#activity'+self.uuid)
+      activity = Activity('#activity-'+self.uuid)
       if self.startedLifeAt is not None:
          activity.prov_startedAtTime.append(self.startedLifeAt)
       activity.prov_qualifiedAttribution.append(attribution)
