@@ -41,8 +41,9 @@ class Service(sadi.Service):
       self.startedLifeAt = datetime.datetime.utcnow()
 
    def __init__(self, servicePath): 
-      __init__(self)
-      self.servicePath = servicePath
+      sadi.Service.__init__(self)
+      self.servicePath   = servicePath
+      self.startedLifeAt = datetime.datetime.utcnow()
 
    def annotateServiceDescription(self, desc):
 
