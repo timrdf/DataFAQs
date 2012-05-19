@@ -37,7 +37,6 @@ class Service(sadi.Service):
 
    def __init__(self): 
       sadi.Service.__init__(self)
-      #self.startedLifeAt = datetime.datetime.now()
       self.startedLifeAt = datetime.datetime.utcnow()
 
    def annotateServiceDescription(self, desc):
@@ -48,7 +47,7 @@ class Service(sadi.Service):
       #3>    a prov:Activity;
       #3>    prov:qualifiedAttribution [
       #3>       a prov:Attribution;
-      #3>       prov:entity  <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
+      #3>       prov:agent   <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
       #3>       prov:hadPlan <#TEMPLATE/path/to/public/source-code.rpy>;
       #3>    ];
       #3> .
@@ -68,6 +67,7 @@ class Service(sadi.Service):
       desc.dcterms_subject.append(Agent(''))
 
       agent = Agent('')
+      agent.prov_generatedAtTime.append(self.startedLifeAt);
       #agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
       agent.save()
 
