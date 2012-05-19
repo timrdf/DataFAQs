@@ -84,6 +84,8 @@ class Service(sadi.Service):
          agent = Agent(self.baseURI +'/'+ self.servicePath +'/'+ self.serviceNameText)
          agent.prov_generatedAtTime.append(self.startedLifeAt);
          agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
+         agent.rdf_type.append(ns.PROV['Agent'])
+         agent.rdf_type.append(ns.FOAF['Agent'])
       else:
          agent = Agent('')
       agent.save()
