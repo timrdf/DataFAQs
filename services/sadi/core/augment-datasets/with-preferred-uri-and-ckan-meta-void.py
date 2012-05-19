@@ -59,8 +59,6 @@ class WithPreferredURIAndCKANMetaVoid(faqt.Service):
       faqt.Service.__init__(self, servicePath = 'services/sadi/core/augment-datasets')
 
       # Instantiate the CKAN client.
-      #key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-      #self.ckan = ckanclient.CkanClient(api_key = key)
       self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
@@ -78,6 +76,14 @@ class WithPreferredURIAndCKANMetaVoid(faqt.Service):
 
    def process(self, input, output):
    
+      print 'processing ' + input.subject
+
+      # Fetch the dataset description (no API key required for read-only)
+      #self.ckan.package_entity_get('farmers-markets-geographic-data-united-states')
+      #package_entity = self.ckan.last_message
+      #print package_entity
+
+
       # Dereference (e.g., from thedatahub.org)
       store   = surf.Store(reader = 'rdflib', writer = 'rdflib', rdflib_store = 'IOMemory')
       session = surf.Session(store)

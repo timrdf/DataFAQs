@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://ckan.net/group/datafaqs> a <http://purl.org/twc/vocab/datafaqs#Composite>;
+    dcterms:hasPart 
+        <http://thedatahub.org/dataset/congresspeople>,
+        <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
+        <http://thedatahub.org/dataset/white-house-visitor-access-records> .
+
+<http://thedatahub.org/dataset/congresspeople>                                a <http://www.w3.org/ns/dcat#Dataset> .
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> a <http://www.w3.org/ns/dcat#Dataset> .
+<http://thedatahub.org/dataset/white-house-visitor-access-records>            a <http://www.w3.org/ns/dcat#Dataset> .
