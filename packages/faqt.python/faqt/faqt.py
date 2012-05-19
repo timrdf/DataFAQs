@@ -86,8 +86,8 @@ class Service(sadi.Service):
       desc.datafaqs_x_page.append(str(self.CODE_PAGE_BASE))
 
       agent = None
-      if self.baseURI     is not None and self.baseURI != '' and 
-         self.servicePath is not None and self.servicePath != '' and
+      if self.baseURI     is not None and self.baseURI != '' and  \
+         self.servicePath is not None and self.servicePath != '' and \
          self.serviceNameText != '':
          # If we can figure out the URI for this service, talk about it.
          agent = Agent(self.baseURI +'/datafaqs/'+ self.servicePath +'/'+ self.serviceNameText)
