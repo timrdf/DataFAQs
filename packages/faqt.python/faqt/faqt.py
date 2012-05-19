@@ -67,7 +67,7 @@ class Service(sadi.Service):
 
       desc.dcterms_subject.append(Agent(''))
 
-      agent = Agent('#')
+      agent = Agent('')
       #agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
       agent.save()
 
