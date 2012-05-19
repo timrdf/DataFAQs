@@ -18,6 +18,7 @@ rdflib.plugin.register('sparql', rdflib.query.Result,
                        'rdfextras.sparql.query', 'SPARQLQueryResult')
 
 import datetime
+import os
 
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
@@ -71,7 +72,8 @@ class Service(sadi.Service):
       Page        = desc.session.get_class(ns.FOAF['Page'])
 
       desc.dcterms_subject.append(Agent(''))
-      desc.datafaqs_comment.append(str(self.servicePath))
+      baseURI = os.environ['DATAFAQS_BASE_URI']
+      desc.datafaqs_baseURI.append(str(baseURI))
 
       agent = Agent('')
       #agent.prov_generatedAtTime.append(self.startedLifeAt);
