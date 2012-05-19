@@ -14,6 +14,8 @@
 #3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.rpy>
 #3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/identity.rpy> .
 
+import faqt
+
 import re
 import sadi
 from rdflib import *
@@ -37,7 +39,7 @@ class IdentityFAqTService(sadi.Service):
    name                   = 'identity' # This value determines the service URI relative to http://localhost:9090/
                                        # Convention: Use the name of this file for this value.
    def __init__(self): 
-      sadi.Service.__init__(self)
+      faqt.Service.__init__(self, servicePath = 'services/sadi/core/select-faqts')
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -45,21 +47,6 @@ class IdentityFAqTService(sadi.Service):
       result.protegedc_creator    = 'lebot@rpi.edu'
       result.save()
       return result
-
-   def annotateServiceDescription(self, desc):
-
-      # Works fine.
-      desc.rdfs_comment.append('in annotateServiceDescription')
-
-      #desc.rdfs_seeAlso(URIRef('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl'))
-      #Thing = desc.session.get_class(ns.OWL['Thing'])
-      Thing = self.getClass(ns.OWL['Thing'])
-      #Thing = self.descriptionSession(ns.OWL['Thing'])
-      wiki = Thing('https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/identity.ttl')
-      #wiki.save()
-
-      desc.foaf_isPrimaryTopicOf.append(wiki) # Adding this destroys 'desc' as a resource in the model.
-      #desc.save()
 
    def getInputClass(self):
       return ns.DATAFAQS['FAqTService']
