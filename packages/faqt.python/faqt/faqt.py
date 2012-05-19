@@ -78,6 +78,7 @@ class Service(sadi.Service):
       Activity    = desc.session.get_class(ns.PROV['Activity'])
       Attribution = desc.session.get_class(ns.PROV['Attribution'])
       Agent       = desc.session.get_class(ns.PROV['Agent'])
+      FAqTService = desc.session.get_class(ns.DATAFAQS['FAqTService'])
       Plan        = desc.session.get_class(ns.PROV['Plan'])
       Entity      = desc.session.get_class(ns.PROV['Entity'])
       Page        = desc.session.get_class(ns.FOAF['Page'])
@@ -100,7 +101,7 @@ class Service(sadi.Service):
          agent.rdfs_seeAlso.append(Thing('https://github.com/timrdf/DataFAQs/wiki/FAqT-Service'))
       else:
          # Otherwise, we can only point to it (and not describe it) because of a SuRF/rdflib error.
-         agent = Agent('')
+         agent = FAqTService('')
       agent.save()
 
       plan = None
