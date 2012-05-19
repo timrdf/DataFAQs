@@ -58,23 +58,32 @@ class Service(sadi.Service):
       #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 
       Thing       = desc.session.get_class(ns.OWL['Thing'])
+      Activity    = desc.session.get_class(ns.PROV['Activity'])
       Attribution = desc.session.get_class(ns.PROV['Attribution'])
-      Entity      = desc.session.get_class(ns.PROV['Entity'])
-      Plan        = desc.session.get_class(ns.PROV['Plan'])
       Agent       = desc.session.get_class(ns.PROV['Agent'])
+      Plan        = desc.session.get_class(ns.PROV['Plan'])
+      Entity      = desc.session.get_class(ns.PROV['Entity'])
       Page        = desc.session.get_class(ns.FOAF['Page'])
-      plan = Plan(self.CODE_PAGE_BASE + self.serviceNameText + '.py')
-      plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE + self.serviceNameText + '.py'))
-      plan.save()
+
+      desc.dcterms_subject.append(Agent(''))
+
       agent = Agent('#')
       #agent.rdf_type.append(ns.DATAFAQS['FAqTService'])
       agent.save()
-      attr = Attribution()
-      attr.prov_agent   = agent
-      attr.prov_hadPlan = plan
+
+      plan = Plan(self.CODE_PAGE_BASE + self.serviceNameText + '.py')
+      plan.foaf_homepage.append(Thing(self.CODE_PAGE_BASE + self.serviceNameText + '.py'))
+      plan.save()
+
+      attribution = Attribution()
+      attribution.prov_agent   = agent
+      attribution.prov_hadPlan = plan
+      attribution.save()
+
+      activity = Activity()
       if self.startedLifeAt is not None:
-         #attr.dcterms_date.append(str(self.startedLifeAt).replace(' ','T'))
-         attr.dcterms_date.append(self.startedLifeAt)
-      attr.save()
-      desc.dcterms_subject.append(Agent(''))
+         activity.prov_startedAtTime.append(self.startedLifeAt)
+      activity.prov_qualifiedAttribution.append(attribution)
+      activity.save()
+
       desc.save()
