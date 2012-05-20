@@ -131,7 +131,7 @@ if type in [ 'faqt-selectors'          'dataset-selectors'        'dataset-refer
       if len(bindings) == 2:
          print bindings[0] + ' ' + bindings[1]
       else:
-         print bindings
+         print bindings[0]
 elif type in [ 'faqt-selector-inputs', 'dataset-selector-inputs', 'dataset-referencer-inputs']: 
    query = '''
 select distinct ?input where {
@@ -190,7 +190,7 @@ select distinct ?dataset where {
             count = 0
             block += 1
       else:
-         print bindings
+         print bindings[0]
 else: # faqt-selectors and dataset-selectors and dataset-referencers
    # DEPRECATED use above
    results = graph.query(queries[type], initNs=prefixes)
@@ -198,4 +198,4 @@ else: # faqt-selectors and dataset-selectors and dataset-referencers
       if len(bindings) == 2:
          print bindings[0] + ' ' + bindings[1]
       else:
-         print bindings
+         print bindings[0]

@@ -181,6 +181,8 @@ fi
 
 ACCEPT_HEADER="Accept: text/turtle; application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6"
+ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6, */*; q=0.4"
+ACCEPT_HEADER="Accept: application/rdf+xml, text/rdf;q=0.6, */*;q=0.1" # This is what rapper uses.
 
 # # # #
 
@@ -314,10 +316,11 @@ if [ "$epoch_existed" != "true" ]; then
 
    for dataset_referencer in `df-core.py epoch.ttl.rdf dataset-referencers`; do
       # TODO: this for loop expects just one value. It needs to be generalized to more.
-      echo "[INFO] Requesting dataset references from  $dataset_referencer"
+      echo "[INFO] Requesting dataset references  from $dataset_referencer"
       send="$epochDir/datasets.ttl"
       mime=`guess-syntax.sh $send mime`
       rsyn=`guess-syntax.sh $send rapper`
+      # TODO: they aren't accepting conneg!
       echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $dataset_referencer"                                          > $epochDir/dataset-references.sh
       rapper -q $rsyn -o rdfxml $send > $epochDir/datasets.ttl.rdf
       pushd $epochDir &> /dev/null
@@ -331,7 +334,15 @@ if [ "$epoch_existed" != "true" ]; then
             for post in dataset-references.post*; do
                let "count=count+1"
                echo "[INFO] Following rdfs:seeAlso references for datasets listed in $post ($count/$total)"
-               curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $dataset_referencer                                        >> dataset-references.ttl
+               #curl -s -H "Content-Type: $mime" -H 'Accept: text/turtle' -d @$post $dataset_referencer                                        >> dataset-references.ttl
+               # TODO: they aren't accepting conneg!
+               curl -s -H "Content-Type: $mime" -d @$post $dataset_referencer                                                                  >> b.ttl
+               if [ `void-triples.sh b.ttl` -le 0 ]; then
+                  echo "[WARNING] Could not find triples in response."
+               else
+                  cat b.ttl                                                                                                                    >> dataset-references.ttl
+               fi
+               rm b.ttl
             done
          else
             echo "[ERROR] $epochDir/datasets.ttl.rdf did not list any datasets."
@@ -342,7 +353,12 @@ if [ "$epoch_existed" != "true" ]; then
       echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
       triples=`void-triples.sh $dir/dataset-references.ttl`
       df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}                 > $epochDir/dataset-references.meta.ttl
-      rapper -q -g -o ntriples $epochDir/dataset-references.ttl | sed 's/<//g; s/>//g'                                                        > $epochDir/dataset-references.ttl.nt
+      if [ `void-triples.sh b.ttl` -le 0 ]; then
+         echo "[WARNING] $epochDir/dataset-references.ttl did not provide any references."
+         touch                                                                                                                                  $epochDir/dataset-references.ttl.nt
+      else
+         rapper -q -g -o ntriples $epochDir/dataset-references.ttl | sed 's/<//g; s/>//g'                                                     > $epochDir/dataset-references.ttl.nt
+      fi
       # moved to datasets.ttl above: cat $epochDir/dataset-references.ttl.nt | grep "vocab/datafaqs#WithReferences *\." | awk '{print $1}' | grep "^http://" | sort -u > $epochDir/datasets.ttl.csv
    done
 
@@ -481,31 +497,40 @@ if [ "$epoch_existed" != "true" ]; then
             fi
             s=0 # see also
             file="part-$s"
-            curl -s -L -H "$ACCEPT_HEADER" $dataset > $file
-            extension=`guess-syntax.sh --inspect $file extension`
-            head -1 $file | awk '{print "   "$0}'
-            mv $file $file.$extension                                                                                      # part-0
-            rapper -q -g -o turtle "$file.$extension" > post.ttl
-            for reference in `cat references.nt.csv`; do
-               let 's=s+1'
-               file="part-$s"
-               echo "   $s: $reference"
-               curl -s -L -H "$ACCEPT_HEADER" $reference > "$file"
-               head -1 $file | awk '{print "      "$0}'
-               extension=`guess-syntax.sh --inspect "$file" extension`
-               mimetype=`guess-syntax.sh --inspect "$file" mime`
-               mv $file $file.$extension                                                                                   # part-{1,2,3,...}.{ttl,rdf,nt}
-               rapper -q -g -o turtle $file.$extension >> post.ttl                                                         # post.ttl
-            done
-            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d" > post.ttl.sd_name                                  # post.ttl.sd_name 
-            triples=`void-triples.sh post.ttl`
-            dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
-            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples > post.meta.ttl  # post.meta.ttl 
-            if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-               df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
-               df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
+            echo "curl -s -L -H \"$ACCEPT_HEADER\" $dataset > $file" > get-$file.sh
+            source get-$file.sh
+            triples=`void-triples.sh $file`
+            if [ "$triples" -gt 0 ]; then
+               extension=`guess-syntax.sh --inspect $file extension`
+               head -1 $file | awk '{print "   "$0}'
+               mv $file $file.$extension                                                                                      # part-0
+               echo a
+               rapper -q -g -o turtle "$file.$extension" > post.ttl
+               for reference in `cat references.nt.csv`; do
+                  let 's=s+1'
+                  file="part-$s"
+                  echo "   $s: $reference"
+                  curl -s -L -H "$ACCEPT_HEADER" $reference > "$file"
+                  head -1 $file | awk '{print "      "$0}'
+                  extension=`guess-syntax.sh --inspect "$file" extension`
+                  #mimetype=`guess-syntax.sh --inspect "$file" mime`
+                  mv $file $file.$extension                                                                                # part-{1,2,3,...}.{ttl,rdf,nt}
+                  echo b
+                  rapper -q -g -o turtle $file.$extension >> post.ttl                                                      # post.ttl
+               done
+               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d" > post.ttl.sd_name                                  # post.ttl.sd_name 
+               triples=`void-triples.sh post.ttl`
+               dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
+               df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples > post.meta.ttl  # post.meta.ttl 
+               if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+                  df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+                  df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
+               fi
+               echo c
+               rapper -q -g -o rdfxml post.ttl > post.ttl.rdf                                                                 # post.ttl.rdf
+            else
+               echo "[WARNING]: no triples found in $epochDir/__PIVOT_dataset/$datasetDir/$file"
             fi
-            rapper -q -g -o rdfxml post.ttl > post.ttl.rdf                                                                 # post.ttl.rdf
          popd &> /dev/null
          echo
       done # end datasets
