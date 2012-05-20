@@ -1,5 +1,7 @@
 # https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/internet-domain.rpy
 
+import faqt
+
 from urlparse import urlparse
 from surf import *
 import sadi
@@ -11,7 +13,7 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 #ns.register(datafaqs='http://sparql.tw.rpi.edu/test/datafaqs.owl#')
 
 # The Service itself
-class VocabularyResolvesToDescription(sadi.Service):
+class VocabularyResolvesToDescription(faqt.Service):
 
    # Service metadata.
    label                  = 'vocabulary-resolves-to-description'
@@ -20,8 +22,8 @@ class VocabularyResolvesToDescription(sadi.Service):
    serviceNameText        = 'vocabulary-resolves-to-description' # Convention: Match 'name' below.
    name                   = 'vocabulary-resolves-to-description' # This value determines the service URI relative to http://localhost:9090/
                                                                  # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/vocabulary')
 
    def getOrganization(self):
       result                      = self.Organization('http://tw.rpi.edu')
