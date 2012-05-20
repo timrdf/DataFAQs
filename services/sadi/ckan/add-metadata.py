@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/ckan/add-metadata.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import sadi
 from rdflib import *
 from surf import *
@@ -41,7 +46,7 @@ def getResponse(url):
    return connection.getresponse()
 
 # The Service itself
-class AddCKANMetadata(sadi.Service):
+class AddCKANMetadata(faqt.Service):
 
    # Service metadata.
    label                  = 'Update CKAN Dataset Metadata'
@@ -54,8 +59,8 @@ class AddCKANMetadata(sadi.Service):
    prefix                 = {}
    dev_port               = 9090
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/ckan')
       
       # Instantiate the CKAN client.
       # http://docs.python.org/library/configparser.html (could use this technique)

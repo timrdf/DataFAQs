@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/contextual-inverse-functional/contextual-inverse-functional.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import sadi
 from rdflib import *
 from surf import *
@@ -14,7 +19,7 @@ rdflib.plugin.register('sparql', rdflib.query.Result,
 ns.register(cif="http://purl.org/twc/ontology/cif.owl#")
 
 # The Service itself
-class ContextualInverseFunctional(sadi.Service):
+class ContextualInverseFunctional(faqt.Service):
 
     # Service metadata.
     label                  = "my label"
@@ -23,8 +28,8 @@ class ContextualInverseFunctional(sadi.Service):
     serviceNameText        = "my name text"
     name                   = "ContextualInverseFunctional"
 
-    def __init__(self): 
-        sadi.Service.__init__(self)
+   def __init__(self):
+        faqt.Service.__init__(self, servicePath = 'services/sadi/contextual-inverse-functional')
         
         #self.lodlinks = Graph()
         #self.lodlinks.parse('http://homepages.rpi.edu/~lebot/lod-links/state-fips-dbpedia.ttl', format="n3")

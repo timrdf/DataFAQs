@@ -3,24 +3,10 @@ Created on Jan 27, 2012
 
 @author: yanningchen
 '''
-# 
-# See https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
-#
-#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/completeness.py> .
-#
-#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/completeness>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>   a prov:Activity;
-#3>   prov:hadQualifiedAttribution [
-#3>      a prov:Attribution;
-#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/faqt/completeness>;
-#3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/completeness.py>;
-#3>   ];
-#3> .
-#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/completeness.py>
-#3>    dcterms:created "Jan 27, 2012";
-#3> .
+#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -91,7 +77,7 @@ def arthmean(numbers):
     return sum / float(len(numbers))
 
 # The Service itself
-class completeness(sadi.Service):
+class completeness(faqt.Service):
     
    # Service metadata.
    label = 'completeness'
@@ -100,13 +86,15 @@ class completeness(sadi.Service):
    serviceNameText = 'completeness' # Convention: Match 'name' below.
    name = 'completeness' # This value determines the service URI relative to http://localhost:9090/
    # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      key = os.environ['X_CKAN_API_Key']
-      sadi.Service.__init__(self)
-      if len(key) <= 1:
-            print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-            sys.exit(1)
-      self.ckan = ckanclient.CkanClient(api_key=key)
+
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/connected')
+      #key = os.environ['X_CKAN_API_Key']
+      #if len(key) <= 1:
+      #      print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #      sys.exit(1)
+      #self.ckan = ckanclient.CkanClient(api_key=key)
+      self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
       result = self.Organization()

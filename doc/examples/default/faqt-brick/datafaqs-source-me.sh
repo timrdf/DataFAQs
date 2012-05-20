@@ -7,6 +7,12 @@ export DATAFAQS_BASE_URI=""
 export DATAFAQS_PUBLISH_THROUGHOUT_EPOCH="true"
 export DATAFAQS_PUBLISH_METADATA_GRAPH_NAME="http://www.w3.org/ns/sparql-service-description#NamedGraph"
 
+# Deployment settings:
+
+export DATAFAQS_BASE_URI='http://aquarius.tw.rpi.edu/projects/datafaqs' # No ending slash
+export DATAFAQS_PROVENANCE_CODE_RAW_BASE='https://github.com/timrdf/DataFAQs/blob/master' # No ending slash
+export DATAFAQS_PROVENANCE_CODE_PAGE_BASE='https://raw.github.com/timrdf/DataFAQs/master' # No ending slash
+
 # If using TDB:
 export DATAFAQS_PUBLISH_TDB="true"
 export DATAFAQS_PUBLISH_TDB_DIR="`pwd`/tdb"

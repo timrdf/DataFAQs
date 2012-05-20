@@ -1,6 +1,7 @@
-# 
-# See https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
-#
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/sparql-service-description/named-graphs.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -32,7 +33,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class SDNamedGraphs(sadi.Service):
+class SDNamedGraphs(faqt.Service):
 
    # Service metadata.
    label                  = 'named-graphs'
@@ -45,9 +46,8 @@ class SDNamedGraphs(sadi.Service):
 
    query = 'select distinct ?graph where { graph ?graph { [] a [] } }'
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
-      print self.serviceDescription
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/sparql-service-description')
 
    def getOrganization(self):
       result                      = self.Organization()

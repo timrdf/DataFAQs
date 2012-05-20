@@ -1,4 +1,4 @@
-# https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/internet-domain.rpy
+# <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/vocabulary/vocabulary-resolves-to-description.py> .
 
 import faqt
 

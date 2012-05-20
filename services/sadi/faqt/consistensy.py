@@ -4,6 +4,11 @@ Created on Jan 28, 2012
 @author: yanningchen
 '''
 
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/consistensy.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import sadi
 from rdflib import *
 import surf
@@ -73,7 +78,7 @@ def arthmean(numbers):
     return sum / float(len(numbers))
 
 # The Service itself
-class consistancy(sadi.Service):
+class consistancy(faqt.Service):
     
    # Service metadata.
    label = 'consistancy'
@@ -82,15 +87,16 @@ class consistancy(sadi.Service):
    serviceNameText = 'consistancy' # Convention: Match 'name' below.
    name = 'consistancy' # This value determines the service URI relative to http://localhost:9090/
    # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      key = os.environ['X_CKAN_API_Key']
+
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt')
+      #key = os.environ['X_CKAN_API_Key']
       #key = "45d9d0d5-2ae7-405f-a4dc-04560be5ace1"
-      
-      sadi.Service.__init__(self)
-      if len(key) <= 1:
-            print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-            sys.exit(1)
-      self.ckan = ckanclient.CkanClient(api_key=key)
+      #if len(key) <= 1:
+      #      print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #      sys.exit(1)
+      #self.ckan = ckanclient.CkanClient(api_key=key)
+      self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
       result = self.Organization()
@@ -105,7 +111,6 @@ class consistancy(sadi.Service):
    def getOutputClass(self):
       return ns.DATAFAQS['EvaluatedDataset']
    
-
    def process(self, input, output):
       
       print 'processing ' + input.void_dataDump.first

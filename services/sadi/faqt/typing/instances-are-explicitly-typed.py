@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/typing/instances-are-explicitly-typed.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import sadi
 from rdflib import *
 import surf
@@ -36,7 +41,7 @@ def getHEAD(url):
     return connection.getresponse()
 
 # The Service itself
-class InstancesAreExplicitlyTyped(sadi.Service):
+class InstancesAreExplicitlyTyped(faqt.Service):
 
    # Service metadata.
    label                  = 'instances-are-explicitly-typed'
@@ -45,8 +50,8 @@ class InstancesAreExplicitlyTyped(sadi.Service):
    serviceNameText        = 'instances-are-explicitly-typed' # Convention: Match 'name' below.
    name                   = 'instances-are-explicitly-typed' # This value determines the service URI relative to http://localhost:9090/
                                                              # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/typing')
         
    def getOrganization(self):
       result                      = self.Organization('http://tw.rpi.edu')

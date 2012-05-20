@@ -1,18 +1,7 @@
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation.rpy>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
-#3>
-#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/provenance/named-graph-derivation>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>    a prov:Activity;
-#3>    prov:hadQualifiedAttribution [
-#3>       a prov:Attribution;
-#3>       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/faqt/provenance/named-graph-derivation>;
-#3>       prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation.rpy>;
-#3>    ];
-#3> .
-#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation.rpy>
-#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/provenance/named-graph-derivation.rpy> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -44,7 +33,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class NamedGraphDerivation(sadi.Service):
+class NamedGraphDerivation(faqt.Service):
 
    # Service metadata.
    label                  = 'named-graph-derivation'
@@ -55,8 +44,8 @@ class NamedGraphDerivation(sadi.Service):
                                                      # Convention: Use the name of this file for this value.
    dev_port = 9120
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/provenance')
 
    def getOrganization(self):
       result                      = self.Organization()

@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/core/select-datasets/by-ckan-group.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import re
 import sadi
 from rdflib import *
@@ -28,7 +33,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class DatasetsByCKANGroup(sadi.Service):
+class DatasetsByCKANGroup(faqt.Service):
 
    # Service metadata.
    label                  = 'by-ckan-group'
@@ -37,16 +42,16 @@ class DatasetsByCKANGroup(sadi.Service):
    serviceNameText        = 'by-ckan-group' # Convention: Match 'name' below.
    name                   = 'by-ckan-group' # This value determines the service URI relative to http://localhost:9090/
                                             # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      sadi.Service.__init__(self)
-
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/connected')
       # Instantiate the CKAN client.
       # http://docs.python.org/library/configparser.html (could use this technique)
-      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-      if len(key) <= 1:
-          print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-          sys.exit(1)
-      self.ckan = ckanclient.CkanClient(api_key=key)
+      #key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #if len(key) <= 1:
+      #    print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #    sys.exit(1)
+      #self.ckan = ckanclient.CkanClient(api_key=key)
+      self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
       result                      = self.Organization()

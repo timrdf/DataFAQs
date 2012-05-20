@@ -1,18 +1,7 @@
-# 
-# See https://github.com/timrdf/DataFAQs/wiki/FAqT-Service
-#
-#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/discuss/contributor-email.rpy> .
-#
-#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/discuss/contributor-email>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>   a prov:Activity;
-#3>   prov:hadQualifiedAttribution [
-#3>      a prov:Attribution;
-#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/faqt/discuss/contributor-email>;
-#3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/discuss/contributor-email.rpy>;
-#3>   ];
-#3> .
+#3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/discuss/contributor-email.rpy>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -44,7 +33,7 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 ns.register(oo='http://purl.org/openorg/')
 
 # The Service itself
-class ContributorEmail(sadi.Service):
+class ContributorEmail(faqt.Service):
 
    # Service metadata.
    label                  = 'contributor-email'
@@ -55,8 +44,8 @@ class ContributorEmail(sadi.Service):
                                             # Convention: Use the name of this file for this value.
    dev_port = 9111
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/discuss')
 
    def getOrganization(self):
       result                      = self.Organization()

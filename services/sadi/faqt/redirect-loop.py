@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/redirect-loop.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import urllib
 from urlparse import urlparse, urlunparse
 import httplib
@@ -24,7 +29,7 @@ def getHEAD(url):
 # http://logd.tw.rpi.edu/test/redirect_loop_1_of_4 ---303---> http://logd.tw.rpi.edu/test/redirect_loop_2_of_4
 # http://logd.tw.rpi.edu/test/redirect_loop_2_of_4 ---303---> http://logd.tw.rpi.edu/test/redirect_loop_3_of_4 
 # http://logd.tw.rpi.edu/test/redirect_loop_3_of_4 ---303---> http://logd.tw.rpi.edu/test/redirect_loop_1_of_4
-class RedirectLoop(sadi.Service):
+class RedirectLoop(faqt.Service):
 
    # Service metadata.
    label                  = 'redirect-loop'
@@ -33,8 +38,8 @@ class RedirectLoop(sadi.Service):
    serviceNameText        = 'redirect-loop' # Convention: Match 'name' below.
    name                   = 'redirect-loop' # This value determines the service URI relative to http://localhost:9090/
                                             # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt')
 
    def getOrganization(self):
       result                      = self.Organization()

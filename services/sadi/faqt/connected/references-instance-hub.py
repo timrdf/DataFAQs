@@ -1,18 +1,7 @@
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/references-instance-hub.rpy>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
-#3>
-#3> <http://sparql.tw.rpi.edu/services/datafaqs/faqt/connected/references-instance-hub>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>    a prov:Activity;
-#3>    prov:qualifiedAttribution [
-#3>       a prov:Attribution;
-#3>       prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/faqt/connected/references-instance-hub>;
-#3>       prov:hadPlan <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/references-instance-hub.rpy>;
-#3>    ];
-#3> .
-#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/connected/references-instance-hub.rpy>
-#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/connected/references-instance-hub.rpy> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -43,7 +32,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class ReferencesInstanceHub(sadi.Service):
+class ReferencesInstanceHub(faqt.Service):
 
    # Service metadata.
    label                  = 'references-instance-hub'
@@ -54,8 +43,8 @@ class ReferencesInstanceHub(sadi.Service):
                                                       # Convention: Use the name of this file for this value.
    dev_port = 9122
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/connected')
 
    def getOrganization(self):
       result                      = self.Organization()

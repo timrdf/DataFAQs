@@ -1,8 +1,11 @@
-# https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/internet-domain.rpy
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/internet-domain.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 
-from urlparse import urlparse
-from surf import *
+import faqt
+
 import sadi
+from surf import *
+from urlparse import urlparse
 
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
@@ -11,7 +14,7 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 #ns.register(datafaqs='http://sparql.tw.rpi.edu/test/datafaqs.owl#')
 
 # The Service itself
-class InternetDomain(sadi.Service):
+class InternetDomain(faqt.Service):
 
    # Service metadata.
    label                  = 'internet-domain'
@@ -20,8 +23,8 @@ class InternetDomain(sadi.Service):
    serviceNameText        = 'internet-domain' # Convention: Match 'name' below.
    name                   = 'internet-domain' # This value determines the service URI relative to http://localhost:9090/
                                               # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt')
 
    def getOrganization(self):
       result                      = self.Organization()

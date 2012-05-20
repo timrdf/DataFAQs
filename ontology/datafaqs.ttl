@@ -19,6 +19,23 @@
    a owl:Class;
    rdfs:label   "CKAN Dataset";
    rdfs:comment "A dataset listed at thedatahub.org, whether or not it is encoded in RDF or is part of the lodcloud group.";
+   rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty :ckan_identifier;
+      owl:minCardinality 1;
+   ];
+.
+
+:NotCKANDataset
+   a owl:Class;
+   rdfs:label "NotCKANDataset";
+   rdfs:comment "Does not exist in CKAN.";
+   owl:complementOf :CKANDataset;
+.
+
+:ckan_identifier
+   a prov:DatatypeProperty;
+   rdfs:comment "e.g. arrayexpress_e-mtab-104 in http://thedatahub.org/dataset/arrayexpress_e-mtab-104";
 .
 
 :Tagged

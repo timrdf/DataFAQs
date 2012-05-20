@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/predicate-counter.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import sadi
 from rdflib import *
 import surf
@@ -41,7 +46,7 @@ def getHEAD(url):
     return connection.getresponse()
 
 # The Service itself
-class VoIDProperties(sadi.Service):
+class VoIDProperties(faqt.Service):
 
    # Service metadata.
    label = 'predicate-counter'
@@ -50,14 +55,15 @@ class VoIDProperties(sadi.Service):
    serviceNameText = 'predicate-counter' # Convention: Match 'name' below.
    name = 'predicate-counter' # This value determines the service URI relative to http://localhost:9090/
                                            # Convention: Use the name of this file for this value.
-   def __init__(self): 
-      key = os.environ['X_CKAN_API_Key'] 
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/connected')
+      #key = os.environ['X_CKAN_API_Key'] 
       #key = "45d9d0d5-2ae7-405f-a4dc-04560be5ace1"
-      sadi.Service.__init__(self)
-      if len(key) <= 1:
-            print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-            sys.exit(1)
-      self.ckan = ckanclient.CkanClient(api_key=key)
+      #if len(key) <= 1:
+      #      print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #      sys.exit(1)
+      #self.ckan = ckanclient.CkanClient(api_key=key)
+      self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
       result = self.Organization()

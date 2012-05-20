@@ -14,6 +14,8 @@
 #3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query.rpy>
 #3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/via-sparql-query.rpy> .
 
+import faqt
+
 import re
 import sadi
 from rdflib import *
@@ -38,7 +40,7 @@ ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class DatasetsViaSPARQLQuery(sadi.Service):
+class DatasetsViaSPARQLQuery(faqt.Service):
 
    # Service metadata.
    label                  = 'via-sparql-query'
@@ -49,8 +51,8 @@ class DatasetsViaSPARQLQuery(sadi.Service):
                                                # Convention: Use the name of this file for this value.
    dev_port = 9113
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/core/select-datasets')
 
    def getOrganization(self):
       result                      = self.Organization()

@@ -222,7 +222,6 @@ if [ "$epoch_existed" != "true" ]; then
       mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
       echo "[INFO] Requesting evaluation services from $faqt_selector"
       i=0 # input to selector
-      df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector
       for selector_input in `df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector`; do
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
@@ -262,7 +261,7 @@ if [ "$epoch_existed" != "true" ]; then
       let "s=s+1"
       mkdir -p "__PIVOT_epoch/$epoch/datasets/$s"
       echo $dataset_selector > "__PIVOT_epoch/$epoch/datasets/$s/selector"
-      echo "[INFO] Requesting datasets from            $dataset_selector"
+      echo "[INFO] Requesting datasets            from $dataset_selector"
       i=0 # input to selector
       for selector_input in `df-core.py epoch.ttl.rdf dataset-selector-inputs $dataset_selector`; do
          let "i=i+1"

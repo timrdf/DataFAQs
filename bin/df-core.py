@@ -144,8 +144,8 @@ select distinct ?input where {
 '''
    results = graph.query(query, initNs=prefixes)
    for input in results:
-      print input # [0] is not needed for Ubuntu /usr/local/lib/python2.6/dist-packages/rdflib-3.2.0-py2.6.egg
-                  # but it is for Mac /Library/Python/2.7/site-packages/rdflib-3.2.1-py2.7.egg
+      print input[0] # [0] is not needed for Ubuntu /usr/local/lib/python2.6/dist-packages/rdflib-3.2.0-py2.6.egg
+                     # but it is for Mac /Library/Python/2.7/site-packages/rdflib-3.2.1-py2.7.egg
 elif type == 'services':
    results = graph.query(queries[type], initNs=prefixes)
    for input in results:

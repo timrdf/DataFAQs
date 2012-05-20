@@ -40,6 +40,9 @@ if [ ${1:-"no"} != "CLEAR" ]; then
 
    echo "  "
    echo "DATAFAQS_LOG_DIR                                      ${DATAFAQS_LOG_DIR:="(not required)"}"
+   echo "DATAFAQS_PROVENANCE_CODE_RAW_BASE                     ${DATAFAQS_PROVENANCE_CODE_RAW_BASE:="(Will omit prov:hadPlan upon service deref)"}"
+   echo "DATAFAQS_PROVENANCE_CODE_PAGE_BASE                    ${DATAFAQS_PROVENANCE_CODE_PAGE_BASE:="(Will omit prov:hadPlan upon service deref)"}"
+
 #   echo "DATAFAQS_CONVERT_OMIT_RAW_LAYER                       ${DATAFAQS_CONVERT_OMIT_RAW_LAYER:="(will default to: false)"}"
 #   echo "DATAFAQS_CONVERT_SAMPLE_NUMBER_OF_ROWS                ${DATAFAQS_CONVERT_SAMPLE_NUMBER_OF_ROWS:="(will default to: 2)"}"
 #   echo "DATAFAQS_CONVERT_SAMPLE_SUBSET_ONLY                   ${DATAFAQS_CONVERT_SAMPLE_SUBSET_ONLY:="(will default to: false)"}"

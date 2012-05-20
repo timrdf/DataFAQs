@@ -11,6 +11,8 @@
 #3>   ];
 #3> .
 
+import faqt
+
 import re
 import sadi
 from rdflib import *
@@ -50,7 +52,7 @@ ns.register(prov='http://www.w3.org/ns/prov#')
 ns.register(foaf='http://xmlns.com/foaf/0.1/')
 
 # The Service itself
-class DatasetsByCKANTag(sadi.Service):
+class DatasetsByCKANTag(faqt.Service):
 
    # Service metadata.
    label                  = 'by-ckan-tag'
@@ -61,19 +63,19 @@ class DatasetsByCKANTag(sadi.Service):
                                           # Convention: Use the name of this file for this value.
    dev_port = 9110
    startedLifeAt = None
-   lastCalled  = None
-   intersected = None
+   lastCalled    = None
+   intersected   = None
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
-
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/core/select-datasets')
       # Instantiate the CKAN client.
       # http://docs.python.org/library/configparser.html (could use this technique)
-      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-      if len(key) <= 1:
-          print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-          sys.exit(1)
-      self.ckan = ckanclient.CkanClient(api_key=key)
+      #key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #if len(key) <= 1:
+      #    print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #    sys.exit(1)
+      #self.ckan = ckanclient.CkanClient(api_key=key)
+      self.ckan = ckanclient.CkanClient()
       self.startedLifeAt = datetime.datetime.now()
 
    def getOrganization(self):

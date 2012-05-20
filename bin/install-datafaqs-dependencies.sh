@@ -33,13 +33,13 @@ offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'easy_install' 'python-setuptools'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 
-echo -n "Try to install python libraries? (y/n) "
+echo
+echo -n "Try to install python libraries? (y/N) "
 read -u 1 install_it
 if [ "$install_it" == "y" ]; then
-   echo
 
-   
-   echo -n "Try to install sadi.py? (y/n) "
+   echo
+   echo -n "Try to install sadi.py? (y/N) "
    read -u 1 install_it
    if [ "$install_it" == "y" ]; then
       pythonV=`python --version 2>&1 | sed -e 's/Python //; s/..$//'`
@@ -73,7 +73,8 @@ if [ "$install_it" == "y" ]; then
    echo sudo easy_install -U surf.sparql_protocol
    sudo easy_install -U surf.sparql_protocol
 
-   echo -n "Try to install allegro graph .py? (y/n) "
+   echo
+   echo -n "Try to install allegro graph .py? (y/N) "
    read -u 1 install_it
    if [ "$install_it" == "y" ]; then
       echo WARNING: AG is bunk
@@ -82,12 +83,22 @@ if [ "$install_it" == "y" ]; then
       # Still need allegrograph... :-(
       # apt-get install python-cjson python-pycurl
    fi
-fi
 
-echo -n "Try to install ckanclient? (y/n) "
-read -u 1 install_it
-if [ "$install_it" == "y" ]; then
    echo
-   echo sudo easy_install http://pypi.python.org/packages/source/c/ckanclient/ckanclient-0.9.tar.gz
-   sudo easy_install http://pypi.python.org/packages/source/c/ckanclient/ckanclient-0.9.tar.gz
+   echo -n "Try to install ckanclient? (y/N) "
+   read -u 1 install_it
+   if [ "$install_it" == "y" ]; then
+      echo
+      echo sudo easy_install http://pypi.python.org/packages/source/c/ckanclient/ckanclient-0.9.tar.gz
+      sudo easy_install http://pypi.python.org/packages/source/c/ckanclient/ckanclient-0.9.tar.gz
+   fi
+
+   echo
+   echo -n "Try to install BeautifulSoup? (y/N) "
+   read -u 1 install_it
+   if [ "$install_it" == "y" ]; then
+      echo
+      echo sudo easy_install BeautifulSoup
+      sudo easy_install BeautifulSoup
+   fi
 fi

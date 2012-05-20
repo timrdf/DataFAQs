@@ -1,18 +1,7 @@
 #3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
-#3>
-#3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>    a prov:Activity;
-#3>    prov:hadQualifiedAttribution [
-#3>       a prov:Attribution;
-#3>       prov:hadQualifiedEntity <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
-#3>       prov:adoptedPlan        <#TEMPLATE/path/to/public/source-code.rpy>;
-#3>    ];
-#3> .
-#3> <#TEMPLATE/path/to/public/source-code.rpy>
-#3>    foaf:homepage <#TEMPLATE/path/to/public/HOMEPAGE-FOR/source-code.rpy> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -43,7 +32,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class TowardsCKANTag(sadi.Service):
+class TowardsCKANTag(faqt.Service):
 
    # Service metadata.
    label                  = 'ckan-group'
@@ -54,8 +43,8 @@ class TowardsCKANTag(sadi.Service):
                                          # Convention: Use the name of this file for this value.
    dev_port = 9121
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/core/select-faqts/towards')
 
    def getOrganization(self):
       result                      = self.Organization()

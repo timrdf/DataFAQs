@@ -1,19 +1,7 @@
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy>;
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/datascape/size.py>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
-#3>
-#3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>    a prov:Activity;
-#3>    prov:qualifiedAttribution [
-#3>       a prov:Attribution;
-#3>       prov:entity  <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
-#3>       prov:hadPlan <#TEMPLATE/path/to/public/source-code.rpy>;
-#3>    ];
-#3> .
-#3> <#TEMPLATE/path/to/public/source-code.rpy>
-#3>    a prov:Plan;
-#3>    foaf:homepage <#TEMPLATE/path/to/public/HOMEPAGE-FOR/source-code.rpy> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -44,7 +32,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class SizeDeprecated(sadi.Service):
+class SizeDeprecated(faqt.Service):
 
    # Service metadata.
    label                  = 'size-deprecated'
@@ -55,8 +43,8 @@ class SizeDeprecated(sadi.Service):
                                    # Convention: Use the name of this file for this value.
    dev_port = 9223
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/datascape')
 
    def getOrganization(self):
       result                      = self.Organization()
