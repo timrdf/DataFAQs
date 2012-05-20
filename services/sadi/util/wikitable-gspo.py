@@ -14,6 +14,8 @@
 #3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/util/wikitable-gspo.rpy>
 #3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/util/wikitable-gspo.rpy> .
 
+import faqt
+
 import sadi
 from rdflib import *
 import surf
@@ -51,7 +53,7 @@ PREFIX = 0
 LOCAL  = 1
 
 # The Service itself
-class WikiTableGSPO(sadi.Service):
+class WikiTableGSPO(faqt.Service):
 
    # Service metadata.
    label                  = 'wikitable-gspo'
@@ -62,11 +64,11 @@ class WikiTableGSPO(sadi.Service):
                                              # Convention: Use the name of this file for this value.
    dev_port = 9115
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/util')
       self.regex = re.compile("([a-zA-Z0-9]+):([a-zA-Z0-9]+)")
       self.namespaces = {}
-      self.errors = {}
+      self.errors     = {}
 
    def getOrganization(self):
       result                      = self.Organization()
