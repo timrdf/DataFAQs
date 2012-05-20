@@ -1,6 +1,8 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/void-triples.py>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 
+import faqt
+
 import sadi
 from rdflib import *
 import surf
