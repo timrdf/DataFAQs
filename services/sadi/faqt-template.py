@@ -1,26 +1,14 @@
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.rpy>;
+#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.py>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
-#3>
-#3> <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>    a prov:Activity;
-#3>    prov:qualifiedAttribution [
-#3>       a prov:Attribution;
-#3>       prov:entity  <#TEMPLATE/path/to/where/source-code.rpy/is/deployed/for/invocation>;
-#3>       prov:hadPlan <#TEMPLATE/path/to/public/source-code.rpy>;
-#3>    ];
-#3> .
-#3> <#TEMPLATE/path/to/public/source-code.rpy>
-#3>    a prov:Plan;
-#3>    foaf:homepage <#TEMPLATE/path/to/public/HOMEPAGE-FOR/source-code.rpy> .
+
+import faqt
 
 import sadi
 from rdflib import *
 import surf
 
 from surf import *
-from surf.query import select
+from surf.query import a, select
 
 import rdflib
 rdflib.plugin.register('sparql', rdflib.query.Processor,
@@ -44,7 +32,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class TEMPLATE-CLASS-NAME(sadi.Service):
+class TEMPLATE-CLASS-NAME(faqt.Service):
 
    # Service metadata.
    label                  = 'TEMPLATE-NAME'
@@ -55,8 +43,15 @@ class TEMPLATE-CLASS-NAME(sadi.Service):
                                             # Convention: Use the name of this file for this value.
    dev_port = 9090 # TEMPLATE: 
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      # DATAFAQS_PROVENANCE_CODE_RAW_BASE                   +  servicePath  +  '/'  + self.serviceNameText
+      # DATAFAQS_PROVENANCE_CODE_PAGE_BASE                  +  servicePath  +  '/'  + self.serviceNameText
+      #
+      # ^^ The source code location
+      #    aligns with the deployment location \/
+      #
+      #                 DATAFAQS_BASE_URI  +  '/datafaqs/'  +  servicePath  +  '/'  + self.serviceNameText
+      faqt.Service.__init__(self, servicePath = 'services') # TEMPLATE: change to something like 'services/sadi/faqt/connected/' to get free provenance.
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -86,6 +81,8 @@ class TEMPLATE-CLASS-NAME(sadi.Service):
             type  = binding['type']['value']
             print type
       ####
+
+      # Query the RDF graph POSTed: input.session.default_store.execute
 
       if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
