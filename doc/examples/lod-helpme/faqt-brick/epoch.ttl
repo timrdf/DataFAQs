@@ -27,13 +27,13 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
 _:selectdatasets 
    a datafaqs:DatasetSelection, prov:Activity;
    prov:wasAttributedTo 
-      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/core/select-datasets/by-ckan-tag>;
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-datasets/by-ckan-tag>;
    prov:used 
       <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag-materials/sample-inputs/ckan-lod-helpme.ttl>;
    prov:generated _:datasetlist; # the RDF graph that by-ckan-group returns (we don't know the name of it yet until we instantiate the epoch).
 .
 
-<http://aquarius.tw.rpi.edu/projects/datafaqs/services/core/select-datasets/by-ckan-tag>
+<http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-datasets/by-ckan-tag>
    a datafaqs:DatasetSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
 .
 

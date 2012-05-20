@@ -231,15 +231,26 @@ if [ "$epoch_existed" != "true" ]; then
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
             source get-input.sh
 
-            echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $faqt_selector > selection.ttl"      > get-selection.sh
+            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $faqt_selector > selection.ttl"     > get-selection.sh
+            # TODO: selctor needs to accept conneg.
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $faqt_selector > selection.ttl"                               > get-selection.sh
             source get-selection.sh
          popd &> /dev/null
       done 
    done
 
    for input in `find $dir/faqt-services -name "selection.ttl"`; do 
-      rapper -q -g -o turtle $input                                                                                                                            >> $epochDir/faqt-services.ttl
+      syntax=`guess-syntax.sh --inspect $input rapper`
+      if [ "${#syntax}" -gt 0 ]; then
+         rapper -q -g -o turtle $input                                                                                                                         >> $epochDir/faqt-services.ttl
+      else
+         echo "[WARNING] Could not guess syntax of $input"
+      fi
    done
+   if [ `void-triples.sh $epochDir/faqt-services.ttl` -le 0 ]; then
+      echo "[ERROR] No FAqT Services selected; cannot perform evaluations."
+      exit 1
+   fi
    rapper -q -g -o rdfxml $epochDir/faqt-services.ttl                                                                                                           > $epochDir/faqt-services.ttl.rdf 
    triples=`void-triples.sh $dir/faqt-services.ttl`
    df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                                                > $epochDir/faqt-services.meta.ttl
@@ -271,15 +282,26 @@ if [ "$epoch_existed" != "true" ]; then
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
             source get-input.sh
 
-            echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > selection.ttl"   > get-selection.sh
+            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > selection.ttl"   > get-selection.sh
+            # TODO: selector needs to accept conneg.
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > selection.ttl"                            > get-selection.sh
             source get-selection.sh
          popd &> /dev/null
       done 
    done
 
    for input in `find $dir/datasets -name "selection.ttl"`; do
-      rapper -q -g -o turtle $input                                                                                                            >> $epochDir/datasets.ttl
+      syntax=`guess-syntax.sh --inspect $input rapper`
+      if [ "${#syntax}" -gt 0 ]; then
+         rapper -q -g -o turtle $input                                                                                                            >> $epochDir/datasets.ttl
+      else
+         echo "[WARNING] Could not guess syntax of $input"
+      fi
    done
+   if [ `void-triples.sh $epochDir/datasets.ttl` -le 0 ]; then
+      echo "[ERROR] No datasets selected; cannot perform evaluations."
+      exit 1
+   fi
    triples=`void-triples.sh $dir/datasets.ttl`
    df-epoch-metadata.py 'datasets' $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl 'text/turtle' ${triples:-0}                                      > $epochDir/datasets.meta.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                              > $epochDir/datasets.ttl.sd_name
