@@ -57,11 +57,12 @@ class VoIDProperties(faqt.Service):
                                            # Convention: Use the name of this file for this value.
    def __init__(self):
       faqt.Service.__init__(self, servicePath = 'services/sadi/faqt')
-      key = os.environ['X_CKAN_API_Key'] 
-      if len(key) <= 1:
-            print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-            sys.exit(1)
-      self.ckan = ckanclient.CkanClient(api_key=key)
+      #key = os.environ['X_CKAN_API_Key'] 
+      #if len(key) <= 1:
+      #      print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+      #      sys.exit(1)
+      #self.ckan = ckanclient.CkanClient(api_key=key)
+      self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
       result = self.Organization()
