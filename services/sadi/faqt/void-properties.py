@@ -1,3 +1,8 @@
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/faqt/void-properties.py>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
+
+import faqt
+
 import sadi
 from rdflib import *
 import surf
@@ -41,7 +46,7 @@ def getHEAD(url):
     return connection.getresponse()
 
 # The Service itself
-class VoIDProperties(sadi.Service):
+class VoIDProperties(faqt.Service):
 
    # Service metadata.
    label = 'void-properties'
@@ -50,9 +55,9 @@ class VoIDProperties(sadi.Service):
    serviceNameText = 'void-properties' # Convention: Match 'name' below.
    name = 'void-properties' # This value determines the service URI relative to http://localhost:9090/
                                            # Convention: Use the name of this file for this value.
-   def __init__(self): 
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt')
       key = os.environ['X_CKAN_API_Key'] 
-      sadi.Service.__init__(self)
       if len(key) <= 1:
             print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
             sys.exit(1)
