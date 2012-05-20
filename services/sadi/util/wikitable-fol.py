@@ -1,18 +1,7 @@
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/util/wikitable-fol.rpy>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
-#3>
-#3> <http://sparql.tw.rpi.edu/services/datafaqs/util/wikitable-fol>
-#3>    a moby:serviceDescription .
-#3> []
-#3>    a prov:Activity;
-#3>    prov:hadQualifiedAttribution [
-#3>       a prov:Attribution;
-#3>       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/util/wikitable-fol>;
-#3>       prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/util/wikitable-fol.rpy>;
-#3>    ];
-#3> .
-#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/util/wikitable-fol.rpy>
-#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/util/wikitable-fol.rpy> .
+
+import faqt
 
 import sadi
 from rdflib import *
@@ -52,7 +41,7 @@ PREFIX = 0
 LOCAL  = 1
 
 # The Service itself
-class WikiTableFOL(sadi.Service):
+class WikiTableFOL(faqt.Service):
 
    # Service metadata.
    label                  = 'wikitable-fol'
@@ -63,11 +52,11 @@ class WikiTableFOL(sadi.Service):
                                             # Convention: Use the name of this file for this value.
    dev_port = 9116
 
-   def __init__(self): 
-      sadi.Service.__init__(self)
+   def __init__(self):
+      faqt.Service.__init__(self, servicePath = 'services/sadi/util')
       self.regex = re.compile("([a-zA-Z0-9]+\([^)]*\))")
       self.namespaces = {}
-      self.errors = {}
+      self.errors     = {}
 
    def getOrganization(self):
       result                      = self.Organization()
