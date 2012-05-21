@@ -281,6 +281,7 @@ if [ "$epoch_existed" != "true" ]; then
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/datasets/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/datasets/$s/$i" &> /dev/null; 
+            echo "[INFO]    using input: $selector_input"
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-input.sh
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
             source get-input.sh
