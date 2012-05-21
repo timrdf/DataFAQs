@@ -230,9 +230,9 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/faqt-services/$s/$i" &> /dev/null; 
             echo "[INFO]    using input: $selector_input"
-            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-input.sh
-            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
-            source get-input.sh
+            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-selector-input.sh
+            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
+            source get-selector-input.sh
 
             #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $faqt_selector > selection.ttl"     > get-selection.sh
             # TODO: selctor needs to accept conneg.
@@ -282,9 +282,9 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p "__PIVOT_epoch/$epoch/datasets/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/datasets/$s/$i" &> /dev/null; 
             echo "[INFO]    using input: $selector_input"
-            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-input.sh
-            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-input.sh
-            source get-input.sh
+            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-selector-input.sh
+            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
+            source get-selector-input.sh
 
             #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > selection.ttl"   > get-selection.sh
             # TODO: selector needs to accept conneg.
@@ -326,12 +326,11 @@ if [ "$epoch_existed" != "true" ]; then
       echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $dataset_referencer"                                          > $epochDir/dataset-references.sh
       rapper -q $rsyn -o rdfxml $send > $epochDir/datasets.ttl.rdf
       pushd $epochDir &> /dev/null
-         df-core.py datasets.ttl.rdf datasets df:chunk &> /dev/null # creates dataset-references.post.1.ttl,  dataset-references.post.2.ttl in blocks of 25 
-         if [ -e dataset-references.post.1.ttl ]; then
+         df-core.py datasets.ttl.rdf datasets df:chunk &> /dev/null # creates dataset-references.post.1.ttl,
+         if [ -e dataset-references.post.1.ttl ]; then              #         dataset-references.post.2.ttl in blocks of 25 
             echo
-            count=0
-            for post in dataset-references.post*; do let "count=count+1"; done
-            total=$count
+            total=0
+            for post in dataset-references.post*; do let "total=total+1"; done
             count=0
             for post in dataset-references.post*; do
                let "count=count+1"
