@@ -210,20 +210,15 @@ if [ "$epoch_existed" != "true" ]; then
 
    dir="__PIVOT_epoch/$epoch"
 
-   #echo "[INFO] Requesting FAqT services from        $faqts_service"
-   #pushd $epochDir &> /dev/null; 
-   #   pcurl.sh $faqts_input -n faqt-services.post &> /dev/null
-   #   rapper -q `guess-syntax.sh --inspect faqt-services.post rapper` -o turtle $faqts_input                                                                    >           faqt-services.post.ttl
-   #popd &> /dev/null
-   #echo "curl -s -H 'Content-Type: text/turtle' -H 'Accept: text/turtle' -d @$epochDir/faqt-services.post.ttl $faqts_service"                                   > $epochDir/faqt-services.sh
-   #source $epochDir/faqt-services.sh                                                                                                                            > $epochDir/faqt-services.ttl
-
+   #
+   # Select FAqT evaluation services (using multiple inputs to multiple selectors)
+   #
    faqt_selectors=`df-core.py epoch.ttl.rdf faqt-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for faqt_selector in $faqt_selectors; do
+      echo "[INFO] Requesting evaluation services from $faqt_selector"
       let "s=s+1"
       mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
-      echo "[INFO] Requesting evaluation services from $faqt_selector"
       echo $faqt_selector > __PIVOT_epoch/$epoch/faqt-services/$s/selector
       i=0 # input to selector
       for selector_input in `df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector`; do
@@ -235,14 +230,13 @@ if [ "$epoch_existed" != "true" ]; then
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
 
-            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $faqt_selector > selection.ttl"     > get-selection.sh
-            # TODO: selctor needs to accept conneg.
-            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $faqt_selector > selection.ttl"                               > get-selection.sh
-            source get-selection.sh
+            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $faqt_selector > faqt-services.ttl" > get-selection.sh
+            # TODO: selector needs to accept conneg.
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $faqt_selector > faqt-services.ttl"                           > select.sh
+            source select.sh                                                                                                      # <- creates    faqt-services.ttl                
          popd &> /dev/null
       done 
    done
-
    for input in `find $dir/faqt-services -name "selection.ttl"`; do 
       syntax=`guess-syntax.sh --inspect $input rapper`
       if [ "${#syntax}" -gt 0 ]; then
@@ -263,13 +257,9 @@ if [ "$epoch_existed" != "true" ]; then
    #rm $epochDir/faqt-services.ttl.rdf
 
 
-
-   #echo  "[INFO] Requesting datasets from             $datasets_service"
-   #pushd $epochDir &> /dev/null
-   #   pcurl.sh $datasets_input -n datasets.post &> /dev/null
-   #   rapper -q `guess-syntax.sh --inspect datasets.post rapper` -o turtle $datasets_input                                                          >           datasets.post.ttl 
-   #popd &> /dev/null
-
+   #
+   # Select FAqT evaluation services (using multiple inputs to multiple selectors)
+   #
    dataset_selectors=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for dataset_selector in $dataset_selectors; do
@@ -294,7 +284,7 @@ if [ "$epoch_existed" != "true" ]; then
          popd &> /dev/null
       done 
    done
-
+   # Aggregate all valid dataset listings.
    for input in `find $dir/datasets -name "selection.ttl"`; do
       syntax=`guess-syntax.sh --inspect $input rapper`
       if [ "${#syntax}" -gt 0 ]; then
@@ -315,8 +305,9 @@ if [ "$epoch_existed" != "true" ]; then
    df-core.py $epochDir/datasets.ttl.rdf datasets                                                                                               > $epochDir/datasets.ttl.csv
 
 
-
-
+   #
+   #
+   #
    for dataset_referencer in `df-core.py epoch.ttl.rdf dataset-referencers`; do
       # TODO: this for loop expects just one value. It needs to be generalized to more.
       echo "[INFO] Requesting dataset references  from $dataset_referencer"
