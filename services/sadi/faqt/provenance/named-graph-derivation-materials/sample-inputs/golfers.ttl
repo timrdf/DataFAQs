@@ -28,4 +28,5 @@
 :graph a void:Dataset .
 
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation-materials/sample-inputs/golfers.ttl>;
-#3>    prov:wasAttributedTo <http://kasei.us/about/foaf.xrdf#greg> .
+#3>    prov:wasAttributedTo <http://kasei.us/about/foaf.xrdf#greg>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/ckan/add-metadata-materials/sample-inputs/arrayexpress-e-afmx-1.ttl> .
