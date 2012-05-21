@@ -449,7 +449,7 @@ if [ "$epoch_existed" != "true" ]; then
       let "f=f+1" 
       #faqtDir="__PIVOT_faqt/${faqt#'http://'}" REPLACED by noprotocol
       faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
-      echo "${faqtDir#'__PIVOT_faqt/'} ($f/$numFAqTs)"
+      echo "[INFO] ${faqtDir#'__PIVOT_faqt/'} ($f/$numFAqTs)"
       mkdir -p $faqtDir/__PIVOT_epoch/$epoch &> /dev/null
       # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples          
       epDir=$faqtDir/__PIVOT_epoch/$epoch
