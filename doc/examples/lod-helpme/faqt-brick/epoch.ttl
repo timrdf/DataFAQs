@@ -42,11 +42,11 @@ _:selectdatasets
 _:referencedatasets
    a datafaqs:DatasetReferencing, prov:Activity;
    prov:wasAttributedTo
-      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
    prov:used _:datasetlist;
    prov:generated _:seeAlsolist; # the RDF graph that with-preferred-uri-and-ckan-meta-void returns (we don't know the name of it yet until we instantiate the epoch).
 . 
 
-<http://aquarius.tw.rpi.edu/projects/datafaqs/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
+<http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
    a datafaqs:DatasetReferencer, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
 .
