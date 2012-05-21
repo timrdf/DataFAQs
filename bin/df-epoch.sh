@@ -230,8 +230,8 @@ if [ "$epoch_existed" != "true" ]; then
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
 
-            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $faqt_selector > faqt-services.ttl"                           > select-faqt-services.sh
-            source select-faqt-services.sh                                                                                        # <- creates    faqt-services.ttl                
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $faqt_selector > faqt-services.ttl"                           > select.sh
+            source select.sh                                                                                                      # <- creates    faqt-services.ttl                
          popd &> /dev/null
       done 
    done
