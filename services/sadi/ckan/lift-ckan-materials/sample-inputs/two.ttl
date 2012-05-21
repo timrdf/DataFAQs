@@ -1,0 +1,11 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://thedatahub.org/dataset/instance-hub-fiscal-years>
+   a datafaqs:CKANDataset;
+   datafaqs:ckan_identifier "instance-hub-fiscal-years";
+.
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+   a datafaqs:CKANDataset;
+   datafaqs:ckan_identifier "farmers-markets-geographic-data-united-states";
+.
