@@ -103,6 +103,9 @@ class LiftCKAN(faqt.Service):
          print
          print dataset
 
+         #
+         # Process Resources
+         #
          Thing   = output.session.get_class(ns.OWL['Thing'])
          Service = output.session.get_class(ns.SD['Service'])
          sparqlEndpoint = None
@@ -120,9 +123,18 @@ class LiftCKAN(faqt.Service):
                sparqlEndpoint = {'url': Thing(extra['url']), # Saved for processing sparql_named_graph below.
                                  'id' : extra['id']} 
                output.void_sparqlEndpoint.append(Service(extra['url']))
+            if extra['format'] == u'example/turtle':
+               #
+               # <dataset> void:exampleResource <> .
+               #
+               output.void_sparqlEndpoint.append(Thing(extra['url']))
+               # TODO: elaborate this description.
             else:
                print 'TODO: handle resource: ' + extra['format']
 
+         #
+         # Process Extras
+         #
          links_regex  = re.compile("^links:(.*)$")
          DCATDataset  = output.session.get_class(ns.DCAT['Dataset'])
          Distribution = output.session.get_class(ns.DCAT['Distribution'])
