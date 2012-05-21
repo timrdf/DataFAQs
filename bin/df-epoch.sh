@@ -237,9 +237,8 @@ if [ "$epoch_existed" != "true" ]; then
          popd &> /dev/null
       done 
    done
-   for input in `find $dir/faqt-services -name "selection.ttl"`; do 
-      syntax=`guess-syntax.sh --inspect $input rapper`
-      if [ "${#syntax}" -gt 0 ]; then
+   for input in `find $dir/faqt-services -name "faqt-services.ttl"`; do 
+      if [ `void-triples.sh $input` -gt 0 ]; then
          rapper -q -g -o turtle $input                                                                                                                         >> $epochDir/faqt-services.ttl
       else
          echo "[WARNING] Could not guess syntax of $input"
