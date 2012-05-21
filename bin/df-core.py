@@ -185,7 +185,7 @@ select distinct ?dataset where {
             else:
                print filename + " already exists. Not modifying."
          count += 1
-         post.write('<' + bindings + '> a <http://www.w3.org/ns/dcat#Dataset> .\n')
+         post.write('<' + bindings[0] + '> a <http://www.w3.org/ns/dcat#Dataset> .\n')
          if count == size:
             count = 0
             block += 1
