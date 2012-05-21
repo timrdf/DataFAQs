@@ -50,7 +50,7 @@
       a sd:NamedGraph;
       sd:name  <http://purl.org/twc/arrayexpress/E-MTAB-104>;
       sd:graph <http://thedatahub.org/en/dataset/arrayexpress-e-afmx-1>;
-      prov:atLocation [ 
+      prov:atLocation [ # TODO: remove this indirection.
          a sd:Service; 
          sd:endpoint <http://purl.org/twc/arrayexpress/virtuoso/sparql>; 
       ];
