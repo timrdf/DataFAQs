@@ -226,12 +226,12 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/faqt-services/$s/$i" &> /dev/null; 
             echo "[INFO]    using input: $selector_input"
-            echo "pcurl.sh $selector_input -n input &> /dev/null"                                                     > get-selector-input.sh
-            echo "rapper -q \`guess-syntax.sh --inspect input rapper\` -o turtle input $selector_input > input.ttl"  >> get-selector-input.sh
+            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-selector-input.sh
+            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
 
-            echo "curl -s -H \"Content-Type: text/turtle\" -d @input.ttl $faqt_selector > faqt-services.ttl"          > select-faqt-services.sh
-            source select-faqt-services.sh                                                              # <- creates    faqt-services.ttl                
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $faqt_selector > faqt-services.ttl"                           > select-faqt-services.sh
+            source select-faqt-services.sh                                                                                        # <- creates    faqt-services.ttl                
          popd &> /dev/null
       done 
    done
