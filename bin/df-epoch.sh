@@ -230,6 +230,7 @@ if [ "$epoch_existed" != "true" ]; then
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
 
+            # TODO: selector needs to accept conneg. (add -H Accept back in)
             echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $faqt_selector > faqt-services.ttl"                           > select.sh
             source select.sh                                                                                                      # <- creates    faqt-services.ttl                
          popd &> /dev/null
@@ -274,17 +275,16 @@ if [ "$epoch_existed" != "true" ]; then
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
 
-            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > selection.ttl"   > get-selection.sh
+            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > datasets.ttl"   > get-selection.sh
             # TODO: selector needs to accept conneg.
-            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > selection.ttl"                            > get-selection.sh
-            source get-selection.sh
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > datasets.ttl"                            > get-selection.sh
+            source get-selection.sh                                                                                               # <- creates   datasets.ttl
          popd &> /dev/null
       done 
    done
    # Aggregate all valid dataset listings.
-   for input in `find $dir/datasets -name "selection.ttl"`; do
-      syntax=`guess-syntax.sh --inspect $input rapper`
-      if [ "${#syntax}" -gt 0 ]; then
+   for input in `find $dir/datasets -name "datasets.ttl"`; do
+      if [ `void-triples.sh $input` -gt 0 ]; then
          rapper -q -g -o turtle $input                                                                                                            >> $epochDir/datasets.ttl
       else
          echo "[WARNING] Could not guess syntax of $input"
