@@ -481,7 +481,7 @@ if [ "$epoch_existed" != "true" ]; then
          let "d=d+1" 
          #datasetDir=${dataset#'http://'} REPLACED by noprotocol
          datasetDir=`noprotocol $dataset`
-         echo "$datasetDir ($d/$numDatasets)"
+         echo "[INFO] $datasetDir ($d/$numDatasets)"
 
          # Where the dataset info is stored. 
          # Becomes the input to FAqT evaluation services.
