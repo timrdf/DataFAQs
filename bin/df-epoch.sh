@@ -275,10 +275,10 @@ if [ "$epoch_existed" != "true" ]; then
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
 
-            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > datasets.ttl"   > get-selection.sh
+            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > datasets.ttl"   > select.sh
             # TODO: selector needs to accept conneg.
-            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > datasets.ttl"                            > get-selection.sh
-            source get-selection.sh                                                                                               # <- creates   datasets.ttl
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > datasets.ttl"                            > select.sh
+            source select.sh                                                                                                      # <- creates   datasets.ttl
          popd &> /dev/null
       done 
    done
