@@ -23,6 +23,7 @@ import urllib2
 import ckanclient
 import os
 import hashlib
+import re
 
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
@@ -86,7 +87,7 @@ class LiftCKAN(faqt.Service):
       elif len(input.dcterms_identifier) > 0:
          ckan_id = input.dcterms_identifier.first
       elif re.match('^.*/dataset/',input.subject):
-         ckan_id = re.replace('^.*/dataset/','',str(input.subject))
+         ckan_id = re.sub('^.*/dataset/','',str(input.subject))
       else:
          print 'Error: cannot determine what dataset to create/modify'
          return
