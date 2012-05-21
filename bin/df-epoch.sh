@@ -224,6 +224,7 @@ if [ "$epoch_existed" != "true" ]; then
       let "s=s+1"
       mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
       echo "[INFO] Requesting evaluation services from $faqt_selector"
+      echo $faqt_selector > __PIVOT_epoch/$epoch/faqt-services/$s/selector
       i=0 # input to selector
       for selector_input in `df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector`; do
          let "i=i+1"
@@ -551,13 +552,10 @@ let "total = numDatasets * numFAqTs"
 f=0 # faqt evaluation service tally
 d=0 # dataset tally
 e=0 # evaluation tally
-# Ordering randomized to distribute load among evaluation services.
-for dataset in $datasetsRandom; do
+for dataset in $datasetsRandom; do # Ordering randomized to distribute load among evaluation services.
    let 'd=d+1'
-   #datasetDir=${dataset#'http://'} REPLACED by noprotocol
    datasetDir=`noprotocol $dataset`
    for faqt in $faqtsRandom; do
-      #faqtDir="__PIVOT_faqt/${faqt#'http://'}" REPLACED by noprotocol
       faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
       let 'f=f+1'
       let 'e=e+1'
