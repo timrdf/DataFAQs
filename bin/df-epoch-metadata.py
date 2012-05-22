@@ -1,4 +1,4 @@
-o!/usr/bin/env python
+#!/usr/bin/env python
 #
 # https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch-metadata.py
 
