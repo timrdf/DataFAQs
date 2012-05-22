@@ -495,9 +495,10 @@ if [ "$epoch_existed" != "true" ]; then
             r=0
             for referencer in `cat $epochDir/referencers.csv`; do
                let 'r=r+1'
-               echo "curl -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"                         > get-references-$r.sh
+               echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"                      > get-references-$r.sh
                source get-references-$r.sh
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh references-$r`
+               echo "renamed to $file"
                if [ `void-triples.sh $file` -gt 0 ]; then
                   rapper -q -g -o ntriples $file                                                                             >> references.nt
                fi
