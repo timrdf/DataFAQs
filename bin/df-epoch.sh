@@ -237,6 +237,7 @@ if [ "$epoch_existed" != "true" ]; then
          popd &> /dev/null
       done 
    done
+   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services"                                                                                         > $epochDir/faqt-services.ttl.sd_name
    # Aggregate all valid FAqT evaluation service listings.
    for input in `find $dir/faqt-services -name "faqt-services.ttl"`; do 
       if [ `void-triples.sh $input` -gt 0 ]; then
@@ -250,7 +251,6 @@ if [ "$epoch_existed" != "true" ]; then
       exit 1
    fi
    triples=`void-triples.sh $dir/faqt-services.ttl`
-   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services"                                                                                         > $epochDir/faqt-services.ttl.sd_name
    df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                                                > $epochDir/faqt-services.meta.ttl
    rapper -q -g -o rdfxml $epochDir/faqt-services.ttl                                                                                                           > $epochDir/faqt-services.ttl.rdf 
    df-core.py $epochDir/faqt-services.ttl.rdf faqt-services | grep "^http://" | sort -u                                                                         > $epochDir/faqt-services.ttl.csv
@@ -283,6 +283,7 @@ if [ "$epoch_existed" != "true" ]; then
          popd &> /dev/null
       done 
    done
+   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                               > $epochDir/datasets.ttl.sd_name
    # Aggregate all valid dataset listings.
    for input in `find $dir/datasets -name "datasets.ttl"`; do
       if [ `void-triples.sh $input` -gt 0 ]; then
@@ -296,7 +297,6 @@ if [ "$epoch_existed" != "true" ]; then
       exit 1
    fi
    triples=`void-triples.sh $dir/datasets.ttl`
-   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                               > $epochDir/datasets.ttl.sd_name
    df-epoch-metadata.py 'datasets' $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl 'text/turtle' ${triples:-0}                                       > $epochDir/datasets.meta.ttl
    # Reserialize
    rapper -q -g -o rdfxml $epochDir/datasets.ttl                                                                                                 > $epochDir/datasets.ttl.rdf 
@@ -325,7 +325,8 @@ if [ "$epoch_existed" != "true" ]; then
       rsyn=`guess-syntax.sh $send rapper`
       # TODO: they aren't accepting conneg!
       echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $dataset_referencer"                                          > $epochDir/dataset-references.sh
-      rapper -q $rsyn -o rdfxml $send > $epochDir/datasets.ttl.rdf
+      rapper -q $rsyn -o rdfxml $send                                                                                                         > $epochDir/datasets.ttl.rdf
+      echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
       pushd $epochDir &> /dev/null
          df-core.py datasets.ttl.rdf datasets df:chunk &> /dev/null # creates dataset-references.post.1.ttl,
          if [ -e dataset-references.post.1.ttl ]; then              #         dataset-references.post.2.ttl in blocks of 25 
@@ -353,7 +354,6 @@ if [ "$epoch_existed" != "true" ]; then
          fi
       popd &> /dev/null
       # 502s: source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
-      echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
       triples=`void-triples.sh $dir/dataset-references.ttl`
       df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}                 > $epochDir/dataset-references.meta.ttl
       if [ $triples -le 0 ]; then
@@ -463,8 +463,8 @@ if [ "$epoch_existed" != "true" ]; then
       pushd $faqtDir/__PIVOT_epoch/$epoch &> /dev/null
          pcurl.sh $faqt -n faqt-service -e ttl &> /dev/null
          $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh faqt-service
-         rapper -q -g -o turtle $faqt                                                                         > faqt-service.ttl         # faqt-service.{ttl,rdf,nt}
          echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/faqt/$f"                                              > faqt-service.ttl.sd_name # faqt-service.ttl.sd_name
+         rapper -q -g -o turtle $faqt                                                                         > faqt-service.ttl         # faqt-service.{ttl,rdf,nt}
          triples=`void-triples.sh faqt-service.ttl`
          dump=$faqtDir/__PIVOT_epoch/$epoch/faqt-service.ttl
          df-epoch-metadata.py faqt-service $DATAFAQS_BASE_URI $epoch $faqt $f $dump text/turtle ${triples:-0} > faqt-service.meta.ttl    # faqt-service.meta.ttl
