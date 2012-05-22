@@ -157,23 +157,21 @@ elif type == 'datasets':
 
       for bindings in graph.query('select ?dataset where { ?dataset a dcat:Dataset . }', initNs=prefixes):
          g = Graph()
-         dataset = bindings[0] 
-         print 'dataset: ' + dataset
+         dataset = bindings[0]
+         outDir = re.sub('#$','',re.sub('^https?://','',bindings[0]))
+         print 'dataset: ' + outDir
+         if not os.path.exists(outDir):
+            os.makedirs(outDir)
           
          query = 'select distinct ?a ?b where { ?a ?b <'+dataset+'> . <'+dataset+'> a dcat:Dataset . }'
          for bindings in graph.query(query, initNs=prefixes):
-            print bindings[0] + ' ' + bindings[1]
             g.add((bindings[0],bindings[1],dataset))
 
          query = 'select distinct ?y ?z where { <'+dataset+'> a dcat:Dataset; ?y ?z . }'
          for bindings in graph.query(query, initNs=prefixes):
-            print bindings[0] + ' ' + bindings[1]
             g.add((dataset,bindings[0],bindings[1]))
          
-         g.serialize(destination="b.ttl",format='n3')
-         print '# ' + str(len(g))
-
-      # TODO: figure out where to write the file.
+         g.serialize(destination=outDir+'dataset.ttl',format='n3')
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
       # To make this easier to read, do this:

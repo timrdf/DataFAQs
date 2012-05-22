@@ -301,7 +301,6 @@ if [ "$epoch_existed" != "true" ]; then
    rapper -q -g -o rdfxml $epochDir/datasets.ttl                                                                                                > $epochDir/datasets.ttl.rdf 
    df-core.py $epochDir/datasets.ttl.rdf datasets                                                                                               > $epochDir/datasets.ttl.csv
 
-   exit 1
    #
    # Dataset references.
    #
