@@ -207,7 +207,6 @@ if [ "$epoch_existed" != "true" ]; then
       datasets_service=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $1}' | head -1`
 
       df-core.py $epochDir/epoch.ttl.rdf dataset-referencers                                              > $epochDir/referencers.csv
-      references_service=`df-core.py $epochDir/epoch.ttl.rdf dataset-referencers | head -1`
    fi
 
    dir="__PIVOT_epoch/$epoch" # This is relative, $epochDir is absolute
@@ -317,7 +316,7 @@ if [ "$epoch_existed" != "true" ]; then
    #
    # Dataset references.
    #
-   for dataset_referencer in `df-core.py $epochDir/epoch.ttl.rdf dataset-referencers`; do       # TODO: this for loop expects just one value. It needs to be generalized to more.
+   for dataset_referencer in `cat $epochDir/referencers.csv`; do       # TODO: this for loop expects just one value. It needs to be generalized to more.
       echo "[INFO] Requesting dataset references  from $dataset_referencer"
       send="$epochDir/datasets.ttl"
       mime=`guess-syntax.sh $send mime`
@@ -493,15 +492,19 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p __PIVOT_dataset/$datasetDir
          # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
-            echo "hi" > hi.txt
-#            echo "@prefix dcat: <http://www.w3.org/ns/dcat#> ."                                                               > dataset.ttl
-#            echo "<$dataset> a dcat:Dataset ."                                                                               >> dataset.ttl
+            r=0
+            for referencer in `cat $epochDir/referencers.csv`; do
+               let 'r=r+1'
+               echo "curl -H "Content-Type: text/turtle" -d @dataset.ttl $referencer > references-$r"                         > get-references-$r.sh
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh references-$r`
+               if [ `void-triples.sh $file` -gt 0 ]; then
+                  rapper -q -g -o ntriples $file                                                                             >> references.nt
+               fi
+            done
 
             echo $dataset                                                                                                     > references.nt.csv
             if [ -e $epochDir/dataset-references.ttl.nt ]; then
-               cat $epochDir/dataset-references.ttl.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' >> references.nt
                cat references.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' | awk '{print $3}'    >> references.nt.csv
-               rm references.nt
             fi
 
             s=0 # "see also"
