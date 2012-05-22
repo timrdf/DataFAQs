@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+o!/usr/bin/env python
 #
 # https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch-metadata.py
 
@@ -143,7 +143,8 @@ templates = {
 .
 <{{DATASET}}> a void:Dataset .
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_HASH}}>
-   a prov:alternateOf <{{DATASET}}>;
+   a void:Dataset;
+   prov:alternateOf <{{DATASET}}>;
 .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}/dataset/{{DATASET_ID}}/descriptions/referencing-service>
