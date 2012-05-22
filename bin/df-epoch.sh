@@ -495,18 +495,18 @@ if [ "$epoch_existed" != "true" ]; then
             r=0
             for referencer in `cat $epochDir/referencers.csv`; do
                let 'r=r+1'
-               echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"                      > get-references-$r.sh
+               echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"   > get-references-$r.sh
                source get-references-$r.sh
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose references-$r`
-               echo "renamed to $file"
                if [ `void-triples.sh $file` -gt 0 ]; then
-                  rapper -q -g -o ntriples $file                                                                             >> references.nt
+                  rapper -q -g -o ntriples $file                                                          >> references.nt
                fi
             done
 
-            echo $dataset                                                                                                     > references.nt.csv
+            echo $dataset                                                                                  > references.nt.csv
             if [ -e references.nt ]; then
-               cat references.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' | awk '{print $3}'    >> references.nt.csv
+               seeAlso='http://www.w3.org/2000/01/rdf-schema#seeAlso'
+               cat references.nt | grep $dataset | grep $seeAlso | sed 's/<//g;s/>//g' | awk '{print $3}' >> references.nt.csv
             fi
 
             s=0 # "see also"
