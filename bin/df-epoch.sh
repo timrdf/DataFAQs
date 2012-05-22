@@ -512,7 +512,7 @@ if [ "$epoch_existed" != "true" ]; then
 
             s=0 # "see also"
             indent=""
-            for reference in `cat references.nt.csv`; do
+            for reference in `cat references.csv`; do
                file="part-$s"
                echo "$indent   $s: $reference"
                echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                     > get-reference-$file.sh
