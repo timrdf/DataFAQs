@@ -508,16 +508,20 @@ if [ "$epoch_existed" != "true" ]; then
                indent="   "
             done
 
-            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                        > post.ttl.sd_name
             triples=`void-triples.sh post.ttl`
+            if [ $triples -gt 0 ]; then
+               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                     > post.ttl.sd_name
+               if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+                  df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+               fi
+               rapper -q -g -o rdfxml post.ttl                                                                                > post.ttl.rdf
+            fi
+            # Graph metadata (regardless of the graph size)
             dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
             df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                     > post.meta.ttl
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-               df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
                df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
             fi
-            echo c
-            rapper -q -g -o rdfxml post.ttl                                                                                  > post.ttl.rdf
          popd &> /dev/null
          echo
       done # end datasets
