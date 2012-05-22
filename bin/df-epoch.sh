@@ -502,6 +502,7 @@ if [ "$epoch_existed" != "true" ]; then
                extension=`guess-syntax.sh --inspect "$file" extension`
                $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file                                                           # part-{1,2,3,...}.{ttl,rdf,nt}
                if [ $triples -gt 0 ]; then
+                  echo "rappering"
                   rapper -q -g -o turtle $file.$extension                                                                    >> post.ttl
                fi
                indent="   "
