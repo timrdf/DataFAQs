@@ -192,20 +192,21 @@ echo "[INFO] ${reusing-U}sing __PIVOT_epoch/$epoch $latest_requested"
 if [ "$epoch_existed" != "true" ]; then
 
    if [ -e epoch.ttl ]; then
-      rapper -q -g -o rdfxml epoch.ttl > epoch.ttl.rdf
-      faqts_input=`df-core.py epoch.ttl.rdf faqt-selectors | awk '{print $2}' | head -1`
-      faqts_service=`df-core.py epoch.ttl.rdf faqt-selectors | awk '{print $1}' | head -1`
-
-      datasets_input=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $2}' | head -1`
-      datasets_service=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $1}' | head -1`
-
-      references_service=`df-core.py epoch.ttl.rdf dataset-referencers | head -1`
-      cp epoch.ttl $epochDir/epoch.ttl
+      echo $metadata_name                                                                                 > $epochDir/epoch.ttl.sd_name
+      cp epoch.ttl                                                                                          $epochDir/epoch.ttl
       perl -pi -e "s|_:faqtlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services>|g"          $epochDir/epoch.ttl
       perl -pi -e "s|_:datasetlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets>|g"            $epochDir/epoch.ttl
       perl -pi -e "s|_:seeAlsolist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references>|g"  $epochDir/epoch.ttl
-      echo "<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch> a datafaqs:Epoch ."                               >> $epochDir/epoch.ttl            # epoch.ttl
-      echo $metadata_name                                                                                 > $epochDir/epoch.ttl.sd_name    # epoch.ttl.sd_name
+      echo "<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch> a datafaqs:Epoch ."                               >> $epochDir/epoch.ttl       
+      rapper -q -g -o rdfxml epoch.ttl                                                                    > $epochDir/epoch.ttl.rdf
+
+      faqts_input=`df-core.py $epochDir/epoch.ttl.rdf faqt-selectors | awk '{print $2}' | head -1`
+      faqts_service=`df-core.py $epochDir/epoch.ttl.rdf faqt-selectors | awk '{print $1}' | head -1`
+
+      datasets_input=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $2}' | head -1`
+      datasets_service=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $1}' | head -1`
+
+      references_service=`df-core.py $epochDir/epoch.ttl.rdf dataset-referencers | head -1`
    fi
 
    dir="__PIVOT_epoch/$epoch" # This is relative, $epochDir is absolute
@@ -213,7 +214,7 @@ if [ "$epoch_existed" != "true" ]; then
    #
    # Select FAqT evaluation services (using multiple inputs to multiple selectors)
    #
-   faqt_selectors=`df-core.py epoch.ttl.rdf faqt-selectors | awk '{print $1}' | sort -u`
+   faqt_selectors=`df-core.py $epochDir/epoch.ttl.rdf faqt-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for faqt_selector in $faqt_selectors; do
       echo "[INFO] Requesting evaluation services from $faqt_selector"
@@ -221,7 +222,7 @@ if [ "$epoch_existed" != "true" ]; then
       mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
       echo $faqt_selector > __PIVOT_epoch/$epoch/faqt-services/$s/selector
       i=0 # input to selector
-      for selector_input in `df-core.py epoch.ttl.rdf faqt-selector-inputs $faqt_selector`; do
+      for selector_input in `df-core.py $epochDir/epoch.ttl.rdf faqt-selector-inputs $faqt_selector`; do
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/faqt-services/$s/$i" &> /dev/null; 
@@ -258,7 +259,7 @@ if [ "$epoch_existed" != "true" ]; then
    #
    # Select datasets to evaluate (using multiple inputs to multiple selectors)
    #
-   dataset_selectors=`df-core.py epoch.ttl.rdf dataset-selectors | awk '{print $1}' | sort -u`
+   dataset_selectors=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for dataset_selector in $dataset_selectors; do
       echo "[INFO] Requesting datasets            from $dataset_selector"
@@ -266,7 +267,7 @@ if [ "$epoch_existed" != "true" ]; then
       mkdir -p "__PIVOT_epoch/$epoch/datasets/$s"
       echo $dataset_selector > "__PIVOT_epoch/$epoch/datasets/$s/selector"
       i=0 # input to selector
-      for selector_input in `df-core.py epoch.ttl.rdf dataset-selector-inputs $dataset_selector`; do
+      for selector_input in `df-core.py $epochDir/epoch.ttl.rdf dataset-selector-inputs $dataset_selector`; do
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/datasets/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/datasets/$s/$i" &> /dev/null; 
@@ -317,7 +318,7 @@ if [ "$epoch_existed" != "true" ]; then
    #
    # Dataset references.
    #
-   for dataset_referencer in `df-core.py epoch.ttl.rdf dataset-referencers`; do       # TODO: this for loop expects just one value. It needs to be generalized to more.
+   for dataset_referencer in `df-core.py $epochDir/epoch.ttl.rdf dataset-referencers`; do       # TODO: this for loop expects just one value. It needs to be generalized to more.
       echo "[INFO] Requesting dataset references  from $dataset_referencer"
       send="$epochDir/datasets.ttl"
       mime=`guess-syntax.sh $send mime`
@@ -599,7 +600,3 @@ for dataset in $datasetsRandom; do # Ordering randomized to distribute load amon
    done
    f=0
 done
-
-#if [ -e epoch.ttl.rdf ]; then
-#   rm epoch.ttl.rdf
-#fi
