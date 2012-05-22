@@ -168,7 +168,8 @@ elif type == 'datasets':
          print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
          g.add(bindings)
       
-      print len(g)
+      print g.serialize(format='n3')
+      print '#' len(g)
 
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
