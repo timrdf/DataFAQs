@@ -481,46 +481,37 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p __PIVOT_dataset/$datasetDir
          # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
-            echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."                                                 > dataset.ttl
-            echo "<$dataset> a datafaqs:CKANDataset ."                                                                      >> dataset.ttl
+            echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."                                                  > dataset.ttl
+            echo "<$dataset> a datafaqs:CKANDataset ."                                                                       >> dataset.ttl
+
+            echo $dataset                                                                                                     > references.nt.csv
             if [ -e $epochDir/dataset-references.ttl.nt ]; then
-               cat $epochDir/dataset-references.ttl.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' > references.nt
-               cat references.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' | awk '{print $3}'    > references.nt.csv
-            else
-               echo $dataset                                                                                                 > references.nt.csv
+               cat $epochDir/dataset-references.ttl.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' >> references.nt
+               cat references.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' | awk '{print $3}'    >> references.nt.csv
             fi
 
-            s=0 # see also
-            file="part-$s"
-            echo "curl -s -L -H \"$ACCEPT_HEADER\" $dataset > $file"                                                         > get-$file.sh
-            source get-$file.sh
-            triples=`void-triples.sh $file`
-            if [ "$triples" -gt 0 ]; then
-               extension=`guess-syntax.sh --inspect $file extension`
-               head -1 $file | awk '{print "   "$0}'
-               mv $file $file.$extension                                                                                     # part-0
-               rapper -q -g -o turtle "$file.$extension"                                                                     > post.ttl
-            else
-               echo "[WARNING]: no triples found by dereferencing $dataset"
-            fi
+            s=0 # "see also"
+            indent=""
             for reference in `cat references.nt.csv`; do
                let 's=s+1'
                file="part-$s"
-               # TODO: capture to get-$file.sh
-               echo "   $s: $reference"
-               curl -s -L -H "$ACCEPT_HEADER" $reference                                                                     > "$file"
-               head -1 $file | awk '{print "      "$0}'
+               echo "$indent   $s: $reference"
+               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                     > get-$file.sh
+               source get-$file.sh
+               triples=`void-triples.sh $file`
+               head -1 $file | awk -v indent="$indent" '{print indent"   "$0}'
                extension=`guess-syntax.sh --inspect "$file" extension`
-               #mimetype=`guess-syntax.sh --inspect "$file" mime`
-               mv $file $file.$extension                                                                                     # part-{1,2,3,...}.{ttl,rdf,nt}
-               # TODO: use $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file
-               rapper -q -g -o turtle $file.$extension                                                                      >> post.ttl
+               $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file                                                           # part-{1,2,3,...}.{ttl,rdf,nt}
+               if [ $triples -gt 0 ]; then
+                  rapper -q -g -o turtle $file.$extension                                                                    >> post.ttl
+               fi
+               indent="   "
             done
 
-            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                       > post.ttl.sd_name
+            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                        > post.ttl.sd_name
             triples=`void-triples.sh post.ttl`
             dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
-            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                    > post.meta.ttl
+            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                     > post.meta.ttl
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
                df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
