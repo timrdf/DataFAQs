@@ -169,7 +169,7 @@ elif type == 'datasets':
          g.add(bindings)
       
       print g.serialize(format='n3')
-      print '#' len(g)
+      print '# ' + str(len(g))
 
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
