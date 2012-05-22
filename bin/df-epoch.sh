@@ -505,7 +505,7 @@ if [ "$epoch_existed" != "true" ]; then
             done
 
             echo $dataset                                                                                                     > references.nt.csv
-            if [ -e $epochDir/dataset-references.ttl.nt ]; then
+            if [ -e references.nt ]; then
                cat references.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' | awk '{print $3}'    >> references.nt.csv
             fi
 
