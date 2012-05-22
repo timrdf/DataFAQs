@@ -153,13 +153,11 @@ elif type == 'services':
 elif type == 'datasets':
 
    if len(sys.argv) > 3 and sys.argv[3] == 'df:individual':
-      print 'TODO: implement df:individual'
-
+      # Place dataset-specific graphs into directories for each dataset.
       for bindings in graph.query('select ?dataset where { ?dataset a dcat:Dataset . }', initNs=prefixes):
          g = Graph()
          dataset = bindings[0]
-         outDir = re.sub('#$','',re.sub('^https?://','',bindings[0]))
-         print 'dataset: ' + outDir
+         outDir = '__PIVOT_dataset/' + re.sub('#$','',re.sub('^https?://','',bindings[0]))
          if not os.path.exists(outDir):
             os.makedirs(outDir)
           
@@ -171,7 +169,8 @@ elif type == 'datasets':
          for bindings in graph.query(query, initNs=prefixes):
             g.add((dataset,bindings[0],bindings[1]))
          
-         g.serialize(destination=outDir+'dataset.ttl',format='n3')
+         # e.g. __PIVOT_dataset//thedatahub.org/dataset/farmers-markets-geographic-data-united-states/dataset.ttl
+         g.serialize(destination=outDir+'/dataset.ttl',format='n3')
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
       # To make this easier to read, do this:
