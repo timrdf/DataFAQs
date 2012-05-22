@@ -39,8 +39,6 @@ rdflib.plugin.register('sparql', rdflib.query.Processor,
                        'rdfextras.sparql.processor', 'Processor')
 rdflib.plugin.register('sparql', rdflib.query.Result,
                        'rdfextras.sparql.query', 'SPARQLQueryResult')
-rdflib.plugin.register('turtle', Serializer,
-                       'rdflib.plugins.serializers.turtle', 'TurtleSerializer')
 
 if len(sys.argv) < 3 or len(sys.argv) > 4:
    print "usage: df-core.py epoch.rdf  {faqt-selectors,       dataset-selectors,       dataset-referencers} | "
