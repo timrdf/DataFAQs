@@ -129,6 +129,8 @@ class Service(sadi.Service):
 
 # TODO: move this to a new file and get it imported correctly.
 
+import ckanclient
+
 class CKANReader(Service):
 
    ckan = None
