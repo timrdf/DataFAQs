@@ -39,6 +39,8 @@ rdflib.plugin.register('sparql', rdflib.query.Processor,
                        'rdfextras.sparql.processor', 'Processor')
 rdflib.plugin.register('sparql', rdflib.query.Result,
                        'rdfextras.sparql.query', 'SPARQLQueryResult')
+rdflib.plugin.register('turtle', Serializer,
+                       'rdflib.plugins.serializers.turtle', 'TurtleSerializer')
 
 if len(sys.argv) < 3 or len(sys.argv) > 4:
    print "usage: df-core.py epoch.rdf  {faqt-selectors,       dataset-selectors,       dataset-referencers} | "
@@ -154,25 +156,26 @@ elif type == 'datasets':
 
    if len(sys.argv) > 3 and sys.argv[3] == 'df:individual':
       print 'TODO: implement df:individual'
-      g = Graph()
 
-      query = '''select distinct ?a ?b ?dataset where { ?a ?b ?dataset . ?dataset a dcat:Dataset . }'''
-      results = graph.query(query, initNs=prefixes)
-      for bindings in results:
-         print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
-         g.add(bindings)
+      for bindings in graph.query('select ?dataset where { ?dataset a dcat:Dataset . }', initNs=prefixes):
+         g = Graph()
+         dataset = bindings[0] 
+         print 'dataset: ' + dataset
+          
+         query = 'select distinct ?a ?b where { ?a ?b <'+dataset+'> . <'+dataset+'> a dcat:Dataset . }'
+         for bindings in graph.query(query, initNs=prefixes):
+            print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
+            g.add(bindings)
 
-      query = '''select distinct ?dataset ?y ?z where { ?dataset a dcat:Dataset; ?y ?z . }'''
-      results = graph.query(query, initNs=prefixes)
-      for bindings in results:
-         print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
-         g.add(bindings)
-      
-      g.bind("dcterms", "http://http://purl.org/dc/elements/1.1/")
-      g.bind("foaf", "http://xmlns.com/foaf/0.1/")
-      print g.serialize(format='n3')
-      print '# ' + str(len(g))
+         query = 'select distinct ?y ?z where { <'+dataset+'> a dcat:Dataset; ?y ?z . }'
+         for bindings in graph.query(query, initNs=prefixes):
+            print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
+            g.add(bindings)
+         
+         print g.serialize(format='n3')
+         print '# ' + str(len(g))
 
+      # TODO: figure out where to write the file.
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
       # To make this easier to read, do this:
