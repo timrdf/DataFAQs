@@ -493,7 +493,6 @@ if [ "$epoch_existed" != "true" ]; then
             s=0 # "see also"
             indent=""
             for reference in `cat references.nt.csv`; do
-               let 's=s+1'
                file="part-$s"
                echo "$indent   $s: $reference"
                echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                     > get-$file.sh
@@ -506,6 +505,7 @@ if [ "$epoch_existed" != "true" ]; then
                   rapper -q -g -o turtle $file.$extension                                                                    >> post.ttl
                fi
                indent="   "
+               let 's=s+1'
             done
 
             triples=`void-triples.sh post.ttl`
