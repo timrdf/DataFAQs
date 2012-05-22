@@ -41,9 +41,9 @@ if [[ "$1" == "--target" ]]; then
    exit
 fi
 
-name_paths=`find . -name "*.sd_name"`
-total=`cat $name_paths | wc -l | awk '{print $1}'`
 if [ "$1" == "--recursive-by-sd-name" ]; then
+   name_paths=`find . -name "*.sd_name"`
+   total=`cat $name_paths | wc -l | awk '{print $1}'`
    n=0
    for name_path in $name_paths; do
       let "n=n+1"
