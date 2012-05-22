@@ -168,6 +168,8 @@ elif type == 'datasets':
          print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
          g.add(bindings)
       
+      g.bind("dcterms", "http://http://purl.org/dc/elements/1.1/")
+      g.bind("foaf", "http://xmlns.com/foaf/0.1/")
       print g.serialize(format='n3')
       print '# ' + str(len(g))
 
