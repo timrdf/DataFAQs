@@ -127,12 +127,14 @@ class Service(sadi.Service):
 
       desc.save()
 
-class CKANReader(faqt.Service):
+# TODO: move this to a new file and get it imported correctly.
+
+class CKANReader(Service):
 
    ckan = None
 
    def __init__(self, servicePath): 
-      faqt.Service.__init__(self, servicePath)
+      Service.__init__(self, servicePath)
       self.ckan = ckanclient.CkanClient()
 
    def getCKANIdentiifer(self,input):
