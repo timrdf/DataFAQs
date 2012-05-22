@@ -172,7 +172,7 @@ elif type == 'datasets':
             print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
             g.add(bindings)
          
-         print g.serialize(format='n3')
+         print g.serialize(destination="b.ttl",format='n3')
          print '# ' + str(len(g))
 
       # TODO: figure out where to write the file.
