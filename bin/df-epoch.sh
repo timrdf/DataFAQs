@@ -513,7 +513,6 @@ if [ "$epoch_existed" != "true" ]; then
             if [ $triples -gt 0 ]; then
                echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                     > post.ttl.sd_name
                if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-                  echo post.ttl
                   df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
                fi
                rapper -q -g -o rdfxml post.ttl                                                                                > post.ttl.rdf
@@ -522,10 +521,7 @@ if [ "$epoch_existed" != "true" ]; then
             dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
             df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                     > post.meta.ttl
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-               echo post.meta.ttl
-               echo df-load-triple-store.sh --graph $metadata_name post.meta.ttl
-               df-load-triple-store.sh --graph $metadata_name post.meta.ttl
-               #df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
+               df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
                echo done
             fi
          popd &> /dev/null
