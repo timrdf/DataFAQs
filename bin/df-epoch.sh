@@ -499,7 +499,7 @@ if [ "$epoch_existed" != "true" ]; then
                source get-$file.sh
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
-               head -1 $file | awk -v indent="$indent" -v triples=$triples mime=$mime '{print indent"   "$0" ("triples" triples in "mime")"}'
+               head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"   "$0" ("triples" triples in "mime")"}'
                extension=`guess-syntax.sh --inspect "$file" extension`
                $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file                                                           # part-{1,2,3,...}.{ttl,rdf,nt}
                if [ $triples -gt 0 ]; then
