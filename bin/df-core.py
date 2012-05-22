@@ -158,6 +158,11 @@ elif type == 'datasets':
       results = graph.query(query, initNs=prefixes)
       for bindings in results:
          print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
+
+      query = '''select distinct ?dataset ?y ?z where { ?dataset a dcat:Dataset; ?y ?z . }'''
+      results = graph.query(query, initNs=prefixes)
+      for bindings in results:
+         print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
       # To make this easier to read, do this:
