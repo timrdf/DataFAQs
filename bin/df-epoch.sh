@@ -248,10 +248,10 @@ if [ "$epoch_existed" != "true" ]; then
       echo "[ERROR] No FAqT Services selected; cannot perform evaluations."
       exit 1
    fi
-   rapper -q -g -o rdfxml $epochDir/faqt-services.ttl                                                                                                           > $epochDir/faqt-services.ttl.rdf 
    triples=`void-triples.sh $dir/faqt-services.ttl`
-   df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                                                > $epochDir/faqt-services.meta.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services"                                                                                         > $epochDir/faqt-services.ttl.sd_name
+   df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                                                > $epochDir/faqt-services.meta.ttl
+   rapper -q -g -o rdfxml $epochDir/faqt-services.ttl                                                                                                           > $epochDir/faqt-services.ttl.rdf 
    df-core.py $epochDir/faqt-services.ttl.rdf faqt-services | grep "^http://" | sort -u                                                                         > $epochDir/faqt-services.ttl.csv
 
 
@@ -295,8 +295,8 @@ if [ "$epoch_existed" != "true" ]; then
       exit 1
    fi
    triples=`void-triples.sh $dir/datasets.ttl`
-   df-epoch-metadata.py 'datasets' $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl 'text/turtle' ${triples:-0}                                       > $epochDir/datasets.meta.ttl
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                               > $epochDir/datasets.ttl.sd_name
+   df-epoch-metadata.py 'datasets' $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl 'text/turtle' ${triples:-0}                                       > $epochDir/datasets.meta.ttl
    # Reserialize
    rapper -q -g -o rdfxml $epochDir/datasets.ttl                                                                                                 > $epochDir/datasets.ttl.rdf 
    df-core.py $epochDir/datasets.ttl.rdf datasets                                                                                                > $epochDir/datasets.ttl.csv
