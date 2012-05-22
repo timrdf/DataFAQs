@@ -522,7 +522,6 @@ if [ "$epoch_existed" != "true" ]; then
             df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                     > post.meta.ttl
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
-               echo done
             fi
          popd &> /dev/null
          echo
