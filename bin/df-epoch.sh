@@ -501,7 +501,7 @@ if [ "$epoch_existed" != "true" ]; then
                mime=`guess-syntax.sh --inspect "$file" mime`
                head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"   "$0" ("triples" triples in "mime")"}'
                extension=`guess-syntax.sh --inspect "$file" extension`
-               $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file                                                           # part-{1,2,3,...}.{ttl,rdf,nt}
+               blah=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file`                                                    # part-{1,2,3,...}.{ttl,rdf,nt}
                if [ $triples -gt 0 ]; then
                   rapper -q -g -o turtle $file.$extension                                                                    >> post.ttl
                fi
@@ -524,6 +524,7 @@ if [ "$epoch_existed" != "true" ]; then
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                echo post.meta.ttl
                df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
+               echo done
             fi
          popd &> /dev/null
          echo
