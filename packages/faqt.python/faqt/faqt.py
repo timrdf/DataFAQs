@@ -147,5 +147,11 @@ class CKANReader(Service):
          ckan_id = input.dcterms_identifier.first
       elif re.match('^.*/dataset/',input.subject):
          ckan_id = re.sub('^.*/dataset/','',str(input.subject))
-      print 'ckan_id ' + str(ckan_id)
       return ckan_id
+
+class CKANReaderWriter(Service):
+
+   def __init__(self, servicePath): 
+      CKANReader.__init__(self, servicePath)
+      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key
+      self.ckan = ckanclient.CkanClient(api_key=key)
