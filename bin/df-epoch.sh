@@ -514,8 +514,8 @@ if [ "$epoch_existed" != "true" ]; then
             for reference in `cat references.nt.csv`; do
                file="part-$s"
                echo "$indent   $s: $reference"
-               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                     > get-$file.sh
-               source get-$file.sh
+               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                     > get-reference-$file.sh
+               source get-reference-$file.sh
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
                head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"     "$0" ("triples" "mime" triples)"}'
