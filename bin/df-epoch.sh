@@ -262,9 +262,9 @@ if [ "$epoch_existed" != "true" ]; then
    s=0 # selector
    for dataset_selector in $dataset_selectors; do
       echo "[INFO] Requesting datasets            from $dataset_selector"
+      let "s=s+1"
       mkdir -p "__PIVOT_epoch/$epoch/datasets/$s"
       echo $dataset_selector > "__PIVOT_epoch/$epoch/datasets/$s/selector"
-      let "s=s+1"
       i=0 # input to selector
       for selector_input in `df-core.py epoch.ttl.rdf dataset-selector-inputs $dataset_selector`; do
          let "i=i+1"
@@ -345,10 +345,12 @@ if [ "$epoch_existed" != "true" ]; then
       df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}                 > $epochDir/dataset-references.meta.ttl
       if [ $triples -le 0 ]; then
          echo "[WARNING] $epochDir/dataset-references.ttl did not provide any references."
+         # huh?
          touch                                                                                                                                  $epochDir/dataset-references.ttl.nt
       else
-         # huh?
          rapper -q -g -o ntriples $epochDir/dataset-references.ttl | sed 's/<//g; s/>//g'                                                     > $epochDir/dataset-references.ttl.nt
+         # huh?
+         # WARNING: not really an ntriples file!
       fi
    done
 
