@@ -46,7 +46,7 @@ def getResponse(url):
    return connection.getresponse()
 
 # The Service itself
-class AddCKANMetadata(faqt.Service):
+class AddCKANMetadata(faqt.Service): # TODO: use faqt.CKANReaderWriter instead.
 
    # Service metadata.
    label                  = 'Update CKAN Dataset Metadata'
@@ -64,10 +64,7 @@ class AddCKANMetadata(faqt.Service):
       
       # Instantiate the CKAN client.
       # http://docs.python.org/library/configparser.html (could use this technique)
-      key = os.environ['X_CKAN_API_Key']
-      if len(key) <= 1:
-          print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
-          sys.exit(1)
+      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key
       self.ckan = ckanclient.CkanClient(api_key=key)
 
    def getOrganization(self):
@@ -121,7 +118,7 @@ class AddCKANMetadata(faqt.Service):
       #
       # identifier
 
-      ckan_id = None
+      ckan_id = None # TODO: move all of this to faqt.CKANReader superclass
       if len(input.datafaqs_ckan_identifier) > 0:
          ckan_id = input.datafaqs_ckan_identifier.first
       elif len(input.dcterms_identifier) > 0:

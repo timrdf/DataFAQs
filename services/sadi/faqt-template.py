@@ -51,7 +51,7 @@ class TEMPLATE-CLASS-NAME(faqt.Service):
       #    aligns with the deployment location \/
       #
       #                 DATAFAQS_BASE_URI  +  '/datafaqs/'  +  servicePath  +  '/'  + self.serviceNameText
-      faqt.Service.__init__(self, servicePath = 'services') # TEMPLATE: change to something like 'services/sadi/faqt/connected/' to get free provenance.
+      faqt.Service.__init__(self, servicePath = 'services/sadi') # TEMPLATE: change to something like 'services/sadi/faqt/connected/' to get free provenance.
 
    def getOrganization(self):
       result                      = self.Organization()

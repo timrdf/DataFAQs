@@ -37,7 +37,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class LiftCKAN(faqt.Service):
+class LiftCKAN(faqt.CKANReader):
 
    # Service metadata.
    label                  = 'lift-ckan'
@@ -56,13 +56,13 @@ class LiftCKAN(faqt.Service):
       #    aligns with the deployment location \/
       #
       #                 DATAFAQS_BASE_URI  +  '/datafaqs/'  +  servicePath  +  '/'  + self.serviceNameText
-      faqt.Service.__init__(self, servicePath = 'services/sadi/ckan') # TEMPLATE: change to something like 'services/sadi/faqt/connected/' to get free provenance.
+      faqt.CKANReader.__init__(self, servicePath = 'services/sadi/ckan') # TEMPLATE: change to something like 'services/sadi/faqt/connected/' to get free provenance.
 
       # Instantiate the CKAN client.
       # http://docs.python.org/library/configparser.html (could use this technique)
       #key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key
       #self.ckan = ckanclient.CkanClient(api_key=key)
-      self.ckan = ckanclient.CkanClient()
+      #self.ckan = ckanclient.CkanClient()
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -81,16 +81,7 @@ class LiftCKAN(faqt.Service):
 
       print 'processing ' + input.subject
 
-      ckan_id = None # TODO: move all of this to faqt.CKANReader superclass
-      if len(input.datafaqs_ckan_identifier) > 0:
-         ckan_id = input.datafaqs_ckan_identifier.first
-      elif len(input.dcterms_identifier) > 0:
-         ckan_id = input.dcterms_identifier.first
-      elif re.match('^.*/dataset/',input.subject):
-         ckan_id = re.sub('^.*/dataset/','',str(input.subject))
-      else:
-         print 'Error: cannot determine what dataset to create/modify'
-         return
+      ckan_id = self.getCKANIdentiifer(input)
       print 'ckan_id ' + ckan_id
 
       #
@@ -110,28 +101,28 @@ class LiftCKAN(faqt.Service):
          Thing   = output.session.get_class(ns.OWL['Thing'])
          Service = output.session.get_class(ns.SD['Service'])
          sparqlEndpoint = None
-         for extra in dataset['resources']:
-            if extra['format'] == u'api/sparql':
+         for resource in dataset['resources']:
+            if resource['format'] == u'api/sparql':
                #
                # <dataset> void:sparqlEndpoint <endpoint> .
                #
-               endpoint = Thing(extra['url'])
-               endpoint.dcterms_title = extra['description']
+               endpoint = Thing(resource['url'])
+               endpoint.dcterms_title = resource['description']
                endpoint.save()
-               service  = Service('#service-'+hashlib.sha224(extra['url']).hexdigest())
+               service  = Service('#service-'+hashlib.sha224(resource['url']).hexdigest())
                service.sd_endpoint = endpoint
                service.save()
-               sparqlEndpoint = {'url': Thing(extra['url']), # Saved for processing sparql_named_graph below.
-                                 'id' : extra['id']} 
-               output.void_sparqlEndpoint.append(Service(extra['url']))
-            if extra['format'] == u'example/turtle':
+               sparqlEndpoint = {'url': Thing(resource['url']), # Saved for processing sparql_named_graph below.
+                                 'id' : resource['id']} 
+               output.void_sparqlEndpoint.append(Service(resource['url']))
+            if resource['format'] == u'example/turtle':
                #
                # <dataset> void:exampleResource <> .
                #
-               output.void_sparqlEndpoint.append(Thing(extra['url']))
+               output.void_sparqlEndpoint.append(Thing(resource['url']))
                # TODO: elaborate this description.
             else:
-               print 'TODO: handle resource: ' + extra['format']
+               print 'TODO: handle resource: ' + resource['format']
 
          #
          # Process Extras

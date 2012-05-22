@@ -1,16 +1,5 @@
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.py> .
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/DataFAQs-Core-Services> .
-#
-#3> <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
-#3>    a datafaqs:FAqTService .
-#3> []
-#3>   a prov:Activity;
-#3>   prov:hadQualifiedAttribution [
-#3>      a prov:Attribution;
-#3>      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
-#3>      prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
-#3>   ];
-#3> .
 
 import faqt
 
@@ -44,7 +33,7 @@ ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 # The Service itself
-class WithPreferredURIAndCKANMetaVoid(faqt.Service):
+class WithPreferredURIAndCKANMetaVoid(faqt.CKANReader):
 
    # Service metadata.
    label                  = 'with-preferred-uri-and-ckan-meta-void'
@@ -56,10 +45,7 @@ class WithPreferredURIAndCKANMetaVoid(faqt.Service):
    dev_port = 9099
 
    def __init__(self):
-      faqt.Service.__init__(self, servicePath = 'services/sadi/core/augment-datasets')
-
-      # Instantiate the CKAN client.
-      self.ckan = ckanclient.CkanClient()
+      faqt.CKANReader.__init__(self, servicePath = 'services/sadi/core/augment-datasets')
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -78,40 +64,52 @@ class WithPreferredURIAndCKANMetaVoid(faqt.Service):
    
       print 'processing ' + input.subject
 
-      # Fetch the dataset description (no API key required for read-only)
-      #self.ckan.package_entity_get('farmers-markets-geographic-data-united-states')
-      #package_entity = self.ckan.last_message
-      #print package_entity
+      Thing = input.session.get_class(surf.ns.OWL.Thing)
 
+      # Fetch the dataset description (no API key required for read-only)
+      ckan_id = self.getCKANIdentiifer(input)
+      if ckan_id is not None:
+         self.ckan.package_entity_get(self.getCKANIdentiifer(input))
+         dataset = self.ckan.last_message
+         #print dataset
+
+         if 'preferred_uri' in dataset['extras']:
+            output.rdfs_seeAlso.append(Thing(dataset['extras']['preferred_uri']))
+
+         for resource in dataset['resources']:
+            if resource['format'] == u'meta/void':
+               output.rdfs_seeAlso.append(Thing(resource['url']))
+
+         output.save()
 
       # Dereference (e.g., from thedatahub.org)
-      store   = surf.Store(reader = 'rdflib', writer = 'rdflib', rdflib_store = 'IOMemory')
-      session = surf.Session(store)
-      store.load_triples(source = input.subject)
-      print str(store.size()) + ' triples from ' + input.subject
+      if False:
+         # OLD from back when CKAN let you dereference URIs and get RDF...
+         store   = surf.Store(reader = 'rdflib', writer = 'rdflib', rdflib_store = 'IOMemory')
+         session = surf.Session(store)
+         store.load_triples(source = input.subject)
+         print str(store.size()) + ' triples from ' + input.subject
 
-  
-      # TODO: add in directly asserted PreferredURIs, now that we are accepting any dcat:Dataset
- 
-      # Dereference the preferred URI (denoted via a CKAN "extra")
-      Thing = session.get_class(surf.ns.OWL.Thing)
-      prefixes = "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-      query = 'select ?uri where { <'+input.subject+'> <http://semantic.ckan.net/schema#extra> [ rdf:value ?uri; rdfs:label "preferred_uri"; ] }'
-      for row in store.execute_sparql(prefixes+query)['results']['bindings']:
-         preferred_uri = row['uri']['value']
-         print '  preferred uri: ' + preferred_uri
-         output.rdfs_seeAlso.append(Thing(preferred_uri))
+     
+         # TODO: add in directly asserted PreferredURIs, now that we are accepting any dcat:Dataset
+    
+         # Dereference the preferred URI (denoted via a CKAN "extra")
+         prefixes = "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
+         query = 'select ?uri where { <'+input.subject+'> <http://semantic.ckan.net/schema#extra> [ rdf:value ?uri; rdfs:label "preferred_uri"; ] }'
+         for row in store.execute_sparql(prefixes+query)['results']['bindings']:
+            preferred_uri = row['uri']['value']
+            print '  preferred uri: ' + preferred_uri
+            output.rdfs_seeAlso.append(Thing(preferred_uri))
 
 
-      # Include the CKAN "resource" with "format" "meta/void"
-      prefixes = 'prefix dc: <http://purl.org/dc/terms/> prefix dcat: <http://www.w3.org/ns/dcat#> prefix moat: <http://moat-project.org/ns#> '
-      query = 'select ?uri where { <'+input.subject+'> dcat:distribution [ dcat:accessURL ?uri; dc:format [ moat:taggedWithTag [ moat:name "meta/void" ]]] }'
-      for row in store.execute_sparql(prefixes+query)['results']['bindings']:
-         void_uri = row['uri']['value']
-         print '  void uri: ' + void_uri
-         output.rdfs_seeAlso.append(Thing(void_uri))
-
-      output.save()
+         # Include the CKAN "resource" with "format" "meta/void"
+         prefixes = 'prefix dc: <http://purl.org/dc/terms/> prefix dcat: <http://www.w3.org/ns/dcat#> prefix moat: <http://moat-project.org/ns#> '
+         query = 'select ?uri where { <'+input.subject+'> dcat:distribution [ dcat:accessURL ?uri; dc:format [ moat:taggedWithTag [ moat:name "meta/void" ]]] }'
+         for row in store.execute_sparql(prefixes+query)['results']['bindings']:
+            void_uri = row['uri']['value']
+            print '  void uri: ' + void_uri
+            output.rdfs_seeAlso.append(Thing(void_uri))
+         output.save()
 
 # Used when Twistd invokes this service b/c it is sitting in a deployed directory.
 resource = WithPreferredURIAndCKANMetaVoid()
