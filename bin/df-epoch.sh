@@ -500,19 +500,16 @@ if [ "$epoch_existed" != "true" ]; then
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
                head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"   "$0" ("triples" triples in "mime")"}'
-               echo guess
                extension=`guess-syntax.sh --inspect "$file" extension`
-               echo rename $file
                $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file                                                           # part-{1,2,3,...}.{ttl,rdf,nt}
-               echo renamed
                if [ $triples -gt 0 ]; then
-                  echo "rappering"
                   rapper -q -g -o turtle $file.$extension                                                                    >> post.ttl
                fi
                indent="   "
                let 's=s+1'
             done
 
+            echo done
             triples=`void-triples.sh post.ttl`
             if [ $triples -gt 0 ]; then
                echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                     > post.ttl.sd_name
