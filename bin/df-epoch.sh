@@ -343,7 +343,7 @@ if [ "$epoch_existed" != "true" ]; then
       echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
       triples=`void-triples.sh $dir/dataset-references.ttl`
       df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}                 > $epochDir/dataset-references.meta.ttl
-      if [ `void-triples.sh dataset-references.ttl` -le 0 ]; then
+      if [ $triples -le 0 ]; then
          echo "[WARNING] $epochDir/dataset-references.ttl did not provide any references."
          touch                                                                                                                                  $epochDir/dataset-references.ttl.nt
       else
