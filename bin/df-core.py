@@ -154,15 +154,22 @@ elif type == 'datasets':
 
    if len(sys.argv) > 3 and sys.argv[3] == 'df:individual':
       print 'TODO: implement df:individual'
+      g = Graph()
+
       query = '''select distinct ?a ?b ?dataset where { ?a ?b ?dataset . ?dataset a dcat:Dataset . }'''
       results = graph.query(query, initNs=prefixes)
       for bindings in results:
          print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
+         g.add(bindings)
 
       query = '''select distinct ?dataset ?y ?z where { ?dataset a dcat:Dataset; ?y ?z . }'''
       results = graph.query(query, initNs=prefixes)
       for bindings in results:
          print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
+         g.add(bindings)
+      
+      print len(g)
+
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
       # To make this easier to read, do this:
