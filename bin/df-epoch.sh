@@ -489,6 +489,7 @@ if [ "$epoch_existed" != "true" ]; then
             else
                echo $dataset                                                                                                 > references.nt.csv
             fi
+
             s=0 # see also
             file="part-$s"
             echo "curl -s -L -H \"$ACCEPT_HEADER\" $dataset > $file"                                                         > get-$file.sh
@@ -498,33 +499,34 @@ if [ "$epoch_existed" != "true" ]; then
                extension=`guess-syntax.sh --inspect $file extension`
                head -1 $file | awk '{print "   "$0}'
                mv $file $file.$extension                                                                                     # part-0
-               echo a
-               rapper -q -g -o turtle "$file.$extension" > post.ttl
-               for reference in `cat references.nt.csv`; do
-                  let 's=s+1'
-                  file="part-$s"
-                  echo "   $s: $reference"
-                  curl -s -L -H "$ACCEPT_HEADER" $reference > "$file"
-                  head -1 $file | awk '{print "      "$0}'
-                  extension=`guess-syntax.sh --inspect "$file" extension`
-                  #mimetype=`guess-syntax.sh --inspect "$file" mime`
-                  mv $file $file.$extension                                                                                  # part-{1,2,3,...}.{ttl,rdf,nt}
-                  echo b
-                  rapper -q -g -o turtle $file.$extension >> post.ttl                                                        # post.ttl
-               done
-               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d" > post.ttl.sd_name                                 # post.ttl.sd_name 
-               triples=`void-triples.sh post.ttl`
-               dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
-               df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples > post.meta.ttl # post.meta.ttl 
-               if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-                  df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
-                  df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
-               fi
-               echo c
-               rapper -q -g -o rdfxml post.ttl > post.ttl.rdf                                                                 # post.ttl.rdf
+               rapper -q -g -o turtle "$file.$extension"                                                                     > post.ttl
             else
-               echo "[WARNING]: no triples found in $epochDir/__PIVOT_dataset/$datasetDir/$file"
+               echo "[WARNING]: no triples found by dereferencing $dataset"
             fi
+            for reference in `cat references.nt.csv`; do
+               let 's=s+1'
+               file="part-$s"
+               # TODO: capture to get-$file.sh
+               echo "   $s: $reference"
+               curl -s -L -H "$ACCEPT_HEADER" $reference                                                                     > "$file"
+               head -1 $file | awk '{print "      "$0}'
+               extension=`guess-syntax.sh --inspect "$file" extension`
+               #mimetype=`guess-syntax.sh --inspect "$file" mime`
+               mv $file $file.$extension                                                                                     # part-{1,2,3,...}.{ttl,rdf,nt}
+               # TODO: use $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file
+               rapper -q -g -o turtle $file.$extension                                                                      >> post.ttl
+            done
+
+            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                       > post.ttl.sd_name
+            triples=`void-triples.sh post.ttl`
+            dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
+            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                    > post.meta.ttl
+            if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+               df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
+               df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
+            fi
+            echo c
+            rapper -q -g -o rdfxml post.ttl                                                                                  > post.ttl.rdf
          popd &> /dev/null
          echo
       done # end datasets
