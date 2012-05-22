@@ -208,7 +208,7 @@ if [ "$epoch_existed" != "true" ]; then
       echo $metadata_name                                                                                 > $epochDir/epoch.ttl.sd_name    # epoch.ttl.sd_name
    fi
 
-   dir="__PIVOT_epoch/$epoch"
+   dir="__PIVOT_epoch/$epoch" # This is relative, $epochDir is absolute
 
    #
    # Select FAqT evaluation services (using multiple inputs to multiple selectors)
@@ -277,7 +277,7 @@ if [ "$epoch_existed" != "true" ]; then
 
             #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > datasets.ttl"   > select.sh
             # TODO: selector needs to accept conneg.
-            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > datasets.ttl"                            > select.sh
+            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > datasets.ttl"                             > select.sh
             source select.sh                                                                                                      # <- creates   datasets.ttl
          popd &> /dev/null
       done 
@@ -285,7 +285,7 @@ if [ "$epoch_existed" != "true" ]; then
    # Aggregate all valid dataset listings.
    for input in `find $dir/datasets -name "datasets.ttl"`; do
       if [ `void-triples.sh $input` -gt 0 ]; then
-         rapper -q -g -o turtle $input                                                                                                            >> $epochDir/datasets.ttl
+         rapper -q -g -o turtle $input                                                                                                          >> $epochDir/datasets.ttl
       else
          echo "[WARNING] Could not guess syntax of $input"
       fi
@@ -295,11 +295,24 @@ if [ "$epoch_existed" != "true" ]; then
       exit 1
    fi
    triples=`void-triples.sh $dir/datasets.ttl`
-   df-epoch-metadata.py 'datasets' $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl 'text/turtle' ${triples:-0}                                      > $epochDir/datasets.meta.ttl
-   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                              > $epochDir/datasets.ttl.sd_name
+   df-epoch-metadata.py 'datasets' $DATAFAQS_BASE_URI $epoch $dir/datasets.ttl 'text/turtle' ${triples:-0}                                       > $epochDir/datasets.meta.ttl
+   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                               > $epochDir/datasets.ttl.sd_name
    # Reserialize
-   rapper -q -g -o rdfxml $epochDir/datasets.ttl                                                                                                > $epochDir/datasets.ttl.rdf 
-   df-core.py $epochDir/datasets.ttl.rdf datasets                                                                                               > $epochDir/datasets.ttl.csv
+   rapper -q -g -o rdfxml $epochDir/datasets.ttl                                                                                                 > $epochDir/datasets.ttl.rdf 
+   df-core.py $epochDir/datasets.ttl.rdf datasets                                                                                                > $epochDir/datasets.ttl.csv
+
+
+   #
+   # Extract s-p-D-p-o graphs about each selected dataset (for posting to Augmenters).
+   #
+   # faqt-brick/__PIVOT_epoch/2012-05-22
+   pushd $epochDir &> /dev/null 
+      df-core.py $epochDir/datasets.ttl.rdf datasets df:individual
+      # Makes faqt-brick/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/dataset.ttl
+      # for each dataset.
+   popd &> /dev/null
+
+   exit 1
 
    #
    # Dataset references.
