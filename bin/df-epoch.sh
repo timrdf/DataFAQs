@@ -481,13 +481,14 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p __PIVOT_dataset/$datasetDir
          # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
-            echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."                                                  > dataset.ttl
-            echo "<$dataset> a datafaqs:CKANDataset ."                                                                       >> dataset.ttl
+            echo "@prefix dcat: <http://www.w3.org/ns/dcat#> ."                                                               > dataset.ttl
+            echo "<$dataset> a dcat:Dataset ."                                                                               >> dataset.ttl
 
             echo $dataset                                                                                                     > references.nt.csv
             if [ -e $epochDir/dataset-references.ttl.nt ]; then
                cat $epochDir/dataset-references.ttl.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' >> references.nt
                cat references.nt | grep $dataset | grep 'http://www.w3.org/2000/01/rdf-schema#seeAlso' | awk '{print $3}'    >> references.nt.csv
+               rm references.nt
             fi
 
             s=0 # "see also"
