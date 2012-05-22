@@ -503,10 +503,11 @@ if [ "$epoch_existed" != "true" ]; then
                fi
             done
 
-            echo $dataset                                                                                  > references.nt.csv
+            echo $dataset                                                                                  > references.csv
             if [ -e references.nt ]; then
                seeAlso='http://www.w3.org/2000/01/rdf-schema#seeAlso'
-               cat references.nt | grep $dataset | grep $seeAlso | sed 's/<//g;s/>//g' | awk '{print $3}' >> references.nt.csv
+               cat references.nt | grep $dataset | grep $seeAlso | sed 's/<//g;s/>//g' | awk '{print $3}' >> references.csv
+               rm references.nt
             fi
 
             s=0 # "see also"
