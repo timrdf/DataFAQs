@@ -126,3 +126,22 @@ class Service(sadi.Service):
       activity.save()
 
       desc.save()
+
+class CKANReader(faqt.Service):
+
+   ckan = None
+
+   def __init__(self, servicePath): 
+      faqt.Service.__init__(self, servicePath)
+      self.ckan = ckanclient.CkanClient()
+
+   def getCKANIdentiifer(self,input):
+      ckan_id = None
+      if len(input.datafaqs_ckan_identifier) > 0:
+         ckan_id = input.datafaqs_ckan_identifier.first
+      elif len(input.dcterms_identifier) > 0:
+         ckan_id = input.dcterms_identifier.first
+      elif re.match('^.*/dataset/',input.subject):
+         ckan_id = re.sub('^.*/dataset/','',str(input.subject))
+      print 'ckan_id ' + str(ckan_id)
+      return ckan_id
