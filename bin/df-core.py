@@ -162,13 +162,13 @@ elif type == 'datasets':
           
          query = 'select distinct ?a ?b where { ?a ?b <'+dataset+'> . <'+dataset+'> a dcat:Dataset . }'
          for bindings in graph.query(query, initNs=prefixes):
-            print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
-            g.add(bindings)
+            print bindings[0] + ' ' + bindings[1]
+            g.add((bindings[0],bindings[1],dataset))
 
          query = 'select distinct ?y ?z where { <'+dataset+'> a dcat:Dataset; ?y ?z . }'
          for bindings in graph.query(query, initNs=prefixes):
             print bindings[0] + ' ' + bindings[1] + ' ' + bindings[2]
-            g.add(bindings)
+            g.add((dataset,bindings[0],bindings[1]))
          
          print g.serialize(destination="b.ttl",format='n3')
          print '# ' + str(len(g))
