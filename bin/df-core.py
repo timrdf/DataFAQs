@@ -151,46 +151,45 @@ elif type == 'services':
    for input in results:
       print input
 elif type == 'datasets':
-   query = '''
-select distinct ?dataset where {
-   ?dataset a dcat:Dataset .
-}
-'''
-   #To make this easier to read, do this:
-   #def split_by(sequence, length):
-   #   iterable = iter(sequence)
-   #   def yield_length():
-   #       for i in xrange(length):
-   #            yield iterable.next()
-   #   while True:
-   #       res = list(yield_length())
-   #       if not res:
-   ##           raise StopIteration
-   #       yield res
 
-   results = graph.query(query, initNs=prefixes)
-   block = 1
-   count = 0
-   size = 50
-   post = None
-   for bindings in results:
-      if len(sys.argv) > 3 and sys.argv[3] == 'df:chunk':
-         if count == 0:
-            if block > 1:
-               post.close()
-            filename = 'dataset-references.post.'+str(block)+'.ttl' # Separating into separate files to avoid GET timeout.
-            if not(os.path.exists(filename)):
-               print filename
-               post = open(filename, 'w')
-            else:
-               print filename + " already exists. Not modifying."
-         count += 1
-         post.write('<' + bindings[0] + '> a <http://www.w3.org/ns/dcat#Dataset> .\n')
-         if count == size:
-            count = 0
-            block += 1
-      else:
-         print bindings[0]
+   if len(sys.argv) > 3 and sys.argv[3] == 'df:individual':
+      print 'TODO: implement df:individual'
+   else:
+      query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
+      # To make this easier to read, do this:
+      #def split_by(sequence, length):
+      #   iterable = iter(sequence)
+      #   def yield_length():
+      #       for i in xrange(length):
+      #            yield iterable.next()
+      #   while True:
+      #       res = list(yield_length())
+      #       if not res:
+      ##           raise StopIteration
+      #       yield res
+      results = graph.query(query, initNs=prefixes)
+      block = 1
+      count = 0
+      size = 50
+      post = None
+      for bindings in results:
+         if len(sys.argv) > 3 and sys.argv[3] == 'df:chunk':
+            if count == 0:
+               if block > 1:
+                  post.close()
+               filename = 'dataset-references.post.'+str(block)+'.ttl' # Separating into separate files to avoid GET timeout.
+               if not(os.path.exists(filename)):
+                  print filename
+                  post = open(filename, 'w')
+               else:
+                  print filename + " already exists. Not modifying."
+            count += 1
+            post.write('<' + bindings[0] + '> a <http://www.w3.org/ns/dcat#Dataset> .\n')
+            if count == size:
+               count = 0
+               block += 1
+         else:
+            print bindings[0]
 else: # faqt-selectors and dataset-selectors and dataset-referencers
    # DEPRECATED use above
    results = graph.query(queries[type], initNs=prefixes)
