@@ -477,7 +477,7 @@ if [ "$epoch_existed" != "true" ]; then
    echo "[INFO] Gathering information about CKAN Datasets. Will be input to FAqT evaluation services."
    echo
    #
-   # Gather descriptions about the CKAN datasets (to input to the FAqT evaluation services).
+   # Gather descriptions about the datasets (to input to the FAqT evaluation services).
    #
    d=0 # "dataset"
    # faqt-brick/__PIVOT_epoch/2012-01-14 
@@ -487,16 +487,16 @@ if [ "$epoch_existed" != "true" ]; then
          datasetDir=`noprotocol $dataset`
          echo "[INFO] $datasetDir ($d/$numDatasets)"
 
-         # Where the dataset info is stored. 
-         # Becomes the input to FAqT evaluation services.
-         mkdir -p __PIVOT_dataset/$datasetDir
          # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
+         # Where the dataset info is stored -- becomes the input to FAqT evaluation services.
+         mkdir -p __PIVOT_dataset/$datasetDir
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
-            r=0
             for referencer in `cat $epochDir/referencers.csv`; do
                let 'r=r+1'
                echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"   > get-references-$r.sh
-               source get-references-$r.sh
+            done
+            for get-references in get-references-*.sh; do
+               source $get-references
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose references-$r`
                if [ `void-triples.sh $file` -gt 0 ]; then
                   rapper -q -g -o ntriples $file                                                          >> references.nt
