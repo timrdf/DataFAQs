@@ -63,11 +63,12 @@ class Size(faqt.Service):
 
       print 'processing ' + input.subject + ' ' + str(len(input.void_triples))
 
-      if len(input.void_triples) > 0 and int(input.void_triples.first) > 1000:
+      if len(input.void_triples) > 0:
          output.void_triples = input.void_triples.first
-         output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
-      else:
-         output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
+         if int(input.void_triples.first) > 1000:
+            output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+         else:
+            output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
 
       output.save()
 

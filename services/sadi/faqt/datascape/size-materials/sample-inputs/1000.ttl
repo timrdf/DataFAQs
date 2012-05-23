@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+
+<http://thedatahub.org/dataset/dbpedia>
+    void:triples 1001 ;
+    a dcat:Dataset .
+
+<http://thedatahub.org/dataset/instance-hub-fiscal-years>
+    void:triples 999 ;
+    a dcat:Dataset .
+

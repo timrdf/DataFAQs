@@ -1,0 +1,10 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://thedatahub.org/dataset/dbpedia> a datafaqs:Satisfactory;
+    void:triples 1001 .
+
+<http://thedatahub.org/dataset/instance-hub-fiscal-years> a datafaqs:Unsatisfactory;
+    void:triples 999 .
+
