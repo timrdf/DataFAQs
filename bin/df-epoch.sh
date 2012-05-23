@@ -572,7 +572,7 @@ if [ "$epoch_existed" != "true" ]; then
                fi
                let 'a=a+1'
             done
-            if [-e augmentations.ttl ]; then
+            if [ -e augmentations.ttl ]; then
                cat augmentations.ttl >> post.ttl
             fi
 
