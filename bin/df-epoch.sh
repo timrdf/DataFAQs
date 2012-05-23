@@ -182,7 +182,7 @@ fi
 ACCEPT_HEADER="Accept: text/turtle; application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6, */*; q=0.4"
-ACCEPT_HEADER="Accept: text/turtle,application/turtle,application/rdf+xml;q=0.8,text/plain;q=0.9,*/*;q=.5" # Alvaro-approved.
+ACCEPT_HEADER="Accept: text/turtle,application/turtle,application/rdf+xml;q=0.8,text/plain;q=0.7,*/*;q=.5" # Alvaro-approved.
 ACCEPT_HEADER="Accept: application/rdf+xml, text/rdf;q=0.6, */*;q=0.1" # This is what rapper uses.
 
 # # # #
@@ -197,6 +197,7 @@ if [ "$epoch_existed" != "true" ]; then
       perl -pi -e "s|_:faqtlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services>|g"          $epochDir/epoch.ttl
       perl -pi -e "s|_:datasetlist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets>|g"            $epochDir/epoch.ttl
       perl -pi -e "s|_:seeAlsolist|<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references>|g"  $epochDir/epoch.ttl
+      # TODO: _:augmentateddataset needs to be replaced with a URI.
       echo "<$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch> a datafaqs:Epoch ."                               >> $epochDir/epoch.ttl       
       rapper -q -g -o rdfxml epoch.ttl                                                                    > $epochDir/epoch.ttl.rdf
 
@@ -207,6 +208,7 @@ if [ "$epoch_existed" != "true" ]; then
       datasets_service=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $1}' | head -1`
 
       df-core.py $epochDir/epoch.ttl.rdf dataset-referencers                                              > $epochDir/referencers.csv
+      df-core.py $epochDir/epoch.ttl.rdf dataset-augmenters                                               > $epochDir/augmenters.csv
    fi
 
    dir="__PIVOT_epoch/$epoch" # This is relative, $epochDir is absolute

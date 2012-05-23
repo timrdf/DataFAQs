@@ -102,6 +102,12 @@ select distinct ?service where {
 }
 ''',
 
+   'dataset-augmenters' : '''
+select distinct ?service where {
+   ?service a datafaqs:DatasetAugmenter .
+}
+''',
+
    'faqt-selector-input' : '''
 select distinct ?dataset where {
    ?dataset a dcat:Dataset .
@@ -125,7 +131,7 @@ graph = Graph()
 #graph.parse(epoch, format="n3") # :: sigh ::
 graph.parse(epoch)
 
-if type in [ 'faqt-selectors'          'dataset-selectors'        'dataset-referencers'  'faqt-services']:
+if type in [ 'faqt-selectors'          'dataset-selectors'        'dataset-referencers'  'dataset-augmenters' 'faqt-services']:
    results = graph.query(queries[type], initNs=prefixes)
    for bindings in results:
       if len(bindings) == 2:
