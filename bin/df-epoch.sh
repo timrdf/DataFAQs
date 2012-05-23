@@ -492,18 +492,21 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p __PIVOT_dataset/$datasetDir
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
 
-            # Set up (and submit) requests for references (from the referencers).
+            #
+            # Set up (and submit) requests for references.
+            #
             r=0 # "referencer"
             for referencer in `cat $epochDir/referencers.csv`; do 
-               let 'r=r+1'
                echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"   > get-references-$r.sh
                                                                                                       source get-references-$r.sh
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose references-$r`
                if [ `void-triples.sh $file` -gt 0 ]; then
                   rapper -q -g -o ntriples $file                                                          >> references.nt
                fi
+               let 'r=r+1'
             done
 
+            # Compile the list of references.
             echo $dataset                                                                                  > references.csv
             if [ -e references.nt ]; then
                seeAlso='http://www.w3.org/2000/01/rdf-schema#seeAlso'
@@ -511,32 +514,37 @@ if [ "$epoch_existed" != "true" ]; then
                rm references.nt
             fi
 
+            #
+            # Request the references.
+            # 
             s=0 # "see also"
             indent=""
             for reference in `cat references.csv`; do
-               file="reference-$s"
                echo "$indent   $s: $reference"
-               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                     > get-$file.sh
-               source get-$file.sh
+               file="reference-$s"
+               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                    > get-$file.sh
+                                                                                                                        source get-$file.sh
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file`                                                   # reference-{1,2,3,...}.{ttl,rdf,nt}
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
                head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"     "$0" ("triples" "mime" triples)"}'
-               extension=`guess-syntax.sh --inspect "$file" extension`
-               blah=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file`                                                    # part-{1,2,3,...}.{ttl,rdf,nt}
-               if [ $triples -gt 0 ]; then
-                  rapper -q -g -o turtle $file.$extension                                                                    >> post.ttl
+               if (( $triples > 0 )); then
+                  rapper -q -g -o turtle $file                                                                              >> post.ttl
                fi
-               indent="      "
                let 's=s+1'
+               indent="      "
             done
 
+            #
+            # Create metadata and publish
+            #
             triples=`void-triples.sh post.ttl`
-            if [ $triples -gt 0 ]; then
+            if (( $triples > 0 )); then
                echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                     > post.ttl.sd_name
-               if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-                  df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
-               fi
                rapper -q -g -o rdfxml post.ttl                                                                                > post.ttl.rdf
+               if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+                  df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl.rdf | awk '{print "[INFO] loaded",$0,"triples"}'
+               fi
             fi
             # Graph metadata (regardless of the graph size)
             dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
