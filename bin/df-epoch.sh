@@ -556,7 +556,16 @@ if [ "$epoch_existed" != "true" ]; then
             #
             a=0 # "augmenter"
             for augmenter in `cat $epochDir/augmenters.csv`; do
-               echo "curl -s -H 'Content-Type: text/turtle' -d @post.ttl $augmenter > references-$r"       > get-augmentation-$r.sh
+               echo "curl -s -H 'Content-Type: text/turtle' -d @post.ttl $augmenter > augmentation-$r"       > get-augmentation-$r.sh
+               let 'a=a+1'
+            done
+            a=0 # "referencer"
+            for augmenter in `cat $epochDir/augmenters.csv`; do 
+               source                                                                                          get-augmentation-$r.sh
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose augmentation-$r`
+               if [ `void-triples.sh $file` -gt 0 ]; then
+                  rapper -q -g -o turtle $file                                                              >> augmentations.ttl
+               fi
                let 'a=a+1'
             done
 
