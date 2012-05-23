@@ -526,7 +526,7 @@ if [ "$epoch_existed" != "true" ]; then
 
 
             #
-            # Request the references.
+            # Set up requests for references and augmentations.
             # 
             s=0 # "see also"
             for reference in `cat references.csv`; do
@@ -534,6 +534,15 @@ if [ "$epoch_existed" != "true" ]; then
                echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                  > get-$file.sh
                let 's=s+1'
             done
+            a=0 # "augmenter"
+            for augmenter in `cat $epochDir/augmenters.csv`; do
+               echo "curl -s -H 'Content-Type: text/turtle' -d @post.ttl $augmenter > augmentation-$a"     > get-augmentation-$a.sh
+               let 'a=a+1'
+            done
+
+            #
+            # Request references.
+            #
             s=0 # "see also"
             indent=""
             for reference in `cat references.csv`; do
@@ -552,19 +561,14 @@ if [ "$epoch_existed" != "true" ]; then
             done
 
             #
-            # Augment everything collected from dataset selector and references by sending them to augmenters.
+            # Request augmentations.
             #
             a=0 # "augmenter"
-            for augmenter in `cat $epochDir/augmenters.csv`; do
-               echo "curl -s -H 'Content-Type: text/turtle' -d @post.ttl $augmenter > augmentation-$r"       > get-augmentation-$r.sh
-               let 'a=a+1'
-            done
-            a=0 # "referencer"
             for augmenter in `cat $epochDir/augmenters.csv`; do 
-               source                                                                                          get-augmentation-$r.sh
-               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose augmentation-$r`
+               source                                                                                        get-augmentation-$a.sh
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose augmentation-$a`
                if [ `void-triples.sh $file` -gt 0 ]; then
-                  rapper -q -g -o turtle $file                                                              >> augmentations.ttl
+                  rapper -q -g -o turtle $file                                                            >> augmentations.ttl
                fi
                let 'a=a+1'
             done
@@ -574,16 +578,16 @@ if [ "$epoch_existed" != "true" ]; then
             #
             triples=`void-triples.sh post.ttl`
             if (( $triples > 0 )); then
-               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                     > post.ttl.sd_name
+               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                  > post.ttl.sd_name
                touch post.ttl
-               rapper -q -g -o rdfxml post.ttl                                                                                > post.ttl.rdf
+               rapper -q -g -o rdfxml post.ttl                                                             > post.ttl.rdf
                if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                   df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl.rdf | awk '{print "[INFO] loaded",$0,"triples"}'
                fi
             fi
             # Graph metadata (regardless of the graph size)
             dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
-            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                     > post.meta.ttl
+            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples  > post.meta.ttl
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
             fi
