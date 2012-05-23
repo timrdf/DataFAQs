@@ -492,7 +492,7 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p __PIVOT_dataset/$datasetDir
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
             for referencer in `cat $epochDir/referencers.csv`; do
-               let 'r=r+1'
+               let 'r=${r:0}+1'
                echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"   > get-references-$r.sh
             done
             for get_references in get-references-*.sh; do
