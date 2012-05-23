@@ -499,7 +499,11 @@ if [ "$epoch_existed" != "true" ]; then
             r=0 # "referencer"
             for referencer in `cat $epochDir/referencers.csv`; do 
                echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"   > get-references-$r.sh
-                                                                                                      source get-references-$r.sh
+               let 'r=r+1'
+            done
+            r=0 # "referencer"
+            for referencer in `cat $epochDir/referencers.csv`; do 
+               source                                                                                        get-references-$r.sh
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose references-$r`
                if [ `void-triples.sh $file` -gt 0 ]; then
                   rapper -q -g -o ntriples $file                                                          >> references.nt
@@ -514,6 +518,10 @@ if [ "$epoch_existed" != "true" ]; then
                cat references.nt | grep $dataset | grep $seeAlso | sed 's/<//g;s/>//g' | awk '{print $3}' >> references.csv
                rm references.nt
             fi
+
+
+            cp dataset.ttl post.ttl # What we found out from the dataset selector belongs in the post.
+
 
             #
             # Request the references.
