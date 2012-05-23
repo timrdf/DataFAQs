@@ -552,6 +552,15 @@ if [ "$epoch_existed" != "true" ]; then
             done
 
             #
+            # Augment everything collected from dataset selector and references by sending them to augmenters.
+            #
+            a=0 # "augmenter"
+            for augmenter in `cat $epochDir/augmenters.csv`; do
+               echo "curl -s -H 'Content-Type: text/turtle' -d @post.ttl $augmenter > references-$r"       > get-augmentation-$r.sh
+               let 'a=a+1'
+            done
+
+            #
             # Create metadata and publish
             #
             triples=`void-triples.sh post.ttl`
