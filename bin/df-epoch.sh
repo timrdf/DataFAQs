@@ -548,7 +548,6 @@ if [ "$epoch_existed" != "true" ]; then
                let 's=s+1'
                indent="      "
             done
-            touch post.ttl
 
             #
             # Create metadata and publish
@@ -556,6 +555,7 @@ if [ "$epoch_existed" != "true" ]; then
             triples=`void-triples.sh post.ttl`
             if (( $triples > 0 )); then
                echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                     > post.ttl.sd_name
+               touch post.ttl
                rapper -q -g -o rdfxml post.ttl                                                                                > post.ttl.rdf
                if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                   df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl.rdf | awk '{print "[INFO] loaded",$0,"triples"}'
