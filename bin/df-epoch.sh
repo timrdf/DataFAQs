@@ -629,8 +629,9 @@ for dataset in $datasetsRandom; do # Ordering randomized to distribute load amon
       pushd $evalDir &> /dev/null
          output="evaluation"
          echo "#!/bin/bash" > request.sh
-         #echo curl -s -H "'Content-Type: text/turtle'" -H "'Accept: text/turtle'" -d @$post $faqt >> request.sh                            # evaluation.sh
-         echo curl -s -H "'Content-Type: application/rdf+xml'" -H "'Accept: text/turtle'" -d @$post $faqt >> request.sh                     # evaluation.sh
+         # TODO http://code.google.com/p/sadi/issues/detail?id=15
+         # TODO: ^^> echo curl -s -H "'Content-Type: application/rdf+xml'" -H "'Accept: text/turtle'" -d @$post $faqt >> request.sh                     # evaluation.sh
+         echo curl -s -H "'Content-Type: application/rdf+xml'" -d @$post $faqt >> request.sh
          source request.sh > $output
          mimetype=`guess-syntax.sh --inspect $output mime`
          echo "[INFO] `du -sh evaluation | awk '{print $1}'` of $mimetype"
