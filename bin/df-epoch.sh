@@ -473,6 +473,7 @@ if [ "$epoch_existed" != "true" ]; then
       popd &> /dev/null
    done
 
+
    echo
    echo "[INFO] Gathering information about CKAN Datasets. Will be input to FAqT evaluation services."
    echo
@@ -518,18 +519,23 @@ if [ "$epoch_existed" != "true" ]; then
             # Request the references.
             # 
             s=0 # "see also"
+            for reference in `cat references.csv`; do
+               file="reference-$s"
+               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                  > get-$file.sh
+               let 's=s+1'
+            done
+            s=0 # "see also"
             indent=""
             for reference in `cat references.csv`; do
-               echo "$indent   $s: $reference"
                file="reference-$s"
-               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                    > get-$file.sh
-                                                                                                                        source get-$file.sh
-               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $file`                                         # reference-{1,2,3,...}.{ttl,rdf,nt}
+               echo "$indent   $s: $reference"
+               source                                                                                        get-$file.sh
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $file`                       # reference-{1,2,3,...}.{ttl,rdf,nt}
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
                head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"     "$0" ("triples" "mime" triples)"}'
                if (( $triples > 0 )); then
-                  rapper -q -g -o turtle $file                                                                              >> post.ttl
+                  rapper -q -g -o turtle $file                                                            >> post.ttl
                fi
                let 's=s+1'
                indent="      "
