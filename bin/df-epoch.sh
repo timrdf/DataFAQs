@@ -524,7 +524,7 @@ if [ "$epoch_existed" != "true" ]; then
                file="reference-$s"
                echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                    > get-$file.sh
                                                                                                                         source get-$file.sh
-               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file`                                                   # reference-{1,2,3,...}.{ttl,rdf,nt}
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $file`                                         # reference-{1,2,3,...}.{ttl,rdf,nt}
                echo renamed to $file
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
@@ -593,7 +593,7 @@ for dataset in $datasetsRandom; do # Ordering randomized to distribute load amon
          source request.sh > $output
          mimetype=`guess-syntax.sh --inspect $output mime`
          echo "[INFO] `du -sh evaluation | awk '{print $1}'` of $mimetype"
-         rename=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh -v $output`                                                                 # evaluation.{ttl,rdf,nt}
+         rename=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $output`                                                          # evaluation.{ttl,rdf,nt}
          # Meta
          if [[ "$rename" == "$output" || "$rename" == "" ]]; then
             meta=$output.meta.ttl # There was no extension
