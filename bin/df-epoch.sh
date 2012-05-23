@@ -548,6 +548,7 @@ if [ "$epoch_existed" != "true" ]; then
                let 's=s+1'
                indent="      "
             done
+            touch post.ttl
 
             #
             # Create metadata and publish
