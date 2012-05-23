@@ -1,4 +1,4 @@
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.py>;
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/ckan/lift-ckan.py>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 
 import faqt
