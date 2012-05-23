@@ -42,7 +42,7 @@ class LiftCKAN(faqt.CKANReader):
    # Service metadata.
    label                  = 'lift-ckan'
    serviceDescriptionText = 'Accesses the current CKAN listing for the given datasets and returns a well-designed* RDF form of the same.'
-   comment                = ''
+   comment                = 'Thanks to Will Wates\' https://bitbucket.org/okfn/gockan for some modeling guidance.'
    serviceNameText        = 'lift-ckan' # Convention: Match 'name' below.
    name                   = 'lift-ckan' # This value determines the service URI relative to http://localhost:9090/
                                         # Convention: Use the name of this file for this value.
