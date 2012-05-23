@@ -61,25 +61,13 @@ class Size(faqt.Service):
 
    def process(self, input, output):
 
-      print 'processing ' + input.subject
+      print 'processing ' + input.subject + ' ' + str(len(input.void_triples))
 
-      ####
-      # Query a SPARQL endpoint
-      store = Store(reader = 'sparql_protocol', endpoint = 'http://dbpedia.org/sparql')
-      session = Session(store)
-      session.enable_logging = False
-      result = session.default_store.execute_sparql('select distinct ?type where {[] a ?type} limit 2')
-      if result:
-         for binding in result['results']['bindings']:
-            type  = binding['type']['value']
-            print type
-      ####
-
-      if True:
-         output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
- 
-      if ns.DATAFAQS['Unsatisfactory'] not in output.rdf_type:
+      if len(input.void_triples) > 0 and int(input.void_triples.first) > 1000:
+         output.void_triples = input.void_triples.first
          output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+      else:
+         output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
 
       output.save()
 
