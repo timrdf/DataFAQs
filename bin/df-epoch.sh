@@ -525,6 +525,7 @@ if [ "$epoch_existed" != "true" ]; then
                echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                    > get-$file.sh
                                                                                                                         source get-$file.sh
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh $file`                                                   # reference-{1,2,3,...}.{ttl,rdf,nt}
+               echo renamed to $file
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
                head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"     "$0" ("triples" "mime" triples)"}'
