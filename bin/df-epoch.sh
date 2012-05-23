@@ -572,7 +572,9 @@ if [ "$epoch_existed" != "true" ]; then
                fi
                let 'a=a+1'
             done
-            cat augmentations.ttl >> post.ttl
+            if [-e augmentations.ttl ]; then
+               cat augmentations.ttl >> post.ttl
+            fi
 
             #
             # Create metadata and publish
