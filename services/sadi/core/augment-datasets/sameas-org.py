@@ -91,7 +91,8 @@ class SameAsOrg(faqt.Service):
 
       Thing = session.get_class(ns.OWL['Thing'])
       john = session.get_resource(input.subject, Thing)
-      output.rdfs_comment = john.subject
+      for same in john.owl_sameAs:
+         output.rdfs_comment.append(same.subject)
 
       # curl http://sameas.org/json?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FEdinburgh
       #response = getResponse('http://sameas.org/json?uri='+input.subject)
