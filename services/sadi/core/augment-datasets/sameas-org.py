@@ -90,12 +90,12 @@ class SameAsOrg(faqt.Service):
       store.load_triples(source='http://sameas.org/rdf?uri='+input.subject)
 
       Thing = session.get_class(ns.OWL['Thing'])
-      john = session.get_resource(input.subject, Thing)
-      for same in john.owl_sameAs:
+      subject = session.get_resource(input.subject,None)
+      for same in subject.owl_sameAs:
          if isinstance(same, URIRef):
-            output.rdfs_comment.append(same)
+            output.rdfs_seeAlso.append(same)
          else:
-            output.rdfs_comment.append(same.subject)
+            output.rdfs_seeAlso.append(same.subject)
 
       # curl http://sameas.org/json?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FEdinburgh
       #response = getResponse('http://sameas.org/json?uri='+input.subject)
