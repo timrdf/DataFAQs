@@ -1,0 +1,4 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<http://dbpedia.org/resource/Edinburgh> a dcat:Dataset .
+
