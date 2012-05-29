@@ -20,11 +20,11 @@ import datetime
 import os
 import uuid
 
-import httplib
-from urlparse import urlparse, urlunparse
-import urllib
-connections = {'http' :httplib.HTTPConnection,
-               'https':httplib.HTTPSConnection}
+#import httplib
+#from urlparse import urlparse, urlunparse
+#import urllib
+#connections = {'http' :httplib.HTTPConnection,
+#               'https':httplib.HTTPSConnection}
 
 ns.register(moat='http://moat-project.org/ns#')
 ns.register(ov='http://open.vocab.org/terms/')
@@ -133,14 +133,14 @@ class Service(sadi.Service):
 
       desc.save()
 
-   def getResponse(self, url):
-      # Ripped from https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/pcurl.py
-      # Thanks to Jim McCusker.
-      o = urlparse(str(url))
-      connection = connections[o.scheme](o.netloc)
-      fullPath = urlunparse([None,None,o.path,o.params,o.query,o.fragment])
-      connection.request('GET',fullPath)
-      return connection.getresponse()
+#   def getResponse(self, url):
+#      # Ripped from https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/pcurl.py
+#      # Thanks to Jim McCusker.
+#      o = urlparse(str(url))
+#      connection = connections[o.scheme](o.netloc)
+#      fullPath = urlunparse([None,None,o.path,o.params,o.query,o.fragment])
+#      connection.request('GET',fullPath)
+#      return connection.getresponse()
 
 
 # TODO: move this to a new file and get it imported correctly.
