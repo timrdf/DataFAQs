@@ -90,7 +90,7 @@ class SameAsOrg(faqt.Service):
       store.load_triples(source='http://sameas.org/rdf?uri='+input.subject)
 
       Thing = session.get_class(ns.OWL['Thing'])
-      subject = session.get_resource(input.subject,None)
+      subject = session.get_resource(input.subject,'')
       for same in subject.owl_sameAs:
          if isinstance(same, URIRef):
             output.rdfs_seeAlso.append(same)
