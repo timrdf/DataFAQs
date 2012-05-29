@@ -31,6 +31,9 @@ ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
+connections = {'http' :httplib.HTTPConnection,
+               'https':httplib.HTTPSConnection}
+
 def getResponse(url):
    # Ripped from https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/pcurl.py
    o = urlparse(str(url))
