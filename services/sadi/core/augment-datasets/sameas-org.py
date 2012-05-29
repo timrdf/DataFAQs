@@ -76,35 +76,31 @@ class SameAsOrg(faqt.Service):
       return ns.DCAT['Dataset']
 
    def getOutputClass(self):
-      return ns.DATAFAQS['EvaluatedDataset']
+      return ns.DCAT['Dataset']
 
    def process(self, input, output):
 
       print 'processing ' + input.subject
 
       # http://sameas.org/?uri=http://dbpedia.org/resource/Edinburgh
+      #   Accept: application/rdf+xml: 303 -> http://sameas.org/rdf?uri=http://dbpedia.org/resource/Edinburgh
+      #   Accept: application/json:    303 -> http://sameas.org/json?uri=http://dbpedia.org/resource/Edinburgh
 
       # Using SuRF
       store   = Store(reader='rdflib', writer='rdflib', rdflib_store = 'IOMemory')
       session = Session(store)
       store.load_triples(source='http://sameas.org/rdf?uri='+input.subject)
 
-      Thing = session.get_class(ns.OWL['Thing'])
-      subject = session.get_resource(input.subject,'')
+      Thing   = session.get_class(ns.OWL['Thing'])
+      subject = session.get_resource(input.subject, Thing)
       for same in subject.owl_sameAs:
          if isinstance(same, URIRef):
             output.rdfs_seeAlso.append(same)
          else:
             output.rdfs_seeAlso.append(same.subject)
 
-      # curl http://sameas.org/json?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FEdinburgh
+      # Using json
       #response = getResponse('http://sameas.org/json?uri='+input.subject)
-
-      if True:
-         output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
- 
-      if ns.DATAFAQS['Unsatisfactory'] not in output.rdf_type:
-         output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
 
       output.save()
 
