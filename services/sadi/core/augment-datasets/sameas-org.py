@@ -77,7 +77,7 @@ class SameAsOrg(faqt.Service):
       #session = Session(store)
       #store.load_triples(source='http://sameas.org/?uri='+input.subject)
       response = self.getResponse('http://sameas.org/?uri='+input.subject)
-      print response
+      output.rdfs_comment = dir(response)
 
       if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
