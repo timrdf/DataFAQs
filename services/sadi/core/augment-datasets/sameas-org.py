@@ -85,11 +85,16 @@ class SameAsOrg(faqt.Service):
       # http://sameas.org/?uri=http://dbpedia.org/resource/Edinburgh
 
       # Using SuRF
-      #store   = Store(reader='rdflib', writer='rdflib', rdflib_store = 'IOMemory')
-      #session = Session(store)
-      #store.load_triples(source='http://sameas.org/?uri='+input.subject)
-      response = getResponse('http://sameas.org/?uri='+input.subject)
-      output.rdfs_comment = 'http://sameas.org/?uri='+input.subject
+      store   = Store(reader='rdflib', writer='rdflib', rdflib_store = 'IOMemory')
+      session = Session(store)
+      store.load_triples(source='http://sameas.org/rdf?uri='+input.subject)
+
+      Thing = session.get_class(ns.OWL['Thing'])
+      john = session.get_resource(input.subject, Thing)
+      output.rdfs_comment = john.subject
+
+      # curl http://sameas.org/json?uri=http%3A%2F%2Fdbpedia.org%2Fresource%2FEdinburgh
+      #response = getResponse('http://sameas.org/json?uri='+input.subject)
 
       if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
