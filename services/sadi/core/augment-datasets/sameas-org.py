@@ -31,6 +31,15 @@ ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
+def getResponse(url):
+   # Ripped from https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/pcurl.py
+   o = urlparse(str(url))
+   #print o
+   connection = connections[o.scheme](o.netloc)
+   fullPath = urlunparse([None,None,o.path,o.params,o.query,o.fragment])
+   connection.request('GET',fullPath)
+   return connection.getresponse()
+
 # The Service itself
 class SameAsOrg(faqt.Service):
 
@@ -76,8 +85,8 @@ class SameAsOrg(faqt.Service):
       #store   = Store(reader='rdflib', writer='rdflib', rdflib_store = 'IOMemory')
       #session = Session(store)
       #store.load_triples(source='http://sameas.org/?uri='+input.subject)
-      response = self.getResponse('http://sameas.org/?uri='+input.subject)
-      output.rdfs_comment = 'hi' #response.status
+      response = getResponse('http://sameas.org/?uri='+input.subject)
+      output.rdfs_comment = response.status
 
       if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
