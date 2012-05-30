@@ -1,0 +1,3 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29> owl:sameAs <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> .
