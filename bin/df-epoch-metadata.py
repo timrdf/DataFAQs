@@ -55,7 +55,7 @@ templates = {
 @prefix void:     <http://rdfs.org/ns/void#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix formats:  <http://www.w3.org/ns/formats/media_type> .
-@prefix prov:     <http://www.w3.org/ns/prov-o/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>
@@ -109,7 +109,7 @@ templates = {
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix void:     <http://rdfs.org/ns/void#> .
-@prefix prov:     <http://www.w3.org/ns/prov-o/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix formats:  <http://www.w3.org/ns/formats/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
@@ -287,7 +287,7 @@ elif sys.argv[1] == "evaluation":
 @prefix void:     <http://rdfs.org/ns/void#> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix formats:  <http://www.w3.org/ns/formats/media_type> .
-@prefix prov:     <http://www.w3.org/ns/prov-o/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
 <{{DATAFAQS_BASE_URI}}/datafaqs/epoch/{{EPOCH}}>

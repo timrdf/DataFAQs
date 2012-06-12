@@ -1,4 +1,4 @@
-@prefix prov:     <http://www.w3.org/ns/prov-o/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
 <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/lod-helpme/faqt-brick/epoch.ttl> .

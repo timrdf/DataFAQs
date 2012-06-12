@@ -14,7 +14,7 @@
 @prefix conversion: <http://purl.org/twc/vocab/conversion/> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
-@prefix prov: <http://www.w3.org/ns/prov-o/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix twi: <http://tw.rpi.edu/instances/> .
 
 <http://sparql.tw.rpi.edu/services/datafaqs/faqt/metadata/logd-catalog-listing>

@@ -243,6 +243,12 @@
    rdfs:subClassOf :CoreService;
 .
 
+:DatasetAugmenter
+   a owl:Class;
+   rdfs:subClassOf :CoreService;
+   rdfs:comment "An agent that provides additional metadata for the given dataset.";
+.
+
 :SourceCode
    a owl:Class;
    rdfs:subClassOf prov:Plan;
@@ -293,6 +299,11 @@
    a owl:Class;
    rdfs:subClassOf prov:Activity;
    rdfs:comment "The activity that determines rdfs:seeAlso references for datasets that are evaluated during an evaluation epoch.";
+.
+
+:DatasetAugmenting
+   a owl:Class;
+   rdfs:subClassOf prov:Activity;
 .
 
 :FAqTReferencing

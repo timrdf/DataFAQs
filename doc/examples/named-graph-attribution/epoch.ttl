@@ -1,24 +1,24 @@
-@prefix prov:     <http://www.w3.org/ns/prov-o/> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 
-<> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/default/faqt-brick/epoch.ttl> .
+<> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/doc/examples/lod-helpme/faqt-brick/epoch.ttl>;
+   foaf:homepage         <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/lod-helpme/faqt-brick/epoch.ttl>;
+   rdfs:seeAlso          <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/lod-helpme/faqt-brick/epoch.ttl>;
+.
 
 # # # # # # # # # #
 _:selectfaqtservices # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
-   a prov:Activity;
+   a datafaqs:FAqTSelection, prov:Activity;
    prov:wasAttributedTo
-      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-faqts/identity>;
    prov:used
-      <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation.rpy.ttl>;
-   prov:hadQualifiedAttribution [
-      a prov:Attribution;
-      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>;
-      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/identity.rpy>;
-   ];
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/faqt/provenance/named-graph-derivation>;
    prov:generated _:faqtlist; # the RDF graph that via-sparql-query returns (we don't know the name of it yet until we instantiate the epoch).
 .
 
-<http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/identity>
+<http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-faqts/identity>
    a datafaqs:FAqTSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
 .
 
@@ -27,18 +27,13 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
 _:selectdatasets 
    a prov:Activity;
    prov:wasAttributedTo 
-      <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/identity>;
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-datasets/identity>;
    prov:used 
       <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation-materials/sample-inputs/golfers.ttl>;
-   prov:hadQualifiedAttribution [
-      a prov:Attribution;
-      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/identity>;
-      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/identity.rpy>;
-   ];
    prov:generated _:datasetlist; # the RDF graph that by-ckan-group returns (we don't know the name of it yet until we instantiate the epoch).
 .
 
-<http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/identity>
+<http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-datasets/identity>
    a datafaqs:DatasetSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
 .
 

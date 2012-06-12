@@ -12,7 +12,7 @@ rdflib.plugin.register('sparql', rdflib.query.Processor,
 rdflib.plugin.register('sparql', rdflib.query.Result,
                        'rdfextras.sparql.query', 'SPARQLQueryResult')
 
-ns.register(prov='http://www.w3.org/ns/prov-o/')
+ns.register(prov='http://www.w3.org/ns/prov#')
 ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')

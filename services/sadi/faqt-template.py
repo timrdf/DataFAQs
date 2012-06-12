@@ -84,6 +84,10 @@ class TEMPLATE-CLASS-NAME(faqt.Service):
 
       # Query the RDF graph POSTed: input.session.default_store.execute
 
+      # Walk through all Things in the input graph (using SuRF):
+      # Thing = input.session.get_class(ns.OWL['Thing'])
+      # for person in Thing.all():
+
       if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
  

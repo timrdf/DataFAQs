@@ -56,7 +56,7 @@ if len(sys.argv) < 3 or len(sys.argv) > 4:
    print "  datasets                - "
    sys.exit(1)
 
-ns.register(prov='http://www.w3.org/ns/prov-o/')
+ns.register(prov='http://www.w3.org/ns/prov#')
 ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
