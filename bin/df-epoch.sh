@@ -455,7 +455,7 @@ done
 if [ "$epoch_existed" != "true" ]; then
 
    echo
-   echo "[INFO] Gathering information about FAqT evaluation services."
+   echo "[INFO] Gathering information about FAqT evaluation services:"
    echo
    #
    # Gather descriptions about the FAqT services (just good to know).
