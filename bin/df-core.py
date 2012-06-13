@@ -177,6 +177,12 @@ elif type == 'datasets':
          
          # e.g. __PIVOT_dataset//thedatahub.org/dataset/farmers-markets-geographic-data-united-states/dataset.ttl
          g.serialize(destination=outDir+'/dataset.ttl',format='n3')
+
+         # Embed some provenance about this script writing the file.
+         f = open(outDir+'/dataset.ttl', 'a')
+         f.write('\n')
+         f.write('#3> <> prov:wasAttributedTo [ foaf:name "df-core.py"; ] .')
+         f.close()
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
       # To make this easier to read, do this:

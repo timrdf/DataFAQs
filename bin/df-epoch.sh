@@ -75,11 +75,18 @@ if [ "$1" == "--help" ]; then
    exit 0
 fi
 
-function noprotocol {
+function noprotocolnohash {
    url="$1"
    url=${url#'http://'}
    url=${url#'https://'}
    url=${url%#*} # take off fragment identifier
+   echo $url
+}  
+
+function noprotocol {
+   url="$1"
+   url=${url#'http://'}
+   url=${url#'https://'}
    echo $url
 }  
 
@@ -228,7 +235,7 @@ if [ "$epoch_existed" != "true" ]; then
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/faqt-services/$s/$i" &> /dev/null; 
-            echo "[INFO]    using input: $selector_input"
+            echo "[INFO]    using input:                     $selector_input"
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-selector-input.sh
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
@@ -273,7 +280,7 @@ if [ "$epoch_existed" != "true" ]; then
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/datasets/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/datasets/$s/$i" &> /dev/null; 
-            echo "[INFO]    using input: $selector_input"
+            echo "[INFO]    using input:                     $selector_input"
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-selector-input.sh
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
@@ -311,8 +318,8 @@ if [ "$epoch_existed" != "true" ]; then
    # faqt-brick/__PIVOT_epoch/2012-05-22
    pushd $epochDir &> /dev/null 
       df-core.py $epochDir/datasets.ttl.rdf datasets df:individual
-      # Makes faqt-brick/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/dataset.ttl
-      # for each dataset.
+      # Makes faqt-brick/__PIVOT_epoch/2012-06-12/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/dataset.ttl
+      # for each dcat:Dataset.
    popd &> /dev/null
 
    #
@@ -409,25 +416,28 @@ f=0 # faqt evaluation service tally
 for faqt in $faqtsRandom; do
 
    let 'f=f+1'
-   faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
-   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset
-   mkdir -p $faqtDir/__PIVOT_dataset &> /dev/null
+   faqtDir="__PIVOT_faqt/`noprotocolnohash $faqt`"
+   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples
+   mkdir -p $faqtDir &> /dev/null
 
-   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/
+   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/service.ttl
    echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."  > $faqtDir/service.ttl
    echo "<$faqt> a datafaqs:FAqTService ."                          >> $faqtDir/service.ttl                             # service.ttl
    #echo "$faqt"                                                     > $faqtDir/service.ttl.sd_name                     # service.ttl.sd_name
 
    # Where the dataset evaluations will be stored.
+   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset
+   mkdir -p $faqtDir/__PIVOT_dataset &> /dev/null
    pushd $faqtDir/__PIVOT_dataset &> /dev/null
       d=0 # dataset tally
       for dataset in $datasetsRandom; do
          let 'd=d+1'
-         datasetDir=`noprotocol $dataset`
+         datasetDir=`noprotocolnohash $dataset`
          # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/__PIVOT_epoch/2012-01-14
          mkdir -p $datasetDir/__PIVOT_epoch/$epoch &> /dev/null
          # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
-         echo "@prefix void: <http://rdfs.org/ns/void#> ."  > $datasetDir/dataset.ttl
+         echo "# 432"  >> $datasetDir/dataset.ttl
+         echo "@prefix void: <http://rdfs.org/ns/void#> ."  >> $datasetDir/dataset.ttl
          echo "<$dataset> a void:Dataset ."                >> $datasetDir/dataset.ttl                                   # dataset.ttl
          #echo "$dataset"                                   > $datasetDir/dataset.ttl.sd_name                           # dataset.ttl.sd_name
       done
@@ -455,7 +465,7 @@ if [ "$epoch_existed" != "true" ]; then
    # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_epoch
    for faqt in $faqtsRandom; do
       let "f=f+1" 
-      faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
+      faqtDir="__PIVOT_faqt/`noprotocolnohash $faqt`"
       echo "[INFO] ${faqtDir#'__PIVOT_faqt/'} ($f/$numFAqTs)"
       mkdir -p $faqtDir/__PIVOT_epoch/$epoch &> /dev/null
       epDir=$faqtDir/__PIVOT_epoch/$epoch
@@ -500,6 +510,7 @@ if [ "$epoch_existed" != "true" ]; then
             #
             r=0 # "referencer"
             for referencer in `cat $epochDir/referencers.csv`; do 
+               referencer=${referencer%#*} # Strip fragment-identifier
                echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"   > get-references-$r.sh
                let 'r=r+1'
             done
@@ -615,9 +626,9 @@ d=0 # dataset tally
 e=0 # evaluation tally
 for dataset in $datasetsRandom; do # Ordering randomized to distribute load among evaluation services.
    let 'd=d+1'
-   datasetDir=`noprotocol $dataset`
+   datasetDir=`noprotocolnohash $dataset`
    for faqt in $faqtsRandom; do
-      faqtDir="__PIVOT_faqt/`noprotocol $faqt`"
+      faqtDir="__PIVOT_faqt/`noprotocolnohash $faqt`"
       let 'f=f+1'
       let 'e=e+1'
       echo "[INFO] dataset $d/$numDatasets, FAqT $f/$numFAqTs ($e/$total total)"
