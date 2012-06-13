@@ -194,6 +194,15 @@ ACCEPT_HEADER="Accept: application/rdf+xml, text/rdf;q=0.6, */*;q=0.1" # This is
 
 # # # #
 
+echo "[INFO] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "[INFO] - - - - - - - - - - - - - - - - Determining epoch configuration - - - - - - - - - - - - - - - - - -"
+
+#
+#
+# Gather list of FAqT services and list of datasets.
+#
+#
+
 echo "[INFO] ${reusing-U}sing __PIVOT_epoch/$epoch $latest_requested"
 
 if [ "$epoch_existed" != "true" ]; then
@@ -387,59 +396,67 @@ if [ "$epoch_existed" != "true" ]; then
       fi
    fi
 else
-   echo "[INFO] Reusing dataset listing and descriptions from __PIVOT_epoch/$epoch"
+   echo "[INFO] Reusing FAqT services and dataset lists and descriptions already gathered during __PIVOT_epoch/$epoch"
 fi
 
-numFAqTs=`wc -l $epochDir/faqt-services.ttl.csv | awk '{print $1}'`
-numDatasets=`wc -l $epochDir/datasets.ttl.csv | awk '{print $1}'`
+   numFAqTs=`wc -l $epochDir/faqt-services.ttl.csv | awk '{print $1}'`
+numDatasets=`wc -l $epochDir/datasets.ttl.csv      | awk '{print $1}'`
 
-faqtsRandom=`cat $epochDir/faqt-services.ttl.csv | randomize-line-order.py`
-datasetsRandom=`cat $epochDir/datasets.ttl.csv | randomize-line-order.py`
+   faqtsRandom=`cat $epochDir/faqt-services.ttl.csv | randomize-line-order.py`
+datasetsRandom=`cat $epochDir/datasets.ttl.csv      | randomize-line-order.py`
+
+echo
+echo "[INFO] - - - - - - - - - - - - - - - Finished determining epoch configuration. - - - - - - - - - - - - - -"
 
 echo
 echo "[INFO] $numFAqTs FAqT services will evaluate $numDatasets datasets."
 sleep 2
 echo
 echo "[INFO] FAqT Services:"
-echo
 cat $epochDir/faqt-services.ttl.csv | awk '{print "[INFO] "$0}'
 echo
 echo "[INFO] CKAN Datasets:"
-echo
-cat $epochDir/datasets.ttl.csv | awk '{print "[INFO] "$0}' 
+cat $epochDir/datasets.ttl.csv      | awk '{print "[INFO] "$0}' 
+
+echo "[INFO] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+
 
 #
 # Set up the directory structure before starting.
-# (can be used as a progress meter)
+# Mark the directories as a service or dataset.
 #
 f=0 # faqt evaluation service tally
 for faqt in $faqtsRandom; do
-
    let 'f=f+1'
+
+   # The FAqT service for all datasets and all epochs:
+   #                               FAqT Service - - - - - - - - - - - - - - - - - - - -|
+   #       faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples
    faqtDir="__PIVOT_faqt/`noprotocolnohash $faqt`"
-   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples
    mkdir -p $faqtDir &> /dev/null
+   echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."           > $faqtDir/service.ttl
+   echo "<$faqt> a datafaqs:FAqTService ."                                   >> $faqtDir/service.ttl
+   #echo "$faqt"                                                              > $faqtDir/service.ttl.sd_name
 
-   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/service.ttl
-   echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."  > $faqtDir/service.ttl
-   echo "<$faqt> a datafaqs:FAqTService ."                          >> $faqtDir/service.ttl                             # service.ttl
-   #echo "$faqt"                                                     > $faqtDir/service.ttl.sd_name                     # service.ttl.sd_name
-
-   # Where the dataset evaluations will be stored.
-   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset
+   # The datasets that the FAqT service has evaluated (at any time):
+   #       faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset
    mkdir -p $faqtDir/__PIVOT_dataset &> /dev/null
-   pushd $faqtDir/__PIVOT_dataset &> /dev/null
+   pushd    $faqtDir/__PIVOT_dataset &> /dev/null
       d=0 # dataset tally
       for dataset in $datasetsRandom; do
          let 'd=d+1'
          datasetDir=`noprotocolnohash $dataset`
-         # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/__PIVOT_epoch/2012-01-14
-         mkdir -p $datasetDir/__PIVOT_epoch/$epoch &> /dev/null
+         #                         FAqT Service - - - - - - - - - - - - - - - - - - - -|                 Dataset - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
          # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
-         echo "# 432"  >> $datasetDir/dataset.ttl
-         echo "@prefix void: <http://rdfs.org/ns/void#> ."  >> $datasetDir/dataset.ttl
-         echo "<$dataset> a void:Dataset ."                >> $datasetDir/dataset.ttl                                   # dataset.ttl
-         #echo "$dataset"                                   > $datasetDir/dataset.ttl.sd_name                           # dataset.ttl.sd_name
+         mkdir -p $datasetDir/__PIVOT_epoch/$epoch &> /dev/null
+         echo "# 446"                                                                                                                                           > $datasetDir/dataset.ttl
+         echo "@prefix void: <http://rdfs.org/ns/void#> ."                                                                                                     >> $datasetDir/dataset.ttl
+         echo "<$dataset> a void:Dataset ."                                                                                                                    >> $datasetDir/dataset.ttl
+         #echo "$dataset"                                                                                                                                       > $datasetDir/dataset.ttl.sd_name
+
+         #                         FAqT Service - - - - - - - - - - - - - - - - - - - -|                 Dataset - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|               Epoch - -|
+         # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/__PIVOT_epoch/2012-01-14
+         # (Where the dataset evaluations will be stored)
       done
    popd &> /dev/null
 done
@@ -447,7 +464,7 @@ done
 
 #
 #
-#
+# Gather descriptions of FAqT services and datasets.
 #
 #
 
@@ -461,23 +478,27 @@ if [ "$epoch_existed" != "true" ]; then
    # Gather descriptions about the FAqT services (just good to know).
    #
    f=0 # "faqt"
-   # faqt-brick/__PIVOT_epoch/2012-01-14 
-   # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_epoch
-   for faqt in $faqtsRandom; do
+   for faqt in $faqtsRandom; do # http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/faqt/provenance/named-graph-derivation
       let "f=f+1" 
+      #                         FAqT Service - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
+      # faqt-brick/__PIVOT_faqt/aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/faqt/connected/void-linkset/
       faqtDir="__PIVOT_faqt/`noprotocolnohash $faqt`"
       echo "[INFO] ${faqtDir#'__PIVOT_faqt/'} ($f/$numFAqTs)"
-      mkdir -p $faqtDir/__PIVOT_epoch/$epoch &> /dev/null
-      epDir=$faqtDir/__PIVOT_epoch/$epoch
+
+      # The FAqT service as described at different times.
+      #                         FAqT Service - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|               Epoch - -|
       # faqt-brick/__PIVOT_faqt/aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/faqt/connected/void-linkset/__PIVOT_epoch/2012-05-22/
+      mkdir -p $faqtDir/__PIVOT_epoch/$epoch &> /dev/null
+         epDir=$faqtDir/__PIVOT_epoch/$epoch
+
       pushd $faqtDir/__PIVOT_epoch/$epoch &> /dev/null
          pcurl.sh $faqt -n faqt-service -e ttl &> /dev/null
          $CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh faqt-service
-         echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/faqt/$f"                                              > faqt-service.ttl.sd_name # faqt-service.ttl.sd_name
-         rapper -q -g -o turtle $faqt                                                                         > faqt-service.ttl         # faqt-service.{ttl,rdf,nt}
+         echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/faqt/$f"                                                                       > faqt-service.ttl.sd_name
+         rapper -q -g -o turtle $faqt                                                                                                  > faqt-service.ttl
          triples=`void-triples.sh faqt-service.ttl`
          dump=$faqtDir/__PIVOT_epoch/$epoch/faqt-service.ttl
-         df-epoch-metadata.py faqt-service $DATAFAQS_BASE_URI $epoch $faqt $f $dump text/turtle ${triples:-0} > faqt-service.meta.ttl    # faqt-service.meta.ttl
+         df-epoch-metadata.py faqt-service $DATAFAQS_BASE_URI $epoch $faqt $f $dump text/turtle ${triples:-0}                          > faqt-service.meta.ttl
          if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
             df-load-triple-store.sh --graph `cat faqt-service.ttl.sd_name` faqt-service.ttl | awk '{print "[INFO] loaded",$0,"triples"}'
             df-load-triple-store.sh --graph $metadata_name faqt-service.meta.ttl            | awk '{print "[INFO] loaded",$0,"triples"}'
@@ -487,21 +508,24 @@ if [ "$epoch_existed" != "true" ]; then
 
 
    echo
-   echo "[INFO] Gathering information about CKAN Datasets. Will be input to FAqT evaluation services."
+   echo "[INFO] Gathering information about CKAN Datasets (will be input to FAqT evaluation services):"
    echo
    #
    # Gather descriptions about the datasets (to input to the FAqT evaluation services).
    #
    d=0 # "dataset"
-   # faqt-brick/__PIVOT_epoch/2012-01-14 
    pushd $epochDir &> /dev/null
-      for dataset in $datasetsRandom; do
+      #                          Epoch - -|
+      # faqt-brick/__PIVOT_epoch/2012-01-14 
+      for dataset in $datasetsRandom; do # https://raw.github.com/timrdf/DataFAQs/master/services/sadi/faqt/provenance/named-graph-derivation-materials/sample-inputs/golfers.ttl#collection
          let "d=d+1" 
          datasetDir=`noprotocol $dataset`
          echo "[INFO] $datasetDir ($d/$numDatasets)"
 
+         # The dataset as described during ** this ** epoch (becomes the input to FAqT evaluation services).
+         #
+         #                          Epoch - -|                 Dataset - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
          # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
-         # Where the dataset info is stored -- becomes the input to FAqT evaluation services.
          mkdir -p __PIVOT_dataset/$datasetDir
          pushd __PIVOT_dataset/$datasetDir &> /dev/null
 
@@ -511,24 +535,27 @@ if [ "$epoch_existed" != "true" ]; then
             r=0 # "referencer"
             for referencer in `cat $epochDir/referencers.csv`; do 
                referencer=${referencer%#*} # Strip fragment-identifier
-               echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"   > get-references-$r.sh
+               echo "curl -s -H 'Content-Type: text/turtle' -d @dataset.ttl $referencer > references-$r"                         > get-references-$r.sh
                let 'r=r+1'
             done
             r=0 # "referencer"
             for referencer in `cat $epochDir/referencers.csv`; do 
-               source                                                                                        get-references-$r.sh
-               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose references-$r`
+               source                                                                                                              get-references-$r.sh
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose references-$r`                                     # references-$r
+               echo $file
+               which rapper
+               rapper -g -g -c $file
                if [ `void-triples.sh $file` -gt 0 ]; then
-                  rapper -q -g -o ntriples $file                                                          >> references.nt
+                  rapper -q -g -o ntriples $file                                                                                >> references.nt
                fi
                let 'r=r+1'
             done
 
             # Compile the list of references.
-            echo $dataset                                                                                  > references.csv
+            echo $dataset                                                                                                        > references.csv
             if [ -e references.nt ]; then
                seeAlso='http://www.w3.org/2000/01/rdf-schema#seeAlso'
-               cat references.nt | grep $dataset | grep $seeAlso | sed 's/<//g;s/>//g' | awk '{print $3}' >> references.csv
+               cat references.nt | grep $dataset | grep $seeAlso | sed 's/<//g;s/>//g' | awk '{print $3}'                       >> references.csv
                rm references.nt
             fi
 
@@ -542,12 +569,12 @@ if [ "$epoch_existed" != "true" ]; then
             s=0 # "see also"
             for reference in `cat references.csv`; do
                file="reference-$s"
-               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                  > get-$file.sh
+               echo "curl -s -L -H \"$ACCEPT_HEADER\" $reference > $file"                                                        > get-$file.sh
                let 's=s+1'
             done
             a=0 # "augmenter"
             for augmenter in `cat $epochDir/augmenters.csv`; do
-               echo "curl -s -H 'Content-Type: text/turtle' -d @post.ttl $augmenter > augmentation-$a"     > get-augmentation-$a.sh
+               echo "curl -s -H 'Content-Type: text/turtle' -d @post.ttl $augmenter > augmentation-$a"                           > get-augmentation-$a.sh
                let 'a=a+1'
             done
 
@@ -559,13 +586,13 @@ if [ "$epoch_existed" != "true" ]; then
             for reference in `cat references.csv`; do
                file="reference-$s"
                echo "$indent   $s: $reference"
-               source                                                                                        get-$file.sh
-               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $file`                       # reference-{1,2,3,...}.{ttl,rdf,nt}
+               source                                                                                                              get-$file.sh
+               file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $file`                                             # reference-{1,2,3,...}.{ttl,rdf,nt}
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
                head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"     "$0" ("triples" "mime" triples)"}'
                if (( $triples > 0 )); then
-                  rapper -q -g -o turtle $file                                                            >> post.ttl
+                  rapper -q -g -o turtle $file                                                                                  >> post.ttl
                fi
                let 's=s+1'
                indent="      "
@@ -576,10 +603,10 @@ if [ "$epoch_existed" != "true" ]; then
             #
             a=0 # "augmenter"
             for augmenter in `cat $epochDir/augmenters.csv`; do 
-               source                                                                                        get-augmentation-$a.sh
+               source                                                                                                              get-augmentation-$a.sh
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose augmentation-$a`
                if [ `void-triples.sh $file` -gt 0 ]; then
-                  rapper -q -g -o turtle $file                                                            >> augmentations.ttl
+                  rapper -q -g -o turtle $file                                                                                  >> augmentations.ttl
                fi
                let 'a=a+1'
             done
@@ -592,16 +619,16 @@ if [ "$epoch_existed" != "true" ]; then
             #
             triples=`void-triples.sh post.ttl`
             if (( $triples > 0 )); then
-               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                  > post.ttl.sd_name
+               echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/dataset/$d"                                                        > post.ttl.sd_name
                touch post.ttl
-               rapper -q -g -o rdfxml post.ttl                                                             > post.ttl.rdf
+               rapper -q -g -o rdfxml post.ttl                                                                                   > post.ttl.rdf
                if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                   df-load-triple-store.sh --graph `cat post.ttl.sd_name` post.ttl.rdf | awk '{print "[INFO] loaded",$0,"triples"}'
                fi
             fi
             # Graph metadata (regardless of the graph size)
             dump="__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.ttl"
-            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples  > post.meta.ttl
+            df-epoch-metadata.py dataset $DATAFAQS_BASE_URI $epoch $dataset $d $dump text/turtle $triples                        > post.meta.ttl
             if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
                df-load-triple-store.sh --graph $metadata_name post.meta.ttl    | awk '{print "[INFO] loaded",$0,"triples"}'
             fi
