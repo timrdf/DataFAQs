@@ -1,0 +1,254 @@
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/doc/examples/iogds-datadumps/faqt-brick/epoch.ttl>;
+   foaf:homepage         <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/named-graph-attribution/faqt-brick/epoch.ttl>;
+   rdfs:seeAlso          <https://github.com/timrdf/DataFAQs/blob/master/doc/examples/named-graph-attribution/faqt-brick/epoch.ttl>;
+.
+
+# # # # # # # # # #
+_:selectfaqtservices # Every time you load this file, we're talking about a new activity (the one you're about to instantiate).
+   a datafaqs:FAqTSelection, prov:Activity;
+   prov:wasAttributedTo
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-faqts/identity>;
+   prov:used
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/faqt/access/void-datadump>;
+   prov:generated _:faqtlist; # the RDF graph that via-sparql-query returns (we don't know the name of it yet until we instantiate the epoch).
+.
+
+<http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-faqts/identity>
+   a datafaqs:FAqTSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
+
+
+# # # # # # # # # #
+_:selectdatasets 
+   a prov:Activity;
+   prov:wasAttributedTo 
+      <http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-datasets/identity>;
+   prov:used 
+      <http://logd.tw.rpi.edu/source/a2gov-org/dataset/catalog/version/2011-Dec-01>,
+      <http://logd.tw.rpi.edu/source/abertos-xunta-es/dataset/catalog/version/2012-Apr-06>,
+      <http://logd.tw.rpi.edu/source/africover-org/dataset/catalog/version/2011-Dec-01>,
+      <http://logd.tw.rpi.edu/source/allerdale-gov-uk/dataset/catalog/version/2012-Mar-06>,
+      <http://logd.tw.rpi.edu/source/aporta-es/dataset/catalog/version/2011-Dec-28>,
+      <http://logd.tw.rpi.edu/source/arvada-org/dataset/catalog/version/2011-Dec-01>,
+      <http://logd.tw.rpi.edu/source/at-ckan-net/dataset/catalog/version/2011-Dec-08>,
+      <http://logd.tw.rpi.edu/source/bahrain-bh/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/bcn-cat/dataset/catalog/version/2012-Jan-31>,
+      <http://logd.tw.rpi.edu/source/br-ckan-net/dataset/catalog/version/2011-Dec-08>,
+      <http://logd.tw.rpi.edu/source/caib-es/dataset/catalog/version/2012-Jan-30>,
+      <http://logd.tw.rpi.edu/source/calgaryonlinestore-com/dataset/catalog/version/->,
+      <http://logd.tw.rpi.edu/source/can-do-honolulu-gov/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/cartolleida-paeria-es/dataset/catalog/version/2012-May-09>,
+      <http://logd.tw.rpi.edu/source/cat-open-org-nz/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/catalog-opendata-in-th/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/catalog-opendata-in-th/dataset/catalog/version/2012-Jun-06>,
+      <http://logd.tw.rpi.edu/source/cityonline-calgary-ca/dataset/catalog/version/2011-Dec-28>,
+      <http://logd.tw.rpi.edu/source/citywindsor-ca/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/civicapps-org/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/cms-burlington-ca/dataset/catalog/version/2012-Feb-28>,
+      <http://logd.tw.rpi.edu/source/colorado-gov/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/comune-fi-it/dataset/catalog/version/2011-Dec-21>,
+      <http://logd.tw.rpi.edu/source/comune-pv-it/dataset/catalog/version/2012-Apr-11>,
+      <http://logd.tw.rpi.edu/source/comune-udine-it/dataset/catalog/version/2011-Dec-07>,
+      <http://logd.tw.rpi.edu/source/consejotransparencia-cl/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/cz-ckan-net/dataset/catalog/version/2011-Dec-08>,
+      <http://logd.tw.rpi.edu/source/dados-gov-br/dataset/catalog/version/2011-Dec-08>,
+      <http://logd.tw.rpi.edu/source/dados-gov-pt/dataset/catalog/version/2012-May-21>,
+      <http://logd.tw.rpi.edu/source/dadosabertos-senado-gov-br/dataset/catalog/version/2012-May-15>,
+      <http://logd.tw.rpi.edu/source/data-austintexas-gov/dataset/catalog/version/2012-Feb-15>,
+      <http://logd.tw.rpi.edu/source/data-baltimorecity-gov/dataset/catalog/version/2011-Dec-21>,
+      <http://logd.tw.rpi.edu/source/data-buenosaires-gob-ar/dataset/catalog/version/2012-Apr-06>,
+      <http://logd.tw.rpi.edu/source/data-ca-gov/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/data-cityofchicago-org/dataset/catalog/version/2011-Dec-21>,
+      <http://logd.tw.rpi.edu/source/data-digitaliser-dk/dataset/catalog/version/2011-Dec-02>,
+      <http://logd.tw.rpi.edu/source/data-edmonton-ca/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-fingal-ie/dataset/catalog/version/2012-May-04>,
+      <http://logd.tw.rpi.edu/source/data-gc-ca/dataset/catalog/version/2012-Feb-03>,
+      <http://logd.tw.rpi.edu/source/data-gouv-fr/dataset/catalog/version/2011-Dec-17>,
+      <http://logd.tw.rpi.edu/source/data-gov-au/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-gov-bc-ca/dataset/catalog/version/2011-Dec-12>,
+      <http://logd.tw.rpi.edu/source/data-gov-bc-ca/dataset/catalog/version/2011-Dec-21>,
+      <http://logd.tw.rpi.edu/source/data-gov-be/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-gov-ma/dataset/catalog/version/2012-May-15>,
+      <http://logd.tw.rpi.edu/source/data-gov-md/dataset/catalog/version/2011-Dec-03>,
+      <http://logd.tw.rpi.edu/source/data-gov-sg/dataset/catalog/version/2011-Dec-13>,
+      <http://logd.tw.rpi.edu/source/data-gov-sk/dataset/catalog/version/2012-Apr-20>,
+      <http://logd.tw.rpi.edu/source/data-gov-uk/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/data-gov/dataset/92/version/2011-Jul-11>,
+      <http://logd.tw.rpi.edu/source/data-gov/dataset/92/version/2012-Feb-09>,
+      <http://logd.tw.rpi.edu/source/data-govt-nz/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/data-grandtoulouse-fr/dataset/catalog/version/2011-Dec-03>,
+      <http://logd.tw.rpi.edu/source/data-gv-at/dataset/catalog/version/2012-May-15>,
+      <http://logd.tw.rpi.edu/source/data-illinois-gov/dataset/catalog/version/2011-Dec-07>,
+      <http://logd.tw.rpi.edu/source/data-iowa-gov/dataset/catalog/version/2012-Jun-13>,
+      <http://logd.tw.rpi.edu/source/data-lacub-fr/dataset/catalog/version/2012-Feb-14>,
+      <http://logd.tw.rpi.edu/source/data-linz-gv-at/dataset/catalog/version/2011-Dec-04>,
+      <http://logd.tw.rpi.edu/source/data-loire-atlantique-fr/dataset/catalog/version/2012-Apr-11>,
+      <http://logd.tw.rpi.edu/source/data-london-gov-uk/dataset/catalog/version/2012-Jan-19>,
+      <http://logd.tw.rpi.edu/source/data-medicare-gov/dataset/catalog/version/2011-Dec-13>,
+      <http://logd.tw.rpi.edu/source/data-medicinehat-ca/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/data-mosman-nsw-gov-au/dataset/catalog/version/2012-May-21>,
+      <http://logd.tw.rpi.edu/source/data-nantes-fr/dataset/catalog/version/2012-Feb-09>,
+      <http://logd.tw.rpi.edu/source/data-nasa-gov/dataset/catalog/version/2011-Dec-04>,
+      <http://logd.tw.rpi.edu/source/data-nola-gov/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-norge-no/dataset/catalog/version/2011-Dec-04>,
+      <http://logd.tw.rpi.edu/source/data-nsw-gov-au/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/data-octo-dc-gov/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-ok-gov/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-oregon-gov/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-overheid-nl/dataset/catalog/version/2011-Dec-28>,
+      <http://logd.tw.rpi.edu/source/data-redbridge-gov-uk/dataset/catalog/version/2012-Jan-24>,
+      <http://logd.tw.rpi.edu/source/data-rennes-metropole-fr/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-seattle-gov/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-suomi-fi/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/data-tirol-gv-at/dataset/catalog/version/2012-Apr-18>,
+      <http://logd.tw.rpi.edu/source/data-vancouver-ca/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/data-vic-gov-au/dataset/catalog/version/2011-Dec-07>,
+      <http://logd.tw.rpi.edu/source/data-visitprovence-com/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/data-wa-gov/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-wien-gv-at/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/data-worldbank-org/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/datacatalog-cookcountyil-gov/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/datagm-org-uk/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/datakc-org/dataset/catalog/version/2011-Dec-22>,
+      <http://logd.tw.rpi.edu/source/datalocale-fr/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/datanest-fair-play-sk/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/datasf-org/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/daten-berlin-de/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/daten-bremen-de/dataset/catalog/version/2012-Apr-11>,
+      <http://logd.tw.rpi.edu/source/dati-comune-bologna-it/dataset/catalog/version/2012-May-04>,
+      <http://logd.tw.rpi.edu/source/dati-emilia-romagna-it/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/dati-gov-it/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/dati-istat-it/dataset/catalog/version/2012-Feb-14>,
+      <http://logd.tw.rpi.edu/source/dati-lombardia-it/dataset/catalog/version/2012-Apr-11>,
+      <http://logd.tw.rpi.edu/source/dati-piemonte-it/dataset/catalog/version/2011-May-03>,
+      <http://logd.tw.rpi.edu/source/dati-piemonte-it/dataset/catalog/version/2012-May-03>,
+      <http://logd.tw.rpi.edu/source/datos-gijon-es/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/datos-gob-cl/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/datosabiertos-jcyl-es/dataset/catalog/version/2012-Apr-06>,
+      <http://logd.tw.rpi.edu/source/datospublicos-org/dataset/catalog/version/2012-May-21>,
+      <http://logd.tw.rpi.edu/source/donnees-ville-montreal-qc-ca/dataset/catalog/version/2012-Apr-20>,
+      <http://logd.tw.rpi.edu/source/donnees-ville-quebec-qc-ca/dataset/catalog/version/2012-Apr-06>,
+      <http://logd.tw.rpi.edu/source/dublinked-ie/dataset/catalog/version/2012-Feb-09>,
+      <http://logd.tw.rpi.edu/source/en-openei-org/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/env-gov-bc-ca/dataset/catalog/version/->,
+      <http://logd.tw.rpi.edu/source/finances-worldbank-org/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/fredericton-ca/dataset/catalog/version/2012-Feb-28>,
+      <http://logd.tw.rpi.edu/source/gencat-cat/dataset/catalog/version/2012-Jan-31>,
+      <http://logd.tw.rpi.edu/source/geodata-gov-gr/dataset/catalog/version/2012-Feb-01>,
+      <http://logd.tw.rpi.edu/source/geodata-gov/dataset/catalog/version/2012-Mar-05>,
+      <http://logd.tw.rpi.edu/source/geoweb-dnv-org/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/gis-atlantaga-gov/dataset/catalog/version/2012-Jun-12>,
+      <http://logd.tw.rpi.edu/source/gov-hk/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/government-ae/dataset/catalog/version/2012-Jun-13>,
+      <http://logd.tw.rpi.edu/source/governoaberto-sp-gov-br/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/guelph-ca/dataset/catalog/version/2012-Feb-28>,
+      <http://logd.tw.rpi.edu/source/hamilton-ca/dataset/catalog/version/2012-Jan-24>,
+      <http://logd.tw.rpi.edu/source/ie-ckan-net/dataset/catalog/version/2011-Dec-08>,
+      <http://logd.tw.rpi.edu/source/it-ckan-net/dataset/catalog/version/2012-May-21>,
+      <http://logd.tw.rpi.edu/source/juntadeandalucia-es/dataset/catalog/version/2012-Feb-14>,
+      <http://logd.tw.rpi.edu/source/kozadat-neumannhaz-hu/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/lemans-fr/dataset/catalog/version/2012-Apr-18>,
+      <http://logd.tw.rpi.edu/source/lichfielddc-gov-uk/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/linkedopendata-it/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/london-ca/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/lt-ckan-net/dataset/catalog/version/2011-Sep-13>,
+      <http://logd.tw.rpi.edu/source/maine-gov/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/manchester-gov-uk/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/mass-gov/dataset/catalog/version/2012-Feb-21>,
+      <http://logd.tw.rpi.edu/source/merton-gov-uk/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/michigan-gov/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/mississauga-ca/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/mn-gov/dataset/catalog/version/2012-Feb-21>,
+      <http://logd.tw.rpi.edu/source/montevideo-gub-uy/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/munlima-gob-pe/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/navarra-es/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/nebraska-gov/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/niagarafalls-ca/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/northdevon-gov-uk/dataset/catalog/version/2012-Jan-24>,
+      <http://logd.tw.rpi.edu/source/nycopendata-socrata-com/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/nysenate-gov/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/offenedaten-de/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/openbelgium-be/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/opendata-bayern-de/dataset/catalog/version/2012-Jan-12>,
+      <http://logd.tw.rpi.edu/source/opendata-enschede-nl/dataset/catalog/version/2012-Apr-11>,
+      <http://logd.tw.rpi.edu/source/opendata-euskadi-net/dataset/catalog/version/2012-Apr-20>,
+      <http://logd.tw.rpi.edu/source/opendata-go-ke/dataset/catalog/version/2011-Dec-07>,
+      <http://logd.tw.rpi.edu/source/opendata-jccm-es/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/opendata-larochelle-fr/dataset/catalog/version/2012-Jun-13>,
+      <http://logd.tw.rpi.edu/source/opendata-montpelliernumerique-fr/dataset/catalog/version/2011-Dec-28>,
+      <http://logd.tw.rpi.edu/source/opendata-paris-fr/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/opendata-peelregion-ca/dataset/catalog/version/2012-May-04>,
+      <http://logd.tw.rpi.edu/source/opendata-provincia-roma-it/dataset/catalog/version/2012-Apr-18>,
+      <http://logd.tw.rpi.edu/source/opendata-service-bw-de/dataset/catalog/version/2012-Apr-11>,
+      <http://logd.tw.rpi.edu/source/opendata-warwickshire-gov-uk/dataset/catalog/version/2011-Dec-05>,
+      <http://logd.tw.rpi.edu/source/opendatacordoba-com/dataset/catalog/version/2011-Dec-12>,
+      <http://logd.tw.rpi.edu/source/opendatani-info/dataset/catalog/version/->,
+      <http://logd.tw.rpi.edu/source/opendataphilly-org/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/opengov-es/dataset/catalog/version/2011-Dec-08>,
+      <http://logd.tw.rpi.edu/source/opengov-se/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/opengovdata-ru/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/ottawa-ca/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/picandmix-org-uk/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/portalu-de/dataset/catalog/version/2011-Dec-27>,
+      <http://logd.tw.rpi.edu/source/princegeorge-ca/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/profiles-bristol-gov-uk/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/regina-ca/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/regionofwaterloo-ca/dataset/catalog/version/2012-Feb-28>,
+      <http://logd.tw.rpi.edu/source/risp-asturias-es/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/rs-ckan-net/dataset/catalog/version/2012-May-21>,
+      <http://logd.tw.rpi.edu/source/salford-gov-uk/dataset/catalog/version/2012-Mar-06>,
+      <http://logd.tw.rpi.edu/source/sardegnageoportale-it/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/saudi-gov-sa/dataset/catalog/version/2012-Jan-24>,
+      <http://logd.tw.rpi.edu/source/sdappschallenge-com/dataset/catalog/version/2012-May-15>,
+      <http://logd.tw.rpi.edu/source/statcentral-ie/dataset/catalog/version/2012-Feb-03>,
+      <http://logd.tw.rpi.edu/source/surrey-ca/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/sutton-gov-uk/dataset/catalog/version/2011-Dec-28>,
+      <http://logd.tw.rpi.edu/source/texas-gov/dataset/catalog/version/2012-Feb-21>,
+      <http://logd.tw.rpi.edu/source/tol-ca/dataset/catalog/version/2011-Dec-07>,
+      <http://logd.tw.rpi.edu/source/toronto-ca/dataset/catalog/version/2011-Dec-28>,
+      <http://logd.tw.rpi.edu/source/trafford-gov-uk/dataset/catalog/version/2012-Mar-06>,
+      <http://logd.tw.rpi.edu/source/utah-gov/dataset/catalog/version/2011-Dec-06>,
+      <http://logd.tw.rpi.edu/source/wyre-gov-uk/dataset/catalog/version/2012-Jun-05>,
+      <http://logd.tw.rpi.edu/source/zaragoza-es/dataset/catalog/version/2011-Dec-06>;
+   prov:generated _:datasetlist; # the RDF graph that by-ckan-group returns (we don't know the name of it yet until we instantiate the epoch).
+.
+
+# TODO: use:
+#prefix dcterms: <http://purl.org/dc/terms/>
+#prefix e1:      <http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/iogds-upstream/vocab/enhancement/1/>
+#
+#select distinct ?version
+#where {
+#  [] 
+#    dcterms:isReferencedBy <http://logd.tw.rpi.edu/source/twc-rpi-edu/dataset/iogds-upstream/version/2012-Jun-13>;
+#    e1:most_recent_scrape ?version
+#  .
+#} order by ?version
+
+<http://aquarius.tw.rpi.edu/projects/datafaqs/services/sadi/core/select-datasets/identity>
+   a datafaqs:DatasetSelector, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+.
+
+
+# # # # # # # # # #
+#_:referencedatasets
+#   a prov:Activity;
+#   prov:wasAttributedTo
+#      <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+#   prov:used _:datasetlist;
+#   prov:hadQualifiedAttribution [
+#      a prov:Attribution;
+#      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+#      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
+#   ];
+#   prov:generated _:seeAlsolist; # the RDF graph that with-preferred-uri-and-ckan-meta-void returns (we don't know the name of it yet until we instantiate the epoch).
+#. 
+#
+#<http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>
+#   a datafaqs:DatasetReferencer, datafaqs:CoreService, datafaqs:SADIService, prov:Agent;
+#.
