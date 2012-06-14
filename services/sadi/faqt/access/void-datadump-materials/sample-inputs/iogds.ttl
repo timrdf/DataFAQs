@@ -1,0 +1,12 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://logd.tw.rpi.edu/source/a2gov-org/dataset/catalog/version/2011-Dec-01>        
+   a dcat:Dataset;
+   void:dataDump <http://logd.tw.rpi.edu/source/a2gov-org/file/catalog/version/2011-Dec-01/conversion/a2gov-org-catalog-2011-Dec-01.ttl.tgz>;
+.
+
+<http://logd.tw.rpi.edu/source/abertos-xunta-es/dataset/catalog/version/2012-Apr-06>
+   a dcat:Dataset;
+   void:dataDump <http://logd.tw.rpi.edu/source/abertos-xunta-es/file/catalog/version/2012-Apr-06/conversion/abertos-xunta-es-catalog-2012-Apr-06.ttl>;
+.

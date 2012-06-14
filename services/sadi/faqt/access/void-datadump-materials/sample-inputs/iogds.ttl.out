@@ -1,0 +1,18 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix http: <http://www.w3.org/2011/http#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://logd.tw.rpi.edu/source/a2gov-org/dataset/catalog/version/2011-Dec-01> a datafaqs:Unsatisfactory;
+    void:dataDump <http://logd.tw.rpi.edu/source/a2gov-org/file/catalog/version/2011-Dec-01/conversion/a2gov-org-catalog-2011-Dec-01.ttl.tgz> .
+
+<http://logd.tw.rpi.edu/source/abertos-xunta-es/dataset/catalog/version/2012-Apr-06> a datafaqs:Satisfactory;
+    void:dataDump <http://logd.tw.rpi.edu/source/abertos-xunta-es/file/catalog/version/2012-Apr-06/conversion/abertos-xunta-es-catalog-2012-Apr-06.ttl> .
+
+<http://logd.tw.rpi.edu/source/a2gov-org/file/catalog/version/2011-Dec-01/conversion/a2gov-org-catalog-2011-Dec-01.ttl.tgz> a rdfs:Resource;
+    http:statusCodeValue 404 .
+
+<http://logd.tw.rpi.edu/source/abertos-xunta-es/file/catalog/version/2012-Apr-06/conversion/abertos-xunta-es-catalog-2012-Apr-06.ttl> a rdfs:Resource;
+    http:statusCodeValue 200 .
+
