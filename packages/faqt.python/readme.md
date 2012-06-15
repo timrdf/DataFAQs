@@ -1,15 +1,5 @@
 See https://github.com/timrdf/DataFAQs/wiki/faqt.python-package
 
-## Register 
-
-Run:
-
-```
-python setup.py register
-```
-
-from this directory to register at http://pypi.python.org/pypi/faqt
-
 ## Build an egg
 
 Run:
@@ -25,3 +15,15 @@ to get dist/faqt-0.0.1-py2.7.egg
 ## Install to system
 
 sudo easy_install dist/faqt-0.0.1-py2.7.egg
+
+## Register 
+
+(Note: only needed to be done once)
+
+Ran:
+
+```
+python setup.py register
+```
+
+from this directory to register at http://pypi.python.org/pypi/faqt
