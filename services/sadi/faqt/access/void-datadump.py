@@ -52,7 +52,7 @@ class VoIDdataDump(faqt.Service):
       #    aligns with the deployment location \/
       #
       #                 DATAFAQS_BASE_URI  +  '/datafaqs/'  +  servicePath  +  '/'  + self.serviceNameText
-      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/access') # TEMPLATE: change to something like 'services/sadi/faqt/connected/' to get free provenance.
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/access')
 
    def getOrganization(self):
       result                      = self.Organization()
@@ -88,6 +88,21 @@ class VoIDdataDump(faqt.Service):
  
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
+
+      # TODO: string match URL extension and Content-Type returned.
+      #       add content-length and last-modified
+
+      # curl -LI http://logd.tw.rpi.edu/source/bcn-cat/file/catalog/version/2012-Jan-31/conversion/bcn-cat-catalog-2012-Jan-31.ttl
+      # HTTP/1.1 200 OK
+      # Date: Fri, 15 Jun 2012 13:46:39 GMT
+      # Server: Apache/2.2.14 (Ubuntu)
+      # Last-Modified: Thu, 14 Jun 2012 11:29:33 GMT
+      # ETag: "1a8c02f6-113fb5-4c26d0388a37a"
+      # Accept-Ranges: bytes
+      # Content-Length: 1130421
+      # Vary: Accept-Encoding
+      # Access-Control-Allow-Origin: *
+      # Content-Type: text/turtle
 
       output.save()
 
