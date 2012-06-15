@@ -1,0 +1,30 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://atlas.bio2rdf.org/sparql> a void:Dataset,
+        dcat:Dataset .
+
+<http://bind.bio2rdf.org/sparql> a void:Dataset,
+        dcat:Dataset .
+
+<http://chebi.bio2rdf.org/sparql> a void:Dataset,
+        dcat:Dataset .
+
+<http://hcls.deri.org:8080/openrdf-sesame/repositories/hclskb> a void:Dataset,
+        dcat:Dataset .
+
+<http://kegg.bio2rdf.org/sparql> a void:Dataset,
+        dcat:Dataset .
+
+<http://ligand.bio2rdf.org/sparql> a void:Dataset,
+        dcat:Dataset .
+
+<http://linkedlifedata.com/sparql> a void:Dataset,
+        dcat:Dataset .
+
+<http://pharmgkb.bio2rdf.org/sparql> a void:Dataset,
+        dcat:Dataset .
+
+<http://sparql.neurocommons.org:8890/sparql> a void:Dataset,
+        dcat:Dataset .
+
