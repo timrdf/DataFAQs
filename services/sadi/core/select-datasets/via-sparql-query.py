@@ -2,17 +2,7 @@
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/DataFAQs-Core-Services> .
 #3>
 #3> <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/via-sparql-query>
-#3>    a datafaqs:DatasetSelector .
-#3> []
-#3>    a prov:Activity;
-#3>    prov:hadQualifiedAttribution [
-#3>       a prov:Attribution;
-#3>       prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/via-sparql-query>;
-#3>       prov:adoptedPlan        <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query.rpy>;
-#3>    ];
-#3> .
-#3> <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query.rpy>
-#3>    foaf:homepage <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/via-sparql-query.rpy> .
+#3>    a datafaqs:DatasetSelector . # TODO
 
 import faqt
 
