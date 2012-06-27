@@ -1,0 +1,15 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix :     <http://www.w3.org/ns/prov#> .
+
+:what-I-want
+   a :Objective;
+   rdfs:comment "I want to see this .ps file in Firefox";
+   prov:wasDerivedFrom <http://www.adobetutorialz.com/content_images/AdobeTechnologies/PostScript/manylines.ps>;
+   prov:alternateOf          <http://www.adobetutorialz.com/content_images/AdobeTechnologies/PostScript/manylines.ps>;
+   :viewableIn <https://raw.github.com/nicholasdelrio/visko/master/rdf/mozilla-firefox.owl#mozilla-firefox>;
+.
+<http://www.adobetutorialz.com/content_images/AdobeTechnologies/PostScript/manylines.ps>
+   pmlp:hasFormat <https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT>;
+.
