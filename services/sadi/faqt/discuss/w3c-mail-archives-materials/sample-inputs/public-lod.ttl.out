@@ -1,0 +1,272 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Apr> a sioc:Container;
+    dcterms:date "April 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 175 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Aug> a sioc:Container;
+    dcterms:date "August 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 185 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Dec> a sioc:Container;
+    dcterms:date "December 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 148 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Jul> a sioc:Container;
+    dcterms:date "July 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 161 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Jun> a sioc:Container;
+    dcterms:date "June 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 176 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Mar> a sioc:Container;
+    dcterms:date "March 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 41 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008May> a sioc:Container;
+    dcterms:date "May 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 71 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Nov> a sioc:Container;
+    dcterms:date "November 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 221 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Oct> a sioc:Container;
+    dcterms:date "October 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 61 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2008Sep> a sioc:Container;
+    dcterms:date "September 2008";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 157 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Apr> a sioc:Container;
+    dcterms:date "April 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 165 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Aug> a sioc:Container;
+    dcterms:date "August 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 169 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Dec> a sioc:Container;
+    dcterms:date "December 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 187 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Feb> a sioc:Container;
+    dcterms:date "February 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 230 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Jan> a sioc:Container;
+    dcterms:date "January 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 119 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Jul> a sioc:Container;
+    dcterms:date "July 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 389 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Jun> a sioc:Container;
+    dcterms:date "June 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 450 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Mar> a sioc:Container;
+    dcterms:date "March 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 205 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009May> a sioc:Container;
+    dcterms:date "May 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 336 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Nov> a sioc:Container;
+    dcterms:date "November 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 186 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Oct> a sioc:Container;
+    dcterms:date "October 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 182 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2009Sep> a sioc:Container;
+    dcterms:date "September 2009";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 177 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Apr> a sioc:Container;
+    dcterms:date "April 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 433 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Aug> a sioc:Container;
+    dcterms:date "August 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 79 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Dec> a sioc:Container;
+    dcterms:date "December 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 129 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Feb> a sioc:Container;
+    dcterms:date "February 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 237 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Jan> a sioc:Container;
+    dcterms:date "January 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 145 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Jul> a sioc:Container;
+    dcterms:date "July 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 392 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Jun> a sioc:Container;
+    dcterms:date "June 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 337 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Mar> a sioc:Container;
+    dcterms:date "March 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 302 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010May> a sioc:Container;
+    dcterms:date "May 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 134 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Nov> a sioc:Container;
+    dcterms:date "November 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 577 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Oct> a sioc:Container;
+    dcterms:date "October 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 240 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2010Sep> a sioc:Container;
+    dcterms:date "September 2010";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 183 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Apr> a sioc:Container;
+    dcterms:date "April 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 325 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Aug> a sioc:Container;
+    dcterms:date "August 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 167 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Dec> a sioc:Container;
+    dcterms:date "December 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 85 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Feb> a sioc:Container;
+    dcterms:date "February 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 108 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Jan> a sioc:Container;
+    dcterms:date "January 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 237 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Jul> a sioc:Container;
+    dcterms:date "July 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 161 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Jun> a sioc:Container;
+    dcterms:date "June 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 590 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Mar> a sioc:Container;
+    dcterms:date "March 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 168 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011May> a sioc:Container;
+    dcterms:date "May 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 156 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Nov> a sioc:Container;
+    dcterms:date "November 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 104 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Oct> a sioc:Container;
+    dcterms:date "October 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 237 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2011Sep> a sioc:Container;
+    dcterms:date "September 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 151 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2012Apr> a sioc:Container;
+    dcterms:date "April 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 166 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2012Feb> a sioc:Container;
+    dcterms:date "February 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 210 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2012Jan> a sioc:Container;
+    dcterms:date "January 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 140 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2012Jul> a sioc:Container;
+    dcterms:date "July 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 210 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2012Jun> a sioc:Container;
+    dcterms:date "June 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 211 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2012Mar> a sioc:Container;
+    dcterms:date "March 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 439 .
+
+<http://lists.w3.org/Archives/Public/public-lod/2012May> a sioc:Container;
+    dcterms:date "May 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-lod>;
+    sioc:num_items 201 .
+
+<http://lists.w3.org/Archives/Public/public-lod> a datafaqs:Satisfactory .
+

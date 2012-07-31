@@ -1,0 +1,27 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lists.w3.org/Archives/Public/public-rdf-prov/2011Oct> a sioc:Container;
+    dcterms:date "October 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-prov>;
+    sioc:num_items 30 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-prov/2011Sep> a sioc:Container;
+    dcterms:date "September 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-prov>;
+    sioc:num_items 27 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-prov/2012Jun> a sioc:Container;
+    dcterms:date "June 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-prov>;
+    sioc:num_items 4 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-prov/2012Mar> a sioc:Container;
+    dcterms:date "March 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-prov>;
+    sioc:num_items 1 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-prov> a datafaqs:Satisfactory .
+

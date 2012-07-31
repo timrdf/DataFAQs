@@ -1,0 +1,87 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Apr> a sioc:Container;
+    dcterms:date "April 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 13 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug> a sioc:Container;
+    dcterms:date "August 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 422 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Dec> a sioc:Container;
+    dcterms:date "December 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 266 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Jul> a sioc:Container;
+    dcterms:date "July 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 428 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Jun> a sioc:Container;
+    dcterms:date "June 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 486 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011May> a sioc:Container;
+    dcterms:date "May 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 207 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Nov> a sioc:Container;
+    dcterms:date "November 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 455 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Oct> a sioc:Container;
+    dcterms:date "October 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 334 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Sep> a sioc:Container;
+    dcterms:date "September 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 345 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Apr> a sioc:Container;
+    dcterms:date "April 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 514 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Feb> a sioc:Container;
+    dcterms:date "February 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 611 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jan> a sioc:Container;
+    dcterms:date "January 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 331 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul> a sioc:Container;
+    dcterms:date "July 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 379 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jun> a sioc:Container;
+    dcterms:date "June 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 481 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Mar> a sioc:Container;
+    dcterms:date "March 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 531 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012May> a sioc:Container;
+    dcterms:date "May 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-prov-wg>;
+    sioc:num_items 459 .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg> a datafaqs:Satisfactory .
+

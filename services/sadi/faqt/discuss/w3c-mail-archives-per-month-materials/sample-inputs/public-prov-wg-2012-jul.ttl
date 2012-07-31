@@ -1,0 +1,9 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc:  <http://rdfs.org/sioc/ns#> .
+@prefix hello: <http://sadiframework.org/examples/hello.owl#> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> a sioc:Container .
+
+[] a hello:SecondaryParameters; 
+   rdfs:comment "assume that the authors name uniquely identifies the author";
+   hello:author_identification_stance hello:liberal .

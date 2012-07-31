@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg> a sioc:Space .

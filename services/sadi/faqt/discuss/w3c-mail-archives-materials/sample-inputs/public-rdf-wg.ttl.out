@@ -1,0 +1,102 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Apr> a sioc:Container;
+    dcterms:date "April 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 622 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Aug> a sioc:Container;
+    dcterms:date "August 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 244 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Dec> a sioc:Container;
+    dcterms:date "December 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 194 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Feb> a sioc:Container;
+    dcterms:date "February 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 155 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Jan> a sioc:Container;
+    dcterms:date "January 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 1 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Jul> a sioc:Container;
+    dcterms:date "July 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 129 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Jun> a sioc:Container;
+    dcterms:date "June 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 203 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Mar> a sioc:Container;
+    dcterms:date "March 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 753 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011May> a sioc:Container;
+    dcterms:date "May 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 460 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Nov> a sioc:Container;
+    dcterms:date "November 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 251 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Oct> a sioc:Container;
+    dcterms:date "October 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 419 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2011Sep> a sioc:Container;
+    dcterms:date "September 2011";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 208 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2012Apr> a sioc:Container;
+    dcterms:date "April 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 282 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2012Feb> a sioc:Container;
+    dcterms:date "February 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 188 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2012Jan> a sioc:Container;
+    dcterms:date "January 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 99 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2012Jul> a sioc:Container;
+    dcterms:date "July 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 82 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2012Jun> a sioc:Container;
+    dcterms:date "June 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 119 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2012Mar> a sioc:Container;
+    dcterms:date "March 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 162 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg/2012May> a sioc:Container;
+    dcterms:date "May 2012";
+    sioc:has_space <http://lists.w3.org/Archives/Public/public-rdf-wg>;
+    sioc:num_items 692 .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg> a datafaqs:Satisfactory .
+
