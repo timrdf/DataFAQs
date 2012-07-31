@@ -1,0 +1,12 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Apr/0000> a datafaqs:Satisfactory,
+        sioc:Item;
+    dcterms:date "Thu, 14 Apr 2011 12:32:28 +0200";
+    dcterms:identifier "4DA6CD3C.8050100&#64;gmail.com";
+    sioc:next_by_date <http://lists.w3.org/Archives/Public/public-prov-wg/2011Apr/0001> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Apr/0001> a sioc:Item .
+

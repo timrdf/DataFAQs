@@ -1,0 +1,50 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lists: <http://lists.w3.org/#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0000> a datafaqs:Satisfactory,
+        sioc:Item;
+    lists:maybe_reply <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0014>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0021>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0023>;
+    lists:next_in_thread <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0004>;
+    dcterms:date "Mon, 01 Aug 2011 09:00:58 +0100";
+    dcterms:identifier "EMEW3|e9b7794993998b7a896b98f9563d32cdn7091108L.Moreau|ecs.soton.ac.uk|4E365D3A.8060808&#64;ecs.soton.ac.uk";
+    sioc:has_reply <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0004>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0011>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0027>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0049>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0052>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0059>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0060>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0067>;
+    sioc:next_by_date <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0001>;
+    sioc:reply_of <http://www.w3.org/mid/4E365D3A.8060808@ecs.soton.ac.uk> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0001> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0011> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0014> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0021> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0023> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0027> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0049> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0052> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0059> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0060> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0067> a sioc:Item .
+
+<http://www.w3.org/mid/4E365D3A.8060808@ecs.soton.ac.uk> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0004> a sioc:Item .
+

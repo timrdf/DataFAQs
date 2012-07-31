@@ -1,0 +1,22 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lists: <http://lists.w3.org/#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0049> a datafaqs:Satisfactory,
+        sioc:Item;
+    lists:next_in_thread <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0052>;
+    dcterms:date "Tue, 2 Aug 2011 11:53:40 -0400";
+    dcterms:identifier "4E381D84.4070209&#64;nasa.gov";
+    sioc:next_by_date <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0050>;
+    sioc:previous_by_date <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0048>;
+    sioc:reply_of <http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0000> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0000> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0048> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0050> a sioc:Item .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2011Aug/0052> a sioc:Item .
+
