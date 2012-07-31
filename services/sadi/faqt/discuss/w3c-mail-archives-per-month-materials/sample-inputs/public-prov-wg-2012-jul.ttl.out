@@ -1,0 +1,2280 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0000> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Sunday,  1 July";
+    dcterms:identifier "msg0";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0001> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Sunday,  1 July";
+    dcterms:identifier "msg1";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0002> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Sunday,  1 July";
+    dcterms:identifier "msg2";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0003> a sioc:Item;
+    dcterms:author "Cresswell, Stephen";
+    dcterms:date "Sunday,  1 July";
+    dcterms:identifier "msg3";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0004> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg4";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0005> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg5";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0006> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg6";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0007> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg7";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0008> a sioc:Item;
+    dcterms:author "Jim McCusker";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg8";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0009> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg9";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0010> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg10";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0011> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  2 July";
+    dcterms:identifier "msg11";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0012> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg12";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0013> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg13";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0014> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg14";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0015> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg15";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0016> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg16";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0017> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg17";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0018> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg18";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0019> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg19";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0020> a sioc:Item;
+    dcterms:author "Jun Zhao";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg20";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0021> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg21";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0022> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg22";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0023> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg23";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0024> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg24";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0025> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg25";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0026> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg26";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0027> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Tuesday,  3 July";
+    dcterms:identifier "msg27";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0028> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg28";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0029> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg29";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0030> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg30";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0031> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg31";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0032> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg32";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0033> a sioc:Item;
+    dcterms:author "Paolo Missier";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg33";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0034> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg34";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0035> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg35";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0036> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg36";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0037> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg37";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0038> a sioc:Item;
+    dcterms:author "Paolo Missier";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg38";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0039> a sioc:Item;
+    dcterms:author "Khalid Belhajjame";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg39";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0040> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg40";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0041> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg41";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0042> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg42";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0043> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday,  4 July";
+    dcterms:identifier "msg43";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0044> a sioc:Item;
+    dcterms:author "Satya Sahoo";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg44";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0045> a sioc:Item;
+    dcterms:author "Khalid Belhajjame";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg45";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0046> a sioc:Item;
+    dcterms:author "Jun Zhao";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg46";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0047> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg47";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0048> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg48";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0049> a sioc:Item;
+    dcterms:author "Jun Zhao";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg49";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0050> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg50";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0051> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg51";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0052> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg52";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0053> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg53";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0054> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg54";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0055> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg55";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0056> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg56";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0057> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg57";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0058> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg58";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0059> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Thursday,  5 July";
+    dcterms:identifier "msg59";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0060> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg60";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0061> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg61";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0062> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg62";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0063> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg63";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0064> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg64";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0065> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg65";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0066> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg66";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0067> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg67";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0068> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg68";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0069> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg69";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0070> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg70";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0071> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg71";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0072> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg72";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0073> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg73";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0074> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg74";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0075> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg75";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0076> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg76";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0077> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg77";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0078> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg78";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0079> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg79";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0080> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg80";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0081> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg81";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0082> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg82";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0083> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg83";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0084> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg84";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0085> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg85";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0086> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg86";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0087> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday,  6 July";
+    dcterms:identifier "msg87";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0088> a sioc:Item;
+    dcterms:author "Khalid Belhajjame";
+    dcterms:date "Saturday,  7 July";
+    dcterms:identifier "msg88";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0089> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Saturday,  7 July";
+    dcterms:identifier "msg89";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0090> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Saturday,  7 July";
+    dcterms:identifier "msg90";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0091> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Saturday,  7 July";
+    dcterms:identifier "msg91";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0092> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Saturday,  7 July";
+    dcterms:identifier "msg92";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0093> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Saturday,  7 July";
+    dcterms:identifier "msg93";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0094> a sioc:Item;
+    dcterms:author "Paolo Missier";
+    dcterms:date "Saturday,  7 July";
+    dcterms:identifier "msg94";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0095> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Sunday,  8 July";
+    dcterms:identifier "msg95";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0096> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Sunday,  8 July";
+    dcterms:identifier "msg96";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0097> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Sunday,  8 July";
+    dcterms:identifier "msg97";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0098> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Sunday,  8 July";
+    dcterms:identifier "msg98";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0099> a sioc:Item;
+    dcterms:author "Satya Sahoo";
+    dcterms:date "Sunday,  8 July";
+    dcterms:identifier "msg99";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0100> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg100";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0101> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg101";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0102> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg102";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0103> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg103";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0104> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg104";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0105> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg105";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0106> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg106";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0107> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg107";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0108> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg108";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0109> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg109";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0110> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg110";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0111> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg111";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0112> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg112";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0113> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg113";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0114> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg114";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0115> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg115";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0116> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg116";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0117> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg117";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0118> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg118";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0119> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg119";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0120> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg120";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0121> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg121";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0122> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg122";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0123> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg123";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0124> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg124";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0125> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg125";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0126> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg126";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0127> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg127";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0128> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg128";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0129> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg129";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0130> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg130";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0131> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg131";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0132> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg132";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0133> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg133";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0134> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg134";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0135> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg135";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0136> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg136";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0137> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg137";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0138> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg138";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0139> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg139";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0140> a sioc:Item;
+    dcterms:author "Sam Coppens Ugent";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg140";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0141> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg141";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0142> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg142";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0143> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg143";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0144> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg144";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0145> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg145";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0146> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Monday,  9 July";
+    dcterms:identifier "msg146";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0147> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg147";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0148> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg148";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0149> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg149";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0150> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg150";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0151> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg151";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0152> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg152";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0153> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg153";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0154> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg154";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0155> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg155";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0156> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg156";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0157> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg157";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0158> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg158";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0159> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg159";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0160> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg160";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0161> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg161";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0162> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg162";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0163> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg163";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0164> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg164";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0165> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg165";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0166> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg166";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0167> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg167";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0168> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg168";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0169> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg169";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0170> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg170";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0171> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg171";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0172> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg172";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0173> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg173";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0174> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg174";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0175> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg175";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0176> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg176";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0177> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg177";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0178> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg178";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0179> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg179";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0180> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg180";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0181> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg181";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0182> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg182";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0183> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg183";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0184> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg184";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0185> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg185";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0186> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg186";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0187> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg187";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0188> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg188";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0189> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 10 July";
+    dcterms:identifier "msg189";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0190> a sioc:Item;
+    dcterms:author "Tim Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg190";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0191> a sioc:Item;
+    dcterms:author "Tim Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg191";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0192> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg192";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0193> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg193";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0194> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg194";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0195> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg195";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0196> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg196";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0197> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg197";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0198> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg198";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0199> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg199";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0200> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg200";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0201> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg201";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0202> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg202";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0203> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg203";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0204> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg204";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0205> a sioc:Item;
+    dcterms:author "Tim Lebo";
+    dcterms:date "Wednesday, 11 July";
+    dcterms:identifier "msg205";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0206> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg206";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0207> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg207";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0208> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg208";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0209> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg209";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0210> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg210";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0211> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg211";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0212> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg212";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0213> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg213";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0214> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg214";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0215> a sioc:Item;
+    dcterms:author "Paolo Missier";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg215";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0216> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg216";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0217> a sioc:Item;
+    dcterms:author "Hua, Hook (388C)";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg217";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0218> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg218";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0219> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg219";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0220> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg220";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0221> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg221";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0222> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg222";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0223> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg223";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0224> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg224";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0225> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg225";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0226> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg226";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0227> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg227";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0228> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg228";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0229> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg229";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0230> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg230";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0231> a sioc:Item;
+    dcterms:author "Paolo Missier";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg231";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0232> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg232";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0233> a sioc:Item;
+    dcterms:author "Satya Sahoo";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg233";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0234> a sioc:Item;
+    dcterms:author "Jun Zhao";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg234";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0235> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg235";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0236> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg236";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0237> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg237";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0238> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Thursday, 12 July";
+    dcterms:identifier "msg238";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0239> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Friday, 13 July";
+    dcterms:identifier "msg239";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0240> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Friday, 13 July";
+    dcterms:identifier "msg240";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0241> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Monday, 16 July";
+    dcterms:identifier "msg241";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0242> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday, 16 July";
+    dcterms:identifier "msg242";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0243> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Monday, 16 July";
+    dcterms:identifier "msg243";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0244> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Monday, 16 July";
+    dcterms:identifier "msg244";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0245> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Monday, 16 July";
+    dcterms:identifier "msg245";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0246> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Monday, 16 July";
+    dcterms:identifier "msg246";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0247> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg247";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0248> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg248";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0249> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg249";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0250> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg250";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0251> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg251";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0252> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg252";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0253> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg253";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0254> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg254";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0255> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg255";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0256> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg256";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0257> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Tuesday, 17 July";
+    dcterms:identifier "msg257";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0258> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg258";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0259> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg259";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0260> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg260";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0261> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg261";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0262> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg262";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0263> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg263";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0264> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg264";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0265> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg265";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0266> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg266";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0267> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg267";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0268> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg268";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0269> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg269";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0270> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg270";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0271> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg271";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0272> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg272";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0273> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg273";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0274> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg274";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0275> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg275";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0276> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg276";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0277> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg277";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0278> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg278";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0279> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg279";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0280> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg280";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0281> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg281";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0282> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg282";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0283> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg283";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0284> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg284";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0285> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg285";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0286> a sioc:Item;
+    dcterms:author "Paolo Missier";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg286";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0287> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg287";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0288> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg288";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0289> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg289";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0290> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg290";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0291> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg291";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0292> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg292";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0293> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg293";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0294> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg294";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0295> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg295";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0296> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg296";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0297> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg297";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0298> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg298";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0299> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg299";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0300> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg300";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0301> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg301";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0302> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg302";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0303> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg303";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0304> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg304";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0305> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg305";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0306> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg306";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0307> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg307";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0308> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg308";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0309> a sioc:Item;
+    dcterms:author "Stian Soiland-Reyes";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg309";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0310> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg310";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0311> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg311";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0312> a sioc:Item;
+    dcterms:author "Sandro Hawke";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg312";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0313> a sioc:Item;
+    dcterms:author "Huynh T.D.";
+    dcterms:date "Wednesday, 18 July";
+    dcterms:identifier "msg313";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0314> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg314";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0315> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg315";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0316> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg316";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0317> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg317";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0318> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg318";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0319> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg319";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0320> a sioc:Item;
+    dcterms:author "Tom De Nies";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg320";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0321> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg321";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0322> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg322";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0323> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg323";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0324> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg324";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0325> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Thursday, 19 July";
+    dcterms:identifier "msg325";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0326> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg326";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0327> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg327";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0328> a sioc:Item;
+    dcterms:author "Graham Klyne";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg328";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0329> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg329";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0330> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg330";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0331> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg331";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0332> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg332";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0333> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg333";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0334> a sioc:Item;
+    dcterms:author "Tim Lebo";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg334";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0335> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg335";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0336> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg336";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0337> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg337";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0338> a sioc:Item;
+    dcterms:author "Tim Lebo";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg338";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0339> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg339";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0340> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg340";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0341> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg341";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0342> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday, 20 July";
+    dcterms:identifier "msg342";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0343> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg343";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0344> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg344";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0345> a sioc:Item;
+    dcterms:author "Jun Zhao";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg345";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0346> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg346";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0347> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg347";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0348> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg348";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0349> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg349";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0350> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg350";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0351> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday, 23 July";
+    dcterms:identifier "msg351";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0352> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg352";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0353> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg353";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0354> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg354";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0355> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg355";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0356> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg356";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0357> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg357";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0358> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg358";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0359> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg359";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0360> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg360";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0361> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg361";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0362> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg362";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0363> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 24 July";
+    dcterms:identifier "msg363";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0364> a sioc:Item;
+    dcterms:author "Daniel Garijo";
+    dcterms:date "Wednesday, 25 July";
+    dcterms:identifier "msg364";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0365> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 25 July";
+    dcterms:identifier "msg365";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0366> a sioc:Item;
+    dcterms:author "Provenance Working Group Issue Tracker";
+    dcterms:date "Wednesday, 25 July";
+    dcterms:identifier "msg366";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0367> a sioc:Item;
+    dcterms:author "Curt Tilmes";
+    dcterms:date "Wednesday, 25 July";
+    dcterms:identifier "msg367";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0368> a sioc:Item;
+    dcterms:author "Stephan Zednik";
+    dcterms:date "Thursday, 26 July";
+    dcterms:identifier "msg368";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0369> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Friday, 27 July";
+    dcterms:identifier "msg369";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0370> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Sunday, 29 July";
+    dcterms:identifier "msg370";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0371> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Sunday, 29 July";
+    dcterms:identifier "msg371";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0372> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Monday, 30 July";
+    dcterms:identifier "msg372";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0373> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 31 July";
+    dcterms:identifier "msg373";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0374> a sioc:Item;
+    dcterms:author "Miles, Simon";
+    dcterms:date "Tuesday, 31 July";
+    dcterms:identifier "msg374";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0375> a sioc:Item;
+    dcterms:author "James Cheney";
+    dcterms:date "Tuesday, 31 July";
+    dcterms:identifier "msg375";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0376> a sioc:Item;
+    dcterms:author "Luc Moreau";
+    dcterms:date "Tuesday, 31 July";
+    dcterms:identifier "msg376";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0377> a sioc:Item;
+    dcterms:author "Paul Groth";
+    dcterms:date "Tuesday, 31 July";
+    dcterms:identifier "msg377";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/0378> a sioc:Item;
+    dcterms:author "Timothy Lebo";
+    dcterms:date "Tuesday, 31 July";
+    dcterms:identifier "msg378";
+    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg/2012Jul/author> a datafaqs:Satisfactory .
+

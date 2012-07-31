@@ -85,21 +85,21 @@ class W3CMailingListPerMonth(faqt.Service):
       conservative = True if len(input.session.default_store.execute(query)) else False
       print 'conservative: ' + str(conservative)
 
-      Item = output.session.get_class(ns.SIOC['Item'])
+      Container = output.session.get_class(ns.SIOC['Container'])
+      Item      = output.session.get_class(ns.SIOC['Item'])
 
       page  = urllib2.urlopen(input.subject)
       soup  = BeautifulSoup(page)
 
       for author in soup.findAll('div', {'class':'messages-list'})[0].findAll('ul')[0].findAll('li',recursive=False):
 
-         authorName = author.findAll('dfn')[0].string
+         date = author.findAll('dfn')[0].string # Note: swapping this with authorName below handles /author URI layout
          for message in author.findAll('ul')[0].findAll('li'):
-            anchors   = message.findAll('a')
-            page      = anchors[0]['href'].replace('.html','')
-            subject   = anchors[0].string
-            name      = anchors[1]['name']
-            messageID = anchors[1]['id']
-            date      = anchors[1].findAll('em')[0].string
+            page       = message.findNext('a')['href'].replace('.html','')
+            subject    = message.findNext('a').string
+            name       = message.findNext('a').findNext('a')['name']
+            messageID  = message.findNext('a').findNext('a')['id']
+            authorName = message.findNext('a').findNext('a').findAll('em')[0].string
 
             print '  ' + page + ' ' + subject
             print '    (' + name + ' ' + messageID + ' ' + date + ')'
@@ -116,7 +116,7 @@ class W3CMailingListPerMonth(faqt.Service):
             # .         
 
             item = Item(base + '/' + page)
-            item.sioc_has_container = output
+            item.sioc_has_container = Container(base)
             item.dcterms_date       = str(date).strip('(').strip(')')
             item.dcterms_identifier = str(messageID)
             item.dcterms_author     = str(authorName)
