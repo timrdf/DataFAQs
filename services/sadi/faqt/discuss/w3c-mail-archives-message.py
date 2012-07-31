@@ -21,6 +21,8 @@ from urlparse import urlparse, urlunparse
 import urllib
 import urllib2
 
+import time
+
 from BeautifulSoup import BeautifulSoup
 
 # These are the namespaces we are using beyond those already available
@@ -74,6 +76,9 @@ class W3CMailingListMessage(faqt.Service):
       return ns.DATAFAQS['EvaluatedDataset']
 
    def process(self, input, output):
+
+      print 'sleeping...'
+      time.sleep(2)
 
       print 'processing ' + input.subject
       base = re.sub('/[^/]*$','',input.subject)
@@ -145,10 +150,6 @@ class W3CMailingListMessage(faqt.Service):
                   print link.dfn.string + ' ' + target
               
                if predicate is not '':
-                  #item.dcterms_date       = str(date).strip('(').strip(')')
-                  #item.dcterms_identifier = str(messageID)
-                  #item.dcterms_author     = str(authorName)
-                  #item.save()
                   output.rdf_type.append(ns.SIOC['Item'])
                   output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
                   output.save()
