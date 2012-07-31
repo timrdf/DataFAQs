@@ -43,12 +43,12 @@ ns.register(hello='http://sadiframework.org/examples/hello.owl#')
 class W3CMailingListMessage(faqt.Service):
 
    # Service metadata.
-   label                  = 'w3c-mail-archives-message'
+   label                  = 'message'
    serviceDescriptionText = 'Returns an RDF description of the given W3C Mailing List.'
    comment                = ''
-   serviceNameText        = 'w3c-mail-archives-message' # Convention: Match 'name' below.
-   name                   = 'w3c-mail-archives-message' # This value determines the service URI relative to http://localhost:9229/
-                                                        # Convention: Use the name of this file for this value.
+   serviceNameText        = 'message' # Convention: Match 'name' below.
+   name                   = 'message' # This value determines the service URI relative to http://localhost:9229/
+                                      # Convention: Use the name of this file for this value.
    dev_port = 9231
 
    def __init__(self):
@@ -59,7 +59,7 @@ class W3CMailingListMessage(faqt.Service):
       #    aligns with the deployment location \/
       #
       #                 DATAFAQS_BASE_URI  +  '/datafaqs/'  +  servicePath  +  '/'  + self.serviceNameText
-      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/discuss')
+      faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/discuss/via-hypermail')
 
    def getOrganization(self):
       result                      = self.Organization()
