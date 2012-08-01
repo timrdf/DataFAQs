@@ -77,25 +77,31 @@ class W3CMailingList(faqt.Service):
 
       Container = output.session.get_class(ns.SIOC['Container'])
 
-      page  = urllib2.urlopen(input.subject)
-      soup  = BeautifulSoup(page)
+      soup = None
+      try:
+         page  = urllib2.urlopen(input.subject)
+         soup  = BeautifulSoup(page)
+      except:
+         return
+
       for year in soup.findAll('tbody'):
          for row in year.findAll('tr'):
             cells = row.findAll('td')
-            period      = cells[0].findAll('a')[0]['href'].rstrip('/')
-            periodLabel = cells[0].findAll('a')[0].string
-            count       = cells[4].string              # column 'messages'
-            for cell in cells:
-               for a in cell.findAll('a'):
-                  if a.string == 'by author':
-                     print period + ' ' + count + ' ' + input.subject+'/'+a['href']
-                     periodR = Container(input.subject+'/'+period)
-                     periodR.sioc_has_space = output
-                     periodR.sioc_num_items = int(count)
-                     periodR.dcterms_date   = str(periodLabel)
-                     periodR.save()
-                     output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
-                     print '----'
+            if len(cells[0].findAll('a')) > 0:
+               period      = cells[0].findAll('a')[0]['href'].rstrip('/')
+               periodLabel = cells[0].findAll('a')[0].string
+               count       = cells[4].string              # column 'messages'
+               for cell in cells:
+                  for a in cell.findAll('a'):
+                     if a.string == 'by author':
+                        print period + ' ' + count + ' ' + input.subject+'/'+a['href']
+                        periodR = Container(input.subject+'/'+period)
+                        periodR.sioc_has_space = output
+                        periodR.sioc_num_items = int(count)
+                        periodR.dcterms_date   = str(periodLabel)
+                        periodR.save()
+                        output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
+                        print '----'
 
       # Query the RDF graph POSTed: input.session.default_store.execute
 

@@ -77,25 +77,30 @@ class W3CMailingListMessage(faqt.Service):
 
    def process(self, input, output):
 
-      print 'sleeping...'
-      time.sleep(2)
+      #print 'sleeping...'
+      #time.sleep(2)
 
+      print '- - - - - - - - -'
       print 'processing ' + input.subject
       base = re.sub('/[^/]*$','',input.subject)
 
       # Query the RDF graph POSTed: input.session.default_store.execute
       # [] a hello:SecondaryParameters; 
       #   hello:author_identification_stance hello:conservative .
-      query = select('?stance').where(('?parameters', a, ns.HELLO['SecondaryParameters']),
-                                      ('?parameters', ns.HELLO['author_identification_stance'], ns.HELLO['conservative']))
-      conservative = True if len(input.session.default_store.execute(query)) else False
-      print 'conservative: ' + str(conservative)
+      #query = select('?stance').where(('?parameters', a, ns.HELLO['SecondaryParameters']),
+      #                                ('?parameters', ns.HELLO['author_identification_stance'], ns.HELLO['conservative']))
+      #conservative = True if len(input.session.default_store.execute(query)) else False
+      #print 'conservative: ' + str(conservative)
 
       Container = output.session.get_class(ns.SIOC['Container'])
       Item      = output.session.get_class(ns.SIOC['Item'])
 
-      page  = urllib2.urlopen(input.subject)
-      soup  = BeautifulSoup(page)
+      soup = None
+      try:
+         page  = urllib2.urlopen(input.subject)
+         soup  = BeautifulSoup(page)
+      except:
+         return
 
       predicates = {
          'Previous message' : ns.SIOC['previous_by_date'],
@@ -127,7 +132,7 @@ class W3CMailingListMessage(faqt.Service):
                      predicate = predicates[link.dfn.string]
 
                print link.dfn.string + ' (' + predicate + ') ' + target
-               print
+
                targetR = Item(target)
                targetR.save()
 
