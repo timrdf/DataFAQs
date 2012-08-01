@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<https://raw.github.com/timrdf/DataFAQs/399539f8a97d7a13bf6fbd255bc3bb1f93a98843/services/sadi/faqt/discuss/via-hypermail/groups-materials/sample-html/lists-w3-org-public.html> a sioc:Site .

@@ -1,0 +1,3091 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+<https://raw.github.com/timrdf/DataFAQs/399539f8a97d7a13bf6fbd255bc3bb1f93a98843/services/sadi/faqt/discuss/via-hypermail/groups-materials/sample-html/lists-w3-org-public.html> a datafaqs:EvaluatedDataset,
+        datafaqs:Unsatisfactory;
+    dcterms:hasPart <http://lists.w3.org/Archives/Public/copras-public>,
+        <http://lists.w3.org/Archives/Public/html-future>,
+        <http://lists.w3.org/Archives/Public/html-tidy>,
+        <http://lists.w3.org/Archives/Public/http-caching-historical>,
+        <http://lists.w3.org/Archives/Public/http-future>,
+        <http://lists.w3.org/Archives/Public/ietf-charsets>,
+        <http://lists.w3.org/Archives/Public/ietf-dav-versioning>,
+        <http://lists.w3.org/Archives/Public/ietf-discuss>,
+        <http://lists.w3.org/Archives/Public/ietf-http-ext>,
+        <http://lists.w3.org/Archives/Public/ietf-http-ng>,
+        <http://lists.w3.org/Archives/Public/ietf-http-ng-goals>,
+        <http://lists.w3.org/Archives/Public/ietf-http-wg>,
+        <http://lists.w3.org/Archives/Public/ietf-http-wg-old>,
+        <http://lists.w3.org/Archives/Public/ietf-swap>,
+        <http://lists.w3.org/Archives/Public/ietf-tls>,
+        <http://lists.w3.org/Archives/Public/pics-info>,
+        <http://lists.w3.org/Archives/Public/pics-interest>,
+        <http://lists.w3.org/Archives/Public/png-group>,
+        <http://lists.w3.org/Archives/Public/pso-discuss>,
+        <http://lists.w3.org/Archives/Public/pso-pc>,
+        <http://lists.w3.org/Archives/Public/public-activitypub>,
+        <http://lists.w3.org/Archives/Public/public-activitypub-contrib>,
+        <http://lists.w3.org/Archives/Public/public-adopsdnt>,
+        <http://lists.w3.org/Archives/Public/public-adopsdnt-contrib>,
+        <http://lists.w3.org/Archives/Public/public-annotea-dev>,
+        <http://lists.w3.org/Archives/Public/public-appformats>,
+        <http://lists.w3.org/Archives/Public/public-ar>,
+        <http://lists.w3.org/Archives/Public/public-ar-contrib>,
+        <http://lists.w3.org/Archives/Public/public-argumentation>,
+        <http://lists.w3.org/Archives/Public/public-argumentation-contrib>,
+        <http://lists.w3.org/Archives/Public/public-arws-interest>,
+        <http://lists.w3.org/Archives/Public/public-asdfstage>,
+        <http://lists.w3.org/Archives/Public/public-asdfstage-contrib>,
+        <http://lists.w3.org/Archives/Public/public-atag2-comments>,
+        <http://lists.w3.org/Archives/Public/public-audio>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-ar>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-ca>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-da>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-de>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-es>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-fi>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-fr>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-hu>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-it>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-nl>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-no>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-ru>,
+        <http://lists.w3.org/Archives/Public/public-auth-trans-se>,
+        <http://lists.w3.org/Archives/Public/public-automotive>,
+        <http://lists.w3.org/Archives/Public/public-automotive-contrib>,
+        <http://lists.w3.org/Archives/Public/public-autowebtest>,
+        <http://lists.w3.org/Archives/Public/public-autowebtest-contrib>,
+        <http://lists.w3.org/Archives/Public/public-awwsw>,
+        <http://lists.w3.org/Archives/Public/public-backplane-comments>,
+        <http://lists.w3.org/Archives/Public/public-bigdata>,
+        <http://lists.w3.org/Archives/Public/public-bigdata-contrib>,
+        <http://lists.w3.org/Archives/Public/public-bpwg>,
+        <http://lists.w3.org/Archives/Public/public-bpwg-access>,
+        <http://lists.w3.org/Archives/Public/public-bpwg-comments>,
+        <http://lists.w3.org/Archives/Public/public-bpwg-ct>,
+        <http://lists.w3.org/Archives/Public/public-bpwg-korean>,
+        <http://lists.w3.org/Archives/Public/public-bpwg-pro>,
+        <http://lists.w3.org/Archives/Public/public-browser-tools-testing>,
+        <http://lists.w3.org/Archives/Public/public-calendar-coord>,
+        <http://lists.w3.org/Archives/Public/public-cambridge-sem-web>,
+        <http://lists.w3.org/Archives/Public/public-canvas-api>,
+        <http://lists.w3.org/Archives/Public/public-ccpp2-comments>,
+        <http://lists.w3.org/Archives/Public/public-cdf>,
+        <http://lists.w3.org/Archives/Public/public-cloud>,
+        <http://lists.w3.org/Archives/Public/public-cloud-contrib>,
+        <http://lists.w3.org/Archives/Public/public-coders4africa>,
+        <http://lists.w3.org/Archives/Public/public-coders4africa-contrib>,
+        <http://lists.w3.org/Archives/Public/public-colloquial>,
+        <http://lists.w3.org/Archives/Public/public-colloquial-contrib>,
+        <http://lists.w3.org/Archives/Public/public-comments-wai-age>,
+        <http://lists.w3.org/Archives/Public/public-comments-wcag20>,
+        <http://lists.w3.org/Archives/Public/public-community-io>,
+        <http://lists.w3.org/Archives/Public/public-community-io-contrib>,
+        <http://lists.w3.org/Archives/Public/public-compound-documents>,
+        <http://lists.w3.org/Archives/Public/public-contacts-coord>,
+        <http://lists.w3.org/Archives/Public/public-content-transformation-conformance>,
+        <http://lists.w3.org/Archives/Public/public-coremob>,
+        <http://lists.w3.org/Archives/Public/public-coremob-contrib>,
+        <http://lists.w3.org/Archives/Public/public-council>,
+        <http://lists.w3.org/Archives/Public/public-council-contrib>,
+        <http://lists.w3.org/Archives/Public/public-css-bugzilla>,
+        <http://lists.w3.org/Archives/Public/public-css-commits>,
+        <http://lists.w3.org/Archives/Public/public-css-rates>,
+        <http://lists.w3.org/Archives/Public/public-css-rates-contrib>,
+        <http://lists.w3.org/Archives/Public/public-css-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-cssacc>,
+        <http://lists.w3.org/Archives/Public/public-cssacc-contrib>,
+        <http://lists.w3.org/Archives/Public/public-cssselfrags>,
+        <http://lists.w3.org/Archives/Public/public-cssselfrags-contrib>,
+        <http://lists.w3.org/Archives/Public/public-cwm-announce>,
+        <http://lists.w3.org/Archives/Public/public-cwm-bugs>,
+        <http://lists.w3.org/Archives/Public/public-cwm-talk>,
+        <http://lists.w3.org/Archives/Public/public-d-tasks>,
+        <http://lists.w3.org/Archives/Public/public-d-tasks-contrib>,
+        <http://lists.w3.org/Archives/Public/public-dap-commits>,
+        <http://lists.w3.org/Archives/Public/public-data-driven-standards>,
+        <http://lists.w3.org/Archives/Public/public-data-driven-standards-contrib>,
+        <http://lists.w3.org/Archives/Public/public-dcci-editors>,
+        <http://lists.w3.org/Archives/Public/public-ddr-vocab>,
+        <http://lists.w3.org/Archives/Public/public-ddwg>,
+        <http://lists.w3.org/Archives/Public/public-ddwg-comments>,
+        <http://lists.w3.org/Archives/Public/public-decisionml>,
+        <http://lists.w3.org/Archives/Public/public-decisionml-contrib>,
+        <http://lists.w3.org/Archives/Public/public-declarative3d>,
+        <http://lists.w3.org/Archives/Public/public-declarative3d-contrib>,
+        <http://lists.w3.org/Archives/Public/public-device-apis>,
+        <http://lists.w3.org/Archives/Public/public-device-status>,
+        <http://lists.w3.org/Archives/Public/public-devrel>,
+        <http://lists.w3.org/Archives/Public/public-devrel-contrib>,
+        <http://lists.w3.org/Archives/Public/public-didf-ws>,
+        <http://lists.w3.org/Archives/Public/public-digipub>,
+        <http://lists.w3.org/Archives/Public/public-digipub-contrib>,
+        <http://lists.w3.org/Archives/Public/public-disaster-management-ont>,
+        <http://lists.w3.org/Archives/Public/public-diselect-editors>,
+        <http://lists.w3.org/Archives/Public/public-dld>,
+        <http://lists.w3.org/Archives/Public/public-dld-contrib>,
+        <http://lists.w3.org/Archives/Public/public-dntrack>,
+        <http://lists.w3.org/Archives/Public/public-dntrack-contrib>,
+        <http://lists.w3.org/Archives/Public/public-earl10-comments>,
+        <http://lists.w3.org/Archives/Public/public-editing>,
+        <http://lists.w3.org/Archives/Public/public-editing-contrib>,
+        <http://lists.w3.org/Archives/Public/public-egov-announce>,
+        <http://lists.w3.org/Archives/Public/public-egov-ig>,
+        <http://lists.w3.org/Archives/Public/public-egov-ig-etf>,
+        <http://lists.w3.org/Archives/Public/public-elvisml>,
+        <http://lists.w3.org/Archives/Public/public-elvisml-contrib>,
+        <http://lists.w3.org/Archives/Public/public-esw>,
+        <http://lists.w3.org/Archives/Public/public-esw-desc>,
+        <http://lists.w3.org/Archives/Public/public-esw-news>,
+        <http://lists.w3.org/Archives/Public/public-esw-thes>,
+        <http://lists.w3.org/Archives/Public/public-evangelist>,
+        <http://lists.w3.org/Archives/Public/public-exi>,
+        <http://lists.w3.org/Archives/Public/public-exi-comments>,
+        <http://lists.w3.org/Archives/Public/public-expath>,
+        <http://lists.w3.org/Archives/Public/public-expath-contrib>,
+        <http://lists.w3.org/Archives/Public/public-fedsocweb>,
+        <http://lists.w3.org/Archives/Public/public-fedsocweb-contrib>,
+        <http://lists.w3.org/Archives/Public/public-film>,
+        <http://lists.w3.org/Archives/Public/public-film-contrib>,
+        <http://lists.w3.org/Archives/Public/public-fixing-appcache>,
+        <http://lists.w3.org/Archives/Public/public-fixing-appcache-contrib>,
+        <http://lists.w3.org/Archives/Public/public-forms>,
+        <http://lists.w3.org/Archives/Public/public-forms-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-forms-tf>,
+        <http://lists.w3.org/Archives/Public/public-futurepay>,
+        <http://lists.w3.org/Archives/Public/public-futurepay-contrib>,
+        <http://lists.w3.org/Archives/Public/public-fx>,
+        <http://lists.w3.org/Archives/Public/public-fx-editors>,
+        <http://lists.w3.org/Archives/Public/public-games>,
+        <http://lists.w3.org/Archives/Public/public-games-contrib>,
+        <http://lists.w3.org/Archives/Public/public-geolocation>,
+        <http://lists.w3.org/Archives/Public/public-gld-comments>,
+        <http://lists.w3.org/Archives/Public/public-gld-wg>,
+        <http://lists.w3.org/Archives/Public/public-glossary>,
+        <http://lists.w3.org/Archives/Public/public-grddl-comments>,
+        <http://lists.w3.org/Archives/Public/public-grddl-wg>,
+        <http://lists.w3.org/Archives/Public/public-hcls-coi>,
+        <http://lists.w3.org/Archives/Public/public-hcls-dse>,
+        <http://lists.w3.org/Archives/Public/public-hpcweb>,
+        <http://lists.w3.org/Archives/Public/public-hpcweb-contrib>,
+        <http://lists.w3.org/Archives/Public/public-html>,
+        <http://lists.w3.org/Archives/Public/public-html-a11y>,
+        <http://lists.w3.org/Archives/Public/public-html-bugzilla>,
+        <http://lists.w3.org/Archives/Public/public-html-comments>,
+        <http://lists.w3.org/Archives/Public/public-html-commits>,
+        <http://lists.w3.org/Archives/Public/public-html-data-tf>,
+        <http://lists.w3.org/Archives/Public/public-html-diffs>,
+        <http://lists.w3.org/Archives/Public/public-html-ig-jp>,
+        <http://lists.w3.org/Archives/Public/public-html-ig-ko>,
+        <http://lists.w3.org/Archives/Public/public-html-ig-zh>,
+        <http://lists.w3.org/Archives/Public/public-html-mail>,
+        <http://lists.w3.org/Archives/Public/public-html-media>,
+        <http://lists.w3.org/Archives/Public/public-html-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-html-wg-announce>,
+        <http://lists.w3.org/Archives/Public/public-html-wg-issue-tracking>,
+        <http://lists.w3.org/Archives/Public/public-html-xml>,
+        <http://lists.w3.org/Archives/Public/public-html.bak>,
+        <http://lists.w3.org/Archives/Public/public-html5spec>,
+        <http://lists.w3.org/Archives/Public/public-html5spec-contrib>,
+        <http://lists.w3.org/Archives/Public/public-hypertext-cg>,
+        <http://lists.w3.org/Archives/Public/public-i18n-arch>,
+        <http://lists.w3.org/Archives/Public/public-i18n-bidi>,
+        <http://lists.w3.org/Archives/Public/public-i18n-cjk>,
+        <http://lists.w3.org/Archives/Public/public-i18n-core>,
+        <http://lists.w3.org/Archives/Public/public-i18n-geo>,
+        <http://lists.w3.org/Archives/Public/public-i18n-indic>,
+        <http://lists.w3.org/Archives/Public/public-i18n-its>,
+        <http://lists.w3.org/Archives/Public/public-i18n-its-ig>,
+        <http://lists.w3.org/Archives/Public/public-i18n-ws>,
+        <http://lists.w3.org/Archives/Public/public-ict2010-session>,
+        <http://lists.w3.org/Archives/Public/public-identity>,
+        <http://lists.w3.org/Archives/Public/public-ietf-collation>,
+        <http://lists.w3.org/Archives/Public/public-ietf-w3c>,
+        <http://lists.w3.org/Archives/Public/public-indie-ui>,
+        <http://lists.w3.org/Archives/Public/public-indie-ui-comments>,
+        <http://lists.w3.org/Archives/Public/public-infographics>,
+        <http://lists.w3.org/Archives/Public/public-infographics-contrib>,
+        <http://lists.w3.org/Archives/Public/public-iri>,
+        <http://lists.w3.org/Archives/Public/public-iss-im>,
+        <http://lists.w3.org/Archives/Public/public-iss-im-contrib>,
+        <http://lists.w3.org/Archives/Public/public-iswc-hcls-bof>,
+        <http://lists.w3.org/Archives/Public/public-jseverywhere>,
+        <http://lists.w3.org/Archives/Public/public-jseverywhere-contrib>,
+        <http://lists.w3.org/Archives/Public/public-json-ld>,
+        <http://lists.w3.org/Archives/Public/public-json-ld-contrib>,
+        <http://lists.w3.org/Archives/Public/public-junkgroup>,
+        <http://lists.w3.org/Archives/Public/public-junkgroup-contrib>,
+        <http://lists.w3.org/Archives/Public/public-ldp>,
+        <http://lists.w3.org/Archives/Public/public-ldp-wg>,
+        <http://lists.w3.org/Archives/Public/public-learnonline>,
+        <http://lists.w3.org/Archives/Public/public-learnonline-contrib>,
+        <http://lists.w3.org/Archives/Public/public-linked-json>,
+        <http://lists.w3.org/Archives/Public/public-lld>,
+        <http://lists.w3.org/Archives/Public/public-lod>,
+        <http://lists.w3.org/Archives/Public/public-mbui>,
+        <http://lists.w3.org/Archives/Public/public-mca>,
+        <http://lists.w3.org/Archives/Public/public-media-annotation>,
+        <http://lists.w3.org/Archives/Public/public-media-capture>,
+        <http://lists.w3.org/Archives/Public/public-media-fragment>,
+        <http://lists.w3.org/Archives/Public/public-memoria>,
+        <http://lists.w3.org/Archives/Public/public-microposts>,
+        <http://lists.w3.org/Archives/Public/public-microposts-contrib>,
+        <http://lists.w3.org/Archives/Public/public-microxml>,
+        <http://lists.w3.org/Archives/Public/public-microxml-contrib>,
+        <http://lists.w3.org/Archives/Public/public-mlw-announce>,
+        <http://lists.w3.org/Archives/Public/public-mlw-workshop>,
+        <http://lists.w3.org/Archives/Public/public-mobile-dev>,
+        <http://lists.w3.org/Archives/Public/public-mobile-training>,
+        <http://lists.w3.org/Archives/Public/public-mobileacc>,
+        <http://lists.w3.org/Archives/Public/public-mobileacc-contrib>,
+        <http://lists.w3.org/Archives/Public/public-mobileok-checker>,
+        <http://lists.w3.org/Archives/Public/public-mobindic>,
+        <http://lists.w3.org/Archives/Public/public-mobindic-contrib>,
+        <http://lists.w3.org/Archives/Public/public-mstagedgroup>,
+        <http://lists.w3.org/Archives/Public/public-mstagedgroup-contrib>,
+        <http://lists.w3.org/Archives/Public/public-multilingualweb>,
+        <http://lists.w3.org/Archives/Public/public-multilingualweb-lt>,
+        <http://lists.w3.org/Archives/Public/public-multilingualweb-lt-comments>,
+        <http://lists.w3.org/Archives/Public/public-multilingualweb-lt-tests>,
+        <http://lists.w3.org/Archives/Public/public-mw4d>,
+        <http://lists.w3.org/Archives/Public/public-mweb-news>,
+        <http://lists.w3.org/Archives/Public/public-mwi-ec>,
+        <http://lists.w3.org/Archives/Public/public-mws>,
+        <http://lists.w3.org/Archives/Public/public-mws-contrib>,
+        <http://lists.w3.org/Archives/Public/public-mwts>,
+        <http://lists.w3.org/Archives/Public/public-n3-discuss>,
+        <http://lists.w3.org/Archives/Public/public-native-web-apps>,
+        <http://lists.w3.org/Archives/Public/public-native-web-apps-contrib>,
+        <http://lists.w3.org/Archives/Public/public-networked-data>,
+        <http://lists.w3.org/Archives/Public/public-networked-data-contrib>,
+        <http://lists.w3.org/Archives/Public/public-networkfriendly>,
+        <http://lists.w3.org/Archives/Public/public-networkfriendly-contrib>,
+        <http://lists.w3.org/Archives/Public/public-new-work>,
+        <http://lists.w3.org/Archives/Public/public-new-work-comments>,
+        <http://lists.w3.org/Archives/Public/public-newstagegroup1>,
+        <http://lists.w3.org/Archives/Public/public-newstagegroup1-contrib>,
+        <http://lists.w3.org/Archives/Public/public-nfc>,
+        <http://lists.w3.org/Archives/Public/public-odrl>,
+        <http://lists.w3.org/Archives/Public/public-odrl-contrib>,
+        <http://lists.w3.org/Archives/Public/public-ogsw>,
+        <http://lists.w3.org/Archives/Public/public-oilgaschem>,
+        <http://lists.w3.org/Archives/Public/public-oilgaschem-contrib>,
+        <http://lists.w3.org/Archives/Public/public-ontolex>,
+        <http://lists.w3.org/Archives/Public/public-ontolex-contrib>,
+        <http://lists.w3.org/Archives/Public/public-openannotation>,
+        <http://lists.w3.org/Archives/Public/public-openannotation-contrib>,
+        <http://lists.w3.org/Archives/Public/public-opentag>,
+        <http://lists.w3.org/Archives/Public/public-opentag-contrib>,
+        <http://lists.w3.org/Archives/Public/public-oslcperfmon>,
+        <http://lists.w3.org/Archives/Public/public-oslcperfmon-contrib>,
+        <http://lists.w3.org/Archives/Public/public-ostatus>,
+        <http://lists.w3.org/Archives/Public/public-ostatus-contrib>,
+        <http://lists.w3.org/Archives/Public/public-owl-comments>,
+        <http://lists.w3.org/Archives/Public/public-owl-dev>,
+        <http://lists.w3.org/Archives/Public/public-owl-wg>,
+        <http://lists.w3.org/Archives/Public/public-owled>,
+        <http://lists.w3.org/Archives/Public/public-owled-contrib>,
+        <http://lists.w3.org/Archives/Public/public-p3p>,
+        <http://lists.w3.org/Archives/Public/public-p3p-spec>,
+        <http://lists.w3.org/Archives/Public/public-p3p-ws>,
+        <http://lists.w3.org/Archives/Public/public-patent-commitment>,
+        <http://lists.w3.org/Archives/Public/public-pfwg-comments>,
+        <http://lists.w3.org/Archives/Public/public-philoweb>,
+        <http://lists.w3.org/Archives/Public/public-philoweb-contrib>,
+        <http://lists.w3.org/Archives/Public/public-pkg-uri-scheme>,
+        <http://lists.w3.org/Archives/Public/public-pling>,
+        <http://lists.w3.org/Archives/Public/public-poiwg>,
+        <http://lists.w3.org/Archives/Public/public-powderwg>,
+        <http://lists.w3.org/Archives/Public/public-ppl>,
+        <http://lists.w3.org/Archives/Public/public-ppl-contrib>,
+        <http://lists.w3.org/Archives/Public/public-prime-arch>,
+        <http://lists.w3.org/Archives/Public/public-privacy>,
+        <http://lists.w3.org/Archives/Public/public-privacy06ws>,
+        <http://lists.w3.org/Archives/Public/public-process-comments>,
+        <http://lists.w3.org/Archives/Public/public-procmodel-comments>,
+        <http://lists.w3.org/Archives/Public/public-prov>,
+        <http://lists.w3.org/Archives/Public/public-prov-comments>,
+        <http://lists.w3.org/Archives/Public/public-prov-dev>,
+        <http://lists.w3.org/Archives/Public/public-prov-wg>,
+        <http://lists.w3.org/Archives/Public/public-psi-std>,
+        <http://lists.w3.org/Archives/Public/public-pubsub>,
+        <http://lists.w3.org/Archives/Public/public-pubsub-contrib>,
+        <http://lists.w3.org/Archives/Public/public-qa-dev>,
+        <http://lists.w3.org/Archives/Public/public-qt-comments>,
+        <http://lists.w3.org/Archives/Public/public-qt-extensions>,
+        <http://lists.w3.org/Archives/Public/public-quatro>,
+        <http://lists.w3.org/Archives/Public/public-rdb2rdf-comments>,
+        <http://lists.w3.org/Archives/Public/public-rdb2rdf-wg>,
+        <http://lists.w3.org/Archives/Public/public-rdf>,
+        <http://lists.w3.org/Archives/Public/public-rdf-comments>,
+        <http://lists.w3.org/Archives/Public/public-rdf-dawg>,
+        <http://lists.w3.org/Archives/Public/public-rdf-dawg-comments>,
+        <http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf>,
+        <http://lists.w3.org/Archives/Public/public-rdf-prov>,
+        <http://lists.w3.org/Archives/Public/public-rdf-ruby>,
+        <http://lists.w3.org/Archives/Public/public-rdf-tap>,
+        <http://lists.w3.org/Archives/Public/public-rdf-text>,
+        <http://lists.w3.org/Archives/Public/public-rdf-wg>,
+        <http://lists.w3.org/Archives/Public/public-rdf-workshop>,
+        <http://lists.w3.org/Archives/Public/public-rdf-ws>,
+        <http://lists.w3.org/Archives/Public/public-rdfa>,
+        <http://lists.w3.org/Archives/Public/public-rdfa-wg>,
+        <http://lists.w3.org/Archives/Public/public-respimg>,
+        <http://lists.w3.org/Archives/Public/public-respimg-contrib>,
+        <http://lists.w3.org/Archives/Public/public-rex-pag>,
+        <http://lists.w3.org/Archives/Public/public-rif-comments>,
+        <http://lists.w3.org/Archives/Public/public-rif-dev>,
+        <http://lists.w3.org/Archives/Public/public-rif-wg>,
+        <http://lists.w3.org/Archives/Public/public-rule-workshop-discuss>,
+        <http://lists.w3.org/Archives/Public/public-rww>,
+        <http://lists.w3.org/Archives/Public/public-rww-contrib>,
+        <http://lists.w3.org/Archives/Public/public-schemata-users>,
+        <http://lists.w3.org/Archives/Public/public-script-coord>,
+        <http://lists.w3.org/Archives/Public/public-scriptlib>,
+        <http://lists.w3.org/Archives/Public/public-scriptlib-contrib>,
+        <http://lists.w3.org/Archives/Public/public-semnews>,
+        <http://lists.w3.org/Archives/Public/public-semnews-contrib>,
+        <http://lists.w3.org/Archives/Public/public-semweb-lifesci>,
+        <http://lists.w3.org/Archives/Public/public-semweb-neuropath>,
+        <http://lists.w3.org/Archives/Public/public-semweb-ui>,
+        <http://lists.w3.org/Archives/Public/public-semwebprog>,
+        <http://lists.w3.org/Archives/Public/public-semwebprog-contrib>,
+        <http://lists.w3.org/Archives/Public/public-sensorweb>,
+        <http://lists.w3.org/Archives/Public/public-sensorweb-contrib>,
+        <http://lists.w3.org/Archives/Public/public-signage-tmp>,
+        <http://lists.w3.org/Archives/Public/public-simplyseo>,
+        <http://lists.w3.org/Archives/Public/public-simplyseo-contrib>,
+        <http://lists.w3.org/Archives/Public/public-sml>,
+        <http://lists.w3.org/Archives/Public/public-sml-eds>,
+        <http://lists.w3.org/Archives/Public/public-sml-qa>,
+        <http://lists.w3.org/Archives/Public/public-soap-jms>,
+        <http://lists.w3.org/Archives/Public/public-socbiz>,
+        <http://lists.w3.org/Archives/Public/public-socbiz-contrib>,
+        <http://lists.w3.org/Archives/Public/public-socbizcg>,
+        <http://lists.w3.org/Archives/Public/public-socbizcg-contrib>,
+        <http://lists.w3.org/Archives/Public/public-social-web-talk>,
+        <http://lists.w3.org/Archives/Public/public-socialweb>,
+        <http://lists.w3.org/Archives/Public/public-spade>,
+        <http://lists.w3.org/Archives/Public/public-spade-contrib>,
+        <http://lists.w3.org/Archives/Public/public-sparql-dev>,
+        <http://lists.w3.org/Archives/Public/public-speech-api>,
+        <http://lists.w3.org/Archives/Public/public-speech-api-contrib>,
+        <http://lists.w3.org/Archives/Public/public-ssn-cg>,
+        <http://lists.w3.org/Archives/Public/public-ssn-cg-contrib>,
+        <http://lists.w3.org/Archives/Public/public-svg-ig>,
+        <http://lists.w3.org/Archives/Public/public-svg-ig-jp>,
+        <http://lists.w3.org/Archives/Public/public-svg-implementors>,
+        <http://lists.w3.org/Archives/Public/public-svg-media-type>,
+        <http://lists.w3.org/Archives/Public/public-svg-print>,
+        <http://lists.w3.org/Archives/Public/public-svg-wg>,
+        <http://lists.w3.org/Archives/Public/public-svgopentype>,
+        <http://lists.w3.org/Archives/Public/public-svgopentype-contrib>,
+        <http://lists.w3.org/Archives/Public/public-sw-meaning>,
+        <http://lists.w3.org/Archives/Public/public-swbp-wg>,
+        <http://lists.w3.org/Archives/Public/public-swd-wg>,
+        <http://lists.w3.org/Archives/Public/public-sweo-ig>,
+        <http://lists.w3.org/Archives/Public/public-swls-ws>,
+        <http://lists.w3.org/Archives/Public/public-sws-ig>,
+        <http://lists.w3.org/Archives/Public/public-sysapps>,
+        <http://lists.w3.org/Archives/Public/public-tag-announce>,
+        <http://lists.w3.org/Archives/Public/public-te-pag>,
+        <http://lists.w3.org/Archives/Public/public-test-infra>,
+        <http://lists.w3.org/Archives/Public/public-test2>,
+        <http://lists.w3.org/Archives/Public/public-test2-contrib>,
+        <http://lists.w3.org/Archives/Public/public-test20111026>,
+        <http://lists.w3.org/Archives/Public/public-test20111026-contrib>,
+        <http://lists.w3.org/Archives/Public/public-testgroup201203>,
+        <http://lists.w3.org/Archives/Public/public-testgroup201203-contrib>,
+        <http://lists.w3.org/Archives/Public/public-texttracks>,
+        <http://lists.w3.org/Archives/Public/public-texttracks-contrib>,
+        <http://lists.w3.org/Archives/Public/public-timed-text>,
+        <http://lists.w3.org/Archives/Public/public-timed-text-contrib>,
+        <http://lists.w3.org/Archives/Public/public-tracker-dev>,
+        <http://lists.w3.org/Archives/Public/public-tracking>,
+        <http://lists.w3.org/Archives/Public/public-tracking-comments>,
+        <http://lists.w3.org/Archives/Public/public-tracking-commit>,
+        <http://lists.w3.org/Archives/Public/public-tracking-international>,
+        <http://lists.w3.org/Archives/Public/public-tracking-lists>,
+        <http://lists.w3.org/Archives/Public/public-tt>,
+        <http://lists.w3.org/Archives/Public/public-uaag2-comments>,
+        <http://lists.w3.org/Archives/Public/public-ubiweb>,
+        <http://lists.w3.org/Archives/Public/public-unctsw>,
+        <http://lists.w3.org/Archives/Public/public-unctsw-contrib>,
+        <http://lists.w3.org/Archives/Public/public-unhosted>,
+        <http://lists.w3.org/Archives/Public/public-unhosted-contrib>,
+        <http://lists.w3.org/Archives/Public/public-unicorn>,
+        <http://lists.w3.org/Archives/Public/public-uri-cg>,
+        <http://lists.w3.org/Archives/Public/public-usability-workshop>,
+        <http://lists.w3.org/Archives/Public/public-usable-authentication>,
+        <http://lists.w3.org/Archives/Public/public-userix>,
+        <http://lists.w3.org/Archives/Public/public-userix-contrib>,
+        <http://lists.w3.org/Archives/Public/public-uwa>,
+        <http://lists.w3.org/Archives/Public/public-video-comments>,
+        <http://lists.w3.org/Archives/Public/public-vision-core>,
+        <http://lists.w3.org/Archives/Public/public-vision-newstd>,
+        <http://lists.w3.org/Archives/Public/public-vivo>,
+        <http://lists.w3.org/Archives/Public/public-vivo-contrib>,
+        <http://lists.w3.org/Archives/Public/public-vocabs>,
+        <http://lists.w3.org/Archives/Public/public-w3c-talk-china>,
+        <http://lists.w3.org/Archives/Public/public-w3id>,
+        <http://lists.w3.org/Archives/Public/public-w3id-contrib>,
+        <http://lists.w3.org/Archives/Public/public-w3process>,
+        <http://lists.w3.org/Archives/Public/public-w3process-contrib>,
+        <http://lists.w3.org/Archives/Public/public-wai-age>,
+        <http://lists.w3.org/Archives/Public/public-wai-engage>,
+        <http://lists.w3.org/Archives/Public/public-wai-engage-contrib>,
+        <http://lists.w3.org/Archives/Public/public-wai-eo-badtf>,
+        <http://lists.w3.org/Archives/Public/public-wai-eo-lexicon>,
+        <http://lists.w3.org/Archives/Public/public-wai-eo-site>,
+        <http://lists.w3.org/Archives/Public/public-wai-eo-umtf>,
+        <http://lists.w3.org/Archives/Public/public-wai-eo-wcag2tf>,
+        <http://lists.w3.org/Archives/Public/public-wai-ert>,
+        <http://lists.w3.org/Archives/Public/public-wai-ert-tools>,
+        <http://lists.w3.org/Archives/Public/public-wai-ert-tsdtf>,
+        <http://lists.w3.org/Archives/Public/public-wai-evaltf>,
+        <http://lists.w3.org/Archives/Public/public-wai-rd>,
+        <http://lists.w3.org/Archives/Public/public-wai-rd-comments>,
+        <http://lists.w3.org/Archives/Public/public-wai-rd-submission>,
+        <http://lists.w3.org/Archives/Public/public-wcag-em-comments>,
+        <http://lists.w3.org/Archives/Public/public-wcag-rapid-response>,
+        <http://lists.w3.org/Archives/Public/public-wcag-teama>,
+        <http://lists.w3.org/Archives/Public/public-wcag-teamb>,
+        <http://lists.w3.org/Archives/Public/public-wcag-teamc>,
+        <http://lists.w3.org/Archives/Public/public-wcag2-techs>,
+        <http://lists.w3.org/Archives/Public/public-wcag2ict-comments>,
+        <http://lists.w3.org/Archives/Public/public-wcag2ict-tf>,
+        <http://lists.w3.org/Archives/Public/public-web-and-tv>,
+        <http://lists.w3.org/Archives/Public/public-web-http-desc>,
+        <http://lists.w3.org/Archives/Public/public-web-intents>,
+        <http://lists.w3.org/Archives/Public/public-web-notification>,
+        <http://lists.w3.org/Archives/Public/public-web-payments>,
+        <http://lists.w3.org/Archives/Public/public-web-perf>,
+        <http://lists.w3.org/Archives/Public/public-web-perf-ig>,
+        <http://lists.w3.org/Archives/Public/public-web-plugins>,
+        <http://lists.w3.org/Archives/Public/public-web-security>,
+        <http://lists.w3.org/Archives/Public/public-webandbroadcasting>,
+        <http://lists.w3.org/Archives/Public/public-webandbroadcasting-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webapi>,
+        <http://lists.w3.org/Archives/Public/public-webapps>,
+        <http://lists.w3.org/Archives/Public/public-webapps-bugzilla>,
+        <http://lists.w3.org/Archives/Public/public-webapps-cdf-discuss>,
+        <http://lists.w3.org/Archives/Public/public-webapps-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-webapps-ui>,
+        <http://lists.w3.org/Archives/Public/public-webapps-ui-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webappsec>,
+        <http://lists.w3.org/Archives/Public/public-webappsec-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-webappstore>,
+        <http://lists.w3.org/Archives/Public/public-webappstore-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webarch-comments>,
+        <http://lists.w3.org/Archives/Public/public-webcgm>,
+        <http://lists.w3.org/Archives/Public/public-webcgm-wg>,
+        <http://lists.w3.org/Archives/Public/public-webcrypto>,
+        <http://lists.w3.org/Archives/Public/public-webcrypto-comments>,
+        <http://lists.w3.org/Archives/Public/public-webcryptoapi>,
+        <http://lists.w3.org/Archives/Public/public-webcryptoapi-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webdev-docs>,
+        <http://lists.w3.org/Archives/Public/public-webed>,
+        <http://lists.w3.org/Archives/Public/public-webed-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webed-jp>,
+        <http://lists.w3.org/Archives/Public/public-webed-tk>,
+        <http://lists.w3.org/Archives/Public/public-webevents>,
+        <http://lists.w3.org/Archives/Public/public-webfonts-wg>,
+        <http://lists.w3.org/Archives/Public/public-webhistory>,
+        <http://lists.w3.org/Archives/Public/public-webhistory-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webid>,
+        <http://lists.w3.org/Archives/Public/public-webid-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webobservatory>,
+        <http://lists.w3.org/Archives/Public/public-webobservatory-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webont-comments>,
+        <http://lists.w3.org/Archives/Public/public-webpayments>,
+        <http://lists.w3.org/Archives/Public/public-webpayments-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webprotoenergy>,
+        <http://lists.w3.org/Archives/Public/public-webprotoenergy-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webrtc>,
+        <http://lists.w3.org/Archives/Public/public-webrtc-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-websignage>,
+        <http://lists.w3.org/Archives/Public/public-websignage-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webskillprofiles>,
+        <http://lists.w3.org/Archives/Public/public-webskillprofiles-contrib>,
+        <http://lists.w3.org/Archives/Public/public-webtv>,
+        <http://lists.w3.org/Archives/Public/public-webtvmoderator>,
+        <http://lists.w3.org/Archives/Public/public-webtvws-presenters>,
+        <http://lists.w3.org/Archives/Public/public-whatwg>,
+        <http://lists.w3.org/Archives/Public/public-whatwg-archive>,
+        <http://lists.w3.org/Archives/Public/public-whatwg-contrib>,
+        <http://lists.w3.org/Archives/Public/public-widgets-pag>,
+        <http://lists.w3.org/Archives/Public/public-wiki-dev>,
+        <http://lists.w3.org/Archives/Public/public-ws-addressing>,
+        <http://lists.w3.org/Archives/Public/public-ws-addressing-comments>,
+        <http://lists.w3.org/Archives/Public/public-ws-addressing-eds>,
+        <http://lists.w3.org/Archives/Public/public-ws-addressing-tests>,
+        <http://lists.w3.org/Archives/Public/public-ws-async-tf>,
+        <http://lists.w3.org/Archives/Public/public-ws-chor>,
+        <http://lists.w3.org/Archives/Public/public-ws-chor-comments>,
+        <http://lists.w3.org/Archives/Public/public-ws-chor-editors>,
+        <http://lists.w3.org/Archives/Public/public-ws-desc-comments>,
+        <http://lists.w3.org/Archives/Public/public-ws-desc-eds>,
+        <http://lists.w3.org/Archives/Public/public-ws-desc-meps>,
+        <http://lists.w3.org/Archives/Public/public-ws-desc-qa>,
+        <http://lists.w3.org/Archives/Public/public-ws-desc-state>,
+        <http://lists.w3.org/Archives/Public/public-ws-media-types>,
+        <http://lists.w3.org/Archives/Public/public-ws-pnf-tf>,
+        <http://lists.w3.org/Archives/Public/public-ws-policy>,
+        <http://lists.w3.org/Archives/Public/public-ws-policy-comments>,
+        <http://lists.w3.org/Archives/Public/public-ws-policy-eds>,
+        <http://lists.w3.org/Archives/Public/public-ws-policy-interop>,
+        <http://lists.w3.org/Archives/Public/public-ws-policy-qa>,
+        <http://lists.w3.org/Archives/Public/public-ws-resource-access>,
+        <http://lists.w3.org/Archives/Public/public-ws-resource-access-comments>,
+        <http://lists.w3.org/Archives/Public/public-ws-resource-access-editors>,
+        <http://lists.w3.org/Archives/Public/public-ws-resource-access-notifications>,
+        <http://lists.w3.org/Archives/Public/public-ws-semann>,
+        <http://lists.w3.org/Archives/Public/public-ws-semann-comments>,
+        <http://lists.w3.org/Archives/Public/public-wsa-refact>,
+        <http://lists.w3.org/Archives/Public/public-wsawg-gloss>,
+        <http://lists.w3.org/Archives/Public/public-wsawg-mtf>,
+        <http://lists.w3.org/Archives/Public/public-wsawg-security-tf>,
+        <http://lists.w3.org/Archives/Public/public-wsc-wg>,
+        <http://lists.w3.org/Archives/Public/public-wsec>,
+        <http://lists.w3.org/Archives/Public/public-xforms>,
+        <http://lists.w3.org/Archives/Public/public-xformsusers>,
+        <http://lists.w3.org/Archives/Public/public-xformsusers-contrib>,
+        <http://lists.w3.org/Archives/Public/public-xg-app-backplane>,
+        <http://lists.w3.org/Archives/Public/public-xg-audio>,
+        <http://lists.w3.org/Archives/Public/public-xg-cwl>,
+        <http://lists.w3.org/Archives/Public/public-xg-cwl-ei>,
+        <http://lists.w3.org/Archives/Public/public-xg-decision>,
+        <http://lists.w3.org/Archives/Public/public-xg-eiif>,
+        <http://lists.w3.org/Archives/Public/public-xg-emotion>,
+        <http://lists.w3.org/Archives/Public/public-xg-federatedsocialweb>,
+        <http://lists.w3.org/Archives/Public/public-xg-geo>,
+        <http://lists.w3.org/Archives/Public/public-xg-htmlspeech>,
+        <http://lists.w3.org/Archives/Public/public-xg-lld>,
+        <http://lists.w3.org/Archives/Public/public-xg-mami>,
+        <http://lists.w3.org/Archives/Public/public-xg-mashssl>,
+        <http://lists.w3.org/Archives/Public/public-xg-mmsem>,
+        <http://lists.w3.org/Archives/Public/public-xg-model-based-ui>,
+        <http://lists.w3.org/Archives/Public/public-xg-omm>,
+        <http://lists.w3.org/Archives/Public/public-xg-owea>,
+        <http://lists.w3.org/Archives/Public/public-xg-prov>,
+        <http://lists.w3.org/Archives/Public/public-xg-rdb2rdf>,
+        <http://lists.w3.org/Archives/Public/public-xg-socialweb>,
+        <http://lists.w3.org/Archives/Public/public-xg-ssn>,
+        <http://lists.w3.org/Archives/Public/public-xg-swsc>,
+        <http://lists.w3.org/Archives/Public/public-xg-urw3>,
+        <http://lists.w3.org/Archives/Public/public-xg-usdl>,
+        <http://lists.w3.org/Archives/Public/public-xg-w3pm>,
+        <http://lists.w3.org/Archives/Public/public-xg-wcl>,
+        <http://lists.w3.org/Archives/Public/public-xg-webid>,
+        <http://lists.w3.org/Archives/Public/public-xhtml2>,
+        <http://lists.w3.org/Archives/Public/public-xkms-comments>,
+        <http://lists.w3.org/Archives/Public/public-xml-binary>,
+        <http://lists.w3.org/Archives/Public/public-xml-binary-comments>,
+        <http://lists.w3.org/Archives/Public/public-xml-core-wg>,
+        <http://lists.w3.org/Archives/Public/public-xml-er>,
+        <http://lists.w3.org/Archives/Public/public-xml-er-contrib>,
+        <http://lists.w3.org/Archives/Public/public-xml-id>,
+        <http://lists.w3.org/Archives/Public/public-xml-processing-model-comments>,
+        <http://lists.w3.org/Archives/Public/public-xml-processing-model-wg>,
+        <http://lists.w3.org/Archives/Public/public-xml-schema-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-xml-schema-testsuite-submit>,
+        <http://lists.w3.org/Archives/Public/public-xml-testsuite>,
+        <http://lists.w3.org/Archives/Public/public-xml-versioning>,
+        <http://lists.w3.org/Archives/Public/public-xmlhypermedia>,
+        <http://lists.w3.org/Archives/Public/public-xmlhypermedia-contrib>,
+        <http://lists.w3.org/Archives/Public/public-xmlperf>,
+        <http://lists.w3.org/Archives/Public/public-xmlperf-contrib>,
+        <http://lists.w3.org/Archives/Public/public-xmlsec>,
+        <http://lists.w3.org/Archives/Public/public-xmlsec-comments>,
+        <http://lists.w3.org/Archives/Public/public-xmlsec-discuss>,
+        <http://lists.w3.org/Archives/Public/public-xmlsec-maintwg>,
+        <http://lists.w3.org/Archives/Public/public-xpointer-registry>,
+        <http://lists.w3.org/Archives/Public/public-xqts-comments>,
+        <http://lists.w3.org/Archives/Public/public-xsd-databinding>,
+        <http://lists.w3.org/Archives/Public/public-xsd-databinding-comments>,
+        <http://lists.w3.org/Archives/Public/semantic-web>,
+        <http://lists.w3.org/Archives/Public/sig>,
+        <http://lists.w3.org/Archives/Public/site-comments>,
+        <http://lists.w3.org/Archives/Public/smil-editors>,
+        <http://lists.w3.org/Archives/Public/spec-prod>,
+        <http://lists.w3.org/Archives/Public/svg-testsuite-comments>,
+        <http://lists.w3.org/Archives/Public/sw99>,
+        <http://lists.w3.org/Archives/Public/tls-draft>,
+        <http://lists.w3.org/Archives/Public/uri>,
+        <http://lists.w3.org/Archives/Public/w3c-announce>,
+        <http://lists.w3.org/Archives/Public/w3c-dist-auth>,
+        <http://lists.w3.org/Archives/Public/w3c-formal-assertion-testbed>,
+        <http://lists.w3.org/Archives/Public/w3c-ietf-xmldsig>,
+        <http://lists.w3.org/Archives/Public/w3c-keio-info>,
+        <http://lists.w3.org/Archives/Public/w3c-math-erb>,
+        <http://lists.w3.org/Archives/Public/w3c-news>,
+        <http://lists.w3.org/Archives/Public/w3c-news-asia>,
+        <http://lists.w3.org/Archives/Public/w3c-press>,
+        <http://lists.w3.org/Archives/Public/w3c-rdfcore-wg>,
+        <http://lists.w3.org/Archives/Public/w3c-sgml-wg>,
+        <http://lists.w3.org/Archives/Public/w3c-translators>,
+        <http://lists.w3.org/Archives/Public/w3c-translators-fr>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-au>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-bulletin>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-curric>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-eo>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-er-ig>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-er-wg>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-gl>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-hc>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-ig>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-rc>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-ua>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-ui>,
+        <http://lists.w3.org/Archives/Public/w3c-wai-wg>,
+        <http://lists.w3.org/Archives/Public/w3c-xml-sig-ws>,
+        <http://lists.w3.org/Archives/Public/wai-eo-editors>,
+        <http://lists.w3.org/Archives/Public/wai-events>,
+        <http://lists.w3.org/Archives/Public/wai-report>,
+        <http://lists.w3.org/Archives/Public/wai-report-bounces>,
+        <http://lists.w3.org/Archives/Public/wai-report-db>,
+        <http://lists.w3.org/Archives/Public/wai-site-comments>,
+        <http://lists.w3.org/Archives/Public/wai-tech-comments>,
+        <http://lists.w3.org/Archives/Public/wai-uaag-editor>,
+        <http://lists.w3.org/Archives/Public/wai-wcag-editor>,
+        <http://lists.w3.org/Archives/Public/wai-xtech>,
+        <http://lists.w3.org/Archives/Public/web-access>,
+        <http://lists.w3.org/Archives/Public/www-amaya>,
+        <http://lists.w3.org/Archives/Public/www-amaya-dev>,
+        <http://lists.w3.org/Archives/Public/www-amaya-developers>,
+        <http://lists.w3.org/Archives/Public/www-amaya-doc>,
+        <http://lists.w3.org/Archives/Public/www-annotation>,
+        <http://lists.w3.org/Archives/Public/www-announce>,
+        <http://lists.w3.org/Archives/Public/www-archive>,
+        <http://lists.w3.org/Archives/Public/www-ccpp-protocol>,
+        <http://lists.w3.org/Archives/Public/www-collaboration>,
+        <http://lists.w3.org/Archives/Public/www-component-extension>,
+        <http://lists.w3.org/Archives/Public/www-demographics>,
+        <http://lists.w3.org/Archives/Public/www-di>,
+        <http://lists.w3.org/Archives/Public/www-disw>,
+        <http://lists.w3.org/Archives/Public/www-dom>,
+        <http://lists.w3.org/Archives/Public/www-dom-ts>,
+        <http://lists.w3.org/Archives/Public/www-dom-ts-submission>,
+        <http://lists.w3.org/Archives/Public/www-dom-xpath>,
+        <http://lists.w3.org/Archives/Public/www-drm>,
+        <http://lists.w3.org/Archives/Public/www-email-announce>,
+        <http://lists.w3.org/Archives/Public/www-email-discuss>,
+        <http://lists.w3.org/Archives/Public/www-eta>,
+        <http://lists.w3.org/Archives/Public/www-font>,
+        <http://lists.w3.org/Archives/Public/www-forms>,
+        <http://lists.w3.org/Archives/Public/www-forms-editor>,
+        <http://lists.w3.org/Archives/Public/www-history>,
+        <http://lists.w3.org/Archives/Public/www-html>,
+        <http://lists.w3.org/Archives/Public/www-html-editor>,
+        <http://lists.w3.org/Archives/Public/www-html-testsuite>,
+        <http://lists.w3.org/Archives/Public/www-http-ng-comments>,
+        <http://lists.w3.org/Archives/Public/www-i18n-comments>,
+        <http://lists.w3.org/Archives/Public/www-i18n-workshop>,
+        <http://lists.w3.org/Archives/Public/www-international>,
+        <http://lists.w3.org/Archives/Public/www-isaviz>,
+        <http://lists.w3.org/Archives/Public/www-jigsaw>,
+        <http://lists.w3.org/Archives/Public/www-lib>,
+        <http://lists.w3.org/Archives/Public/www-lib-bugs>,
+        <http://lists.w3.org/Archives/Public/www-lib-survey>,
+        <http://lists.w3.org/Archives/Public/www-logging>,
+        <http://lists.w3.org/Archives/Public/www-math>,
+        <http://lists.w3.org/Archives/Public/www-micropay-comments>,
+        <http://lists.w3.org/Archives/Public/www-mobile>,
+        <http://lists.w3.org/Archives/Public/www-multicast>,
+        <http://lists.w3.org/Archives/Public/www-multimedia>,
+        <http://lists.w3.org/Archives/Public/www-multimodal>,
+        <http://lists.w3.org/Archives/Public/www-next>,
+        <http://lists.w3.org/Archives/Public/www-p3p-dev>,
+        <http://lists.w3.org/Archives/Public/www-p3p-interop>,
+        <http://lists.w3.org/Archives/Public/www-p3p-policy>,
+        <http://lists.w3.org/Archives/Public/www-p3p-public-comments>,
+        <http://lists.w3.org/Archives/Public/www-patentpolicy-comment>,
+        <http://lists.w3.org/Archives/Public/www-printing>,
+        <http://lists.w3.org/Archives/Public/www-privacy-evaluator>,
+        <http://lists.w3.org/Archives/Public/www-proxy>,
+        <http://lists.w3.org/Archives/Public/www-publications>,
+        <http://lists.w3.org/Archives/Public/www-push>,
+        <http://lists.w3.org/Archives/Public/www-qa>,
+        <http://lists.w3.org/Archives/Public/www-qa-wg>,
+        <http://lists.w3.org/Archives/Public/www-ql>,
+        <http://lists.w3.org/Archives/Public/www-rdb>,
+        <http://lists.w3.org/Archives/Public/www-rdf-calendar>,
+        <http://lists.w3.org/Archives/Public/www-rdf-comments>,
+        <http://lists.w3.org/Archives/Public/www-rdf-config>,
+        <http://lists.w3.org/Archives/Public/www-rdf-dspace>,
+        <http://lists.w3.org/Archives/Public/www-rdf-interest>,
+        <http://lists.w3.org/Archives/Public/www-rdf-logic>,
+        <http://lists.w3.org/Archives/Public/www-rdf-perllib>,
+        <http://lists.w3.org/Archives/Public/www-rdf-rules>,
+        <http://lists.w3.org/Archives/Public/www-rdf-specs>,
+        <http://lists.w3.org/Archives/Public/www-rdf-validator>,
+        <http://lists.w3.org/Archives/Public/www-rdf-z3950>,
+        <http://lists.w3.org/Archives/Public/www-servers>,
+        <http://lists.w3.org/Archives/Public/www-smil>,
+        <http://lists.w3.org/Archives/Public/www-speech>,
+        <http://lists.w3.org/Archives/Public/www-style>,
+        <http://lists.w3.org/Archives/Public/www-svg>,
+        <http://lists.w3.org/Archives/Public/www-tag>,
+        <http://lists.w3.org/Archives/Public/www-talk>,
+        <http://lists.w3.org/Archives/Public/www-test>,
+        <http://lists.w3.org/Archives/Public/www-tt-tf>,
+        <http://lists.w3.org/Archives/Public/www-tv>,
+        <http://lists.w3.org/Archives/Public/www-validator>,
+        <http://lists.w3.org/Archives/Public/www-validator-css>,
+        <http://lists.w3.org/Archives/Public/www-validator-cvs>,
+        <http://lists.w3.org/Archives/Public/www-vlib>,
+        <http://lists.w3.org/Archives/Public/www-vlib-announce>,
+        <http://lists.w3.org/Archives/Public/www-voice>,
+        <http://lists.w3.org/Archives/Public/www-wai-pf>,
+        <http://lists.w3.org/Archives/Public/www-watchdog>,
+        <http://lists.w3.org/Archives/Public/www-wca>,
+        <http://lists.w3.org/Archives/Public/www-webdav-dasl>,
+        <http://lists.w3.org/Archives/Public/www-webont-wg>,
+        <http://lists.w3.org/Archives/Public/www-winie>,
+        <http://lists.w3.org/Archives/Public/www-ws>,
+        <http://lists.w3.org/Archives/Public/www-ws-arch>,
+        <http://lists.w3.org/Archives/Public/www-ws-cg>,
+        <http://lists.w3.org/Archives/Public/www-ws-desc>,
+        <http://lists.w3.org/Archives/Public/www-wsa-comments>,
+        <http://lists.w3.org/Archives/Public/www-xenc-xmlp-tf>,
+        <http://lists.w3.org/Archives/Public/www-xkms>,
+        <http://lists.w3.org/Archives/Public/www-xkms-ws>,
+        <http://lists.w3.org/Archives/Public/www-xml-blueberry-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-canonicalization-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-edi>,
+        <http://lists.w3.org/Archives/Public/www-xml-fragment-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-infoset-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-linking-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-packaging>,
+        <http://lists.w3.org/Archives/Public/www-xml-query-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-schema-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-stylesheet-comments>,
+        <http://lists.w3.org/Archives/Public/www-xml-xinclude-comments>,
+        <http://lists.w3.org/Archives/Public/www-xpath-comments>,
+        <http://lists.w3.org/Archives/Public/www-xsl-fo>,
+        <http://lists.w3.org/Archives/Public/www-zig>,
+        <http://lists.w3.org/Archives/Public/xml-dist-app>,
+        <http://lists.w3.org/Archives/Public/xml-editor>,
+        <http://lists.w3.org/Archives/Public/xml-encryption>,
+        <http://lists.w3.org/Archives/Public/xml-names-editor>,
+        <http://lists.w3.org/Archives/Public/xml-names-issues>,
+        <http://lists.w3.org/Archives/Public/xml-uri>,
+        <http://lists.w3.org/Archives/Public/xmlp-comments>,
+        <http://lists.w3.org/Archives/Public/xmlschema-dev>,
+        <http://lists.w3.org/Archives/Public/xproc-dev>,
+        <http://lists.w3.org/Archives/Public/xsl-editors> .
+
+<http://lists.w3.org/Archives/Public/copras-public> a sioc:Space;
+    dcterms:identifier "copras-public" .
+
+<http://lists.w3.org/Archives/Public/html-future> a sioc:Space;
+    dcterms:identifier "html-future" .
+
+<http://lists.w3.org/Archives/Public/html-tidy> a sioc:Space;
+    dcterms:identifier "html-tidy" .
+
+<http://lists.w3.org/Archives/Public/http-caching-historical> a sioc:Space;
+    dcterms:identifier "http-caching-historical" .
+
+<http://lists.w3.org/Archives/Public/http-future> a sioc:Space;
+    dcterms:identifier "http-future" .
+
+<http://lists.w3.org/Archives/Public/ietf-charsets> a sioc:Space;
+    dcterms:identifier "ietf-charsets" .
+
+<http://lists.w3.org/Archives/Public/ietf-dav-versioning> a sioc:Space;
+    dcterms:identifier "ietf-dav-versioning" .
+
+<http://lists.w3.org/Archives/Public/ietf-discuss> a sioc:Space;
+    dcterms:identifier "ietf-discuss" .
+
+<http://lists.w3.org/Archives/Public/ietf-http-ext> a sioc:Space;
+    dcterms:identifier "ietf-http-ext" .
+
+<http://lists.w3.org/Archives/Public/ietf-http-ng> a sioc:Space;
+    dcterms:identifier "ietf-http-ng" .
+
+<http://lists.w3.org/Archives/Public/ietf-http-ng-goals> a sioc:Space;
+    dcterms:identifier "ietf-http-ng-goals" .
+
+<http://lists.w3.org/Archives/Public/ietf-http-wg> a sioc:Space;
+    dcterms:identifier "ietf-http-wg" .
+
+<http://lists.w3.org/Archives/Public/ietf-http-wg-old> a sioc:Space;
+    dcterms:identifier "ietf-http-wg-old" .
+
+<http://lists.w3.org/Archives/Public/ietf-swap> a sioc:Space;
+    dcterms:identifier "ietf-swap" .
+
+<http://lists.w3.org/Archives/Public/ietf-tls> a sioc:Space;
+    dcterms:identifier "ietf-tls" .
+
+<http://lists.w3.org/Archives/Public/pics-info> a sioc:Space;
+    dcterms:identifier "pics-info" .
+
+<http://lists.w3.org/Archives/Public/pics-interest> a sioc:Space;
+    dcterms:identifier "pics-interest" .
+
+<http://lists.w3.org/Archives/Public/png-group> a sioc:Space;
+    dcterms:identifier "png-group" .
+
+<http://lists.w3.org/Archives/Public/pso-discuss> a sioc:Space;
+    dcterms:identifier "pso-discuss" .
+
+<http://lists.w3.org/Archives/Public/pso-pc> a sioc:Space;
+    dcterms:identifier "pso-pc" .
+
+<http://lists.w3.org/Archives/Public/public-activitypub> a sioc:Space;
+    dcterms:identifier "public-activitypub" .
+
+<http://lists.w3.org/Archives/Public/public-activitypub-contrib> a sioc:Space;
+    dcterms:identifier "public-activitypub-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-adopsdnt> a sioc:Space;
+    dcterms:identifier "public-adopsdnt" .
+
+<http://lists.w3.org/Archives/Public/public-adopsdnt-contrib> a sioc:Space;
+    dcterms:identifier "public-adopsdnt-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-annotea-dev> a sioc:Space;
+    dcterms:identifier "public-annotea-dev" .
+
+<http://lists.w3.org/Archives/Public/public-appformats> a sioc:Space;
+    dcterms:identifier "public-appformats" .
+
+<http://lists.w3.org/Archives/Public/public-ar> a sioc:Space;
+    dcterms:identifier "public-ar" .
+
+<http://lists.w3.org/Archives/Public/public-ar-contrib> a sioc:Space;
+    dcterms:identifier "public-ar-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-argumentation> a sioc:Space;
+    dcterms:identifier "public-argumentation" .
+
+<http://lists.w3.org/Archives/Public/public-argumentation-contrib> a sioc:Space;
+    dcterms:identifier "public-argumentation-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-arws-interest> a sioc:Space;
+    dcterms:identifier "public-arws-interest" .
+
+<http://lists.w3.org/Archives/Public/public-asdfstage> a sioc:Space;
+    dcterms:identifier "public-asdfstage" .
+
+<http://lists.w3.org/Archives/Public/public-asdfstage-contrib> a sioc:Space;
+    dcterms:identifier "public-asdfstage-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-atag2-comments> a sioc:Space;
+    dcterms:identifier "public-atag2-comments" .
+
+<http://lists.w3.org/Archives/Public/public-audio> a sioc:Space;
+    dcterms:identifier "public-audio" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-ar> a sioc:Space;
+    dcterms:identifier "public-auth-trans-ar" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-ca> a sioc:Space;
+    dcterms:identifier "public-auth-trans-ca" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-da> a sioc:Space;
+    dcterms:identifier "public-auth-trans-da" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-de> a sioc:Space;
+    dcterms:identifier "public-auth-trans-de" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-es> a sioc:Space;
+    dcterms:identifier "public-auth-trans-es" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-fi> a sioc:Space;
+    dcterms:identifier "public-auth-trans-fi" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-fr> a sioc:Space;
+    dcterms:identifier "public-auth-trans-fr" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-hu> a sioc:Space;
+    dcterms:identifier "public-auth-trans-hu" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-it> a sioc:Space;
+    dcterms:identifier "public-auth-trans-it" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-nl> a sioc:Space;
+    dcterms:identifier "public-auth-trans-nl" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-no> a sioc:Space;
+    dcterms:identifier "public-auth-trans-no" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-ru> a sioc:Space;
+    dcterms:identifier "public-auth-trans-ru" .
+
+<http://lists.w3.org/Archives/Public/public-auth-trans-se> a sioc:Space;
+    dcterms:identifier "public-auth-trans-se" .
+
+<http://lists.w3.org/Archives/Public/public-automotive> a sioc:Space;
+    dcterms:identifier "public-automotive" .
+
+<http://lists.w3.org/Archives/Public/public-automotive-contrib> a sioc:Space;
+    dcterms:identifier "public-automotive-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-autowebtest> a sioc:Space;
+    dcterms:identifier "public-autowebtest" .
+
+<http://lists.w3.org/Archives/Public/public-autowebtest-contrib> a sioc:Space;
+    dcterms:identifier "public-autowebtest-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-awwsw> a sioc:Space;
+    dcterms:identifier "public-awwsw" .
+
+<http://lists.w3.org/Archives/Public/public-backplane-comments> a sioc:Space;
+    dcterms:identifier "public-backplane-comments" .
+
+<http://lists.w3.org/Archives/Public/public-bigdata> a sioc:Space;
+    dcterms:identifier "public-bigdata" .
+
+<http://lists.w3.org/Archives/Public/public-bigdata-contrib> a sioc:Space;
+    dcterms:identifier "public-bigdata-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-bpwg> a sioc:Space;
+    dcterms:identifier "public-bpwg" .
+
+<http://lists.w3.org/Archives/Public/public-bpwg-access> a sioc:Space;
+    dcterms:identifier "public-bpwg-access" .
+
+<http://lists.w3.org/Archives/Public/public-bpwg-comments> a sioc:Space;
+    dcterms:identifier "public-bpwg-comments" .
+
+<http://lists.w3.org/Archives/Public/public-bpwg-ct> a sioc:Space;
+    dcterms:identifier "public-bpwg-ct" .
+
+<http://lists.w3.org/Archives/Public/public-bpwg-korean> a sioc:Space;
+    dcterms:identifier "public-bpwg-korean" .
+
+<http://lists.w3.org/Archives/Public/public-bpwg-pro> a sioc:Space;
+    dcterms:identifier "public-bpwg-pro" .
+
+<http://lists.w3.org/Archives/Public/public-browser-tools-testing> a sioc:Space;
+    dcterms:identifier "public-browser-tools-testing" .
+
+<http://lists.w3.org/Archives/Public/public-calendar-coord> a sioc:Space;
+    dcterms:identifier "public-calendar-coord" .
+
+<http://lists.w3.org/Archives/Public/public-cambridge-sem-web> a sioc:Space;
+    dcterms:identifier "public-cambridge-sem-web" .
+
+<http://lists.w3.org/Archives/Public/public-canvas-api> a sioc:Space;
+    dcterms:identifier "public-canvas-api" .
+
+<http://lists.w3.org/Archives/Public/public-ccpp2-comments> a sioc:Space;
+    dcterms:identifier "public-ccpp2-comments" .
+
+<http://lists.w3.org/Archives/Public/public-cdf> a sioc:Space;
+    dcterms:identifier "public-cdf" .
+
+<http://lists.w3.org/Archives/Public/public-cloud> a sioc:Space;
+    dcterms:identifier "public-cloud" .
+
+<http://lists.w3.org/Archives/Public/public-cloud-contrib> a sioc:Space;
+    dcterms:identifier "public-cloud-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-coders4africa> a sioc:Space;
+    dcterms:identifier "public-coders4africa" .
+
+<http://lists.w3.org/Archives/Public/public-coders4africa-contrib> a sioc:Space;
+    dcterms:identifier "public-coders4africa-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-colloquial> a sioc:Space;
+    dcterms:identifier "public-colloquial" .
+
+<http://lists.w3.org/Archives/Public/public-colloquial-contrib> a sioc:Space;
+    dcterms:identifier "public-colloquial-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-comments-wai-age> a sioc:Space;
+    dcterms:identifier "public-comments-wai-age" .
+
+<http://lists.w3.org/Archives/Public/public-comments-wcag20> a sioc:Space;
+    dcterms:identifier "public-comments-wcag20" .
+
+<http://lists.w3.org/Archives/Public/public-community-io> a sioc:Space;
+    dcterms:identifier "public-community-io" .
+
+<http://lists.w3.org/Archives/Public/public-community-io-contrib> a sioc:Space;
+    dcterms:identifier "public-community-io-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-compound-documents> a sioc:Space;
+    dcterms:identifier "public-compound-documents" .
+
+<http://lists.w3.org/Archives/Public/public-contacts-coord> a sioc:Space;
+    dcterms:identifier "public-contacts-coord" .
+
+<http://lists.w3.org/Archives/Public/public-content-transformation-conformance> a sioc:Space;
+    dcterms:identifier "public-content-transformation-conformance" .
+
+<http://lists.w3.org/Archives/Public/public-coremob> a sioc:Space;
+    dcterms:identifier "public-coremob" .
+
+<http://lists.w3.org/Archives/Public/public-coremob-contrib> a sioc:Space;
+    dcterms:identifier "public-coremob-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-council> a sioc:Space;
+    dcterms:identifier "public-council" .
+
+<http://lists.w3.org/Archives/Public/public-council-contrib> a sioc:Space;
+    dcterms:identifier "public-council-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-css-bugzilla> a sioc:Space;
+    dcterms:identifier "public-css-bugzilla" .
+
+<http://lists.w3.org/Archives/Public/public-css-commits> a sioc:Space;
+    dcterms:identifier "public-css-commits" .
+
+<http://lists.w3.org/Archives/Public/public-css-rates> a sioc:Space;
+    dcterms:identifier "public-css-rates" .
+
+<http://lists.w3.org/Archives/Public/public-css-rates-contrib> a sioc:Space;
+    dcterms:identifier "public-css-rates-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-css-testsuite> a sioc:Space;
+    dcterms:identifier "public-css-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-cssacc> a sioc:Space;
+    dcterms:identifier "public-cssacc" .
+
+<http://lists.w3.org/Archives/Public/public-cssacc-contrib> a sioc:Space;
+    dcterms:identifier "public-cssacc-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-cssselfrags> a sioc:Space;
+    dcterms:identifier "public-cssselfrags" .
+
+<http://lists.w3.org/Archives/Public/public-cssselfrags-contrib> a sioc:Space;
+    dcterms:identifier "public-cssselfrags-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-cwm-announce> a sioc:Space;
+    dcterms:identifier "public-cwm-announce" .
+
+<http://lists.w3.org/Archives/Public/public-cwm-bugs> a sioc:Space;
+    dcterms:identifier "public-cwm-bugs" .
+
+<http://lists.w3.org/Archives/Public/public-cwm-talk> a sioc:Space;
+    dcterms:identifier "public-cwm-talk" .
+
+<http://lists.w3.org/Archives/Public/public-d-tasks> a sioc:Space;
+    dcterms:identifier "public-d-tasks" .
+
+<http://lists.w3.org/Archives/Public/public-d-tasks-contrib> a sioc:Space;
+    dcterms:identifier "public-d-tasks-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-dap-commits> a sioc:Space;
+    dcterms:identifier "public-dap-commits" .
+
+<http://lists.w3.org/Archives/Public/public-data-driven-standards> a sioc:Space;
+    dcterms:identifier "public-data-driven-standards" .
+
+<http://lists.w3.org/Archives/Public/public-data-driven-standards-contrib> a sioc:Space;
+    dcterms:identifier "public-data-driven-standards-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-dcci-editors> a sioc:Space;
+    dcterms:identifier "public-dcci-editors" .
+
+<http://lists.w3.org/Archives/Public/public-ddr-vocab> a sioc:Space;
+    dcterms:identifier "public-ddr-vocab" .
+
+<http://lists.w3.org/Archives/Public/public-ddwg> a sioc:Space;
+    dcterms:identifier "public-ddwg" .
+
+<http://lists.w3.org/Archives/Public/public-ddwg-comments> a sioc:Space;
+    dcterms:identifier "public-ddwg-comments" .
+
+<http://lists.w3.org/Archives/Public/public-decisionml> a sioc:Space;
+    dcterms:identifier "public-decisionml" .
+
+<http://lists.w3.org/Archives/Public/public-decisionml-contrib> a sioc:Space;
+    dcterms:identifier "public-decisionml-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-declarative3d> a sioc:Space;
+    dcterms:identifier "public-declarative3d" .
+
+<http://lists.w3.org/Archives/Public/public-declarative3d-contrib> a sioc:Space;
+    dcterms:identifier "public-declarative3d-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-device-apis> a sioc:Space;
+    dcterms:identifier "public-device-apis" .
+
+<http://lists.w3.org/Archives/Public/public-device-status> a sioc:Space;
+    dcterms:identifier "public-device-status" .
+
+<http://lists.w3.org/Archives/Public/public-devrel> a sioc:Space;
+    dcterms:identifier "public-devrel" .
+
+<http://lists.w3.org/Archives/Public/public-devrel-contrib> a sioc:Space;
+    dcterms:identifier "public-devrel-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-didf-ws> a sioc:Space;
+    dcterms:identifier "public-didf-ws" .
+
+<http://lists.w3.org/Archives/Public/public-digipub> a sioc:Space;
+    dcterms:identifier "public-digipub" .
+
+<http://lists.w3.org/Archives/Public/public-digipub-contrib> a sioc:Space;
+    dcterms:identifier "public-digipub-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-disaster-management-ont> a sioc:Space;
+    dcterms:identifier "public-disaster-management-ont" .
+
+<http://lists.w3.org/Archives/Public/public-diselect-editors> a sioc:Space;
+    dcterms:identifier "public-diselect-editors" .
+
+<http://lists.w3.org/Archives/Public/public-dld> a sioc:Space;
+    dcterms:identifier "public-dld" .
+
+<http://lists.w3.org/Archives/Public/public-dld-contrib> a sioc:Space;
+    dcterms:identifier "public-dld-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-dntrack> a sioc:Space;
+    dcterms:identifier "public-dntrack" .
+
+<http://lists.w3.org/Archives/Public/public-dntrack-contrib> a sioc:Space;
+    dcterms:identifier "public-dntrack-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-earl10-comments> a sioc:Space;
+    dcterms:identifier "public-earl10-comments" .
+
+<http://lists.w3.org/Archives/Public/public-editing> a sioc:Space;
+    dcterms:identifier "public-editing" .
+
+<http://lists.w3.org/Archives/Public/public-editing-contrib> a sioc:Space;
+    dcterms:identifier "public-editing-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-egov-announce> a sioc:Space;
+    dcterms:identifier "public-egov-announce" .
+
+<http://lists.w3.org/Archives/Public/public-egov-ig> a sioc:Space;
+    dcterms:identifier "public-egov-ig" .
+
+<http://lists.w3.org/Archives/Public/public-egov-ig-etf> a sioc:Space;
+    dcterms:identifier "public-egov-ig-etf" .
+
+<http://lists.w3.org/Archives/Public/public-elvisml> a sioc:Space;
+    dcterms:identifier "public-elvisml" .
+
+<http://lists.w3.org/Archives/Public/public-elvisml-contrib> a sioc:Space;
+    dcterms:identifier "public-elvisml-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-esw> a sioc:Space;
+    dcterms:identifier "public-esw" .
+
+<http://lists.w3.org/Archives/Public/public-esw-desc> a sioc:Space;
+    dcterms:identifier "public-esw-desc" .
+
+<http://lists.w3.org/Archives/Public/public-esw-news> a sioc:Space;
+    dcterms:identifier "public-esw-news" .
+
+<http://lists.w3.org/Archives/Public/public-esw-thes> a sioc:Space;
+    dcterms:identifier "public-esw-thes" .
+
+<http://lists.w3.org/Archives/Public/public-evangelist> a sioc:Space;
+    dcterms:identifier "public-evangelist" .
+
+<http://lists.w3.org/Archives/Public/public-exi> a sioc:Space;
+    dcterms:identifier "public-exi" .
+
+<http://lists.w3.org/Archives/Public/public-exi-comments> a sioc:Space;
+    dcterms:identifier "public-exi-comments" .
+
+<http://lists.w3.org/Archives/Public/public-expath> a sioc:Space;
+    dcterms:identifier "public-expath" .
+
+<http://lists.w3.org/Archives/Public/public-expath-contrib> a sioc:Space;
+    dcterms:identifier "public-expath-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-fedsocweb> a sioc:Space;
+    dcterms:identifier "public-fedsocweb" .
+
+<http://lists.w3.org/Archives/Public/public-fedsocweb-contrib> a sioc:Space;
+    dcterms:identifier "public-fedsocweb-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-film> a sioc:Space;
+    dcterms:identifier "public-film" .
+
+<http://lists.w3.org/Archives/Public/public-film-contrib> a sioc:Space;
+    dcterms:identifier "public-film-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-fixing-appcache> a sioc:Space;
+    dcterms:identifier "public-fixing-appcache" .
+
+<http://lists.w3.org/Archives/Public/public-fixing-appcache-contrib> a sioc:Space;
+    dcterms:identifier "public-fixing-appcache-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-forms> a sioc:Space;
+    dcterms:identifier "public-forms" .
+
+<http://lists.w3.org/Archives/Public/public-forms-testsuite> a sioc:Space;
+    dcterms:identifier "public-forms-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-forms-tf> a sioc:Space;
+    dcterms:identifier "public-forms-tf" .
+
+<http://lists.w3.org/Archives/Public/public-futurepay> a sioc:Space;
+    dcterms:identifier "public-futurepay" .
+
+<http://lists.w3.org/Archives/Public/public-futurepay-contrib> a sioc:Space;
+    dcterms:identifier "public-futurepay-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-fx> a sioc:Space;
+    dcterms:identifier "public-fx" .
+
+<http://lists.w3.org/Archives/Public/public-fx-editors> a sioc:Space;
+    dcterms:identifier "public-fx-editors" .
+
+<http://lists.w3.org/Archives/Public/public-games> a sioc:Space;
+    dcterms:identifier "public-games" .
+
+<http://lists.w3.org/Archives/Public/public-games-contrib> a sioc:Space;
+    dcterms:identifier "public-games-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-geolocation> a sioc:Space;
+    dcterms:identifier "public-geolocation" .
+
+<http://lists.w3.org/Archives/Public/public-gld-comments> a sioc:Space;
+    dcterms:identifier "public-gld-comments" .
+
+<http://lists.w3.org/Archives/Public/public-gld-wg> a sioc:Space;
+    dcterms:identifier "public-gld-wg" .
+
+<http://lists.w3.org/Archives/Public/public-glossary> a sioc:Space;
+    dcterms:identifier "public-glossary" .
+
+<http://lists.w3.org/Archives/Public/public-grddl-comments> a sioc:Space;
+    dcterms:identifier "public-grddl-comments" .
+
+<http://lists.w3.org/Archives/Public/public-grddl-wg> a sioc:Space;
+    dcterms:identifier "public-grddl-wg" .
+
+<http://lists.w3.org/Archives/Public/public-hcls-coi> a sioc:Space;
+    dcterms:identifier "public-hcls-coi" .
+
+<http://lists.w3.org/Archives/Public/public-hcls-dse> a sioc:Space;
+    dcterms:identifier "public-hcls-dse" .
+
+<http://lists.w3.org/Archives/Public/public-hpcweb> a sioc:Space;
+    dcterms:identifier "public-hpcweb" .
+
+<http://lists.w3.org/Archives/Public/public-hpcweb-contrib> a sioc:Space;
+    dcterms:identifier "public-hpcweb-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-html> a sioc:Space;
+    dcterms:identifier "public-html" .
+
+<http://lists.w3.org/Archives/Public/public-html-a11y> a sioc:Space;
+    dcterms:identifier "public-html-a11y" .
+
+<http://lists.w3.org/Archives/Public/public-html-bugzilla> a sioc:Space;
+    dcterms:identifier "public-html-bugzilla" .
+
+<http://lists.w3.org/Archives/Public/public-html-comments> a sioc:Space;
+    dcterms:identifier "public-html-comments" .
+
+<http://lists.w3.org/Archives/Public/public-html-commits> a sioc:Space;
+    dcterms:identifier "public-html-commits" .
+
+<http://lists.w3.org/Archives/Public/public-html-data-tf> a sioc:Space;
+    dcterms:identifier "public-html-data-tf" .
+
+<http://lists.w3.org/Archives/Public/public-html-diffs> a sioc:Space;
+    dcterms:identifier "public-html-diffs" .
+
+<http://lists.w3.org/Archives/Public/public-html-ig-jp> a sioc:Space;
+    dcterms:identifier "public-html-ig-jp" .
+
+<http://lists.w3.org/Archives/Public/public-html-ig-ko> a sioc:Space;
+    dcterms:identifier "public-html-ig-ko" .
+
+<http://lists.w3.org/Archives/Public/public-html-ig-zh> a sioc:Space;
+    dcterms:identifier "public-html-ig-zh" .
+
+<http://lists.w3.org/Archives/Public/public-html-mail> a sioc:Space;
+    dcterms:identifier "public-html-mail" .
+
+<http://lists.w3.org/Archives/Public/public-html-media> a sioc:Space;
+    dcterms:identifier "public-html-media" .
+
+<http://lists.w3.org/Archives/Public/public-html-testsuite> a sioc:Space;
+    dcterms:identifier "public-html-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-html-wg-announce> a sioc:Space;
+    dcterms:identifier "public-html-wg-announce" .
+
+<http://lists.w3.org/Archives/Public/public-html-wg-issue-tracking> a sioc:Space;
+    dcterms:identifier "public-html-wg-issue-tracking" .
+
+<http://lists.w3.org/Archives/Public/public-html-xml> a sioc:Space;
+    dcterms:identifier "public-html-xml" .
+
+<http://lists.w3.org/Archives/Public/public-html.bak> a sioc:Space;
+    dcterms:identifier "public-html.bak" .
+
+<http://lists.w3.org/Archives/Public/public-html5spec> a sioc:Space;
+    dcterms:identifier "public-html5spec" .
+
+<http://lists.w3.org/Archives/Public/public-html5spec-contrib> a sioc:Space;
+    dcterms:identifier "public-html5spec-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-hypertext-cg> a sioc:Space;
+    dcterms:identifier "public-hypertext-cg" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-arch> a sioc:Space;
+    dcterms:identifier "public-i18n-arch" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-bidi> a sioc:Space;
+    dcterms:identifier "public-i18n-bidi" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-cjk> a sioc:Space;
+    dcterms:identifier "public-i18n-cjk" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-core> a sioc:Space;
+    dcterms:identifier "public-i18n-core" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-geo> a sioc:Space;
+    dcterms:identifier "public-i18n-geo" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-indic> a sioc:Space;
+    dcterms:identifier "public-i18n-indic" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-its> a sioc:Space;
+    dcterms:identifier "public-i18n-its" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-its-ig> a sioc:Space;
+    dcterms:identifier "public-i18n-its-ig" .
+
+<http://lists.w3.org/Archives/Public/public-i18n-ws> a sioc:Space;
+    dcterms:identifier "public-i18n-ws" .
+
+<http://lists.w3.org/Archives/Public/public-ict2010-session> a sioc:Space;
+    dcterms:identifier "public-ict2010-session" .
+
+<http://lists.w3.org/Archives/Public/public-identity> a sioc:Space;
+    dcterms:identifier "public-identity" .
+
+<http://lists.w3.org/Archives/Public/public-ietf-collation> a sioc:Space;
+    dcterms:identifier "public-ietf-collation" .
+
+<http://lists.w3.org/Archives/Public/public-ietf-w3c> a sioc:Space;
+    dcterms:identifier "public-ietf-w3c" .
+
+<http://lists.w3.org/Archives/Public/public-indie-ui> a sioc:Space;
+    dcterms:identifier "public-indie-ui" .
+
+<http://lists.w3.org/Archives/Public/public-indie-ui-comments> a sioc:Space;
+    dcterms:identifier "public-indie-ui-comments" .
+
+<http://lists.w3.org/Archives/Public/public-infographics> a sioc:Space;
+    dcterms:identifier "public-infographics" .
+
+<http://lists.w3.org/Archives/Public/public-infographics-contrib> a sioc:Space;
+    dcterms:identifier "public-infographics-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-iri> a sioc:Space;
+    dcterms:identifier "public-iri" .
+
+<http://lists.w3.org/Archives/Public/public-iss-im> a sioc:Space;
+    dcterms:identifier "public-iss-im" .
+
+<http://lists.w3.org/Archives/Public/public-iss-im-contrib> a sioc:Space;
+    dcterms:identifier "public-iss-im-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-iswc-hcls-bof> a sioc:Space;
+    dcterms:identifier "public-iswc-hcls-bof" .
+
+<http://lists.w3.org/Archives/Public/public-jseverywhere> a sioc:Space;
+    dcterms:identifier "public-jseverywhere" .
+
+<http://lists.w3.org/Archives/Public/public-jseverywhere-contrib> a sioc:Space;
+    dcterms:identifier "public-jseverywhere-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-json-ld> a sioc:Space;
+    dcterms:identifier "public-json-ld" .
+
+<http://lists.w3.org/Archives/Public/public-json-ld-contrib> a sioc:Space;
+    dcterms:identifier "public-json-ld-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-junkgroup> a sioc:Space;
+    dcterms:identifier "public-junkgroup" .
+
+<http://lists.w3.org/Archives/Public/public-junkgroup-contrib> a sioc:Space;
+    dcterms:identifier "public-junkgroup-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-ldp> a sioc:Space;
+    dcterms:identifier "public-ldp" .
+
+<http://lists.w3.org/Archives/Public/public-ldp-wg> a sioc:Space;
+    dcterms:identifier "public-ldp-wg" .
+
+<http://lists.w3.org/Archives/Public/public-learnonline> a sioc:Space;
+    dcterms:identifier "public-learnonline" .
+
+<http://lists.w3.org/Archives/Public/public-learnonline-contrib> a sioc:Space;
+    dcterms:identifier "public-learnonline-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-linked-json> a sioc:Space;
+    dcterms:identifier "public-linked-json" .
+
+<http://lists.w3.org/Archives/Public/public-lld> a sioc:Space;
+    dcterms:identifier "public-lld" .
+
+<http://lists.w3.org/Archives/Public/public-lod> a sioc:Space;
+    dcterms:identifier "public-lod" .
+
+<http://lists.w3.org/Archives/Public/public-mbui> a sioc:Space;
+    dcterms:identifier "public-mbui" .
+
+<http://lists.w3.org/Archives/Public/public-mca> a sioc:Space;
+    dcterms:identifier "public-mca" .
+
+<http://lists.w3.org/Archives/Public/public-media-annotation> a sioc:Space;
+    dcterms:identifier "public-media-annotation" .
+
+<http://lists.w3.org/Archives/Public/public-media-capture> a sioc:Space;
+    dcterms:identifier "public-media-capture" .
+
+<http://lists.w3.org/Archives/Public/public-media-fragment> a sioc:Space;
+    dcterms:identifier "public-media-fragment" .
+
+<http://lists.w3.org/Archives/Public/public-memoria> a sioc:Space;
+    dcterms:identifier "public-memoria" .
+
+<http://lists.w3.org/Archives/Public/public-microposts> a sioc:Space;
+    dcterms:identifier "public-microposts" .
+
+<http://lists.w3.org/Archives/Public/public-microposts-contrib> a sioc:Space;
+    dcterms:identifier "public-microposts-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-microxml> a sioc:Space;
+    dcterms:identifier "public-microxml" .
+
+<http://lists.w3.org/Archives/Public/public-microxml-contrib> a sioc:Space;
+    dcterms:identifier "public-microxml-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-mlw-announce> a sioc:Space;
+    dcterms:identifier "public-mlw-announce" .
+
+<http://lists.w3.org/Archives/Public/public-mlw-workshop> a sioc:Space;
+    dcterms:identifier "public-mlw-workshop" .
+
+<http://lists.w3.org/Archives/Public/public-mobile-dev> a sioc:Space;
+    dcterms:identifier "public-mobile-dev" .
+
+<http://lists.w3.org/Archives/Public/public-mobile-training> a sioc:Space;
+    dcterms:identifier "public-mobile-training" .
+
+<http://lists.w3.org/Archives/Public/public-mobileacc> a sioc:Space;
+    dcterms:identifier "public-mobileacc" .
+
+<http://lists.w3.org/Archives/Public/public-mobileacc-contrib> a sioc:Space;
+    dcterms:identifier "public-mobileacc-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-mobileok-checker> a sioc:Space;
+    dcterms:identifier "public-mobileok-checker" .
+
+<http://lists.w3.org/Archives/Public/public-mobindic> a sioc:Space;
+    dcterms:identifier "public-mobindic" .
+
+<http://lists.w3.org/Archives/Public/public-mobindic-contrib> a sioc:Space;
+    dcterms:identifier "public-mobindic-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-mstagedgroup> a sioc:Space;
+    dcterms:identifier "public-mstagedgroup" .
+
+<http://lists.w3.org/Archives/Public/public-mstagedgroup-contrib> a sioc:Space;
+    dcterms:identifier "public-mstagedgroup-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-multilingualweb> a sioc:Space;
+    dcterms:identifier "public-multilingualweb" .
+
+<http://lists.w3.org/Archives/Public/public-multilingualweb-lt> a sioc:Space;
+    dcterms:identifier "public-multilingualweb-lt" .
+
+<http://lists.w3.org/Archives/Public/public-multilingualweb-lt-comments> a sioc:Space;
+    dcterms:identifier "public-multilingualweb-lt-comments" .
+
+<http://lists.w3.org/Archives/Public/public-multilingualweb-lt-tests> a sioc:Space;
+    dcterms:identifier "public-multilingualweb-lt-tests" .
+
+<http://lists.w3.org/Archives/Public/public-mw4d> a sioc:Space;
+    dcterms:identifier "public-mw4d" .
+
+<http://lists.w3.org/Archives/Public/public-mweb-news> a sioc:Space;
+    dcterms:identifier "public-mweb-news" .
+
+<http://lists.w3.org/Archives/Public/public-mwi-ec> a sioc:Space;
+    dcterms:identifier "public-mwi-ec" .
+
+<http://lists.w3.org/Archives/Public/public-mws> a sioc:Space;
+    dcterms:identifier "public-mws" .
+
+<http://lists.w3.org/Archives/Public/public-mws-contrib> a sioc:Space;
+    dcterms:identifier "public-mws-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-mwts> a sioc:Space;
+    dcterms:identifier "public-mwts" .
+
+<http://lists.w3.org/Archives/Public/public-n3-discuss> a sioc:Space;
+    dcterms:identifier "public-n3-discuss" .
+
+<http://lists.w3.org/Archives/Public/public-native-web-apps> a sioc:Space;
+    dcterms:identifier "public-native-web-apps" .
+
+<http://lists.w3.org/Archives/Public/public-native-web-apps-contrib> a sioc:Space;
+    dcterms:identifier "public-native-web-apps-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-networked-data> a sioc:Space;
+    dcterms:identifier "public-networked-data" .
+
+<http://lists.w3.org/Archives/Public/public-networked-data-contrib> a sioc:Space;
+    dcterms:identifier "public-networked-data-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-networkfriendly> a sioc:Space;
+    dcterms:identifier "public-networkfriendly" .
+
+<http://lists.w3.org/Archives/Public/public-networkfriendly-contrib> a sioc:Space;
+    dcterms:identifier "public-networkfriendly-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-new-work> a sioc:Space;
+    dcterms:identifier "public-new-work" .
+
+<http://lists.w3.org/Archives/Public/public-new-work-comments> a sioc:Space;
+    dcterms:identifier "public-new-work-comments" .
+
+<http://lists.w3.org/Archives/Public/public-newstagegroup1> a sioc:Space;
+    dcterms:identifier "public-newstagegroup1" .
+
+<http://lists.w3.org/Archives/Public/public-newstagegroup1-contrib> a sioc:Space;
+    dcterms:identifier "public-newstagegroup1-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-nfc> a sioc:Space;
+    dcterms:identifier "public-nfc" .
+
+<http://lists.w3.org/Archives/Public/public-odrl> a sioc:Space;
+    dcterms:identifier "public-odrl" .
+
+<http://lists.w3.org/Archives/Public/public-odrl-contrib> a sioc:Space;
+    dcterms:identifier "public-odrl-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-ogsw> a sioc:Space;
+    dcterms:identifier "public-ogsw" .
+
+<http://lists.w3.org/Archives/Public/public-oilgaschem> a sioc:Space;
+    dcterms:identifier "public-oilgaschem" .
+
+<http://lists.w3.org/Archives/Public/public-oilgaschem-contrib> a sioc:Space;
+    dcterms:identifier "public-oilgaschem-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-ontolex> a sioc:Space;
+    dcterms:identifier "public-ontolex" .
+
+<http://lists.w3.org/Archives/Public/public-ontolex-contrib> a sioc:Space;
+    dcterms:identifier "public-ontolex-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-openannotation> a sioc:Space;
+    dcterms:identifier "public-openannotation" .
+
+<http://lists.w3.org/Archives/Public/public-openannotation-contrib> a sioc:Space;
+    dcterms:identifier "public-openannotation-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-opentag> a sioc:Space;
+    dcterms:identifier "public-opentag" .
+
+<http://lists.w3.org/Archives/Public/public-opentag-contrib> a sioc:Space;
+    dcterms:identifier "public-opentag-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-oslcperfmon> a sioc:Space;
+    dcterms:identifier "public-oslcperfmon" .
+
+<http://lists.w3.org/Archives/Public/public-oslcperfmon-contrib> a sioc:Space;
+    dcterms:identifier "public-oslcperfmon-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-ostatus> a sioc:Space;
+    dcterms:identifier "public-ostatus" .
+
+<http://lists.w3.org/Archives/Public/public-ostatus-contrib> a sioc:Space;
+    dcterms:identifier "public-ostatus-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-owl-comments> a sioc:Space;
+    dcterms:identifier "public-owl-comments" .
+
+<http://lists.w3.org/Archives/Public/public-owl-dev> a sioc:Space;
+    dcterms:identifier "public-owl-dev" .
+
+<http://lists.w3.org/Archives/Public/public-owl-wg> a sioc:Space;
+    dcterms:identifier "public-owl-wg" .
+
+<http://lists.w3.org/Archives/Public/public-owled> a sioc:Space;
+    dcterms:identifier "public-owled" .
+
+<http://lists.w3.org/Archives/Public/public-owled-contrib> a sioc:Space;
+    dcterms:identifier "public-owled-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-p3p> a sioc:Space;
+    dcterms:identifier "public-p3p" .
+
+<http://lists.w3.org/Archives/Public/public-p3p-spec> a sioc:Space;
+    dcterms:identifier "public-p3p-spec" .
+
+<http://lists.w3.org/Archives/Public/public-p3p-ws> a sioc:Space;
+    dcterms:identifier "public-p3p-ws" .
+
+<http://lists.w3.org/Archives/Public/public-patent-commitment> a sioc:Space;
+    dcterms:identifier "public-patent-commitment" .
+
+<http://lists.w3.org/Archives/Public/public-pfwg-comments> a sioc:Space;
+    dcterms:identifier "public-pfwg-comments" .
+
+<http://lists.w3.org/Archives/Public/public-philoweb> a sioc:Space;
+    dcterms:identifier "public-philoweb" .
+
+<http://lists.w3.org/Archives/Public/public-philoweb-contrib> a sioc:Space;
+    dcterms:identifier "public-philoweb-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-pkg-uri-scheme> a sioc:Space;
+    dcterms:identifier "public-pkg-uri-scheme" .
+
+<http://lists.w3.org/Archives/Public/public-pling> a sioc:Space;
+    dcterms:identifier "public-pling" .
+
+<http://lists.w3.org/Archives/Public/public-poiwg> a sioc:Space;
+    dcterms:identifier "public-poiwg" .
+
+<http://lists.w3.org/Archives/Public/public-powderwg> a sioc:Space;
+    dcterms:identifier "public-powderwg" .
+
+<http://lists.w3.org/Archives/Public/public-ppl> a sioc:Space;
+    dcterms:identifier "public-ppl" .
+
+<http://lists.w3.org/Archives/Public/public-ppl-contrib> a sioc:Space;
+    dcterms:identifier "public-ppl-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-prime-arch> a sioc:Space;
+    dcterms:identifier "public-prime-arch" .
+
+<http://lists.w3.org/Archives/Public/public-privacy> a sioc:Space;
+    dcterms:identifier "public-privacy" .
+
+<http://lists.w3.org/Archives/Public/public-privacy06ws> a sioc:Space;
+    dcterms:identifier "public-privacy06ws" .
+
+<http://lists.w3.org/Archives/Public/public-process-comments> a sioc:Space;
+    dcterms:identifier "public-process-comments" .
+
+<http://lists.w3.org/Archives/Public/public-procmodel-comments> a sioc:Space;
+    dcterms:identifier "public-procmodel-comments" .
+
+<http://lists.w3.org/Archives/Public/public-prov> a sioc:Space;
+    dcterms:identifier "public-prov" .
+
+<http://lists.w3.org/Archives/Public/public-prov-comments> a sioc:Space;
+    dcterms:identifier "public-prov-comments" .
+
+<http://lists.w3.org/Archives/Public/public-prov-dev> a sioc:Space;
+    dcterms:identifier "public-prov-dev" .
+
+<http://lists.w3.org/Archives/Public/public-prov-wg> a sioc:Space;
+    dcterms:identifier "public-prov-wg" .
+
+<http://lists.w3.org/Archives/Public/public-psi-std> a sioc:Space;
+    dcterms:identifier "public-psi-std" .
+
+<http://lists.w3.org/Archives/Public/public-pubsub> a sioc:Space;
+    dcterms:identifier "public-pubsub" .
+
+<http://lists.w3.org/Archives/Public/public-pubsub-contrib> a sioc:Space;
+    dcterms:identifier "public-pubsub-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-qa-dev> a sioc:Space;
+    dcterms:identifier "public-qa-dev" .
+
+<http://lists.w3.org/Archives/Public/public-qt-comments> a sioc:Space;
+    dcterms:identifier "public-qt-comments" .
+
+<http://lists.w3.org/Archives/Public/public-qt-extensions> a sioc:Space;
+    dcterms:identifier "public-qt-extensions" .
+
+<http://lists.w3.org/Archives/Public/public-quatro> a sioc:Space;
+    dcterms:identifier "public-quatro" .
+
+<http://lists.w3.org/Archives/Public/public-rdb2rdf-comments> a sioc:Space;
+    dcterms:identifier "public-rdb2rdf-comments" .
+
+<http://lists.w3.org/Archives/Public/public-rdb2rdf-wg> a sioc:Space;
+    dcterms:identifier "public-rdb2rdf-wg" .
+
+<http://lists.w3.org/Archives/Public/public-rdf> a sioc:Space;
+    dcterms:identifier "public-rdf" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-comments> a sioc:Space;
+    dcterms:identifier "public-rdf-comments" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-dawg> a sioc:Space;
+    dcterms:identifier "public-rdf-dawg" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-dawg-comments> a sioc:Space;
+    dcterms:identifier "public-rdf-dawg-comments" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-in-xhtml-tf> a sioc:Space;
+    dcterms:identifier "public-rdf-in-xhtml-tf" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-prov> a sioc:Space;
+    dcterms:identifier "public-rdf-prov" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-ruby> a sioc:Space;
+    dcterms:identifier "public-rdf-ruby" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-tap> a sioc:Space;
+    dcterms:identifier "public-rdf-tap" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-text> a sioc:Space;
+    dcterms:identifier "public-rdf-text" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-wg> a sioc:Space;
+    dcterms:identifier "public-rdf-wg" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-workshop> a sioc:Space;
+    dcterms:identifier "public-rdf-workshop" .
+
+<http://lists.w3.org/Archives/Public/public-rdf-ws> a sioc:Space;
+    dcterms:identifier "public-rdf-ws" .
+
+<http://lists.w3.org/Archives/Public/public-rdfa> a sioc:Space;
+    dcterms:identifier "public-rdfa" .
+
+<http://lists.w3.org/Archives/Public/public-rdfa-wg> a sioc:Space;
+    dcterms:identifier "public-rdfa-wg" .
+
+<http://lists.w3.org/Archives/Public/public-respimg> a sioc:Space;
+    dcterms:identifier "public-respimg" .
+
+<http://lists.w3.org/Archives/Public/public-respimg-contrib> a sioc:Space;
+    dcterms:identifier "public-respimg-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-rex-pag> a sioc:Space;
+    dcterms:identifier "public-rex-pag" .
+
+<http://lists.w3.org/Archives/Public/public-rif-comments> a sioc:Space;
+    dcterms:identifier "public-rif-comments" .
+
+<http://lists.w3.org/Archives/Public/public-rif-dev> a sioc:Space;
+    dcterms:identifier "public-rif-dev" .
+
+<http://lists.w3.org/Archives/Public/public-rif-wg> a sioc:Space;
+    dcterms:identifier "public-rif-wg" .
+
+<http://lists.w3.org/Archives/Public/public-rule-workshop-discuss> a sioc:Space;
+    dcterms:identifier "public-rule-workshop-discuss" .
+
+<http://lists.w3.org/Archives/Public/public-rww> a sioc:Space;
+    dcterms:identifier "public-rww" .
+
+<http://lists.w3.org/Archives/Public/public-rww-contrib> a sioc:Space;
+    dcterms:identifier "public-rww-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-schemata-users> a sioc:Space;
+    dcterms:identifier "public-schemata-users" .
+
+<http://lists.w3.org/Archives/Public/public-script-coord> a sioc:Space;
+    dcterms:identifier "public-script-coord" .
+
+<http://lists.w3.org/Archives/Public/public-scriptlib> a sioc:Space;
+    dcterms:identifier "public-scriptlib" .
+
+<http://lists.w3.org/Archives/Public/public-scriptlib-contrib> a sioc:Space;
+    dcterms:identifier "public-scriptlib-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-semnews> a sioc:Space;
+    dcterms:identifier "public-semnews" .
+
+<http://lists.w3.org/Archives/Public/public-semnews-contrib> a sioc:Space;
+    dcterms:identifier "public-semnews-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-semweb-lifesci> a sioc:Space;
+    dcterms:identifier "public-semweb-lifesci" .
+
+<http://lists.w3.org/Archives/Public/public-semweb-neuropath> a sioc:Space;
+    dcterms:identifier "public-semweb-neuropath" .
+
+<http://lists.w3.org/Archives/Public/public-semweb-ui> a sioc:Space;
+    dcterms:identifier "public-semweb-ui" .
+
+<http://lists.w3.org/Archives/Public/public-semwebprog> a sioc:Space;
+    dcterms:identifier "public-semwebprog" .
+
+<http://lists.w3.org/Archives/Public/public-semwebprog-contrib> a sioc:Space;
+    dcterms:identifier "public-semwebprog-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-sensorweb> a sioc:Space;
+    dcterms:identifier "public-sensorweb" .
+
+<http://lists.w3.org/Archives/Public/public-sensorweb-contrib> a sioc:Space;
+    dcterms:identifier "public-sensorweb-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-signage-tmp> a sioc:Space;
+    dcterms:identifier "public-signage-tmp" .
+
+<http://lists.w3.org/Archives/Public/public-simplyseo> a sioc:Space;
+    dcterms:identifier "public-simplyseo" .
+
+<http://lists.w3.org/Archives/Public/public-simplyseo-contrib> a sioc:Space;
+    dcterms:identifier "public-simplyseo-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-sml> a sioc:Space;
+    dcterms:identifier "public-sml" .
+
+<http://lists.w3.org/Archives/Public/public-sml-eds> a sioc:Space;
+    dcterms:identifier "public-sml-eds" .
+
+<http://lists.w3.org/Archives/Public/public-sml-qa> a sioc:Space;
+    dcterms:identifier "public-sml-qa" .
+
+<http://lists.w3.org/Archives/Public/public-soap-jms> a sioc:Space;
+    dcterms:identifier "public-soap-jms" .
+
+<http://lists.w3.org/Archives/Public/public-socbiz> a sioc:Space;
+    dcterms:identifier "public-socbiz" .
+
+<http://lists.w3.org/Archives/Public/public-socbiz-contrib> a sioc:Space;
+    dcterms:identifier "public-socbiz-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-socbizcg> a sioc:Space;
+    dcterms:identifier "public-socbizcg" .
+
+<http://lists.w3.org/Archives/Public/public-socbizcg-contrib> a sioc:Space;
+    dcterms:identifier "public-socbizcg-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-social-web-talk> a sioc:Space;
+    dcterms:identifier "public-social-web-talk" .
+
+<http://lists.w3.org/Archives/Public/public-socialweb> a sioc:Space;
+    dcterms:identifier "public-socialweb" .
+
+<http://lists.w3.org/Archives/Public/public-spade> a sioc:Space;
+    dcterms:identifier "public-spade" .
+
+<http://lists.w3.org/Archives/Public/public-spade-contrib> a sioc:Space;
+    dcterms:identifier "public-spade-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-sparql-dev> a sioc:Space;
+    dcterms:identifier "public-sparql-dev" .
+
+<http://lists.w3.org/Archives/Public/public-speech-api> a sioc:Space;
+    dcterms:identifier "public-speech-api" .
+
+<http://lists.w3.org/Archives/Public/public-speech-api-contrib> a sioc:Space;
+    dcterms:identifier "public-speech-api-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-ssn-cg> a sioc:Space;
+    dcterms:identifier "public-ssn-cg" .
+
+<http://lists.w3.org/Archives/Public/public-ssn-cg-contrib> a sioc:Space;
+    dcterms:identifier "public-ssn-cg-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-svg-ig> a sioc:Space;
+    dcterms:identifier "public-svg-ig" .
+
+<http://lists.w3.org/Archives/Public/public-svg-ig-jp> a sioc:Space;
+    dcterms:identifier "public-svg-ig-jp" .
+
+<http://lists.w3.org/Archives/Public/public-svg-implementors> a sioc:Space;
+    dcterms:identifier "public-svg-implementors" .
+
+<http://lists.w3.org/Archives/Public/public-svg-media-type> a sioc:Space;
+    dcterms:identifier "public-svg-media-type" .
+
+<http://lists.w3.org/Archives/Public/public-svg-print> a sioc:Space;
+    dcterms:identifier "public-svg-print" .
+
+<http://lists.w3.org/Archives/Public/public-svg-wg> a sioc:Space;
+    dcterms:identifier "public-svg-wg" .
+
+<http://lists.w3.org/Archives/Public/public-svgopentype> a sioc:Space;
+    dcterms:identifier "public-svgopentype" .
+
+<http://lists.w3.org/Archives/Public/public-svgopentype-contrib> a sioc:Space;
+    dcterms:identifier "public-svgopentype-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-sw-meaning> a sioc:Space;
+    dcterms:identifier "public-sw-meaning" .
+
+<http://lists.w3.org/Archives/Public/public-swbp-wg> a sioc:Space;
+    dcterms:identifier "public-swbp-wg" .
+
+<http://lists.w3.org/Archives/Public/public-swd-wg> a sioc:Space;
+    dcterms:identifier "public-swd-wg" .
+
+<http://lists.w3.org/Archives/Public/public-sweo-ig> a sioc:Space;
+    dcterms:identifier "public-sweo-ig" .
+
+<http://lists.w3.org/Archives/Public/public-swls-ws> a sioc:Space;
+    dcterms:identifier "public-swls-ws" .
+
+<http://lists.w3.org/Archives/Public/public-sws-ig> a sioc:Space;
+    dcterms:identifier "public-sws-ig" .
+
+<http://lists.w3.org/Archives/Public/public-sysapps> a sioc:Space;
+    dcterms:identifier "public-sysapps" .
+
+<http://lists.w3.org/Archives/Public/public-tag-announce> a sioc:Space;
+    dcterms:identifier "public-tag-announce" .
+
+<http://lists.w3.org/Archives/Public/public-te-pag> a sioc:Space;
+    dcterms:identifier "public-te-pag" .
+
+<http://lists.w3.org/Archives/Public/public-test-infra> a sioc:Space;
+    dcterms:identifier "public-test-infra" .
+
+<http://lists.w3.org/Archives/Public/public-test2> a sioc:Space;
+    dcterms:identifier "public-test2" .
+
+<http://lists.w3.org/Archives/Public/public-test2-contrib> a sioc:Space;
+    dcterms:identifier "public-test2-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-test20111026> a sioc:Space;
+    dcterms:identifier "public-test20111026" .
+
+<http://lists.w3.org/Archives/Public/public-test20111026-contrib> a sioc:Space;
+    dcterms:identifier "public-test20111026-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-testgroup201203> a sioc:Space;
+    dcterms:identifier "public-testgroup201203" .
+
+<http://lists.w3.org/Archives/Public/public-testgroup201203-contrib> a sioc:Space;
+    dcterms:identifier "public-testgroup201203-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-texttracks> a sioc:Space;
+    dcterms:identifier "public-texttracks" .
+
+<http://lists.w3.org/Archives/Public/public-texttracks-contrib> a sioc:Space;
+    dcterms:identifier "public-texttracks-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-timed-text> a sioc:Space;
+    dcterms:identifier "public-timed-text" .
+
+<http://lists.w3.org/Archives/Public/public-timed-text-contrib> a sioc:Space;
+    dcterms:identifier "public-timed-text-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-tracker-dev> a sioc:Space;
+    dcterms:identifier "public-tracker-dev" .
+
+<http://lists.w3.org/Archives/Public/public-tracking> a sioc:Space;
+    dcterms:identifier "public-tracking" .
+
+<http://lists.w3.org/Archives/Public/public-tracking-comments> a sioc:Space;
+    dcterms:identifier "public-tracking-comments" .
+
+<http://lists.w3.org/Archives/Public/public-tracking-commit> a sioc:Space;
+    dcterms:identifier "public-tracking-commit" .
+
+<http://lists.w3.org/Archives/Public/public-tracking-international> a sioc:Space;
+    dcterms:identifier "public-tracking-international" .
+
+<http://lists.w3.org/Archives/Public/public-tracking-lists> a sioc:Space;
+    dcterms:identifier "public-tracking-lists" .
+
+<http://lists.w3.org/Archives/Public/public-tt> a sioc:Space;
+    dcterms:identifier "public-tt" .
+
+<http://lists.w3.org/Archives/Public/public-uaag2-comments> a sioc:Space;
+    dcterms:identifier "public-uaag2-comments" .
+
+<http://lists.w3.org/Archives/Public/public-ubiweb> a sioc:Space;
+    dcterms:identifier "public-ubiweb" .
+
+<http://lists.w3.org/Archives/Public/public-unctsw> a sioc:Space;
+    dcterms:identifier "public-unctsw" .
+
+<http://lists.w3.org/Archives/Public/public-unctsw-contrib> a sioc:Space;
+    dcterms:identifier "public-unctsw-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-unhosted> a sioc:Space;
+    dcterms:identifier "public-unhosted" .
+
+<http://lists.w3.org/Archives/Public/public-unhosted-contrib> a sioc:Space;
+    dcterms:identifier "public-unhosted-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-unicorn> a sioc:Space;
+    dcterms:identifier "public-unicorn" .
+
+<http://lists.w3.org/Archives/Public/public-uri-cg> a sioc:Space;
+    dcterms:identifier "public-uri-cg" .
+
+<http://lists.w3.org/Archives/Public/public-usability-workshop> a sioc:Space;
+    dcterms:identifier "public-usability-workshop" .
+
+<http://lists.w3.org/Archives/Public/public-usable-authentication> a sioc:Space;
+    dcterms:identifier "public-usable-authentication" .
+
+<http://lists.w3.org/Archives/Public/public-userix> a sioc:Space;
+    dcterms:identifier "public-userix" .
+
+<http://lists.w3.org/Archives/Public/public-userix-contrib> a sioc:Space;
+    dcterms:identifier "public-userix-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-uwa> a sioc:Space;
+    dcterms:identifier "public-uwa" .
+
+<http://lists.w3.org/Archives/Public/public-video-comments> a sioc:Space;
+    dcterms:identifier "public-video-comments" .
+
+<http://lists.w3.org/Archives/Public/public-vision-core> a sioc:Space;
+    dcterms:identifier "public-vision-core" .
+
+<http://lists.w3.org/Archives/Public/public-vision-newstd> a sioc:Space;
+    dcterms:identifier "public-vision-newstd" .
+
+<http://lists.w3.org/Archives/Public/public-vivo> a sioc:Space;
+    dcterms:identifier "public-vivo" .
+
+<http://lists.w3.org/Archives/Public/public-vivo-contrib> a sioc:Space;
+    dcterms:identifier "public-vivo-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-vocabs> a sioc:Space;
+    dcterms:identifier "public-vocabs" .
+
+<http://lists.w3.org/Archives/Public/public-w3c-talk-china> a sioc:Space;
+    dcterms:identifier "public-w3c-talk-china" .
+
+<http://lists.w3.org/Archives/Public/public-w3id> a sioc:Space;
+    dcterms:identifier "public-w3id" .
+
+<http://lists.w3.org/Archives/Public/public-w3id-contrib> a sioc:Space;
+    dcterms:identifier "public-w3id-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-w3process> a sioc:Space;
+    dcterms:identifier "public-w3process" .
+
+<http://lists.w3.org/Archives/Public/public-w3process-contrib> a sioc:Space;
+    dcterms:identifier "public-w3process-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-wai-age> a sioc:Space;
+    dcterms:identifier "public-wai-age" .
+
+<http://lists.w3.org/Archives/Public/public-wai-engage> a sioc:Space;
+    dcterms:identifier "public-wai-engage" .
+
+<http://lists.w3.org/Archives/Public/public-wai-engage-contrib> a sioc:Space;
+    dcterms:identifier "public-wai-engage-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-wai-eo-badtf> a sioc:Space;
+    dcterms:identifier "public-wai-eo-badtf" .
+
+<http://lists.w3.org/Archives/Public/public-wai-eo-lexicon> a sioc:Space;
+    dcterms:identifier "public-wai-eo-lexicon" .
+
+<http://lists.w3.org/Archives/Public/public-wai-eo-site> a sioc:Space;
+    dcterms:identifier "public-wai-eo-site" .
+
+<http://lists.w3.org/Archives/Public/public-wai-eo-umtf> a sioc:Space;
+    dcterms:identifier "public-wai-eo-umtf" .
+
+<http://lists.w3.org/Archives/Public/public-wai-eo-wcag2tf> a sioc:Space;
+    dcterms:identifier "public-wai-eo-wcag2tf" .
+
+<http://lists.w3.org/Archives/Public/public-wai-ert> a sioc:Space;
+    dcterms:identifier "public-wai-ert" .
+
+<http://lists.w3.org/Archives/Public/public-wai-ert-tools> a sioc:Space;
+    dcterms:identifier "public-wai-ert-tools" .
+
+<http://lists.w3.org/Archives/Public/public-wai-ert-tsdtf> a sioc:Space;
+    dcterms:identifier "public-wai-ert-tsdtf" .
+
+<http://lists.w3.org/Archives/Public/public-wai-evaltf> a sioc:Space;
+    dcterms:identifier "public-wai-evaltf" .
+
+<http://lists.w3.org/Archives/Public/public-wai-rd> a sioc:Space;
+    dcterms:identifier "public-wai-rd" .
+
+<http://lists.w3.org/Archives/Public/public-wai-rd-comments> a sioc:Space;
+    dcterms:identifier "public-wai-rd-comments" .
+
+<http://lists.w3.org/Archives/Public/public-wai-rd-submission> a sioc:Space;
+    dcterms:identifier "public-wai-rd-submission" .
+
+<http://lists.w3.org/Archives/Public/public-wcag-em-comments> a sioc:Space;
+    dcterms:identifier "public-wcag-em-comments" .
+
+<http://lists.w3.org/Archives/Public/public-wcag-rapid-response> a sioc:Space;
+    dcterms:identifier "public-wcag-rapid-response" .
+
+<http://lists.w3.org/Archives/Public/public-wcag-teama> a sioc:Space;
+    dcterms:identifier "public-wcag-teama" .
+
+<http://lists.w3.org/Archives/Public/public-wcag-teamb> a sioc:Space;
+    dcterms:identifier "public-wcag-teamb" .
+
+<http://lists.w3.org/Archives/Public/public-wcag-teamc> a sioc:Space;
+    dcterms:identifier "public-wcag-teamc" .
+
+<http://lists.w3.org/Archives/Public/public-wcag2-techs> a sioc:Space;
+    dcterms:identifier "public-wcag2-techs" .
+
+<http://lists.w3.org/Archives/Public/public-wcag2ict-comments> a sioc:Space;
+    dcterms:identifier "public-wcag2ict-comments" .
+
+<http://lists.w3.org/Archives/Public/public-wcag2ict-tf> a sioc:Space;
+    dcterms:identifier "public-wcag2ict-tf" .
+
+<http://lists.w3.org/Archives/Public/public-web-and-tv> a sioc:Space;
+    dcterms:identifier "public-web-and-tv" .
+
+<http://lists.w3.org/Archives/Public/public-web-http-desc> a sioc:Space;
+    dcterms:identifier "public-web-http-desc" .
+
+<http://lists.w3.org/Archives/Public/public-web-intents> a sioc:Space;
+    dcterms:identifier "public-web-intents" .
+
+<http://lists.w3.org/Archives/Public/public-web-notification> a sioc:Space;
+    dcterms:identifier "public-web-notification" .
+
+<http://lists.w3.org/Archives/Public/public-web-payments> a sioc:Space;
+    dcterms:identifier "public-web-payments" .
+
+<http://lists.w3.org/Archives/Public/public-web-perf> a sioc:Space;
+    dcterms:identifier "public-web-perf" .
+
+<http://lists.w3.org/Archives/Public/public-web-perf-ig> a sioc:Space;
+    dcterms:identifier "public-web-perf-ig" .
+
+<http://lists.w3.org/Archives/Public/public-web-plugins> a sioc:Space;
+    dcterms:identifier "public-web-plugins" .
+
+<http://lists.w3.org/Archives/Public/public-web-security> a sioc:Space;
+    dcterms:identifier "public-web-security" .
+
+<http://lists.w3.org/Archives/Public/public-webandbroadcasting> a sioc:Space;
+    dcterms:identifier "public-webandbroadcasting" .
+
+<http://lists.w3.org/Archives/Public/public-webandbroadcasting-contrib> a sioc:Space;
+    dcterms:identifier "public-webandbroadcasting-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webapi> a sioc:Space;
+    dcterms:identifier "public-webapi" .
+
+<http://lists.w3.org/Archives/Public/public-webapps> a sioc:Space;
+    dcterms:identifier "public-webapps" .
+
+<http://lists.w3.org/Archives/Public/public-webapps-bugzilla> a sioc:Space;
+    dcterms:identifier "public-webapps-bugzilla" .
+
+<http://lists.w3.org/Archives/Public/public-webapps-cdf-discuss> a sioc:Space;
+    dcterms:identifier "public-webapps-cdf-discuss" .
+
+<http://lists.w3.org/Archives/Public/public-webapps-testsuite> a sioc:Space;
+    dcterms:identifier "public-webapps-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-webapps-ui> a sioc:Space;
+    dcterms:identifier "public-webapps-ui" .
+
+<http://lists.w3.org/Archives/Public/public-webapps-ui-contrib> a sioc:Space;
+    dcterms:identifier "public-webapps-ui-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webappsec> a sioc:Space;
+    dcterms:identifier "public-webappsec" .
+
+<http://lists.w3.org/Archives/Public/public-webappsec-testsuite> a sioc:Space;
+    dcterms:identifier "public-webappsec-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-webappstore> a sioc:Space;
+    dcterms:identifier "public-webappstore" .
+
+<http://lists.w3.org/Archives/Public/public-webappstore-contrib> a sioc:Space;
+    dcterms:identifier "public-webappstore-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webarch-comments> a sioc:Space;
+    dcterms:identifier "public-webarch-comments" .
+
+<http://lists.w3.org/Archives/Public/public-webcgm> a sioc:Space;
+    dcterms:identifier "public-webcgm" .
+
+<http://lists.w3.org/Archives/Public/public-webcgm-wg> a sioc:Space;
+    dcterms:identifier "public-webcgm-wg" .
+
+<http://lists.w3.org/Archives/Public/public-webcrypto> a sioc:Space;
+    dcterms:identifier "public-webcrypto" .
+
+<http://lists.w3.org/Archives/Public/public-webcrypto-comments> a sioc:Space;
+    dcterms:identifier "public-webcrypto-comments" .
+
+<http://lists.w3.org/Archives/Public/public-webcryptoapi> a sioc:Space;
+    dcterms:identifier "public-webcryptoapi" .
+
+<http://lists.w3.org/Archives/Public/public-webcryptoapi-contrib> a sioc:Space;
+    dcterms:identifier "public-webcryptoapi-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webdev-docs> a sioc:Space;
+    dcterms:identifier "public-webdev-docs" .
+
+<http://lists.w3.org/Archives/Public/public-webed> a sioc:Space;
+    dcterms:identifier "public-webed" .
+
+<http://lists.w3.org/Archives/Public/public-webed-contrib> a sioc:Space;
+    dcterms:identifier "public-webed-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webed-jp> a sioc:Space;
+    dcterms:identifier "public-webed-jp" .
+
+<http://lists.w3.org/Archives/Public/public-webed-tk> a sioc:Space;
+    dcterms:identifier "public-webed-tk" .
+
+<http://lists.w3.org/Archives/Public/public-webevents> a sioc:Space;
+    dcterms:identifier "public-webevents" .
+
+<http://lists.w3.org/Archives/Public/public-webfonts-wg> a sioc:Space;
+    dcterms:identifier "public-webfonts-wg" .
+
+<http://lists.w3.org/Archives/Public/public-webhistory> a sioc:Space;
+    dcterms:identifier "public-webhistory" .
+
+<http://lists.w3.org/Archives/Public/public-webhistory-contrib> a sioc:Space;
+    dcterms:identifier "public-webhistory-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webid> a sioc:Space;
+    dcterms:identifier "public-webid" .
+
+<http://lists.w3.org/Archives/Public/public-webid-contrib> a sioc:Space;
+    dcterms:identifier "public-webid-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webobservatory> a sioc:Space;
+    dcterms:identifier "public-webobservatory" .
+
+<http://lists.w3.org/Archives/Public/public-webobservatory-contrib> a sioc:Space;
+    dcterms:identifier "public-webobservatory-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webont-comments> a sioc:Space;
+    dcterms:identifier "public-webont-comments" .
+
+<http://lists.w3.org/Archives/Public/public-webpayments> a sioc:Space;
+    dcterms:identifier "public-webpayments" .
+
+<http://lists.w3.org/Archives/Public/public-webpayments-contrib> a sioc:Space;
+    dcterms:identifier "public-webpayments-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webprotoenergy> a sioc:Space;
+    dcterms:identifier "public-webprotoenergy" .
+
+<http://lists.w3.org/Archives/Public/public-webprotoenergy-contrib> a sioc:Space;
+    dcterms:identifier "public-webprotoenergy-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webrtc> a sioc:Space;
+    dcterms:identifier "public-webrtc" .
+
+<http://lists.w3.org/Archives/Public/public-webrtc-testsuite> a sioc:Space;
+    dcterms:identifier "public-webrtc-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-websignage> a sioc:Space;
+    dcterms:identifier "public-websignage" .
+
+<http://lists.w3.org/Archives/Public/public-websignage-contrib> a sioc:Space;
+    dcterms:identifier "public-websignage-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webskillprofiles> a sioc:Space;
+    dcterms:identifier "public-webskillprofiles" .
+
+<http://lists.w3.org/Archives/Public/public-webskillprofiles-contrib> a sioc:Space;
+    dcterms:identifier "public-webskillprofiles-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-webtv> a sioc:Space;
+    dcterms:identifier "public-webtv" .
+
+<http://lists.w3.org/Archives/Public/public-webtvmoderator> a sioc:Space;
+    dcterms:identifier "public-webtvmoderator" .
+
+<http://lists.w3.org/Archives/Public/public-webtvws-presenters> a sioc:Space;
+    dcterms:identifier "public-webtvws-presenters" .
+
+<http://lists.w3.org/Archives/Public/public-whatwg> a sioc:Space;
+    dcterms:identifier "public-whatwg" .
+
+<http://lists.w3.org/Archives/Public/public-whatwg-archive> a sioc:Space;
+    dcterms:identifier "public-whatwg-archive" .
+
+<http://lists.w3.org/Archives/Public/public-whatwg-contrib> a sioc:Space;
+    dcterms:identifier "public-whatwg-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-widgets-pag> a sioc:Space;
+    dcterms:identifier "public-widgets-pag" .
+
+<http://lists.w3.org/Archives/Public/public-wiki-dev> a sioc:Space;
+    dcterms:identifier "public-wiki-dev" .
+
+<http://lists.w3.org/Archives/Public/public-ws-addressing> a sioc:Space;
+    dcterms:identifier "public-ws-addressing" .
+
+<http://lists.w3.org/Archives/Public/public-ws-addressing-comments> a sioc:Space;
+    dcterms:identifier "public-ws-addressing-comments" .
+
+<http://lists.w3.org/Archives/Public/public-ws-addressing-eds> a sioc:Space;
+    dcterms:identifier "public-ws-addressing-eds" .
+
+<http://lists.w3.org/Archives/Public/public-ws-addressing-tests> a sioc:Space;
+    dcterms:identifier "public-ws-addressing-tests" .
+
+<http://lists.w3.org/Archives/Public/public-ws-async-tf> a sioc:Space;
+    dcterms:identifier "public-ws-async-tf" .
+
+<http://lists.w3.org/Archives/Public/public-ws-chor> a sioc:Space;
+    dcterms:identifier "public-ws-chor" .
+
+<http://lists.w3.org/Archives/Public/public-ws-chor-comments> a sioc:Space;
+    dcterms:identifier "public-ws-chor-comments" .
+
+<http://lists.w3.org/Archives/Public/public-ws-chor-editors> a sioc:Space;
+    dcterms:identifier "public-ws-chor-editors" .
+
+<http://lists.w3.org/Archives/Public/public-ws-desc-comments> a sioc:Space;
+    dcterms:identifier "public-ws-desc-comments" .
+
+<http://lists.w3.org/Archives/Public/public-ws-desc-eds> a sioc:Space;
+    dcterms:identifier "public-ws-desc-eds" .
+
+<http://lists.w3.org/Archives/Public/public-ws-desc-meps> a sioc:Space;
+    dcterms:identifier "public-ws-desc-meps" .
+
+<http://lists.w3.org/Archives/Public/public-ws-desc-qa> a sioc:Space;
+    dcterms:identifier "public-ws-desc-qa" .
+
+<http://lists.w3.org/Archives/Public/public-ws-desc-state> a sioc:Space;
+    dcterms:identifier "public-ws-desc-state" .
+
+<http://lists.w3.org/Archives/Public/public-ws-media-types> a sioc:Space;
+    dcterms:identifier "public-ws-media-types" .
+
+<http://lists.w3.org/Archives/Public/public-ws-pnf-tf> a sioc:Space;
+    dcterms:identifier "public-ws-pnf-tf" .
+
+<http://lists.w3.org/Archives/Public/public-ws-policy> a sioc:Space;
+    dcterms:identifier "public-ws-policy" .
+
+<http://lists.w3.org/Archives/Public/public-ws-policy-comments> a sioc:Space;
+    dcterms:identifier "public-ws-policy-comments" .
+
+<http://lists.w3.org/Archives/Public/public-ws-policy-eds> a sioc:Space;
+    dcterms:identifier "public-ws-policy-eds" .
+
+<http://lists.w3.org/Archives/Public/public-ws-policy-interop> a sioc:Space;
+    dcterms:identifier "public-ws-policy-interop" .
+
+<http://lists.w3.org/Archives/Public/public-ws-policy-qa> a sioc:Space;
+    dcterms:identifier "public-ws-policy-qa" .
+
+<http://lists.w3.org/Archives/Public/public-ws-resource-access> a sioc:Space;
+    dcterms:identifier "public-ws-resource-access" .
+
+<http://lists.w3.org/Archives/Public/public-ws-resource-access-comments> a sioc:Space;
+    dcterms:identifier "public-ws-resource-access-comments" .
+
+<http://lists.w3.org/Archives/Public/public-ws-resource-access-editors> a sioc:Space;
+    dcterms:identifier "public-ws-resource-access-editors" .
+
+<http://lists.w3.org/Archives/Public/public-ws-resource-access-notifications> a sioc:Space;
+    dcterms:identifier "public-ws-resource-access-notifications" .
+
+<http://lists.w3.org/Archives/Public/public-ws-semann> a sioc:Space;
+    dcterms:identifier "public-ws-semann" .
+
+<http://lists.w3.org/Archives/Public/public-ws-semann-comments> a sioc:Space;
+    dcterms:identifier "public-ws-semann-comments" .
+
+<http://lists.w3.org/Archives/Public/public-wsa-refact> a sioc:Space;
+    dcterms:identifier "public-wsa-refact" .
+
+<http://lists.w3.org/Archives/Public/public-wsawg-gloss> a sioc:Space;
+    dcterms:identifier "public-wsawg-gloss" .
+
+<http://lists.w3.org/Archives/Public/public-wsawg-mtf> a sioc:Space;
+    dcterms:identifier "public-wsawg-mtf" .
+
+<http://lists.w3.org/Archives/Public/public-wsawg-security-tf> a sioc:Space;
+    dcterms:identifier "public-wsawg-security-tf" .
+
+<http://lists.w3.org/Archives/Public/public-wsc-wg> a sioc:Space;
+    dcterms:identifier "public-wsc-wg" .
+
+<http://lists.w3.org/Archives/Public/public-wsec> a sioc:Space;
+    dcterms:identifier "public-wsec" .
+
+<http://lists.w3.org/Archives/Public/public-xforms> a sioc:Space;
+    dcterms:identifier "public-xforms" .
+
+<http://lists.w3.org/Archives/Public/public-xformsusers> a sioc:Space;
+    dcterms:identifier "public-xformsusers" .
+
+<http://lists.w3.org/Archives/Public/public-xformsusers-contrib> a sioc:Space;
+    dcterms:identifier "public-xformsusers-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-xg-app-backplane> a sioc:Space;
+    dcterms:identifier "public-xg-app-backplane" .
+
+<http://lists.w3.org/Archives/Public/public-xg-audio> a sioc:Space;
+    dcterms:identifier "public-xg-audio" .
+
+<http://lists.w3.org/Archives/Public/public-xg-cwl> a sioc:Space;
+    dcterms:identifier "public-xg-cwl" .
+
+<http://lists.w3.org/Archives/Public/public-xg-cwl-ei> a sioc:Space;
+    dcterms:identifier "public-xg-cwl-ei" .
+
+<http://lists.w3.org/Archives/Public/public-xg-decision> a sioc:Space;
+    dcterms:identifier "public-xg-decision" .
+
+<http://lists.w3.org/Archives/Public/public-xg-eiif> a sioc:Space;
+    dcterms:identifier "public-xg-eiif" .
+
+<http://lists.w3.org/Archives/Public/public-xg-emotion> a sioc:Space;
+    dcterms:identifier "public-xg-emotion" .
+
+<http://lists.w3.org/Archives/Public/public-xg-federatedsocialweb> a sioc:Space;
+    dcterms:identifier "public-xg-federatedsocialweb" .
+
+<http://lists.w3.org/Archives/Public/public-xg-geo> a sioc:Space;
+    dcterms:identifier "public-xg-geo" .
+
+<http://lists.w3.org/Archives/Public/public-xg-htmlspeech> a sioc:Space;
+    dcterms:identifier "public-xg-htmlspeech" .
+
+<http://lists.w3.org/Archives/Public/public-xg-lld> a sioc:Space;
+    dcterms:identifier "public-xg-lld" .
+
+<http://lists.w3.org/Archives/Public/public-xg-mami> a sioc:Space;
+    dcterms:identifier "public-xg-mami" .
+
+<http://lists.w3.org/Archives/Public/public-xg-mashssl> a sioc:Space;
+    dcterms:identifier "public-xg-mashssl" .
+
+<http://lists.w3.org/Archives/Public/public-xg-mmsem> a sioc:Space;
+    dcterms:identifier "public-xg-mmsem" .
+
+<http://lists.w3.org/Archives/Public/public-xg-model-based-ui> a sioc:Space;
+    dcterms:identifier "public-xg-model-based-ui" .
+
+<http://lists.w3.org/Archives/Public/public-xg-omm> a sioc:Space;
+    dcterms:identifier "public-xg-omm" .
+
+<http://lists.w3.org/Archives/Public/public-xg-owea> a sioc:Space;
+    dcterms:identifier "public-xg-owea" .
+
+<http://lists.w3.org/Archives/Public/public-xg-prov> a sioc:Space;
+    dcterms:identifier "public-xg-prov" .
+
+<http://lists.w3.org/Archives/Public/public-xg-rdb2rdf> a sioc:Space;
+    dcterms:identifier "public-xg-rdb2rdf" .
+
+<http://lists.w3.org/Archives/Public/public-xg-socialweb> a sioc:Space;
+    dcterms:identifier "public-xg-socialweb" .
+
+<http://lists.w3.org/Archives/Public/public-xg-ssn> a sioc:Space;
+    dcterms:identifier "public-xg-ssn" .
+
+<http://lists.w3.org/Archives/Public/public-xg-swsc> a sioc:Space;
+    dcterms:identifier "public-xg-swsc" .
+
+<http://lists.w3.org/Archives/Public/public-xg-urw3> a sioc:Space;
+    dcterms:identifier "public-xg-urw3" .
+
+<http://lists.w3.org/Archives/Public/public-xg-usdl> a sioc:Space;
+    dcterms:identifier "public-xg-usdl" .
+
+<http://lists.w3.org/Archives/Public/public-xg-w3pm> a sioc:Space;
+    dcterms:identifier "public-xg-w3pm" .
+
+<http://lists.w3.org/Archives/Public/public-xg-wcl> a sioc:Space;
+    dcterms:identifier "public-xg-wcl" .
+
+<http://lists.w3.org/Archives/Public/public-xg-webid> a sioc:Space;
+    dcterms:identifier "public-xg-webid" .
+
+<http://lists.w3.org/Archives/Public/public-xhtml2> a sioc:Space;
+    dcterms:identifier "public-xhtml2" .
+
+<http://lists.w3.org/Archives/Public/public-xkms-comments> a sioc:Space;
+    dcterms:identifier "public-xkms-comments" .
+
+<http://lists.w3.org/Archives/Public/public-xml-binary> a sioc:Space;
+    dcterms:identifier "public-xml-binary" .
+
+<http://lists.w3.org/Archives/Public/public-xml-binary-comments> a sioc:Space;
+    dcterms:identifier "public-xml-binary-comments" .
+
+<http://lists.w3.org/Archives/Public/public-xml-core-wg> a sioc:Space;
+    dcterms:identifier "public-xml-core-wg" .
+
+<http://lists.w3.org/Archives/Public/public-xml-er> a sioc:Space;
+    dcterms:identifier "public-xml-er" .
+
+<http://lists.w3.org/Archives/Public/public-xml-er-contrib> a sioc:Space;
+    dcterms:identifier "public-xml-er-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-xml-id> a sioc:Space;
+    dcterms:identifier "public-xml-id" .
+
+<http://lists.w3.org/Archives/Public/public-xml-processing-model-comments> a sioc:Space;
+    dcterms:identifier "public-xml-processing-model-comments" .
+
+<http://lists.w3.org/Archives/Public/public-xml-processing-model-wg> a sioc:Space;
+    dcterms:identifier "public-xml-processing-model-wg" .
+
+<http://lists.w3.org/Archives/Public/public-xml-schema-testsuite> a sioc:Space;
+    dcterms:identifier "public-xml-schema-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-xml-schema-testsuite-submit> a sioc:Space;
+    dcterms:identifier "public-xml-schema-testsuite-submit" .
+
+<http://lists.w3.org/Archives/Public/public-xml-testsuite> a sioc:Space;
+    dcterms:identifier "public-xml-testsuite" .
+
+<http://lists.w3.org/Archives/Public/public-xml-versioning> a sioc:Space;
+    dcterms:identifier "public-xml-versioning" .
+
+<http://lists.w3.org/Archives/Public/public-xmlhypermedia> a sioc:Space;
+    dcterms:identifier "public-xmlhypermedia" .
+
+<http://lists.w3.org/Archives/Public/public-xmlhypermedia-contrib> a sioc:Space;
+    dcterms:identifier "public-xmlhypermedia-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-xmlperf> a sioc:Space;
+    dcterms:identifier "public-xmlperf" .
+
+<http://lists.w3.org/Archives/Public/public-xmlperf-contrib> a sioc:Space;
+    dcterms:identifier "public-xmlperf-contrib" .
+
+<http://lists.w3.org/Archives/Public/public-xmlsec> a sioc:Space;
+    dcterms:identifier "public-xmlsec" .
+
+<http://lists.w3.org/Archives/Public/public-xmlsec-comments> a sioc:Space;
+    dcterms:identifier "public-xmlsec-comments" .
+
+<http://lists.w3.org/Archives/Public/public-xmlsec-discuss> a sioc:Space;
+    dcterms:identifier "public-xmlsec-discuss" .
+
+<http://lists.w3.org/Archives/Public/public-xmlsec-maintwg> a sioc:Space;
+    dcterms:identifier "public-xmlsec-maintwg" .
+
+<http://lists.w3.org/Archives/Public/public-xpointer-registry> a sioc:Space;
+    dcterms:identifier "public-xpointer-registry" .
+
+<http://lists.w3.org/Archives/Public/public-xqts-comments> a sioc:Space;
+    dcterms:identifier "public-xqts-comments" .
+
+<http://lists.w3.org/Archives/Public/public-xsd-databinding> a sioc:Space;
+    dcterms:identifier "public-xsd-databinding" .
+
+<http://lists.w3.org/Archives/Public/public-xsd-databinding-comments> a sioc:Space;
+    dcterms:identifier "public-xsd-databinding-comments" .
+
+<http://lists.w3.org/Archives/Public/semantic-web> a sioc:Space;
+    dcterms:identifier "semantic-web" .
+
+<http://lists.w3.org/Archives/Public/sig> a sioc:Space;
+    dcterms:identifier "sig" .
+
+<http://lists.w3.org/Archives/Public/site-comments> a sioc:Space;
+    dcterms:identifier "site-comments" .
+
+<http://lists.w3.org/Archives/Public/smil-editors> a sioc:Space;
+    dcterms:identifier "smil-editors" .
+
+<http://lists.w3.org/Archives/Public/spec-prod> a sioc:Space;
+    dcterms:identifier "spec-prod" .
+
+<http://lists.w3.org/Archives/Public/svg-testsuite-comments> a sioc:Space;
+    dcterms:identifier "svg-testsuite-comments" .
+
+<http://lists.w3.org/Archives/Public/sw99> a sioc:Space;
+    dcterms:identifier "sw99" .
+
+<http://lists.w3.org/Archives/Public/tls-draft> a sioc:Space;
+    dcterms:identifier "tls-draft" .
+
+<http://lists.w3.org/Archives/Public/uri> a sioc:Space;
+    dcterms:identifier "uri" .
+
+<http://lists.w3.org/Archives/Public/w3c-announce> a sioc:Space;
+    dcterms:identifier "w3c-announce" .
+
+<http://lists.w3.org/Archives/Public/w3c-dist-auth> a sioc:Space;
+    dcterms:identifier "w3c-dist-auth" .
+
+<http://lists.w3.org/Archives/Public/w3c-formal-assertion-testbed> a sioc:Space;
+    dcterms:identifier "w3c-formal-assertion-testbed" .
+
+<http://lists.w3.org/Archives/Public/w3c-ietf-xmldsig> a sioc:Space;
+    dcterms:identifier "w3c-ietf-xmldsig" .
+
+<http://lists.w3.org/Archives/Public/w3c-keio-info> a sioc:Space;
+    dcterms:identifier "w3c-keio-info" .
+
+<http://lists.w3.org/Archives/Public/w3c-math-erb> a sioc:Space;
+    dcterms:identifier "w3c-math-erb" .
+
+<http://lists.w3.org/Archives/Public/w3c-news> a sioc:Space;
+    dcterms:identifier "w3c-news" .
+
+<http://lists.w3.org/Archives/Public/w3c-news-asia> a sioc:Space;
+    dcterms:identifier "w3c-news-asia" .
+
+<http://lists.w3.org/Archives/Public/w3c-press> a sioc:Space;
+    dcterms:identifier "w3c-press" .
+
+<http://lists.w3.org/Archives/Public/w3c-rdfcore-wg> a sioc:Space;
+    dcterms:identifier "w3c-rdfcore-wg" .
+
+<http://lists.w3.org/Archives/Public/w3c-sgml-wg> a sioc:Space;
+    dcterms:identifier "w3c-sgml-wg" .
+
+<http://lists.w3.org/Archives/Public/w3c-translators> a sioc:Space;
+    dcterms:identifier "w3c-translators" .
+
+<http://lists.w3.org/Archives/Public/w3c-translators-fr> a sioc:Space;
+    dcterms:identifier "w3c-translators-fr" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-au> a sioc:Space;
+    dcterms:identifier "w3c-wai-au" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-bulletin> a sioc:Space;
+    dcterms:identifier "w3c-wai-bulletin" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-curric> a sioc:Space;
+    dcterms:identifier "w3c-wai-curric" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-eo> a sioc:Space;
+    dcterms:identifier "w3c-wai-eo" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-er-ig> a sioc:Space;
+    dcterms:identifier "w3c-wai-er-ig" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-er-wg> a sioc:Space;
+    dcterms:identifier "w3c-wai-er-wg" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-gl> a sioc:Space;
+    dcterms:identifier "w3c-wai-gl" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-hc> a sioc:Space;
+    dcterms:identifier "w3c-wai-hc" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-ig> a sioc:Space;
+    dcterms:identifier "w3c-wai-ig" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-rc> a sioc:Space;
+    dcterms:identifier "w3c-wai-rc" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-ua> a sioc:Space;
+    dcterms:identifier "w3c-wai-ua" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-ui> a sioc:Space;
+    dcterms:identifier "w3c-wai-ui" .
+
+<http://lists.w3.org/Archives/Public/w3c-wai-wg> a sioc:Space;
+    dcterms:identifier "w3c-wai-wg" .
+
+<http://lists.w3.org/Archives/Public/w3c-xml-sig-ws> a sioc:Space;
+    dcterms:identifier "w3c-xml-sig-ws" .
+
+<http://lists.w3.org/Archives/Public/wai-eo-editors> a sioc:Space;
+    dcterms:identifier "wai-eo-editors" .
+
+<http://lists.w3.org/Archives/Public/wai-events> a sioc:Space;
+    dcterms:identifier "wai-events" .
+
+<http://lists.w3.org/Archives/Public/wai-report> a sioc:Space;
+    dcterms:identifier "wai-report" .
+
+<http://lists.w3.org/Archives/Public/wai-report-bounces> a sioc:Space;
+    dcterms:identifier "wai-report-bounces" .
+
+<http://lists.w3.org/Archives/Public/wai-report-db> a sioc:Space;
+    dcterms:identifier "wai-report-db" .
+
+<http://lists.w3.org/Archives/Public/wai-site-comments> a sioc:Space;
+    dcterms:identifier "wai-site-comments" .
+
+<http://lists.w3.org/Archives/Public/wai-tech-comments> a sioc:Space;
+    dcterms:identifier "wai-tech-comments" .
+
+<http://lists.w3.org/Archives/Public/wai-uaag-editor> a sioc:Space;
+    dcterms:identifier "wai-uaag-editor" .
+
+<http://lists.w3.org/Archives/Public/wai-wcag-editor> a sioc:Space;
+    dcterms:identifier "wai-wcag-editor" .
+
+<http://lists.w3.org/Archives/Public/wai-xtech> a sioc:Space;
+    dcterms:identifier "wai-xtech" .
+
+<http://lists.w3.org/Archives/Public/web-access> a sioc:Space;
+    dcterms:identifier "web-access" .
+
+<http://lists.w3.org/Archives/Public/www-amaya> a sioc:Space;
+    dcterms:identifier "www-amaya" .
+
+<http://lists.w3.org/Archives/Public/www-amaya-dev> a sioc:Space;
+    dcterms:identifier "www-amaya-dev" .
+
+<http://lists.w3.org/Archives/Public/www-amaya-developers> a sioc:Space;
+    dcterms:identifier "www-amaya-developers" .
+
+<http://lists.w3.org/Archives/Public/www-amaya-doc> a sioc:Space;
+    dcterms:identifier "www-amaya-doc" .
+
+<http://lists.w3.org/Archives/Public/www-annotation> a sioc:Space;
+    dcterms:identifier "www-annotation" .
+
+<http://lists.w3.org/Archives/Public/www-announce> a sioc:Space;
+    dcterms:identifier "www-announce" .
+
+<http://lists.w3.org/Archives/Public/www-archive> a sioc:Space;
+    dcterms:identifier "www-archive" .
+
+<http://lists.w3.org/Archives/Public/www-ccpp-protocol> a sioc:Space;
+    dcterms:identifier "www-ccpp-protocol" .
+
+<http://lists.w3.org/Archives/Public/www-collaboration> a sioc:Space;
+    dcterms:identifier "www-collaboration" .
+
+<http://lists.w3.org/Archives/Public/www-component-extension> a sioc:Space;
+    dcterms:identifier "www-component-extension" .
+
+<http://lists.w3.org/Archives/Public/www-demographics> a sioc:Space;
+    dcterms:identifier "www-demographics" .
+
+<http://lists.w3.org/Archives/Public/www-di> a sioc:Space;
+    dcterms:identifier "www-di" .
+
+<http://lists.w3.org/Archives/Public/www-disw> a sioc:Space;
+    dcterms:identifier "www-disw" .
+
+<http://lists.w3.org/Archives/Public/www-dom> a sioc:Space;
+    dcterms:identifier "www-dom" .
+
+<http://lists.w3.org/Archives/Public/www-dom-ts> a sioc:Space;
+    dcterms:identifier "www-dom-ts" .
+
+<http://lists.w3.org/Archives/Public/www-dom-ts-submission> a sioc:Space;
+    dcterms:identifier "www-dom-ts-submission" .
+
+<http://lists.w3.org/Archives/Public/www-dom-xpath> a sioc:Space;
+    dcterms:identifier "www-dom-xpath" .
+
+<http://lists.w3.org/Archives/Public/www-drm> a sioc:Space;
+    dcterms:identifier "www-drm" .
+
+<http://lists.w3.org/Archives/Public/www-email-announce> a sioc:Space;
+    dcterms:identifier "www-email-announce" .
+
+<http://lists.w3.org/Archives/Public/www-email-discuss> a sioc:Space;
+    dcterms:identifier "www-email-discuss" .
+
+<http://lists.w3.org/Archives/Public/www-eta> a sioc:Space;
+    dcterms:identifier "www-eta" .
+
+<http://lists.w3.org/Archives/Public/www-font> a sioc:Space;
+    dcterms:identifier "www-font" .
+
+<http://lists.w3.org/Archives/Public/www-forms> a sioc:Space;
+    dcterms:identifier "www-forms" .
+
+<http://lists.w3.org/Archives/Public/www-forms-editor> a sioc:Space;
+    dcterms:identifier "www-forms-editor" .
+
+<http://lists.w3.org/Archives/Public/www-history> a sioc:Space;
+    dcterms:identifier "www-history" .
+
+<http://lists.w3.org/Archives/Public/www-html> a sioc:Space;
+    dcterms:identifier "www-html" .
+
+<http://lists.w3.org/Archives/Public/www-html-editor> a sioc:Space;
+    dcterms:identifier "www-html-editor" .
+
+<http://lists.w3.org/Archives/Public/www-html-testsuite> a sioc:Space;
+    dcterms:identifier "www-html-testsuite" .
+
+<http://lists.w3.org/Archives/Public/www-http-ng-comments> a sioc:Space;
+    dcterms:identifier "www-http-ng-comments" .
+
+<http://lists.w3.org/Archives/Public/www-i18n-comments> a sioc:Space;
+    dcterms:identifier "www-i18n-comments" .
+
+<http://lists.w3.org/Archives/Public/www-i18n-workshop> a sioc:Space;
+    dcterms:identifier "www-i18n-workshop" .
+
+<http://lists.w3.org/Archives/Public/www-international> a sioc:Space;
+    dcterms:identifier "www-international" .
+
+<http://lists.w3.org/Archives/Public/www-isaviz> a sioc:Space;
+    dcterms:identifier "www-isaviz" .
+
+<http://lists.w3.org/Archives/Public/www-jigsaw> a sioc:Space;
+    dcterms:identifier "www-jigsaw" .
+
+<http://lists.w3.org/Archives/Public/www-lib> a sioc:Space;
+    dcterms:identifier "www-lib" .
+
+<http://lists.w3.org/Archives/Public/www-lib-bugs> a sioc:Space;
+    dcterms:identifier "www-lib-bugs" .
+
+<http://lists.w3.org/Archives/Public/www-lib-survey> a sioc:Space;
+    dcterms:identifier "www-lib-survey" .
+
+<http://lists.w3.org/Archives/Public/www-logging> a sioc:Space;
+    dcterms:identifier "www-logging" .
+
+<http://lists.w3.org/Archives/Public/www-math> a sioc:Space;
+    dcterms:identifier "www-math" .
+
+<http://lists.w3.org/Archives/Public/www-micropay-comments> a sioc:Space;
+    dcterms:identifier "www-micropay-comments" .
+
+<http://lists.w3.org/Archives/Public/www-mobile> a sioc:Space;
+    dcterms:identifier "www-mobile" .
+
+<http://lists.w3.org/Archives/Public/www-multicast> a sioc:Space;
+    dcterms:identifier "www-multicast" .
+
+<http://lists.w3.org/Archives/Public/www-multimedia> a sioc:Space;
+    dcterms:identifier "www-multimedia" .
+
+<http://lists.w3.org/Archives/Public/www-multimodal> a sioc:Space;
+    dcterms:identifier "www-multimodal" .
+
+<http://lists.w3.org/Archives/Public/www-next> a sioc:Space;
+    dcterms:identifier "www-next" .
+
+<http://lists.w3.org/Archives/Public/www-p3p-dev> a sioc:Space;
+    dcterms:identifier "www-p3p-dev" .
+
+<http://lists.w3.org/Archives/Public/www-p3p-interop> a sioc:Space;
+    dcterms:identifier "www-p3p-interop" .
+
+<http://lists.w3.org/Archives/Public/www-p3p-policy> a sioc:Space;
+    dcterms:identifier "www-p3p-policy" .
+
+<http://lists.w3.org/Archives/Public/www-p3p-public-comments> a sioc:Space;
+    dcterms:identifier "www-p3p-public-comments" .
+
+<http://lists.w3.org/Archives/Public/www-patentpolicy-comment> a sioc:Space;
+    dcterms:identifier "www-patentpolicy-comment" .
+
+<http://lists.w3.org/Archives/Public/www-printing> a sioc:Space;
+    dcterms:identifier "www-printing" .
+
+<http://lists.w3.org/Archives/Public/www-privacy-evaluator> a sioc:Space;
+    dcterms:identifier "www-privacy-evaluator" .
+
+<http://lists.w3.org/Archives/Public/www-proxy> a sioc:Space;
+    dcterms:identifier "www-proxy" .
+
+<http://lists.w3.org/Archives/Public/www-publications> a sioc:Space;
+    dcterms:identifier "www-publications" .
+
+<http://lists.w3.org/Archives/Public/www-push> a sioc:Space;
+    dcterms:identifier "www-push" .
+
+<http://lists.w3.org/Archives/Public/www-qa> a sioc:Space;
+    dcterms:identifier "www-qa" .
+
+<http://lists.w3.org/Archives/Public/www-qa-wg> a sioc:Space;
+    dcterms:identifier "www-qa-wg" .
+
+<http://lists.w3.org/Archives/Public/www-ql> a sioc:Space;
+    dcterms:identifier "www-ql" .
+
+<http://lists.w3.org/Archives/Public/www-rdb> a sioc:Space;
+    dcterms:identifier "www-rdb" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-calendar> a sioc:Space;
+    dcterms:identifier "www-rdf-calendar" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-comments> a sioc:Space;
+    dcterms:identifier "www-rdf-comments" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-config> a sioc:Space;
+    dcterms:identifier "www-rdf-config" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-dspace> a sioc:Space;
+    dcterms:identifier "www-rdf-dspace" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-interest> a sioc:Space;
+    dcterms:identifier "www-rdf-interest" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-logic> a sioc:Space;
+    dcterms:identifier "www-rdf-logic" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-perllib> a sioc:Space;
+    dcterms:identifier "www-rdf-perllib" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-rules> a sioc:Space;
+    dcterms:identifier "www-rdf-rules" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-specs> a sioc:Space;
+    dcterms:identifier "www-rdf-specs" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-validator> a sioc:Space;
+    dcterms:identifier "www-rdf-validator" .
+
+<http://lists.w3.org/Archives/Public/www-rdf-z3950> a sioc:Space;
+    dcterms:identifier "www-rdf-z3950" .
+
+<http://lists.w3.org/Archives/Public/www-servers> a sioc:Space;
+    dcterms:identifier "www-servers" .
+
+<http://lists.w3.org/Archives/Public/www-smil> a sioc:Space;
+    dcterms:identifier "www-smil" .
+
+<http://lists.w3.org/Archives/Public/www-speech> a sioc:Space;
+    dcterms:identifier "www-speech" .
+
+<http://lists.w3.org/Archives/Public/www-style> a sioc:Space;
+    dcterms:identifier "www-style" .
+
+<http://lists.w3.org/Archives/Public/www-svg> a sioc:Space;
+    dcterms:identifier "www-svg" .
+
+<http://lists.w3.org/Archives/Public/www-tag> a sioc:Space;
+    dcterms:identifier "www-tag" .
+
+<http://lists.w3.org/Archives/Public/www-talk> a sioc:Space;
+    dcterms:identifier "www-talk" .
+
+<http://lists.w3.org/Archives/Public/www-test> a sioc:Space;
+    dcterms:identifier "www-test" .
+
+<http://lists.w3.org/Archives/Public/www-tt-tf> a sioc:Space;
+    dcterms:identifier "www-tt-tf" .
+
+<http://lists.w3.org/Archives/Public/www-tv> a sioc:Space;
+    dcterms:identifier "www-tv" .
+
+<http://lists.w3.org/Archives/Public/www-validator> a sioc:Space;
+    dcterms:identifier "www-validator" .
+
+<http://lists.w3.org/Archives/Public/www-validator-css> a sioc:Space;
+    dcterms:identifier "www-validator-css" .
+
+<http://lists.w3.org/Archives/Public/www-validator-cvs> a sioc:Space;
+    dcterms:identifier "www-validator-cvs" .
+
+<http://lists.w3.org/Archives/Public/www-vlib> a sioc:Space;
+    dcterms:identifier "www-vlib" .
+
+<http://lists.w3.org/Archives/Public/www-vlib-announce> a sioc:Space;
+    dcterms:identifier "www-vlib-announce" .
+
+<http://lists.w3.org/Archives/Public/www-voice> a sioc:Space;
+    dcterms:identifier "www-voice" .
+
+<http://lists.w3.org/Archives/Public/www-wai-pf> a sioc:Space;
+    dcterms:identifier "www-wai-pf" .
+
+<http://lists.w3.org/Archives/Public/www-watchdog> a sioc:Space;
+    dcterms:identifier "www-watchdog" .
+
+<http://lists.w3.org/Archives/Public/www-wca> a sioc:Space;
+    dcterms:identifier "www-wca" .
+
+<http://lists.w3.org/Archives/Public/www-webdav-dasl> a sioc:Space;
+    dcterms:identifier "www-webdav-dasl" .
+
+<http://lists.w3.org/Archives/Public/www-webont-wg> a sioc:Space;
+    dcterms:identifier "www-webont-wg" .
+
+<http://lists.w3.org/Archives/Public/www-winie> a sioc:Space;
+    dcterms:identifier "www-winie" .
+
+<http://lists.w3.org/Archives/Public/www-ws> a sioc:Space;
+    dcterms:identifier "www-ws" .
+
+<http://lists.w3.org/Archives/Public/www-ws-arch> a sioc:Space;
+    dcterms:identifier "www-ws-arch" .
+
+<http://lists.w3.org/Archives/Public/www-ws-cg> a sioc:Space;
+    dcterms:identifier "www-ws-cg" .
+
+<http://lists.w3.org/Archives/Public/www-ws-desc> a sioc:Space;
+    dcterms:identifier "www-ws-desc" .
+
+<http://lists.w3.org/Archives/Public/www-wsa-comments> a sioc:Space;
+    dcterms:identifier "www-wsa-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xenc-xmlp-tf> a sioc:Space;
+    dcterms:identifier "www-xenc-xmlp-tf" .
+
+<http://lists.w3.org/Archives/Public/www-xkms> a sioc:Space;
+    dcterms:identifier "www-xkms" .
+
+<http://lists.w3.org/Archives/Public/www-xkms-ws> a sioc:Space;
+    dcterms:identifier "www-xkms-ws" .
+
+<http://lists.w3.org/Archives/Public/www-xml-blueberry-comments> a sioc:Space;
+    dcterms:identifier "www-xml-blueberry-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-canonicalization-comments> a sioc:Space;
+    dcterms:identifier "www-xml-canonicalization-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-edi> a sioc:Space;
+    dcterms:identifier "www-xml-edi" .
+
+<http://lists.w3.org/Archives/Public/www-xml-fragment-comments> a sioc:Space;
+    dcterms:identifier "www-xml-fragment-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-infoset-comments> a sioc:Space;
+    dcterms:identifier "www-xml-infoset-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-linking-comments> a sioc:Space;
+    dcterms:identifier "www-xml-linking-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-packaging> a sioc:Space;
+    dcterms:identifier "www-xml-packaging" .
+
+<http://lists.w3.org/Archives/Public/www-xml-query-comments> a sioc:Space;
+    dcterms:identifier "www-xml-query-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-schema-comments> a sioc:Space;
+    dcterms:identifier "www-xml-schema-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-stylesheet-comments> a sioc:Space;
+    dcterms:identifier "www-xml-stylesheet-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xml-xinclude-comments> a sioc:Space;
+    dcterms:identifier "www-xml-xinclude-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xpath-comments> a sioc:Space;
+    dcterms:identifier "www-xpath-comments" .
+
+<http://lists.w3.org/Archives/Public/www-xsl-fo> a sioc:Space;
+    dcterms:identifier "www-xsl-fo" .
+
+<http://lists.w3.org/Archives/Public/www-zig> a sioc:Space;
+    dcterms:identifier "www-zig" .
+
+<http://lists.w3.org/Archives/Public/xml-dist-app> a sioc:Space;
+    dcterms:identifier "xml-dist-app" .
+
+<http://lists.w3.org/Archives/Public/xml-editor> a sioc:Space;
+    dcterms:identifier "xml-editor" .
+
+<http://lists.w3.org/Archives/Public/xml-encryption> a sioc:Space;
+    dcterms:identifier "xml-encryption" .
+
+<http://lists.w3.org/Archives/Public/xml-names-editor> a sioc:Space;
+    dcterms:identifier "xml-names-editor" .
+
+<http://lists.w3.org/Archives/Public/xml-names-issues> a sioc:Space;
+    dcterms:identifier "xml-names-issues" .
+
+<http://lists.w3.org/Archives/Public/xml-uri> a sioc:Space;
+    dcterms:identifier "xml-uri" .
+
+<http://lists.w3.org/Archives/Public/xmlp-comments> a sioc:Space;
+    dcterms:identifier "xmlp-comments" .
+
+<http://lists.w3.org/Archives/Public/xmlschema-dev> a sioc:Space;
+    dcterms:identifier "xmlschema-dev" .
+
+<http://lists.w3.org/Archives/Public/xproc-dev> a sioc:Space;
+    dcterms:identifier "xproc-dev" .
+
+<http://lists.w3.org/Archives/Public/xsl-editors> a sioc:Space;
+    dcterms:identifier "xsl-editors" .
+
