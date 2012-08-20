@@ -7,8 +7,10 @@
 #
 # To install dependencies, see https://github.com/timrdf/DataFAQs/wiki/Errors
 
-import sys, urllib2
-from surf import * # easy_install surf
+import sys, urllib2, re
+from rdflib import * # easy_install -U surf.rdflib
+from surf   import * # easy_install surf
+
 
 if len(sys.argv) < 3:
    print "usage: stub-ontology-examples.py http://some.owl namespace [prefix]*"
@@ -17,7 +19,7 @@ if len(sys.argv) < 3:
    print "                                               https://raw.github.com/timrdf/pml/master/ontology/pml-3.0.owl"
    print
    print "  namespace       - namespace of ontology e.g. http://www.w3.org/ns/prov#"
-   print "                                               http://provenanceweb.org/ontology/pml#"
+   print "                                               http://provenanceweb.org/ns/pml#"
    print
    print "  prefix          - prefix to include in default examples (will expand using prefix.cc) e.g. prov, pml, dcterms, pmlj"
    print "                    already includes: rdfs, xsd, owl, dcterms"
@@ -26,7 +28,7 @@ if len(sys.argv) < 3:
 ont_url = sys.argv[1] # http://dvcs.w3.org/hg/prov/raw-file/default/ontology/ProvenanceOntology.owl
                       # https://raw.github.com/timrdf/pml/master/ontology/pml-3.0.owl
 ont_ns  = sys.argv[2] # http://www.w3.org/ns/prov#
-                      # http://provenanceweb.org/ontology/pml#
+                      # http://provenanceweb.org/ns/pml#
 
 prefixes = 'http://prefix.cc/rdfs,xsd,owl,dcterms'
 for arg in range(3,len(sys.argv)):
@@ -35,8 +37,16 @@ prefixes = urllib2.urlopen(prefixes+'.file.ttl').read()
 
 # as SuRF
 store = Store(reader='rdflib', writer='rdflib', rdflib_store = 'IOMemory')
+if re.match('^http', ont_url):
+   store.load_triples(source=ont_url) # From URL
+elif os.path.exists(ont_url):
+   store.reader.graph.parse(ont_url)  # From file
+else:
+   print 'ERROR: ' + ont_url + ' not found.'
+   sys.exit(1)
+
 session = Session(store)
-store.load_triples(source=ont_url) # From URL
+
 DatatypeProperties = session.get_class(ns.OWL["DatatypeProperty"])
 ObjectProperties   = session.get_class(ns.OWL["ObjectProperty"])
 Classes            = session.get_class(ns.OWL["Class"])
