@@ -51,10 +51,11 @@ def handle(term,pre):
    qname = term.split('#') # Note: will not work on slash URIs.
    if qname[0] + '#' == ont_ns:
 
-      fileName = 'rdf/'+pre+qname[1]+'.ttl'
+      #fileName = 'rdf/'+pre+qname[1]+'.ttl'
+      fileName = pre+qname[1]+'.ttl'
 
-      if not os.path.exists(os.path.dirname(fileName)):
-         os.makedirs(os.path.dirname(fileName))
+      #if not os.path.exists(os.path.dirname(fileName)): # TODO: add -od param
+      #   os.makedirs(os.path.dirname(fileName))
 
       if os.path.exists(fileName):
          print fileName + ': exists. Not modifying.'
