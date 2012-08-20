@@ -8,7 +8,7 @@
 # To install dependencies, see https://github.com/timrdf/DataFAQs/wiki/Errors
 
 import sys, urllib2
-from surf import *
+from surf import * # easy_install surf
 
 if len(sys.argv) < 3:
    print "usage: stub-ontology-examples.py http://some.owl namespace [prefix]*"
