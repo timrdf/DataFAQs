@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# https://github.com/timrdf/DataFAQs/blob/master/bin/datafaqs-evaluate.sh
+# https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh
 # 
 # DataFAqTs core evaluation engine: 
 #   Retrieves dataset and FAqT evaluation service lists, 
@@ -46,29 +46,31 @@ datasets_service="$service_base/datafaqs/core/select-datasets/by-ckan-group"
 references_service="$service_base/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void"
 
 if [ "$1" == "--help" ]; then
+   space=`echo \`basename $0\` | sed 's/./ /g'`
    echo "usage: `basename $0` [-n] [--force-epoch | --reuse-epoch <existing-epoch>]"
-   echo "`echo \`basename $0\` | sed 's/./ /g'`             [--faqts    <rdf-file> <service-uri>]"
-   echo "`echo \`basename $0\` | sed 's/./ /g'`             [--datasets <rdf-file> <service-uri>]"
+   #echo "$space             [--faqts    <rdf-file> <service-uri>]"
+   #echo "$space             [--datasets <rdf-file> <service-uri>]"
    echo
-   echo "            -n : perform dry run (not implemented yet)."
+   echo "            -n : Perform dry run (not implemented yet)."
    echo
-   echo "    --datasets : override the service-uri and its input (to evaluate a different set of datasets)."
-   echo "                   default service-uri: $datasets_service"
-   echo "                   default input:       $datasets_input"
-   echo "                   e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-datasets/by-ckan-group-materials/sample-inputs/thedatahub-lodcloud.ttl"
+   #echo "       --faqts : override the service-uri and its input (to evaluate with a different set of FAqT evaluation services)."
+   #echo "                   default service-uri: $faqts_service"
+   #echo "                   default input:       $faqts_input"
+   #echo "                   e.g.    service-uri: $service_base/datafaqs/core/select-faqts/identity"
+   #echo "                   e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-faqts/identity-materials/sample-inputs/max-1-topic-tag.ttl"
+   #echo
+   #echo "    --datasets : override the service-uri and its input (to evaluate a different set of datasets)."
+   #echo "                   default service-uri: $datasets_service"
+   #echo "                   default input:       $datasets_input"
+   #echo "                   e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-datasets/by-ckan-group-materials/sample-inputs/thedatahub-lodcloud.ttl"
+   #echo
+   echo " --force-epoch : Force new epoch; ignore 'once per day' convention."
    echo
-   echo "       --faqts : override the service-uri and its input (to evaluate with a different set of FAqT evaluation services)."
-   echo "                   default service-uri: $faqts_service"
-   echo "                   default input:       $faqts_input"
-   echo "                   e.g.    service-uri: $service_base/datafaqs/core/select-faqts/identity"
-   echo "                   e.g.    input:       \$DATAFAQS_HOME/services/sadi/core/select-faqts/identity-materials/sample-inputs/max-1-topic-tag.ttl"
-   echo
-   echo " --force-epoch : force new epoch; ignore 'once per day' convention."
-   echo
-   echo " --reuse-epoch : reapply FAqT evaluation services to datasets in existing epoch. Takes precedence over --force-epoch."
-   echo "                   e.g.:  datafaqs-evaluate.sh --reuse-epoch                           2011-Dec-21_20_22_42"
-   echo "                   e.g.:  datafaqs-evaluate.sh --reuse-epoch __PIVOT_epoch/2011-Dec-21_20_22_42"
-   echo "                   e.g.:  datafaqs-evaluate.sh --reuse-epoch datafaqs:latest"
+   echo " --reuse-epoch : Reapply FAqT evaluation services to datasets in existing epoch."
+   echo "                 Takes precedence over --force-epoch."
+   echo "                 e.g. `basename $0` --reuse-epoch               2011-Dec-21_20_22_42"
+   echo "                 e.g. `basename $0` --reuse-epoch __PIVOT_epoch/2011-Dec-21_20_22_42"
+   echo "                 e.g. `basename $0` --reuse-epoch datafaqs:latest"
    echo
    echo "environment variables required:"
    echo "  DATAFAQS_BASE_URI e.g. http://sparql.tw.rpi.edu"
@@ -407,6 +409,7 @@ datasetsRandom=`cat $epochDir/datasets.ttl.csv      | randomize-line-order.py`
 
 echo
 echo "[INFO] - - - - - - - - - - - - - - - Finished determining epoch configuration. - - - - - - - - - - - - - -"
+echo "[INFO] - - - - - - - - - - - - - - (df-epoch.sh --reuse-epoch datafaqs:latest) - - - - - - - - - - - - - -"
 
 echo
 echo "[INFO] $numFAqTs FAqT services will evaluate $numDatasets datasets."
