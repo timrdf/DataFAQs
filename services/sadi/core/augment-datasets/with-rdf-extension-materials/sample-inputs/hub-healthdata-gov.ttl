@@ -1,0 +1,3 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-carrier> a dcat:Dataset .

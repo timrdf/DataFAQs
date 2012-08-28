@@ -1,0 +1,6 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-carrier> a datafaqs:WithReferences;
+    rdfs:seeAlso <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-carrier.rdf> .
+
