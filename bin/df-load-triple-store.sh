@@ -13,24 +13,30 @@
 DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/wiki/Installing-DataFAQs"}
 DATAFAQS_LOG_DIR=${DATAFAQS_LOG_DIR:?"not set; see https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-environment-variables"}
 
-log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
-if [ ! -e `dirname $log` ]; then
-   mkdir -p `dirname $log`
+log="dev/null"
+if [ $DATAFAQS_LOG_DIR != "/dev/null" ]; then
+   log=$DATAFAQS_LOG_DIR/`basename $0`/log.txt
+   if [ ! -e `dirname $log` ]; then
+      mkdir -p `dirname $log`
+   fi
 fi
 
 if [[ $# -lt 1 || "$1" == "--help" ]]; then
-   echo "usage: `basename $0` (--target |  --recursive-by-sd-name | [--graph graph-name] ( --recursive-meta | file ) )"
+   echo "usage: `basename $0` (--target | --recursive-by-sd-name | [--graph graph-name] ( --recursive-meta | file ) )"
    echo ""
    echo "    --target               : print triple store destination information and quit."
    echo "    --recursive-by-sd-name : find all RDF files ending in .sd_name and load the corresponding file into the graph specified."
    echo "    --graph                : load the RDF file into 'graph-name'."
-   echo "    --recursive-meta       : load all load all files ending in '.meta.ttl'."
+   echo "    --recursive-meta       : load all files ending in '.meta.ttl'."
    exit 1
 fi
 
 if [[ "$1" == "--target" ]]; then
    if [ "$DATAFAQS_PUBLISH_TDB" == "true" ]; then
-      echo tdb --target $DATAFAQS_PUBLISH_TDB_DIR
+      echo tdbloader --loc=$DATAFAQS_PUBLISH_TDB_DIR
+      if [ ${#DATAFAQS_PUBLISH_TDB_DIR} -eq 0 ]; then
+         echo "WARNING: DATAFAQS_PUBLISH_TDB_DIR must be set"
+      fi
    elif [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" ]; then
       $CSV2RDF4LOD_HOME/bin/util/virtuoso/vload --target
    elif [ "$DATAFAQS_PUBLISH_ALLEGROGRAPH" == "true" ]; then
