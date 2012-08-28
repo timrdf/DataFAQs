@@ -96,8 +96,10 @@ if [ ${1:-"no"} != "CLEAR" ]; then
    echo "  "
    echo "DATAFAQS_PUBLISH_THROUGHOUT_EPOCH                     ${DATAFAQS_PUBLISH_THROUGHOUT_EPOCH:-"(will default to: false)"}"
    echo "DATAFAQS_PUBLISH_METADATA_GRAPH_NAME                  ${DATAFAQS_PUBLISH_METADATA_GRAPH_NAME:-"(will default to: http://www.w3.org/ns/sparql-service-description#NamedGraph)"}"
+   echo
    echo "DATAFAQS_PUBLISH_TDB                                  ${DATAFAQS_PUBLISH_TDB:-"(will default to: false)"}"
    echo "DATAFAQS_PUBLISH_TDB_DIR                              ${DATAFAQS_PUBLISH_TDB_DIR:-"(will default to: VVV/publish/tdb/)"}"
+   echo "JENAROOT                                              ${JENAROOT:-"(will default to: )"}"
 #   echo "DATAFAQS_PUBLISH_TDB_INDIV                            ${DATAFAQS_PUBLISH_TDB_INDIV:-"(will default to: false)"}"
 
 #   echo "  "
