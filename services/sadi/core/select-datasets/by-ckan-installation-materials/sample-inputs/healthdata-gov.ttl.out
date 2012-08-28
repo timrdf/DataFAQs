@@ -1,0 +1,1701 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://hub.healthdata.gov> a datafaqs:CKAN;
+    dcterms:hasPart <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-carrier>,
+        <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-durable>,
+        <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-home>,
+        <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-hospice>,
+        <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-inpatient>,
+        <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-outpatient>,
+        <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-prescription>,
+        <http://hub.healthdata.gov/dataset/2008-basic-stand-alone-skilled>,
+        <http://hub.healthdata.gov/dataset/2008-chronic-conditions>,
+        <http://hub.healthdata.gov/dataset/2009-info>,
+        <http://hub.healthdata.gov/dataset/2010-basic-stand-alone-home>,
+        <http://hub.healthdata.gov/dataset/2010-basic-stand-alone-hospice>,
+        <http://hub.healthdata.gov/dataset/2010-basic-stand-alone-skilled>,
+        <http://hub.healthdata.gov/dataset/abbott-infant-formula-recall>,
+        <http://hub.healthdata.gov/dataset/active-project-reports>,
+        <http://hub.healthdata.gov/dataset/administration-children-families>,
+        <http://hub.healthdata.gov/dataset/administration-native-americans>,
+        <http://hub.healthdata.gov/dataset/administrative-data>,
+        <http://hub.healthdata.gov/dataset/adverse-event-reporting-system>,
+        <http://hub.healthdata.gov/dataset/aids-info>,
+        <http://hub.healthdata.gov/dataset/assisted-reproductive-technology>,
+        <http://hub.healthdata.gov/dataset/based-injury-statistics-query>,
+        <http://hub.healthdata.gov/dataset/basic-local-alignment-search>,
+        <http://hub.healthdata.gov/dataset/behavioral-risk-factor-surveillance>,
+        <http://hub.healthdata.gov/dataset/biosense-tarrant-county-texas>,
+        <http://hub.healthdata.gov/dataset/cancer-incidence-surveillance>,
+        <http://hub.healthdata.gov/dataset/chemspell>,
+        <http://hub.healthdata.gov/dataset/child-growth-charts>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2003>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2004>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2004-1>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2005>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2006>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2006-1>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2006-2>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2007>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2007-1>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2008>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2008-1>,
+        <http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2009>,
+        <http://hub.healthdata.gov/dataset/child-welfare-outcomes-data>,
+        <http://hub.healthdata.gov/dataset/chronic-conditions-chart-book>,
+        <http://hub.healthdata.gov/dataset/civil-remedies-division-administrative>,
+        <http://hub.healthdata.gov/dataset/civil-remedies-division-administrative-judge>,
+        <http://hub.healthdata.gov/dataset/claims-listed-state>,
+        <http://hub.healthdata.gov/dataset/clinical-decision-support-inventory>,
+        <http://hub.healthdata.gov/dataset/clinicaltrials-linking-patients>,
+        <http://hub.healthdata.gov/dataset/community-health-status-indicators>,
+        <http://hub.healthdata.gov/dataset/contact-list-2009>,
+        <http://hub.healthdata.gov/dataset/cooperative-research-development>,
+        <http://hub.healthdata.gov/dataset/copy-health-care-information>,
+        <http://hub.healthdata.gov/dataset/corporate-integrity-agreement>,
+        <http://hub.healthdata.gov/dataset/dailymed>,
+        <http://hub.healthdata.gov/dataset/dailymed-webservices>,
+        <http://hub.healthdata.gov/dataset/data-compendium>,
+        <http://hub.healthdata.gov/dataset/department-health-human-services>,
+        <http://hub.healthdata.gov/dataset/departmental-appeals-board>,
+        <http://hub.healthdata.gov/dataset/departmental-appeals-board-decisions>,
+        <http://hub.healthdata.gov/dataset/designated-health-professional>,
+        <http://hub.healthdata.gov/dataset/developmental-reproductive>,
+        <http://hub.healthdata.gov/dataset/dialysis-facility-compare>,
+        <http://hub.healthdata.gov/dataset/dietary-supplements-labels>,
+        <http://hub.healthdata.gov/dataset/dirline>,
+        <http://hub.healthdata.gov/dataset/drug-facts-chat>,
+        <http://hub.healthdata.gov/dataset/drug-label-data>,
+        <http://hub.healthdata.gov/dataset/drugs-lactation-database-lactmed>,
+        <http://hub.healthdata.gov/dataset/eldercare-locator-database>,
+        <http://hub.healthdata.gov/dataset/electronic-animal-drug-product>,
+        <http://hub.healthdata.gov/dataset/emergency-text-messages>,
+        <http://hub.healthdata.gov/dataset/entrez-programming-utilities>,
+        <http://hub.healthdata.gov/dataset/exported-research-portfolio>,
+        <http://hub.healthdata.gov/dataset/exported-research-portfolio-online>,
+        <http://hub.healthdata.gov/dataset/families-with-dependent-children>,
+        <http://hub.healthdata.gov/dataset/families-with-dependent-children-quality>,
+        <http://hub.healthdata.gov/dataset/fifth-national-survey-older>,
+        <http://hub.healthdata.gov/dataset/find-health-center>,
+        <http://hub.healthdata.gov/dataset/find-opportunities-high-need>,
+        <http://hub.healthdata.gov/dataset/find-ryan-white-aids-medical>,
+        <http://hub.healthdata.gov/dataset/find-shortage-areas-hpsa-address>,
+        <http://hub.healthdata.gov/dataset/find-shortage-areas-hpsas-eligible>,
+        <http://hub.healthdata.gov/dataset/first-national-survey-older>,
+        <http://hub.healthdata.gov/dataset/fluview-national-activity>,
+        <http://hub.healthdata.gov/dataset/food-drug-administration-recalls>,
+        <http://hub.healthdata.gov/dataset/food-recalls>,
+        <http://hub.healthdata.gov/dataset/foodborne-outbreak-online-database>,
+        <http://hub.healthdata.gov/dataset/fourth-national-survey-older>,
+        <http://hub.healthdata.gov/dataset/fraudulent-2009-h1n1-influenza>,
+        <http://hub.healthdata.gov/dataset/fraudulent-2009-h1n1-influenza-products>,
+        <http://hub.healthdata.gov/dataset/genetics-home-reference>,
+        <http://hub.healthdata.gov/dataset/hazardous-substances-data-bank>,
+        <http://hub.healthdata.gov/dataset/hcupnet>,
+        <http://hub.healthdata.gov/dataset/head-start-centers-geodata>,
+        <http://hub.healthdata.gov/dataset/health-center-controlled-network>,
+        <http://hub.healthdata.gov/dataset/health-centers-look-alike-sites>,
+        <http://hub.healthdata.gov/dataset/health-data-interactive>,
+        <http://hub.healthdata.gov/dataset/health-indicators-warehouse>,
+        <http://hub.healthdata.gov/dataset/health-information-national>,
+        <http://hub.healthdata.gov/dataset/health-information-updates>,
+        <http://hub.healthdata.gov/dataset/health-resources-county-comparison>,
+        <http://hub.healthdata.gov/dataset/health-safety-widget>,
+        <http://hub.healthdata.gov/dataset/healthcare-finder>,
+        <http://hub.healthdata.gov/dataset/healthdata-catalog>,
+        <http://hub.healthdata.gov/dataset/helpful-contacts>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1994>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1995>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1996>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1997>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1998>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1999>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2000>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2001>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2002>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2006>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2007>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2008>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2010>,
+        <http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2011>,
+        <http://hub.healthdata.gov/dataset/home-health-compare>,
+        <http://hub.healthdata.gov/dataset/hospice-medicare-cost-report>,
+        <http://hub.healthdata.gov/dataset/hospice-medicare-cost-report-data>,
+        <http://hub.healthdata.gov/dataset/hospital-compare>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1995>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1996>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1997>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1998>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1999>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2000>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2001>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2002>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2003>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2004>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2005>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2006>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2007>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2010>,
+        <http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2011>,
+        <http://hub.healthdata.gov/dataset/household-products-database>,
+        <http://hub.healthdata.gov/dataset/hrsa-data-warehouse>,
+        <http://hub.healthdata.gov/dataset/hrsa-geospatial-data-warehouse>,
+        <http://hub.healthdata.gov/dataset/hydrolyzed-vegetable-protein>,
+        <http://hub.healthdata.gov/dataset/hydrolyzed-vegetable-protein-containing>,
+        <http://hub.healthdata.gov/dataset/income-home-energy-assistance>,
+        <http://hub.healthdata.gov/dataset/information-hazardous-chemicals>,
+        <http://hub.healthdata.gov/dataset/insure-kids-dental-care-providers>,
+        <http://hub.healthdata.gov/dataset/licensing-opportunities-technologies>,
+        <http://hub.healthdata.gov/dataset/medicaid-analytic-extract-chartbooks>,
+        <http://hub.healthdata.gov/dataset/medicaid-analytic-extract-general>,
+        <http://hub.healthdata.gov/dataset/medicaid-analytic-extract-table>,
+        <http://hub.healthdata.gov/dataset/medicaid-fraud-control-units>,
+        <http://hub.healthdata.gov/dataset/medicaid-pharmacy-benefit-reimbursement>,
+        <http://hub.healthdata.gov/dataset/medicaid-statistical-information>,
+        <http://hub.healthdata.gov/dataset/medicaid-statistical-information-system>,
+        <http://hub.healthdata.gov/dataset/medical-expenditure-panel-survey>,
+        <http://hub.healthdata.gov/dataset/medicare-advantage-cost-demonstration>,
+        <http://hub.healthdata.gov/dataset/medicare-advantage-landscape>,
+        <http://hub.healthdata.gov/dataset/medicare-advantage-special>,
+        <http://hub.healthdata.gov/dataset/medicare-appeals-council-decisions>,
+        <http://hub.healthdata.gov/dataset/medicare-appeals-council-decisions-1>,
+        <http://hub.healthdata.gov/dataset/medicare-enrollment-dashboard>,
+        <http://hub.healthdata.gov/dataset/medicare-geographic-variation>,
+        <http://hub.healthdata.gov/dataset/medicare-inpatient-hospital>,
+        <http://hub.healthdata.gov/dataset/medicare-medicaid-incentive>,
+        <http://hub.healthdata.gov/dataset/medicare-medicaid-statistical>,
+        <http://hub.healthdata.gov/dataset/medicare-options-compare>,
+        <http://hub.healthdata.gov/dataset/medicare-part-part-display>,
+        <http://hub.healthdata.gov/dataset/medicare-part-part-display-measures>,
+        <http://hub.healthdata.gov/dataset/medicare-part-part-display-measures-2012>,
+        <http://hub.healthdata.gov/dataset/medicare-part-plan-ratings>,
+        <http://hub.healthdata.gov/dataset/medicare-part-plan-ratings-data>,
+        <http://hub.healthdata.gov/dataset/medicare-part-plan-ratings-data-2012>,
+        <http://hub.healthdata.gov/dataset/medicare-part-stand-alone-prescription>,
+        <http://hub.healthdata.gov/dataset/medicare-part-stand-alone-prescription-drug>,
+        <http://hub.healthdata.gov/dataset/medicare-prescription-drug>,
+        <http://hub.healthdata.gov/dataset/medicare-short-stay-hospital>,
+        <http://hub.healthdata.gov/dataset/medicare-tools-downloadable>,
+        <http://hub.healthdata.gov/dataset/medlineplus-connect-electronic>,
+        <http://hub.healthdata.gov/dataset/medlineplus-connect-electronic-health>,
+        <http://hub.healthdata.gov/dataset/medlineplus-english-widgets>,
+        <http://hub.healthdata.gov/dataset/medlineplus-health-topic-files>,
+        <http://hub.healthdata.gov/dataset/medlineplus-health-topic-service>,
+        <http://hub.healthdata.gov/dataset/medlineplus-health-topic-vocabulary>,
+        <http://hub.healthdata.gov/dataset/medlineplus-spanish-widgets>,
+        <http://hub.healthdata.gov/dataset/metamap>,
+        <http://hub.healthdata.gov/dataset/monahrq>,
+        <http://hub.healthdata.gov/dataset/national-drug-file-reference>,
+        <http://hub.healthdata.gov/dataset/national-environmental-public>,
+        <http://hub.healthdata.gov/dataset/national-foster-care-adoption>,
+        <http://hub.healthdata.gov/dataset/national-health-expenditures>,
+        <http://hub.healthdata.gov/dataset/national-health-expenditures-historical>,
+        <http://hub.healthdata.gov/dataset/national-health-expenditures-sponsors>,
+        <http://hub.healthdata.gov/dataset/national-health-expenditures-state>,
+        <http://hub.healthdata.gov/dataset/national-health-expenditures-state-provider>,
+        <http://hub.healthdata.gov/dataset/national-plan-provider-enumeration>,
+        <http://hub.healthdata.gov/dataset/national-sample-survey-registered>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2002>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2003>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2004>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2005>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2006>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2007>,
+        <http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2008>,
+        <http://hub.healthdata.gov/dataset/niosh-certified-equipment-list>,
+        <http://hub.healthdata.gov/dataset/niosh-pocket-guide-chemical>,
+        <http://hub.healthdata.gov/dataset/nursing-home-compare>,
+        <http://hub.healthdata.gov/dataset/office-inspector-general-list>,
+        <http://hub.healthdata.gov/dataset/omha-appeals-listed-state>,
+        <http://hub.healthdata.gov/dataset/online-label-repository>,
+        <http://hub.healthdata.gov/dataset/organ-procurement-transplantation>,
+        <http://hub.healthdata.gov/dataset/part-carrier-summary-data-file>,
+        <http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2005>,
+        <http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2006>,
+        <http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2007>,
+        <http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2009>,
+        <http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2010>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2000>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2001>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2002>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2003>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2004>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2005>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2006>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2009>,
+        <http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2010>,
+        <http://hub.healthdata.gov/dataset/peanut-containing-product-recall>,
+        <http://hub.healthdata.gov/dataset/peanut-product-recalls>,
+        <http://hub.healthdata.gov/dataset/peanut-product-recalls-widget>,
+        <http://hub.healthdata.gov/dataset/pillbox-beta>,
+        <http://hub.healthdata.gov/dataset/pistachio-product-recalls>,
+        <http://hub.healthdata.gov/dataset/pistachio-product-recalls-widget>,
+        <http://hub.healthdata.gov/dataset/plainview-milk-cooperative>,
+        <http://hub.healthdata.gov/dataset/plans-quality-compare>,
+        <http://hub.healthdata.gov/dataset/products-developed-using-inventions>,
+        <http://hub.healthdata.gov/dataset/pubchem>,
+        <http://hub.healthdata.gov/dataset/pubchem-power-user-gateway>,
+        <http://hub.healthdata.gov/dataset/pubmed>,
+        <http://hub.healthdata.gov/dataset/quitnowtxt-text-messaging-library>,
+        <http://hub.healthdata.gov/dataset/recalls>,
+        <http://hub.healthdata.gov/dataset/records-schedule>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-1996>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-1998>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-1999>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2000>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2001>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2002>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2003>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2004>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2005>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2006>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2007>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2009>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2010>,
+        <http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2011>,
+        <http://hub.healthdata.gov/dataset/repository-audit-reports>,
+        <http://hub.healthdata.gov/dataset/repository-evaluation-reports>,
+        <http://hub.healthdata.gov/dataset/rxnorm>,
+        <http://hub.healthdata.gov/dataset/rxterms>,
+        <http://hub.healthdata.gov/dataset/second-national-survey-older>,
+        <http://hub.healthdata.gov/dataset/semantic-knowledge-representation>,
+        <http://hub.healthdata.gov/dataset/shell-recalls>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1995>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1996>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1997>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1998>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1999>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2000>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2001>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2003>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2004>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2006>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2007>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2010>,
+        <http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2011>,
+        <http://hub.healthdata.gov/dataset/state-cancer-profiles-site>,
+        <http://hub.healthdata.gov/dataset/state-snapshots>,
+        <http://hub.healthdata.gov/dataset/statistics-booklet>,
+        <http://hub.healthdata.gov/dataset/supplier-directory-provide>,
+        <http://hub.healthdata.gov/dataset/temporary-assistance-needy>,
+        <http://hub.healthdata.gov/dataset/third-national-survey-older>,
+        <http://hub.healthdata.gov/dataset/toxmap-online-toxicology-maps>,
+        <http://hub.healthdata.gov/dataset/toxnet>,
+        <http://hub.healthdata.gov/dataset/unified-medical-language-system>,
+        <http://hub.healthdata.gov/dataset/uniform-data-system>,
+        <http://hub.healthdata.gov/dataset/updates-ambulatory-surgical>,
+        <http://hub.healthdata.gov/dataset/updates-outpatient-latest-payment>,
+        <http://hub.healthdata.gov/dataset/updates-physician-latest-payment>,
+        <http://hub.healthdata.gov/dataset/validation-reports>,
+        <http://hub.healthdata.gov/dataset/visible-human-project>,
+        <http://hub.healthdata.gov/dataset/vitalstats>,
+        <http://hub.healthdata.gov/dataset/voyager>,
+        <http://hub.healthdata.gov/dataset/wallet-card>,
+        <http://hub.healthdata.gov/dataset/warning-letters>,
+        <http://hub.healthdata.gov/dataset/wide-ranging-online-data-epidemiologic>,
+        <http://hub.healthdata.gov/dataset/wonder-aids-public-data>,
+        <http://hub.healthdata.gov/dataset/wonder-births>,
+        <http://hub.healthdata.gov/dataset/wonder-births-1>,
+        <http://hub.healthdata.gov/dataset/wonder-cancer-statistics>,
+        <http://hub.healthdata.gov/dataset/wonder-cancer-statistics-1>,
+        <http://hub.healthdata.gov/dataset/wonder-compressed-mortality>,
+        <http://hub.healthdata.gov/dataset/wonder-daily-fine-particulate>,
+        <http://hub.healthdata.gov/dataset/wonder-daily-fine-particulate-matter>,
+        <http://hub.healthdata.gov/dataset/wonder-daily-temperatures-heat>,
+        <http://hub.healthdata.gov/dataset/wonder-detailed-mortality-underlying>,
+        <http://hub.healthdata.gov/dataset/wonder-mortality-infant-deaths>,
+        <http://hub.healthdata.gov/dataset/wonder-mortality-infants-death>,
+        <http://hub.healthdata.gov/dataset/wonder-mortality-multiple-cause>,
+        <http://hub.healthdata.gov/dataset/wonder-mortality-multiple-cause-death>,
+        <http://hub.healthdata.gov/dataset/wonder-mortality-underlying>,
+        <http://hub.healthdata.gov/dataset/wonder-online-tuberculosis>,
+        <http://hub.healthdata.gov/dataset/wonder-online-tuberculosis-information>,
+        <http://hub.healthdata.gov/dataset/wonder-population-bridged-race>,
+        <http://hub.healthdata.gov/dataset/wonder-population-bridged-race-july>,
+        <http://hub.healthdata.gov/dataset/wonder-population-from-census>,
+        <http://hub.healthdata.gov/dataset/wonder-population-from-census-1>,
+        <http://hub.healthdata.gov/dataset/wonder-sexually-transmitted>,
+        <http://hub.healthdata.gov/dataset/wonder-sexually-transmitted-disease>,
+        <http://hub.healthdata.gov/dataset/wonder-vaccine-adverse-event>,
+        <http://hub.healthdata.gov/dataset/wonder-vaccine-adverse-event-reporting> .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-carrier> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-carrier" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-durable> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-durable" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-home> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-home" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-hospice> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-hospice" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-inpatient> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-inpatient" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-outpatient> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-outpatient" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-prescription> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-prescription" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-skilled> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-basic-stand-alone-skilled" .
+
+<http://hub.healthdata.gov/dataset/2008-chronic-conditions> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2008-chronic-conditions" .
+
+<http://hub.healthdata.gov/dataset/2009-info> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2009-info" .
+
+<http://hub.healthdata.gov/dataset/2010-basic-stand-alone-home> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2010-basic-stand-alone-home" .
+
+<http://hub.healthdata.gov/dataset/2010-basic-stand-alone-hospice> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2010-basic-stand-alone-hospice" .
+
+<http://hub.healthdata.gov/dataset/2010-basic-stand-alone-skilled> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "2010-basic-stand-alone-skilled" .
+
+<http://hub.healthdata.gov/dataset/abbott-infant-formula-recall> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "abbott-infant-formula-recall" .
+
+<http://hub.healthdata.gov/dataset/active-project-reports> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "active-project-reports" .
+
+<http://hub.healthdata.gov/dataset/administration-children-families> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "administration-children-families" .
+
+<http://hub.healthdata.gov/dataset/administration-native-americans> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "administration-native-americans" .
+
+<http://hub.healthdata.gov/dataset/administrative-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "administrative-data" .
+
+<http://hub.healthdata.gov/dataset/adverse-event-reporting-system> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "adverse-event-reporting-system" .
+
+<http://hub.healthdata.gov/dataset/aids-info> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "aids-info" .
+
+<http://hub.healthdata.gov/dataset/assisted-reproductive-technology> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "assisted-reproductive-technology" .
+
+<http://hub.healthdata.gov/dataset/based-injury-statistics-query> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "based-injury-statistics-query" .
+
+<http://hub.healthdata.gov/dataset/basic-local-alignment-search> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "basic-local-alignment-search" .
+
+<http://hub.healthdata.gov/dataset/behavioral-risk-factor-surveillance> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "behavioral-risk-factor-surveillance" .
+
+<http://hub.healthdata.gov/dataset/biosense-tarrant-county-texas> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "biosense-tarrant-county-texas" .
+
+<http://hub.healthdata.gov/dataset/cancer-incidence-surveillance> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "cancer-incidence-surveillance" .
+
+<http://hub.healthdata.gov/dataset/chemspell> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "chemspell" .
+
+<http://hub.healthdata.gov/dataset/child-growth-charts> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-growth-charts" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2003> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2003" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2004> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2004" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2004-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2004-1" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2005> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2005" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2006" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2006-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2006-1" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2006-2> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2006-2" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2007> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2007" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2007-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2007-1" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2008> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2008" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2008-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2008-1" .
+
+<http://hub.healthdata.gov/dataset/child-support-enforcement-annual-data-report-form-2009> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-support-enforcement-annual-data-report-form-2009" .
+
+<http://hub.healthdata.gov/dataset/child-welfare-outcomes-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "child-welfare-outcomes-data" .
+
+<http://hub.healthdata.gov/dataset/chronic-conditions-chart-book> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "chronic-conditions-chart-book" .
+
+<http://hub.healthdata.gov/dataset/civil-remedies-division-administrative> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "civil-remedies-division-administrative" .
+
+<http://hub.healthdata.gov/dataset/civil-remedies-division-administrative-judge> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "civil-remedies-division-administrative-judge" .
+
+<http://hub.healthdata.gov/dataset/claims-listed-state> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "claims-listed-state" .
+
+<http://hub.healthdata.gov/dataset/clinical-decision-support-inventory> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "clinical-decision-support-inventory" .
+
+<http://hub.healthdata.gov/dataset/clinicaltrials-linking-patients> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "clinicaltrials-linking-patients" .
+
+<http://hub.healthdata.gov/dataset/community-health-status-indicators> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "community-health-status-indicators" .
+
+<http://hub.healthdata.gov/dataset/contact-list-2009> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "contact-list-2009" .
+
+<http://hub.healthdata.gov/dataset/cooperative-research-development> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "cooperative-research-development" .
+
+<http://hub.healthdata.gov/dataset/copy-health-care-information> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "copy-health-care-information" .
+
+<http://hub.healthdata.gov/dataset/corporate-integrity-agreement> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "corporate-integrity-agreement" .
+
+<http://hub.healthdata.gov/dataset/dailymed> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "dailymed" .
+
+<http://hub.healthdata.gov/dataset/dailymed-webservices> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "dailymed-webservices" .
+
+<http://hub.healthdata.gov/dataset/data-compendium> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "data-compendium" .
+
+<http://hub.healthdata.gov/dataset/department-health-human-services> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "department-health-human-services" .
+
+<http://hub.healthdata.gov/dataset/departmental-appeals-board> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "departmental-appeals-board" .
+
+<http://hub.healthdata.gov/dataset/departmental-appeals-board-decisions> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "departmental-appeals-board-decisions" .
+
+<http://hub.healthdata.gov/dataset/designated-health-professional> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "designated-health-professional" .
+
+<http://hub.healthdata.gov/dataset/developmental-reproductive> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "developmental-reproductive" .
+
+<http://hub.healthdata.gov/dataset/dialysis-facility-compare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "dialysis-facility-compare" .
+
+<http://hub.healthdata.gov/dataset/dietary-supplements-labels> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "dietary-supplements-labels" .
+
+<http://hub.healthdata.gov/dataset/dirline> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "dirline" .
+
+<http://hub.healthdata.gov/dataset/drug-facts-chat> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "drug-facts-chat" .
+
+<http://hub.healthdata.gov/dataset/drug-label-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "drug-label-data" .
+
+<http://hub.healthdata.gov/dataset/drugs-lactation-database-lactmed> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "drugs-lactation-database-lactmed" .
+
+<http://hub.healthdata.gov/dataset/eldercare-locator-database> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "eldercare-locator-database" .
+
+<http://hub.healthdata.gov/dataset/electronic-animal-drug-product> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "electronic-animal-drug-product" .
+
+<http://hub.healthdata.gov/dataset/emergency-text-messages> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "emergency-text-messages" .
+
+<http://hub.healthdata.gov/dataset/entrez-programming-utilities> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "entrez-programming-utilities" .
+
+<http://hub.healthdata.gov/dataset/exported-research-portfolio> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "exported-research-portfolio" .
+
+<http://hub.healthdata.gov/dataset/exported-research-portfolio-online> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "exported-research-portfolio-online" .
+
+<http://hub.healthdata.gov/dataset/families-with-dependent-children> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "families-with-dependent-children" .
+
+<http://hub.healthdata.gov/dataset/families-with-dependent-children-quality> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "families-with-dependent-children-quality" .
+
+<http://hub.healthdata.gov/dataset/fifth-national-survey-older> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "fifth-national-survey-older" .
+
+<http://hub.healthdata.gov/dataset/find-health-center> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "find-health-center" .
+
+<http://hub.healthdata.gov/dataset/find-opportunities-high-need> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "find-opportunities-high-need" .
+
+<http://hub.healthdata.gov/dataset/find-ryan-white-aids-medical> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "find-ryan-white-aids-medical" .
+
+<http://hub.healthdata.gov/dataset/find-shortage-areas-hpsa-address> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "find-shortage-areas-hpsa-address" .
+
+<http://hub.healthdata.gov/dataset/find-shortage-areas-hpsas-eligible> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "find-shortage-areas-hpsas-eligible" .
+
+<http://hub.healthdata.gov/dataset/first-national-survey-older> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "first-national-survey-older" .
+
+<http://hub.healthdata.gov/dataset/fluview-national-activity> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "fluview-national-activity" .
+
+<http://hub.healthdata.gov/dataset/food-drug-administration-recalls> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "food-drug-administration-recalls" .
+
+<http://hub.healthdata.gov/dataset/food-recalls> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "food-recalls" .
+
+<http://hub.healthdata.gov/dataset/foodborne-outbreak-online-database> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "foodborne-outbreak-online-database" .
+
+<http://hub.healthdata.gov/dataset/fourth-national-survey-older> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "fourth-national-survey-older" .
+
+<http://hub.healthdata.gov/dataset/fraudulent-2009-h1n1-influenza> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "fraudulent-2009-h1n1-influenza" .
+
+<http://hub.healthdata.gov/dataset/fraudulent-2009-h1n1-influenza-products> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "fraudulent-2009-h1n1-influenza-products" .
+
+<http://hub.healthdata.gov/dataset/genetics-home-reference> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "genetics-home-reference" .
+
+<http://hub.healthdata.gov/dataset/hazardous-substances-data-bank> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hazardous-substances-data-bank" .
+
+<http://hub.healthdata.gov/dataset/hcupnet> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hcupnet" .
+
+<http://hub.healthdata.gov/dataset/head-start-centers-geodata> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "head-start-centers-geodata" .
+
+<http://hub.healthdata.gov/dataset/health-center-controlled-network> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-center-controlled-network" .
+
+<http://hub.healthdata.gov/dataset/health-centers-look-alike-sites> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-centers-look-alike-sites" .
+
+<http://hub.healthdata.gov/dataset/health-data-interactive> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-data-interactive" .
+
+<http://hub.healthdata.gov/dataset/health-indicators-warehouse> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-indicators-warehouse" .
+
+<http://hub.healthdata.gov/dataset/health-information-national> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-information-national" .
+
+<http://hub.healthdata.gov/dataset/health-information-updates> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-information-updates" .
+
+<http://hub.healthdata.gov/dataset/health-resources-county-comparison> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-resources-county-comparison" .
+
+<http://hub.healthdata.gov/dataset/health-safety-widget> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "health-safety-widget" .
+
+<http://hub.healthdata.gov/dataset/healthcare-finder> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "healthcare-finder" .
+
+<http://hub.healthdata.gov/dataset/healthdata-catalog> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "healthdata-catalog" .
+
+<http://hub.healthdata.gov/dataset/helpful-contacts> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "helpful-contacts" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1994> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-1994" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1995> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-1995" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1996> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-1996" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1997> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-1997" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1998> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-1998" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-1999> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-1999" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2000> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2000" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2001> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2001" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2002> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2002" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2006" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2007> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2007" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2008> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2008" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2010> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2010" .
+
+<http://hub.healthdata.gov/dataset/home-health-agency-medicare-cost-report-data-2011> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-agency-medicare-cost-report-data-2011" .
+
+<http://hub.healthdata.gov/dataset/home-health-compare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "home-health-compare" .
+
+<http://hub.healthdata.gov/dataset/hospice-medicare-cost-report> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospice-medicare-cost-report" .
+
+<http://hub.healthdata.gov/dataset/hospice-medicare-cost-report-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospice-medicare-cost-report-data" .
+
+<http://hub.healthdata.gov/dataset/hospital-compare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-compare" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1995> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy1995" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1996> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy1996" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1997> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy1997" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1998> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy1998" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy1999> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy1999" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2000> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2000" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2001> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2001" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2002> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2002" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2003> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2003" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2004> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2004" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2005> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2005" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2006" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2007> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2007" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2010> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2010" .
+
+<http://hub.healthdata.gov/dataset/hospital-medicare-cost-report-data-fy2011> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hospital-medicare-cost-report-data-fy2011" .
+
+<http://hub.healthdata.gov/dataset/household-products-database> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "household-products-database" .
+
+<http://hub.healthdata.gov/dataset/hrsa-data-warehouse> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hrsa-data-warehouse" .
+
+<http://hub.healthdata.gov/dataset/hrsa-geospatial-data-warehouse> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hrsa-geospatial-data-warehouse" .
+
+<http://hub.healthdata.gov/dataset/hydrolyzed-vegetable-protein> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hydrolyzed-vegetable-protein" .
+
+<http://hub.healthdata.gov/dataset/hydrolyzed-vegetable-protein-containing> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "hydrolyzed-vegetable-protein-containing" .
+
+<http://hub.healthdata.gov/dataset/income-home-energy-assistance> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "income-home-energy-assistance" .
+
+<http://hub.healthdata.gov/dataset/information-hazardous-chemicals> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "information-hazardous-chemicals" .
+
+<http://hub.healthdata.gov/dataset/insure-kids-dental-care-providers> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "insure-kids-dental-care-providers" .
+
+<http://hub.healthdata.gov/dataset/licensing-opportunities-technologies> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "licensing-opportunities-technologies" .
+
+<http://hub.healthdata.gov/dataset/medicaid-analytic-extract-chartbooks> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicaid-analytic-extract-chartbooks" .
+
+<http://hub.healthdata.gov/dataset/medicaid-analytic-extract-general> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicaid-analytic-extract-general" .
+
+<http://hub.healthdata.gov/dataset/medicaid-analytic-extract-table> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicaid-analytic-extract-table" .
+
+<http://hub.healthdata.gov/dataset/medicaid-fraud-control-units> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicaid-fraud-control-units" .
+
+<http://hub.healthdata.gov/dataset/medicaid-pharmacy-benefit-reimbursement> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicaid-pharmacy-benefit-reimbursement" .
+
+<http://hub.healthdata.gov/dataset/medicaid-statistical-information> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicaid-statistical-information" .
+
+<http://hub.healthdata.gov/dataset/medicaid-statistical-information-system> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicaid-statistical-information-system" .
+
+<http://hub.healthdata.gov/dataset/medical-expenditure-panel-survey> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medical-expenditure-panel-survey" .
+
+<http://hub.healthdata.gov/dataset/medicare-advantage-cost-demonstration> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-advantage-cost-demonstration" .
+
+<http://hub.healthdata.gov/dataset/medicare-advantage-landscape> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-advantage-landscape" .
+
+<http://hub.healthdata.gov/dataset/medicare-advantage-special> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-advantage-special" .
+
+<http://hub.healthdata.gov/dataset/medicare-appeals-council-decisions> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-appeals-council-decisions" .
+
+<http://hub.healthdata.gov/dataset/medicare-appeals-council-decisions-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-appeals-council-decisions-1" .
+
+<http://hub.healthdata.gov/dataset/medicare-enrollment-dashboard> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-enrollment-dashboard" .
+
+<http://hub.healthdata.gov/dataset/medicare-geographic-variation> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-geographic-variation" .
+
+<http://hub.healthdata.gov/dataset/medicare-inpatient-hospital> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-inpatient-hospital" .
+
+<http://hub.healthdata.gov/dataset/medicare-medicaid-incentive> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-medicaid-incentive" .
+
+<http://hub.healthdata.gov/dataset/medicare-medicaid-statistical> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-medicaid-statistical" .
+
+<http://hub.healthdata.gov/dataset/medicare-options-compare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-options-compare" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-part-display> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-part-display" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-part-display-measures> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-part-display-measures" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-part-display-measures-2012> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-part-display-measures-2012" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-plan-ratings> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-plan-ratings" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-plan-ratings-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-plan-ratings-data" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-plan-ratings-data-2012> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-plan-ratings-data-2012" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-stand-alone-prescription> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-stand-alone-prescription" .
+
+<http://hub.healthdata.gov/dataset/medicare-part-stand-alone-prescription-drug> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-part-stand-alone-prescription-drug" .
+
+<http://hub.healthdata.gov/dataset/medicare-prescription-drug> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-prescription-drug" .
+
+<http://hub.healthdata.gov/dataset/medicare-short-stay-hospital> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-short-stay-hospital" .
+
+<http://hub.healthdata.gov/dataset/medicare-tools-downloadable> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medicare-tools-downloadable" .
+
+<http://hub.healthdata.gov/dataset/medlineplus-connect-electronic> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medlineplus-connect-electronic" .
+
+<http://hub.healthdata.gov/dataset/medlineplus-connect-electronic-health> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medlineplus-connect-electronic-health" .
+
+<http://hub.healthdata.gov/dataset/medlineplus-english-widgets> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medlineplus-english-widgets" .
+
+<http://hub.healthdata.gov/dataset/medlineplus-health-topic-files> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medlineplus-health-topic-files" .
+
+<http://hub.healthdata.gov/dataset/medlineplus-health-topic-service> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medlineplus-health-topic-service" .
+
+<http://hub.healthdata.gov/dataset/medlineplus-health-topic-vocabulary> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medlineplus-health-topic-vocabulary" .
+
+<http://hub.healthdata.gov/dataset/medlineplus-spanish-widgets> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "medlineplus-spanish-widgets" .
+
+<http://hub.healthdata.gov/dataset/metamap> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "metamap" .
+
+<http://hub.healthdata.gov/dataset/monahrq> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "monahrq" .
+
+<http://hub.healthdata.gov/dataset/national-drug-file-reference> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-drug-file-reference" .
+
+<http://hub.healthdata.gov/dataset/national-environmental-public> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-environmental-public" .
+
+<http://hub.healthdata.gov/dataset/national-foster-care-adoption> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-foster-care-adoption" .
+
+<http://hub.healthdata.gov/dataset/national-health-expenditures> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-health-expenditures" .
+
+<http://hub.healthdata.gov/dataset/national-health-expenditures-historical> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-health-expenditures-historical" .
+
+<http://hub.healthdata.gov/dataset/national-health-expenditures-sponsors> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-health-expenditures-sponsors" .
+
+<http://hub.healthdata.gov/dataset/national-health-expenditures-state> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-health-expenditures-state" .
+
+<http://hub.healthdata.gov/dataset/national-health-expenditures-state-provider> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-health-expenditures-state-provider" .
+
+<http://hub.healthdata.gov/dataset/national-plan-provider-enumeration> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-plan-provider-enumeration" .
+
+<http://hub.healthdata.gov/dataset/national-sample-survey-registered> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-sample-survey-registered" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2002> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh-2002" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2003> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh-2003" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2004> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh-2004" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2005> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh-2005" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh-2006" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2007> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh-2007" .
+
+<http://hub.healthdata.gov/dataset/national-survey-drug-health-nsduh-2008> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "national-survey-drug-health-nsduh-2008" .
+
+<http://hub.healthdata.gov/dataset/niosh-certified-equipment-list> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "niosh-certified-equipment-list" .
+
+<http://hub.healthdata.gov/dataset/niosh-pocket-guide-chemical> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "niosh-pocket-guide-chemical" .
+
+<http://hub.healthdata.gov/dataset/nursing-home-compare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "nursing-home-compare" .
+
+<http://hub.healthdata.gov/dataset/office-inspector-general-list> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "office-inspector-general-list" .
+
+<http://hub.healthdata.gov/dataset/omha-appeals-listed-state> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "omha-appeals-listed-state" .
+
+<http://hub.healthdata.gov/dataset/online-label-repository> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "online-label-repository" .
+
+<http://hub.healthdata.gov/dataset/organ-procurement-transplantation> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "organ-procurement-transplantation" .
+
+<http://hub.healthdata.gov/dataset/part-carrier-summary-data-file> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-carrier-summary-data-file" .
+
+<http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2005> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-carrier-summary-data-file-cy2005" .
+
+<http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-carrier-summary-data-file-cy2006" .
+
+<http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2007> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-carrier-summary-data-file-cy2007" .
+
+<http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2009> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-carrier-summary-data-file-cy2009" .
+
+<http://hub.healthdata.gov/dataset/part-carrier-summary-data-file-cy2010> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-carrier-summary-data-file-cy2010" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2000> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2000" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2001> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2001" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2002> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2002" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2003> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2003" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2004> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2004" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2005> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2005" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2006" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2009> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2009" .
+
+<http://hub.healthdata.gov/dataset/part-national-summary-data-file-cy2010> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "part-national-summary-data-file-cy2010" .
+
+<http://hub.healthdata.gov/dataset/peanut-containing-product-recall> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "peanut-containing-product-recall" .
+
+<http://hub.healthdata.gov/dataset/peanut-product-recalls> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "peanut-product-recalls" .
+
+<http://hub.healthdata.gov/dataset/peanut-product-recalls-widget> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "peanut-product-recalls-widget" .
+
+<http://hub.healthdata.gov/dataset/pillbox-beta> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "pillbox-beta" .
+
+<http://hub.healthdata.gov/dataset/pistachio-product-recalls> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "pistachio-product-recalls" .
+
+<http://hub.healthdata.gov/dataset/pistachio-product-recalls-widget> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "pistachio-product-recalls-widget" .
+
+<http://hub.healthdata.gov/dataset/plainview-milk-cooperative> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "plainview-milk-cooperative" .
+
+<http://hub.healthdata.gov/dataset/plans-quality-compare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "plans-quality-compare" .
+
+<http://hub.healthdata.gov/dataset/products-developed-using-inventions> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "products-developed-using-inventions" .
+
+<http://hub.healthdata.gov/dataset/pubchem> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "pubchem" .
+
+<http://hub.healthdata.gov/dataset/pubchem-power-user-gateway> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "pubchem-power-user-gateway" .
+
+<http://hub.healthdata.gov/dataset/pubmed> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "pubmed" .
+
+<http://hub.healthdata.gov/dataset/quitnowtxt-text-messaging-library> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "quitnowtxt-text-messaging-library" .
+
+<http://hub.healthdata.gov/dataset/recalls> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "recalls" .
+
+<http://hub.healthdata.gov/dataset/records-schedule> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "records-schedule" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-1996> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-1996" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-1998> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-1998" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-1999> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-1999" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2000> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2000" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2001> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2001" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2002> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2002" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2003> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2003" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2004> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2004" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2005> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2005" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2006" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2007> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2007" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2009> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2009" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2010> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2010" .
+
+<http://hub.healthdata.gov/dataset/renal-dialysis-facility-medicare-cost-report-data-2011> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "renal-dialysis-facility-medicare-cost-report-data-2011" .
+
+<http://hub.healthdata.gov/dataset/repository-audit-reports> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "repository-audit-reports" .
+
+<http://hub.healthdata.gov/dataset/repository-evaluation-reports> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "repository-evaluation-reports" .
+
+<http://hub.healthdata.gov/dataset/rxnorm> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "rxnorm" .
+
+<http://hub.healthdata.gov/dataset/rxterms> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "rxterms" .
+
+<http://hub.healthdata.gov/dataset/second-national-survey-older> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "second-national-survey-older" .
+
+<http://hub.healthdata.gov/dataset/semantic-knowledge-representation> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "semantic-knowledge-representation" .
+
+<http://hub.healthdata.gov/dataset/shell-recalls> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "shell-recalls" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1995> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy1995" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1996> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy1996" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1997> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy1997" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1998> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy1998" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy1999> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy1999" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2000> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2000" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2001> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2001" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2003> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2003" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2004> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2004" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2006> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2006" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2007> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2007" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2010> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2010" .
+
+<http://hub.healthdata.gov/dataset/skilled-nursing-facility-medicare-cost-report-data-fy2011> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "skilled-nursing-facility-medicare-cost-report-data-fy2011" .
+
+<http://hub.healthdata.gov/dataset/state-cancer-profiles-site> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "state-cancer-profiles-site" .
+
+<http://hub.healthdata.gov/dataset/state-snapshots> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "state-snapshots" .
+
+<http://hub.healthdata.gov/dataset/statistics-booklet> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "statistics-booklet" .
+
+<http://hub.healthdata.gov/dataset/supplier-directory-provide> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "supplier-directory-provide" .
+
+<http://hub.healthdata.gov/dataset/temporary-assistance-needy> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "temporary-assistance-needy" .
+
+<http://hub.healthdata.gov/dataset/third-national-survey-older> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "third-national-survey-older" .
+
+<http://hub.healthdata.gov/dataset/toxmap-online-toxicology-maps> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "toxmap-online-toxicology-maps" .
+
+<http://hub.healthdata.gov/dataset/toxnet> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "toxnet" .
+
+<http://hub.healthdata.gov/dataset/unified-medical-language-system> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "unified-medical-language-system" .
+
+<http://hub.healthdata.gov/dataset/uniform-data-system> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "uniform-data-system" .
+
+<http://hub.healthdata.gov/dataset/updates-ambulatory-surgical> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "updates-ambulatory-surgical" .
+
+<http://hub.healthdata.gov/dataset/updates-outpatient-latest-payment> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "updates-outpatient-latest-payment" .
+
+<http://hub.healthdata.gov/dataset/updates-physician-latest-payment> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "updates-physician-latest-payment" .
+
+<http://hub.healthdata.gov/dataset/validation-reports> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "validation-reports" .
+
+<http://hub.healthdata.gov/dataset/visible-human-project> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "visible-human-project" .
+
+<http://hub.healthdata.gov/dataset/vitalstats> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "vitalstats" .
+
+<http://hub.healthdata.gov/dataset/voyager> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "voyager" .
+
+<http://hub.healthdata.gov/dataset/wallet-card> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wallet-card" .
+
+<http://hub.healthdata.gov/dataset/warning-letters> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "warning-letters" .
+
+<http://hub.healthdata.gov/dataset/wide-ranging-online-data-epidemiologic> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wide-ranging-online-data-epidemiologic" .
+
+<http://hub.healthdata.gov/dataset/wonder-aids-public-data> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-aids-public-data" .
+
+<http://hub.healthdata.gov/dataset/wonder-births> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-births" .
+
+<http://hub.healthdata.gov/dataset/wonder-births-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-births-1" .
+
+<http://hub.healthdata.gov/dataset/wonder-cancer-statistics> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-cancer-statistics" .
+
+<http://hub.healthdata.gov/dataset/wonder-cancer-statistics-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-cancer-statistics-1" .
+
+<http://hub.healthdata.gov/dataset/wonder-compressed-mortality> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-compressed-mortality" .
+
+<http://hub.healthdata.gov/dataset/wonder-daily-fine-particulate> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-daily-fine-particulate" .
+
+<http://hub.healthdata.gov/dataset/wonder-daily-fine-particulate-matter> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-daily-fine-particulate-matter" .
+
+<http://hub.healthdata.gov/dataset/wonder-daily-temperatures-heat> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-daily-temperatures-heat" .
+
+<http://hub.healthdata.gov/dataset/wonder-detailed-mortality-underlying> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-detailed-mortality-underlying" .
+
+<http://hub.healthdata.gov/dataset/wonder-mortality-infant-deaths> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-mortality-infant-deaths" .
+
+<http://hub.healthdata.gov/dataset/wonder-mortality-infants-death> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-mortality-infants-death" .
+
+<http://hub.healthdata.gov/dataset/wonder-mortality-multiple-cause> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-mortality-multiple-cause" .
+
+<http://hub.healthdata.gov/dataset/wonder-mortality-multiple-cause-death> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-mortality-multiple-cause-death" .
+
+<http://hub.healthdata.gov/dataset/wonder-mortality-underlying> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-mortality-underlying" .
+
+<http://hub.healthdata.gov/dataset/wonder-online-tuberculosis> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-online-tuberculosis" .
+
+<http://hub.healthdata.gov/dataset/wonder-online-tuberculosis-information> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-online-tuberculosis-information" .
+
+<http://hub.healthdata.gov/dataset/wonder-population-bridged-race> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-population-bridged-race" .
+
+<http://hub.healthdata.gov/dataset/wonder-population-bridged-race-july> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-population-bridged-race-july" .
+
+<http://hub.healthdata.gov/dataset/wonder-population-from-census> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-population-from-census" .
+
+<http://hub.healthdata.gov/dataset/wonder-population-from-census-1> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-population-from-census-1" .
+
+<http://hub.healthdata.gov/dataset/wonder-sexually-transmitted> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-sexually-transmitted" .
+
+<http://hub.healthdata.gov/dataset/wonder-sexually-transmitted-disease> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-sexually-transmitted-disease" .
+
+<http://hub.healthdata.gov/dataset/wonder-vaccine-adverse-event> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-vaccine-adverse-event" .
+
+<http://hub.healthdata.gov/dataset/wonder-vaccine-adverse-event-reporting> a datafaqs:CKANDataset,
+        dcat:Dataset;
+    dcterms:identifier "wonder-vaccine-adverse-event-reporting" .
+
