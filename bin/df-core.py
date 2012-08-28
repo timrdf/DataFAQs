@@ -181,7 +181,7 @@ elif type == 'datasets':
          # Embed some provenance about this script writing the file.
          f = open(outDir+'/dataset.ttl', 'a')
          f.write('\n')
-         f.write('#3> <> prov:wasAttributedTo [ foaf:name "df-core.py"; ] .')
+         f.write('#3> <> prov:wasAttributedTo [ foaf:name "df-core.py"; ] .\n')
          f.close()
    else:
       query = '''select distinct ?dataset where { ?dataset a dcat:Dataset . }'''
