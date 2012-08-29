@@ -191,7 +191,7 @@ fi
 ACCEPT_HEADER="Accept: text/turtle; application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6, */*; q=0.4"
-ACCEPT_HEADER="Accept: text/turtle,application/turtle,application/rdf+xml;q=0.8,text/plain;q=0.7,*/*;q=.5" # Alvaro-approved.
+ACCEPT_HEADER="Accept: text/turtle,application/turtle,application/rdf+xml;q=0.8,text/plain;q=0.7,*/*;q=0.5" # Alvaro-approved.
 ACCEPT_HEADER="Accept: application/rdf+xml, text/rdf;q=0.6, */*;q=0.1" # This is what rapper uses.
 
 # # # #
@@ -225,7 +225,9 @@ if [ "$epoch_existed" != "true" ]; then
       datasets_input=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $2}' | head -1`
       datasets_service=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $1}' | head -1`
 
+      # Referencers accept POSTs of the dataset and annotate with rdfs:seeAlso that should be requested.
       df-core.py $epochDir/epoch.ttl.rdf dataset-referencers                                              > $epochDir/referencers.csv
+      # Augmenters accept POSTs of the dataset and annotate directly.
       df-core.py $epochDir/epoch.ttl.rdf dataset-augmenters                                               > $epochDir/augmenters.csv
    fi
 
@@ -545,9 +547,9 @@ if [ "$epoch_existed" != "true" ]; then
             for referencer in `cat $epochDir/referencers.csv`; do 
                source                                                                                                              get-references-$r.sh
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose references-$r`                                     # references-$r
-               echo $file
-               which rapper
-               rapper -g -g -c $file
+               #echo $file
+               #which rapper
+               #rapper -q -g -c $file
                if [ `void-triples.sh $file` -gt 0 ]; then
                   rapper -q -g -o ntriples $file                                                                                >> references.nt
                fi
@@ -593,7 +595,7 @@ if [ "$epoch_existed" != "true" ]; then
                file=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $file`                                             # reference-{1,2,3,...}.{ttl,rdf,nt}
                triples=`void-triples.sh $file`
                mime=`guess-syntax.sh --inspect "$file" mime`
-               head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"     "$0" ("triples" "mime" triples)"}'
+               head -1 $file | awk -v indent="$indent" -v triples=$triples -v mime=$mime '{print indent"     "substr($0,1,60)" ("triples" "mime" triples)"}'
                if (( $triples > 0 )); then
                   rapper -q -g -o turtle $file                                                                                  >> post.ttl
                fi
