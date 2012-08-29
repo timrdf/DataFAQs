@@ -73,16 +73,16 @@ if [ "$install_it" == "y" ]; then
    echo sudo easy_install -U surf.sparql_protocol
    sudo easy_install -U surf.sparql_protocol
 
-   echo
-   echo -n "Try to install allegro graph .py? (y/N) "
-   read -u 1 install_it
-   if [ "$install_it" == "y" ]; then
-      echo WARNING: AG is bunk
+   #echo
+   #echo -n "Try to install allegro graph .py? (y/N) "
+   #read -u 1 install_it
+   #if [ "$install_it" == "y" ]; then
+   #   echo WARNING: AG is bunk
       #echo sudo easy_install -U surf.allegro_franz
       #sudo easy_install -U surf.allegro_franz
       # Still need allegrograph... :-(
       # apt-get install python-cjson python-pycurl
-   fi
+   #fi
 
    echo
    echo -n "Try to install ckanclient? (y/N) "
