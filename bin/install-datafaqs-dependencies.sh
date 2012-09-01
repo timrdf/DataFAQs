@@ -61,7 +61,7 @@ if [ "$install_it" == "y" ]; then
    echo sudo easy_install pyparsing # TODO: consider the dependency chain; figure out which are already done by sadi*.egg above.
    sudo easy_install pyparsing
 
-   #echo sudo easy_install rdfextras
+   #echo sudo easy_install rdfextras # still got error even after installing sadi.python
    #sudo easy_install rdfextras
 
    #echo sudo easy_install -U rdflib==3.2.0
