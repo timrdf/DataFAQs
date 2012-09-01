@@ -66,3 +66,11 @@ description='''
             endpoint = 'http://logd.tw.rpi.edu/sparql')
 
 print re.sub('^\s','',description,1)
+
+print '#3> <> prov:wasGeneratedBy [ '
+print '#3>    dcterms:description "'+re.sub('^.*/','',sys.argv[0])+' '+sys.argv[1]+'";'
+print '#3>    prov:qualifiedAssociation ['
+print '#3>       a prov:Association;'
+print '#3>       prov:hadPlan <https://raw.github.com/timrdf/DataFAQs/master/bin/df-SPARQLQuery.py>;'
+print '#3>    ];'
+print '#3> ]; .'
