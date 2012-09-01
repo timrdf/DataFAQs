@@ -1,0 +1,42 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :         <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/conversion_AbstractDatasets.ttl#> .
+
+:apply
+   a datafaqs:QueryToApply;
+   datafaqs:query   <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/conversion_AbstractDatasets.rq>;
+   datafaqs:dataset :dataset;
+.
+
+<https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/via-sparql-query-materials/sample-inputs/conversion_AbstractDatasets.rq>
+   a datafaqs:SPARQLQuery;
+   rdfs:comment "One could resolve the URI for this query, or use the given rdf:value";
+   rdf:value
+"""prefix conversion: <http://purl.org/twc/vocab/conversion/>
+
+select distinct ?dataset 
+where {
+  ?dataset a conversion:AbstractDataset
+}
+""";
+.
+
+:dataset
+   a sd:Dataset;
+   rdfs:comment "We want to query the entire endpoint.";
+. 
+
+:sparql-service
+   a sd:Service; 
+   sd:availableGraphDescriptions :dataset;
+   sd:endpoint  <http://logd.tw.rpi.edu/sparql>;
+.
+#3> <> prov:wasGeneratedBy [ 
+#3>    dcterms:description "df-SPARQLQuery.py conversion_AbstractDatasets.rq@http://aquarius.tw.rpi.edu/projects/healthdata/sparql";
+#3>    prov:qualifiedAssociation [
+#3>       a prov:Association;
+#3>       prov:hadPlan <https://raw.github.com/timrdf/DataFAQs/master/bin/df-SPARQLQuery.py>;
+#3>    ];
+#3> ]; .

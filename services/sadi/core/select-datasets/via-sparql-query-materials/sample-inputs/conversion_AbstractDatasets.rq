@@ -1,0 +1,6 @@
+prefix conversion: <http://purl.org/twc/vocab/conversion/>
+
+select distinct ?dataset 
+where {
+  ?dataset a conversion:AbstractDataset
+}
