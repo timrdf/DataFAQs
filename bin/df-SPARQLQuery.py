@@ -16,6 +16,7 @@
 #    df-SPARQLQuery.py csv2rdf4lod-dataset-samples-in-endpoint.rq@http://NAMED-GRAPH@http://logd.tw.rpi.edu/sparql
 #                      ^-query (should not have where graph?x{})  ^-graph name       ^-endpoint
 #
+# TODO: write to file with consistent name that adds the endpoint to it, align the file URLs.
 # see https://github.com/timrdf/DataFAQs/issues/111
 
 import sys, re
