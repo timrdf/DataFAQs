@@ -1,0 +1,45 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<core/augment-datasets/sameas-org> a datafaqs:SADIService , datafaqs:CoreService  .
+<core/augment-datasets/by-reference/with-preferred-uri-and-ckan-meta-void> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:DatasetReferencer  .
+<core/augment-datasets/by-reference/with-rdf-extension> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:DatasetReferencer  .
+<core/select-datasets/by-ckan-group> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:DatasetSelector  .
+<core/select-datasets/by-ckan-installation> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:DatasetSelector  .
+<core/select-datasets/by-ckan-tag> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:DatasetSelector  .
+<core/select-datasets/identity> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:DatasetSelector  .
+<core/select-datasets/via-sparql-query> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:DatasetSelector  .
+<core/select-faqts/identity> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:FAqTSelector  .
+<core/select-faqts/via-sparql-query> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:FAqTSelector  .
+<core/select-faqts/visko-planner> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:FAqTSelector  .
+<core/select-faqts/towards/ckan-group> a datafaqs:SADIService , datafaqs:CoreService , datafaqs:FAqTSelector  .
+<faqt/completeness> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/consistensy> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/internet-domain> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/predicate-counter> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/redirect-loop> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/resolvability> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/triple-count-accuracy> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/vocabulary-count> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/void-properties> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/void-triples> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/access/in-sparql-endpoint> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/access/lena-example> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/access/void-datadump> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/connected/references-instance-hub> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/connected/void-linkset> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/datascape/size-deprecated> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/datascape/size> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/discuss/contributor-email> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/discuss/via-hypermail/groups> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/discuss/via-hypermail/message> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/discuss/via-hypermail/per-group> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/discuss/via-hypermail/per-month> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/lodcloud/max-1-topic-tag> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/metadata/logd-catalog-listing> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/provenance/named-graph-derivation> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/sparql-service-description/named-graphs> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/sparql-service-description/namedgraphs> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/typing/instances-are-explicitly-typed> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/vocabulary/class-and-predicate-capitalization> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/vocabulary/fake-goef-coverage> a datafaqs:SADIService , datafaqs:FAqTService  .
+<faqt/vocabulary/vocabulary-resolves-to-description> a datafaqs:SADIService , datafaqs:FAqTService  .

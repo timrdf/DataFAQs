@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:datafaqs="http://purl.org/twc/vocab/datafaqs#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/sameas-org">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/sameas-org">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/by-reference/with-preferred-uri-and-ckan-meta-void">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/by-reference/with-preferred-uri-and-ckan-meta-void">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/by-reference/with-preferred-uri-and-ckan-meta-void">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#DatasetReferencer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/by-reference/with-rdf-extension">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/by-reference/with-rdf-extension">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/augment-datasets/by-reference/with-rdf-extension">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#DatasetReferencer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#DatasetSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-installation">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-installation">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-installation">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#DatasetSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-tag">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-tag">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/by-ckan-tag">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#DatasetSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/identity">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/identity">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/identity">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#DatasetSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/via-sparql-query">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/via-sparql-query">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-datasets/via-sparql-query">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#DatasetSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/identity">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/identity">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/identity">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/via-sparql-query">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/via-sparql-query">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/via-sparql-query">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/visko-planner">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/visko-planner">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/visko-planner">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/towards/ckan-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/towards/ckan-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#CoreService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/core/select-faqts/towards/ckan-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTSelector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/completeness">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/completeness">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/consistensy">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/consistensy">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/internet-domain">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/internet-domain">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/predicate-counter">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/predicate-counter">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/redirect-loop">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/redirect-loop">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/resolvability">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/resolvability">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/triple-count-accuracy">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/triple-count-accuracy">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary-count">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary-count">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/void-properties">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/void-properties">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/void-triples">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/void-triples">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/access/in-sparql-endpoint">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/access/in-sparql-endpoint">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/access/lena-example">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/access/lena-example">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/access/void-datadump">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/access/void-datadump">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/connected/references-instance-hub">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/connected/references-instance-hub">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/connected/void-linkset">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/connected/void-linkset">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/datascape/size-deprecated">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/datascape/size-deprecated">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/datascape/size">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/datascape/size">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/contributor-email">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/contributor-email">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/groups">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/groups">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/message">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/message">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/per-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/per-group">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/per-month">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/discuss/via-hypermail/per-month">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/lodcloud/max-1-topic-tag">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/lodcloud/max-1-topic-tag">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/metadata/logd-catalog-listing">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/metadata/logd-catalog-listing">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/provenance/named-graph-derivation">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/provenance/named-graph-derivation">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/sparql-service-description/named-graphs">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/sparql-service-description/named-graphs">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/sparql-service-description/namedgraphs">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/sparql-service-description/namedgraphs">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/typing/instances-are-explicitly-typed">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/typing/instances-are-explicitly-typed">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary/class-and-predicate-capitalization">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary/class-and-predicate-capitalization">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary/fake-goef-coverage">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary/fake-goef-coverage">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary/vocabulary-resolves-to-description">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#SADIService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/lebot/afrl/phd/projects/DataFAQs/github/DataFAQs/services/sadi/faqt/vocabulary/vocabulary-resolves-to-description">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#FAqTService"/>
+  </rdf:Description>
+</rdf:RDF>
