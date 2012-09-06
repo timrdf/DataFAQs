@@ -1,0 +1,62 @@
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix con:      <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix moat:     <http://moat-project.org/ns#> .
+@prefix ov:       <http://open.vocab.org/terms/> .
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix void:     <http://rdfs.org/ns/void#> .
+@prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+
+<http://healthdata.tw.rpi.edu/dataset/food-recalls>
+   a datafaqs:CKANDataset;
+   dcterms:identifier "food-recalls";
+   #con:preferredURI <http://purl.org/twc/arrayexpress/E-AFMX-1>;
+
+   #dcterms:title "Transcription profiling of human, chimp and mouse brain";
+   #ov:shortName "E-AFMX-1";
+
+   #dcterms:description "description";
+
+   #void:triples 3014;
+
+   #dcterms:contributor [
+   #   foaf:mbox <mailto:mccusj@rpi.edu>;
+   #   foaf:name "James McCusker";
+   #];
+
+   #dcterms:creator [
+   #   foaf:mbox <mailto:endre.anderssen@gmail.com>;
+   #   foaf:name "Endre Anderssen";
+   #];
+
+   #dcterms:isPartOf <http://thedatahub.org/group/arrayexpress>;
+
+   #void:vocabulary <http://www.ebi.ac.uk/efo/>,
+   #                <http://purl.obolibrary.org/obo/>,
+   #                <http://www.w3.org/ns/prov#>;
+
+   #moat:taggedWithTag <http://thedatahub.org/tag/lod>; # multiple ok.
+
+   prov:alternateOf               # This is not tied into add-metadata.
+      <http://hub.healthdata.gov/dataset/food-recalls>,                            # The original entry
+      <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls>; # Our RDF version of it.
+
+   #void:sparqlEndpoint <http://purl.org/twc/arrayexpress/virtuoso/sparql>; # Not appropriate on a non-RDF dataset.
+   dcat:distribution [
+      a sd:NamedGraph;
+      sd:name         <http://healthdata.tw.rpi.edu/lod/source/hub-healthdata-gov/dataset/food-recalls/version/2012-May-08>;
+      #sd:graph        <>; # We're not naming the set of triples.
+      prov:atLocation <http://purl.org/twc/arrayexpress/virtuoso/sparql>; 
+   ];
+.
+<http://purl.org/twc/arrayexpress/virtuoso/sparql> a conversion:ServiceEndpoint .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls>
+   a void:Dataset, conversion:AbstractDataset;
+.
+
+#<http://thedatahub.org/group/arrayexpress> a datafaqs:CKANGroup .
+#<http://thedatahub.org/tag/lod>            a moat:Tag; moat:name "lod" .
