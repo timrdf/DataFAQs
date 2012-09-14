@@ -51,8 +51,8 @@ class TEMPLATE-CLASS-NAME(faqt.Service):
       #    aligns with the deployment location \/
       #
       #                 DATAFAQS_BASE_URI  +  '/datafaqs/'  +  servicePath  +  '/'  + self.serviceNameText
-      faqt.Service.__init__(self, servicePath = 'services/sadi') # TEMPLATE: change to something like 'services/sadi/faqt/connected/' to get free provenance.
-
+      faqt.Service.__init__(self, servicePath = 'services/sadi') # TEMPLATE: used to get free provenance.
+                                                                 # Use: pwd | sed 's/^.*services/services/'
    def getOrganization(self):
       result                      = self.Organization()
       result.mygrid_authoritative = True
@@ -87,6 +87,9 @@ class TEMPLATE-CLASS-NAME(faqt.Service):
       # Walk through all Things in the input graph (using SuRF):
       # Thing = input.session.get_class(ns.OWL['Thing'])
       # for person in Thing.all():
+
+      # Create a calss in the output graph:
+      # Document = output.session.get_class(ns.FOAF['Document'])
 
       if True:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
