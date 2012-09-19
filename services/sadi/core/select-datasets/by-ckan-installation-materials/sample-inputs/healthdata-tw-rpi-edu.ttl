@@ -1,0 +1,3 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://healthdata.tw.rpi.edu/hub> a datafaqs:CKAN .

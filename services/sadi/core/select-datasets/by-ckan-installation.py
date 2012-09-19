@@ -100,6 +100,7 @@ class DatasetsByCKANInstallation(faqt.Service):
    def process(self, input, output):
 
       Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
+      Agent   = output.session.get_class(ns.PROV['Agent'])
 
       print 'processing ' + input.subject
       base = input.subject.replace('/$','') 
@@ -113,6 +114,8 @@ class DatasetsByCKANInstallation(faqt.Service):
          dataset.dcterms_identifier = identifier
          dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
          dataset.rdf_type.append(ns.DCAT['Dataset'])
+         attribution = Agent(re.sub('(http://[^/]*)/.*$','\\1',dataset.subject))
+         dataset.prov_wasAssociatedWith.append(attribution)
          dataset.save()
          output.dcterms_hasPart.append(dataset)
          output.save()
