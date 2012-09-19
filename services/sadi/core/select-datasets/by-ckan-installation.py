@@ -115,7 +115,7 @@ class DatasetsByCKANInstallation(faqt.Service):
          dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
          dataset.rdf_type.append(ns.DCAT['Dataset'])
          attribution = Agent(re.sub('(http://[^/]*)/.*$','\\1',dataset.subject))
-         dataset.prov_wasAssociatedWith.append(attribution)
+         dataset.prov_wasAttributedTo.append(attribution)
          dataset.save()
          output.dcterms_hasPart.append(dataset)
          output.save()
