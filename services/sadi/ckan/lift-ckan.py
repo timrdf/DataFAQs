@@ -109,6 +109,9 @@ class LiftCKAN(faqt.CKANReader):
          if 'title' in dataset:
             output.dcterms_title = dataset['title']
 
+         if 'notes' in dataset:
+            output.dcterms_description = dataset['notes']
+
          #
          # Process Resources
          #
