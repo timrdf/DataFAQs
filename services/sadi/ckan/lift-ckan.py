@@ -104,6 +104,12 @@ class LiftCKAN(faqt.CKANReader):
          print dataset
 
          #
+         # Process Attributes
+         #
+         if 'title' in dataset:
+            output.dcterms_title = dataset['title']
+
+         #
          # Process Resources
          #
          Thing   = output.session.get_class(ns.OWL['Thing'])

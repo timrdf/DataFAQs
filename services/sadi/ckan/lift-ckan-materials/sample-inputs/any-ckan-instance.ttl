@@ -10,12 +10,21 @@
 
 <http://hub.healthdata.gov/dataset/hospital-compare>
    a datafaqs:CKANDataset;
-   datafaqs:ckan_identifier "hospital-compare";
    rdfs:comment "Omitting datafaqs:ckan_identifier will fall back to parsing the URI.";
    prov:wasAttributedTo <http://hub.healthdata.gov>;
 . 
 
+<http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home>
+   a datafaqs:CKANDataset;
+   rdfs:comment "Omitting datafaqs:ckan_identifier will fall back to parsing the URI.";
+   prov:wasAttributedTo <http://healthdata.tw.rpi.edu/hub>;
+. 
+
 <http://hub.healthdata.gov> 
+   a datafaqs:CKAN;
+   rdfs:comment "If the CKANDataset was attributed to a CKAN, ask that CKAN about it.";
+.
+<http://healthdata.tw.rpi.edu/hub> 
    a datafaqs:CKAN;
    rdfs:comment "If the CKANDataset was attributed to a CKAN, ask that CKAN about it.";
 .
