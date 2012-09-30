@@ -35,6 +35,7 @@ ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
+ns.register(prov='http://www.w3.org/ns/prov#')
 
 # The Service itself
 class LiftCKAN(faqt.CKANReader):
@@ -81,6 +82,13 @@ class LiftCKAN(faqt.CKANReader):
 
       print 'processing ' + input.subject
 
+      ckan = self.ckan
+      if len(input.prov_wasAttributedTo) > 0:
+         agent = input.prov_wasAttributedTo.first
+         print 'CKAN: ' + agent.subject
+         if ns.DATAFAQS['CKAN'] in agent.rdf_type:
+            ckan = ckanclient.CkanClient(input.prov_wasAttributedTo.first.subject+'/api') 
+   
       ckan_id = self.getCKANIdentiifer(input)
       print 'ckan_id ' + ckan_id
 
@@ -88,8 +96,8 @@ class LiftCKAN(faqt.CKANReader):
       # GET the current dataset metadata listing from CKAN.
       dataset = {}
       try:
-         self.ckan.package_entity_get(ckan_id)
-         dataset = self.ckan.last_message
+         ckan.package_entity_get(ckan_id)
+         dataset = ckan.last_message
 
          print dataset.keys()
          print

@@ -1,0 +1,50 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pim: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<#service-55060a6fc808f0c6b7ac51b9a7fdcc65bd2c90a717fc1dff4302ea4f> a sd:Service;
+    sd:endpoint <http://logd.tw.rpi.edu/sparql> .
+
+<http://hub.healthdata.gov/dataset/hospital-compare> a datafaqs:CKANDataset .
+
+<#linkset-dbpedia-66ff8c1194aebf93e4d793d96c9357cefee995821d0dc06438aa5d8c> a void:Linkset;
+    void:target <http://thedatahub.org/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>;
+    void:triples 52 .
+
+<#linkset-geonames-semantic-web-169072b7427508465da0718c0ea3b4c72a6c60803f9c3d991e1803ec> a void:Linkset;
+    void:target <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
+        <http://thedatahub.org/dataset/geonames-semantic-web>;
+    void:triples 50 .
+
+<#linkset-govtrack-2c8e196100b12b0b8d6c53f6c945d8b98aab7c7a23621fd5a7d72d53> a void:Linkset;
+    void:target <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
+        <http://thedatahub.org/dataset/govtrack>;
+    void:triples 52 .
+
+<#named-graph-c71c409f-2da1-4ec4-983c-63494963fdb6> a sd:NamedGraph;
+    prov:atLocation <http://logd.tw.rpi.edu/sparql>;
+    sd:name <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29> .
+
+<http://logd.tw.rpi.edu/sparql> a owl:Thing;
+    dcterms:title "Rensselaer LOGD SPARQL Endpoint" .
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> a datafaqs:CKANDataset;
+    ov:shortName "farmers-markets-geographic-data-united-states";
+    void:sparqlEndpoint <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.e1.sample.ttl>,
+        <http://logd.tw.rpi.edu/sparql>;
+    void:subset <#linkset-dbpedia-66ff8c1194aebf93e4d793d96c9357cefee995821d0dc06438aa5d8c>,
+        <#linkset-geonames-semantic-web-169072b7427508465da0718c0ea3b4c72a6c60803f9c3d991e1803ec>,
+        <#linkset-govtrack-2c8e196100b12b0b8d6c53f6c945d8b98aab7c7a23621fd5a7d72d53>;
+    void:triples 130005;
+    void:uriSpace "http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29/";
+    pim:preferredURI <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29>;
+    dcat:distribution <#named-graph-c71c409f-2da1-4ec4-983c-63494963fdb6> .
+

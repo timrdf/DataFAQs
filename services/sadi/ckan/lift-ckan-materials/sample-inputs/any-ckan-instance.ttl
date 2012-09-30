@@ -1,0 +1,21 @@
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+   a datafaqs:CKANDataset;
+   datafaqs:ckan_identifier "farmers-markets-geographic-data-united-states";
+   rdfs:comment "If the CKAN Dataset is not attributed to a CKAN, ask thedatahub.org.";
+.
+
+<http://hub.healthdata.gov/dataset/hospital-compare>
+   a datafaqs:CKANDataset;
+   datafaqs:ckan_identifier "hospital-compare";
+   rdfs:comment "Omitting datafaqs:ckan_identifier will fall back to parsing the URI.";
+   prov:wasAttributedTo <http://hub.healthdata.gov>;
+. 
+
+<http://hub.healthdata.gov> 
+   a datafaqs:CKAN;
+   rdfs:comment "If the CKANDataset was attributed to a CKAN, ask that CKAN about it.";
+.
