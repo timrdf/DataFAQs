@@ -1,0 +1,62 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pim: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<#service-55060a6fc808f0c6b7ac51b9a7fdcc65bd2c90a717fc1dff4302ea4f> a sd:Service;
+    sd:endpoint <http://logd.tw.rpi.edu/sparql> .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home> a datafaqs:CKANDataset;
+    dcterms:description "The CMS 2010 BSA HHA Beneficiary PUF originates from a 5% simple random sample of beneficiaries drawn (without replacement) from the 100% Beneficiary Summary File for reference year 2010. The sample that is used for the CMS 2010 BSA HHA Beneficiary PUF is disjoint from the existing 5% CMS research sample in the sense that there is no overlap in terms of the beneficiaries in the CMS 2010 BSA HHA Beneficiary PUF and the 5% CMS research sample.";
+    dcterms:title "2010 Basic Stand Alone Home Health Agency Beneficiary PUF" .
+
+<http://hub.healthdata.gov/dataset/hospital-compare> a datafaqs:CKANDataset;
+    dcterms:description "The data that is used by the Hospital Compare tool can be downloaded for public use. This functionality is primarily used by health policy researchers and the media. The data provided includes process of care, mortality, and readmission quality measures. The collection period for the measures is generally 12 months. However, some measures may be based upon fewer than 12 months. Generally, the Hospital Compare quality measures are refreshed the third month of each quarter.";
+    dcterms:title "Hospital Compare" .
+
+<#linkset-dbpedia-66ff8c1194aebf93e4d793d96c9357cefee995821d0dc06438aa5d8c> a void:Linkset;
+    void:target <http://thedatahub.org/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>;
+    void:triples 52 .
+
+<#linkset-geonames-semantic-web-169072b7427508465da0718c0ea3b4c72a6c60803f9c3d991e1803ec> a void:Linkset;
+    void:target <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
+        <http://thedatahub.org/dataset/geonames-semantic-web>;
+    void:triples 50 .
+
+<#linkset-govtrack-2c8e196100b12b0b8d6c53f6c945d8b98aab7c7a23621fd5a7d72d53> a void:Linkset;
+    void:target <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
+        <http://thedatahub.org/dataset/govtrack>;
+    void:triples 52 .
+
+<#named-graph-c71c409f-2da1-4ec4-983c-63494963fdb6> a sd:NamedGraph;
+    prov:atLocation <http://logd.tw.rpi.edu/sparql>;
+    sd:name <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29> .
+
+<http://logd.tw.rpi.edu/sparql> a owl:Thing;
+    dcterms:title "Rensselaer LOGD SPARQL Endpoint" .
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> a datafaqs:CKANDataset;
+    ov:shortName "farmers-markets-geographic-data-united-states";
+    dcterms:description """Longitude and latitude, state, address, name, and zip code of Farmers Markets in the United States, converted to RDF format.
+
+References [154 URIs](http://logd.tw.rpi.edu/sparql.php?query-option=text&query=PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0D%0APREFIX+conversion%3A+%3Chttp%3A%2F%2Fpurl.org%2Ftwc%2Fvocab%2Fconversion%2F%3E%0D%0ASELECT+distinct+%3Fexternal%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Chttp%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fversion%2F2011-Nov-29%3E++%7B%0D%0A++++%3Flocal+owl%3AsameAs+%3Fexternal%0D%0A++%7D%0D%0A%7D%0D%0Aorder+by+%3Fexternal&service-uri=&output=html&callback=&tqx=&tp=) in DBPedia, GovTrack, and Geonames.
+
+[7,223 farmers market URIs](http://logd.tw.rpi.edu/sparql.php?query-option=text&query=PREFIX+conversion%3A+%3Chttp%3A%2F%2Fpurl.org%2Ftwc%2Fvocab%2Fconversion%2F%3E%0D%0APREFIX+ds4383_vocab%3A+%3Chttp%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fvocab%2F%3E%0D%0ASELECT+distinct+%3Fmarket%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Chttp%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fversion%2F2011-Nov-29%3E+%7B%0D%0A++++%3Fmarket+a+ds4383_vocab%3AFarmersMarket+%0D%0A++%7D%0D%0A%7Dorder+by+%3Fmarket&service-uri=&output=html&callback=&tqx=&tp=) dereference to RDF/XML (e.g., see [vapour report](http://validator.linkeddata.org/vapour?vocabUri=http%3A%2F%2Flogd.tw.rpi.edu%2Fsource%2Fdata-gov%2Fdataset%2F4383%2Fversion%2F2011-Nov-29%2FfarmersMarket_1019&classUri=http%3A%2F%2F&propertyUri=http%3A%2F%2F&instanceUri=http%3A%2F%2F&defaultResponse=dontmind&userAgent=vapour.sourceforge.net) for [farmersMarket_1019](http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29/farmersMarket_1019)).""";
+    dcterms:title "Farmers Markets Geographic Data (United States)";
+    void:sparqlEndpoint <http://logd.tw.rpi.edu/source/data-gov/file/4383/version/2011-Nov-29/conversion/data-gov-4383-2011-Nov-29.e1.sample.ttl>,
+        <http://logd.tw.rpi.edu/sparql>;
+    void:subset <#linkset-dbpedia-66ff8c1194aebf93e4d793d96c9357cefee995821d0dc06438aa5d8c>,
+        <#linkset-geonames-semantic-web-169072b7427508465da0718c0ea3b4c72a6c60803f9c3d991e1803ec>,
+        <#linkset-govtrack-2c8e196100b12b0b8d6c53f6c945d8b98aab7c7a23621fd5a7d72d53>;
+    void:triples 130005;
+    void:uriSpace "http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29/";
+    pim:preferredURI <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29>;
+    dcat:distribution <#named-graph-c71c409f-2da1-4ec4-983c-63494963fdb6> .
+
