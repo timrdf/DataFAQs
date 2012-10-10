@@ -1,28 +1,38 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/twc/vocab/datafaqs#ckan_identifier> .
+_:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://purl.org/twc/vocab/datafaqs#CKANDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#CKANDataset> <http://www.w3.org/2000/01/rdf-schema#label> "CKAN Dataset" .
 <http://purl.org/twc/vocab/datafaqs#CKANDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A dataset listed at thedatahub.org, whether or not it is encoded in RDF or is part of the lodcloud group." .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://moat-project.org/ns#taggedWith> .
-_:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<http://purl.org/twc/vocab/datafaqs#Tagged> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#Tagged> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+<http://purl.org/twc/vocab/datafaqs#CKANDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+<http://purl.org/twc/vocab/datafaqs#NotCKANDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#NotCKANDataset> <http://www.w3.org/2000/01/rdf-schema#label> "NotCKANDataset" .
+<http://purl.org/twc/vocab/datafaqs#NotCKANDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Does not exist in CKAN." .
+<http://purl.org/twc/vocab/datafaqs#NotCKANDataset> <http://www.w3.org/2002/07/owl#complementOf> <http://purl.org/twc/vocab/datafaqs#CKANDataset> .
+<http://purl.org/twc/vocab/datafaqs#ckan_identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#DatatypeProperty> .
+<http://purl.org/twc/vocab/datafaqs#ckan_identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "e.g. arrayexpress_e-mtab-104 in http://thedatahub.org/dataset/arrayexpress_e-mtab-104" .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/modified> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://moat-project.org/ns#taggedWith> .
 _:genid2 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://purl.org/twc/vocab/datafaqs#Tagged> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#Tagged> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/modified> .
+_:genid3 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://purl.org/twc/vocab/datafaqs#Modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#Modified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#CKANDataset> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Tagged> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+<http://purl.org/twc/vocab/datafaqs#Modified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#CKANDataset> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Tagged> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
 <http://purl.org/twc/vocab/datafaqs#TaggedCKANDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#TaggedCKANDataset> <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#CKANDataset> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Modified> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+<http://purl.org/twc/vocab/datafaqs#TaggedCKANDataset> <http://www.w3.org/2002/07/owl#intersectionOf> _:genid5 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#CKANDataset> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Modified> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
 <http://purl.org/twc/vocab/datafaqs#ModifiedCKANDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#ModifiedCKANDataset> <http://www.w3.org/2002/07/owl#intersectionOf> _:genid6 .
+<http://purl.org/twc/vocab/datafaqs#ModifiedCKANDataset> <http://www.w3.org/2002/07/owl#intersectionOf> _:genid7 .
 <http://purl.org/twc/vocab/datafaqs#namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/twc/vocab/datafaqs#namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/datafaqs#CKANDataset> .
 <http://purl.org/twc/vocab/datafaqs#namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "The namespace of instances within this lodcloud bubble." .
@@ -30,32 +40,32 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
 <http://purl.org/twc/vocab/datafaqs#namespace> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/wiki/TaskForces/CommunityProjects/LinkingOpenData/DataSets/CKANmetainformation> .
 <http://purl.org/twc/vocab/datafaqs#CKANGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#CKANGroup> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://thedatahub.org/group/lodcloud> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
-_:genid7 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<http://purl.org/twc/vocab/datafaqs#Composite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#Composite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#triples> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
 _:genid8 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://purl.org/twc/vocab/datafaqs#Composite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#Composite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#triples> .
+_:genid9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://purl.org/twc/vocab/datafaqs#SizedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
-<http://purl.org/twc/vocab/datafaqs#SizedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+<http://purl.org/twc/vocab/datafaqs#SizedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 <http://purl.org/twc/vocab/datafaqs#internet_domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/twc/vocab/datafaqs#internet_domain> <http://www.w3.org/2000/01/rdf-schema#comment> "A PLD is an internet domain that requires payment at a generic top-level domain (gTLD) or country code top-level domain (ccTLD) registrar. PLDs are usually one level below the corresponding gTLD (e.g., dbpedia.org vs. org), with certain exceptions for cc-TLDs (e.g., ebay.co.uk, det.wa.edu.au)" .
 <http://purl.org/twc/vocab/datafaqs#internet_domain> <http://www.w3.org/2000/01/rdf-schema#comment> "A pay-level domain (PLD) is any domain that requires payment at a TLD or cc-TLD registrar. PLDs are usually one level below the correspond- ing TLD (e.g., amazon.com), with certain exceptions for cc- TLDs (e.g., ebay.co.uk, det.wa.edu.au)" .
 <http://purl.org/twc/vocab/datafaqs#internet_domain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dx.doi.org/10.1145/1367497.1367556> .
 <http://purl.org/twc/vocab/datafaqs#internet_domain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://iswc2010.semanticweb.org/pdf/318.pdf> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/twc/vocab/datafaqs#internet_domain> .
-_:genid9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/twc/vocab/datafaqs#internet_domain> .
+_:genid10 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://purl.org/twc/vocab/datafaqs#DatasetWithInternetDomain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
-<http://purl.org/twc/vocab/datafaqs#DatasetWithInternetDomain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Satisfactory> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+<http://purl.org/twc/vocab/datafaqs#DatasetWithInternetDomain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/twc/vocab/datafaqs#Satisfactory> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
 <http://purl.org/twc/vocab/datafaqs#Evaluated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#Evaluated> <http://www.w3.org/2002/07/owl#disjointUnion> _:genid11 .
+<http://purl.org/twc/vocab/datafaqs#Evaluated> <http://www.w3.org/2002/07/owl#disjointUnion> _:genid12 .
 <http://purl.org/twc/vocab/datafaqs#Satisfactory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#Satisfactory> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> .
 <http://purl.org/twc/vocab/datafaqs#Unsatisfactory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -67,30 +77,30 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
 <http://purl.org/twc/vocab/datafaqs#FAqTService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#FAqTService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.mygrid.org.uk/mygrid-moby-service#serviceDescription> .
 <http://purl.org/twc/vocab/datafaqs#FAqTService> <http://www.w3.org/2000/01/rdf-schema#comment> "A SADI service that evaluates a given dataset and provides an RDF-encoded report using the FAqT Vocabulary." .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
-_:genid12 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/twc/vocab/datafaqs#FAqTService> .
-<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
-_:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/twc/vocab/datafaqs#FAqTService> .
+<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+<http://purl.org/twc/vocab/datafaqs#FAqTServiceCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rdfs.org/ns/void#Dataset> .
-<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#dataDump> .
-_:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rdfs.org/ns/void#Dataset> .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+<http://purl.org/twc/vocab/datafaqs#DatasetCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#dataDump> .
+_:genid17 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
-<http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+<http://purl.org/twc/vocab/datafaqs#DatasetWithDump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
 <http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/datafaqs#QueryToApply> .
 <http://purl.org/twc/vocab/datafaqs#query> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/twc/vocab/datafaqs#SPARQLQuery> .
@@ -123,6 +133,11 @@ _:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 <http://purl.org/twc/vocab/datafaqs#DatasetSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/datafaqs#CoreService> .
 <http://purl.org/twc/vocab/datafaqs#DatasetReferencer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#DatasetReferencer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/datafaqs#CoreService> .
+<http://purl.org/twc/vocab/datafaqs#DatasetReferencer> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that provides links to additional metadata for the given dataset." .
+<http://purl.org/twc/vocab/datafaqs#DatasetAugmenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetAugmenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/datafaqs#CoreService> .
+<http://purl.org/twc/vocab/datafaqs#DatasetAugmenter> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that provides additional metadata for the given dataset." .
+<http://purl.org/twc/vocab/datafaqs#DatasetAugmenter> <http://www.w3.org/2000/01/rdf-schema#comment> "Augmenter is a kind of FAqT evaluation service whose results are available for all other evalaution services; this is probably better implemented with proper service composition." .
 <http://purl.org/twc/vocab/datafaqs#SourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#SourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
 <http://purl.org/twc/vocab/datafaqs#Epoch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -149,6 +164,8 @@ _:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 <http://purl.org/twc/vocab/datafaqs#DatasetReferencing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#DatasetReferencing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
 <http://purl.org/twc/vocab/datafaqs#DatasetReferencing> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity that determines rdfs:seeAlso references for datasets that are evaluated during an evaluation epoch." .
+<http://purl.org/twc/vocab/datafaqs#DatasetAugmenting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/twc/vocab/datafaqs#DatasetAugmenting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
 <http://purl.org/twc/vocab/datafaqs#FAqTReferencing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/twc/vocab/datafaqs#FAqTReferencing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
 <http://purl.org/twc/vocab/datafaqs#FAqTReferencing> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity that determines rdfs:seeAlso references for FAqT evaluation services that are used during an evaluation epoch." .

@@ -241,12 +241,14 @@
 :DatasetReferencer
    a owl:Class;
    rdfs:subClassOf :CoreService;
+   rdfs:comment "An agent that provides links to additional metadata for the given dataset.";
 .
 
 :DatasetAugmenter
    a owl:Class;
    rdfs:subClassOf :CoreService;
    rdfs:comment "An agent that provides additional metadata for the given dataset.";
+   rdfs:comment "Augmenter is a kind of FAqT evaluation service whose results are available for all other evalaution services; this is probably better implemented with proper service composition.";
 .
 
 :SourceCode
