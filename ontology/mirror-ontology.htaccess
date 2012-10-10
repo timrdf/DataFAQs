@@ -1,0 +1,3 @@
+# Options +MultiViews
+# AddType application/rdf+xml .rdf .owl
+# AddType text/turtle .ttl
