@@ -1,0 +1,16 @@
+PREFIX sd:         <http://www.w3.org/ns/sparql-service-description#>
+PREFIX foaf:       <http://xmlns.com/foaf/0.1/>
+PREFIX prov:       <http://www.w3.org/ns/prov#>
+
+SELECT ?input ?when
+WHERE {
+   ?activity 
+      a prov:Activity;
+      prov:used ?input, [ 
+         a sd:NamedGraph;
+         sd:name <SDNAME> 
+      ];
+      prov:startedAtTime ?when
+   .
+   ?input a foaf:Document .
+}
