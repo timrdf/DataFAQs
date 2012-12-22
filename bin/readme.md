@@ -1,10 +1,17 @@
 * [readme.md](https://github.com/timrdf/DataFAQs/blob/master/bin/readme.md)
     * This file.
 
+* [install-datafaqs-dependencies.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh)
+
 * [df-situate-paths.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-situate-paths.sh)
     * Utility that provides the shell PATHs that DataFAQs scirpts need, but are not set yet.
     * See `df-situate-paths.sh --help`
     * See https://github.com/timrdf/csv2rdf4lod-automation/wiki/situate-shell-paths-pattern
+
+* [df-vars.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-vars.sh)
+    * Utility script to show the shell environment variables that DataFAQs uses to control its behavior.
+    * This is often checked before invoking `df-epoch.sh`.
+    * See https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-environment-variables
 
 * [df-epoch.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh)
     * The main script to invoke and store evaluations.
@@ -20,6 +27,10 @@ Utilities - local files
 * [void-triples.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/void-triples.sh)
     * A utility that returns the number of triples in the given file(s). Wraps `raptor -c`.
 
+* [stub-ontology-exemplars.py](https://github.com/timrdf/DataFAQs/blob/master/bin/stub-ontology-exemplars.py)
+    * Creates a stub Turtle file for each term in the given ontology.
+    * Useful for documenting the ontology.
+
 Utilities - remote Linked Data
  
 * [df-conneg-heads.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-conneg-heads.sh)
@@ -31,6 +42,9 @@ Utilities - local endpoints
 
 * [df-clear-triple-store.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-clear-triple-store.sh)
 
+* [purge-sd-name.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/purge-sd-name.sh)
+    * Remove local files named with `*.sd_name`.
+
 Utilities - remote endpoints
 
 * [df-named-graphs.py](https://github.com/timrdf/DataFAQs/blob/master/bin/df-named-graphs.py)
@@ -38,21 +52,11 @@ Utilities - remote endpoints
 
 * [df-mirror-endpoint.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-mirror-endpoint.sh)
 
-
-
-
-* [df-vars.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-vars.sh)
-
-* [install-datafaqs-dependencies.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh)
-
-* [purge-sd-name.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/purge-sd-name.sh)
-
-* [stub-ontology-exemplars.py](https://github.com/timrdf/DataFAQs/blob/master/bin/stub-ontology-exemplars.py)
-
-
-* [void.list](https://github.com/timrdf/DataFAQs/blob/master/bin/void.list)
+Utilities - bash
 
 * [randomize-line-order.py](https://github.com/timrdf/DataFAQs/blob/master/bin/randomize-line-order.py)
+    * Randomizes the lines given on stdin, returns on stdout.
+    * Useful in shell pipes to randomize processing order.
 
 The shell scripts depend on python scripts to query RDF.
 
