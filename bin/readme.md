@@ -4,6 +4,10 @@
 * [df-epoch.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh)
     * The main script to invoke and store evaluations.
 
+* [df-situate-paths.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-situate-paths.sh)
+    * Utility that provides the shell PATHs that DataFAQs needs, but are not set yet.
+    * `export PATH=$PATH\`df-situate-paths.sh\``
+
 * [void-triples.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/void-triples.sh)
     * A utility that returns the number of triples in the given file(s). Wraps `raptor -c`.
   
@@ -27,7 +31,6 @@
 
 * [df-purge-orphaned-epochs.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-purge-orphaned-epochs.sh)
 
-* [df-situate-paths.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-situate-paths.sh)
 
 * [df-vars.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-vars.sh)
 
