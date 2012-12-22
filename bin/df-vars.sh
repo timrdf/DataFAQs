@@ -113,18 +113,25 @@ if [ ${1:-"no"} != "CLEAR" ]; then
    echo "  "
    echo "DATAFAQS_PUBLISH_VIRTUOSO                             ${DATAFAQS_PUBLISH_VIRTUOSO:-"(will default to: false)"}"
                                                     virtuoso_home=${CSV2RDF4LOD_PUBLISH_VIRTUOSO_HOME:-"/opt/virtuoso"}
-#   if [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" -o $show_all == "yes" ]; then
+   if [ "$DATAFAQS_PUBLISH_VIRTUOSO" == "true" -o $show_all == "yes" ]; then
    echo "CSV2RDF4LOD_CONVERT_DATA_ROOT                         ${CSV2RDF4LOD_CONVERT_DATA_ROOT:-"(not required, but vload will copy files when loading)"}"
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_HOME                     ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_HOME:-"(will default to: /opt/virtuoso)"}"
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH                ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_ISQL_PATH:-"(will default to: $virtuoso_home/bin/isql)"}"
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT                     ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_PORT:-"(will default to: 1111)"}"
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME                 ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_USERNAME:-"(will default to: dba)"}"
    echo "CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD                 ${CSV2RDF4LOD_PUBLISH_VIRTUOSO_PASSWORD:-"(will default to: dba)"}"
+   else
+      echo "..."
+   fi
    echo "  "
    echo "DATAFAQS_PUBLISH_SESAME                               ${DATAFAQS_PUBLISH_SESAME:-"(will default to: false)"}"
-   echo "DATAFAQS_PUBLISH_SESAME_HOME                          ${DATAFAQS_PUBLISH_SESAME_HOME:-"(will default to: false)"}"
-   echo "DATAFAQS_PUBLISH_SESAME_SERVER                        ${DATAFAQS_PUBLISH_SESAME_SERVER:-"(will default to: false)"}"
-   echo "DATAFAQS_PUBLISH_SESAME_REPOSITORY_ID                 ${DATAFAQS_PUBLISH_SESAME_REPOSITORY_ID:-"(will default to: false)"}"
+   if [ "$DATAFAQS_PUBLISH_SESAME" == "true" -o $show_all == "yes" ]; then
+   echo "DATAFAQS_PUBLISH_SESAME_HOME                          ${DATAFAQS_PUBLISH_SESAME_HOME:-"(!!! REQUIRED to publish sesame !!!)"}"
+   echo "DATAFAQS_PUBLISH_SESAME_SERVER                        ${DATAFAQS_PUBLISH_SESAME_SERVER:-"(!!! REQUIRED to publish sesame !!!)"}"
+   echo "DATAFAQS_PUBLISH_SESAME_REPOSITORY_ID                 ${DATAFAQS_PUBLISH_SESAME_REPOSITORY_ID:-"(!!! REQUIRED to publish sesame !!!)"}"
+   else
+      echo "..."
+   fi
    echo "  "
    echo "CSV2RDF4LOD_CONCURRENCY                               ${CSV2RDF4LOD_CONCURRENCY:-"(will default to: 1)"}"
    echo "X_CKAN_API_Key                                        ${X_CKAN_API_Key:-"(FAqT services will not be able to talk to CKAN!)"}"
