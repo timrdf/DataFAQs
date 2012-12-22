@@ -1,6 +1,8 @@
 * [readme.md](https://github.com/timrdf/DataFAQs/blob/master/bin/readme.md)
     * This file.
 
+Installing, running, and maintaining DataFAQs evaluations
+
 * [install-datafaqs-dependencies.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh)
 
 * [df-situate-paths.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-situate-paths.sh)
