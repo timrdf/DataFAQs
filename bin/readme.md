@@ -1,12 +1,13 @@
 * [readme.md](https://github.com/timrdf/DataFAQs/blob/master/bin/readme.md)
-    * This file
+    * This file.
 
 * [df-epoch.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh)
     * The main script to invoke and store evaluations.
 
 * [df-situate-paths.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-situate-paths.sh)
-    * Utility that provides the shell PATHs that DataFAQs needs, but are not set yet.
+    * Utility that provides the shell PATHs that DataFAQs scirpts need, but are not set yet.
     * See `df-situate-paths.sh --help`
+    * See https://github.com/timrdf/csv2rdf4lod-automation/wiki/situate-shell-paths-pattern
 
 * [void-triples.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/void-triples.sh)
     * A utility that returns the number of triples in the given file(s). Wraps `raptor -c`.
