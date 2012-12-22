@@ -1,5 +1,5 @@
 [readme.md](https://github.com/timrdf/DataFAQs/blob/master/bin/readme.md)
-    * This file
+* This file
 
 [df-SPARQLQuery.py](https://github.com/timrdf/DataFAQs/blob/master/bin/df-SPARQLQuery.py)
 
