@@ -1,3 +1,6 @@
+[readme.md](https://github.com/timrdf/DataFAQs/blob/master/bin/readme.md)
+    * This file
+
 [df-SPARQLQuery.py](https://github.com/timrdf/DataFAQs/blob/master/bin/df-SPARQLQuery.py)
 
 [df-clear-triple-store.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-clear-triple-store.sh)
@@ -32,7 +35,6 @@
 
 [randomize-line-order.py](https://github.com/timrdf/DataFAQs/blob/master/bin/randomize-line-order.py)
 
-[readme.md](https://github.com/timrdf/DataFAQs/blob/master/bin/readme.md)
 
 [stub-ontology-exemplars.py](https://github.com/timrdf/DataFAQs/blob/master/bin/stub-ontology-exemplars.py)
 
