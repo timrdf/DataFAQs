@@ -1,7 +1,7 @@
 * [readme.md](https://github.com/timrdf/DataFAQs/blob/master/bin/readme.md)
     * This file.
 
-Installing, running, and maintaining DataFAQs evaluations
+### Installing, running, and maintaining DataFAQs evaluations
 
 * [install-datafaqs-dependencies.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh)
 
