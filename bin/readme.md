@@ -41,8 +41,11 @@
 ### Utilities - local endpoints
 
 * [df-load-triple-store.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-load-triple-store.sh)
+    * Loads RDF files on local disk into a local endpoint server.
+    * Loads into TDB, Virtuoso, and/or Sesame, depending on [environment variables](https://github.com/timrdf/DataFAQs/wiki/DATAFAQS-environment-variables).
 
 * [df-clear-triple-store.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/df-clear-triple-store.sh)
+    * Clears named graphs from a local endpoint server (TDB, Virtuoso, Sesame).
 
 * [purge-sd-name.sh](https://github.com/timrdf/DataFAQs/blob/master/bin/purge-sd-name.sh)
     * Remove local files named with `*.sd_name`.
