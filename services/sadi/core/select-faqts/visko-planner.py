@@ -30,6 +30,7 @@ ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
+ns.register(fake='https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/visko-planner-materials/sample-inputs/manylines.ttl#')
 
 # The Service itself
 class VisKoPlanner(faqt.Service):

@@ -1,15 +1,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix :     <http://www.w3.org/ns/prov#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix :     <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/visko-planner-materials/sample-inputs/manylines.ttl#> .
 
 :what-I-want
-   a :Objective;
+   a :Objective, dcat:Dataset;
    rdfs:comment "I want to see this .ps file in Firefox";
    prov:wasDerivedFrom <http://www.adobetutorialz.com/content_images/AdobeTechnologies/PostScript/manylines.ps>;
-   prov:alternateOf          <http://www.adobetutorialz.com/content_images/AdobeTechnologies/PostScript/manylines.ps>;
-   :viewableIn <https://raw.github.com/nicholasdelrio/visko/master/rdf/mozilla-firefox.owl#mozilla-firefox>;
+   prov:alternateOf    <http://www.adobetutorialz.com/content_images/AdobeTechnologies/PostScript/manylines.ps>;
+   :viewableIn         <https://raw.github.com/nicholasdelrio/visko/master/rdf/mozilla-firefox.owl#mozilla-firefox>;
 .
+
 <http://www.adobetutorialz.com/content_images/AdobeTechnologies/PostScript/manylines.ps>
+   a prov:Work;
    pmlp:hasFormat <https://raw.github.com/nicholasdelrio/visko/master/rdf/formats/POSTSCRIPT.owl#POSTSCRIPT>;
 .

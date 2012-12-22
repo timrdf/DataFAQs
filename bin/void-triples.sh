@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Note taken from DataFAQs, now maintained in csv2rdf4lod-automation.
 
 # rapper -g -c b.ttl 
 # rapper: Parsing returned 17 triples
