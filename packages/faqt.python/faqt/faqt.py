@@ -37,7 +37,8 @@ ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
 class Service(sadi.Service):
 
-   # Shell environment variables override these.
+   # Variables used to situate this service, so that its provenance can be described.
+   # (These are overridden by shell environment variables)
    baseURI        = None # e.g. http://aquarius.tw.rpi.edu/projects/datafaqs
    CODE_PAGE_BASE = None # e.g. https://github.com/timrdf/DataFAQs/blob/master
    CODE_RAW_BASE  = None # e.g. https://raw.github.com/timrdf/DataFAQs/master
@@ -45,7 +46,7 @@ class Service(sadi.Service):
    # Passed in by any class extending this class.
                       #      http://aquarius.tw.rpi.edu/projects/datafaqs
                       #                                                  /
-   servicePath = None # e.g.                                              services/sadi/faqt/connected
+   servicePath = None # e.g. - - - - - - - - - - - - - - - - - - - - >    services/sadi/faqt/connected
                       #                                                                               /void-linkset
 
    uuid          = None
@@ -171,7 +172,7 @@ class CKANReader(Service):
    # self.ckan.package_entity_get(ckan_id)
    # dataset = self.ckan.last_message
 
-class CKANReaderWriter(Service):
+class CKANReaderWriter(CKANReader):
 
    def __init__(self, servicePath): 
       CKANReader.__init__(self, servicePath)

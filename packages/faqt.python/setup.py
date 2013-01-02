@@ -4,7 +4,7 @@ use_setuptools()
 from setuptools import setup, find_packages
 setup(
     name = "faqt",
-    version = "0.0.1",
+    version = "0.0.2",
     packages = find_packages(exclude="example.py"),
 
     install_requires = ['rdflib>=3.0', 'surf', 'rdfextras', 'surf.rdflib'],
