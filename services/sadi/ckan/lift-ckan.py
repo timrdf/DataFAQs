@@ -82,13 +82,7 @@ class LiftCKAN(faqt.CKANReader):
 
       print 'processing ' + input.subject
 
-      ckan = self.ckan
-      if len(input.prov_wasAttributedTo) > 0:
-         agent = input.prov_wasAttributedTo.first
-         print 'CKAN: ' + agent.subject
-         if ns.DATAFAQS['CKAN'] in agent.rdf_type:
-            ckan = ckanclient.CkanClient(input.prov_wasAttributedTo.first.subject+'/api') 
-   
+      ckan    = self.getCKANAPI(input)
       ckan_id = self.getCKANIdentiifer(input)
       print 'ckan_id ' + ckan_id
 
