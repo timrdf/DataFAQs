@@ -168,6 +168,22 @@ class CKANReader(Service):
          ckan_id = re.sub('^.*/dataset/','',str(input.subject))
       return ckan_id
 
+   # 'http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home'        -> 'http://healthdata.tw.rpi.edu/hub' + '/api'
+   # 'http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states' -> 'http://thedatahub.org' + '/api'
+   def getCKANAPI(self,input):
+
+      base = None
+      if len(input.prov_wasAttributedTo) > 0:
+         agent = input.prov_wasAttributedTo.first
+         print 'CKAN (by attribution): ' + agent.subject
+         if ns.DATAFAQS['CKAN'] in agent.rdf_type:
+            base = input.prov_wasAttributedTo.first.subject
+      if base is None and re.match('^.*/dataset/',input.subject):
+         base = re.sub('/dataset/.*$','',str(input.subject))
+         print 'CKAN (by parsing dataset URI): ' + base
+
+      return ckanclient.CkanClient(base_location=base+'/api') if base is not None else self.ckan
+
    # How to get a dataset listing:
    # self.ckan.package_entity_get(ckan_id)
    # dataset = self.ckan.last_message
