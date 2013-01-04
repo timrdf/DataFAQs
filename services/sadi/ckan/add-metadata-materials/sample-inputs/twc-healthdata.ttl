@@ -11,16 +11,38 @@
 @prefix sd:         <http://www.w3.org/ns/sparql-service-description#> .
 @prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
 @prefix prov:       <http://www.w3.org/ns/prov#> .
+@base               <http://datahub.io/> .
 
-<http://datahub.io/dataset/twc-healthdata>
+<dataset/twc-healthdata>
    a datafaqs:CKANDataset;
-   #dcterms:identifier "twc-healthdata";
-   #con:preferredURI <http://purl.org/twc/arrayexpress/E-AFMX-1>;
 
-   dcterms:title "HealthData.gov Platform (HDP) on the Semantic Web";
+   #
+   # TWC Extra: This CKANDataset is already know by another URI.
+   #
+   con:preferredURI <http://purl.org/twc/health/void>;
+
+   #
+   # LOD Cloud Level 1 requirement: CKAN 'name' (we use dcterms:identifier)
+   #   This is the same string as is in the URI of this CKANDataset.
+   #
+   dcterms:identifier "twc-healthdata";
+
    ov:shortName "twc-healthdata";
 
-   #dcterms:description "description";
+   #
+   # LOD Cloud Level 1 requirement: CKAN 'title' (we use dcterms:title)
+   #
+   dcterms:title "HealthData.gov Platform (HDP) on the Semantic Web";
+
+   dcterms:description "Linked Data version of the metadata and data listed at http://hub.healthdata.gov.";
+
+   #
+   # LOD Cloud Level 1 requirement: CKAN 'url' (we use foaf:homepage)
+   #   'url' is the JSON attribute.
+   #   CKAN also calls this 'source' in the display web page.
+   #   CKAN also calls this 'home page' in the edit web page.
+   #
+   foaf:homepage <http://healthdata.tw.rpi.edu/index.html>;
 
    void:triples 1934046908;
 
@@ -34,14 +56,30 @@
    #   foaf:name "Endre Anderssen";
    #];
 
-   dcterms:isPartOf <http://datahub.io/group/tetherless-world-constellation>;
+   dcterms:isPartOf <group/tetherless-world-constellation>;
 
    #void:vocabulary <http://www.ebi.ac.uk/efo/>,
    #                <http://purl.obolibrary.org/obo/>,
    #                <http://www.w3.org/ns/prov#>;
 
-   moat:taggedWithTag # multiple ok.
-      <http://thedatahub.org/tag/lod>; 
+   #
+   # LOD Cloud Level 1 requirement tag to identify the data set as Linked Data.
+   #
+   moat:taggedWithTag <tag/lod>; 
+
+   #
+   # LOD Cloud Level 2 requirement tagged with a 'topic' from this set:
+   #
+  #moat:taggedWithTag <tag/media>;
+   moat:taggedWithTag <tag/geographic>;
+   moat:taggedWithTag <tag/lifesciences>;
+  #moat:taggedWithTag <tag/publications>;         # (including library and museum data)
+   moat:taggedWithTag <tag/government>;
+   moat:taggedWithTag <tag/ecommerce>;
+  #moat:taggedWithTag <tag/socialweb>;            # (people and their activities)
+  #moat:taggedWithTag <tag/usergeneratedcontent>; # (blog posts, discussions, pictures, ...)
+   moat:taggedWithTag <tag/schemata>;             # (structural resources, including vocabularies, ontologies, classifications, thesauri)
+  #moat:taggedWithTag <tag/crossdomain>;
 
    prov:alternateOf   # multiple ok.
       <http://hub.healthdata.gov>;
