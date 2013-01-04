@@ -304,11 +304,11 @@ where {
          sparqlEndpoint                         = bindings[0]
          dataset['extras']['sparql_graph_name'] = bindings[1] # overwrites void:sparqlEndpoint
 
-      if sparqlEndpoint not in dataset_resources:
+      if URIRef(self.surfSubject(sparqlEndpoint)) not in dataset_resources:
          # Resource with this URL did not exist.
-         print 'brand new ' + str(sparqlEndpoint)
+         print 'brand new sparql endpoint ' + self.surfSubject(sparqlEndpoint)
          dataset['resources'].append( { 'name':   'SPARQL Endpoint',
-                                        'url':    str(sparqlEndpoint), 
+                                        'url':    self.surfSubject(sparqlEndpoint), 
                                         'format': 'api/sparql' } )
 
       #
