@@ -170,7 +170,7 @@ class CKANReader(Service):
 
    # 'http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home'        -> 'http://healthdata.tw.rpi.edu/hub' + '/api'
    # 'http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states' -> 'http://thedatahub.org' + '/api'
-   def getCKANAPI(self,input):
+   def getCKANAPI(self,input,api_key=None):
 
       base = None
       if len(input.prov_wasAttributedTo) > 0:
@@ -182,7 +182,17 @@ class CKANReader(Service):
          base = re.sub('/dataset/.*$','',str(input.subject))
          print 'CKAN (by parsing dataset URI): ' + base
 
-      return ckanclient.CkanClient(base_location=base+'/api') if base is not None else self.ckan
+      if api_key is None:
+         # Obtain the api key from the shell environment variable (hope that it's right...)
+         api_key = os.environ['X_CKAN_API_Key'] 
+         if len(api_key) <= 1:
+            print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+
+      # WARNING: This assumes that the service's shell env var is the required key.
+      # THIS IS NOT FLEXIBLE.
+      # Preferrably, the ~/.ckanclientrc would store the appropriate api keys for a variety of domains.
+      # Issue submitted https://github.com/okfn/ckanclient/issues/15
+      return ckanclient.CkanClient(base_location=base+'/api', api_key=api_key) if base is not None else self.ckan
 
    # How to get a dataset listing:
    # self.ckan.package_entity_get(ckan_id)
