@@ -2,6 +2,7 @@
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 
 import faqt
+from faqt import *
 
 import sadi
 from rdflib import *
@@ -34,7 +35,7 @@ ns.register(prov='http://www.w3.org/ns/prov#')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 
-THEDATAHUB = 'http://thedatahub.org/dataset/'
+THEDATAHUB = 'http://datahub.io'
 
 def getResponse(url):
    # Ripped from https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/pcurl.py
@@ -46,7 +47,7 @@ def getResponse(url):
    return connection.getresponse()
 
 # The Service itself
-class AddCKANMetadata(faqt.Service): # TODO: use faqt.CKANReaderWriter instead.
+class AddCKANMetadata(faqt.CKANReaderWriter):
 
    # Service metadata.
    label                  = 'Update CKAN Dataset Metadata'
@@ -63,9 +64,11 @@ class AddCKANMetadata(faqt.Service): # TODO: use faqt.CKANReaderWriter instead.
       faqt.Service.__init__(self, servicePath = 'services/sadi/ckan')
       
       # Instantiate the CKAN client.
-      # http://docs.python.org/library/configparser.html (could use this technique)
-      key = os.environ['X_CKAN_API_Key'] # See https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key
-      self.ckan = ckanclient.CkanClient(api_key=key)
+      key = os.environ['X_CKAN_API_Key']
+      if len(key) <= 1:
+         print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
+         sys.exit(1)
+      self.ckan = ckanclient.CkanClient(base_location=THEDATAHUB+'/api', api_key=key)
 
    def getOrganization(self):
       result                      = self.Organization('http://tw.rpi.edu')
@@ -118,24 +121,19 @@ class AddCKANMetadata(faqt.Service): # TODO: use faqt.CKANReaderWriter instead.
       #
       # identifier
 
-      ckan_id = None # TODO: move all of this to faqt.CKANReader superclass
-      if len(input.datafaqs_ckan_identifier) > 0:
-         ckan_id = input.datafaqs_ckan_identifier.first
-      elif len(input.dcterms_identifier) > 0:
-         ckan_id = input.dcterms_identifier.first
-      elif re.match('^.*/dataset/',input.subject):
-         ckan_id = re.replace('^.*/dataset/','',str(input.subject))
+      ckan    = self.getCKANAPI(input)
+      ckan_id = self.getCKANIdentiifer(input)
+      if ckan_id is not None:
+         print 'ckan_id ' + ckan_id
       else:
-         print 'Error: cannot determine what dataset to create/modify'
-         return
-      print 'ckan_id ' + ckan_id
-     
+         print 'Error: cannot determine dataset identifier to create/modify'
+      
       #
       # GET the current dataset metadata listing from CKAN.
       dataset = {}
       try:
-         self.ckan.package_entity_get(ckan_id)
-         dataset = self.ckan.last_message
+         ckan.package_entity_get(ckan_id)
+         dataset = ckan.last_message
       except ckanclient.CkanApiNotFoundError:
          # If we want to play it safe - only modify existing datasets.
          #output.rdf_type.append(ns.DATAFAQS['NotCKANDataset'])
@@ -145,12 +143,17 @@ class AddCKANMetadata(faqt.Service): # TODO: use faqt.CKANReaderWriter instead.
          print 'CKAN dataset id does not exist; registering it on CKAN.' 
          # Register the dataset
          package_entity = { 'name': ckan_id }
-         self.ckan.package_register_post(package_entity)
+         #try:
+         ckan.package_register_post(package_entity)
 
          # GET the new dataset metadata listing from CKAN.
-         self.ckan.package_entity_get(ckan_id)
-         dataset = self.ckan.last_message
-      #print dataset
+         ckan.package_entity_get(ckan_id)
+         dataset = ckan.last_message
+         #except ckanclient.CkanApiNotAuthorizedError as e:
+         #   print e.message
+         #   return
+ 
+      print dataset
 
       #
       # dcterms:title ?title
@@ -194,11 +197,16 @@ class AddCKANMetadata(faqt.Service): # TODO: use faqt.CKANReaderWriter instead.
       query = select("?group").where((input.subject, ns.DCTERMS['isPartOf'], "?group"),
                                                                             ("?group", a, ns.DATAFAQS['CKANGroup']))
       results = input.session.default_store.execute(query)
+      if 'groups' not in dataset:
+         dataset['groups'] = []
       for binding in results:
          ckan_group = binding[0] # e.g. http://thedatahub.org/group/arrayexpress
          ckan_group_id = re.sub('http.*/group/','',str(ckan_group))
          if ckan_group_id != 'lodcloud': # Prevent spamming of the manually curated set.
             dataset['groups'].append(ckan_group_id) 
+
+      if 'extras' not in dataset:
+         dataset['extras'] = {}
 
       # Extra: shortName
       if input.ov_shortName:
@@ -243,6 +251,8 @@ where {
       #          dataset['extras'][attribute] = bindings['triples']['value']
     
       # Tags
+      if 'tags' not in dataset:
+         dataset['tags'] = []
       for tag_uri in input.moat_taggedWithTag:
          tag = None
          try:
@@ -273,6 +283,8 @@ where {
              print str(response.status) + ' ' + vocab
 
       # Index the dataset's resources by url
+      if 'resources' not in dataset:
+         dataset['resources'] = []
       dataset_resources = {}
       for resource in dataset['resources']:
          print 'indexing ' + resource['url']
@@ -294,9 +306,9 @@ where {
 
       if sparqlEndpoint not in dataset_resources:
          # Resource with this URL did not exist.
-         print 'brand new ' + sparqlEndpoint
+         print 'brand new ' + str(sparqlEndpoint)
          dataset['resources'].append( { 'name':   'SPARQL Endpoint',
-                                        'url':    sparqlEndpoint, 
+                                        'url':    str(sparqlEndpoint), 
                                         'format': 'api/sparql' } )
 
       #
@@ -314,13 +326,13 @@ where {
                                            'format': 'meta/rdf-schema' } )
 
       # POST the new details of the dataset.
-      self.ckan.package_entity_put(dataset)
+      ckan.package_entity_put(dataset)
 
       # GET the timestamp of the change we just submitted.
-      self.ckan.package_entity_get(ckan_id)
-      dataset = self.ckan.last_message
+      ckan.package_entity_get(ckan_id)
+      dataset = ckan.last_message
       output.dcterms_modified = dataset['metadata_modified']
-      output.rdfs_seeAlso = output.session.get_resource(THEDATAHUB + ckan_id, ns.OWL.Thing)
+      output.rdfs_seeAlso = output.session.get_resource(THEDATAHUB + '/dataset/' + ckan_id, ns.OWL.Thing)
 
       output.save()
 

@@ -1,15 +1,18 @@
-@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:      <http://www.w3.org/2002/07/owl#> .
-@prefix dcterms:  <http://purl.org/dc/terms/> .
-@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
-@prefix con:      <http://www.w3.org/2000/10/swap/pim/contact#> .
-@prefix moat:     <http://moat-project.org/ns#> .
-@prefix ov:       <http://open.vocab.org/terms/> .
-@prefix dcat:     <http://www.w3.org/ns/dcat#> .
-@prefix void:     <http://rdfs.org/ns/void#> .
-@prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
-@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
-@prefix prov:     <http://www.w3.org/ns/prov#> .
+#3> <> prov:wasDerivedFrom <arrayexpress-e-afmx-1.ttl> .
+
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix con:        <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix moat:       <http://moat-project.org/ns#> .
+@prefix ov:         <http://open.vocab.org/terms/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix sd:         <http://www.w3.org/ns/sparql-service-description#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
 
 <http://healthdata.tw.rpi.edu/dataset/food-recalls>
    a datafaqs:CKANDataset;
