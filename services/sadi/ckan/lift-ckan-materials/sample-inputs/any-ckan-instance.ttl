@@ -28,3 +28,8 @@
    a datafaqs:CKAN;
    rdfs:comment "If the CKANDataset was attributed to a CKAN, ask that CKAN about it.";
 .
+
+<http://datahub.io/dataset/twc-healthdata>
+   a datafaqs:CKANDataset;
+   rdfs:comment "If no identifier and not attributed to a CKAN, parse the URI to ask http://datahub.io about 'twc-healthdata'.";
+.

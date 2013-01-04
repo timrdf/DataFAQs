@@ -12,6 +12,11 @@
 <#service-55060a6fc808f0c6b7ac51b9a7fdcc65bd2c90a717fc1dff4302ea4f> a sd:Service;
     sd:endpoint <http://logd.tw.rpi.edu/sparql> .
 
+<http://datahub.io/dataset/twc-healthdata> a datafaqs:CKANDataset;
+    ov:shortName "twc-healthdata";
+    dcterms:description "";
+    dcterms:title "HealthData.gov Platform (HDP) on the Semantic Web" .
+
 <http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home> a datafaqs:CKANDataset;
     dcterms:description "The CMS 2010 BSA HHA Beneficiary PUF originates from a 5% simple random sample of beneficiaries drawn (without replacement) from the 100% Beneficiary Summary File for reference year 2010. The sample that is used for the CMS 2010 BSA HHA Beneficiary PUF is disjoint from the existing 5% CMS research sample in the sense that there is no overlap in terms of the beneficiaries in the CMS 2010 BSA HHA Beneficiary PUF and the 5% CMS research sample.";
     dcterms:title "2010 Basic Stand Alone Home Health Agency Beneficiary PUF" .

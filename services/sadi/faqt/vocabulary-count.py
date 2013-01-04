@@ -87,7 +87,6 @@ class vocabulary_count(faqt.Service):
    def __init__(self):
       faqt.Service.__init__(self, servicePath = 'services/sadi/faqt/connected')
       #key = os.environ['X_CKAN_API_Key']
-      #key = "45d9d0d5-2ae7-405f-a4dc-04560be5ace1"
       #if len(key) <= 1:
       #      print 'ERROR: https://github.com/timrdf/DataFAQs/wiki/Missing-CKAN-API-Key'
       #      sys.exit(1)
