@@ -145,6 +145,16 @@ class Service(sadi.Service):
       connection.request('GET',fullPath)
       return connection.getresponse()
 
+   # Return str(instance) or instance.subject, depending on type.
+   # SuRF's .subject only works if the instance is typed.
+   # This is a hack workaround to handle typed and untyped instances.
+   def surfSubject(self,instance):
+      uri = str(instance)
+      try:
+         uri = instance.subject
+      except:
+         cow = 'boy'
+      return uri
 
 # TODO: move this to a new file and get it imported correctly.
 
