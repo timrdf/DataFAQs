@@ -1,0 +1,8 @@
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+
+<http://datahub.io/dataset/twc-healthdata>
+   a datafaqs:CKANDataset;
+   rdfs:comment "If no identifier and not attributed to a CKAN, parse the URI to ask http://datahub.io about 'twc-healthdata'.";
+.

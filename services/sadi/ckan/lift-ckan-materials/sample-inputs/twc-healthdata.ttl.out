@@ -1,0 +1,9 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+
+<http://datahub.io/dataset/twc-healthdata> a datafaqs:CKANDataset;
+    ov:shortName "twc-healthdata";
+    dcterms:description "";
+    dcterms:title "HealthData.gov Platform (HDP) on the Semantic Web" .
+
