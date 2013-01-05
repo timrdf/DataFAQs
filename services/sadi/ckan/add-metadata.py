@@ -155,8 +155,8 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
  
       print dataset
 
-      #
-      # dcterms:title ?title
+      #                   lodcloud Level 1 "Title"
+      # dcterms:title ==> ckan:title
       if len(input.dcterms_title) > 0:
          dataset['title'] = input.dcterms_title.first
 
@@ -165,8 +165,54 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
       if len(input.dcterms_description) > 0:
          dataset['notes'] = input.dcterms_description.first
 
+      #                                                                lodcloud Level 3 "License"
+      # dcterms:license                                           ==>  ckan:license
       #
-      # Core: author
+      # These are taken from CKAN directly:
+      #   http://www.opendefinition.org/licenses/odc-pddl         ==> 'Open Data Commons Public Domain Dedication and Licence (PDDL)' (OPEN)
+      #   http://www.opendefinition.org/licenses/odc-odbl         ==> 'Open Data Commons Open Database License (ODbL)'                (OPEN)
+      #   http://www.opendefinition.org/licenses/odc-by           ==> 'Open Data Commons Attribution License'                         (OPEN)
+      #   http://www.opendefinition.org/licenses/cc-zero          ==> 'Creative Commons CCZero'                                       (OPEN)
+      #   http://www.opendefinition.org/licenses/cc-by            ==> 'Creative Commons Attribution'                                  (OPEN)
+      #   http://www.opendefinition.org/licenses/cc-by-sa         ==> 'Creative Commons Attribution Share-Alike'                      (OPEN)
+      #   http://www.opendefinition.org/licenses/gfdl             ==> 'GNU Free Documentation License'                                (OPEN)
+      #                                                           ==> 'Other (Open)'                                                  (OPEN) 
+      #                                                           ==> 'Other (Public Domain)'                                         (OPEN) 
+      #                                                           ==> 'Other (Attribution)'                                           (OPEN) 
+      #   http://reference.data.gov.uk/id/open-government-licence ==> 'UK Open Government Licence (OGL)'                              (OPEN)
+      #   http://creativecommons.org/licenses/by-nc/2.0/          ==> 'Creative Commons Non-Commercial (Any)'                        (CLOSED)
+      #                                                           ==> 'Other (Non-Commercial)'                                       (CLOSED) 
+      #                                                           ==> 'Other (Not Open)'                                             (CLOSED) 
+      # VoID spec mentions some at http://www.w3.org/TR/void/#license
+
+      if len(input.dcterms_license) > 0:
+         license = self.surfSubject(input.dcterms_license.first)
+         licenses = { 
+            'http://www.opendefinition.org/licenses/odc-pddl':          {'label':'Open Data Commons Public Domain Dedication and Licence (PDDL)'},
+            'http://www.opendefinition.org/licenses/odc-odbl':          {'label':'Open Data Commons Open Database License (ODbL)'},
+            'http://www.opendefinition.org/licenses/odc-by':            {'label':'Open Data Commons Attribution License'},
+            'http://www.opendefinition.org/licenses/cc-zero':           {'label':'Creative Commons CCZero'},
+            'http://www.opendefinition.org/licenses/cc-by':             {'label':'Creative Commons Attribution',
+                                                                         'id':'cc-by'},
+            'http://www.opendefinition.org/licenses/cc-by-sa':          {'label':'Creative Commons Attribution Share-Alike'},
+            'http://www.opendefinition.org/licenses/gfdl':              {'label':'GNU Free Documentation License'},
+            'http://reference.data.gov.uk/id/open-government-licence':  {'label':'UK Open Government Licence (OGL)'},
+            'http://creativecommons.org/licenses/by-nc/2.0/':           {'label':'Creative Commons Non-Commercial (Any)'}}
+         print 'license: ' + license + ' ' + licenses[license]['label']
+
+         dataset['license_url']   = license
+         dataset['license_id']    = licenses[license]['id']
+         dataset['license']       = licenses[license]['label']
+         dataset['license_title'] = licenses[license]['label']
+         print dataset['license']
+
+      #                   lodcloud Level 1: "URL"
+      # foaf:homepage ==> {ckan:source, ckan:homepage, ckan:url}
+      if len(input.foaf_homepage) > 0:
+         dataset['url'] = input.foaf_homepage.first
+
+      #                                              lodcloud Level 1 "Author"
+      # dcterms:creator [ foaf:mbox, foaf:name ] ==> ckan:author
       query = select("?name ?mbox").where((input.subject, ns.DCTERMS['creator'], "?creator"),
                                           ("?creator",    ns.FOAF['mbox'],       "?mbox"),
                                           ("?creator",    ns.FOAF['name'],       "?name"))
@@ -176,7 +222,7 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
          dataset['author_email'] = re.sub('^mailto:','',bindings[1])
 
       #
-      # Core: maintainer
+      # dcterms:contributor ==> ckan:maintainer
       query = select("?name ?mbox").where((input.subject,  ns.DCTERMS['contributor'], "?contributor"),
                                           ("?contributor", ns.FOAF['mbox'],           "?mbox"),
                                           ("?contributor", ns.FOAF['name'],           "?name"))
@@ -215,6 +261,8 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
       # Extra: namespace
       if input.datafaqs_namespace:
          dataset['extras']['namespace'] = input.datafaqs_namespace.first
+      if input.void_uriSpace:
+         dataset['extras']['namespace'] = input.void_uriSpace.first
 
       # Extra: triples
       if input.void_triples:
@@ -310,7 +358,6 @@ where {
          dataset['resources'].append( { 'name':   'SPARQL Endpoint',
                                         'url':    self.surfSubject(sparqlEndpoint), 
                                         'format': 'api/sparql' } )
-
       #
       # void:vocabulary
       for vocab in input.void_vocabulary:
@@ -324,6 +371,41 @@ where {
             dataset['resources'].append( { 'name':   title+' RDF Schema',
                                            'url':    vocab, 
                                            'format': 'meta/rdf-schema' } )
+      #
+      # void:exampleResource (lodcloud Level 2 "example URI")
+      for egResource in input.void_exampleResource:
+         if URIRef(self.surfSubject(egResource)) not in dataset_resources:
+            print 'eg resource ' + egResource 
+            dataset['resources'].append( { 'url':     self.surfSubject(egResource), 
+                                           'resource_type': 'file',
+                                           'format':        'example/rdf+xml', # Their demand for the format is nonsensical for true conneg Linked Data.
+                                           'name':          'Example URI',
+                                           'mimetype':       '',
+                                           'mimetype_inner': '',
+                                           'description':    '' } )            # DO NOT provide a description, since you'd be describing the wrong thing.
+         else:
+            print 'repeat eg resource ' + egResource 
+   
+      #
+      # lodcloud Level 3 "VoID or Semantic Sitemap"
+      #
+      query = select("?void").where(("?void", a,                       ns.VOID['DatasetDescription']),
+                                    ("?void", ns.FOAF['primaryTopic'], input.subject))
+      for bindings in input.session.default_store.execute(query):
+         void = bindings[0]
+         if void not in dataset_resources:
+            print 'void: ' + void
+            dataset['resources'].append( { 'url':     void, 
+                                           'resource_type': 'file',
+                                           'format':        'meta/void',
+                                           'name':          'VoID Listing',
+                                           'mimetype':       'text/turtle',
+                                           'mimetype_inner': 'text/turtle',
+                                           'description':    'Listing of all RDF datasets available, using the Vocabulary of Interlinked Datasets (VoID)' } )
+         else:
+            print 'repeat void: ' + void
+         #dataset['author_email'] = re.sub('^mailto:','',bindings[1])
+         
 
       # POST the new details of the dataset.
       ckan.package_entity_put(dataset)
@@ -333,6 +415,8 @@ where {
       dataset = ckan.last_message
       output.dcterms_modified = dataset['metadata_modified']
       output.rdfs_seeAlso = output.session.get_resource(THEDATAHUB + '/dataset/' + ckan_id, ns.OWL.Thing)
+
+      print dataset
 
       output.save()
 
