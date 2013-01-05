@@ -13,6 +13,14 @@
 @prefix prov:       <http://www.w3.org/ns/prov#> .
 @base               <http://datahub.io/> .
 
+#
+# LOD Cloud Level 3 requirement: VoID or Semantic Sitemap
+#
+<http://healthdata.tw.rpi.edu/void> 
+   a void:DatasetDescription;
+   foaf:primaryTopic <dataset/twc-healthdata>;
+.
+
 <dataset/twc-healthdata>
    a datafaqs:CKANDataset;
 
@@ -37,6 +45,11 @@
    dcterms:description "Linked Data version of the metadata and data listed at http://hub.healthdata.gov.";
 
    #
+   # LOD Cloud Level 3 requirement: CKAN 'license' (we use dcterms:license)
+   #
+   dcterms:license <http://www.opendefinition.org/licenses/cc-by>;
+
+   #
    # LOD Cloud Level 1 requirement: CKAN 'url' (we use foaf:homepage)
    #   'url' is the JSON attribute.
    #   CKAN also calls this 'source' in the display web page.
@@ -46,21 +59,29 @@
 
    void:triples 1934046908;
 
-   #dcterms:contributor [
-   #   foaf:mbox <mailto:mccusj@rpi.edu>;
-   #   foaf:name "James McCusker";
-   #];
+   dcterms:creator [
+      foaf:mbox <mailto:mccusj@rpi.edu>;
+      foaf:name "James McCusker";
+   ];
 
-   #dcterms:creator [
+   #dcterms:contributor [
    #   foaf:mbox <mailto:endre.anderssen@gmail.com>;
    #   foaf:name "Endre Anderssen";
    #];
 
    dcterms:isPartOf <group/tetherless-world-constellation>;
 
-   #void:vocabulary <http://www.ebi.ac.uk/efo/>,
-   #                <http://purl.obolibrary.org/obo/>,
-   #                <http://www.w3.org/ns/prov#>;
+   void:vocabulary # multiple ok.
+                   <http://purl.org/linked-data/cube#>,
+                   <http://purl.org/vocab/vann/>,
+                   <http://usefulinc.com/ns/doap#>,
+                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>,
+                   <http://www.w3.org/2000/01/rdf-schema#>,
+                   <http://www.w3.org/2000/10/swap/pim/contact#>,
+                   <http://www.w3.org/2002/07/owl#>,
+                   <http://www.w3.org/2006/vcard/ns#>,
+                   <http://www.w3.org/ns/prov#>,
+                   <http://xmlns.com/foaf/0.1/>;
 
    #
    # LOD Cloud Level 1 requirement tag to identify the data set as Linked Data.
@@ -81,8 +102,65 @@
    moat:taggedWithTag <tag/schemata>;             # (structural resources, including vocabularies, ontologies, classifications, thesauri)
   #moat:taggedWithTag <tag/crossdomain>;
 
-   prov:alternateOf   # multiple ok.
+
+   #
+   # LOD Cloud Level 3 requirement tag to distinguish primary from third party (use ONLY ONE).
+   #
+   moat:taggedWithTag #<tag/published-by-producer>; 
+                      <tag/published-by-third-party>; 
+
+
+   #
+   # LOD Cloud Level 3 requirement tag to distinguish if the dataset does not contain proprietary vocabulary terms, 
+   # or if it contains proprietary terms, if they are dereferenceable or not.
+   #
+   moat:taggedWithTag #<tag/no-proprietary-vocab>;
+                      #<tag/no-deref-vocab>; 
+                       <tag/deref-vocab>;
+
+   #
+   # LOD Cloud Level 3 requirement tag to indicate whether mappings for proprietary vocabulary terms are provided.
+   #                                      (use ONLY ONE).
+   #
+   moat:taggedWithTag <tag/vocab-mappings>;
+                      #<tag/no-vocab-mappings>;
+
+
+   #
+   # LOD Cloud Level 3 requirement tag whether the dataset provides provenance meta-information.
+   #                                      (use ONLY ONE).
+   #
+   moat:taggedWithTag <tag/provenance-metadata>;
+                      #<tag/no-provenance-metadatavocab-mappings>;
+
+
+   #
+   # LOD Cloud Level 3 requirement tag whether the data set provides licensing meta-information (e.g. dc:rights).
+   #                                      (use ONLY ONE).
+   #
+   moat:taggedWithTag #<tag/license-metadata>;
+                      <tag/no-license-metadata>;
+
+
+   # TWC Extra: This CKAN dataset is an alternate of another existing dataset.
+   prov:alternateOf  # multiple ok.
       <http://hub.healthdata.gov>;
+
+   #
+   # LOD Cloud Level 3 requirement identify the base URI of all instances within this dataset.
+   #
+   void:uriSpace "http://purl.org/twc/health/";
+
+   #
+   # LOD Cloud Level 3 requirement: voiD or Semantic Sitemap
+   #
+   rdfs:seeAlso <http://healthdata.tw.rpi.edu/void.ttl>;
+
+   #
+   # LOD Cloud Level 2 requirement highlight an instance in the dataset.
+   #
+   void:exampleResource  # multiple ok.
+      <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/version/2012-Jul-17/provider/010054>;
 
    void:sparqlEndpoint <http://healthdata.tw.rpi.edu/sparql>;
    #dcat:distribution [ # Not needed at this coarse level of granularity.
