@@ -136,6 +136,20 @@ class LiftCKAN(faqt.CKANReader):
                print 'TODO: handle resource: ' + resource['format']
 
          #
+         # Process Groups
+         #
+         Group = output.session.get_class(ns.DATAFAQS['Group'])
+         for group in dataset['groups']:
+            groupR = Group(re.sub('/dataset/.*$','/group/'+group,str(input.subject)))
+            print 'group: ' + group + ' -> ' + groupR.subject
+            groupR.rdf_type.append(ns.DATAFAQS['Group'])
+            groupR.dcterms_identifier.append(group)
+            groupR.rdfs_label.append(group)
+            groupR.foaf_name.append(group)
+            groupR.save()
+            output.dcterms_isPartOf.append(groupR)
+
+         #
          # Process Extras
          #
          links_regex  = re.compile("^links:(.*)$")
