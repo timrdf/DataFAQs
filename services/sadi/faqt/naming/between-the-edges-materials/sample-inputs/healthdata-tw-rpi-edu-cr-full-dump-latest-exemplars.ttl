@@ -1,0 +1,460 @@
+<di:sha-256;09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<file:////srv/twc-healthdata/data/source/healthdata-tw-rpi-edu/ckan/version/2012-Dec-19/automatic/2008-basic-stand-alone-carrier.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/CHDI/chsi_dataset.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://aidsinfo.nih.gov/api> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://aidsinfo.nih.gov/drugs/xml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://alvaro.graves.cl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://arf.hrsa.gov/arfwebtool/HRCCTDataSources.pdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://aspe.hhs.gov/ftp/hsp/TANF-data/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://bhpr.hrsa.gov/healthworkforce/default.htm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://bioportal.bioontology.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://bioportal.bioontology.org/ontologies/umls/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://bioportal.bioontology.org/ontologies/umls/cui> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://bioportal.bioontology.org/ontologies/umls/hasSTY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://bioportal.bioontology.org/ontologies/umls/isRoot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://bioportal.bioontology.org/ontologies/umls/tui> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://blast.ncbi.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://blast.ncbi.nlm.nih.gov/Blast.cgi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://cancercontrol.cancer.gov/hcirb/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1/bene_age_cat_cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://code.google.com/p/surfrdf/0023d413-b480-46a9-919a-338edc528021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://chemspell.nlm.nih.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://chemspell.nlm.nih.gov/spell/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://clinicaltrials.gov/ct2/info/linking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://clinicaltrials.gov/ct/gui> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://creativecommons.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://creativecommons.org/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://cwoutcomes.acf.hhs.gov/data/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dailymed.nlm.nih.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dailymed.nlm.nih.gov/dailymed/about.cfm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/URI_design_for_RDF_conversion_of_CSV-based_data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.lod2.eu/2011/tools/CSV2RDF4LOD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.medicare.gov/dataset/Dialysis-Facility-Compare-Listing-by-Facility/23ew-n7w9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.medicare.gov/dataset/Home-Health-Care-Facilities/6jpm-sxkc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.medicare.gov/dataset/Nursing-Home-Compare-Provider-Ratings/mufm-vy8d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/aboutthedata.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/Data_Dictionary.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/datadownload.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/DataDownload/HCC/HCCs_and_Lookalikes.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/DataDownload/HPSA/HPSA.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/Download_HCC_LookALikes.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/GeoAdvisor/shortagedesignationadvisor.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/GeoAdvisor/ShortageDesignationAdvisor.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/geoHPSAAdvisor/GeographicHPSAAdvisor.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/help/corda/HAAG-Drill-Sites-Help.htm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/HGDWDataWebService/HGDWDataService.asmx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/HPSADownload.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/nssrn.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://datawarehouse.hrsa.gov/nursingsurvey.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dbpedia.org/resource/Abbeville_County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dbpedia.org/resource/Acadia_County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dbpedia.org/resource/Ada_County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dbpedia.org/resource/Adair_County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/URI_design_for_RDF_conversion_of_CSV-based_data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.lod2.eu/2011/tools/CSV2RDF4LOD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.medicare.gov/dataset/Dialysis-Facility-Compare-Listing-by-Facility/23ew-n7w9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.medicare.gov/dataset/Home-Health-Care-Facilities/6jpm-sxkc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://data.medicare.gov/dataset/Nursing-Home-Compare-Provider-Ratings/mufm-vy8d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://dirline.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://downloads.cms.gov/BSAPUF/2008_BSA_Carrier_Line_Items_PUF_1.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://downloads.cms.gov/BSAPUF/2008_BSA_DME_Line_Items_PUF.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://downloads.cms.gov/BSAPUF/2008_BSA_Outpatient_Procedures_PUF_1.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://downloads.cms.gov/BSAPUF/2008_BSA_PartD_Events_PUF_1.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://downloads.cms.gov/medicare/Hospital_flatfiles.zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://eclkc.ohs.acf.hhs.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://eclkc.ohs.acf.hhs.gov/hslc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://ephtracking.cdc.gov/showTechnicalNotes.action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://evs.nci.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://evs.nci.nih.gov/ftp1/NDF-RT/NDF-RT%20Documentation.pdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://findahealthcenter.hrsa.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://findahealthcenter.hrsa.gov/Help/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://findanetwork.hrsa.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://findanetwork.hrsa.gov/Help/About_Search_Settings.htm#Data_Currentness_&_Problems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://finder.healthcare.gov/services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://findhivcare.hrsa.gov/Search_HAB.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://ghr.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hazmap.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hcupnet.ahrq.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/acf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/acl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/ahrq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/cdc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/cms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/fda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/hhs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://healthdata.tw.rpi.edu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-carrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-carrier.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-durable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-durable.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-home> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-home.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-hospice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-hospice.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-inpatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-inpatient.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-outpatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-outpatient.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-prescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-prescription.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-skilled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-skilled.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-chronic-conditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-chronic-conditions.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2009-info> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2009-info.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-certified-equipment-list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-certified-equipment-list.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-pocket-guide-chemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-pocket-guide-chemical.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/nursing-home-compare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/nursing-home-compare.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/office-inspector-general-list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/office-inspector-general-list.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/omha-appeals-listed-state> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/omha-appeals-listed-state.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/online-label-repository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/online-label-repository.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/organ-procurement-transplantation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/organ-procurement-transplantation.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/part-carrier-summary-data-file> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/part-carrier-summary-data-file-cy2005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/hub/dataset/part-carrier-summary-data-file-cy2005.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://healthdata.gov/id/agency/nida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/nih> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.gov/id/agency/nlm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthdata.tw.rpi.edu/sparql> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthindicators.gov/Indicators/Initiative_CMS-Community-Indicators_5/Selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov/CDSInventory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities/a_e/cds/rss.xml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov/portal/server.pt?open=512&objID=2905&mode=2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hints.cancer.gov/instrument.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hints.cancer.gov/terms.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://householdproducts.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov/dataset/1990-through-2011-national> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov/dataset/1992-through-2010-treatment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov/dataset/1997-through-2010-national> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov/dataset/2004-through-2010-drug-abuse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov/dataset/2006-through-2009-treatment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-carrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-durable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://healthindicators.gov/Indicators/Initiative_CMS-Community-Indicators_5/Selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov/CDSInventory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities/a_e/cds/rss.xml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://healthit.hhs.gov/portal/server.pt?open=512&objID=2905&mode=2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hints.cancer.gov/instrument.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hints.cancer.gov/terms.aspx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://householdproducts.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://hub.healthdata.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://IKNData.insurekidsnow.gov/clienttool/InsureKidsNow-Technical-Document%2020100405.doc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://inference-web.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://inference-web.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://inference-web.org/2.0/pml-justification.owl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://inference-web.org/2.0/pml-justification.owl#hasAntecedentList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://iw.cs.utep.edu/registry/FMT/text/CSV.owl#CSV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://kasei.us/about/foaf.xrdf#greg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://labels.fda.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://locatorplus.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/country/United_States> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/medicare-gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/medicare-gov/provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://logd.tw.rpi.edu/id/us/state/Alabama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/us/state/Alaska> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/us/state/American_Samoa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/us/state/Arizona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/us/state/Arkansas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/id/us/state/California> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://logd.tw.rpi.edu/source/hub-healthdata-gov/vocab/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/source/hub-healthdata-gov/vocab/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties/version/2012-Sep-29/conversion/twc-rpi-edu-instance-hub-us-counties-2012-Sep-29.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version/2011-Apr-09/conversion/instance-hub-us-states-and-territories.csv.e1.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://metamap.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://monahrq.ahrq.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://monahrq.ahrq.gov/download.shtml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://msis.cms.hhs.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://nhsc.hrsa.gov/about/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://nhsc.hrsa.gov/about/facts.htm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://nhscjobs.hrsa.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://nhscjobs.hrsa.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://nppes.viva-it.com/NPI_Files.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://oas.samhsa.gov/nsduh/2k8nsduh/2k8Results.pdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://obofoundry.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://obofoundry.org/ro/ro.owl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://obofoundry.org/ro/ro.owl#has_agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://oig.hhs.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://oig.hhs.gov/exclusions/exclusions_list.asp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://oig.hhs.gov/exclusions/files/leie_record_layout.pdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://oig.hhs.gov/exclusions/index.asp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://oig.hhs.gov/fraud/advisoryopinions.asp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://oig.hhs.gov/fraud/advisoryopinions/opinions.asp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://openprovenance.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://openprovenance.org/ontology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://openprovenance.org/ontology#cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://openprovenance.org/ontology#effect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://openprovenance.org/ontology#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://openprovenance.org/ontology#WasControlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://open.vocab.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://open.vocab.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://open.vocab.org/terms/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://open.vocab.org/terms/csvCol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://open.vocab.org/terms/csvHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://open.vocab.org/terms/csvRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://open.vocab.org/terms/subjectDiscriminator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://opotxfind.hrsa.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://opotxfind.hrsa.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://optn.transplant.hrsa.gov/data/about/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://optn.transplant.hrsa.gov/data/about/collection.asp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://pillbox.nlm.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://pillbox.nlm.nih.gov/API-documentation.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://projectreporter.nih.gov/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://projectreporter.nih.gov/exporter/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://provenanceweb.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://provenanceweb.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://provenanceweb.org/formats/pronom/x-fmt/266> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://provenanceweb.org/ns/pml#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://provenanceweb.org/ns/pml#hadOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://provenanceweb.org/ns/pml#Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://provenanceweb.org/ns/pml#TranslationActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://pubchem.ncbi.nlm.nih.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://pubchem.ncbi.nlm.nih.gov/help.html#faq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://pubchem.ncbi.nlm.nih.gov/pug/pughelp.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.access.gpo.gov/GPO/LPS103725> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/ontology/ICD9CM/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/ontology/ICD9CM/ICA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/ontology/ICD9CM/ICC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/ontology/ICD9CM/ICE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/ontology/ICD9CM/ICF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/ontology/ICD9CM/ICN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://pubchem.ncbi.nlm.nih.gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://pubchem.ncbi.nlm.nih.gov/help.html#faq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://pubchem.ncbi.nlm.nih.gov/pug/pughelp.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.access.gpo.gov/GPO/LPS103725> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.bioontology.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.obolibrary.org/obo/PATO_0000384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/ao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/ao/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/ao/annotatesResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/ao/body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/court/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/court/def/2009/coin#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/court/def/2009/coin#slug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/dcam/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/elements/1.1/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/terms/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/terms/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/terms/AgentClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/dc/terms/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://purl.org/klab/lod/machines/schist#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/klab/lod/machines/schist##jpm78> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/klab/lod/machines/schist#jpm78> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/linked-data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/linked-data/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/linked-data/cube#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/linked-data/cube#DimensionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/linked-data/cube#measureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/linked-data/cube#measureValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/net/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/NET/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/net/provenance/ns#involvedActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/NET/scovo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/NET/scovo#dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/NET/scovo#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/id/as_a__0c9c803e6d54e0bf75ba48d73b88abd5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/id/as_a__143e7e05ba68981603bfa860630625a6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/id/as_a__16d31b9f9f883d427536445a051b16d5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://purl.org/twc/health/id/csv2rdf4lod/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/id/csv2rdf4lod/10c5459fa2ba889b6a5cdfed9c1cc8cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/id/csv2rdf4lod/af88a34f3b6c79e86f86b1057f69f3b2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/id/csv2rdf4lod/c5bbf4236c4312a82c80713a918b0cf6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/CriticalAccessHospital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/EmergencyServiceHospital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government_-_Federal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government_Federal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government-Federal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government_-_Hospital_District_or_Authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government-Hospital_District_or_Authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government_-_Local> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government-Local> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Government_-_State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/hasAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/NonEmergencyServiceHospital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Physican_Ownership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Proprietary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/TetherlessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Tribal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Voluntary_non-profit_-_Church> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Voluntary_non-profit-Church> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Voluntary_non-profit_-_Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Voluntary_non-profit_-_Private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/ns/Voluntary_non-profit-Private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/bioontology-org/dataset/annotator-description-subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/bioontology-org/dataset/annotator-description-subject/version/2012-Dec-20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog/version/2012-Dec-17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1248> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1249> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1250> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1251> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1252> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1253> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/bene_sex_ident_cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_adm_cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_bene_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_hha_vst_cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_pmt_amt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_snc_vst_cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_ther_vst_cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_alzhdmta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_cancer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_chf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_chrnkidn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_copd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_depressn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_diabetes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_ischmcht> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_osteoprs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_ra_oa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_strketia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/dual_stus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2009-info> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2009-info/version/2012-Dec-19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-home> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_342> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_343> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_344> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_345> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_346> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_347> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/NV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/NY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/OH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/OK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/OR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/PA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/PR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/hqi-hosp-msr-xwlk/value-of/state/RI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Reso
+urce> .
+
+
+
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/01014F/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/01014F/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/01014F/telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010150/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010150/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010150/telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010152/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010152/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+<tag:tw.rpi.edu,2011:expression:sha-256-09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:expression:sha-256-0bep7TlAaIUzGzQe6gN-5Mz0MLwUOi-U6GZAbePGY5s=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:expression:sha-256-0IzDcaXEIqBJBKYt-X2gPxvY6aiJFn6Y0VvoY0HXJN8=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<tag:tw.rpi.edu,2011:filed:0bIpCD2NaRz6T_4rXRdYN1RpGWb5ixbqllbEByyEZ2k=/sha-256-PwSbkYw9K0J4HoTlntp7y864F2C7tEtpBQyukyzb4dg=/medicare-medicaid-incentive.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+<http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:filed:0d6-oLgjUst6wIZyqfDbKhx6rS4Rxyvcw-4V-o2znmI=/sha-256-PwSbkYw9K0J4HoTlntp7y864F2C7tEtpBQyukyzb4dg=/national-health-expenditures-state-provider.rdf> <http://www.w3.org/1999/02/22-rdf-
+syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:filed:0mmunKX3at_ZWariG4mkt_wi5SKhJF1cjzYo1thUcz4=/sha-256-PwSbkYw9K0J4HoTlntp7y864F2C7tEtpBQyukyzb4dg=/medicare-advantage-cost-demonstration.rdf> <http://www.w3.org/1999/02/22-rdf-syntax
+-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<tag:tw.rpi.edu,2011:item:sha-256-0cHKWqDWnClj8WXl2Osl8Zh1VnfhcCdAyU5bHXgZ7Tg=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:item:sha-256-0gSL5RbDvMTnayr9nZqQFPxDfwazT9O1ougjGk3LYVs=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:item:sha-256-0KuhV6wB5yLy2OaFrvT_kDNEQLoORNfA7gg1JZNCmwA=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<tag:tw.rpi.edu,2011:manifestation:sha-256-09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:manifestation:sha-256-0bep7TlAaIUzGzQe6gN-5Mz0MLwUOi-U6GZAbePGY5s=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:manifestation:sha-256-0IzDcaXEIqBJBKYt-X2gPxvY6aiJFn6Y0VvoY0HXJN8=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:manifestation:sha-256-1DMSRo0BQYBfCp06sC5YjPnHheYVe4AgdFp2JFhW54o=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:manifestation:sha-256-1nA_gWSub_dYtMtV_6eAItYiNPvDjmPBtI1M425bLHg=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<tag:tw.rpi.edu,2011:manifestation:sha-256-1p4bXDNrKajt5IsXFGrOm1XJ49swie5KUnGpC6c9h14=> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<urn:uuid:001d98f5-515e-4577-840d-20160910594c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<urn:uuid:0139fce6-69e6-4be3-b5b5-23e3361abef6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<urn:uuid:02c87401-bec5-41e2-b0c0-20b59829d880> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<urn:uuid:02ddb538-b4ea-40fd-b363-e5d3c866fd17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://purl.org/twc/health/void> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
