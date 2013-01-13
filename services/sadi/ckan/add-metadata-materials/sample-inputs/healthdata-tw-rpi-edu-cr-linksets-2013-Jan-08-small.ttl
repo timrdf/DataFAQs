@@ -1,0 +1,79 @@
+@prefix : <http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/cr-linksets/version/2013-Jan-08> .
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix wgs:        <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix doap:       <http://usefulinc.com/ns/doap#> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix sioc:       <http://rdfs.org/sioc/ns#> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix ov:         <http://open.vocab.org/terms/> .
+@prefix frbr:       <http://purl.org/vocab/frbr/core#> .
+@prefix qb:         <http://purl.org/linked-data/cube#> .
+@prefix sd:         <http://www.w3.org/ns/sparql-service-description#> .
+@prefix moby:       <http://www.mygrid.org.uk/mygrid-moby-service#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dbpedia:    <http://dbpedia.org/resource/> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix sio:        <http://semanticscience.org/resource/> .
+@prefix twi:        <http://tw.rpi.edu/instances/> .
+
+
+<http://datahub.io/dataset/twc-healthdata>
+      a datafaqs:CKANDataset;
+    void:subset :linkset_396c515e06a9f050327af7e61a0ca50b .
+
+:linkset_396c515e06a9f050327af7e61a0ca50b 
+     a void:Linkset, void:Dataset;
+     dcterms:created "2013-01-11T15:02:41+00:00"^^xsd:dateTime;
+     void:target 
+       <http://datahub.io/dataset/twc-healthdata>, 
+       <http://datahub.io/dataset/2000-us-census-rdf>;
+     void:triples     1535;
+     sio:member-count 1535;
+.
+
+@prefix : <http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/cr-linksets/version/2013-Jan-08> .
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix wgs:        <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix doap:       <http://usefulinc.com/ns/doap#> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix sioc:       <http://rdfs.org/sioc/ns#> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix ov:         <http://open.vocab.org/terms/> .
+@prefix frbr:       <http://purl.org/vocab/frbr/core#> .
+@prefix qb:         <http://purl.org/linked-data/cube#> .
+@prefix sd:         <http://www.w3.org/ns/sparql-service-description#> .
+@prefix moby:       <http://www.mygrid.org.uk/mygrid-moby-service#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dbpedia:    <http://dbpedia.org/resource/> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix sio:        <http://semanticscience.org/resource/> .
+@prefix twi:        <http://tw.rpi.edu/instances/> .
+
+
+<http://datahub.io/dataset/twc-healthdata>
+    void:subset :linkset_7b0a73a4e6f6f8d1c05047d85c6d9be9 .
+
+:linkset_7b0a73a4e6f6f8d1c05047d85c6d9be9 
+     a void:Linkset, void:Dataset;
+     dcterms:created "2013-01-11T15:02:43+00:00"^^xsd:dateTime;
+     void:target 
+       <http://datahub.io/dataset/twc-healthdata>, 
+       <http://datahub.io/dataset/2000-us-census-rdf>;
+     void:triples     4862;
+     sio:member-count 4862;
+.
+
