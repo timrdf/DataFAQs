@@ -98,57 +98,84 @@ class BetweenTheEdges(faqt.Service):
 
    @staticmethod
    def extension(path,output):
-      # http://bhpr.hrsa.gov/healthworkforce/default.htm -> .htm
+      # /healthworkforce/default.htm -> .htm
+      # /Blast.cgi                   -> .cgi
       match = re.search('.*(\.....)$',path)
       if match:
          output.bte_extension = match.group(1)
+         output.save()
          return match.group(1)
-      match = re.search('.*(\....)$',path)
-      if match:
-         output.bte_extension = match.group(1)
-         return match.group(1)
-      match = re.search('.*(\...)$',path)
-      if match:
-         output.bte_extension = match.group(1)
-         return match.group(1)
+      else:
+         match = re.search('.*(\....)$',path)
+         if match:
+            output.bte_extension = match.group(1)
+            output.save()
+            return match.group(1)
+         else:
+            match = re.search('.*(\...)$',path)
+            if match:
+               output.bte_extension = match.group(1)
+               output.save()
+               return match.group(1)
       
    @staticmethod
    def walkPath(base,urlpath,output):
 
-      print '   walking: ' + urlpath
-
-      if not len(urlpath):
-         print 'not length!'
+      print '   walking: "' + urlpath + '"'
 
       Node = output.session.get_class(ns.BTE['Node'])
 
       # "/twc/"               -> "/twc"
       # "/ftp/hsp/TANF-data/" -> "/ftp/hsp/TANF-data"
-      #
-      # This should only occur on the root call to walkPath,
-      # since walkPath does not include a trailing slash its 
-      # recursive calls.
       if re.match('.*/$',urlpath):
+         # ^ This should only occur when first called by #process(),
+         # since walkPath does not include a trailing slash its 
+         # recursive calls.
          trimmed_path = re.sub('/$','',urlpath)
-         trimmed = output.session.get_resource(base+trimmed_path,Node)
-         trimmed.rdf_type.append(ns.BTE['Node'])
-         trimmed.save()
-         output.bte_broader = trimmed
-         return BetweenTheEdges.walkPath(base, trimmed_path, output)
+         broader = output.session.get_resource(base+trimmed_path,Node)
+         broader.rdf_type.append(ns.BTE['Node'])
+         broader.save()
+         output.bte_broader = broader
+         return 1 + BetweenTheEdges.walkPath(base, trimmed_path, output)
 
-      BetweenTheEdges.extension(urlpath,output)
+      me = output.session.get_resource(base+urlpath,Node) # TODO: does a get_resource replace the previous one?
+      me.rdf_type.append(ns.BTE['Node'])
+
+      # e.g.
+      #     "http://dailymed.nlm.nih.gov/dailymed/help.cfm"
+      #     "http://healthit.hhs.gov/portal/server.pt"
+      #
+      extension = BetweenTheEdges.extension(urlpath,me) # TODO: This is not asserting the triple.
+      if extension is not None:
+         print '              '+re.sub('.',' ',urlpath) + extension
+         me.bte_extension = extension
+         me.save()
+
       # e.g.
       #      "/"
       #      "/id/agency/cdc"
       #
+      match = re.search("^(.*)/([^/]+)$",urlpath)
+      if match:
+         trimmed_path = match.group(1)
+         step         = match.group(2)
+         print '             ' + urlpath + ' -> "' + trimmed_path + '" + / + ' + step
+         me.bte_step = step
 
-      step = re.sub("^.*/","",urlpath)
-      print '            ' + urlpath + ' -> ' + step
+         broader = output.session.get_resource(base+trimmed_path,Node)
+         broader.rdf_type.append(ns.BTE['Node'])
+         broader.save()
 
-
-      #blah = output.session.get_resource(base+'/BLAH')
-      #blah.rdf_types.append(ns.BTE['Node'])
-      #blah.save()
+         me.bte_broader = broader
+         depth = 1 + BetweenTheEdges.walkPath(base, trimmed_path, output)
+         me.bte_depth = depth
+         me.save()
+         return depth
+      else:
+         print '           ' + base + ' + "' + urlpath + '" is root. ' + me.subject
+         me.bte_depth = 0
+         me.save()
+         return 0
 
    def process(self, input, output):
 
@@ -171,39 +198,25 @@ class BetweenTheEdges(faqt.Service):
       path     = BetweenTheEdges.path(url6,output)
       fragment = BetweenTheEdges.fragment(url6,output)
 
-      # <http://creativecommons.org/ns#>
-
       # <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> 
       #    a bte:RDFNode;
       #    bte:scheme "http";
       #    bte:netloc      "dailymed.nlm.nih.gov";
       #    bte:path                             "/dailymed/help.cfm";
       #    bte:fragment                                            "webservices";
-      #    bte:length   57;
+      #    bte:length                                                         57;
 
       if scheme in ['http'] and path is not None:
-         BetweenTheEdges.walkPath(scheme+'://'+netloc , path, output)
-
-      ####
-      # Query a SPARQL endpoint
-      #store = Store(reader = 'sparql_protocol', endpoint = 'http://dbpedia.org/sparql')
-      #session = Session(store)
-      #session.enable_logging = False
-      #result = session.default_store.execute_sparql('select distinct ?type where {[] a ?type} limit 2')
-      #if result:
-      #   for binding in result['results']['bindings']:
-      #      type  = binding['type']['value']
-      #      print type
-      ####
-
-      # Query the RDF graph POSTed: input.session.default_store.execute
-
-      # Walk through all Things in the input graph (using SuRF):
-      # Thing = input.session.get_class(ns.OWL['Thing'])
-      # for person in Thing.all():
-
-      # Create a calss in the output graph:
-      # Document = output.session.get_class(ns.FOAF['Document'])
+         pathDepth = BetweenTheEdges.walkPath(scheme+'://'+netloc , path, output)
+         fragDepth = 1 if fragment is not None and len(fragment) else 0
+         # <http://bioportal.bioontology.org/>                         depth 1 ('' after the slash)
+         # <http://aidsinfo.nih.gov/api>                               depth 1
+         # <http://bhpr.hrsa.gov/healthworkforce/default.htm>          depth 2
+         # <http://bioportal.bioontology.org/ontologies/umls/>         depth 3 ('' after the slash)
+         # <http://bioportal.bioontology.org/ontologies/umls/cui>      depth 3
+         # <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> depth 3 (fragID adds one)
+         # <http://aspe.hhs.gov/ftp/hsp/TANF-data/>                    depth 4 ('' after the slash)
+         output.bte_depth = pathDepth + fragDepth
 
       output.rdf_type.append(ns.BTE['RDFNode'])
       output.save()
