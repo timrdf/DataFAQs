@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://purl.org/twc/vocab/between-the-edges/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix between-the-edges: <http://purl.org/twc/vocab/between-the-edges/> .
+
+<http://purl.org/twc/vocab/between-the-edges/>
+    a owl:Ontology .
+
+between-the-edges:HashEndURI
+    a owl:Class ;
+    rdfs:subClassOf between-the-edges:HashURI .
+
+between-the-edges:HashURI
+    a owl:Class ;
+    rdfs:comment "URI contains a hash (#). For example, <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices>."@en ;
+    rdfs:subClassOf between-the-edges:RDFNode .
+
+between-the-edges:Node
+    a owl:Class ;
+    rdfs:comment "Any rdfs:Resource that is output by a Between The Edges analysis."@en .
+
+between-the-edges:RDFNode
+    a owl:Class ;
+    rdfs:comment "An rdfs:Resource that was analyzed by Between The Edges, as opposed to rdfs:Resources that resulted from the Between The Edges analysis."@en ;
+    rdfs:subClassOf between-the-edges:Node .
+
+between-the-edges:SlashEndURI
+    a owl:Class ;
+    rdfs:subClassOf between-the-edges:SlashURI .
+
+between-the-edges:SlashURI
+    a owl:Class ;
+    rdfs:subClassOf between-the-edges:RDFNode .
+
+between-the-edges:broader
+    a owl:ObjectProperty ;
+    rdfs:domain between-the-edges:Node ;
+    rdfs:range between-the-edges:Node .
+
+between-the-edges:length
+    a owl:DatatypeProperty ;
+    rdfs:comment "The string length of the URI."@en .
+
+between-the-edges:scheme
+    a owl:DatatypeProperty ;
+    rdfs:comment "The addressing scheme of the URL. For example, http, file, gopher, mailto, ftp, etc."@en .
+
+between-the-edges:step
+    a owl:DatatypeProperty ;
+    rdfs:comment "The local name portion of the URI, after the slash."@en .
+
+rdfs:comment
+    a owl:AnnotationProperty .
+
