@@ -70,32 +70,64 @@ class BetweenTheEdges(faqt.Service):
    @staticmethod
    def length(input,output):
       output.bte_length = len(input.subject)
-      
+      return len(input.subject)
+
    @staticmethod
    def scheme(url6,output):
       if len(url6.scheme):
          output.bte_scheme = url6.scheme
+         return url6.scheme
       
    @staticmethod
    def netloc(url6,output):
       if len(url6.netloc):
          output.bte_netloc = url6.netloc
-      
+         return url6.netloc
+ 
    @staticmethod
    def path(url6,output):
       if len(url6.path):
          output.bte_path = url6.path
+         return url6.path
       
    @staticmethod
    def fragment(url6,output):
       if len(url6.fragment):
          output.bte_fragment = url6.fragment
+         return url6.fragment
       
+   @staticmethod
+   def walkPath(base,urlpath,output):
+      # e.g.
+      #      "/"
+      #      "/twc/"
+      #      "/id/agency/cdc"
+      #
+      print '   walking: ' + urlpath
+      step = re.sub("^.*/","",urlpath)
+      print '            ' + urlpath + ' -> ' + step
+
+      #Node = output.session.get_class(ns.BTE['Node'])
+      #blah = output.session.get_resource('http://google.blah.org/BLAH',Node)
+      #blah.dcterms_description = 'BLAH'
+      #blah.save()
+
+      #blah = output.session.get_resource(base+'/BLAH')
+      #blah.rdf_types.append(ns.BTE['Node'])
+      #blah.save()
+
    def process(self, input, output):
 
       print 'processing ' + input.subject
 
       length = BetweenTheEdges.length(input,output)
+
+      if re.match('.*/$',input.subject):
+         output.rdf_type.append(ns.BTE['SlashEndURI'])
+      elif re.match('.*#$',input.subject):
+         output.rdf_type.append(ns.BTE['HashEndURI'])
+      else:
+         print '   (ends in neither hash nor slash)'
 
       #
       # Using urlparse
@@ -107,6 +139,8 @@ class BetweenTheEdges(faqt.Service):
       path     = BetweenTheEdges.path(url6,output)
       fragment = BetweenTheEdges.fragment(url6,output)
 
+      # <http://creativecommons.org/ns#>
+
       # <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> 
       #    a bte:RDFNode;
       #    bte:scheme "http";
@@ -115,8 +149,8 @@ class BetweenTheEdges(faqt.Service):
       #    bte:fragment                                            "webservices";
       #    bte:length   57;
 
-      #if scheme in ['http']:
-      #   BetweenTheEdges.walkPath(path,outout)
+      if scheme in ['http'] and path is not None:
+         BetweenTheEdges.walkPath(scheme+'://'+netloc , path, output)
 
       ####
       # Query a SPARQL endpoint
