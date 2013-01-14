@@ -95,22 +95,56 @@ class BetweenTheEdges(faqt.Service):
       if len(url6.fragment):
          output.bte_fragment = url6.fragment
          return url6.fragment
+
+   @staticmethod
+   def extension(path,output):
+      # http://bhpr.hrsa.gov/healthworkforce/default.htm -> .htm
+      match = re.search('.*(\.....)$',path)
+      if match:
+         output.bte_extension = match.group(1)
+         return match.group(1)
+      match = re.search('.*(\....)$',path)
+      if match:
+         output.bte_extension = match.group(1)
+         return match.group(1)
+      match = re.search('.*(\...)$',path)
+      if match:
+         output.bte_extension = match.group(1)
+         return match.group(1)
       
    @staticmethod
    def walkPath(base,urlpath,output):
+
+      print '   walking: ' + urlpath
+
+      if not len(urlpath):
+         print 'not length!'
+
+      Node = output.session.get_class(ns.BTE['Node'])
+
+      # "/twc/"               -> "/twc"
+      # "/ftp/hsp/TANF-data/" -> "/ftp/hsp/TANF-data"
+      #
+      # This should only occur on the root call to walkPath,
+      # since walkPath does not include a trailing slash its 
+      # recursive calls.
+      if re.match('.*/$',urlpath):
+         trimmed_path = re.sub('/$','',urlpath)
+         trimmed = output.session.get_resource(base+trimmed_path,Node)
+         trimmed.rdf_type.append(ns.BTE['Node'])
+         trimmed.save()
+         output.bte_broader = trimmed
+         return BetweenTheEdges.walkPath(base, trimmed_path, output)
+
+      BetweenTheEdges.extension(urlpath,output)
       # e.g.
       #      "/"
-      #      "/twc/"
       #      "/id/agency/cdc"
       #
-      print '   walking: ' + urlpath
+
       step = re.sub("^.*/","",urlpath)
       print '            ' + urlpath + ' -> ' + step
 
-      #Node = output.session.get_class(ns.BTE['Node'])
-      #blah = output.session.get_resource('http://google.blah.org/BLAH',Node)
-      #blah.dcterms_description = 'BLAH'
-      #blah.save()
 
       #blah = output.session.get_resource(base+'/BLAH')
       #blah.rdf_types.append(ns.BTE['Node'])
@@ -126,11 +160,9 @@ class BetweenTheEdges(faqt.Service):
          output.rdf_type.append(ns.BTE['SlashEndURI'])
       elif re.match('.*#$',input.subject):
          output.rdf_type.append(ns.BTE['HashEndURI'])
-      else:
-         print '   (ends in neither hash nor slash)'
 
       #
-      # Using urlparse
+      # Using urlparse - http://docs.python.org/2/library/urlparse.html
       # e.g. ParseResult(scheme='http', netloc='www.cwi.nl:80', path='/%7Eguido/Python.html', params='', query='', fragment='')
       #
       url6 = urlparse(str(input.subject))
