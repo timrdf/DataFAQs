@@ -1,0 +1,3882 @@
+@prefix bte: <http://purl.org/twc/vocab/between-the-edges/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<di:sha-256;09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=> a bte:RDFNode;
+    bte:length 55;
+    bte:path "sha-256;09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=";
+    bte:scheme "di" .
+
+<file:////srv/twc-healthdata/data/source/healthdata-tw-rpi-edu/ckan/version/2012-Dec-19/automatic/2008-basic-stand-alone-carrier.rdf> a bte:RDFNode;
+    bte:length 131;
+    bte:path "//srv/twc-healthdata/data/source/healthdata-tw-rpi-edu/ckan/version/2012-Dec-19/automatic/2008-basic-stand-alone-carrier.rdf";
+    bte:scheme "file" .
+
+<ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/CHDI/chsi_dataset.zip> a bte:RDFNode;
+    bte:length 75;
+    bte:netloc "ftp.cdc.gov";
+    bte:path "/pub/Health_Statistics/NCHS/Datasets/CHDI/chsi_dataset.zip";
+    bte:scheme "ftp" .
+
+<http://> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:length 7;
+    bte:scheme "http" .
+
+<http://IKNData.insurekidsnow.gov/clienttool> a bte:Node;
+    bte:broader <http://IKNData.insurekidsnow.gov>;
+    bte:depth 1;
+    bte:step "clienttool" .
+
+<http://IKNData.insurekidsnow.gov/clienttool/InsureKidsNow-Technical-Document%2020100405.doc> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 91;
+    bte:netloc "IKNData.insurekidsnow.gov";
+    bte:path "/clienttool/InsureKidsNow-Technical-Document%2020100405.doc";
+    bte:scheme "http" .
+
+<http://aidsinfo.nih.gov/api> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 27;
+    bte:netloc "aidsinfo.nih.gov";
+    bte:path "/api";
+    bte:scheme "http" .
+
+<http://aidsinfo.nih.gov/drugs> a bte:Node;
+    bte:broader <http://aidsinfo.nih.gov>;
+    bte:depth 1;
+    bte:step "drugs" .
+
+<http://aidsinfo.nih.gov/drugs/xml> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 33;
+    bte:netloc "aidsinfo.nih.gov";
+    bte:path "/drugs/xml";
+    bte:scheme "http" .
+
+<http://alvaro.graves.cl> a bte:RDFNode;
+    bte:length 23;
+    bte:netloc "alvaro.graves.cl";
+    bte:scheme "http" .
+
+<http://arf.hrsa.gov/arfwebtool> a bte:Node;
+    bte:broader <http://arf.hrsa.gov>;
+    bte:depth 1;
+    bte:step "arfwebtool" .
+
+<http://arf.hrsa.gov/arfwebtool/HRCCTDataSources.pdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 51;
+    bte:netloc "arf.hrsa.gov";
+    bte:path "/arfwebtool/HRCCTDataSources.pdf";
+    bte:scheme "http" .
+
+<http://aspe.hhs.gov/ftp/hsp/TANF-data/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://aspe.hhs.gov/ftp/hsp/TANF-data>;
+    bte:depth 4;
+    bte:length 38;
+    bte:netloc "aspe.hhs.gov";
+    bte:path "/ftp/hsp/TANF-data/";
+    bte:scheme "http" .
+
+<http://bhpr.hrsa.gov/healthworkforce> a bte:Node;
+    bte:broader <http://bhpr.hrsa.gov>;
+    bte:depth 1;
+    bte:step "healthworkforce" .
+
+<http://bhpr.hrsa.gov/healthworkforce/default.htm> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 48;
+    bte:netloc "bhpr.hrsa.gov";
+    bte:path "/healthworkforce/default.htm";
+    bte:scheme "http" .
+
+<http://bioportal.bioontology.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://bioportal.bioontology.org>;
+    bte:depth 1;
+    bte:length 33;
+    bte:netloc "bioportal.bioontology.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://bioportal.bioontology.org/ontologies/umls/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://bioportal.bioontology.org/ontologies/umls>;
+    bte:depth 3;
+    bte:length 49;
+    bte:netloc "bioportal.bioontology.org";
+    bte:path "/ontologies/umls/";
+    bte:scheme "http" .
+
+<http://bioportal.bioontology.org/ontologies/umls/cui> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 52;
+    bte:netloc "bioportal.bioontology.org";
+    bte:path "/ontologies/umls/cui";
+    bte:scheme "http" .
+
+<http://bioportal.bioontology.org/ontologies/umls/hasSTY> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 55;
+    bte:netloc "bioportal.bioontology.org";
+    bte:path "/ontologies/umls/hasSTY";
+    bte:scheme "http" .
+
+<http://bioportal.bioontology.org/ontologies/umls/isRoot> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 55;
+    bte:netloc "bioportal.bioontology.org";
+    bte:path "/ontologies/umls/isRoot";
+    bte:scheme "http" .
+
+<http://bioportal.bioontology.org/ontologies/umls/tui> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 52;
+    bte:netloc "bioportal.bioontology.org";
+    bte:path "/ontologies/umls/tui";
+    bte:scheme "http" .
+
+<http://blast.ncbi.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://blast.ncbi.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 30;
+    bte:netloc "blast.ncbi.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://blast.ncbi.nlm.nih.gov/Blast.cgi> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 39;
+    bte:netloc "blast.ncbi.nlm.nih.gov";
+    bte:path "/Blast.cgi";
+    bte:scheme "http" .
+
+<http://cancercontrol.cancer.gov/hcirb/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://cancercontrol.cancer.gov/hcirb>;
+    bte:depth 2;
+    bte:length 38;
+    bte:netloc "cancercontrol.cancer.gov";
+    bte:path "/hcirb/";
+    bte:scheme "http" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost>;
+    bte:depth 1;
+    bte:length 61;
+    bte:netloc "change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1>;
+    bte:depth 8;
+    bte:length 146;
+    bte:netloc "change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost";
+    bte:path "/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1/";
+    bte:scheme "http" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1/bene_age_cat_cd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 8;
+    bte:length 161;
+    bte:netloc "change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost";
+    bte:path "/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1/bene_age_cat_cd";
+    bte:scheme "http" .
+
+<http://chemspell.nlm.nih.gov/spell/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://chemspell.nlm.nih.gov/spell>;
+    bte:depth 2;
+    bte:length 35;
+    bte:netloc "chemspell.nlm.nih.gov";
+    bte:path "/spell/";
+    bte:scheme "http" .
+
+<http://clinicaltrials.gov/ct> a bte:Node;
+    bte:broader <http://clinicaltrials.gov>;
+    bte:depth 1;
+    bte:step "ct" .
+
+<http://clinicaltrials.gov/ct/gui> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 32;
+    bte:netloc "clinicaltrials.gov";
+    bte:path "/ct/gui";
+    bte:scheme "http" .
+
+<http://clinicaltrials.gov/ct2/info> a bte:Node;
+    bte:broader <http://clinicaltrials.gov/ct2>;
+    bte:depth 2;
+    bte:step "info" .
+
+<http://clinicaltrials.gov/ct2/info/linking> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 42;
+    bte:netloc "clinicaltrials.gov";
+    bte:path "/ct2/info/linking";
+    bte:scheme "http" .
+
+<http://code.google.com/p/surfrdf> a bte:Node;
+    bte:broader <http://code.google.com/p>;
+    bte:depth 2;
+    bte:step "surfrdf" .
+
+<http://code.google.com/p/surfrdf/0023d413-b480-46a9-919a-338edc528021> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 69;
+    bte:netloc "code.google.com";
+    bte:path "/p/surfrdf/0023d413-b480-46a9-919a-338edc528021";
+    bte:scheme "http" .
+
+<http://creativecommons.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://creativecommons.org>;
+    bte:depth 1;
+    bte:length 27;
+    bte:netloc "creativecommons.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://creativecommons.org/ns> a bte:Node;
+    bte:broader <http://creativecommons.org>;
+    bte:depth 1;
+    bte:step "ns" .
+
+<http://creativecommons.org/ns#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 30;
+    bte:netloc "creativecommons.org";
+    bte:path "/ns";
+    bte:scheme "http" .
+
+<http://creativecommons.org/ns#license> a bte:RDFNode;
+    bte:depth 2;
+    bte:fragment "license";
+    bte:length 37;
+    bte:netloc "creativecommons.org";
+    bte:path "/ns";
+    bte:scheme "http" .
+
+<http://cwoutcomes.acf.hhs.gov/data/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://cwoutcomes.acf.hhs.gov/data>;
+    bte:depth 2;
+    bte:length 35;
+    bte:netloc "cwoutcomes.acf.hhs.gov";
+    bte:path "/data/";
+    bte:scheme "http" .
+
+<http://dailymed.nlm.nih.gov/dailymed/about.cfm> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 46;
+    bte:netloc "dailymed.nlm.nih.gov";
+    bte:path "/dailymed/about.cfm";
+    bte:scheme "http" .
+
+<http://dailymed.nlm.nih.gov/dailymed/help.cfm> a bte:Node;
+    bte:broader <http://dailymed.nlm.nih.gov/dailymed>;
+    bte:depth 2;
+    bte:extension ".cfm";
+    bte:step "help.cfm" .
+
+<http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "webservices";
+    bte:length 57;
+    bte:netloc "dailymed.nlm.nih.gov";
+    bte:path "/dailymed/help.cfm";
+    bte:scheme "http" .
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver> a bte:Node;
+    bte:broader <http://data-gov.tw.rpi.edu/wiki>;
+    bte:depth 2;
+    bte:step "Special:URIResolver" .
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/URI_design_for_RDF_conversion_of_CSV-based_data> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 99;
+    bte:netloc "data-gov.tw.rpi.edu";
+    bte:path "/wiki/Special:URIResolver/URI_design_for_RDF_conversion_of_CSV-based_data";
+    bte:scheme "http" .
+
+<http://data-gov.tw.rpi.edu/wiki/Special:URIResolver/csv2rdf4lod> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 63;
+    bte:netloc "data-gov.tw.rpi.edu";
+    bte:path "/wiki/Special:URIResolver/csv2rdf4lod";
+    bte:scheme "http" .
+
+<http://data.lod2.eu/2011/tools> a bte:Node;
+    bte:broader <http://data.lod2.eu/2011>;
+    bte:depth 2;
+    bte:step "tools" .
+
+<http://data.lod2.eu/2011/tools/CSV2RDF4LOD> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 42;
+    bte:netloc "data.lod2.eu";
+    bte:path "/2011/tools/CSV2RDF4LOD";
+    bte:scheme "http" .
+
+<http://data.medicare.gov/dataset/Dialysis-Facility-Compare-Listing-by-Facility> a bte:Node;
+    bte:broader <http://data.medicare.gov/dataset>;
+    bte:depth 2;
+    bte:step "Dialysis-Facility-Compare-Listing-by-Facility" .
+
+<http://data.medicare.gov/dataset/Dialysis-Facility-Compare-Listing-by-Facility/23ew-n7w9> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 88;
+    bte:netloc "data.medicare.gov";
+    bte:path "/dataset/Dialysis-Facility-Compare-Listing-by-Facility/23ew-n7w9";
+    bte:scheme "http" .
+
+<http://data.medicare.gov/dataset/Home-Health-Care-Facilities> a bte:Node;
+    bte:broader <http://data.medicare.gov/dataset>;
+    bte:depth 2;
+    bte:step "Home-Health-Care-Facilities" .
+
+<http://data.medicare.gov/dataset/Home-Health-Care-Facilities/6jpm-sxkc> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 70;
+    bte:netloc "data.medicare.gov";
+    bte:path "/dataset/Home-Health-Care-Facilities/6jpm-sxkc";
+    bte:scheme "http" .
+
+<http://data.medicare.gov/dataset/Nursing-Home-Compare-Provider-Ratings> a bte:Node;
+    bte:broader <http://data.medicare.gov/dataset>;
+    bte:depth 2;
+    bte:step "Nursing-Home-Compare-Provider-Ratings" .
+
+<http://data.medicare.gov/dataset/Nursing-Home-Compare-Provider-Ratings/mufm-vy8d> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 80;
+    bte:netloc "data.medicare.gov";
+    bte:path "/dataset/Nursing-Home-Compare-Provider-Ratings/mufm-vy8d";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://datawarehouse.hrsa.gov>;
+    bte:depth 1;
+    bte:length 30;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/DataDownload/HCC> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov/DataDownload>;
+    bte:depth 2;
+    bte:step "HCC" .
+
+<http://datawarehouse.hrsa.gov/DataDownload/HCC/HCCs_and_Lookalikes.zip> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 70;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/DataDownload/HCC/HCCs_and_Lookalikes.zip";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/DataDownload/HPSA> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov/DataDownload>;
+    bte:depth 2;
+    bte:step "HPSA" .
+
+<http://datawarehouse.hrsa.gov/DataDownload/HPSA/HPSA.zip> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 56;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/DataDownload/HPSA/HPSA.zip";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/Data_Dictionary.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 50;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/Data_Dictionary.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/Download_HCC_LookALikes.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 58;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/Download_HCC_LookALikes.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/GeoAdvisor> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov>;
+    bte:depth 1;
+    bte:step "GeoAdvisor" .
+
+<http://datawarehouse.hrsa.gov/GeoAdvisor/ShortageDesignationAdvisor.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 72;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/GeoAdvisor/ShortageDesignationAdvisor.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/GeoAdvisor/shortagedesignationadvisor.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 72;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/GeoAdvisor/shortagedesignationadvisor.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/HGDWDataWebService> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov>;
+    bte:depth 1;
+    bte:step "HGDWDataWebService" .
+
+<http://datawarehouse.hrsa.gov/HGDWDataWebService/HGDWDataService.asmx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 69;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/HGDWDataWebService/HGDWDataService.asmx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/HPSADownload.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 47;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/HPSADownload.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/aboutthedata.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 47;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/aboutthedata.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/datadownload.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 47;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/datadownload.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/geoHPSAAdvisor> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov>;
+    bte:depth 1;
+    bte:step "geoHPSAAdvisor" .
+
+<http://datawarehouse.hrsa.gov/geoHPSAAdvisor/GeographicHPSAAdvisor.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 71;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/geoHPSAAdvisor/GeographicHPSAAdvisor.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/help/corda> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov/help>;
+    bte:depth 2;
+    bte:step "corda" .
+
+<http://datawarehouse.hrsa.gov/help/corda/HAAG-Drill-Sites-Help.htm> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 66;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/help/corda/HAAG-Drill-Sites-Help.htm";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/nssrn.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 40;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/nssrn.aspx";
+    bte:scheme "http" .
+
+<http://datawarehouse.hrsa.gov/nursingsurvey.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 48;
+    bte:netloc "datawarehouse.hrsa.gov";
+    bte:path "/nursingsurvey.aspx";
+    bte:scheme "http" .
+
+<http://dbpedia.org/resource> a bte:Node;
+    bte:broader <http://dbpedia.org>;
+    bte:depth 1;
+    bte:step "resource" .
+
+<http://dbpedia.org/resource/Abbeville_County> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 44;
+    bte:netloc "dbpedia.org";
+    bte:path "/resource/Abbeville_County";
+    bte:scheme "http" .
+
+<http://dbpedia.org/resource/Acadia_County> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 41;
+    bte:netloc "dbpedia.org";
+    bte:path "/resource/Acadia_County";
+    bte:scheme "http" .
+
+<http://dbpedia.org/resource/Ada_County> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 38;
+    bte:netloc "dbpedia.org";
+    bte:path "/resource/Ada_County";
+    bte:scheme "http" .
+
+<http://dbpedia.org/resource/Adair_County> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 40;
+    bte:netloc "dbpedia.org";
+    bte:path "/resource/Adair_County";
+    bte:scheme "http" .
+
+<http://dirline.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://dirline.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 27;
+    bte:netloc "dirline.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://downloads.cms.gov/BSAPUF> a bte:Node;
+    bte:broader <http://downloads.cms.gov>;
+    bte:depth 1;
+    bte:step "BSAPUF" .
+
+<http://downloads.cms.gov/BSAPUF/2008_BSA_Carrier_Line_Items_PUF_1.zip> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 69;
+    bte:netloc "downloads.cms.gov";
+    bte:path "/BSAPUF/2008_BSA_Carrier_Line_Items_PUF_1.zip";
+    bte:scheme "http" .
+
+<http://downloads.cms.gov/BSAPUF/2008_BSA_DME_Line_Items_PUF.zip> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 63;
+    bte:netloc "downloads.cms.gov";
+    bte:path "/BSAPUF/2008_BSA_DME_Line_Items_PUF.zip";
+    bte:scheme "http" .
+
+<http://downloads.cms.gov/BSAPUF/2008_BSA_Outpatient_Procedures_PUF_1.zip> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 72;
+    bte:netloc "downloads.cms.gov";
+    bte:path "/BSAPUF/2008_BSA_Outpatient_Procedures_PUF_1.zip";
+    bte:scheme "http" .
+
+<http://downloads.cms.gov/BSAPUF/2008_BSA_PartD_Events_PUF_1.zip> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 63;
+    bte:netloc "downloads.cms.gov";
+    bte:path "/BSAPUF/2008_BSA_PartD_Events_PUF_1.zip";
+    bte:scheme "http" .
+
+<http://downloads.cms.gov/medicare> a bte:Node;
+    bte:broader <http://downloads.cms.gov>;
+    bte:depth 1;
+    bte:step "medicare" .
+
+<http://downloads.cms.gov/medicare/Hospital_flatfiles.zip> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 56;
+    bte:netloc "downloads.cms.gov";
+    bte:path "/medicare/Hospital_flatfiles.zip";
+    bte:scheme "http" .
+
+<http://eclkc.ohs.acf.hhs.gov> a bte:Node,
+        bte:RDFNode;
+    bte:length 28;
+    bte:netloc "eclkc.ohs.acf.hhs.gov";
+    bte:scheme "http" .
+
+<http://eclkc.ohs.acf.hhs.gov/hslc> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 33;
+    bte:netloc "eclkc.ohs.acf.hhs.gov";
+    bte:path "/hslc";
+    bte:scheme "http" .
+
+<http://ephtracking.cdc.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://ephtracking.cdc.gov/showTechnicalNotes.action> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 52;
+    bte:netloc "ephtracking.cdc.gov";
+    bte:path "/showTechnicalNotes.action";
+    bte:scheme "http" .
+
+<http://evs.nci.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://evs.nci.nih.gov>;
+    bte:depth 1;
+    bte:length 23;
+    bte:netloc "evs.nci.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://evs.nci.nih.gov/ftp1/NDF-RT> a bte:Node;
+    bte:broader <http://evs.nci.nih.gov/ftp1>;
+    bte:depth 2;
+    bte:step "NDF-RT" .
+
+<http://evs.nci.nih.gov/ftp1/NDF-RT/NDF-RT%20Documentation.pdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 61;
+    bte:netloc "evs.nci.nih.gov";
+    bte:path "/ftp1/NDF-RT/NDF-RT%20Documentation.pdf";
+    bte:scheme "http" .
+
+<http://findahealthcenter.hrsa.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://findahealthcenter.hrsa.gov>;
+    bte:depth 1;
+    bte:length 34;
+    bte:netloc "findahealthcenter.hrsa.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://findahealthcenter.hrsa.gov/Help/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://findahealthcenter.hrsa.gov/Help>;
+    bte:depth 2;
+    bte:length 39;
+    bte:netloc "findahealthcenter.hrsa.gov";
+    bte:path "/Help/";
+    bte:scheme "http" .
+
+<http://findanetwork.hrsa.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://findanetwork.hrsa.gov>;
+    bte:depth 1;
+    bte:length 29;
+    bte:netloc "findanetwork.hrsa.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://findanetwork.hrsa.gov/Help/About_Search_Settings.htm> a bte:Node;
+    bte:broader <http://findanetwork.hrsa.gov/Help>;
+    bte:depth 2;
+    bte:extension ".htm";
+    bte:step "About_Search_Settings.htm" .
+
+<http://findanetwork.hrsa.gov/Help/About_Search_Settings.htm#Data_Currentness_&_Problems> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "Data_Currentness_&_Problems";
+    bte:length 87;
+    bte:netloc "findanetwork.hrsa.gov";
+    bte:path "/Help/About_Search_Settings.htm";
+    bte:scheme "http" .
+
+<http://finder.healthcare.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://finder.healthcare.gov/services> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 37;
+    bte:netloc "finder.healthcare.gov";
+    bte:path "/services";
+    bte:scheme "http" .
+
+<http://findhivcare.hrsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://findhivcare.hrsa.gov/Search_HAB.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 43;
+    bte:netloc "findhivcare.hrsa.gov";
+    bte:path "/Search_HAB.aspx";
+    bte:scheme "http" .
+
+<http://ghr.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://ghr.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 23;
+    bte:netloc "ghr.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://hazmap.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://hazmap.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 26;
+    bte:netloc "hazmap.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://hcupnet.ahrq.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://hcupnet.ahrq.gov>;
+    bte:depth 1;
+    bte:length 24;
+    bte:netloc "hcupnet.ahrq.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency> a bte:Node;
+    bte:broader <http://healthdata.gov/id>;
+    bte:depth 2;
+    bte:step "agency" .
+
+<http://healthdata.gov/id/agency/acf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/acf";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/acl> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/acl";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/ahrq> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 36;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/ahrq";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/cdc> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/cdc";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/cms> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/cms";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/fda> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/fda";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/hhs> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/hhs";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/nida> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 36;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/nida";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/nih> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/nih";
+    bte:scheme "http" .
+
+<http://healthdata.gov/id/agency/nlm> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "healthdata.gov";
+    bte:path "/id/agency/nlm";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset> a bte:Node;
+    bte:broader <http://healthdata.tw.rpi.edu/hub>;
+    bte:depth 2;
+    bte:step "dataset" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-carrier> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 71;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-carrier";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-carrier.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 75;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-carrier.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-durable> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 71;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-durable";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-durable.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 75;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-durable.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-home> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 68;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-home";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-home.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 72;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-home.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-hospice> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 71;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-hospice";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-hospice.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 75;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-hospice.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-inpatient> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 73;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-inpatient";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-inpatient.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 77;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-inpatient.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-outpatient> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 74;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-outpatient";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-outpatient.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 78;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-outpatient.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-prescription> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 76;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-prescription";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-prescription.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 80;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-prescription.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-skilled> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 71;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-skilled";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-basic-stand-alone-skilled.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 75;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-basic-stand-alone-skilled.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-chronic-conditions> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 64;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-chronic-conditions";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2008-chronic-conditions.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 68;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2008-chronic-conditions.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2009-info> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 50;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2009-info";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2009-info.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 54;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2009-info.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 68;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2010-basic-stand-alone-home";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 72;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/2010-basic-stand-alone-home.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-certified-equipment-list> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 71;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/niosh-certified-equipment-list";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-certified-equipment-list.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 75;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/niosh-certified-equipment-list.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-pocket-guide-chemical> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 68;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/niosh-pocket-guide-chemical";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/niosh-pocket-guide-chemical.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 72;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/niosh-pocket-guide-chemical.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/nursing-home-compare> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 61;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/nursing-home-compare";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/nursing-home-compare.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 65;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/nursing-home-compare.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/office-inspector-general-list> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 70;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/office-inspector-general-list";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/office-inspector-general-list.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 74;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/office-inspector-general-list.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/omha-appeals-listed-state> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 66;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/omha-appeals-listed-state";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/omha-appeals-listed-state.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 70;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/omha-appeals-listed-state.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/online-label-repository> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 64;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/online-label-repository";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/online-label-repository.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 68;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/online-label-repository.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/organ-procurement-transplantation> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 74;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/organ-procurement-transplantation";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/organ-procurement-transplantation.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 78;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/organ-procurement-transplantation.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/part-carrier-summary-data-file> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 71;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/part-carrier-summary-data-file";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/part-carrier-summary-data-file-cy2005> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 78;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/part-carrier-summary-data-file-cy2005";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/hub/dataset/part-carrier-summary-data-file-cy2005.rdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 82;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/hub/dataset/part-carrier-summary-data-file-cy2005.rdf";
+    bte:scheme "http" .
+
+<http://healthdata.tw.rpi.edu/sparql> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 35;
+    bte:netloc "healthdata.tw.rpi.edu";
+    bte:path "/sparql";
+    bte:scheme "http" .
+
+<http://healthindicators.gov/Indicators/Initiative_CMS-Community-Indicators_5> a bte:Node;
+    bte:broader <http://healthindicators.gov/Indicators>;
+    bte:depth 2;
+    bte:step "Initiative_CMS-Community-Indicators_5" .
+
+<http://healthindicators.gov/Indicators/Initiative_CMS-Community-Indicators_5/Selection> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 86;
+    bte:netloc "healthindicators.gov";
+    bte:path "/Indicators/Initiative_CMS-Community-Indicators_5/Selection";
+    bte:scheme "http" .
+
+<http://healthit.hhs.gov/CDSInventory> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 36;
+    bte:netloc "healthit.hhs.gov";
+    bte:path "/CDSInventory";
+    bte:scheme "http" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities/a_e/cds> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities/a_e>;
+    bte:depth 11;
+    bte:step "cds" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities/a_e/cds/rss.xml> a bte:Node,
+        bte:RDFNode;
+    bte:depth 12;
+    bte:length 148;
+    bte:netloc "healthit.hhs.gov";
+    bte:path "/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities/a_e/cds/rss.xml";
+    bte:scheme "http" .
+
+<http://healthit.hhs.gov/portal/server.pt?open=512&objID=2905&mode=2> a bte:RDFNode;
+    bte:depth 2;
+    bte:length 67;
+    bte:netloc "healthit.hhs.gov";
+    bte:path "/portal/server.pt";
+    bte:scheme "http" .
+
+<http://hints.cancer.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://hints.cancer.gov/instrument.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 39;
+    bte:netloc "hints.cancer.gov";
+    bte:path "/instrument.aspx";
+    bte:scheme "http" .
+
+<http://hints.cancer.gov/terms.aspx> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 34;
+    bte:netloc "hints.cancer.gov";
+    bte:path "/terms.aspx";
+    bte:scheme "http" .
+
+<http://householdproducts.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://householdproducts.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 37;
+    bte:netloc "householdproducts.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://hub.healthdata.gov/dataset> a bte:Node;
+    bte:broader <http://hub.healthdata.gov>;
+    bte:depth 1;
+    bte:step "dataset" .
+
+<http://hub.healthdata.gov/dataset/1990-through-2011-national> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 60;
+    bte:netloc "hub.healthdata.gov";
+    bte:path "/dataset/1990-through-2011-national";
+    bte:scheme "http" .
+
+<http://hub.healthdata.gov/dataset/1992-through-2010-treatment> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 61;
+    bte:netloc "hub.healthdata.gov";
+    bte:path "/dataset/1992-through-2010-treatment";
+    bte:scheme "http" .
+
+<http://hub.healthdata.gov/dataset/1997-through-2010-national> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 60;
+    bte:netloc "hub.healthdata.gov";
+    bte:path "/dataset/1997-through-2010-national";
+    bte:scheme "http" .
+
+<http://hub.healthdata.gov/dataset/2004-through-2010-drug-abuse> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 62;
+    bte:netloc "hub.healthdata.gov";
+    bte:path "/dataset/2004-through-2010-drug-abuse";
+    bte:scheme "http" .
+
+<http://hub.healthdata.gov/dataset/2006-through-2009-treatment> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 61;
+    bte:netloc "hub.healthdata.gov";
+    bte:path "/dataset/2006-through-2009-treatment";
+    bte:scheme "http" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-carrier> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 64;
+    bte:netloc "hub.healthdata.gov";
+    bte:path "/dataset/2008-basic-stand-alone-carrier";
+    bte:scheme "http" .
+
+<http://hub.healthdata.gov/dataset/2008-basic-stand-alone-durable> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 64;
+    bte:netloc "hub.healthdata.gov";
+    bte:path "/dataset/2008-basic-stand-alone-durable";
+    bte:scheme "http" .
+
+<http://inference-web.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://inference-web.org>;
+    bte:depth 1;
+    bte:length 25;
+    bte:netloc "inference-web.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://inference-web.org/2.0/pml-justification.owl> a bte:Node;
+    bte:broader <http://inference-web.org/2.0>;
+    bte:depth 2;
+    bte:extension ".owl";
+    bte:step "pml-justification.owl" .
+
+<http://inference-web.org/2.0/pml-justification.owl#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 51;
+    bte:netloc "inference-web.org";
+    bte:path "/2.0/pml-justification.owl";
+    bte:scheme "http" .
+
+<http://inference-web.org/2.0/pml-justification.owl#hasAntecedentList> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "hasAntecedentList";
+    bte:length 68;
+    bte:netloc "inference-web.org";
+    bte:path "/2.0/pml-justification.owl";
+    bte:scheme "http" .
+
+<http://iw.cs.utep.edu/registry/FMT/text/CSV.owl> a bte:Node;
+    bte:broader <http://iw.cs.utep.edu/registry/FMT/text>;
+    bte:depth 4;
+    bte:extension ".owl";
+    bte:step "CSV.owl" .
+
+<http://iw.cs.utep.edu/registry/FMT/text/CSV.owl#CSV> a bte:RDFNode;
+    bte:depth 5;
+    bte:fragment "CSV";
+    bte:length 51;
+    bte:netloc "iw.cs.utep.edu";
+    bte:path "/registry/FMT/text/CSV.owl";
+    bte:scheme "http" .
+
+<http://kasei.us/about/foaf.xrdf> a bte:Node;
+    bte:broader <http://kasei.us/about>;
+    bte:depth 2;
+    bte:extension ".xrdf";
+    bte:step "foaf.xrdf" .
+
+<http://kasei.us/about/foaf.xrdf#greg> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "greg";
+    bte:length 36;
+    bte:netloc "kasei.us";
+    bte:path "/about/foaf.xrdf";
+    bte:scheme "http" .
+
+<http://labels.fda.gov> a bte:RDFNode;
+    bte:length 21;
+    bte:netloc "labels.fda.gov";
+    bte:scheme "http" .
+
+<http://locatorplus.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://locatorplus.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 31;
+    bte:netloc "locatorplus.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://logd.tw.rpi.edu>;
+    bte:depth 1;
+    bte:length 23;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/country> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/id>;
+    bte:depth 2;
+    bte:step "country" .
+
+<http://logd.tw.rpi.edu/id/country/United_States> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 47;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/country/United_States";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/medicare-gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://logd.tw.rpi.edu/id/medicare-gov>;
+    bte:depth 3;
+    bte:length 39;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/medicare-gov/";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/medicare-gov/provider> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://logd.tw.rpi.edu/id/medicare-gov>;
+    bte:depth 3;
+    bte:step "provider" .
+
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010001> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 54;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/medicare-gov/provider/010001";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010005> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 54;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/medicare-gov/provider/010005";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010006> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 54;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/medicare-gov/provider/010006";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/medicare-gov/provider/010007> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 54;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/medicare-gov/provider/010007";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/us/state> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/id/us>;
+    bte:depth 3;
+    bte:step "state" .
+
+<http://logd.tw.rpi.edu/id/us/state/Alabama> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 42;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/us/state/Alabama";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/us/state/Alaska> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 41;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/us/state/Alaska";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/us/state/American_Samoa> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 49;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/us/state/American_Samoa";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/us/state/Arizona> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 42;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/us/state/Arizona";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/us/state/Arkansas> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 43;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/us/state/Arkansas";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/id/us/state/California> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 45;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/id/us/state/California";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/source/hub-healthdata-gov/vocab/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://logd.tw.rpi.edu/source/hub-healthdata-gov/vocab>;
+    bte:depth 4;
+    bte:length 55;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/source/hub-healthdata-gov/vocab/";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/source/hub-healthdata-gov/vocab/Dataset> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 62;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/source/hub-healthdata-gov/vocab/Dataset";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties/version/2012-Sep-29/conversion> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties/version/2012-Sep-29>;
+    bte:depth 7;
+    bte:step "conversion" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties/version/2012-Sep-29/conversion/twc-rpi-edu-instance-hub-us-counties-2012-Sep-29.ttl> a bte:Node,
+        bte:RDFNode;
+    bte:depth 8;
+    bte:length 155;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/source/twc-rpi-edu/file/instance-hub-us-counties/version/2012-Sep-29/conversion/twc-rpi-edu-instance-hub-us-counties-2012-Sep-29.ttl";
+    bte:scheme "http" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version/2011-Apr-09/conversion> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version/2011-Apr-09>;
+    bte:depth 7;
+    bte:step "conversion" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version/2011-Apr-09/conversion/instance-hub-us-states-and-territories.csv.e1.ttl> a bte:Node,
+        bte:RDFNode;
+    bte:depth 8;
+    bte:length 166;
+    bte:netloc "logd.tw.rpi.edu";
+    bte:path "/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version/2011-Apr-09/conversion/instance-hub-us-states-and-territories.csv.e1.ttl";
+    bte:scheme "http" .
+
+<http://metamap.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://metamap.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 27;
+    bte:netloc "metamap.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://monahrq.ahrq.gov> a bte:Node,
+        bte:RDFNode;
+    bte:length 23;
+    bte:netloc "monahrq.ahrq.gov";
+    bte:scheme "http" .
+
+<http://monahrq.ahrq.gov/download.shtml> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 38;
+    bte:netloc "monahrq.ahrq.gov";
+    bte:path "/download.shtml";
+    bte:scheme "http" .
+
+<http://msis.cms.hhs.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://msis.cms.hhs.gov>;
+    bte:depth 1;
+    bte:length 24;
+    bte:netloc "msis.cms.hhs.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://nhsc.hrsa.gov/about/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://nhsc.hrsa.gov/about>;
+    bte:depth 2;
+    bte:length 27;
+    bte:netloc "nhsc.hrsa.gov";
+    bte:path "/about/";
+    bte:scheme "http" .
+
+<http://nhsc.hrsa.gov/about/facts.htm> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 36;
+    bte:netloc "nhsc.hrsa.gov";
+    bte:path "/about/facts.htm";
+    bte:scheme "http" .
+
+<http://nhscjobs.hrsa.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://nhscjobs.hrsa.gov>;
+    bte:depth 1;
+    bte:length 25;
+    bte:netloc "nhscjobs.hrsa.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://nppes.viva-it.com> a bte:Node;
+    bte:depth 0 .
+
+<http://nppes.viva-it.com/NPI_Files.html> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 39;
+    bte:netloc "nppes.viva-it.com";
+    bte:path "/NPI_Files.html";
+    bte:scheme "http" .
+
+<http://oas.samhsa.gov/nsduh/2k8nsduh> a bte:Node;
+    bte:broader <http://oas.samhsa.gov/nsduh>;
+    bte:depth 2;
+    bte:step "2k8nsduh" .
+
+<http://oas.samhsa.gov/nsduh/2k8nsduh/2k8Results.pdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 51;
+    bte:netloc "oas.samhsa.gov";
+    bte:path "/nsduh/2k8nsduh/2k8Results.pdf";
+    bte:scheme "http" .
+
+<http://obofoundry.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://obofoundry.org>;
+    bte:depth 1;
+    bte:length 22;
+    bte:netloc "obofoundry.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://obofoundry.org/ro/ro.owl> a bte:Node;
+    bte:broader <http://obofoundry.org/ro>;
+    bte:depth 2;
+    bte:extension ".owl";
+    bte:step "ro.owl" .
+
+<http://obofoundry.org/ro/ro.owl#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 32;
+    bte:netloc "obofoundry.org";
+    bte:path "/ro/ro.owl";
+    bte:scheme "http" .
+
+<http://obofoundry.org/ro/ro.owl#has_agent> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "has_agent";
+    bte:length 41;
+    bte:netloc "obofoundry.org";
+    bte:path "/ro/ro.owl";
+    bte:scheme "http" .
+
+<http://oig.hhs.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://oig.hhs.gov>;
+    bte:depth 1;
+    bte:length 19;
+    bte:netloc "oig.hhs.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://oig.hhs.gov/exclusions/exclusions_list.asp> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 49;
+    bte:netloc "oig.hhs.gov";
+    bte:path "/exclusions/exclusions_list.asp";
+    bte:scheme "http" .
+
+<http://oig.hhs.gov/exclusions/files> a bte:Node;
+    bte:broader <http://oig.hhs.gov/exclusions>;
+    bte:depth 2;
+    bte:step "files" .
+
+<http://oig.hhs.gov/exclusions/files/leie_record_layout.pdf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 58;
+    bte:netloc "oig.hhs.gov";
+    bte:path "/exclusions/files/leie_record_layout.pdf";
+    bte:scheme "http" .
+
+<http://oig.hhs.gov/exclusions/index.asp> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 39;
+    bte:netloc "oig.hhs.gov";
+    bte:path "/exclusions/index.asp";
+    bte:scheme "http" .
+
+<http://oig.hhs.gov/fraud/advisoryopinions> a bte:Node;
+    bte:broader <http://oig.hhs.gov/fraud>;
+    bte:depth 2;
+    bte:step "advisoryopinions" .
+
+<http://oig.hhs.gov/fraud/advisoryopinions.asp> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 45;
+    bte:netloc "oig.hhs.gov";
+    bte:path "/fraud/advisoryopinions.asp";
+    bte:scheme "http" .
+
+<http://oig.hhs.gov/fraud/advisoryopinions/opinions.asp> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 54;
+    bte:netloc "oig.hhs.gov";
+    bte:path "/fraud/advisoryopinions/opinions.asp";
+    bte:scheme "http" .
+
+<http://open.vocab.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://open.vocab.org>;
+    bte:depth 1;
+    bte:length 22;
+    bte:netloc "open.vocab.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+ov: a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://open.vocab.org/terms>;
+    bte:depth 2;
+    bte:length 28;
+    bte:netloc "open.vocab.org";
+    bte:path "/terms/";
+    bte:scheme "http" .
+
+ov:csvCol a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 34;
+    bte:netloc "open.vocab.org";
+    bte:path "/terms/csvCol";
+    bte:scheme "http" .
+
+ov:csvHeader a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 37;
+    bte:netloc "open.vocab.org";
+    bte:path "/terms/csvHeader";
+    bte:scheme "http" .
+
+ov:csvRow a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 34;
+    bte:netloc "open.vocab.org";
+    bte:path "/terms/csvRow";
+    bte:scheme "http" .
+
+ov:subjectDiscriminator a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 48;
+    bte:netloc "open.vocab.org";
+    bte:path "/terms/subjectDiscriminator";
+    bte:scheme "http" .
+
+<http://openprovenance.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://openprovenance.org>;
+    bte:depth 1;
+    bte:length 26;
+    bte:netloc "openprovenance.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://openprovenance.org/ontology> a bte:Node;
+    bte:broader <http://openprovenance.org>;
+    bte:depth 1;
+    bte:step "ontology" .
+
+<http://openprovenance.org/ontology#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 35;
+    bte:netloc "openprovenance.org";
+    bte:path "/ontology";
+    bte:scheme "http" .
+
+<http://openprovenance.org/ontology#WasControlledBy> a bte:RDFNode;
+    bte:depth 2;
+    bte:fragment "WasControlledBy";
+    bte:length 50;
+    bte:netloc "openprovenance.org";
+    bte:path "/ontology";
+    bte:scheme "http" .
+
+<http://openprovenance.org/ontology#cause> a bte:RDFNode;
+    bte:depth 2;
+    bte:fragment "cause";
+    bte:length 40;
+    bte:netloc "openprovenance.org";
+    bte:path "/ontology";
+    bte:scheme "http" .
+
+<http://openprovenance.org/ontology#effect> a bte:RDFNode;
+    bte:depth 2;
+    bte:fragment "effect";
+    bte:length 41;
+    bte:netloc "openprovenance.org";
+    bte:path "/ontology";
+    bte:scheme "http" .
+
+<http://openprovenance.org/ontology#endTime> a bte:RDFNode;
+    bte:depth 2;
+    bte:fragment "endTime";
+    bte:length 42;
+    bte:netloc "openprovenance.org";
+    bte:path "/ontology";
+    bte:scheme "http" .
+
+<http://opotxfind.hrsa.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://opotxfind.hrsa.gov>;
+    bte:depth 1;
+    bte:length 26;
+    bte:netloc "opotxfind.hrsa.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://optn.transplant.hrsa.gov/data/about/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://optn.transplant.hrsa.gov/data/about>;
+    bte:depth 3;
+    bte:length 43;
+    bte:netloc "optn.transplant.hrsa.gov";
+    bte:path "/data/about/";
+    bte:scheme "http" .
+
+<http://optn.transplant.hrsa.gov/data/about/collection.asp> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 57;
+    bte:netloc "optn.transplant.hrsa.gov";
+    bte:path "/data/about/collection.asp";
+    bte:scheme "http" .
+
+<http://pillbox.nlm.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://pillbox.nlm.nih.gov>;
+    bte:depth 1;
+    bte:length 27;
+    bte:netloc "pillbox.nlm.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://pillbox.nlm.nih.gov/API-documentation.html> a bte:Node,
+        bte:RDFNode;
+    bte:depth 1;
+    bte:length 49;
+    bte:netloc "pillbox.nlm.nih.gov";
+    bte:path "/API-documentation.html";
+    bte:scheme "http" .
+
+<http://projectreporter.nih.gov/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://projectreporter.nih.gov>;
+    bte:depth 1;
+    bte:length 31;
+    bte:netloc "projectreporter.nih.gov";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://projectreporter.nih.gov/exporter/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://projectreporter.nih.gov/exporter>;
+    bte:depth 2;
+    bte:length 40;
+    bte:netloc "projectreporter.nih.gov";
+    bte:path "/exporter/";
+    bte:scheme "http" .
+
+<http://provenanceweb.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://provenanceweb.org>;
+    bte:depth 1;
+    bte:length 25;
+    bte:netloc "provenanceweb.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://provenanceweb.org/formats/pronom/x-fmt> a bte:Node;
+    bte:broader <http://provenanceweb.org/formats/pronom>;
+    bte:depth 3;
+    bte:step "x-fmt" .
+
+<http://provenanceweb.org/formats/pronom/x-fmt/266> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 49;
+    bte:netloc "provenanceweb.org";
+    bte:path "/formats/pronom/x-fmt/266";
+    bte:scheme "http" .
+
+<http://provenanceweb.org/ns/pml> a bte:Node;
+    bte:broader <http://provenanceweb.org/ns>;
+    bte:depth 2;
+    bte:step "pml" .
+
+<http://provenanceweb.org/ns/pml#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 32;
+    bte:netloc "provenanceweb.org";
+    bte:path "/ns/pml";
+    bte:scheme "http" .
+
+<http://provenanceweb.org/ns/pml#Owner> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "Owner";
+    bte:length 37;
+    bte:netloc "provenanceweb.org";
+    bte:path "/ns/pml";
+    bte:scheme "http" .
+
+<http://provenanceweb.org/ns/pml#TranslationActivity> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "TranslationActivity";
+    bte:length 51;
+    bte:netloc "provenanceweb.org";
+    bte:path "/ns/pml";
+    bte:scheme "http" .
+
+<http://provenanceweb.org/ns/pml#hadOwner> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "hadOwner";
+    bte:length 40;
+    bte:netloc "provenanceweb.org";
+    bte:path "/ns/pml";
+    bte:scheme "http" .
+
+<http://pubchem.ncbi.nlm.nih.gov/help.html> a bte:Node;
+    bte:broader <http://pubchem.ncbi.nlm.nih.gov>;
+    bte:depth 1;
+    bte:extension ".html";
+    bte:step "help.html" .
+
+<http://pubchem.ncbi.nlm.nih.gov/help.html#faq> a bte:RDFNode;
+    bte:depth 2;
+    bte:fragment "faq";
+    bte:length 45;
+    bte:netloc "pubchem.ncbi.nlm.nih.gov";
+    bte:path "/help.html";
+    bte:scheme "http" .
+
+<http://pubchem.ncbi.nlm.nih.gov/pug> a bte:Node;
+    bte:broader <http://pubchem.ncbi.nlm.nih.gov>;
+    bte:depth 1;
+    bte:step "pug" .
+
+<http://pubchem.ncbi.nlm.nih.gov/pug/pughelp.html> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 48;
+    bte:netloc "pubchem.ncbi.nlm.nih.gov";
+    bte:path "/pug/pughelp.html";
+    bte:scheme "http" .
+
+<http://purl.access.gpo.gov/GPO> a bte:Node;
+    bte:broader <http://purl.access.gpo.gov>;
+    bte:depth 1;
+    bte:step "GPO" .
+
+<http://purl.access.gpo.gov/GPO/LPS103725> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 40;
+    bte:netloc "purl.access.gpo.gov";
+    bte:path "/GPO/LPS103725";
+    bte:scheme "http" .
+
+<http://purl.bioontology.org/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.bioontology.org>;
+    bte:depth 1;
+    bte:length 28;
+    bte:netloc "purl.bioontology.org";
+    bte:path "/";
+    bte:scheme "http" .
+
+<http://purl.bioontology.org/ontology/ICD9CM/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.bioontology.org/ontology/ICD9CM>;
+    bte:depth 3;
+    bte:length 44;
+    bte:netloc "purl.bioontology.org";
+    bte:path "/ontology/ICD9CM/";
+    bte:scheme "http" .
+
+<http://purl.bioontology.org/ontology/ICD9CM/ICA> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 47;
+    bte:netloc "purl.bioontology.org";
+    bte:path "/ontology/ICD9CM/ICA";
+    bte:scheme "http" .
+
+<http://purl.bioontology.org/ontology/ICD9CM/ICC> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 47;
+    bte:netloc "purl.bioontology.org";
+    bte:path "/ontology/ICD9CM/ICC";
+    bte:scheme "http" .
+
+<http://purl.bioontology.org/ontology/ICD9CM/ICE> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 47;
+    bte:netloc "purl.bioontology.org";
+    bte:path "/ontology/ICD9CM/ICE";
+    bte:scheme "http" .
+
+<http://purl.bioontology.org/ontology/ICD9CM/ICF> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 47;
+    bte:netloc "purl.bioontology.org";
+    bte:path "/ontology/ICD9CM/ICF";
+    bte:scheme "http" .
+
+<http://purl.bioontology.org/ontology/ICD9CM/ICN> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 47;
+    bte:netloc "purl.bioontology.org";
+    bte:path "/ontology/ICD9CM/ICN";
+    bte:scheme "http" .
+
+<http://purl.obolibrary.org/obo> a bte:Node;
+    bte:broader <http://purl.obolibrary.org>;
+    bte:depth 1;
+    bte:step "obo" .
+
+<http://purl.obolibrary.org/obo/PATO_0000384> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 43;
+    bte:netloc "purl.obolibrary.org";
+    bte:path "/obo/PATO_0000384";
+    bte:scheme "http" .
+
+<http://purl.org/NET/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/NET>;
+    bte:depth 2;
+    bte:length 20;
+    bte:netloc "purl.org";
+    bte:path "/NET/";
+    bte:scheme "http" .
+
+<http://purl.org/NET/scovo> a bte:Node;
+    bte:broader <http://purl.org/NET>;
+    bte:depth 2;
+    bte:step "scovo" .
+
+<http://purl.org/NET/scovo#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 26;
+    bte:netloc "purl.org";
+    bte:path "/NET/scovo";
+    bte:scheme "http" .
+
+<http://purl.org/NET/scovo#Item> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "Item";
+    bte:length 30;
+    bte:netloc "purl.org";
+    bte:path "/NET/scovo";
+    bte:scheme "http" .
+
+<http://purl.org/NET/scovo#dimension> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "dimension";
+    bte:length 35;
+    bte:netloc "purl.org";
+    bte:path "/NET/scovo";
+    bte:scheme "http" .
+
+<http://purl.org/ao/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/ao>;
+    bte:depth 2;
+    bte:length 19;
+    bte:netloc "purl.org";
+    bte:path "/ao/";
+    bte:scheme "http" .
+
+<http://purl.org/ao/annotatesResource> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 36;
+    bte:netloc "purl.org";
+    bte:path "/ao/annotatesResource";
+    bte:scheme "http" .
+
+<http://purl.org/ao/body> a bte:Node,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 23;
+    bte:netloc "purl.org";
+    bte:path "/ao/body";
+    bte:scheme "http" .
+
+<http://purl.org/court/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/court>;
+    bte:depth 2;
+    bte:length 22;
+    bte:netloc "purl.org";
+    bte:path "/court/";
+    bte:scheme "http" .
+
+<http://purl.org/court/def/2009/coin> a bte:Node;
+    bte:broader <http://purl.org/court/def/2009>;
+    bte:depth 4;
+    bte:step "coin" .
+
+<http://purl.org/court/def/2009/coin#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 36;
+    bte:netloc "purl.org";
+    bte:path "/court/def/2009/coin";
+    bte:scheme "http" .
+
+<http://purl.org/court/def/2009/coin#slug> a bte:RDFNode;
+    bte:depth 5;
+    bte:fragment "slug";
+    bte:length 40;
+    bte:netloc "purl.org";
+    bte:path "/court/def/2009/coin";
+    bte:scheme "http" .
+
+<http://purl.org/dc/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/dc>;
+    bte:depth 2;
+    bte:length 19;
+    bte:netloc "purl.org";
+    bte:path "/dc/";
+    bte:scheme "http" .
+
+<http://purl.org/dc/dcam/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/dc/dcam>;
+    bte:depth 3;
+    bte:length 24;
+    bte:netloc "purl.org";
+    bte:path "/dc/dcam/";
+    bte:scheme "http" .
+
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 48;
+    bte:netloc "purl.org";
+    bte:path "/dc/dcam/VocabularyEncodingScheme";
+    bte:scheme "http" .
+
+dc: a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/dc/elements/1.1>;
+    bte:depth 4;
+    bte:length 32;
+    bte:netloc "purl.org";
+    bte:path "/dc/elements/1.1/";
+    bte:scheme "http" .
+
+dc:creator a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 39;
+    bte:netloc "purl.org";
+    bte:path "/dc/elements/1.1/creator";
+    bte:scheme "http" .
+
+dc:date a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 36;
+    bte:netloc "purl.org";
+    bte:path "/dc/elements/1.1/date";
+    bte:scheme "http" .
+
+dc:description a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 43;
+    bte:netloc "purl.org";
+    bte:path "/dc/elements/1.1/description";
+    bte:scheme "http" .
+
+dc:format a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 38;
+    bte:netloc "purl.org";
+    bte:path "/dc/elements/1.1/format";
+    bte:scheme "http" .
+
+dc:rights a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 38;
+    bte:netloc "purl.org";
+    bte:path "/dc/elements/1.1/rights";
+    bte:scheme "http" .
+
+dc:title a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 37;
+    bte:netloc "purl.org";
+    bte:path "/dc/elements/1.1/title";
+    bte:scheme "http" .
+
+dcterms: a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/dc/terms>;
+    bte:depth 3;
+    bte:length 25;
+    bte:netloc "purl.org";
+    bte:path "/dc/terms/";
+    bte:scheme "http" .
+
+dcterms:Agent a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 30;
+    bte:netloc "purl.org";
+    bte:path "/dc/terms/Agent";
+    bte:scheme "http" .
+
+dcterms:AgentClass a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 35;
+    bte:netloc "purl.org";
+    bte:path "/dc/terms/AgentClass";
+    bte:scheme "http" .
+
+dcterms:author a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 31;
+    bte:netloc "purl.org";
+    bte:path "/dc/terms/author";
+    bte:scheme "http" .
+
+<http://purl.org/klab/lod/machines/schist> a bte:Node;
+    bte:broader <http://purl.org/klab/lod/machines>;
+    bte:depth 4;
+    bte:step "schist" .
+
+<http://purl.org/klab/lod/machines/schist#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 41;
+    bte:netloc "purl.org";
+    bte:path "/klab/lod/machines/schist";
+    bte:scheme "http" .
+
+<http://purl.org/klab/lod/machines/schist##jpm78> a bte:RDFNode;
+    bte:depth 5;
+    bte:fragment "#jpm78";
+    bte:length 47;
+    bte:netloc "purl.org";
+    bte:path "/klab/lod/machines/schist";
+    bte:scheme "http" .
+
+<http://purl.org/klab/lod/machines/schist#jpm78> a bte:RDFNode;
+    bte:depth 5;
+    bte:fragment "jpm78";
+    bte:length 46;
+    bte:netloc "purl.org";
+    bte:path "/klab/lod/machines/schist";
+    bte:scheme "http" .
+
+<http://purl.org/linked-data/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/linked-data>;
+    bte:depth 2;
+    bte:length 28;
+    bte:netloc "purl.org";
+    bte:path "/linked-data/";
+    bte:scheme "http" .
+
+<http://purl.org/linked-data/cube> a bte:Node;
+    bte:broader <http://purl.org/linked-data>;
+    bte:depth 2;
+    bte:step "cube" .
+
+<http://purl.org/linked-data/cube#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 2;
+    bte:length 33;
+    bte:netloc "purl.org";
+    bte:path "/linked-data/cube";
+    bte:scheme "http" .
+
+<http://purl.org/linked-data/cube#DimensionProperty> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "DimensionProperty";
+    bte:length 50;
+    bte:netloc "purl.org";
+    bte:path "/linked-data/cube";
+    bte:scheme "http" .
+
+<http://purl.org/linked-data/cube#measureType> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "measureType";
+    bte:length 44;
+    bte:netloc "purl.org";
+    bte:path "/linked-data/cube";
+    bte:scheme "http" .
+
+<http://purl.org/linked-data/cube#measureValue> a bte:RDFNode;
+    bte:depth 3;
+    bte:fragment "measureValue";
+    bte:length 45;
+    bte:netloc "purl.org";
+    bte:path "/linked-data/cube";
+    bte:scheme "http" .
+
+<http://purl.org/net/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/net>;
+    bte:depth 2;
+    bte:length 20;
+    bte:netloc "purl.org";
+    bte:path "/net/";
+    bte:scheme "http" .
+
+<http://purl.org/net/provenance/ns> a bte:Node;
+    bte:broader <http://purl.org/net/provenance>;
+    bte:depth 3;
+    bte:step "ns" .
+
+<http://purl.org/net/provenance/ns#> a bte:HashEndURI,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 34;
+    bte:netloc "purl.org";
+    bte:path "/net/provenance/ns";
+    bte:scheme "http" .
+
+<http://purl.org/net/provenance/ns#involvedActor> a bte:RDFNode;
+    bte:depth 4;
+    bte:fragment "involvedActor";
+    bte:length 47;
+    bte:netloc "purl.org";
+    bte:path "/net/provenance/ns";
+    bte:scheme "http" .
+
+<http://purl.org/twc/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/twc>;
+    bte:depth 2;
+    bte:length 20;
+    bte:netloc "purl.org";
+    bte:path "/twc/";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/id/as_a__0c9c803e6d54e0bf75ba48d73b88abd5> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 68;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/id/as_a__0c9c803e6d54e0bf75ba48d73b88abd5";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/id/as_a__143e7e05ba68981603bfa860630625a6> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 68;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/id/as_a__143e7e05ba68981603bfa860630625a6";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/id/as_a__16d31b9f9f883d427536445a051b16d5> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 68;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/id/as_a__16d31b9f9f883d427536445a051b16d5";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/id/csv2rdf4lod/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/twc/health/id/csv2rdf4lod>;
+    bte:depth 5;
+    bte:length 42;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/id/csv2rdf4lod/";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/id/csv2rdf4lod/10c5459fa2ba889b6a5cdfed9c1cc8cd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 5;
+    bte:length 74;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/id/csv2rdf4lod/10c5459fa2ba889b6a5cdfed9c1cc8cd";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/id/csv2rdf4lod/af88a34f3b6c79e86f86b1057f69f3b2> a bte:Node,
+        bte:RDFNode;
+    bte:depth 5;
+    bte:length 74;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/id/csv2rdf4lod/af88a34f3b6c79e86f86b1057f69f3b2";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/id/csv2rdf4lod/c5bbf4236c4312a82c80713a918b0cf6> a bte:Node,
+        bte:RDFNode;
+    bte:depth 5;
+    bte:length 74;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/id/csv2rdf4lod/c5bbf4236c4312a82c80713a918b0cf6";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/> a bte:RDFNode,
+        bte:SlashEndURI;
+    bte:broader <http://purl.org/twc/health/ns>;
+    bte:depth 4;
+    bte:length 30;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/CriticalAccessHospital> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 52;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/CriticalAccessHospital";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/EmergencyServiceHospital> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 54;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/EmergencyServiceHospital";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government-Federal> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 48;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government-Federal";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government-Hospital_District_or_Authority> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 71;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government-Hospital_District_or_Authority";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government-Local> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 46;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government-Local";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government_-_Federal> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 50;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government_-_Federal";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government_-_Hospital_District_or_Authority> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 73;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government_-_Hospital_District_or_Authority";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government_-_Local> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 48;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government_-_Local";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government_-_State> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 48;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government_-_State";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Government_Federal> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 48;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Government_Federal";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/NonEmergencyServiceHospital> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 57;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/NonEmergencyServiceHospital";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Physican_Ownership> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 48;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Physican_Ownership";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Proprietary> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 41;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Proprietary";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/TetherlessClass> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 45;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/TetherlessClass";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Tribal> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 36;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Tribal";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Voluntary_non-profit-Church> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 57;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Voluntary_non-profit-Church";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Voluntary_non-profit-Private> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 58;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Voluntary_non-profit-Private";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Voluntary_non-profit_-_Church> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 59;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Voluntary_non-profit_-_Church";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Voluntary_non-profit_-_Other> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 58;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Voluntary_non-profit_-_Other";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/Voluntary_non-profit_-_Private> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 60;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/Voluntary_non-profit_-_Private";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/ns/hasAnnotation> a bte:Node,
+        bte:RDFNode;
+    bte:depth 4;
+    bte:length 43;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/ns/hasAnnotation";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/bioontology-org/dataset/annotator-description-subject/version> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/bioontology-org/dataset/annotator-description-subject>;
+    bte:depth 7;
+    bte:step "version" .
+
+<http://purl.org/twc/health/source/bioontology-org/dataset/annotator-description-subject/version/2012-Dec-20> a bte:Node,
+        bte:RDFNode;
+    bte:depth 8;
+    bte:length 107;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/bioontology-org/dataset/annotator-description-subject/version/2012-Dec-20";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/healthdata-tw-rpi-edu>;
+    bte:depth 5;
+    bte:step "dataset" .
+
+<http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog/version> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog>;
+    bte:depth 7;
+    bte:step "version" .
+
+<http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog/version/2012-Dec-17> a bte:Node,
+        bte:RDFNode;
+    bte:depth 8;
+    bte:length 91;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog/version/2012-Dec-17";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab>;
+    bte:depth 8;
+    bte:step "raw" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/bene_sex_ident_cd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 116;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/bene_sex_ident_cd";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_adm_cd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 109;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_adm_cd";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_bene_id> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 110;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_bene_id";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_hha_vst_cd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 113;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_hha_vst_cd";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_pmt_amt> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 110;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_pmt_amt";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_snc_vst_cd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 113;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_snc_vst_cd";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_ther_vst_cd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 114;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab/raw/hha_ther_vst_cd";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab>;
+    bte:depth 8;
+    bte:step "raw" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_alzhdmta> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 106;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_alzhdmta";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_cancer> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 104;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_cancer";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_chf> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 101;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_chf";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_chrnkidn> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 106;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_chrnkidn";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_copd> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 102;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_copd";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_depressn> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 106;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_depressn";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_diabetes> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 106;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_diabetes";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_ischmcht> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 106;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_ischmcht";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_osteoprs> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 106;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_osteoprs";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_ra_oa> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 103;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_ra_oa";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_strketia> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 106;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/cc_strketia";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/dual_stus> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 104;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab/raw/dual_stus";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2009-info/version> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2009-info>;
+    bte:depth 7;
+    bte:step "version" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2009-info/version/2012-Dec-19> a bte:Node,
+        bte:RDFNode;
+    bte:depth 8;
+    bte:length 90;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2009-info/version/2012-Dec-19";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-home> a bte:Node,
+        bte:RDFNode;
+    bte:depth 6;
+    bte:length 88;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-home";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version>;
+    bte:depth 8;
+    bte:step "2012-Apr-17" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1248> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 122;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1248";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1249> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 122;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1249";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_125> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 121;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_125";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1250> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 122;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1250";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1251> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 122;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1251";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1252> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 122;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1252";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1253> a bte:Node,
+        bte:RDFNode;
+    bte:depth 9;
+    bte:length 122;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version/2012-Apr-17/thing_1253";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version>;
+    bte:depth 9;
+    bte:step "2012-May-08" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_342> a bte:Node,
+        bte:RDFNode;
+    bte:depth 10;
+    bte:length 142;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_342";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_343> a bte:Node,
+        bte:RDFNode;
+    bte:depth 10;
+    bte:length 142;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_343";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_344> a bte:Node,
+        bte:RDFNode;
+    bte:depth 10;
+    bte:length 142;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_344";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_345> a bte:Node,
+        bte:RDFNode;
+    bte:depth 10;
+    bte:length 142;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_345";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_346> a bte:Node,
+        bte:RDFNode;
+    bte:depth 10;
+    bte:length 142;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_346";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_347> a bte:Node,
+        bte:RDFNode;
+    bte:depth 10;
+    bte:length 142;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_347";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_348> a bte:Node,
+        bte:RDFNode;
+    bte:depth 10;
+    bte:length 142;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version/2012-May-08/recall_348";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/01014F> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/provider>;
+    bte:depth 6;
+    bte:step "01014F" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/01014F/address> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 76;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/01014F/address";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/01014F/owner> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 74;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/01014F/owner";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/01014F/telephone> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 78;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/01014F/telephone";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010150> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/provider>;
+    bte:depth 6;
+    bte:step "010150" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010150/address> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 76;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/010150/address";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010150/owner> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 74;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/010150/owner";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010150/telephone> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 78;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/010150/telephone";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010152> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/provider>;
+    bte:depth 6;
+    bte:step "010152" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010152/address> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 76;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/010152/address";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider/010152/owner> a bte:Node,
+        bte:RDFNode;
+    bte:depth 7;
+    bte:length 74;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/provider/010152/owner";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/void> a bte:Node,
+        bte:RDFNode;
+    bte:depth 3;
+    bte:length 31;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/void";
+    bte:scheme "http" .
+
+<tag:tw.rpi.edu,2011:expression:sha-256-09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=> a bte:RDFNode;
+    bte:length 83;
+    bte:path "tw.rpi.edu,2011:expression:sha-256-09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:expression:sha-256-0IzDcaXEIqBJBKYt-X2gPxvY6aiJFn6Y0VvoY0HXJN8=> a bte:RDFNode;
+    bte:length 83;
+    bte:path "tw.rpi.edu,2011:expression:sha-256-0IzDcaXEIqBJBKYt-X2gPxvY6aiJFn6Y0VvoY0HXJN8=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:expression:sha-256-0bep7TlAaIUzGzQe6gN-5Mz0MLwUOi-U6GZAbePGY5s=> a bte:RDFNode;
+    bte:length 83;
+    bte:path "tw.rpi.edu,2011:expression:sha-256-0bep7TlAaIUzGzQe6gN-5Mz0MLwUOi-U6GZAbePGY5s=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:filed:0bIpCD2NaRz6T_4rXRdYN1RpGWb5ixbqllbEByyEZ2k=/sha-256-PwSbkYw9K0J4HoTlntp7y864F2C7tEtpBQyukyzb4dg=/medicare-medicaid-incentive.rdf> a bte:RDFNode;
+    bte:length 155;
+    bte:path "tw.rpi.edu,2011:filed:0bIpCD2NaRz6T_4rXRdYN1RpGWb5ixbqllbEByyEZ2k=/sha-256-PwSbkYw9K0J4HoTlntp7y864F2C7tEtpBQyukyzb4dg=/medicare-medicaid-incentive.rdf";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:item:sha-256-0KuhV6wB5yLy2OaFrvT_kDNEQLoORNfA7gg1JZNCmwA=> a bte:RDFNode;
+    bte:length 77;
+    bte:path "tw.rpi.edu,2011:item:sha-256-0KuhV6wB5yLy2OaFrvT_kDNEQLoORNfA7gg1JZNCmwA=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:item:sha-256-0cHKWqDWnClj8WXl2Osl8Zh1VnfhcCdAyU5bHXgZ7Tg=> a bte:RDFNode;
+    bte:length 77;
+    bte:path "tw.rpi.edu,2011:item:sha-256-0cHKWqDWnClj8WXl2Osl8Zh1VnfhcCdAyU5bHXgZ7Tg=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:item:sha-256-0gSL5RbDvMTnayr9nZqQFPxDfwazT9O1ougjGk3LYVs=> a bte:RDFNode;
+    bte:length 77;
+    bte:path "tw.rpi.edu,2011:item:sha-256-0gSL5RbDvMTnayr9nZqQFPxDfwazT9O1ougjGk3LYVs=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:manifestation:sha-256-09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=> a bte:RDFNode;
+    bte:length 86;
+    bte:path "tw.rpi.edu,2011:manifestation:sha-256-09Szn5b5AWS6seKOEtGI4AI44oDMEO9AMYwlA3AdgeY=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:manifestation:sha-256-0IzDcaXEIqBJBKYt-X2gPxvY6aiJFn6Y0VvoY0HXJN8=> a bte:RDFNode;
+    bte:length 86;
+    bte:path "tw.rpi.edu,2011:manifestation:sha-256-0IzDcaXEIqBJBKYt-X2gPxvY6aiJFn6Y0VvoY0HXJN8=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:manifestation:sha-256-0bep7TlAaIUzGzQe6gN-5Mz0MLwUOi-U6GZAbePGY5s=> a bte:RDFNode;
+    bte:length 86;
+    bte:path "tw.rpi.edu,2011:manifestation:sha-256-0bep7TlAaIUzGzQe6gN-5Mz0MLwUOi-U6GZAbePGY5s=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:manifestation:sha-256-1DMSRo0BQYBfCp06sC5YjPnHheYVe4AgdFp2JFhW54o=> a bte:RDFNode;
+    bte:length 86;
+    bte:path "tw.rpi.edu,2011:manifestation:sha-256-1DMSRo0BQYBfCp06sC5YjPnHheYVe4AgdFp2JFhW54o=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:manifestation:sha-256-1nA_gWSub_dYtMtV_6eAItYiNPvDjmPBtI1M425bLHg=> a bte:RDFNode;
+    bte:length 86;
+    bte:path "tw.rpi.edu,2011:manifestation:sha-256-1nA_gWSub_dYtMtV_6eAItYiNPvDjmPBtI1M425bLHg=";
+    bte:scheme "tag" .
+
+<tag:tw.rpi.edu,2011:manifestation:sha-256-1p4bXDNrKajt5IsXFGrOm1XJ49swie5KUnGpC6c9h14=> a bte:RDFNode;
+    bte:length 86;
+    bte:path "tw.rpi.edu,2011:manifestation:sha-256-1p4bXDNrKajt5IsXFGrOm1XJ49swie5KUnGpC6c9h14=";
+    bte:scheme "tag" .
+
+<urn:uuid:001d98f5-515e-4577-840d-20160910594c> a bte:RDFNode;
+    bte:length 45;
+    bte:path "uuid:001d98f5-515e-4577-840d-20160910594c";
+    bte:scheme "urn" .
+
+<urn:uuid:0139fce6-69e6-4be3-b5b5-23e3361abef6> a bte:RDFNode;
+    bte:length 45;
+    bte:path "uuid:0139fce6-69e6-4be3-b5b5-23e3361abef6";
+    bte:scheme "urn" .
+
+<urn:uuid:02c87401-bec5-41e2-b0c0-20b59829d880> a bte:RDFNode;
+    bte:length 45;
+    bte:path "uuid:02c87401-bec5-41e2-b0c0-20b59829d880";
+    bte:scheme "urn" .
+
+<urn:uuid:02ddb538-b4ea-40fd-b363-e5d3c866fd17> a bte:RDFNode;
+    bte:length 45;
+    bte:path "uuid:02ddb538-b4ea-40fd-b363-e5d3c866fd17";
+    bte:scheme "urn" .
+
+<http://IKNData.insurekidsnow.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://aidsinfo.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://arf.hrsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://aspe.hhs.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://aspe.hhs.gov/ftp> a bte:Node;
+    bte:broader <http://aspe.hhs.gov>;
+    bte:depth 1;
+    bte:step "ftp" .
+
+<http://aspe.hhs.gov/ftp/hsp> a bte:Node;
+    bte:broader <http://aspe.hhs.gov/ftp>;
+    bte:depth 2;
+    bte:step "hsp" .
+
+<http://aspe.hhs.gov/ftp/hsp/TANF-data> a bte:Node;
+    bte:broader <http://aspe.hhs.gov/ftp/hsp>;
+    bte:depth 3;
+    bte:step "TANF-data" .
+
+<http://bhpr.hrsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://bioportal.bioontology.org/ontologies> a bte:Node;
+    bte:broader <http://bioportal.bioontology.org>;
+    bte:depth 1;
+    bte:step "ontologies" .
+
+<http://bioportal.bioontology.org/ontologies/umls> a bte:Node;
+    bte:broader <http://bioportal.bioontology.org/ontologies>;
+    bte:depth 2;
+    bte:step "umls" .
+
+<http://blast.ncbi.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://cancercontrol.cancer.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://cancercontrol.cancer.gov/hcirb> a bte:Node;
+    bte:broader <http://cancercontrol.cancer.gov>;
+    bte:depth 1;
+    bte:step "hcirb" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source> a bte:Node;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost>;
+    bte:depth 1;
+    bte:step "source" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov> a bte:Node;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source>;
+    bte:depth 2;
+    bte:step "hub-healthdata-gov" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset> a bte:Node;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov>;
+    bte:depth 3;
+    bte:step "dataset" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled> a bte:Node;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset>;
+    bte:depth 4;
+    bte:step "2010-basic-stand-alone-skilled" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab> a bte:Node;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled>;
+    bte:depth 5;
+    bte:step "vocab" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement> a bte:Node;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab>;
+    bte:depth 6;
+    bte:step "enhancement" .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement/1> a bte:Node;
+    bte:broader <http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/vocab/enhancement>;
+    bte:depth 7;
+    bte:step "1" .
+
+<http://chemspell.nlm.nih.gov> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://chemspell.nlm.nih.gov/spell> a bte:Node;
+    bte:broader <http://chemspell.nlm.nih.gov>;
+    bte:depth 1;
+    bte:step "spell" .
+
+<http://clinicaltrials.gov/ct2> a bte:Node;
+    bte:broader <http://clinicaltrials.gov>;
+    bte:depth 1;
+    bte:step "ct2" .
+
+<http://code.google.com> a bte:Node;
+    bte:depth 0 .
+
+<http://code.google.com/p> a bte:Node;
+    bte:broader <http://code.google.com>;
+    bte:depth 1;
+    bte:step "p" .
+
+<http://cwoutcomes.acf.hhs.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://cwoutcomes.acf.hhs.gov/data> a bte:Node;
+    bte:broader <http://cwoutcomes.acf.hhs.gov>;
+    bte:depth 1;
+    bte:step "data" .
+
+<http://dailymed.nlm.nih.gov> a bte:Node,
+        bte:RDFNode;
+    bte:length 27;
+    bte:netloc "dailymed.nlm.nih.gov";
+    bte:scheme "http" .
+
+<http://dailymed.nlm.nih.gov/dailymed> a bte:Node;
+    bte:broader <http://dailymed.nlm.nih.gov>;
+    bte:depth 1;
+    bte:step "dailymed" .
+
+<http://data-gov.tw.rpi.edu> a bte:Node;
+    bte:depth 0 .
+
+<http://data-gov.tw.rpi.edu/wiki> a bte:Node;
+    bte:broader <http://data-gov.tw.rpi.edu>;
+    bte:depth 1;
+    bte:step "wiki" .
+
+<http://data.lod2.eu> a bte:Node;
+    bte:depth 0 .
+
+<http://data.lod2.eu/2011> a bte:Node;
+    bte:broader <http://data.lod2.eu>;
+    bte:depth 1;
+    bte:step "2011" .
+
+<http://data.medicare.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://datawarehouse.hrsa.gov/help> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov>;
+    bte:depth 1;
+    bte:step "help" .
+
+<http://dbpedia.org> a bte:Node;
+    bte:depth 0 .
+
+<http://dirline.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://evs.nci.nih.gov/ftp1> a bte:Node;
+    bte:broader <http://evs.nci.nih.gov>;
+    bte:depth 1;
+    bte:step "ftp1" .
+
+<http://findahealthcenter.hrsa.gov/Help> a bte:Node;
+    bte:broader <http://findahealthcenter.hrsa.gov>;
+    bte:depth 1;
+    bte:step "Help" .
+
+<http://findanetwork.hrsa.gov/Help> a bte:Node;
+    bte:broader <http://findanetwork.hrsa.gov>;
+    bte:depth 1;
+    bte:step "Help" .
+
+<http://ghr.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://hazmap.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://hcupnet.ahrq.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://healthdata.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://healthdata.gov/id> a bte:Node;
+    bte:broader <http://healthdata.gov>;
+    bte:depth 1;
+    bte:step "id" .
+
+<http://healthdata.tw.rpi.edu> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://healthdata.tw.rpi.edu/hub> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://healthdata.tw.rpi.edu>;
+    bte:depth 1;
+    bte:step "hub" .
+
+<http://healthindicators.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://healthindicators.gov/Indicators> a bte:Node;
+    bte:broader <http://healthindicators.gov>;
+    bte:depth 1;
+    bte:step "Indicators" .
+
+<http://healthit.hhs.gov> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://healthit.hhs.gov/portal> a bte:Node;
+    bte:broader <http://healthit.hhs.gov>;
+    bte:depth 1;
+    bte:step "portal" .
+
+<http://healthit.hhs.gov/portal/server.pt> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal>;
+    bte:depth 2;
+    bte:extension ".pt";
+    bte:step "server.pt" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt>;
+    bte:depth 3;
+    bte:step "gateway" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway>;
+    bte:depth 4;
+    bte:step "PTARGS_0_0_5561_2905_19695_43" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43>;
+    bte:depth 5;
+    bte:step "http%3B" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B>;
+    bte:depth 6;
+    bte:step "wci-pubcontent" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent>;
+    bte:depth 7;
+    bte:step "publish" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish>;
+    bte:depth 8;
+    bte:step "onc" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc>;
+    bte:depth 9;
+    bte:step "public_communities" .
+
+<http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities/a_e> a bte:Node;
+    bte:broader <http://healthit.hhs.gov/portal/server.pt/gateway/PTARGS_0_0_5561_2905_19695_43/http%3B/wci-pubcontent/publish/onc/public_communities>;
+    bte:depth 10;
+    bte:step "a_e" .
+
+<http://householdproducts.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://hub.healthdata.gov> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://inference-web.org/2.0> a bte:Node;
+    bte:broader <http://inference-web.org>;
+    bte:depth 1;
+    bte:step "2.0" .
+
+<http://iw.cs.utep.edu> a bte:Node;
+    bte:depth 0 .
+
+<http://iw.cs.utep.edu/registry> a bte:Node;
+    bte:broader <http://iw.cs.utep.edu>;
+    bte:depth 1;
+    bte:step "registry" .
+
+<http://iw.cs.utep.edu/registry/FMT> a bte:Node;
+    bte:broader <http://iw.cs.utep.edu/registry>;
+    bte:depth 2;
+    bte:step "FMT" .
+
+<http://iw.cs.utep.edu/registry/FMT/text> a bte:Node;
+    bte:broader <http://iw.cs.utep.edu/registry/FMT>;
+    bte:depth 3;
+    bte:step "text" .
+
+<http://kasei.us> a bte:Node;
+    bte:depth 0 .
+
+<http://kasei.us/about> a bte:Node;
+    bte:broader <http://kasei.us>;
+    bte:depth 1;
+    bte:step "about" .
+
+<http://locatorplus.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://logd.tw.rpi.edu/id/us> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/id>;
+    bte:depth 2;
+    bte:step "us" .
+
+<http://logd.tw.rpi.edu/source/hub-healthdata-gov> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source>;
+    bte:depth 2;
+    bte:step "hub-healthdata-gov" .
+
+<http://logd.tw.rpi.edu/source/hub-healthdata-gov/vocab> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/hub-healthdata-gov>;
+    bte:depth 3;
+    bte:step "vocab" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source>;
+    bte:depth 2;
+    bte:step "twc-rpi-edu" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file>;
+    bte:depth 4;
+    bte:step "instance-hub-us-counties" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties/version> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties>;
+    bte:depth 5;
+    bte:step "version" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties/version/2012-Sep-29> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-counties/version>;
+    bte:depth 6;
+    bte:step "2012-Sep-29" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file>;
+    bte:depth 4;
+    bte:step "instance-hub-us-states-and-territories" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories>;
+    bte:depth 5;
+    bte:step "version" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version/2011-Apr-09> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu/file/instance-hub-us-states-and-territories/version>;
+    bte:depth 6;
+    bte:step "2011-Apr-09" .
+
+<http://metamap.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://msis.cms.hhs.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://nhsc.hrsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://nhsc.hrsa.gov/about> a bte:Node;
+    bte:broader <http://nhsc.hrsa.gov>;
+    bte:depth 1;
+    bte:step "about" .
+
+<http://nhscjobs.hrsa.gov> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://oas.samhsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://oas.samhsa.gov/nsduh> a bte:Node;
+    bte:broader <http://oas.samhsa.gov>;
+    bte:depth 1;
+    bte:step "nsduh" .
+
+<http://obofoundry.org/ro> a bte:Node;
+    bte:broader <http://obofoundry.org>;
+    bte:depth 1;
+    bte:step "ro" .
+
+<http://oig.hhs.gov/exclusions> a bte:Node;
+    bte:broader <http://oig.hhs.gov>;
+    bte:depth 1;
+    bte:step "exclusions" .
+
+<http://oig.hhs.gov/fraud> a bte:Node;
+    bte:broader <http://oig.hhs.gov>;
+    bte:depth 1;
+    bte:step "fraud" .
+
+<http://open.vocab.org/terms> a bte:Node;
+    bte:broader <http://open.vocab.org>;
+    bte:depth 1;
+    bte:step "terms" .
+
+<http://opotxfind.hrsa.gov> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://optn.transplant.hrsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://optn.transplant.hrsa.gov/data> a bte:Node;
+    bte:broader <http://optn.transplant.hrsa.gov>;
+    bte:depth 1;
+    bte:step "data" .
+
+<http://optn.transplant.hrsa.gov/data/about> a bte:Node;
+    bte:broader <http://optn.transplant.hrsa.gov/data>;
+    bte:depth 2;
+    bte:step "about" .
+
+<http://pillbox.nlm.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://projectreporter.nih.gov/exporter> a bte:Node;
+    bte:broader <http://projectreporter.nih.gov>;
+    bte:depth 1;
+    bte:step "exporter" .
+
+<http://provenanceweb.org/formats> a bte:Node;
+    bte:broader <http://provenanceweb.org>;
+    bte:depth 1;
+    bte:step "formats" .
+
+<http://provenanceweb.org/formats/pronom> a bte:Node;
+    bte:broader <http://provenanceweb.org/formats>;
+    bte:depth 2;
+    bte:step "pronom" .
+
+<http://provenanceweb.org/ns> a bte:Node;
+    bte:broader <http://provenanceweb.org>;
+    bte:depth 1;
+    bte:step "ns" .
+
+<http://purl.access.gpo.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://purl.bioontology.org/ontology> a bte:Node;
+    bte:broader <http://purl.bioontology.org>;
+    bte:depth 1;
+    bte:step "ontology" .
+
+<http://purl.bioontology.org/ontology/ICD9CM> a bte:Node;
+    bte:broader <http://purl.bioontology.org/ontology>;
+    bte:depth 2;
+    bte:step "ICD9CM" .
+
+<http://purl.obolibrary.org> a bte:Node;
+    bte:depth 0 .
+
+<http://purl.org/ao> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "ao" .
+
+<http://purl.org/court/def> a bte:Node;
+    bte:broader <http://purl.org/court>;
+    bte:depth 2;
+    bte:step "def" .
+
+<http://purl.org/court/def/2009> a bte:Node;
+    bte:broader <http://purl.org/court/def>;
+    bte:depth 3;
+    bte:step "2009" .
+
+<http://purl.org/dc/dcam> a bte:Node;
+    bte:broader <http://purl.org/dc>;
+    bte:depth 2;
+    bte:step "dcam" .
+
+<http://purl.org/dc/elements> a bte:Node;
+    bte:broader <http://purl.org/dc>;
+    bte:depth 2;
+    bte:step "elements" .
+
+<http://purl.org/dc/elements/1.1> a bte:Node;
+    bte:broader <http://purl.org/dc/elements>;
+    bte:depth 3;
+    bte:step "1.1" .
+
+<http://purl.org/dc/terms> a bte:Node;
+    bte:broader <http://purl.org/dc>;
+    bte:depth 2;
+    bte:step "terms" .
+
+<http://purl.org/klab> a bte:Node;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "klab" .
+
+<http://purl.org/klab/lod> a bte:Node;
+    bte:broader <http://purl.org/klab>;
+    bte:depth 2;
+    bte:step "lod" .
+
+<http://purl.org/klab/lod/machines> a bte:Node;
+    bte:broader <http://purl.org/klab/lod>;
+    bte:depth 3;
+    bte:step "machines" .
+
+<http://purl.org/net/provenance> a bte:Node;
+    bte:broader <http://purl.org/net>;
+    bte:depth 2;
+    bte:step "provenance" .
+
+<http://purl.org/twc/health/id> a bte:Node;
+    bte:broader <http://purl.org/twc/health>;
+    bte:depth 3;
+    bte:step "id" .
+
+<http://purl.org/twc/health/id/csv2rdf4lod> a bte:Node;
+    bte:broader <http://purl.org/twc/health/id>;
+    bte:depth 4;
+    bte:step "csv2rdf4lod" .
+
+<http://purl.org/twc/health/ns> a bte:Node;
+    bte:broader <http://purl.org/twc/health>;
+    bte:depth 3;
+    bte:step "ns" .
+
+<http://purl.org/twc/health/source/bioontology-org> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source>;
+    bte:depth 4;
+    bte:step "bioontology-org" .
+
+<http://purl.org/twc/health/source/bioontology-org/dataset> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/bioontology-org>;
+    bte:depth 5;
+    bte:step "dataset" .
+
+<http://purl.org/twc/health/source/bioontology-org/dataset/annotator-description-subject> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://purl.org/twc/health/source/bioontology-org/dataset>;
+    bte:depth 6;
+    bte:step "annotator-description-subject" .
+
+<http://purl.org/twc/health/source/healthdata-tw-rpi-edu> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source>;
+    bte:depth 4;
+    bte:step "healthdata-tw-rpi-edu" .
+
+<http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog> a bte:Node,
+        bte:RDFNode;
+    bte:depth 6;
+    bte:length 71;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/healthdata-tw-rpi-edu/dataset/catalog";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset>;
+    bte:depth 6;
+    bte:step "2008-basic-stand-alone-home" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home/vocab> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-basic-stand-alone-home>;
+    bte:depth 7;
+    bte:step "vocab" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset>;
+    bte:depth 6;
+    bte:step "2008-chronic-conditions" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions/vocab> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2008-chronic-conditions>;
+    bte:depth 7;
+    bte:step "vocab" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2009-info> a bte:Node,
+        bte:RDFNode;
+    bte:depth 6;
+    bte:length 70;
+    bte:netloc "purl.org";
+    bte:path "/twc/health/source/hub-healthdata-gov/dataset/2009-info";
+    bte:scheme "http" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset>;
+    bte:depth 6;
+    bte:step "2010-basic-stand-alone-skilled" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled/version> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/2010-basic-stand-alone-skilled>;
+    bte:depth 7;
+    bte:step "version" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset>;
+    bte:depth 6;
+    bte:step "food-recalls" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls>;
+    bte:depth 7;
+    bte:step "petfoodrecallproductslist2009.xls-all" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all/version> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/food-recalls/petfoodrecallproductslist2009.xls-all>;
+    bte:depth 8;
+    bte:step "version" .
+
+<http://bioportal.bioontology.org> a bte:Node;
+    bte:depth 0 .
+
+<http://change.CSV2RDF4LOD_BASE_URI.in-source-me.sh.localhost> a bte:Node;
+    bte:depth 0 .
+
+<http://clinicaltrials.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://creativecommons.org> a bte:Node;
+    bte:depth 0 .
+
+<http://datawarehouse.hrsa.gov/DataDownload> a bte:Node;
+    bte:broader <http://datawarehouse.hrsa.gov>;
+    bte:depth 1;
+    bte:step "DataDownload" .
+
+<http://downloads.cms.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://evs.nci.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://findahealthcenter.hrsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://findanetwork.hrsa.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://inference-web.org> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://logd.tw.rpi.edu/id/medicare-gov> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/id>;
+    bte:depth 2;
+    bte:step "medicare-gov" .
+
+<http://logd.tw.rpi.edu/source> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu>;
+    bte:depth 1;
+    bte:step "source" .
+
+<http://logd.tw.rpi.edu/source/twc-rpi-edu/file> a bte:Node;
+    bte:broader <http://logd.tw.rpi.edu/source/twc-rpi-edu>;
+    bte:depth 3;
+    bte:step "file" .
+
+<http://obofoundry.org> a bte:Node;
+    bte:depth 0 .
+
+<http://open.vocab.org> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://openprovenance.org> a bte:Node;
+    bte:depth 0 .
+
+<http://projectreporter.nih.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://pubchem.ncbi.nlm.nih.gov> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://purl.bioontology.org> a bte:Node;
+    bte:depth 0 .
+
+<http://purl.org/NET> a bte:Node;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "NET" .
+
+<http://purl.org/court> a bte:Node;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "court" .
+
+<http://purl.org/linked-data> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "linked-data" .
+
+<http://purl.org/net> a bte:Node;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "net" .
+
+<http://purl.org/twc> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "twc" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source>;
+    bte:depth 4;
+    bte:step "hub-healthdata-gov" .
+
+<http://data.medicare.gov/dataset> a bte:Node;
+    bte:broader <http://data.medicare.gov>;
+    bte:depth 1;
+    bte:step "dataset" .
+
+<http://logd.tw.rpi.edu> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://logd.tw.rpi.edu/id> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://logd.tw.rpi.edu>;
+    bte:depth 1;
+    bte:step "id" .
+
+<http://oig.hhs.gov> a bte:Node;
+    bte:depth 0 .
+
+<http://provenanceweb.org> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://purl.org/twc/health> a bte:Node;
+    bte:broader <http://purl.org/twc>;
+    bte:depth 2;
+    bte:step "health" .
+
+<http://purl.org/twc/health/source> a bte:Node;
+    bte:broader <http://purl.org/twc/health>;
+    bte:depth 3;
+    bte:step "source" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/provider> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov>;
+    bte:depth 5;
+    bte:step "provider" .
+
+<http://purl.org/dc> a bte:Node,
+        bte:RDFNode;
+    bte:broader <http://purl.org>;
+    bte:depth 1;
+    bte:step "dc" .
+
+<http://purl.org/twc/health/source/hub-healthdata-gov/dataset> a bte:Node;
+    bte:broader <http://purl.org/twc/health/source/hub-healthdata-gov>;
+    bte:depth 5;
+    bte:step "dataset" .
+
+<http://datawarehouse.hrsa.gov> a bte:Node,
+        bte:RDFNode;
+    bte:depth 0 .
+
+<http://purl.org> a bte:Node;
+    bte:depth 0 .
+
