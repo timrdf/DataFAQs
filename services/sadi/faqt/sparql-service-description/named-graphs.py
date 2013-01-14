@@ -125,7 +125,9 @@ class SDNamedGraphs(faqt.Service):
       output.save()
  
    def name_sparql_endpoints_named_graph(self, endpoint, named_graph):
+      # see https://github.com/timrdf/csv2rdf4lod-automation/wiki/Naming-sparql-service-description's-sd:NamedGraph
       # XSLT implementation: sparql-service-descriptions.xsl
+      # Java implementation: edu.rpi.tw.string.NameFactory in csv2rdf4lod.jar
       query = '''PREFIX sd: <http://www.w3.org/ns/sparql-service-description#> CONSTRUCT { ?endpoints_named_graph ?p ?o } WHERE { GRAPH <'''+named_graph+'''> { [] sd:url <'''+endpoint+'''>; sd:defaultDatasetDescription [ sd:namedGraph ?endpoints_named_graph ] . ?endpoints_named_graph sd:name <'''+named_graph+'''>; ?p ?o . } }'''
       return endpoint + '?' + urllib.urlencode({'query': query})
 
