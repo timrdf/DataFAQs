@@ -1,0 +1,3 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<foo> a dcat:Dataset .
