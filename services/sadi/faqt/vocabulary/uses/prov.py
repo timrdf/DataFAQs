@@ -156,8 +156,43 @@ class UsesPROV(faqt.Service):
    def process(self, input, output):
 
       print 'processing ' + input.subject
+
+      endpoint = False
+
+      # TODO: add    dcat:distribution [ a sd:NamedGraph; sd:name ; prov:hadLocation
+      # like https://github.com/timrdf/DataFAQs/blob/master/services/sadi/ckan/add-metadata-materials/sample-inputs/arrayexpress-e-afmx-1.ttl#L49
+
+      if len(input.void_sparqlEndpoint) > 0:
+         # <http://datahub.io/dataset/dbpedia> 
+         #    void:sparqlEndpoint <http://dbpedia.org/sparql> .
+         endpoint = self.surfSubject(input.void_sparqlEndpoint.first)
+         print 'void:sparqlEndpoint: ' + endpoint
+      else:
+         # <http://datahub.io/dataset/dbpedia> 
+         #    dcat:distribution [
+         #       dct:format [
+         #          a dct:IMT;
+         #          rdf:value  "api/sparql";
+         #          rdfs:label "api/sparql"
+         #       ];
+         #      a dcat:Distribution ;
+         #      dcat:accessURL <http://dbpedia.org/sparql>
+         #   ]; .
+
+         query = select("?url").where((input.subject, ns.DCAT['distribution'], "?distro"),
+                                      ("?distro",     ns.DCTERMS['format'],    "?format"),
+                                      ("?format",     ns.RDF['value'],         rdflib.Literal('api/sparql')),
+                                      ("?distro",     ns.DCAT['accessURL'],    "?url"))
+         for bindings in input.session.default_store.execute(query):
+            #print 'creator: ' + bindings[0] + ' ' + bindings[1]
+            endpoint = self.surfSubject(bindings[0])
+            print 'dcat:distribution dcat:accessURL: ' + endpoint
+
+      if endpoint is False:
+         print 'WARNING: could not find SPARQL endpoint to query; skipping ' + input.subject
+         return
+         
       ng='http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/cr-full-dump/version/latest'
-      endpoint='http://healthdata.tw.rpi.edu/sparql'
 
       Class     = output.session.get_class(ns.RDFS['Class'])
       Predicate = output.session.get_class(ns.RDF['Property'])
@@ -168,7 +203,7 @@ class UsesPROV(faqt.Service):
       session = Session(store)
       session.enable_logging = False
       for predicate in self.predicates:
-         results = session.default_store.execute_sparql(
+         results = session.default_store.execute_sparql( # TODO: handle optional named graph.
             '''
             select (count(*) as ?count)
             where {
@@ -193,7 +228,7 @@ class UsesPROV(faqt.Service):
                count = binding['count']['value']
                print count
       for classU in self.classes:
-         results = session.default_store.execute_sparql(
+         results = session.default_store.execute_sparql( # TODO: handle optional named graph.
             '''
             select (count(*) as ?count)
             where {
@@ -230,6 +265,9 @@ class UsesPROV(faqt.Service):
 
       if ns.DATAFAQS['Satisfactory'] not in output.rdf_type:
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
+      else:
+         Ontology = output.session.get_class(ns.OWL['Ontology'])
+         output.void_vocabulary.append(Ontology('http://www.w3.org/ns/prov#'))
 
       output.save()
 
