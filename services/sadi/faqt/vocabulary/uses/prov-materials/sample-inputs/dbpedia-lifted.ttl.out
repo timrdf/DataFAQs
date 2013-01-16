@@ -1,0 +1,251 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+prov:Activity a rdfs:Class;
+    sio:count 0 .
+
+prov:ActivityInfluence a rdfs:Class;
+    sio:count 0 .
+
+prov:Agent a rdfs:Class;
+    sio:count 0 .
+
+prov:AgentInfluence a rdfs:Class;
+    sio:count 0 .
+
+prov:Association a rdfs:Class;
+    sio:count 0 .
+
+prov:Attribution a rdfs:Class;
+    sio:count 0 .
+
+prov:Bundle a rdfs:Class;
+    sio:count 0 .
+
+prov:Collection a rdfs:Class;
+    sio:count 0 .
+
+prov:Communication a rdfs:Class;
+    sio:count 0 .
+
+prov:Delegation a rdfs:Class;
+    sio:count 0 .
+
+prov:Derivation a rdfs:Class;
+    sio:count 0 .
+
+prov:EmptyCollection a rdfs:Class;
+    sio:count 0 .
+
+prov:End a rdfs:Class;
+    sio:count 0 .
+
+prov:Entity a rdfs:Class;
+    sio:count 0 .
+
+prov:EntityInfluence a rdfs:Class;
+    sio:count 0 .
+
+prov:Generation a rdfs:Class;
+    sio:count 0 .
+
+prov:Influence a rdfs:Class;
+    sio:count 0 .
+
+prov:InstantaneousEvent a rdfs:Class;
+    sio:count 0 .
+
+prov:Invalidation a rdfs:Class;
+    sio:count 0 .
+
+prov:Location a rdfs:Class;
+    sio:count 0 .
+
+prov:Organization a rdfs:Class;
+    sio:count 0 .
+
+prov:Person a rdfs:Class;
+    sio:count 0 .
+
+prov:Plan a rdfs:Class;
+    sio:count 0 .
+
+prov:PrimarySource a rdfs:Class;
+    sio:count 0 .
+
+prov:Quotation a rdfs:Class;
+    sio:count 0 .
+
+prov:Revision a rdfs:Class;
+    sio:count 0 .
+
+prov:Role a rdfs:Class;
+    sio:count 0 .
+
+prov:SoftwareAgent a rdfs:Class;
+    sio:count 0 .
+
+prov:Start a rdfs:Class;
+    sio:count 0 .
+
+prov:Usage a rdfs:Class;
+    sio:count 0 .
+
+<http://datahub.io/dataset/dbpedia> a datafaqs:Satisfactory;
+    void:vocabulary prov: .
+
+prov:actedOnBehalfOf a rdf:Property;
+    sio:count 0 .
+
+prov:activity a rdf:Property;
+    sio:count 0 .
+
+prov:agent a rdf:Property;
+    sio:count 0 .
+
+prov:alternateOf a rdf:Property;
+    sio:count 0 .
+
+prov:atLocation a rdf:Property;
+    sio:count 0 .
+
+prov:atTime a rdf:Property;
+    sio:count 0 .
+
+prov:endedAtTime a rdf:Property;
+    sio:count 0 .
+
+prov:entity a rdf:Property;
+    sio:count 0 .
+
+prov:generated a rdf:Property;
+    sio:count 0 .
+
+prov:generatedAtTime a rdf:Property;
+    sio:count 0 .
+
+prov:hadActivity a rdf:Property;
+    sio:count 0 .
+
+prov:hadGeneration a rdf:Property;
+    sio:count 0 .
+
+prov:hadMember a rdf:Property;
+    sio:count 0 .
+
+prov:hadPlan a rdf:Property;
+    sio:count 0 .
+
+prov:hadPrimarySource a rdf:Property;
+    sio:count 0 .
+
+prov:hadRole a rdf:Property;
+    sio:count 0 .
+
+prov:hadUsage a rdf:Property;
+    sio:count 0 .
+
+prov:influenced a rdf:Property;
+    sio:count 0 .
+
+prov:influencer a rdf:Property;
+    sio:count 0 .
+
+prov:invalidated a rdf:Property;
+    sio:count 0 .
+
+prov:invalidatedAtTime a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedAssociation a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedAttribution a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedCommunication a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedDelegation a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedDerivation a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedEnd a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedGeneration a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedInfluence a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedInvalidation a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedPrimarySource a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedQuotation a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedRevision a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedStart a rdf:Property;
+    sio:count 0 .
+
+prov:qualifiedUsage a rdf:Property;
+    sio:count 0 .
+
+prov:specializationOf a rdf:Property;
+    sio:count 0 .
+
+prov:startedAtTime a rdf:Property;
+    sio:count 0 .
+
+prov:used a rdf:Property;
+    sio:count 0 .
+
+prov:value a rdf:Property;
+    sio:count 0 .
+
+prov:wasAssociatedWith a rdf:Property;
+    sio:count 0 .
+
+prov:wasAttributedTo a rdf:Property;
+    sio:count 0 .
+
+prov:wasDerivedFrom a rdf:Property;
+    sio:count 11547302 .
+
+prov:wasEndedBy a rdf:Property;
+    sio:count 0 .
+
+prov:wasGeneratedBy a rdf:Property;
+    sio:count 0 .
+
+prov:wasInfluencedBy a rdf:Property;
+    sio:count 0 .
+
+prov:wasInformedBy a rdf:Property;
+    sio:count 0 .
+
+prov:wasInvalidatedBy a rdf:Property;
+    sio:count 0 .
+
+prov:wasQuotedFrom a rdf:Property;
+    sio:count 0 .
+
+prov:wasRevisionOf a rdf:Property;
+    sio:count 0 .
+
+prov:wasStartedBy a rdf:Property;
+    sio:count 0 .
+
