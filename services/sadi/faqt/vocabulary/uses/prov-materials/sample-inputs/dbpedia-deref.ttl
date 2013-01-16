@@ -1,0 +1,210 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<http://datahub.io/dataset/dbpedia>
+    dct:contributor [
+        foaf:mbox <mailto:dbpedia-discussion@lists.sourceforge.net> ;
+        foaf:name "DBpedia Team - http://wiki.dbpedia.org/Imprint"
+    ] ;
+    dct:creator [
+        foaf:mbox <mailto:dbpedia-discussion@lists.sourceforge.net> ;
+        foaf:name "DBpedia Team - http://wiki.dbpedia.org/Imprint"
+    ] ;
+    dct:description """### Description
+
+From the front page:
+
+> DBpedia.org is a community effort to extract structured information from Wikipedia and to make this information available on the Web. DBpedia allows you to ask sophisticated queries against Wikipedia and to link other datasets on the Web to Wikipedia data.
+> 
+> The DBpedia knowledge base currently describes more than 3.64 million things, out of which 1.83 million are classified in a consistent Ontology, including 416,000 persons, 526,000 places, 106,000 music albums, 60,000 films, 17,500 video games, 169,000 organisations, 183,000 species and 5,400 diseases. The DBpedia data set features labels and abstracts for these 3.64 million things in up to 97 different languages; 2,724,000 links to images and 6,300,000 links to external web pages; 6,200,000 external links into other RDF datasets, 740,000 Wikipedia categories, and 2,900,000 YAGO categories. The DBpedia knowledge base altogether consists of over 1.2 billion pieces of information (RDF triples) out of which 335 million were extracted from the English edition of Wikipedia and 865 million were extracted from other language editions.
+""" ;
+    dct:identifier "dbpedia" ;
+    dct:relation [
+        rdf:value "12529" ;
+        rdfs:label "links:2000-us-census-rdf"
+    ], [
+        rdf:value "22981" ;
+        rdfs:label "links:dbtune-musicbrainz"
+    ], [
+        rdf:value "1697" ;
+        rdfs:label "links:education-data-gov-uk"
+    ], [
+        rdf:value "3600" ;
+        rdfs:label "links:eunis"
+    ], [
+        rdf:value "8800000" ;
+        rdfs:label "links:flickr-wrappr"
+    ], [
+        rdf:value "3400000" ;
+        rdfs:label "links:freebase"
+    ], [
+        rdf:value "43" ;
+        rdfs:label "links:fu-berlin-dailymed"
+    ], [
+        rdf:value "196" ;
+        rdfs:label "links:fu-berlin-dblp"
+    ], [
+        rdf:value "1943" ;
+        rdfs:label "links:fu-berlin-diseasome"
+    ], [
+        rdf:value "729" ;
+        rdfs:label "links:fu-berlin-drugbank"
+    ], [
+        rdf:value "137" ;
+        rdfs:label "links:fu-berlin-eurostat"
+    ], [
+        rdf:value "2510" ;
+        rdfs:label "links:fu-berlin-project-gutenberg"
+    ], [
+        rdf:value "751" ;
+        rdfs:label "links:fu-berlin-sider"
+    ], [
+        rdf:value "86547" ;
+        rdfs:label "links:geonames-semantic-web"
+    ], [
+        rdf:value "11400" ;
+        rdfs:label "links:geospecies"
+    ], [
+        rdf:value "5822" ;
+        rdfs:label "links:italian-public-schools-linkedopendata-it"
+    ], [
+        rdf:value "53024" ;
+        rdfs:label "links:linkedgeodata"
+    ], [
+        rdf:value "13800" ;
+        rdfs:label "links:linkedmdb"
+    ], [
+        rdf:value "10359" ;
+        rdfs:label "links:nytimes-linked-open-data"
+    ], [
+        rdf:value "20362" ;
+        rdfs:label "links:opencyc"
+    ], [
+        rdf:value "9078" ;
+        rdfs:label "links:rdf-book-mashup"
+    ], [
+        rdf:value "22" ;
+        rdfs:label "links:reference-data-gov-uk"
+    ], [
+        rdf:value "6" ;
+        rdfs:label "links:revyu"
+    ], [
+        rdf:value "904" ;
+        rdfs:label "links:tcmgenedit_dataset"
+    ], [
+        rdf:value "3768" ;
+        rdfs:label "links:transport-data-gov-uk"
+    ], [
+        rdf:value "33" ;
+        rdfs:label "links:uk-legislation-api"
+    ], [
+        rdf:value "467101" ;
+        rdfs:label "links:w3c-wordnet"
+    ], [
+        rdf:value "8348" ;
+        rdfs:label "links:wikicompany"
+    ], [
+        rdf:value "233" ;
+        rdfs:label "links:world-factbook-fu-berlin"
+    ], [
+        rdf:value "18100000" ;
+        rdfs:label "links:yago"
+    ], [
+        rdf:value "http://dbpedia.org/resource/" ;
+        rdfs:label "namespace"
+    ], [
+        rdf:value "1200000000" ;
+        rdfs:label "triples"
+    ] ;
+    dct:rights <http://www.opendefinition.org/licenses/cc-by-sa> ;
+    dct:title "DBpedia" ;
+    a dcat:Dataset ;
+    rdfs:label "dbpedia" ;
+    owl:sameAs <urn:uuid:dcc6715c-bf94-4a89-bbf3-35933da795a5> ;
+    dcat:distribution [
+        a dcat:Distribution ;
+        dcat:accessURL <http://wiki.dbpedia.org/Downloads>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "linked data" ;
+            rdfs:label "linked data"
+        ] ;
+        dct:title "Link to an example Linked Data entry" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://dbpedia.org/resource/Berlin>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "application/rdf+xml" ;
+            rdfs:label "application/rdf+xml"
+        ] ;
+        dct:title "Link to an example data item within the dataset (RDF/XML)" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://dbpedia.org/data/Berlin.rdf>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "text/turtle" ;
+            rdfs:label "text/turtle"
+        ] ;
+        dct:title "Link to an example data item within the dataset (Turtle)" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://dbpedia.org/data/Berlin.n3>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "text/html" ;
+            rdfs:label "text/html"
+        ] ;
+        dct:title "Link to an example data item within the dataset (RDFa)" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://dbpedia.org/page/Berlin>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/sitemap" ;
+            rdfs:label "meta/sitemap"
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://wiki.dbpedia.org/sitemap>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "api/sparql" ;
+            rdfs:label "api/sparql"
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://dbpedia.org/sparql>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "application/x-ntriples" ;
+            rdfs:label "application/x-ntriples"
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://downloads.dbpedia.org/3.5.1/all_languages.tar>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://downloads.dbpedia.org/3.5.1/dbpedia_3.5.1.owl.bz2>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/void" ;
+            rdfs:label "meta/void"
+        ] ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://dbpedia.org/void/Dataset>
+    ] ;
+    dcat:keyword "access-api", "access-bulk", "access-www", "ckanupload.esw.200910", "crossdomain", "deref-vocab", "format-foaf", "format-owl", "format-rdf", "format-rdfs", "format-xhtml", "lod", "no-license-metadata", "no-provenance-metadata", "no-vocab-mappings", "published-by-producer", "rdf", "search", "void-sparql-endpoint", "wikipedia" ;
+    foaf:homepage <http://datahub.io/dataset/dbpedia> .
+

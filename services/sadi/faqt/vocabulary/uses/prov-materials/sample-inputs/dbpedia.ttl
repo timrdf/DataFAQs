@@ -1,0 +1,5 @@
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+
+<http://datahub.io/dataset/dbpedia> a dcat:Dataset, datafaqs:CKANDataset .
+

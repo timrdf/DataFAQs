@@ -1,0 +1,240 @@
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<#service-20c3e6afa107bf30c07b1fd7faa1e453910892f6ccb27e1ed0140db0> a sd:Service;
+    sd:endpoint <http://dbpedia.org/sparql> .
+
+<#linkset-2000-us-census-rdf-27c467411f348a68812c7b8dd5cbd713cabb87b1ec70fcbc4f28074f> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/2000-us-census-rdf>;
+    void:triples 12529 .
+
+<#linkset-dbtune-musicbrainz-c6be9cb9130858e964a293ea47898fb71e92d335578c7967dbc913bf> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/dbtune-musicbrainz>;
+    void:triples 22981 .
+
+<#linkset-education-data-gov-uk-4376018afc9366a6d0246e96f8bc1029e38548911e00bf1cf9689a92> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/education-data-gov-uk>;
+    void:triples 1697 .
+
+<#linkset-eunis-6b7f230d0c29d4b3e4965ae6373732a8f2ae49d67281694d51312247> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/eunis>;
+    void:triples 3600 .
+
+<#linkset-flickr-wrappr-e3eab3257e665dc0268ffe5015276d64cfeeda5043d05091b70aaa22> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/flickr-wrappr>;
+    void:triples 8800000 .
+
+<#linkset-freebase-8ac55cbcdbbc6793aa8b368a2e828c23b1d94f6245f332a8bc46f6ea> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/freebase>;
+    void:triples 3400000 .
+
+<#linkset-fu-berlin-dailymed-362e85a3f29136d7b673540c609d6679b8b9177939cca9b034f07ec8> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/fu-berlin-dailymed>;
+    void:triples 43 .
+
+<#linkset-fu-berlin-dblp-fd840d45413122f122eb6efe726f089c5a3e342e8340b02d9882ab44> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/fu-berlin-dblp>;
+    void:triples 196 .
+
+<#linkset-fu-berlin-diseasome-748794363024b0d8d439ebd8d7ef8b99d5e9b7255dc30fd1a1727d0a> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/fu-berlin-diseasome>;
+    void:triples 1943 .
+
+<#linkset-fu-berlin-drugbank-b6f0d06b45b66e6e21b53b05dfefefbf1656219e02feef65dae2304e> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/fu-berlin-drugbank>;
+    void:triples 729 .
+
+<#linkset-fu-berlin-eurostat-4e2eadbd4bd9484b68ca9d455afa52d47423f48fbaece0b28c1ac077> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/fu-berlin-eurostat>;
+    void:triples 137 .
+
+<#linkset-fu-berlin-project-gutenberg-70569764ac245a4d9c050b7ca55693a5421607f98b339e1b4389e256> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/fu-berlin-project-gutenberg>;
+    void:triples 2510 .
+
+<#linkset-fu-berlin-sider-20c06c68d98bb4dd97cf8bd64222d050416a89f362d3c3a47dbac618> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/fu-berlin-sider>;
+    void:triples 751 .
+
+<#linkset-geonames-semantic-web-51f9c2e737d33b69a56b316c38fb38afc4a5f0395d9654ecc4e77a49> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/geonames-semantic-web>;
+    void:triples 86547 .
+
+<#linkset-geospecies-2de456a80f9a8fe4268d8f34d8d8dc220699dc2639722ba391e84dbd> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/geospecies>;
+    void:triples 11400 .
+
+<#linkset-italian-public-schools-linkedopendata-it-c7371852e7a552b8020a8f23f1dde912efb37f60824780793d115bb7> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/italian-public-schools-linkedopendata-it>;
+    void:triples 5822 .
+
+<#linkset-linkedgeodata-a0c4ecb95511e8230b9d733a7106b057d365a200b003d8df768e9b83> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/linkedgeodata>;
+    void:triples 53024 .
+
+<#linkset-linkedmdb-4e93469237278c244c5a742be13d6486deaf9ef0812ebc402be4a264> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/linkedmdb>;
+    void:triples 13800 .
+
+<#linkset-nytimes-linked-open-data-ebf28f1fbe03d137d1ae526bf2daafefa27d5aee30fc8452f85b2803> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/nytimes-linked-open-data>;
+    void:triples 10359 .
+
+<#linkset-opencyc-3021e2b31b2ffd662be23f53b98a7728ea05dc023e928c59fe33312c> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/opencyc>;
+    void:triples 20362 .
+
+<#linkset-rdf-book-mashup-fc219d4228d6e06208e84cf28b2f3b95cd21106ebf91c10c37c0be45> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/rdf-book-mashup>;
+    void:triples 9078 .
+
+<#linkset-reference-data-gov-uk-be351d8ffb51f3dd486592a5087f88893c75ca11f19e06989b84232a> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/reference-data-gov-uk>;
+    void:triples 22 .
+
+<#linkset-revyu-5bc440669053b0652600fcc1baaaedbc9425e2122b5d5e265bd24224> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/revyu>;
+    void:triples 6 .
+
+<#linkset-tcmgenedit_dataset-2125cd35963c62e3b68612eca52467eba897dc3cd64342403251b2ca> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/tcmgenedit_dataset>;
+    void:triples 904 .
+
+<#linkset-transport-data-gov-uk-db3e968834860ef20b85b876e137723e09418f8c385c11ab2f22ef92> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/transport-data-gov-uk>;
+    void:triples 3768 .
+
+<#linkset-uk-legislation-api-d2ce04cef0e2a699bcf392bc02251f746a795ade9beb0904589bc567> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/uk-legislation-api>;
+    void:triples 33 .
+
+<#linkset-w3c-wordnet-79c7ce5eb30a81e69d705cff79ad91f288f806ac63ad3ad20b325fcf> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/w3c-wordnet>;
+    void:triples 467101 .
+
+<#linkset-wikicompany-b54e47cd74b1cc29732ae6c2ac65b42aeb685288ac7570c3b7d58b3c> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/wikicompany>;
+    void:triples 8348 .
+
+<#linkset-world-factbook-fu-berlin-37192c1fd01d0240a2b7d4b818b579b6e3ace062a657f98448b8cb4c> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/world-factbook-fu-berlin>;
+    void:triples 233 .
+
+<#linkset-yago-596ea9936c31c11fa73a238ea7bde637bdfd5b94f00196d18668d534> a void:Linkset;
+    void:target <http://datahub.io/dataset/dbpedia>,
+        <http://thedatahub.org/dataset/yago>;
+    void:triples 18100000 .
+
+<http://datahub.io/group/linguistics> a datafaqs:Group;
+    rdfs:label "linguistics";
+    dcterms:identifier "linguistics";
+    foaf:name "linguistics" .
+
+<http://datahub.io/group/lod> a datafaqs:Group;
+    rdfs:label "lod";
+    dcterms:identifier "lod";
+    foaf:name "lod" .
+
+<http://datahub.io/group/lodcloud> a datafaqs:Group;
+    rdfs:label "lodcloud";
+    dcterms:identifier "lodcloud";
+    foaf:name "lodcloud" .
+
+<http://datahub.io/group/open-data-day> a datafaqs:Group;
+    rdfs:label "open-data-day";
+    dcterms:identifier "open-data-day";
+    foaf:name "open-data-day" .
+
+<http://datahub.io/group/wikimedia> a datafaqs:Group;
+    rdfs:label "wikimedia";
+    dcterms:identifier "wikimedia";
+    foaf:name "wikimedia" .
+
+<http://dbpedia.org/sparql> a owl:Thing;
+    dcterms:title "SPARQL endpoint" .
+
+<http://datahub.io/dataset/dbpedia> a datafaqs:CKANDataset, dcat:Dataset;
+    dcterms:description """### Description
+
+From the front page:
+
+> DBpedia.org is a community effort to extract structured information from Wikipedia and to make this information available on the Web. DBpedia allows you to ask sophisticated queries against Wikipedia and to link other datasets on the Web to Wikipedia data.
+> 
+> The DBpedia knowledge base currently describes more than 3.64 million things, out of which 1.83 million are classified in a consistent Ontology, including 416,000 persons, 526,000 places, 106,000 music albums, 60,000 films, 17,500 video games, 169,000 organisations, 183,000 species and 5,400 diseases. The DBpedia data set features labels and abstracts for these 3.64 million things in up to 97 different languages; 2,724,000 links to images and 6,300,000 links to external web pages; 6,200,000 external links into other RDF datasets, 740,000 Wikipedia categories, and 2,900,000 YAGO categories. The DBpedia knowledge base altogether consists of over 1.2 billion pieces of information (RDF triples) out of which 335 million were extracted from the English edition of Wikipedia and 865 million were extracted from other language editions.
+""";
+    dcterms:isPartOf <http://datahub.io/group/linguistics>,
+        <http://datahub.io/group/lod>,
+        <http://datahub.io/group/lodcloud>,
+        <http://datahub.io/group/open-data-day>,
+        <http://datahub.io/group/wikimedia>;
+    dcterms:title "DBpedia";
+    void:sparqlEndpoint <http://dbpedia.org/sparql>;
+    void:subset <#linkset-2000-us-census-rdf-27c467411f348a68812c7b8dd5cbd713cabb87b1ec70fcbc4f28074f>,
+        <#linkset-dbtune-musicbrainz-c6be9cb9130858e964a293ea47898fb71e92d335578c7967dbc913bf>,
+        <#linkset-education-data-gov-uk-4376018afc9366a6d0246e96f8bc1029e38548911e00bf1cf9689a92>,
+        <#linkset-eunis-6b7f230d0c29d4b3e4965ae6373732a8f2ae49d67281694d51312247>,
+        <#linkset-flickr-wrappr-e3eab3257e665dc0268ffe5015276d64cfeeda5043d05091b70aaa22>,
+        <#linkset-freebase-8ac55cbcdbbc6793aa8b368a2e828c23b1d94f6245f332a8bc46f6ea>,
+        <#linkset-fu-berlin-dailymed-362e85a3f29136d7b673540c609d6679b8b9177939cca9b034f07ec8>,
+        <#linkset-fu-berlin-dblp-fd840d45413122f122eb6efe726f089c5a3e342e8340b02d9882ab44>,
+        <#linkset-fu-berlin-diseasome-748794363024b0d8d439ebd8d7ef8b99d5e9b7255dc30fd1a1727d0a>,
+        <#linkset-fu-berlin-drugbank-b6f0d06b45b66e6e21b53b05dfefefbf1656219e02feef65dae2304e>,
+        <#linkset-fu-berlin-eurostat-4e2eadbd4bd9484b68ca9d455afa52d47423f48fbaece0b28c1ac077>,
+        <#linkset-fu-berlin-project-gutenberg-70569764ac245a4d9c050b7ca55693a5421607f98b339e1b4389e256>,
+        <#linkset-fu-berlin-sider-20c06c68d98bb4dd97cf8bd64222d050416a89f362d3c3a47dbac618>,
+        <#linkset-geonames-semantic-web-51f9c2e737d33b69a56b316c38fb38afc4a5f0395d9654ecc4e77a49>,
+        <#linkset-geospecies-2de456a80f9a8fe4268d8f34d8d8dc220699dc2639722ba391e84dbd>,
+        <#linkset-italian-public-schools-linkedopendata-it-c7371852e7a552b8020a8f23f1dde912efb37f60824780793d115bb7>,
+        <#linkset-linkedgeodata-a0c4ecb95511e8230b9d733a7106b057d365a200b003d8df768e9b83>,
+        <#linkset-linkedmdb-4e93469237278c244c5a742be13d6486deaf9ef0812ebc402be4a264>,
+        <#linkset-nytimes-linked-open-data-ebf28f1fbe03d137d1ae526bf2daafefa27d5aee30fc8452f85b2803>,
+        <#linkset-opencyc-3021e2b31b2ffd662be23f53b98a7728ea05dc023e928c59fe33312c>,
+        <#linkset-rdf-book-mashup-fc219d4228d6e06208e84cf28b2f3b95cd21106ebf91c10c37c0be45>,
+        <#linkset-reference-data-gov-uk-be351d8ffb51f3dd486592a5087f88893c75ca11f19e06989b84232a>,
+        <#linkset-revyu-5bc440669053b0652600fcc1baaaedbc9425e2122b5d5e265bd24224>,
+        <#linkset-tcmgenedit_dataset-2125cd35963c62e3b68612eca52467eba897dc3cd64342403251b2ca>,
+        <#linkset-transport-data-gov-uk-db3e968834860ef20b85b876e137723e09418f8c385c11ab2f22ef92>,
+        <#linkset-uk-legislation-api-d2ce04cef0e2a699bcf392bc02251f746a795ade9beb0904589bc567>,
+        <#linkset-w3c-wordnet-79c7ce5eb30a81e69d705cff79ad91f288f806ac63ad3ad20b325fcf>,
+        <#linkset-wikicompany-b54e47cd74b1cc29732ae6c2ac65b42aeb685288ac7570c3b7d58b3c>,
+        <#linkset-world-factbook-fu-berlin-37192c1fd01d0240a2b7d4b818b579b6e3ace062a657f98448b8cb4c>,
+        <#linkset-yago-596ea9936c31c11fa73a238ea7bde637bdfd5b94f00196d18668d534>;
+    void:triples 1200000000;
+    void:uriSpace "http://dbpedia.org/resource/" .
+
