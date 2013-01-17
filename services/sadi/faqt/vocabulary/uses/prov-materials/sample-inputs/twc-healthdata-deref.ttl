@@ -1,0 +1,161 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<http://datahub.io/dataset/twc-healthdata>
+    dct:creator [
+        foaf:name "James McCusker"
+    ] ;
+    dct:description "Linked Data version of the metadata and data listed at http://hub.healthdata.gov." ;
+    dct:identifier "twc-healthdata" ;
+    dct:relation [
+        rdf:value "http://purl.org/twc/health/" ;
+        rdfs:label "namespace"
+    ], [
+        rdf:value "http://purl.org/twc/health/void" ;
+        rdfs:label "preferred_uri"
+    ], [
+        rdf:value "twc-healthdata" ;
+        rdfs:label "shortname"
+    ], [
+        rdf:value "1934046908" ;
+        rdfs:label "triples"
+    ] ;
+    dct:rights <http://www.opendefinition.org/licenses/cc-by> ;
+    dct:title "HealthData.gov Platform (HDP) on the Semantic Web" ;
+    a dcat:Dataset ;
+    rdfs:label "twc-healthdata" ;
+    owl:sameAs <urn:uuid:0f354289-0e5b-41bb-a607-395ce99bc2da> ;
+    dcat:distribution [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "api/sparql" ;
+            rdfs:label "api/sparql"
+        ] ;
+        dct:title "SPARQL Endpoint" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://healthdata.tw.rpi.edu/sparql>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "rdfs RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://www.w3.org/2000/01/rdf-schema#>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "doap RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://usefulinc.com/ns/doap#>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "foaf RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://xmlns.com/foaf/0.1/>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "owl RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://www.w3.org/2002/07/owl#>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "prov RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://www.w3.org/ns/prov#>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "qb RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://purl.org/linked-data/cube#>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "vann RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://purl.org/vocab/vann/>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "vcard RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://www.w3.org/2006/vcard/ns#>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "con RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://www.w3.org/2000/10/swap/pim/contact#>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "example/rdf+xml" ;
+            rdfs:label "example/rdf+xml"
+        ] ;
+        dct:title "Example URI" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://purl.org/twc/health/source/hub-healthdata-gov/dataset/hospital-compare/version/2012-Jul-17/provider/010054>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "text/turtle" ;
+            rdfs:label "text/turtle"
+        ] ;
+        dct:title "Download File" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://purl.org/twc/health/source/hub-healthdata-gov/file/2008-basic-stand-alone-skilled/version/2012-Mar-15/conversion/hub-healthdata-gov-2008-basic-stand-alone-skilled-2012-Mar-15.void.ttl.gz>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/void" ;
+            rdfs:label "meta/void"
+        ] ;
+        dct:title "VoID Listing" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://healthdata.tw.rpi.edu/void>
+    ], [
+        dct:format [
+            a dct:IMT ;
+            rdf:value "meta/rdf-schema" ;
+            rdfs:label "meta/rdf-schema"
+        ] ;
+        dct:title "rdf RDF Schema" ;
+        a dcat:Distribution ;
+        dcat:accessURL <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    ] ;
+    dcat:keyword "deref-vocab", "ecommerce", "format-con", "format-doap", "format-foaf", "format-owl", "format-prov", "format-qb", "format-rdf", "format-rdfs", "format-vann", "format-vcard", "geographic", "government", "lifesciences", "lod", "no-license-metadata", "provenance-metadata", "published-by-third-party", "schemata", "vocab-mappings" ;
+    foaf:homepage <http://datahub.io/dataset/twc-healthdata> .
+
