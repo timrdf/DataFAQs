@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# 
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-situate-paths.sh> .
 #
 # Usage:
 #   export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
