@@ -1,9 +1,24 @@
 @prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ov: <http://open.vocab.org/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pim: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<#service-6dbc461f172bd2236346b5cc15ab2a2d8eb45d7b89b543c477012745> a sd:Service;
+    sd:endpoint <http://healthdata.tw.rpi.edu/sparql> .
 
 <http://datahub.io/dataset/twc-healthdata> a datafaqs:CKANDataset;
     ov:shortName "twc-healthdata";
-    dcterms:description "";
-    dcterms:title "HealthData.gov Platform (HDP) on the Semantic Web" .
+    dcterms:description "Linked Data version of the metadata and data listed at http://hub.healthdata.gov.";
+    dcterms:title "HealthData.gov Platform (HDP) on the Semantic Web";
+    void:sparqlEndpoint <http://healthdata.tw.rpi.edu/sparql>;
+    void:triples 1934046908;
+    void:uriSpace "http://purl.org/twc/health/";
+    pim:preferredURI <http://purl.org/twc/health/void> .
+
+<http://healthdata.tw.rpi.edu/sparql> a owl:Thing;
+    dcterms:title "" .
 

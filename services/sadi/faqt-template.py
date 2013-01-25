@@ -88,7 +88,7 @@ class TEMPLATE-CLASS-NAME(faqt.Service):
       # Thing = input.session.get_class(ns.OWL['Thing'])
       # for person in Thing.all():
 
-      # Create a calss in the output graph:
+      # Create a class in the output graph:
       # Document = output.session.get_class(ns.FOAF['Document'])
 
       if True:

@@ -152,18 +152,25 @@ class LiftCKAN(faqt.CKANReader):
          #
          # Process Extras
          #
-         links_regex  = re.compile("^links:(.*)$")
          DCATDataset  = output.session.get_class(ns.DCAT['Dataset'])
          Distribution = output.session.get_class(ns.DCAT['Distribution'])
          Linkset      = output.session.get_class(ns.VOID['Linkset'])
+         links_regex  = re.compile("^links:(.*)$")
          NamedGraph   = output.session.get_class(ns.SD['NamedGraph'])
          CKANDataset  = output.session.get_class(ns.DATAFAQS['CKANDataset'])
          for extra in dataset['extras']:
             if extra == u'triples':
-               #
-               # <dataset> void:triples 1000 .
-               #
-               output.void_triples = int(dataset['extras'][extra])
+               try:
+                  print str(dataset['extras'][extra])
+                  triples = int(re.sub('\D','',str(dataset['extras'][extra])))
+                  print '     -> ' + str(triples)
+                  #
+                  # <dataset> void:triples 1000 .
+                  #
+                  output.void_triples = triples
+               except ValueError:
+                  # e.g. invalid literal for int() with base 10: '' from rdf-book-mashup
+                  print 
             elif extra == u'shortname':
                #
                # <dataset> ov:shortName "DBPedia" .
@@ -174,10 +181,18 @@ class LiftCKAN(faqt.CKANReader):
                # <dataset> void:subset [ a void:Linkset; void:target <dataset>, <target>; void:size 50 ] .
                #
                for target in links_regex.findall(str(extra)):
+                  target = target.replace(' ','-')
+                  print 'found link to ' + target
+                  print '           from ' + output.subject
+                  print '                revision_id ' + dataset['revision_id']
                   linkset = Linkset('#linkset-'+target+'-'+hashlib.sha224(output.subject+target+dataset['revision_id']).hexdigest())
                   linkset.void_target.append(output)
                   linkset.void_target.append(CKANDataset('http://thedatahub.org/dataset/'+target))
-                  linkset.void_triples = int(dataset['extras'][extra])
+                  try:
+                     linkset.void_triples = int(dataset['extras'][extra])
+                  except ValueError:
+                     # e.g. invalid literal for int() with base 10: '???' from scotland-statistical-geography
+                     print
                   linkset.save()
                   output.void_subset.append(linkset)
             elif extra == u'preferred_uri':
@@ -212,6 +227,7 @@ class LiftCKAN(faqt.CKANReader):
                print
                print 
 
+         output.rdf_type.append(ns.DCAT['Dataset'])
          output.save()
       except ckanclient.CkanApiNotFoundError:
          print 'Error: could not get ckan dataset ' + ckan_id
