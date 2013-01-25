@@ -297,7 +297,39 @@ where {
       #          attribute = 'links:' + otherbubble.replace('http://thedatahub.org/dataset/','')
       #          print attribute + ' = ' + bindings['triples']['value']
       #          dataset['extras'][attribute] = bindings['triples']['value']
-    
+
+      # ^ done before (string queries broke in SuRF API); \/ done Jan 2013
+
+      # 
+      # links between this bubble and others on the LOD Cloud diagram.
+      # 
+      # <http://datahub.io/dataset/twc-healthdata>
+      #    a datafaqs:CKANDataset;
+      #    void:subset :linkset_396c515e06a9f050327af7e61a0ca50b .
+      # 
+      # :linkset_396c515e06a9f050327af7e61a0ca50b 
+      #      void:target 
+      #        <http://datahub.io/dataset/twc-healthdata>, 
+      #        <http://datahub.io/dataset/2000-us-census-rdf>;
+      #      void:triples     1535;
+      # .
+      query = select("?other ?size").where((input.subject, ns.VOID['subset'],  "?linkset"),
+                                           ("?linkset",    ns.VOID['target'],  input.subject),
+                                           ("?linkset",    ns.VOID['target'],  "?other"),
+                                           ("?linkset",    ns.VOID['triples'], "?size"))
+      linkedTo = []
+      for bindings in input.session.default_store.execute(query):
+         if str(bindings[0]) != str(input.subject):
+            other = re.sub('^.*/dataset/','',str(bindings[0]))
+            print linkedTo
+            if other not in linkedTo:
+               linkedTo.append(other)
+               attribute = u'links:'+other
+               print attribute + ' = ' + bindings[1]
+               dataset['extras'][attribute] = int(bindings[1])
+            else:
+               print 'WARNING: ' + other + ' already had an assertion'
+
       # Tags
       if 'tags' not in dataset:
          dataset['tags'] = []
@@ -340,6 +372,7 @@ where {
 
       #
       # SPARQL Endpoint (two ways)
+      sparqlEndpoint = False
       if len(input.void_sparqlEndpoint) > 0:
          sparqlEndpoint = input.void_sparqlEndpoint.first # This gets overridden if more elaborate
                                                           # description provides the named graph.
@@ -352,7 +385,7 @@ where {
          sparqlEndpoint                         = bindings[0]
          dataset['extras']['sparql_graph_name'] = bindings[1] # overwrites void:sparqlEndpoint
 
-      if URIRef(self.surfSubject(sparqlEndpoint)) not in dataset_resources:
+      if sparqlEndpoint is not False and URIRef(self.surfSubject(sparqlEndpoint)) not in dataset_resources:
          # Resource with this URL did not exist.
          print 'brand new sparql endpoint ' + self.surfSubject(sparqlEndpoint)
          dataset['resources'].append( { 'name':   'SPARQL Endpoint',
@@ -405,9 +438,11 @@ where {
          else:
             print 'repeat void: ' + void
          #dataset['author_email'] = re.sub('^mailto:','',bindings[1])
-         
+ 
+     
 
       # POST the new details of the dataset.
+      print dataset
       ckan.package_entity_put(dataset)
 
       # GET the timestamp of the change we just submitted.
