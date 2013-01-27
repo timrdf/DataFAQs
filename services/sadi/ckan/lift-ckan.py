@@ -138,11 +138,11 @@ class LiftCKAN(faqt.CKANReader):
          #
          # Process Groups
          #
-         Group = output.session.get_class(ns.DATAFAQS['Group'])
+         Group = output.session.get_class(ns.DATAFAQS['CKANGroup'])
          for group in dataset['groups']:
             groupR = Group(re.sub('/dataset/.*$','/group/'+group,str(input.subject)))
             print 'group: ' + group + ' -> ' + groupR.subject
-            groupR.rdf_type.append(ns.DATAFAQS['Group'])
+            groupR.rdf_type.append(ns.DATAFAQS['CKANGroup'])
             groupR.dcterms_identifier.append(group)
             groupR.rdfs_label.append(group)
             groupR.foaf_name.append(group)
