@@ -113,7 +113,7 @@ for egg in $eggs; do
 done
 
 eggs="lib/sadi.python/sadi-0.1.5-py$V.egg packages/faqt.python/dist/faqt-0.0.2-py$V.egg"
-for egg in eggs; do
+for egg in $eggs; do
    egg=$HOME/$egg
    base=`basename $egg`
    there=""
