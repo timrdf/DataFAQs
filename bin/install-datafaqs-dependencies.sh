@@ -87,7 +87,7 @@ offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
 V=`python --version 2>&1 | sed 's/Python \(.\..\).*$/\1/'`
-dist="usr/local/lib/python$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
+dist="/usr/local/lib/python$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
 eggs="pyparsing surf.sparql_protocol ckanclient BeautifulSoup"
 for egg in $eggs; do
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
