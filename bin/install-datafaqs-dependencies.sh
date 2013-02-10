@@ -80,6 +80,8 @@ for egg in $eggs; do
    there=`find /usr/local/lib/python$V/dist-packages -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg`
    if [[ "$there" =~ /usr/*.egg ]]; then 
       #              ^^^^^^^^^^ TODO: this path is $base/python/lib/site-packages if -z $sudo
+      echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
+   else
       # TODO: not recognizing that 'ckanclient' is missing.
       echo $pdiv
       echo $TODO $sudo easy_install -U $egg
@@ -92,8 +94,6 @@ for egg in $eggs; do
             pdiv=""
          fi
       fi
-   else
-      echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    fi
 done
 
