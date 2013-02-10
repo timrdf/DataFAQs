@@ -2,6 +2,9 @@
 #
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh>
 
+HOME=$(cd ${0%/*} && echo ${PWD%/*})
+me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
+
 if [[ "$1" == "--help" ]]; then
    echo
    echo "usage: `basename $0` [-n] [--avoid-sudo]"
@@ -84,15 +87,14 @@ offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
 V=`python --version 2>&1 | sed 's/Python \(.\..\).*$/\1/'`
+dist="usr/local/lib/python$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
 eggs="pyparsing surf.sparql_protocol ckanclient BeautifulSoup"
 for egg in $eggs; do
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
    # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
    eggReg=`echo $egg | sed 's/-/./g;s/_/./g'`
-   find /usr/local/lib/python$V/dist-packages -mindepth 1 -maxdepth 1 | grep -i $eggReg &> /dev/null
-   status=$?
-   there=`find /usr/local/lib/python$V/dist-packages -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg` 
-   #           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ this path is $base/python/lib/site-packages if -z $sudo TODO
+          find $dist -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg &> /dev/null; status=$?
+   there=`find $dist -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg` 
    if [[ -n "$there" ]]; then 
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    else
@@ -110,7 +112,27 @@ for egg in $eggs; do
    fi
 done
 
-
+eggs="lib/sadi.python/sadi-0.1.5-py$V.egg packages/faqt.python/dist/faqt-0.0.2-py$V.egg"
+for egg in eggs; do
+   egg=$HOME/$egg
+   base=`basename $egg`
+   there=""
+   if [[ -n "$there" ]]; then 
+      echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
+   else
+      echo $pdiv
+      echo $TODO $sudo easy_install -U $egg
+      if [ "$dryrun" != "true" ]; then
+         read -p "Try to install python module $egg using the command above? (y/n) " -u 1 install_it
+         if [[ "$install_it" == [yY] ]]; then
+                 $sudo easy_install -U $egg
+                # SUDO IS NOT REQUIRED HERE.
+            # see https://github.com/timrdf/csv2rdf4lod-automation/wiki/Installing-csv2rdf4lod-automation---complete
+            pdiv=""
+         fi
+      fi
+   fi
+done
 
 exit
 
