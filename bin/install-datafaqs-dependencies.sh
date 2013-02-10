@@ -121,7 +121,7 @@ for egg in $eggs; do
    base=`basename $egg`
    there=`find $dist -mindepth 1 -maxdepth 1 -type d -name $base`
    if [[ -n "$there" ]]; then 
-      echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
+      echo "[okay] python egg \"$egg\" is already available at $there (${#there} $base $status)"
    else
       echo $pdiv
       echo $TODO $sudo easy_install -U $egg
