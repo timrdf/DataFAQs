@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh>
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh>;
+#3>    prov:wasDerivedFrom <https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh> .
 
 HOME=$(cd ${0%/*} && echo ${PWD%/*})
 me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
