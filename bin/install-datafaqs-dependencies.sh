@@ -117,18 +117,17 @@ done
 #   /usr/local/lib/python2.6/dist-packages/faqt-0.0.2-py2.6.egg
 eggs="lib/sadi.python/sadi-0.1.5-py$V.egg packages/faqt.python/dist/faqt-0.0.2-py$V.egg"
 for egg in $eggs; do
-   egg=$HOME/$egg
    base=`basename $egg`
    there=`find $dist -mindepth 1 -maxdepth 1 -type d -name $base`
    if [[ -n "$there" ]]; then 
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $base $status)"
    else
       echo $pdiv
-      echo $TODO $sudo easy_install -U $egg
+      echo $TODO $sudo easy_install -U $HOME/$egg
       if [ "$dryrun" != "true" ]; then
          read -p "Try to install python module $egg using the command above? (y/n) " -u 1 install_it
          if [[ "$install_it" == [yY] ]]; then
-                 $sudo easy_install -U $egg
+                 $sudo easy_install -U $HOME/$egg
                 # SUDO IS NOT REQUIRED HERE.
             # see https://github.com/timrdf/csv2rdf4lod-automation/wiki/Installing-csv2rdf4lod-automation---complete
             pdiv=""
