@@ -119,7 +119,7 @@ eggs="lib/sadi.python/sadi-0.1.5-py$V.egg packages/faqt.python/dist/faqt-0.0.2-p
 for egg in $eggs; do
    egg=$HOME/$egg
    base=`basename $egg`
-   there=`find $dist -mindepth 1 -maxdepth 1 -type d -name $egg`
+   there=`find $dist -mindepth 1 -maxdepth 1 -type d -name $base`
    if [[ -n "$there" ]]; then 
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    else
