@@ -66,7 +66,6 @@ offer_install_with_apt 'git'          'git-core' # These are dryrun safe.
 offer_install_with_apt 'curl'         'curl'
 offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
-offer_install_with_apt 'easy_install' 'python-setuptools'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
@@ -94,7 +93,7 @@ for egg in $eggs; do
          fi
       fi
    else
-      echo "[okay] python egg \"$egg\" is already available at $there ($eggReg $status)"
+      echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    fi
 done
 
