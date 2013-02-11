@@ -10,10 +10,10 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
       <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
    prov:used
       <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-faqts/via-sparql-query-materials/sample-inputs/from-official-sadi-registry.ttl>;
-   prov:hadQualifiedAttribution [
+   prov:qualifiedAttribution [
       a prov:Attribution;
-      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
-      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/via-sparql-query.rpy>;
+      prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
+      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/via-sparql-query.rpy>;
    ];
    prov:generated _:faqtlist; # the RDF graph that via-sparql-query returns (we don't know the name of it yet until we instantiate the epoch).
 .
@@ -30,10 +30,10 @@ _:selectdatasets
       <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-group>;
    prov:used 
       <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-group-materials/sample-inputs/thedatahub-datafaqs.ttl>;
-   prov:hadQualifiedAttribution [
+   prov:qualifiedAttribution [
       a prov:Attribution;
-      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-group>;
-      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/by-ckan-group.rpy>;
+      prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-group>;
+      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/by-ckan-group.rpy>;
    ];
    prov:generated _:datasetlist; # the RDF graph that by-ckan-group returns (we don't know the name of it yet until we instantiate the epoch).
 .
@@ -49,10 +49,10 @@ _:referencedatasets
    prov:wasAttributedTo
       <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
    prov:used _:datasetlist;
-   prov:hadQualifiedAttribution [
+   prov:qualifiedAttribution [
       a prov:Attribution;
-      prov:hadQualifiedEntity <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
-      prov:adoptedPlan        <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
+      prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
+      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
    ];
    prov:generated _:seeAlsolist; # the RDF graph that with-preferred-uri-and-ckan-meta-void returns (we don't know the name of it yet until we instantiate the epoch).
 . 
