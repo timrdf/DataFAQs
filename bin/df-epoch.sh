@@ -7,6 +7,9 @@
 #   Invokes evaluation services with dataset information, and
 #   Stores the results in a datacube-like directory structure.
 
+if [ -e ../../datafaqs-source-me.sh ]; then
+   source ../../datafaqs-source-me.sh # This could set DATAFAQS_HOME...
+fi
 if [ -e datafaqs-source-me.sh ]; then
    source datafaqs-source-me.sh # This could set DATAFAQS_HOME...
 fi
