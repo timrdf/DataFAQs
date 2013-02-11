@@ -22,6 +22,11 @@ fi
 
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 
+if [[ -z "$CSV2RDF4LOD_HOME" || ! -e "$CSV2RDF4LOD_HOME/bin/cr-vars.sh" ]]; then
+   echo $HOME
+   exit
+fi
+
 CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv2rdf4lod-automation/wiki/CSV2RDF4LOD-not-set"}
 export PATH=$PATH`$CSV2RDF4LOD_HOME/bin/util/cr-situate-paths.sh`
 
