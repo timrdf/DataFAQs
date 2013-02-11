@@ -13,7 +13,7 @@ _:selectfaqtservices # Every time you load this file, we're talking about a new 
    prov:qualifiedAttribution [
       a prov:Attribution;
       prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/core/select-faqts/via-sparql-query>;
-      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/via-sparql-query.rpy>;
+      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-faqts/via-sparql-query>;
    ];
    prov:generated _:faqtlist; # the RDF graph that via-sparql-query returns (we don't know the name of it yet until we instantiate the epoch).
 .
@@ -33,7 +33,7 @@ _:selectdatasets
    prov:qualifiedAttribution [
       a prov:Attribution;
       prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-group>;
-      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/by-ckan-group.rpy>;
+      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/by-ckan-group>;
    ];
    prov:generated _:datasetlist; # the RDF graph that by-ckan-group returns (we don't know the name of it yet until we instantiate the epoch).
 .
@@ -52,7 +52,7 @@ _:referencedatasets
    prov:qualifiedAttribution [
       a prov:Attribution;
       prov:entity  <http://sparql.tw.rpi.edu/services/datafaqs/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
-      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void.rpy>;
+      prov:hadPlan <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/augment-datasets/with-preferred-uri-and-ckan-meta-void>;
    ];
    prov:generated _:seeAlsolist; # the RDF graph that with-preferred-uri-and-ckan-meta-void returns (we don't know the name of it yet until we instantiate the epoch).
 . 
