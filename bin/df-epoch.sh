@@ -11,6 +11,9 @@ if [ -e datafaqs-source-me.sh ]; then
    source datafaqs-source-me.sh
 fi
 
+HOME=$(cd ${0%/*} && echo ${PWD%/*})
+me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
+
 DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/wiki/Installing-DataFAQs"}
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 
@@ -74,6 +77,8 @@ if [ "$1" == "--help" ]; then
    echo
    echo "environment variables required:"
    echo "  DATAFAQS_BASE_URI e.g. http://sparql.tw.rpi.edu"
+   echo $HOME
+   echo $me
    exit 0
 fi
 
@@ -191,6 +196,7 @@ fi
 ACCEPT_HEADER="Accept: text/turtle; application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6, */*; q=0.4"
+ACCEPT_HEADER="Accept: application/rdf+xml, text/turtle, text/n3, application/xhtml+xml; q=0.9, text/html; q=0.8, text/plain; q=0.6, */*" # http://sindice.com/developers/publishing
 ACCEPT_HEADER="Accept: text/turtle,application/turtle,application/rdf+xml;q=0.8,text/plain;q=0.7,*/*;q=0.5" # Alvaro-approved.
 ACCEPT_HEADER="Accept: application/rdf+xml, text/rdf;q=0.6, */*;q=0.1" # This is what rapper uses.
 
