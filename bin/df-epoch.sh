@@ -19,20 +19,18 @@ me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
 if [[ -z "$DATAFAQS_HOME" || ! -e "$DATAFAQS_HOME"/bin/df-epoch.sh ]]; then
    DATAFAQS_HOME=$HOME
 fi
-
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 
 # Fall back to the CSV2RDF4LOD_HOME if this DataFAQs is part of Prizms.
-prizms_home=${HOME%/}
-prizms_home=${HOME%/*/*}
-echo "$HOME -> $prizms_home"
+prizms_home=${HOME%/}           # Avoid trailing slash.
+prizms_home=${prizms_home%/*/*} # Strip two steps off end.
 if [[ ( -z "$CSV2RDF4LOD_HOME" || ! -e "$CSV2RDF4LOD_HOME/bin/cr-vars.sh" ) && `basename $prizms_home` == "prizms" ]]; then
-   #echo $HOME # /home/lebot/opt/prizms/repos/DataFAQs
-   echo "$HOME -> $prizms_home"
-   exit
+   # /home/lebot/opt/prizms/repos/DataFAQs 
+   #                                       -> /home/lebot/opt/prizms
+   export CSV2RDF4LOD_HOME=$prizms_home/repos/csv2rdf4lod-automation
+else
+   CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv2rdf4lod-automation/wiki/CSV2RDF4LOD-not-set"}
 fi
-
-CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv2rdf4lod-automation/wiki/CSV2RDF4LOD-not-set"}
 export PATH=$PATH`$CSV2RDF4LOD_HOME/bin/util/cr-situate-paths.sh`
 
 if [[ "$DATAFAQS_PUBLISH_TDB" == "true" && ! `which tdbloader` ]]; then
