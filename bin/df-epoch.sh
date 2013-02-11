@@ -22,8 +22,11 @@ fi
 
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 
-if [[ -z "$CSV2RDF4LOD_HOME" || ! -e "$CSV2RDF4LOD_HOME/bin/cr-vars.sh" ]]; then
-   echo $HOME
+# Fall back to the CSV2RDF4LOD_HOME if this DataFAQs is part of Prizms.
+prizms_home=${HOME%*/*/}
+if [[ ( -z "$CSV2RDF4LOD_HOME" || ! -e "$CSV2RDF4LOD_HOME/bin/cr-vars.sh" ) && `basename $prizms_home` == "prizms" ]]; then
+   #echo $HOME # /home/lebot/opt/prizms/repos/DataFAQs
+   echo "$HOME -> $prizms_home"
    exit
 fi
 
