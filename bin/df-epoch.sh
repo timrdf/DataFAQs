@@ -92,7 +92,7 @@ if [ "$1" == "--help" ]; then
    echo "                 e.g. `basename $0` --reuse-epoch datafaqs:latest"
    echo
    echo "environment variables required:"
-   echo "  DATAFAQS_BASE_URI e.g. http://sparql.tw.rpi.edu"
+   echo "  DATAFAQS_BASE_URI e.g. http://sparql.tw.rpi.edu (currently $DATAFAQS_BASE_URI)"
    exit
 fi
 
