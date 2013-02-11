@@ -14,6 +14,9 @@ fi
 HOME=$(cd ${0%/*} && echo ${PWD%/*})
 me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
 
+echo $HOME
+echo $me 
+
 DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/wiki/Installing-DataFAQs"}
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 
