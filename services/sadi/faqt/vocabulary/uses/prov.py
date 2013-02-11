@@ -155,6 +155,7 @@ class UsesPROV(faqt.Service):
 
    def process(self, input, output):
 
+      print >> sys.stderr, 'spam' 
       print 'processing ' + input.subject
 
       endpoint = False
