@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh> .
 # 
 # DataFAqTs core evaluation engine: 
 #   Retrieves dataset and FAqT evaluation service lists, 
@@ -17,7 +17,9 @@ me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
 echo $HOME
 echo $me 
 
-DATAFAQS_HOME=${DATAFAQS_HOME:-$HOME}
+if [[ -z "$DATAFAQS_HOME" || ! -e "$DATAFAQS_HOME"/bin/df-epoch.sh ]]; then
+   DATAFAQS_HOME=$HOME
+fi
 
 echo $DATAFAQS_HOME
 exit 1
