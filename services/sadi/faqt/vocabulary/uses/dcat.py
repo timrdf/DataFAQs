@@ -1,4 +1,5 @@
-#3> <> prov:specializationOf <#TEMPLATE/path/to/public/source-code.py>;
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/vocabulary/uses/dcat.py>;
+#3>    prov:wasDerivedFrom   <https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/vocabulary/uses/prov.py>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 
 import faqt
@@ -38,97 +39,40 @@ ns.register(sio='http://semanticscience.org/resource/')
 class UsesPROV(faqt.Service):
 
    # Service metadata.
-   label                  = 'prov'
+   label                  = 'dcat'
    serviceDescriptionText = 'Counts the occurrence of the PROV-O predicates and classes in a dcat:Dataset named graph.'
    comment                = ''
-   serviceNameText        = 'prov' # Convention: Match 'name' below.
-   name                   = 'prov' # This value determines the service URI relative to http://localhost:9090/
+   serviceNameText        = 'dcat' # Convention: Match 'name' below.
+   name                   = 'dcat' # This value determines the service URI relative to http://localhost:9090/
                                    # Convention: Use the name of this file for this value.
-   dev_port = 9236
+   dev_port = 9237
+
+   probes = 'http://www.w3.org/ns/dcat#'
 
    predicates = [
-      'http://www.w3.org/ns/prov#atTime',
-      'http://www.w3.org/ns/prov#endedAtTime',
-      'http://www.w3.org/ns/prov#generatedAtTime',
-      'http://www.w3.org/ns/prov#invalidatedAtTime',
-      'http://www.w3.org/ns/prov#startedAtTime',
-      'http://www.w3.org/ns/prov#value',
-      'http://www.w3.org/ns/prov#actedOnBehalfOf',
-      'http://www.w3.org/ns/prov#activity',
-      'http://www.w3.org/ns/prov#agent',
-      'http://www.w3.org/ns/prov#alternateOf',
-      'http://www.w3.org/ns/prov#atLocation',
-      'http://www.w3.org/ns/prov#entity',
-      'http://www.w3.org/ns/prov#generated',
-      'http://www.w3.org/ns/prov#hadActivity',
-      'http://www.w3.org/ns/prov#hadGeneration',
-      'http://www.w3.org/ns/prov#hadMember',
-      'http://www.w3.org/ns/prov#hadPlan',
-      'http://www.w3.org/ns/prov#hadPrimarySource',
-      'http://www.w3.org/ns/prov#hadRole',
-      'http://www.w3.org/ns/prov#hadUsage',
-      'http://www.w3.org/ns/prov#influenced',
-      'http://www.w3.org/ns/prov#influencer',
-      'http://www.w3.org/ns/prov#invalidated',
-      'http://www.w3.org/ns/prov#qualifiedAssociation',
-      'http://www.w3.org/ns/prov#qualifiedAttribution',
-      'http://www.w3.org/ns/prov#qualifiedCommunication',
-      'http://www.w3.org/ns/prov#qualifiedDelegation',
-      'http://www.w3.org/ns/prov#qualifiedDerivation',
-      'http://www.w3.org/ns/prov#qualifiedEnd',
-      'http://www.w3.org/ns/prov#qualifiedGeneration',
-      'http://www.w3.org/ns/prov#qualifiedInfluence',
-      'http://www.w3.org/ns/prov#qualifiedInvalidation',
-      'http://www.w3.org/ns/prov#qualifiedPrimarySource',
-      'http://www.w3.org/ns/prov#qualifiedQuotation',
-      'http://www.w3.org/ns/prov#qualifiedRevision',
-      'http://www.w3.org/ns/prov#qualifiedStart',
-      'http://www.w3.org/ns/prov#qualifiedUsage',
-      'http://www.w3.org/ns/prov#specializationOf',
-      'http://www.w3.org/ns/prov#used',
-      'http://www.w3.org/ns/prov#wasAssociatedWith',
-      'http://www.w3.org/ns/prov#wasAttributedTo',
-      'http://www.w3.org/ns/prov#wasDerivedFrom',
-      'http://www.w3.org/ns/prov#wasEndedBy',
-      'http://www.w3.org/ns/prov#wasGeneratedBy',
-      'http://www.w3.org/ns/prov#wasInfluencedBy',
-      'http://www.w3.org/ns/prov#wasInformedBy',
-      'http://www.w3.org/ns/prov#wasInvalidatedBy',
-      'http://www.w3.org/ns/prov#wasQuotedFrom',
-      'http://www.w3.org/ns/prov#wasRevisionOf',
-      'http://www.w3.org/ns/prov#wasStartedBy' ]
+      'http://www.w3.org/ns/dcat#accessURL',
+      'http://www.w3.org/ns/dcat#bytes',
+      'http://www.w3.org/ns/dcat#dataDictionary',
+      'http://www.w3.org/ns/dcat#dataQuality',
+      'http://www.w3.org/ns/dcat#dataset',
+      'http://www.w3.org/ns/dcat#distribution',
+      'http://www.w3.org/ns/dcat#granularity',
+      'http://www.w3.org/ns/dcat#keyword',
+      'http://www.w3.org/ns/dcat#record',
+      'http://www.w3.org/ns/dcat#size',
+      'http://www.w3.org/ns/dcat#theme',
+      'http://www.w3.org/ns/dcat#themeTaxonomy'
+   ]
 
    classes = [
-      'http://www.w3.org/ns/prov#Activity',
-      'http://www.w3.org/ns/prov#ActivityInfluence',
-      'http://www.w3.org/ns/prov#Agent',
-      'http://www.w3.org/ns/prov#AgentInfluence',
-      'http://www.w3.org/ns/prov#Association',
-      'http://www.w3.org/ns/prov#Attribution',
-      'http://www.w3.org/ns/prov#Bundle',
-      'http://www.w3.org/ns/prov#Collection',
-      'http://www.w3.org/ns/prov#Communication',
-      'http://www.w3.org/ns/prov#Delegation',
-      'http://www.w3.org/ns/prov#Derivation',
-      'http://www.w3.org/ns/prov#EmptyCollection',
-      'http://www.w3.org/ns/prov#End',
-      'http://www.w3.org/ns/prov#Entity',
-      'http://www.w3.org/ns/prov#EntityInfluence',
-      'http://www.w3.org/ns/prov#Generation',
-      'http://www.w3.org/ns/prov#Influence',
-      'http://www.w3.org/ns/prov#InstantaneousEvent',
-      'http://www.w3.org/ns/prov#Invalidation',
-      'http://www.w3.org/ns/prov#Location',
-      'http://www.w3.org/ns/prov#Organization',
-      'http://www.w3.org/ns/prov#Person',
-      'http://www.w3.org/ns/prov#Plan',
-      'http://www.w3.org/ns/prov#PrimarySource',
-      'http://www.w3.org/ns/prov#Quotation',
-      'http://www.w3.org/ns/prov#Revision',
-      'http://www.w3.org/ns/prov#Role',
-      'http://www.w3.org/ns/prov#SoftwareAgent',
-      'http://www.w3.org/ns/prov#Start',
-      'http://www.w3.org/ns/prov#Usage' ]
+      'http://www.w3.org/ns/dcat#Catalog',
+      'http://www.w3.org/ns/dcat#CatalogRecord',
+      'http://www.w3.org/ns/dcat#Dataset',
+      'http://www.w3.org/ns/dcat#Distribution',
+      'http://www.w3.org/ns/dcat#Download',
+      'http://www.w3.org/ns/dcat#Feed',
+      'http://www.w3.org/ns/dcat#WebService'
+   ]
 
    def __init__(self):
       # DATAFAQS_PROVENANCE_CODE_RAW_BASE                   +  servicePath  +  '/'  + self.serviceNameText
@@ -268,7 +212,7 @@ class UsesPROV(faqt.Service):
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
       else:
          Ontology = output.session.get_class(ns.OWL['Ontology'])
-         output.void_vocabulary.append(Ontology('http://www.w3.org/ns/prov#'))
+         output.void_vocabulary.append(Ontology(self.probes))
 
       output.save()
 
