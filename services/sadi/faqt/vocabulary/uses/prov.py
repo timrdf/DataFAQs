@@ -156,10 +156,6 @@ class UsesPROV(faqt.Service):
 
    def process(self, input, output):
 
-      output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
-      output.save()
-      return
-
       print 'processing ' + input.subject
 
       endpoint = False
