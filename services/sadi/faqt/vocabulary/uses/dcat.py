@@ -135,6 +135,7 @@ class UsesPROV(faqt.Service):
       if endpoint is False:
          print 'WARNING: could not find SPARQL endpoint to query; skipping ' + input.subject
          output.rdf_type.append(ns.DATAFAQS['Unsatisfactory'])
+         output.save()
          return
          
       ng='http://purl.org/twc/health/source/healthdata-tw-rpi-edu/dataset/cr-full-dump/version/latest'
