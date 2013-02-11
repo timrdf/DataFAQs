@@ -22,6 +22,7 @@ import urllib
 import urllib2
 
 import xml.dom
+import sys
 
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
