@@ -17,7 +17,11 @@ me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
 echo $HOME
 echo $me 
 
-DATAFAQS_HOME=${DATAFAQS_HOME:?"not set; see https://github.com/timrdf/DataFAQs/wiki/Installing-DataFAQs"}
+DATAFAQS_HOME=${DATAFAQS_HOME:-$HOME}
+
+echo $DATAFAQS_HOME
+exit 1
+
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 
 CSV2RDF4LOD_HOME=${CSV2RDF4LOD_HOME:?"not set; see https://github.com/timrdf/csv2rdf4lod-automation/wiki/CSV2RDF4LOD-not-set"}
