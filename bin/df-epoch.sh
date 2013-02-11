@@ -8,21 +8,17 @@
 #   Stores the results in a datacube-like directory structure.
 
 if [ -e datafaqs-source-me.sh ]; then
-   source datafaqs-source-me.sh
+   source datafaqs-source-me.sh # This could set DATAFAQS_HOME...
 fi
 
 HOME=$(cd ${0%/*} && echo ${PWD%/*})
 me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
 
-echo $HOME
-echo $me 
-
+# Permit the environment variable to point to a DATAFAQS_HOME that is different from this script's,
+# unless it just doens't work. Then default to this script's home.
 if [[ -z "$DATAFAQS_HOME" || ! -e "$DATAFAQS_HOME"/bin/df-epoch.sh ]]; then
    DATAFAQS_HOME=$HOME
 fi
-
-echo $DATAFAQS_HOME
-exit 1
 
 export PATH=$PATH`$DATAFAQS_HOME/bin/df-situate-paths.sh`
 
