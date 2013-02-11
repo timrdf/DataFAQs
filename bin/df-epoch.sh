@@ -93,9 +93,7 @@ if [ "$1" == "--help" ]; then
    echo
    echo "environment variables required:"
    echo "  DATAFAQS_BASE_URI e.g. http://sparql.tw.rpi.edu"
-   echo $HOME
-   echo $me
-   exit 0
+   exit
 fi
 
 function noprotocolnohash {
