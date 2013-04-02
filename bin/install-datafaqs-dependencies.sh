@@ -48,6 +48,7 @@ fi
 function offer_install_with_apt {
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
    # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
+   # See also Prizms bin/install.sh
 
    command="$1"
    package="$2"
@@ -85,6 +86,7 @@ offer_install_with_apt 'curl'         'curl'
 offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
+# TODO: sudo apt-get install python-twisted
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
 V=`python --version 2>&1 | sed 's/Python \(.\..\).*$/\1/'`
