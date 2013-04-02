@@ -1,13 +1,37 @@
 #!/bin/bash
 #
-# <> prov:specializationOf <https://github.com/timrdf/DataFAQs/tree/master/bin/df-mirror-endpoint.sh> .
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/tree/master/bin/df-mirror-endpoint.sh> .
 #
+# Usage:
+#
+#    df-mirror-endpoint.sh http://ieeevis.tw.rpi.edu/sparql
+#       ^
+#       Retrieves all named graphs' dump files.
+#
+#    df-mirror-endpoint.sh http://ieeevis.tw.rpi.edu/sparql --graph http://ieeevis.tw.rpi.edu/lam-2012-evaluations-2-categories
+#       ^
+#       Retrieves all named graphs' dump files
+#
+#    df-mirror-endpoint.sh --graph http://ieeevis.tw.rpi.edu/lam-2012-evaluations-2-categories http://ieeevis.tw.rpi.edu/sparql
+#       ^
+#       Retrieves the dump file for graph named http://ieeevis.tw.rpi.edu/lam-2012-evaluations-2-categories 
+#                            in SPARQL endpoint http://ieeevis.tw.rpi.edu/sparql
+#
+#    df-mirror-endpoint.sh --graph http://ieeevis.tw.rpi.edu/lam-2012-evaluations-2-categories http://ieeevis.tw.rpi.edu/sparql http://logd.tw.rpi.edu/sparql
+#       ^
+#       Retrieves the dump file for graph named http://ieeevis.tw.rpi.edu/lam-2012-evaluations-2-categories 
+#                           in SPARQL endpoints http://ieeevis.tw.rpi.edu/sparql 
+#                                           AND http://logd.tw.rpi.edu/sparql
 
 HOME=$(cd ${0%/*} && echo ${PWD%/*})
 me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
 
-if [[ $# -lt 0 || "$1" == "--help" ]]; then
-   echo "usage: `basename $0` <endpoint>+"
+if [[ $# -le 0 || "$1" == "--help" ]]; then
+   echo
+   echo "usage: `basename $0` [--graph <graph-name>] <endpoint>+"
+   echo
+   echo "  --graph <graph-name> : The GRAPH {} name to retrieve."
+   echo
    exit 1
 fi
 
@@ -35,12 +59,27 @@ function noprotocolnohash {
    echo $url
 }
 
-for endpoint in $*; do
+while [[ $# -gt 0 ]]; do
+   if [[ "$1" == "--graph" ]]; then
+      focus="$2"
+      shift 2
+   fi
+   if [[ $# -eq 0 ]]; then
+      $0 --help
+      echo
+      echo "No endpoint given."
+      exit 1
+   fi
+   endpoint="$1"
+   shift
    endpoint_path=`noprotocolnohash $endpoint`
    echo $endpoint_path
    mkdir -p $endpoint_path/__PIVOT__
-   df-named-graphs.py $endpoint > $endpoint_path/sdnames.csv
-   for sdname in `cat $endpoint_path/sdnames.csv`; do
+   if [[ -z "$focus" ]]; then
+      # Determine all graph names in the endpoint.
+      df-named-graphs.py $endpoint > $endpoint_path/sdnames.csv
+   fi
+   for sdname in ${focus:-`cat $endpoint_path/sdnames.csv`}; do
       pushd $endpoint_path/__PIVOT__ &> /dev/null
          sdname_path=`noprotocolnohash $sdname`
          echo "  $endpoint_path/__PIVOT__/$sdname_path"
