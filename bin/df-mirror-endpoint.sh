@@ -49,7 +49,7 @@ for endpoint in $*; do
             echo $sdname > sdname.csv
             cat $me.rq | perl -pi -e "s|SDNAME|$sdname|" > sdname.rq
             if [ ! -e sdname/sdname.rq.xml ]; then
-               cache-queries.sh $endpoint -o xml -q sdname.rq -od sdname
+               cache-queries.sh $endpoint -o xml -q sdname.rq -od sdname # Find out the RDF filed loaded.
             fi
             if [ ! -e inputs.csv ]; then
                saxon.sh $HOME/bin/get-binding.xsl a a -v name=input -in sdname/sdname.rq.xml > inputs.csv
@@ -59,7 +59,7 @@ for endpoint in $*; do
                if [ ! -e input_$hash ]; then
                   pcurl.sh $input -n input_$hash
                   retrieved=`rename-by-syntax.sh -v input_$hash`
-                  echo "<$retrieved> prov:alternateOf <input_$hash> ." >> input_$hash.pml.ttl
+                  echo "<$retrieved> prov:alternateOf <input_$hash> ." >> input_$hash.prov.ttl
                   echo $sdname > $retrieved.sd_name
                   touch input_$hash
                fi
