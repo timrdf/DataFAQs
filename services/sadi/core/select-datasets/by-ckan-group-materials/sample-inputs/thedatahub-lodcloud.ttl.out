@@ -4,7 +4,6 @@
 
 <http://ckan.net/group/lodcloud> a datafaqs:DatasetCollection;
     dcterms:hasPart <http://thedatahub.org/dataset/2000-us-census-rdf>,
-        <http://thedatahub.org/dataset/a-seobook-dataset>,
         <http://thedatahub.org/dataset/aemet>,
         <http://thedatahub.org/dataset/agrovoc-skos>,
         <http://thedatahub.org/dataset/amsterdam-museum-as-edm-lod>,
@@ -15,6 +14,7 @@
         <http://thedatahub.org/dataset/bbc-programmes>,
         <http://thedatahub.org/dataset/bbc-wildlife-finder>,
         <http://thedatahub.org/dataset/beneficiaries-of-the-european-commission>,
+        <http://thedatahub.org/dataset/bfs-linked-data>,
         <http://thedatahub.org/dataset/bibbase>,
         <http://thedatahub.org/dataset/bible-ontology>,
         <http://thedatahub.org/dataset/bio2rdf-affymetrix>,
@@ -79,6 +79,7 @@
         <http://thedatahub.org/dataset/dbpedia-lite>,
         <http://thedatahub.org/dataset/dbpedia-pt>,
         <http://thedatahub.org/dataset/dbtropes>,
+        <http://thedatahub.org/dataset/dbtune-artists-last-fm>,
         <http://thedatahub.org/dataset/dbtune-audioscrobbler>,
         <http://thedatahub.org/dataset/dbtune-classical>,
         <http://thedatahub.org/dataset/dbtune-john-peel-sessions>,
@@ -113,6 +114,7 @@
         <http://thedatahub.org/dataset/event-media>,
         <http://thedatahub.org/dataset/fanhubz>,
         <http://thedatahub.org/dataset/fao-geopolitical-ontology>,
+        <http://thedatahub.org/dataset/fao-linked-data>,
         <http://thedatahub.org/dataset/farmbio-chembl>,
         <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>,
         <http://thedatahub.org/dataset/finnish-municipalities>,
@@ -199,17 +201,19 @@
         <http://thedatahub.org/dataset/oceandrilling-codices>,
         <http://thedatahub.org/dataset/oceandrilling-janusamp>,
         <http://thedatahub.org/dataset/oclc-fast>,
+        <http://thedatahub.org/dataset/oecd-linked-data>,
         <http://thedatahub.org/dataset/ogolod>,
         <http://thedatahub.org/dataset/ontos-news-portal>,
         <http://thedatahub.org/dataset/open-data-thesaurus>,
         <http://thedatahub.org/dataset/open-election-data-project>,
         <http://thedatahub.org/dataset/open-energy-info-wiki>,
+        <http://thedatahub.org/dataset/open-library>,
         <http://thedatahub.org/dataset/opencalais>,
         <http://thedatahub.org/dataset/opencorporates>,
         <http://thedatahub.org/dataset/opencyc>,
-        <http://thedatahub.org/dataset/openlibrary>,
         <http://thedatahub.org/dataset/openlylocal>,
         <http://thedatahub.org/dataset/ordnance-survey-linked-data>,
+        <http://thedatahub.org/dataset/osm-semantic-network>,
         <http://thedatahub.org/dataset/oxpoints>,
         <http://thedatahub.org/dataset/patents-data-gov-uk>,
         <http://thedatahub.org/dataset/pleiades>,
@@ -341,9 +345,6 @@
 <http://thedatahub.org/dataset/2000-us-census-rdf> a datafaqs:CKANDataset,
         dcat:Dataset .
 
-<http://thedatahub.org/dataset/a-seobook-dataset> a datafaqs:CKANDataset,
-        dcat:Dataset .
-
 <http://thedatahub.org/dataset/aemet> a datafaqs:CKANDataset,
         dcat:Dataset .
 
@@ -372,6 +373,9 @@
         dcat:Dataset .
 
 <http://thedatahub.org/dataset/beneficiaries-of-the-european-commission> a datafaqs:CKANDataset,
+        dcat:Dataset .
+
+<http://thedatahub.org/dataset/bfs-linked-data> a datafaqs:CKANDataset,
         dcat:Dataset .
 
 <http://thedatahub.org/dataset/bibbase> a datafaqs:CKANDataset,
@@ -566,6 +570,9 @@
 <http://thedatahub.org/dataset/dbtropes> a datafaqs:CKANDataset,
         dcat:Dataset .
 
+<http://thedatahub.org/dataset/dbtune-artists-last-fm> a datafaqs:CKANDataset,
+        dcat:Dataset .
+
 <http://thedatahub.org/dataset/dbtune-audioscrobbler> a datafaqs:CKANDataset,
         dcat:Dataset .
 
@@ -666,6 +673,9 @@
         dcat:Dataset .
 
 <http://thedatahub.org/dataset/fao-geopolitical-ontology> a datafaqs:CKANDataset,
+        dcat:Dataset .
+
+<http://thedatahub.org/dataset/fao-linked-data> a datafaqs:CKANDataset,
         dcat:Dataset .
 
 <http://thedatahub.org/dataset/farmbio-chembl> a datafaqs:CKANDataset,
@@ -926,6 +936,9 @@
 <http://thedatahub.org/dataset/oclc-fast> a datafaqs:CKANDataset,
         dcat:Dataset .
 
+<http://thedatahub.org/dataset/oecd-linked-data> a datafaqs:CKANDataset,
+        dcat:Dataset .
+
 <http://thedatahub.org/dataset/ogolod> a datafaqs:CKANDataset,
         dcat:Dataset .
 
@@ -941,6 +954,9 @@
 <http://thedatahub.org/dataset/open-energy-info-wiki> a datafaqs:CKANDataset,
         dcat:Dataset .
 
+<http://thedatahub.org/dataset/open-library> a datafaqs:CKANDataset,
+        dcat:Dataset .
+
 <http://thedatahub.org/dataset/opencalais> a datafaqs:CKANDataset,
         dcat:Dataset .
 
@@ -950,13 +966,13 @@
 <http://thedatahub.org/dataset/opencyc> a datafaqs:CKANDataset,
         dcat:Dataset .
 
-<http://thedatahub.org/dataset/openlibrary> a datafaqs:CKANDataset,
-        dcat:Dataset .
-
 <http://thedatahub.org/dataset/openlylocal> a datafaqs:CKANDataset,
         dcat:Dataset .
 
 <http://thedatahub.org/dataset/ordnance-survey-linked-data> a datafaqs:CKANDataset,
+        dcat:Dataset .
+
+<http://thedatahub.org/dataset/osm-semantic-network> a datafaqs:CKANDataset,
         dcat:Dataset .
 
 <http://thedatahub.org/dataset/oxpoints> a datafaqs:CKANDataset,
