@@ -255,17 +255,17 @@ SPARQL endpoints for this data are made available by third parties. [Geonames at
         <http://thedatahub.org/dataset/yago>;
     void:triples 30354 .
 
-<http://datahub.io/group/linguistics> a datafaqs:Group;
+<http://datahub.io/group/linguistics> a datafaqs:CKANGroup;
     rdfs:label "linguistics";
     dcterms:identifier "linguistics";
     foaf:name "linguistics" .
 
-<http://datahub.io/group/lld> a datafaqs:Group;
+<http://datahub.io/group/lld> a datafaqs:CKANGroup;
     rdfs:label "lld";
     dcterms:identifier "lld";
     foaf:name "lld" .
 
-<http://datahub.io/group/wikimedia> a datafaqs:Group;
+<http://datahub.io/group/wikimedia> a datafaqs:CKANGroup;
     rdfs:label "wikimedia";
     dcterms:identifier "wikimedia";
     foaf:name "wikimedia" .
@@ -273,7 +273,7 @@ SPARQL endpoints for this data are made available by third parties. [Geonames at
 <http://data.linkedmdb.org/sparql> a owl:Thing;
     dcterms:title "SPARQL endpoint" .
 
-<http://datahub.io/group/open-data-day> a datafaqs:Group;
+<http://datahub.io/group/open-data-day> a datafaqs:CKANGroup;
     rdfs:label "open-data-day";
     dcterms:identifier "open-data-day";
     foaf:name "open-data-day" .
@@ -281,7 +281,7 @@ SPARQL endpoints for this data are made available by third parties. [Geonames at
 <http://dbpedia.org/sparql> a owl:Thing;
     dcterms:title "SPARQL endpoint" .
 
-<http://datahub.io/group/lod> a datafaqs:Group;
+<http://datahub.io/group/lod> a datafaqs:CKANGroup;
     rdfs:label "lod";
     dcterms:identifier "lod";
     foaf:name "lod" .
@@ -327,7 +327,7 @@ Freebase has [an RDF service](http://rdf.freebase.com/) that exposes URIs and ge
     void:triples 337203427;
     void:uriSpace "http://rdf.freebase.com/" .
 
-<http://datahub.io/group/lodcloud> a datafaqs:Group;
+<http://datahub.io/group/lodcloud> a datafaqs:CKANGroup;
     rdfs:label "lodcloud";
     dcterms:identifier "lodcloud";
     foaf:name "lodcloud" .
