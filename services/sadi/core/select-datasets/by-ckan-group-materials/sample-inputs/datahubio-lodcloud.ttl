@@ -1,0 +1,1 @@
+<http://datahub.io/group/lodcloud> a <http://purl.org/twc/vocab/datafaqs#CKANGroup> .
