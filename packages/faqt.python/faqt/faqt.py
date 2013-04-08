@@ -8,7 +8,8 @@ from rdflib import *
 import surf
 
 from surf import *
-from surf.query import select
+from surf.query   import select
+from surf.session import *
 
 import rdflib
 from rdflib.namespace import XSD
@@ -61,7 +62,7 @@ class Service(sadi.Service):
       self.startedLifeAt  = datetime.datetime.utcnow()
 
       self.baseURI        = os.environ['DATAFAQS_BASE_URI']                  if 'DATAFAQS_BASE_URI'                  in os.environ \
-                                                                             else None
+                                                                             else 'http://aquarius.tw.rpi.edu/projects'
       self.CODE_RAW_BASE  = os.environ['DATAFAQS_PROVENANCE_CODE_RAW_BASE']  if 'DATAFAQS_PROVENANCE_CODE_RAW_BASE'  in os.environ \
                                                                              else 'https://raw.github.com/timrdf/DataFAQs/master'
       self.CODE_PAGE_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_PAGE_BASE'] if 'DATAFAQS_PROVENANCE_CODE_PAGE_BASE' in os.environ \
@@ -149,9 +150,13 @@ class Service(sadi.Service):
    # SuRF's .subject only works if the instance is typed.
    # This is a hack workaround to handle typed and untyped instances.
    def surfSubject(self,instance):
+
+      #if isinstance(instance, OwlThing):
+      #   return instance.subject
+
       uri = str(instance)
       try:
-         uri = instance.subject
+         uri = str(instance.subject)
       except:
          cow = 'boy'
       return uri

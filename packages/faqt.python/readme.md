@@ -18,12 +18,11 @@ sudo easy_install dist/faqt-0.0.1-py2.7.egg
 
 ## Register 
 
-(Note: only needed to be done once)
+(Note: only needed to do this once)
 
-Ran:
+Ran the following from this directory to register at http://pypi.python.org/pypi/faqt
 
 ```
 python setup.py register
 ```
 
-from this directory to register at http://pypi.python.org/pypi/faqt
