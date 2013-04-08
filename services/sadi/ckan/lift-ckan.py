@@ -25,6 +25,8 @@ import os
 import hashlib
 import re
 
+import time
+
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
@@ -36,6 +38,10 @@ ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(conversion='http://purl.org/twc/vocab/conversion/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 ns.register(prov='http://www.w3.org/ns/prov#')
+ns.register(tag='http://www.holygoat.co.uk/owl/redwood/0.1/tags/')
+ns.register(prov='http://www.w3.org/ns/prov#')
+ns.register(dcterms='http://purl.org/dc/terms/')
+ns.register(foaf='http://xmlns.com/foaf/0.1/')
 
 # The Service itself
 class LiftCKAN(faqt.CKANReader):
@@ -80,6 +86,7 @@ class LiftCKAN(faqt.CKANReader):
 
    def process(self, input, output):
 
+      #time.sleep(10)
       print 'processing ' + input.subject
 
       ckan    = self.getCKANAPI(input)
@@ -136,6 +143,18 @@ class LiftCKAN(faqt.CKANReader):
                print 'TODO: handle resource: ' + resource['format']
 
          #
+         #
+         #
+         if 'revision_id' in dataset:
+            revisionR = Thing('http://datahub.io/revision/'+dataset['revision_id'])
+            revisionR.foaf_isPrimaryTopicOf = output
+            if 'metadata_created' in dataset:
+               revisionR.dcterms_created = dataset['metadata_created']
+            if 'metadata_modified' in dataset:
+               revisionR.dcterms_modified = dataset['metadata_modified']
+            revisionR.save()
+
+         #
          # Process Groups
          #
          Group = output.session.get_class(ns.DATAFAQS['CKANGroup'])
@@ -150,6 +169,19 @@ class LiftCKAN(faqt.CKANReader):
             output.dcterms_isPartOf.append(groupR)
 
          #
+         # Process Tags
+         #
+         Tag = output.session.get_class(ns.TAG['Tag'])
+         for tag in dataset['tags']:
+            print 'tag: ' + tag
+            tagR = Tag('http://datahub.io/tag/' + re.sub(' ','-',tag)) 
+            tagR.rdf_type.append(ns.TAG['Tag'])
+            tagR.rdfs_label = tag
+            tagR.tag_name   = tag
+            tagR.save()
+            output.tag_taggedWithTag.append(tagR)
+
+         #
          # Process Extras
          #
          DCATDataset  = output.session.get_class(ns.DCAT['Dataset'])
@@ -162,8 +194,8 @@ class LiftCKAN(faqt.CKANReader):
             if extra == u'triples':
                try:
                   print str(dataset['extras'][extra])
-                  triples = int(re.sub('\D','',str(dataset['extras'][extra])))
-                  print '     -> ' + str(triples)
+                  triples = long(re.sub('\D','',str(dataset['extras'][extra])))
+                  print '     --> ' + str(triples)
                   #
                   # <dataset> void:triples 1000 .
                   #
@@ -171,6 +203,7 @@ class LiftCKAN(faqt.CKANReader):
                except ValueError:
                   # e.g. invalid literal for int() with base 10: '' from rdf-book-mashup
                   print 
+                  print 'error on triples'
             elif extra == u'shortname':
                #
                # <dataset> ov:shortName "DBPedia" .
@@ -182,12 +215,16 @@ class LiftCKAN(faqt.CKANReader):
                #
                for target in links_regex.findall(str(extra)):
                   target = target.replace(' ','-')
+                  targetR = CKANDataset('http://datahub.io/dataset/'+target)
+                  targetR.rdf_type.append(ns.DATAFAQS['CKANDataset'])
+                  targetR.save()
                   print 'found link to ' + target
                   print '           from ' + output.subject
                   print '                revision_id ' + dataset['revision_id']
                   linkset = Linkset('#linkset-'+target+'-'+hashlib.sha224(output.subject+target+dataset['revision_id']).hexdigest())
                   linkset.void_target.append(output)
-                  linkset.void_target.append(CKANDataset('http://thedatahub.org/dataset/'+target))
+                  #linkset.void_target.append(CKANDataset('http://datahub.io/dataset/'+target))
+                  linkset.void_target.append(targetR)
                   try:
                      linkset.void_triples = int(dataset['extras'][extra])
                   except ValueError:
@@ -210,7 +247,7 @@ class LiftCKAN(faqt.CKANReader):
                # <dataset> dcat:distribution [
                #    a sd:NamedGraph;
                #    sd:name  <http://purl.org/twc/arrayexpress/E-MTAB-104>;
-               #    sd:graph <http://thedatahub.org/en/dataset/arrayexpress-e-afmx-1>;
+               #    sd:graph <http://datahub.io/en/dataset/arrayexpress-e-afmx-1>;
                #    prov:atLocation <sparqlEndpoint>
                # ];
                #
