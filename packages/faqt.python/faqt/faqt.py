@@ -62,7 +62,7 @@ class Service(sadi.Service):
       self.startedLifeAt  = datetime.datetime.utcnow()
 
       self.baseURI        = os.environ['DATAFAQS_BASE_URI']                  if 'DATAFAQS_BASE_URI'                  in os.environ \
-                                                                             else 'http://aquarius.tw.rpi.edu/projects'
+                                                                             else None #'http://aquarius.tw.rpi.edu/projects'
       self.CODE_RAW_BASE  = os.environ['DATAFAQS_PROVENANCE_CODE_RAW_BASE']  if 'DATAFAQS_PROVENANCE_CODE_RAW_BASE'  in os.environ \
                                                                              else 'https://raw.github.com/timrdf/DataFAQs/master'
       self.CODE_PAGE_BASE = os.environ['DATAFAQS_PROVENANCE_CODE_PAGE_BASE'] if 'DATAFAQS_PROVENANCE_CODE_PAGE_BASE' in os.environ \
