@@ -106,8 +106,12 @@ for egg in $eggs; do
       if [ "$dryrun" != "true" ]; then
          read -p "Try to install python module $egg using the command above? (y/n) " -u 1 install_it
          if [[ "$install_it" == [yY] ]]; then
+            if [[ "$egg" != "pyparsing" ]]; then
                  $sudo easy_install -U $egg
                 # SUDO IS NOT REQUIRED HERE.
+            elif [[ "$egg" == "pyparsing" ]]; then
+                 $sudo easy_install "pyparsing==1.5.7"
+            fi
             # see https://github.com/timrdf/csv2rdf4lod-automation/wiki/Installing-csv2rdf4lod-automation---complete
             pdiv=""
          fi
