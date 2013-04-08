@@ -131,20 +131,20 @@ class SDNamedGraphs(faqt.Service):
       query = '''PREFIX sd: <http://www.w3.org/ns/sparql-service-description#> CONSTRUCT { ?endpoints_named_graph ?p ?o } WHERE { GRAPH <'''+named_graph+'''> { [] sd:url <'''+endpoint+'''>; sd:defaultDatasetDescription [ sd:namedGraph ?endpoints_named_graph ] . ?endpoints_named_graph sd:name <'''+named_graph+'''>; ?p ?o . } }'''
       return endpoint + '?' + urllib.urlencode({'query': query})
 
-   def annotateServiceDescription(self, desc):
+   #TL0413def annotateServiceDescription(self, desc):
 
-      desc.rdfs_comment.append('https://github.com/timrdf/DataFAQs/wiki')
+   #TL0413   desc.rdfs_comment.append('https://github.com/timrdf/DataFAQs/wiki')
 
-      Thing = desc.session.get_class(ns.OWL['Thing'])
+   #TL0413   Thing = desc.session.get_class(ns.OWL['Thing'])
 
-      wiki = Thing('https://github.com/timrdf/DataFAQs/wiki')
-      desc.rdfs_seeAlso.append(wiki)
+   #TL0413   wiki = Thing('https://github.com/timrdf/DataFAQs/wiki')
+   #TL0413   desc.rdfs_seeAlso.append(wiki)
 
       #code = Thing('https://github.com/timrdf/DataFAQs/blob/master/services/sadi/faqt/sparql-service-description/named-graphs.rpy')
       #desc.rdfs_seeAlso.append(code)
-      wiki.save()
+   #TL0413   wiki.save()
       #code.save()
-      desc.save()
+   #TL0413   desc.save()
 
       # Desired description:
       #
