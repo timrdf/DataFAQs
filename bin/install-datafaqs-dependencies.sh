@@ -131,7 +131,7 @@ if [ "$dryrun" == "true" ]; then
    echo $HOME >&2
    echo $me >&2
    ls /var/lib/tomcat6/webapps/ >&2
-   du -sh $HOME/services/sadi/sadi-services.war
+   du -sh $HOME/services/sadi/sadi-services.war >&2
 fi
 
 
