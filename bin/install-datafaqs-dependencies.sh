@@ -81,6 +81,7 @@ function offer_install_aptget {
    installed=0
    packages="$1"
    reason="$2"
+   echo $packages
    for package in $packages; do
       echo "The package $package is required to"
       echo "$reason."
