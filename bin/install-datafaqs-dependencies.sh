@@ -38,7 +38,7 @@ elif [ "$1" == "--use-sudo" ]; then
    sudo="sudo "
    shift
 elif [ "$dryrun" != "true" ]; then
-   read -p "Install as sudo? (if 'N', will install as `whoami`) [y/N] " -u 1 use_sudo
+   read -p "Try to install things as sudo? (if 'N', will try to install as `whoami`) [y/N] " -u 1 use_sudo
    if [[ "$use_sudo" == [yY] ]]; then
       sudo="sudo "
    fi
@@ -87,7 +87,7 @@ offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 # TODO: sudo apt-get install python-twisted
-if [[ ! `grep "^tomcat:" /etc/passwd` ]]; then
+if [[ ! `grep "^tomcat6:" /etc/passwd` ]]; then
    offer_install_with_apt 'tomcat' 'tomcat6'
 fi
 
