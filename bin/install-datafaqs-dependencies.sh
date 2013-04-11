@@ -89,15 +89,16 @@ function offer_install_aptget {
       if [[ -z "$already_there" ]]; then 
          echo "The $package package needs to be installed, which can be done with the following command:"
          echo 
-         echo "sudo apt-get install $package"
+         echo "$TODO $sudo apt-get install $package"
          echo 
-         #read -p "Q: May we install the package above using the command above? [y/n] " -u 1 install_it
-         #read -p "Q: May we install the package above using the command above? [y/n] " -u 1 install_it
-         #if [[ "$install_it" == [yY] ]]; then 
-            echo sudo apt-get install $package
-         #        sudo apt-get install $package
-            installed=1
-         #fi   
+         if [ "$dryrun" != "true" ]; then
+            read -p "Q: May we install the package above using the command above? [y/n] " -u 1 install_it
+            if [[ "$install_it" == [yY] ]]; then 
+               echo $sudo apt-get install $package
+                    $sudo apt-get install $package
+               installed=1
+            fi   
+         fi
       else 
          echo "($package is already installed)"
       fi   
