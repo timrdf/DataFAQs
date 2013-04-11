@@ -45,7 +45,7 @@ elif [ "$dryrun" != "true" ]; then
    echo
 fi
 
-function offer_install_with_apt {
+function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function from prizms installer (below).
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
    # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
    # See also Prizms bin/install.sh
@@ -77,6 +77,33 @@ function offer_install_with_apt {
    return $?
 }
 
+function offer_install_aptget {
+   installed=0
+   packages="$1"
+   reason="$2"
+   for package in $packages; do
+      echo "The package $package is required to"
+      echo "$reason."
+      already_there=`dpkg -l | grep $package` # See what is available: apt-cache search libapache2-mod
+      if [[ -z "$already_there" ]]; then 
+         echo "The $package package needs to be installed, which can be done with the following command:"
+         echo 
+         echo "sudo apt-get install $package"
+         echo 
+         read -p "Q: May we install the package above using the command above? [y/n] " -u 1 install_it
+         if [[ "$install_it" == [yY] ]]; then 
+            echo sudo apt-get install $package
+                 sudo apt-get install $package
+            installed=1
+         fi   
+      else 
+         echo "($package is already installed)"
+      fi   
+      echo 
+   done 
+   return $installed
+}
+
 if [ "$dryrun" != "true" ]; then
    $sudo apt-get update &> /dev/null
 fi
@@ -86,10 +113,8 @@ offer_install_with_apt 'curl'         'curl'
 offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
+offer_install_aptget   'tomcat6' "deploy FAqT (SADI) Services implemented in Java"
 # TODO: sudo apt-get install python-twisted
-if [[ ! `grep "^tomcat6:" /etc/passwd` ]]; then
-   offer_install_with_apt 'tomcat' 'tomcat6'
-fi
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
 V=`python --version 2>&1 | sed 's/Python \(.\..\).*$/\1/'`
