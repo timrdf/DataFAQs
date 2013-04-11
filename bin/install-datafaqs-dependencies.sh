@@ -127,13 +127,19 @@ offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "de
 #
 # (from your local machine) ssh -L 9090:localhost:8080 -p 2216 -l smithj aquarius.tw.rpi.edu
 #                           load http://localhost:9090
-if [ "$dryrun" == "true" ]; then
-   echo $HOME >&2
-   echo $me >&2
-   ls /var/lib/tomcat6/webapps/ >&2
-   du -sh $HOME/services/sadi/sadi-services.war >&2
+if [[ -e /var/lib/tomcat6/webapps/             && \
+      -e $HOME/services/sadi/sadi-services.war && \
+    ! -e /var/lib/tomcat6/webapps/sadi-services.war ]]; then
+   echo $TODO ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+   if [ "$dryrun" != "true" ]; then
+      read -p "Q: May we install the Java SADI services using the command above? [y/n] " -u 1 install_it
+      if [[ "$install_it" == [yY] ]]; then 
+         echo $sudo apt-get install $package
+              $sudo apt-get install $package
+         installed=1
+      fi   
+   fi
 fi
-
 
 
 # TODO: sudo apt-get install python-twisted
