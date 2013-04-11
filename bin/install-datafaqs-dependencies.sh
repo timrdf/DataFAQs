@@ -77,32 +77,32 @@ function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function fr
    return $?
 }
 
-function offer_install_aptget {
-   installed=0
-   packages="$1"
-   reason="$2"
-   for package in $packages; do
-      echo "The package $package is required to"
-      echo "$reason."
-      already_there=`dpkg -l | grep $package` # See what is available: apt-cache search libapache2-mod
-      if [[ -z "$already_there" ]]; then 
-         echo "The $package package needs to be installed, which can be done with the following command:"
-         echo 
-         echo "sudo apt-get install $package"
-         echo 
-         read -p "Q: May we install the package above using the command above? [y/n] " -u 1 install_it
-         if [[ "$install_it" == [yY] ]]; then 
-            echo sudo apt-get install $package
-                 sudo apt-get install $package
-            installed=1
-         fi   
-      else 
-         echo "($package is already installed)"
-      fi   
-      echo 
-   done 
-   return $installed
-}
+#function offer_install_aptget {
+#   installed=0
+#   packages="$1"
+#   reason="$2"
+#   for package in $packages; do
+#      echo "The package $package is required to"
+#      echo "$reason."
+#      already_there=`dpkg -l | grep $package` # See what is available: apt-cache search libapache2-mod
+#      if [[ -z "$already_there" ]]; then 
+#         echo "The $package package needs to be installed, which can be done with the following command:"
+#         echo 
+#         echo "sudo apt-get install $package"
+#         echo 
+#         read -p "Q: May we install the package above using the command above? [y/n] " -u 1 install_it
+#         if [[ "$install_it" == [yY] ]]; then 
+#            echo sudo apt-get install $package
+#                 sudo apt-get install $package
+#            installed=1
+#         fi   
+#      else 
+#         echo "($package is already installed)"
+#      fi   
+#      echo 
+#   done 
+#   return $installed
+#}
 
 if [ "$dryrun" != "true" ]; then
    $sudo apt-get update &> /dev/null
