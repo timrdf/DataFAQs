@@ -134,9 +134,8 @@ if [[ -e /var/lib/tomcat6/webapps/             && \
    if [ "$dryrun" != "true" ]; then
       read -p "Q: May we install the Java SADI services using the command above? [y/n] " -u 1 install_it
       if [[ "$install_it" == [yY] ]]; then 
-         echo $sudo apt-get install $package
-              $sudo apt-get install $package
-         installed=1
+         echo $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+              $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
       fi   
    fi
 fi
