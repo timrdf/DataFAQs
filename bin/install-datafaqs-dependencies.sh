@@ -113,7 +113,12 @@ offer_install_with_apt 'curl'         'curl'
 offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
-offer_install_aptget   'tomcat6' "deploy FAqT (SADI) Services implemented in Java"
+offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
+# (on your VM)              /etc/init.d/tomcat6 start
+# (from your local machine) ssh -L 9090:localhost:8080 -p 2216 -l smithj aquarius.tw.rpi.edu
+#                           load http://localhost:9090
+
+
 # TODO: sudo apt-get install python-twisted
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
