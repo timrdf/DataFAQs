@@ -128,10 +128,9 @@ offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "de
 # (from your local machine) ssh -L 9090:localhost:8080 -p 2216 -l smithj aquarius.tw.rpi.edu
 #                           load http://localhost:9090
 if [ "$dryrun" == "true" ]; then
-   echo $TODO
-   echo $HOME
-   echo $me
-   ls /var/lib/tomcat6/webapps/
+   echo $HOME >&2
+   echo $me >&2
+   ls /var/lib/tomcat6/webapps/ >&2
 fi
 
 
