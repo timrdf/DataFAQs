@@ -87,6 +87,9 @@ offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 # TODO: sudo apt-get install python-twisted
+if [[ ! `grep "^tomcat:" /etc/passwd` ]]; then
+   offer_install_with_apt 'tomcat' 'tomcat6'
+fi
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
 V=`python --version 2>&1 | sed 's/Python \(.\..\).*$/\1/'`
