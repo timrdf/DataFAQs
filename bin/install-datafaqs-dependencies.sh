@@ -117,6 +117,9 @@ offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
 offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
+# Thanks to http://www.ubuntugeek.com/how-to-install-tomcat-6-on-ubuntu-9-04-jaunty.html
+#
+#                           TODO: check and create user if not there.
 # (on your VM)              /etc/tomcat6/tomcat-users.xml:
 #                           <role rolename="manager"/>
 #                           <user username="whoami" password="mypw" roles="manager"/>
