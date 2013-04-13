@@ -1,0 +1,26 @@
+@base <http://aquarius.tw.rpi.edu/projects/datafaqstest/sadi-services/named-graphs> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mygrid: <http://www.mygrid.org.uk/mygrid-moby-service#> .
+@prefix j.0: <http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<>
+    mygrid:hasOperation [
+        mygrid:inputParameter [
+            mygrid:objectType <http://www.w3.org/ns/sparql-service-description#Service> ;
+            a mygrid:parameter
+        ] ;
+        mygrid:outputParameter [
+            mygrid:objectType <http://purl.org/twc/vocab/datafaqs#Evaluated> ;
+            a mygrid:parameter
+        ] ;
+        a mygrid:operation
+    ] ;
+    mygrid:hasServiceNameText "named-graphs"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    mygrid:providedBy [
+        j.0:creator "lebot@rpi.edu"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        mygrid:authoritative false ;
+        a mygrid:organisation
+    ] ;
+    a mygrid:serviceDescription ;
+    rdfs:label "named-graphs"^^<http://www.w3.org/2001/XMLSchema#string> .
