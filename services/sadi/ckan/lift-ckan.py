@@ -108,10 +108,10 @@ class LiftCKAN(faqt.CKANReader):
          # Process Attributes
          #
          if 'title' in dataset:
-            output.dcterms_title = dataset['title']
+            output.dcterms_title = dataset['title'] # (java'd)
 
          if 'notes' in dataset:
-            output.dcterms_description = dataset['notes']
+            output.dcterms_description = dataset['notes'] # (java'd)
 
          #
          # Process Resources
@@ -137,7 +137,7 @@ class LiftCKAN(faqt.CKANReader):
                #
                # <dataset> void:exampleResource <> .
                #
-               output.void_sparqlEndpoint.append(Thing(resource['url']))
+               output.void_exampleResource.append(Thing(resource['url']))
                # TODO: elaborate this description.
             else:
                print 'TODO: handle resource: ' + resource['format']
@@ -166,7 +166,7 @@ class LiftCKAN(faqt.CKANReader):
             groupR.rdfs_label.append(group)
             groupR.foaf_name.append(group)
             groupR.save()
-            output.dcterms_isPartOf.append(groupR)
+            output.dcterms_isPartOf.append(groupR) # (java'd)
 
          #
          # Process Tags
@@ -179,7 +179,7 @@ class LiftCKAN(faqt.CKANReader):
             tagR.rdfs_label = tag
             tagR.tag_name   = tag
             tagR.save()
-            output.tag_taggedWithTag.append(tagR)
+            output.tag_taggedWithTag.append(tagR) # (java'd)
 
          #
          # Process Extras
@@ -208,7 +208,7 @@ class LiftCKAN(faqt.CKANReader):
                #
                # <dataset> ov:shortName "DBPedia" .
                #
-               output.ov_shortName = dataset['extras'][extra]
+               output.ov_shortName = dataset['extras'][extra] # (java'd)
             elif links_regex.match(str(extra)):
                #
                # <dataset> void:subset [ a void:Linkset; void:target <dataset>, <target>; void:size 50 ] .
@@ -236,12 +236,12 @@ class LiftCKAN(faqt.CKANReader):
                #
                # <dataset> con:preferrredURI <another> .
                #
-               output.con_preferredURI.append(DCATDataset(dataset['extras'][extra]))
+               output.con_preferredURI.append(DCATDataset(dataset['extras'][extra])) # (java'd)
             elif extra == u'namespace':
                #
                # <dataset> void:uriSpace "http://dbpedia.org/resource/" .
                #
-               output.void_uriSpace = dataset['extras'][extra]
+               output.void_uriSpace = dataset['extras'][extra] # (java'd)
             elif extra == u'sparql_graph_name':
                #
                # <dataset> dcat:distribution [
@@ -256,7 +256,7 @@ class LiftCKAN(faqt.CKANReader):
                   ng.sd_name         = Thing(dataset['extras'][extra])
                   ng.prov_atLocation = sparqlEndpoint['url']
                   ng.save()
-                  output.dcat_distribution.append(ng)
+                  output.dcat_distribution.append(ng) # (java'd)
             else:
                print extra + ' = ' 
                print dataset['extras'][extra]
