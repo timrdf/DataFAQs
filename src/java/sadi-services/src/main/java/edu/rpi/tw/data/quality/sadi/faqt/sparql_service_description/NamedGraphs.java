@@ -106,7 +106,11 @@ public class NamedGraphs extends SimpleSynchronousServiceServlet
 				RDFNode name = binding.get("g");
 				
 				Resource ng = m.createResource(getSPARQLEndpointGraphName(endpoint, name.toString()));
-				ng.addProperty(SD.name, name);
+				if( name.isURIResource() && name.asResource().getURI().toString().startsWith("http") ) {
+					ng.addProperty(SD.name, name);
+				}else {
+					ng.addLiteral(DC.description, name.toString());
+				}
 				ng.addProperty(RDF.type, SD.NamedGraph);
 				graphCollection.addProperty(SD.namedGraph, ng);
 			}
