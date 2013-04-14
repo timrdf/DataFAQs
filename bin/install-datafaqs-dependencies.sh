@@ -130,9 +130,13 @@ offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "de
 #
 # (from your local machine) ssh -L 9090:localhost:8080 -p 2216 -l smithj aquarius.tw.rpi.edu
 #                           load http://localhost:9090
-if [[ -e /var/lib/tomcat6/webapps/             && \
-      -e $HOME/services/sadi/sadi-services.war && \
-    ! -e /var/lib/tomcat6/webapps/sadi-services.war ]]; then
+if [[ -e /var/lib/tomcat6/webapps/               && \
+      -e $HOME/services/sadi/sadi-services.war   && \
+    ! -e /var/lib/tomcat6/webapps/sadi-services.war \
+      || \
+      -e $HOME/services/sadi/sadi-services.war      && \
+      -e /var/lib/tomcat6/webapps/sadi-services.war && \
+      $HOME/services/sadi/sadi-services.war -nt /var/lib/tomcat6/webapps/sadi-services.war ]]; then
    echo $TODO ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
    if [ "$dryrun" != "true" ]; then
       read -p "Q: May we install the Java SADI services using the command above? [y/n] " -u 1 install_it
