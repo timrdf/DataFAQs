@@ -69,11 +69,8 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         	Model m = output.getModel();
         	Prefixes.setNsPrefixes(m);
 
-        	
         	// Title
-        	if( valid(ds.getTitle()) ) {
-        		output.addProperty(DC.title, ds.getTitle());
-        	}
+        	tryTitle(ds, output);
         	
         	// Notes
         	if( valid(ds.getNotes()) ) {
@@ -89,13 +86,13 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 					if( "api/sparql".equals(resource.getFormat()) ) {
 						sparqlEndpoint = m.createResource(resource.getUrl());
 	    				output.addProperty(VoID.sparqlEndpoint, sparqlEndpoint);
-	    				System.out.println( " name. "  + resource.getName() );
-	        			System.out.println( "    Format: "      + resource.getFormat() );
-	        			System.out.println( "    Mimetype: "    + resource.getMimetype() );
-	        			System.out.println( "    Description: " + resource.getDescription() );
-	        			System.out.println( "    URL: "         + resource.getUrl() + "\n");   
+	    				//System.out.println( " name. "  + resource.getName() );
+	        			//System.out.println( "    Format: "      + resource.getFormat() );
+	        			//System.out.println( "    Mimetype: "    + resource.getMimetype() );
+	        			//System.out.println( "    Description: " + resource.getDescription() );
+	        			//System.out.println( "    URL: "         + resource.getUrl() + "\n");   
 	        			if( valid(resource.getUrl()) ) {
-	        				output.addProperty(VoID.sparqlEndpoint, output.getModel().createResource(resource.getUrl()));
+	        				output.addProperty(VoID.sparqlEndpoint, m.createResource(resource.getUrl()));
 	        			}
 	        		}else if( "example/turtle".equals(resource.getFormat())) {
 	    				output.addProperty(DataFAQs.todo, "resource of type " + resource.getFormat());
@@ -139,7 +136,6 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         	// Extras
         	//
         	for( Extra extra : ds.getExtras() ){
-        		System.out.println(extra.getKey() + extra.getValue());
         		if( "triples".equals(extra.getKey()) ) {
         			long size = Long.parseLong(extra.getValue().replaceAll("[^0-9]", ""));
         			output.addLiteral(VoID.triples, size);
@@ -150,14 +146,19 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         			String other    = inputS.replaceFirst("\\/dataset\\/.*$", "/dataset/"+otherID);    
         			Resource otherR = m.createResource(other, DataFAQs.CKANDataset);
         			
-        			Resource linkset = m.createResource("#linkset-"+otherID+"-"+
+        			// Jena can't handle relative fragIDs...
+        			/*Resource linkset = m.createResource("#linkset-"+otherID+"-"+
         												NameFactory.getMD5(inputS+otherID+ds.getRevision_id()),
-        												VoID.Linkset);
+        												VoID.Linkset);*/
+        			Resource linkset = m.createResource(NameFactory.INSTANCE_HUB+"linkset/"+otherID+"/"+
+														NameFactory.getMD5(inputS+otherID+ds.getRevision_id()),
+														VoID.Linkset);
         			long size = Long.parseLong(extra.getValue().replaceAll("[^0-9]", ""));
         			linkset.addLiteral(VoID.triples, size);
         			linkset.addProperty(VoID.target, otherR);
         			linkset.addProperty(VoID.target, output);
         			
+        			log.warn("void:subset "+linkset.getURI().toString());
         			output.addProperty(VoID.subset, linkset);
         		}else if( "preferred_uri".equals(extra.getKey()) && valid(extra.getValue()) ) {
         			output.addProperty(CON.preferredURI, m.createResource(trim(extra.getValue())));
@@ -175,9 +176,13 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
                     *      prov:atLocation <sparqlEndpoint>
                     *   ];
                     */
-        			Resource namedGraph = sparqlEndpoint != null ? 
+        			// Jena can't handle relative fragIDs...
+        			/*Resource namedGraph = sparqlEndpoint != null ? 
         						m.createResource( "#named-graph-"+NameFactory.getMD5(sparqlEndpoint.getURI().toString()+name), SD.NamedGraph):
-            					m.createResource( "#named-graph-"+NameFactory.getMD5(                                   name), SD.NamedGraph);        						
+            					m.createResource( "#named-graph-"+NameFactory.getMD5(                                   name), SD.NamedGraph);*/
+        			Resource namedGraph = sparqlEndpoint != null ? 
+    						m.createResource(NameFactory.INSTANCE_HUB+"named-graph/"+NameFactory.getMD5(sparqlEndpoint.getURI().toString()+name), SD.NamedGraph):
+        					m.createResource(NameFactory.INSTANCE_HUB+"named-graph/"+NameFactory.getMD5(                                   name), SD.NamedGraph);   
         			output.addProperty(DCAT.distribution, namedGraph);
         			namedGraph.addProperty(SD.name, m.createResource(name));
         			if( sparqlEndpoint != null ) {
@@ -189,8 +194,19 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         	}
         	//output.addProperty(RDF.type, DCAT.Dataset);
         } catch ( CKANException e ) {
-            System.out.println(e);
+            log.error("CKANException " + e.getMessage());
         }
+	}
+	
+	private void tryTitle(Dataset ds, Resource output) {
+		try {
+	    	// Title
+	    	if( valid(ds.getTitle()) ) {
+	    		output.addProperty(DC.title, ds.getTitle());
+	    	}
+		} catch(Exception e) {
+			log.error("exception on title");
+		}
 	}
 	
 	private boolean valid(String string) {

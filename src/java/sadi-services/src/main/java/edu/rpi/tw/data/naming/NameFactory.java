@@ -9,6 +9,9 @@ import java.security.NoSuchAlgorithmException;
  * Some methods copied from csv2rdf4lod's NameFactory.
  */
 public class NameFactory {
+	
+	public static String INSTANCE_HUB = "http://instances.tw.rpi.edu/id/";
+	
 	/**
 	 * 
 	 * @param value
