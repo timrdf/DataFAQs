@@ -133,7 +133,7 @@ offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "de
 if [[ -e /var/lib/tomcat6/webapps/               && \
       -e $HOME/services/sadi/sadi-services.war   && \
     ! -e /var/lib/tomcat6/webapps/sadi-services.war \
-      || \
+    ||                                                 \
       -e $HOME/services/sadi/sadi-services.war      && \
       -e /var/lib/tomcat6/webapps/sadi-services.war && \
       $HOME/services/sadi/sadi-services.war -nt /var/lib/tomcat6/webapps/sadi-services.war ]]; then
@@ -141,6 +141,7 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
    if [ "$dryrun" != "true" ]; then
       read -p "Q: May we install the Java SADI services using the command above? [y/n] " -u 1 install_it
       if [[ "$install_it" == [yY] ]]; then 
+         $sudo rm /var/lib/tomcat6/webapps/sadi-services.war
          echo $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
               $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
       fi   
