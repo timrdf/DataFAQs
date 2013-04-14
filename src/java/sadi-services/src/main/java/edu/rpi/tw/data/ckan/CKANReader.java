@@ -63,6 +63,7 @@ public class CKANReader {
 		System.out.println(CKANReader.getCKANAPI(m.createResource("http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home")));
 		System.out.println(CKANReader.getCKANAPI(m.createResource("http://datahub.io/dataset/farmers-markets-geographic-data-united-states")));
 		
+		System.out.println(CKANReader.getCKANIdentiifer(m.createResource("http://thedatahub.org/dataset/uk-postcodes")));
 		System.out.println(CKANReader.getCKANIdentiifer(m.createResource("http://datahub.io/dataset/klappstuhlclub")));
 	}
 }

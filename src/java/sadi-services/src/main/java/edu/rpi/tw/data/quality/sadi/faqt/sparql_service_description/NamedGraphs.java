@@ -31,16 +31,30 @@ import edu.rpi.tw.data.rdf.jena.vocabulary.DataFAQs;
 import edu.rpi.tw.data.rdf.jena.vocabulary.Prefixes;
 import edu.rpi.tw.data.rdf.jena.vocabulary.SD;
 import edu.rpi.tw.data.rdf.jena.vocabulary.SIO;
+import edu.rpi.tw.data.rdf.jena.vocabulary.VoID;
 
 @Name("named-graphs")
 @ContactEmail("lebot@rpi.edu")
-@InputClass("http://www.w3.org/ns/sparql-service-description#Service")
+@InputClass("http://www.w3.org/ns/dcat#Dataset")
 @OutputClass("http://purl.org/twc/vocab/datafaqs#Evaluated")
 public class NamedGraphs extends SimpleSynchronousServiceServlet
 {
 	private static final Logger log = Logger.getLogger(NamedGraphs.class);
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+     *     void:sparqlEndpoint <http://logd.tw.rpi.edu/sparql> .
+     *     
+     *     or
+     *     
+     * <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+     *    dcat:distribution [
+     *        a sd:NamedGraph;
+     *        prov:atLocation <http://logd.tw.rpi.edu/sparql>;
+     *        sd:name         <http://logd.tw.rpi.edu/source/data-gov/dataset/4383/version/2011-Nov-29> .
+     *    ] .
+	 */
 	@Override
 	public void processInput(Resource input, Resource output)
 	{
@@ -49,10 +63,13 @@ public class NamedGraphs extends SimpleSynchronousServiceServlet
 		Model m = output.getModel();
     	Prefixes.setNsPrefixes(output.getModel());
 		
-		String endpoint = input.getURI().toString();
-		if( input.hasProperty(SD.endpoint) ) {
-			endpoint = input.getProperty(SD.endpoint).getObject().toString();
-			output.addProperty(SD.endpoint, output.getModel().getResource(endpoint));
+		String endpoint = null;
+		if( input.hasProperty(VoID.sparqlEndpoint) ) {
+			endpoint = input.getProperty(VoID.sparqlEndpoint).getObject().toString();
+			output.addProperty(VoID.sparqlEndpoint, m.getResource(endpoint));
+		}else {
+			output.addProperty(RDF.type, DataFAQs.Unsatisfactory);
+			return;
 		}
 		
 		/* your code goes here

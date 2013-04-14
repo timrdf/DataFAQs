@@ -19,7 +19,6 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.sparql.vocabulary.FOAF;
 import com.hp.hpl.jena.vocabulary.DC;
 import com.hp.hpl.jena.vocabulary.DCTerms;
-import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
 import edu.rpi.tw.data.ckan.CKANReader;
@@ -53,14 +52,17 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 	 */
 	@Override
 	public void processInput(Resource input, Resource output) {
-		
-        Client client = new Client( new Connection( CKANReader.getCKANAPI(input) ), "");
-        //                                          ^ e.g. "http://datahub.io"     <key>
         
         try {
+            Client client = new Client( new Connection( CKANReader.getCKANAPI(input) ), "");
+            //                                          ^ e.g. "http://datahub.io"     <key>
+            
         	String inputS = input.asResource().getURI().toString();
+        	log.warn("processing "+inputS);
+        	
         	String base = inputS.replaceFirst("\\/dataset\\/.*$", "");
         	
+        	log.warn("processing id "+CKANReader.getCKANIdentiifer(input));
         	Dataset ds = client.getDataset(CKANReader.getCKANIdentiifer(input));
         	//                             ^ e.g. "farmers-markets-geographic-data-united-states"
         	
