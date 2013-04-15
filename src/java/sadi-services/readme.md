@@ -1,3 +1,5 @@
+[sadi-services](https://github.com/timrdf/DataFAQs/tree/master/src/java/sadi-services) is a Java implementation for [FAqT Services](https://github.com/timrdf/DataFAQs/wiki/FAqT-Service), [SADI](https://github.com/timrdf/DataFAQs/wiki/SADI-Semantic-Web-Services-framework)-based dataset evaluation services.
+
 The dependency in pom.xml:
 
 ```
