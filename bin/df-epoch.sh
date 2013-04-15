@@ -715,6 +715,8 @@ if [ "$epoch_existed" != "true" ]; then
       done # end datasets
    popd &> /dev/null
 fi
+# Find references and augmentations that were not RDF:
+# find __PIVOT_epoch/2013-04-14/__PIVOT_dataset/ -name "augmentation-*" -o -name "reference-*" | xargs valid-rdf.sh -v | grep "^no"
 
 if [ "$dryrun" == "true" ]; then
    echo "[INFO] skipping (dryrun): Submitting CKAN dataset information to FAqT evaluation services."

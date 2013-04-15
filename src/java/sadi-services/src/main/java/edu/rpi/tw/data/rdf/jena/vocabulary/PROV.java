@@ -11,6 +11,10 @@ public class PROV {
 	public static String prefix = "prov";
 	public static String ns = "http://www.w3.org/ns/prov#";
 
+	public static final Property wasInfluencedBy         = m_model.createProperty(ns+"wasInfluencedBy");
+	public static final Property wasDerivedFrom          = m_model.createProperty(ns+"wasDerivedFrom");
+	
 	public static final Property wasAttributedTo         = m_model.createProperty(ns+"wasAttributedTo");
+	
 	public static final Property atLocation              = m_model.createProperty(ns+"atLocation");
 }

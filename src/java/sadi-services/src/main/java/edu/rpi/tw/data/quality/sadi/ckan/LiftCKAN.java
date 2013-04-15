@@ -5,6 +5,7 @@ import org.ckan.CKANException;
 import org.ckan.Client;
 import org.ckan.Connection;
 import org.ckan.Dataset;
+import org.ckan.DatasetRevision;
 import org.ckan.Extra;
 import org.ckan.Group;
 
@@ -30,6 +31,7 @@ import edu.rpi.tw.data.rdf.jena.vocabulary.OV;
 import edu.rpi.tw.data.rdf.jena.vocabulary.PROV;
 import edu.rpi.tw.data.rdf.jena.vocabulary.Prefixes;
 import edu.rpi.tw.data.rdf.jena.vocabulary.SD;
+import edu.rpi.tw.data.rdf.jena.vocabulary.SIOC;
 import edu.rpi.tw.data.rdf.jena.vocabulary.Tag;
 import edu.rpi.tw.data.rdf.jena.vocabulary.VoID;
 
@@ -190,6 +192,35 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         			}
         		}else {
         			output.addProperty(DataFAQs.todo, "extra: " + extra.getKey() + " = " + extra.getValue());
+        		}
+        	}
+        
+        	//
+        	// Dataset entry revisions
+        	//
+        	for( DatasetRevision revision : client.getDatasetRevisions(CKANReader.getCKANIdentiifer(input)) ) {
+        		Resource revisionR = m.createResource(base+"/revision/"+revision.getID());
+        		
+        		Resource user = null;
+        		if( revision.getAuthor() != null && revision.getAuthor().startsWith("http") ) {
+        			user = m.createResource(revision.getAuthor());
+        		}else if(revision.getAuthor() != null && 
+        				revision.getAuthor().matches(
+        				"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$") ) {
+        			user = m.createResource(base+"/user/"+revision.getAuthor());
+        			revisionR.addLiteral(SIOC.ip_address, revision.getAuthor());
+        		}else if( revision.getAuthor() != null ){
+        			user = m.createResource(base+"/user/"+revision.getAuthor());
+        		}
+        		
+        		output.addProperty(PROV.wasDerivedFrom, revisionR);
+        		revisionR.addProperty(DCTerms.created, revision.getTimestamp());
+        		if( revision.getMessage() != null && revision.getMessage().length() > 0 ) {
+        			revisionR.addProperty(DCTerms.description, revision.getMessage());
+        		}
+        		if( user != null ) {
+        			revisionR.addProperty(PROV.wasAttributedTo, user);
+            		user.addProperty(FOAF.name, revision.getAuthor());
         		}
         	}
         	//output.addProperty(RDF.type, DCAT.Dataset);

@@ -23,6 +23,7 @@ public class Prefixes {
 		model.setNsPrefix(PROV.prefix,     PROV.ns);
 		model.setNsPrefix(SD.prefix,       SD.ns);
 		model.setNsPrefix(SIO.prefix,      SIO.ns);
+		model.setNsPrefix(SIOC.prefix,     SIOC.ns);
 		model.setNsPrefix(Tag.prefix,      Tag.ns);
 		model.setNsPrefix(VoID.prefix,     VoID.ns);
 	}
