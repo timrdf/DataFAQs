@@ -177,7 +177,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
          echo "/etc/tomcat6/tomcat-users.xml does not establish you as a manager role."
          echo
          if [ "$dryrun" != "true" ]; then
-            pw=$project_user_name`date +%s | sed 's/^.......//'`
+            pw=`whoami``date +%s | sed 's/^.......//'`
             read -p "Q: Please specify a password for administering tomcat (default will be $pw): " upw
             if [[ -n "$upw" ]]; then 
                pw=$upw
