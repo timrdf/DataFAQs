@@ -157,14 +157,14 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       if [[ ! `sudo grep '<role rolename="manager"/>' /etc/tomcat6/tomcat-users.xml` ]]; then
          echo
          echo $div
-         echo "/etc/tomcat6/tomcat-users.xml does not contain the manager role, which is needed to use administer tomcat."
+         echo "/etc/tomcat6/tomcat-users.xml does not contain the manager role, which is needed to administer tomcat."
          echo
          if [ "$dryrun" != "true" ]; then
             sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | awk '{print "     "$0}'
             echo
             read -p "Q: Add manager role to tomcat by adding the above to /etc/tomcat6/tomcat-users.xml? [y/n] " -u 1 install_it
             if [[ "$install_it" == [yY] ]]; then 
-               sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | sudo tee /etc/tomcat6/tomcat-users.xml
+               sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | sudo tee /etc/tomcat6/tomcat-users.xml &> /dev/null
             fi   
          else
             echo "$TODO <role rolename=\"manager\"/>                             in /etc/tomcat6/tomcat-users.xml"
@@ -172,7 +172,23 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       fi
 
       if [[ ! `sudo grep "<user username=\"\`whoami\`\".*roles=\"manager\"/>" /etc/tomcat6/tomcat-users.xml` ]]; then
-         echo "$TODO <user username=\"`whoami`\" password=\"..\" roles=\"manager\"/> in /etc/tomcat6/tomcat-users.xml"
+         echo
+         echo $div
+         echo "/etc/tomcat6/tomcat-users.xml does not establish you as a manager role."
+         echo
+         if [ "$dryrun" != "true" ]; then
+            pw=$project_user_name`date +%s | sed 's/^.......//'`
+            read -p "Q: Please specify a password for administering tomcat (default will be $pw): " upw
+            if [[ -n "$upw" ]]; then 
+               pw=$upw
+            fi
+            target="/etc/tomcat6/tomcat-users.xml"
+            sudo cat $target | awk -v u=`whoami` -v p=$pw '$1 == "</tomcat-users>" {print "<user username=\""u"\" password=\""p"\" roles=\"manager\"/>"} {print}' #| sudo tee $target &> /dev/null
+            pw=""
+            upw=""
+         else
+            echo "$TODO <user username=\"`whoami`\" password=\"..\" roles=\"manager\"/> in /etc/tomcat6/tomcat-users.xml"
+         fi
       fi
    else
       echo "WARNING: cannot check /etc/tomcat6/tomcat-users.xml without sudo." >&2
