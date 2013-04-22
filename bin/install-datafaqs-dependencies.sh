@@ -116,9 +116,7 @@ offer_install_with_apt 'curl'         'curl'
 offer_install_with_apt 'rapper'       'raptor-utils'
 offer_install_with_apt 'unzip'        'unzip'
 offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
-echo tomcatting >&2
 offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
-echo tomcatting done >&2
 # Thanks to http://www.ubuntugeek.com/how-to-install-tomcat-6-on-ubuntu-9-04-jaunty.html
 #
 #                           TODO: check and create user if not there.
@@ -154,9 +152,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       # Should contain:
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
-      echo grepping >&2
-      if [[ ! `sudo grep '<role rolename="manager"/>'` ]]; then
-      echo greppingdone >&2
+      if [[ ! `sudo grep '<role rolename="manager"/>' /etc/tomcat6/tomcat-users.xml` ]]; then
          echo $TODO '<role rolename="manager"/>' in /etc/tomcat6/tomcat-users.xml
       fi
 
