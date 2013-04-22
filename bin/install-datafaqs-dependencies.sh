@@ -132,6 +132,7 @@ offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "de
 #
 # (from your local machine) ssh -L 9090:localhost:8080 -p 2216 -l smithj aquarius.tw.rpi.edu
 #                           load http://localhost:9090
+restart_tomcat="no"
 if [[ -e /var/lib/tomcat6/webapps/               && \
       -e $HOME/services/sadi/sadi-services.war   && \
     ! -e /var/lib/tomcat6/webapps/sadi-services.war \
@@ -146,6 +147,7 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
          $sudo rm /var/lib/tomcat6/webapps/sadi-services.war
          echo $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
               $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+         restart_tomcat="yes"
       fi   
    fi
 fi
@@ -167,6 +169,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
                sudo cp /etc/tomcat6/tomcat-users.xml .tomcat-users.xml
                sudo cat .tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | sudo tee /etc/tomcat6/tomcat-users.xml &> /dev/null
                sudo rm .tomcat-users.xml
+               restart_tomcat="yes"
             fi   
          else
             echo "$TODO <role rolename=\"manager\"/>                             in /etc/tomcat6/tomcat-users.xml"
@@ -190,12 +193,23 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
             pw=""
             upw=""
             sudo rm .tomcat-users.xml
+            restart_tomcat="yes"
          else
             echo "$TODO <user username=\"`whoami`\" password=\"..\" roles=\"manager\"/> in /etc/tomcat6/tomcat-users.xml"
          fi
       fi
    else
       echo "WARNING: cannot check /etc/tomcat6/tomcat-users.xml without sudo." >&2
+   fi
+fi
+if [[ "$restart_tomcat" == "yes" ]]; then
+   echo
+   read -p "Q: Changes to tomcat require it to restart. Restart it (requires sudo) ? [y/n] " -u 1 restart_it
+   if [[ "$restart_it" == [yY] ]]; then 
+      echo sudo /etc/init.d/tomcat6 stop
+           sudo /etc/init.d/tomcat6 stop
+      echo sudo /etc/init.d/tomcat6 start
+           sudo /etc/init.d/tomcat6 start
    fi
 fi
 
