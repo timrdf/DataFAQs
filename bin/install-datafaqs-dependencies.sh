@@ -6,6 +6,8 @@
 HOME=$(cd ${0%/*} && echo ${PWD%/*})
 me=$(cd ${0%/*} && echo ${PWD})/`basename $0`
 
+div="-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+
 if [[ "$1" == "--help" ]]; then
    echo
    echo "usage: `basename $0` [-n] [--avoid-sudo]"
@@ -153,14 +155,19 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
       if [[ ! `sudo grep '<role rolename="manager"/>' /etc/tomcat6/tomcat-users.xml` ]]; then
-         echo "$TODO <role rolename=\"manager\"/>                             in /etc/tomcat6/tomcat-users.xml"
-         sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | awk '{print "     "$0}'
+         echo
+         echo $div
+         echo "/etc/tomcat6/tomcat-users.xml does not contain the manager role, which is needed to use administer tomcat."
          echo
          if [ "$dryrun" != "true" ]; then
+            sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | awk '{print "     "$0}'
+            echo
             read -p "Q: Add manager role to tomcat by adding the above to /etc/tomcat6/tomcat-users.xml? [y/n] " -u 1 install_it
             if [[ "$install_it" == [yY] ]]; then 
                sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | sudo tee /etc/tomcat6/tomcat-users.xml
             fi   
+         else
+            echo "$TODO <role rolename=\"manager\"/>                             in /etc/tomcat6/tomcat-users.xml"
          fi
       fi
 
