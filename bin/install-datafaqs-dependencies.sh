@@ -147,7 +147,18 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
       fi   
    fi
 fi
+if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
+   # Should contain:
+   # <role rolename="manager"/>
+   # <user username="lebot" password="lodcloud" roles="manager"/>
+   if [[ ! `grep '<role rolename="manager"/>'` ]]; then
+      echo $TODO '<role rolename="manager"/>' in /etc/tomcat6/tomcat-users.xml
+   fi
 
+   if [[ ! `sudo grep "<user username=\"`whoami`\".*roles=\"manager\"/>" /etc/tomcat6/tomcat-users.xml` ]]; then
+      echo $TODO "<user username=\"`whoami`\" password=\"..\" roles=\"manager\"/>" in /etc/tomcat6/tomcat-users.xml
+   fi
+fi
 
 # TODO: sudo apt-get install python-twisted
 
