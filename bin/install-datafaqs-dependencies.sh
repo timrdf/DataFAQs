@@ -154,7 +154,9 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       # Should contain:
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
+      echo grepping >&2
       if [[ ! `sudo grep '<role rolename="manager"/>'` ]]; then
+      echo greppingdone >&2
          echo $TODO '<role rolename="manager"/>' in /etc/tomcat6/tomcat-users.xml
       fi
 
