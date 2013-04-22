@@ -183,7 +183,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
                pw=$upw
             fi
             target="/etc/tomcat6/tomcat-users.xml"
-            sudo cat $target | awk -v u=`whoami` -v p=$pw '$1 == "</tomcat-users>" {print "<user username=\""u"\" password=\""p"\" roles=\"manager\"/>"} {print}' #| sudo tee $target &> /dev/null
+            sudo cat $target | awk -v u=`whoami` -v p=$pw '$1 == "</tomcat-users>" {print "<user username=\""u"\" password=\""p"\" roles=\"manager\"/>"} {print}' | sudo tee $target &> /dev/null
             pw=""
             upw=""
          else
