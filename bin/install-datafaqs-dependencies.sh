@@ -148,15 +148,19 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
    fi
 fi
 if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
-   # Should contain:
-   # <role rolename="manager"/>
-   # <user username="lebot" password="lodcloud" roles="manager"/>
-   if [[ ! `grep '<role rolename="manager"/>'` ]]; then
-      echo $TODO '<role rolename="manager"/>' in /etc/tomcat6/tomcat-users.xml
-   fi
+   if [[ -n "$sudo" ]]; then
+      # Should contain:
+      # <role rolename="manager"/>
+      # <user username="lebot" password="lodcloud" roles="manager"/>
+      if [[ ! `$sudo grep '<role rolename="manager"/>'` ]]; then
+         echo $TODO '<role rolename="manager"/>' in /etc/tomcat6/tomcat-users.xml
+      fi
 
-   if [[ ! `sudo grep "<user username=\"`whoami`\".*roles=\"manager\"/>" /etc/tomcat6/tomcat-users.xml` ]]; then
-      echo $TODO "<user username=\"`whoami`\" password=\"..\" roles=\"manager\"/>" in /etc/tomcat6/tomcat-users.xml
+      if [[ ! `$sudo grep "<user username=\"`whoami`\".*roles=\"manager\"/>" /etc/tomcat6/tomcat-users.xml` ]]; then
+         echo $TODO "<user username=\"`whoami`\" password=\"..\" roles=\"manager\"/>" in /etc/tomcat6/tomcat-users.xml
+      fi
+   else
+      echo "WARNING: cannot check /etc/tomcat6/tomcat-users.xml without sudo."
    fi
 fi
 
