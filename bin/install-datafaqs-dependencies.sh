@@ -153,7 +153,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
       if [[ ! `sudo grep '<role rolename="manager"/>' /etc/tomcat6/tomcat-users.xml` ]]; then
-         echo "$TODO <role rolename=\"manager\"/>                               in /etc/tomcat6/tomcat-users.xml"
+         echo "$TODO <role rolename=\"manager\"/>                             in /etc/tomcat6/tomcat-users.xml"
       fi
 
       if [[ ! `sudo grep "<user username=\"\`whoami\`\".*roles=\"manager\"/>" /etc/tomcat6/tomcat-users.xml` ]]; then
