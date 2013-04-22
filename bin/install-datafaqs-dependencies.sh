@@ -164,7 +164,9 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
             echo
             read -p "Q: Add manager role to tomcat by adding the above to /etc/tomcat6/tomcat-users.xml? [y/n] " -u 1 install_it
             if [[ "$install_it" == [yY] ]]; then 
-               sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | sudo tee /etc/tomcat6/tomcat-users.xml &> /dev/null
+               sudo cp /etc/tomcat6/tomcat-users.xml .tomcat-users.xml
+               sudo cat .tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | sudo tee /etc/tomcat6/tomcat-users.xml &> /dev/null
+               sudo rm .tomcat-users.xml
             fi   
          else
             echo "$TODO <role rolename=\"manager\"/>                             in /etc/tomcat6/tomcat-users.xml"
@@ -182,10 +184,12 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
             if [[ -n "$upw" ]]; then 
                pw=$upw
             fi
+            sudo cp /etc/tomcat6/tomcat-users.xml .tomcat-users.xml
             target="/etc/tomcat6/tomcat-users.xml"
-            sudo cat $target | awk -v u=`whoami` -v p=$pw '$1 == "</tomcat-users>" {print "<user username=\""u"\" password=\""p"\" roles=\"manager\"/>"} {print}' | sudo tee $target &> /dev/null
+            sudo cat .tomcat-users.xml | awk -v u=`whoami` -v p=$pw '$1 == "</tomcat-users>" {print "<user username=\""u"\" password=\""p"\" roles=\"manager\"/>"} {print}' | sudo tee $target &> /dev/null
             pw=""
             upw=""
+            sudo rm .tomcat-users.xml
          else
             echo "$TODO <user username=\"`whoami`\" password=\"..\" roles=\"manager\"/> in /etc/tomcat6/tomcat-users.xml"
          fi
