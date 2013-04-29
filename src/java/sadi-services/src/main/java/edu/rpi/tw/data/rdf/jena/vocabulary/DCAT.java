@@ -17,4 +17,5 @@ public class DCAT {
 	
 	public static final Resource Distribution = m_model.createResource(ns+"Distribution");
 	public static final Property accessURL   = m_model.createProperty(ns+"accessURL");
+	public static final Property downloadURL = m_model.createProperty(ns+"downloadURL");
 }

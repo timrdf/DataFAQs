@@ -13,6 +13,16 @@ import edu.rpi.tw.data.rdf.jena.vocabulary.PROV;
  */
 public class CKANReader {
 	
+	/**
+	 * e.g. http://datahub.io/dataset/farmers-markets-geographic-data-united-states -> http://datahub.io
+	 * 
+	 * @param dataset
+	 * @return
+	 */
+	public static String getBaseURI(Resource dataset) {
+		return dataset.asResource().getURI().toString().replaceFirst("\\/dataset\\/.*$", "");
+	}
+	
 	/** 
 	 * 'http://healthdata.tw.rpi.edu/hub/dataset/2010-basic-stand-alone-home'        -> 'http://healthdata.tw.rpi.edu/hub' + '/api'
 	 * 'http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states' -> 'http://thedatahub.org' + '/api'	

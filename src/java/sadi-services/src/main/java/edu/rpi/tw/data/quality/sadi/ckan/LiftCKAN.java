@@ -27,6 +27,7 @@ import edu.rpi.tw.data.naming.NameFactory;
 import edu.rpi.tw.data.rdf.jena.vocabulary.CON;
 import edu.rpi.tw.data.rdf.jena.vocabulary.DCAT;
 import edu.rpi.tw.data.rdf.jena.vocabulary.DataFAQs;
+import edu.rpi.tw.data.rdf.jena.vocabulary.Formats;
 import edu.rpi.tw.data.rdf.jena.vocabulary.OV;
 import edu.rpi.tw.data.rdf.jena.vocabulary.PROV;
 import edu.rpi.tw.data.rdf.jena.vocabulary.Prefixes;
@@ -62,7 +63,7 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         	String inputS = input.asResource().getURI().toString();
         	log.warn("processing "+inputS);
         	
-        	String base = inputS.replaceFirst("\\/dataset\\/.*$", "");
+        	String base = CKANReader.getBaseURI(input); // inputS.replaceFirst("\\/dataset\\/.*$", "");
         	
         	log.warn("processing id "+CKANReader.getCKANIdentiifer(input));
         	Dataset ds = client.getDataset(CKANReader.getCKANIdentiifer(input));
@@ -96,8 +97,44 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 	        			if( valid(resource.getUrl()) ) {
 	        				output.addProperty(VoID.sparqlEndpoint, m.createResource(resource.getUrl()));
 	        			}
-	        		}else if( "example/turtle".equals(resource.getFormat())) {
-	    				output.addProperty(DataFAQs.todo, "resource of type " + resource.getFormat());
+	        		}else if( resource.getFormat().startsWith("example/") ) {
+	        			/*
+	        			 * William Waite's GoLD translation (https://bitbucket.org/okfn/gockan):
+	        			 * 
+	        			 * <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+	        			 *    dcat:distribution [
+	        			 *       a dcat:Distribution ;
+						 *       dc:description "Turtle example link" ;
+						 *       dc:format [
+						 *          moat:taggedWithTag [
+						 *              moat:name "example/turtle" ;
+						 *              a moat:Tag
+						 *          ] ;
+						 *          a dc:IMT
+						 *      ] ;
+						 *      dcat:accessURL <http://logd.tw.rpi.edu/...data-gov-4383-2011-Nov-29.e1.sample.ttl>
+						 *    ];
+						 * .
+	        			 */
+	        			Resource distribution = m.createResource(resource.getUrl(), DCAT.Distribution);
+	        			distribution.addProperty(DCAT.downloadURL, distribution);
+	        			
+	        			// Description
+	        			if( valid(resource.getDescription()) ) {
+	        				distribution.addProperty(DCTerms.description, resource.getDescription());
+	        			}
+	        			
+	        			// Format
+	        			String format = resource.getFormat().substring("example/".length()).trim();
+	        			Resource formatR = Formats.getFormat(format);
+	        			if( formatR == null ) {
+	        				formatR = m.createResource(DCTerms.FileFormat);
+	        			}
+        				formatR.addProperty(RDFS.label, format);
+        				distribution.addProperty(DCTerms.format, formatR);
+
+
+	        			output.addProperty(DCAT.distribution, distribution);
 	        		}else {
 	    				output.addProperty(DataFAQs.todo, "resource of type " + resource.getFormat());
 	        		}
