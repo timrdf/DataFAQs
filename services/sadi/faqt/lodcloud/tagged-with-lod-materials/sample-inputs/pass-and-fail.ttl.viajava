@@ -1,0 +1,12 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://purl.org/twc/vocab/datafaqs#"
+    xmlns:j.0="http://www.holygoat.co.uk/owl/redwood/0.1/tags/">
+  <j.1:Unsatisfactory rdf:about="http://datahub.io/dataset/lofd">
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#Evaluated"/>
+  </j.1:Unsatisfactory>
+  <j.1:Satisfactory rdf:about="http://datahub.io/dataset/farmers-markets-geographic-data-united-states">
+    <j.0:taggedWithTag rdf:resource="http://datahub.io/tag/lod"/>
+    <rdf:type rdf:resource="http://purl.org/twc/vocab/datafaqs#Evaluated"/>
+  </j.1:Satisfactory>
+</rdf:RDF>

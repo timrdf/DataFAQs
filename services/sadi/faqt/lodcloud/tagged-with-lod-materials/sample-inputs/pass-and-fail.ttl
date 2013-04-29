@@ -1,0 +1,12 @@
+@prefix void:      <http://rdfs.org/ns/void#> .
+@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> .
+@prefix tag:      <http://www.holygoat.co.uk/owl/redwood/0.1/tags/> .
+
+<http://datahub.io/dataset/farmers-markets-geographic-data-united-states>
+   a datafaqs:CKANDataset;
+   tag:taggedWithTag <http://datahub.io/tag/lod>;
+.
+
+<http://datahub.io/dataset/lofd>
+   a datafaqs:CKANDataset;
+. 
