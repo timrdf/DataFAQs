@@ -252,7 +252,7 @@ done
 # installs to:
 #   /usr/local/lib/python2.6/dist-packages/sadi-0.1.5-py2.6.egg
 #   /usr/local/lib/python2.6/dist-packages/faqt-0.0.2-py2.6.egg
-eggs="lib/sadi.python/sadi-0.1.5-py$V.egg packages/faqt.python/dist/faqt-0.0.2-py$V.egg"
+eggs="lib/sadi.python/sadi-0.1.5-py$V.egg src/python/faqt.python/dist/faqt-0.0.2-py$V.egg"
 for egg in $eggs; do
    base=`basename $egg`
    there=`find $dist -mindepth 1 -maxdepth 1 -type d -name $base`
