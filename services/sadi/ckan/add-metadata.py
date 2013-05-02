@@ -34,6 +34,7 @@ ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(prov='http://www.w3.org/ns/prov#')
 ns.register(void='http://rdfs.org/ns/void#')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
+ns.register(tag='http://www.holygoat.co.uk/owl/redwood/0.1/tags/')
 
 THEDATAHUB = 'http://datahub.io'
 
@@ -346,6 +347,19 @@ where {
          if tag is not None:
             dataset['tags'].append(tag)
 
+      for tag_uri in input.tag_taggedWithTag:
+         tag = None
+         try:
+            # When tag_uri is typed to _anything_
+            tag = tag_uri.tag_name.first 
+         except:
+            # SuRF returns URIRefs when they are not typed...
+            # Or, the moat_name wasn't there (Hack the URI: naughty)
+            tag = re.sub('^.*tag/','',str(tag_uri))
+
+         if tag is not None:
+            dataset['tags'].append(tag)
+
       #
       # Tags: format-*
       namespace = {}
@@ -459,12 +473,27 @@ where {
 resource = AddCKANMetadata()
 
 # Used when this service is manually invoked from the command line (for testing).
-# The service listens on port 9090
-#if __name__ == '__main__':
-#    sadi.publishTwistedService(resource, port=9090)
-
-# Used when this service is manually invoked from the command line (for testing).
+#
+# Usage: <input-rdf-file> [input-rdf-file-syntax] [output-rdf-file]
+#
 if __name__ == '__main__':
-   print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
-   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
-   sadi.publishTwistedService(resource, port=resource.dev_port)
+
+   if len(sys.argv) = 0:
+      print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
+      print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
+      sadi.publishTwistedService(resource, port=resource.dev_port)
+
+   else:
+      reader= open(sys.argv[1],"r")
+      mimeType = "application/rdf+xml"
+      if len(sys.argv) > 2:
+         mimeType = sys.argv[2]
+      if len(sys.argv) > 3:
+         writer = open(sys.argv[3],"w")
+
+      graph = resource.processGraph(reader,mimeType)
+
+      if len(sys.argv) > 3:
+         writer.write(resource.serialize(graph,mimeType))
+      else:
+         print resource.serialize(graph,mimeType)
