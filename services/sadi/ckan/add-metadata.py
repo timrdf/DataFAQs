@@ -261,13 +261,13 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
 
       # Extra: namespace
       if input.datafaqs_namespace:
-         dataset['extras']['namespace'] = input.datafaqs_namespace.first
+         dataset['extras']['namespace'] = self.surfSubject(input.datafaqs_namespace.first)
       if input.void_uriSpace:
-         dataset['extras']['namespace'] = input.void_uriSpace.first
+         dataset['extras']['namespace'] = self.surfSubject(input.void_uriSpace.first)
 
       # Extra: triples
       if input.void_triples:
-         dataset['extras']['triples'] = input.void_triples.first
+         dataset['extras']['triples'] = str(input.void_triples.first)
 
       # Extra: preferred_uri
       if input.con_preferredURI:
@@ -416,7 +416,7 @@ where {
             if vocab in self.prefix:
                title = self.prefix[vocab]
             dataset['resources'].append( { 'name':   title+' RDF Schema',
-                                           'url':    vocab, 
+                                           'url':    self.surfSubject(vocab), 
                                            'format': 'meta/rdf-schema' } )
       #
       # void:exampleResource (lodcloud Level 2 "example URI")
