@@ -39,6 +39,7 @@ import edu.rpi.tw.data.rdf.jena.vocabulary.VoID;
 @OutputClass("http://purl.org/twc/vocab/datafaqs#Evaluated")
 public class NamedGraphs extends SimpleSynchronousServiceServlet
 {
+	@SuppressWarnings("unused")
 	private static final Logger log = Logger.getLogger(NamedGraphs.class);
 	private static final long serialVersionUID = 1L;
 
@@ -61,7 +62,6 @@ public class NamedGraphs extends SimpleSynchronousServiceServlet
 		//output.addProperty(FOAF.knows, output.getModel().getResource("http://xmlns.com/foaf/0.1/#knows6"));
 		
 		Model m = output.getModel();
-    	Prefixes.setNsPrefixes(output.getModel());
 		
 		String endpoint = null;
 		if( input.hasProperty(VoID.sparqlEndpoint) ) {
@@ -72,9 +72,6 @@ public class NamedGraphs extends SimpleSynchronousServiceServlet
 			return;
 		}
 		
-		/* your code goes here
-		 * (add properties to output node based on properties of input node...)
-		 */
 		String queryS = "select distinct ?g where {graph ?g {[] a []}}";
 
 		Query          query = QueryFactory.create(queryS);
@@ -119,6 +116,8 @@ public class NamedGraphs extends SimpleSynchronousServiceServlet
 			output.addProperty(RDF.type, DataFAQs.Unsatisfactory);
 		}
 		qexec.close();
+		
+    	Prefixes.setNsPrefixes(output.getModel());
 	}
 
 	/**

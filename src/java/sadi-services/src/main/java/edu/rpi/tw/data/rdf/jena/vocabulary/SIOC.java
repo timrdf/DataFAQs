@@ -10,7 +10,7 @@ public class SIOC {
 	private static Model m_model = ModelFactory.createDefaultModel();
 	
 	public static String prefix = "sioc";
-	public static String ns     = "http://rdfs.org/sioc/ns# ";
+	public static String ns     = "http://rdfs.org/sioc/ns#";
 
 	public static final Resource Item            = m_model.createResource(ns+"Item");
 

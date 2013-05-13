@@ -20,6 +20,7 @@ public class DataFAQs {
 	public static final Property todo = m_model.createProperty(ns+"todo");
 	
 
-	public static final Resource CKANDataset = m_model.createResource(ns+"CKANDataset");
-	public static final Resource CKANGroup   = m_model.createResource(ns+"CKANGroup");
+	public static final Resource CKANDataset  = m_model.createResource(ns+"CKANDataset");
+	public static final Resource CKANGroup    = m_model.createResource(ns+"CKANGroup");
+	public static final Resource CKANResource = m_model.createResource(ns+"CKANResource");
 }

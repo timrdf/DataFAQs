@@ -86,17 +86,27 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         	Resource sparqlEndpoint = null; // Save for Extras processing named graph.
         	for (org.ckan.Resource resource : ds.getResources() ) {
         		if( valid(resource.getUrl()) ) {
+        			
+        			Resource distribution = m.createResource(resource.getUrl(), DCAT.Distribution);
+        			if( valid(resource.getDescription()) ) {
+        				distribution.addProperty(DCTerms.description, resource.getDescription());
+        			}
+        			output.addProperty(DCAT.distribution, distribution);
+        			Resource resourceR = m.createResource(inputS+"/resource/"+resource.getId(), DataFAQs.CKANResource);
+        			resourceR.addProperty(DCTerms.isPartOf, output);
+        			
 					if( "api/sparql".equals(resource.getFormat()) ) {
-						sparqlEndpoint = m.createResource(resource.getUrl());
-	    				output.addProperty(VoID.sparqlEndpoint, sparqlEndpoint);
+						
 	    				//System.out.println( " name. "  + resource.getName() );
 	        			//System.out.println( "    Format: "      + resource.getFormat() );
 	        			//System.out.println( "    Mimetype: "    + resource.getMimetype() );
 	        			//System.out.println( "    Description: " + resource.getDescription() );
 	        			//System.out.println( "    URL: "         + resource.getUrl() + "\n");   
-	        			if( valid(resource.getUrl()) ) {
-	        				output.addProperty(VoID.sparqlEndpoint, m.createResource(resource.getUrl()));
-	        			}
+						
+						sparqlEndpoint = m.createResource(resource.getUrl(), SD.Service);
+	    				output.addProperty(VoID.sparqlEndpoint, sparqlEndpoint);
+	    				output.addProperty(DCAT.distribution,   sparqlEndpoint);
+
 	        		}else if( resource.getFormat().startsWith("example/") ) {
 	        			/*
 	        			 * William Waite's GoLD translation (https://bitbucket.org/okfn/gockan):
@@ -116,14 +126,8 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 						 *    ];
 						 * .
 	        			 */
-	        			Resource distribution = m.createResource(resource.getUrl(), DCAT.Distribution);
 	        			distribution.addProperty(DCAT.downloadURL, distribution);
-	        			
-	        			// Description
-	        			if( valid(resource.getDescription()) ) {
-	        				distribution.addProperty(DCTerms.description, resource.getDescription());
-	        			}
-	        			
+
 	        			// Format
 	        			String format = resource.getFormat().substring("example/".length()).trim();
 	        			Resource formatR = Formats.getFormat(format);
@@ -133,8 +137,52 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         				formatR.addProperty(RDFS.label, format);
         				distribution.addProperty(DCTerms.format, formatR);
 
-
-	        			output.addProperty(DCAT.distribution, distribution);
+	        			output.addProperty(VoID.exampleResource, distribution);
+	        		}else if( "csv".equalsIgnoreCase(resource.getFormat()) ) {
+	        			distribution.addProperty(DCAT.downloadURL, distribution);
+	        			
+	        			distribution.addProperty(FOAF.isPrimaryTopicOf, resourceR);
+	        			
+	        			Resource formatPW  = m.createResource("http://provenanceweb.org/format/mime/text/csv");
+	        			formatPW.addLiteral(RDFS.label, "CSV");
+	        			formatPW.addLiteral(DCTerms.description, "Comma Separated Values");
+	        			
+	        			Resource formatPRN = m.createResource("http://provenanceweb.org/formats/pronom/x-fmt/18");
+	        			formatPRN.addLiteral(RDFS.label, "CSV");
+	        			formatPRN.addLiteral(DCTerms.description, "Comma Separated Values");
+	        			
+	        			distribution.addProperty(DCTerms.format, formatPW);
+	        			distribution.addProperty(DCTerms.format, formatPRN);
+	        		}else if( "pdf".equalsIgnoreCase(resource.getFormat()) ) {
+	        			distribution.addProperty(DCAT.downloadURL, distribution);
+	        			
+	        			distribution.addProperty(FOAF.isPrimaryTopicOf, resourceR);
+	        			
+	        			Resource formatPW  = m.createResource("http://provenanceweb.org/format/mime/application/pdf");
+	        			formatPW.addLiteral(RDFS.label, "PDF");
+	        			formatPW.addLiteral(DCTerms.description, "Portable Document Format");
+	        			
+	        			Resource formatPRN = m.createResource("http://provenanceweb.org/formats/pronom/fmt/276");
+	        			formatPRN.addLiteral(RDFS.label, "PDF");
+	        			formatPRN.addLiteral(DCTerms.description, "Portable Document Format");
+	        			
+	        			distribution.addProperty(DCTerms.format, formatPW);
+	        			distribution.addProperty(DCTerms.format, formatPRN);
+	        		}else if( "pptx".equalsIgnoreCase(resource.getFormat()) ) {
+	        			distribution.addProperty(DCAT.downloadURL, distribution);
+	        			
+	        			distribution.addProperty(FOAF.isPrimaryTopicOf, resourceR);
+	        			
+	        			Resource formatPW  = m.createResource("http://provenanceweb.org/format/mime/application/vnd.ms-powerpoint");
+	        			formatPW.addLiteral(RDFS.label, "PDF");
+	        			formatPW.addLiteral(DCTerms.description, "Microsoft Powerpoint");
+	        			
+	        			Resource formatPRN = m.createResource("http://provenanceweb.org/formats/pronom/fmt/215");
+	        			formatPRN.addLiteral(RDFS.label, "PDF");
+	        			formatPRN.addLiteral(DCTerms.description, "Microsoft Powerpoint for Windows");
+	        			
+	        			distribution.addProperty(DCTerms.format, formatPW);
+	        			distribution.addProperty(DCTerms.format, formatPRN);
 	        		}else {
 	    				output.addProperty(DataFAQs.todo, "resource of type " + resource.getFormat());
 	        		}
@@ -261,7 +309,7 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         		}
         	}
         	//output.addProperty(RDF.type, DCAT.Dataset);
-        } catch ( CKANException e ) {
+        }catch ( CKANException e ) {
             log.error("CKANException " + e.getMessage());
         }
 	}

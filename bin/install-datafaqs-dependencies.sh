@@ -40,7 +40,8 @@ elif [ "$1" == "--use-sudo" ]; then
    sudo="sudo "
    shift
 elif [ "$dryrun" != "true" ]; then
-   read -p "Try to install things as sudo? (if 'N', will try to install as `whoami`) [y/N] " -u 1 use_sudo
+   echo
+   read -p "Q: Try to install things as sudo? (if 'N', will try to install as `whoami`) [y/N] " -u 1 use_sudo
    if [[ "$use_sudo" == [yY] ]]; then
       sudo="sudo "
    fi

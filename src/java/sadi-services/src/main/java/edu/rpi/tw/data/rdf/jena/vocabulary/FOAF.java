@@ -8,7 +8,7 @@ public class FOAF {
 	private static Model m_model = ModelFactory.createDefaultModel();
 	
 	public static String prefix = "foaf";
-	public static String ns     = "http://xmlns.com/foaf/0.1/#";
+	public static String ns     = "http://xmlns.com/foaf/0.1/";
 	
 	public static final Property knows = m_model.createProperty(ns+"knows");
 }

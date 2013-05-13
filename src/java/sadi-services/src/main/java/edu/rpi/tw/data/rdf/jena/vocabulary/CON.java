@@ -3,7 +3,6 @@ package edu.rpi.tw.data.rdf.jena.vocabulary;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.Resource;
 
 public class CON {
 	private static Model m_model = ModelFactory.createDefaultModel();

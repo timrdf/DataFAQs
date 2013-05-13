@@ -107,3 +107,5 @@ if __name__ == '__main__':
    print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
    print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
    sadi.publishTwistedService(resource, port=resource.dev_port)
+
+# TODO: incorporate __main__ from ckan/add-metadata.py
