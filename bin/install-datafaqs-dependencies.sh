@@ -36,7 +36,7 @@ fi
 sudo=""
 if [ "$1" == "--avoid-sudo" ]; then
    shift
-   echo "NOTE: sudo is required to install datafaqs dependencies." >&2
+   echo "NOTE: sudo is required to install datafaqs dependencies."
    # This option is here to support Prizms installer.
    exit 1
 elif [ "$1" == "--use-sudo" ]; then
