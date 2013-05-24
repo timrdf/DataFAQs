@@ -274,17 +274,28 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
           dataset['extras']['preferred_uri'] = input.con_preferredURI.first
 
       linksQuery = '''
+prefix owl:  <http://www.w3.org/2002/07/owl#>
 prefix void: <http://rdfs.org/ns/void#>
-select distinct ?otherbubble ?triples 
-where { 
-   <''' + input.subject + '''>
-     void:subset [
-       a void:Linkset;
-       void:target  <''' + input.subject + '''>,
-                    ?otherbubble;
-       void:triples ?triples;
-     ] .
-   filter(regex(str(?otherbubble),'^http://thedatahub.org/dataset/'))
+
+select distinct ?subset ?size ?other
+where {
+
+  {<''' + input.subject + '''> void:subset ?subset .
+  ?subset
+    a void:Linkset;
+    void:target  <''' + input.subject + '''>,
+                 ?other;
+    void:triples ?size}
+
+  union
+
+  {<''' + input.subject + '''> owl:sameAs ?ckan;
+    void:subset ?subset .
+  ?subset
+    a void:Linkset;
+    void:target  ?ckan,
+                 ?other;
+    void:triples ?size}
 }
 '''
       #
