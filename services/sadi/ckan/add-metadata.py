@@ -154,7 +154,7 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
          #   print e.message
          #   return
  
-      print dataset
+      #print dataset
 
       #                   lodcloud Level 1 "Title"
       # dcterms:title ==> ckan:title
@@ -273,34 +273,34 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
       if input.con_preferredURI:
           dataset['extras']['preferred_uri'] = input.con_preferredURI.first
 
-      linksQuery = '''
-prefix owl:  <http://www.w3.org/2002/07/owl#>
-prefix void: <http://rdfs.org/ns/void#>
-
-select distinct ?subset ?size ?other
-where {
-
-  {<''' + input.subject + '''> void:subset ?subset .
-  ?subset
-    a void:Linkset;
-    void:target  <''' + input.subject + '''>,
-                 ?other;
-    void:triples ?size}
-
-  union
-
-  {<''' + input.subject + '''> owl:sameAs ?ckan;
-    void:subset ?subset .
-  ?subset
-    a void:Linkset;
-    void:target  ?ckan,
-                 ?other;
-    void:triples ?size}
-}
-'''
       #
       # Extra: link:*
 
+      #      linksQuery = '''
+      #prefix owl:  <http://www.w3.org/2002/07/owl#>
+      #prefix void: <http://rdfs.org/ns/void#>
+      #
+      #select distinct ?subset ?size ?other
+      #where {
+      #
+      #  {<''' + input.subject + '''> void:subset ?subset .
+      #  ?subset
+      #    a void:Linkset;
+      #    void:target  <''' + input.subject + '''>,
+      #                 ?other;
+      #    void:triples ?size}
+      #
+      #  union
+      #
+      #  {<''' + input.subject + '''> owl:sameAs ?ckan;
+      #    void:subset ?subset .
+      #  ?subset
+      #    a void:Linkset;
+      #    void:target  ?ckan,
+      #                 ?other;
+      #    void:triples ?size}
+      #}
+      #'''
       #results = input.session.default_store.execute_sparql(linksQuery)
       #if results is not None:
       #   for bindings in results['results']['bindings']:
@@ -334,13 +334,30 @@ where {
          if str(bindings[0]) != str(input.subject):
             other = re.sub('^.*/dataset/','',str(bindings[0]))
             print linkedTo
-            if other not in linkedTo:
+            if other not in linkedTo and other != ckan_id:
                linkedTo.append(other)
                attribute = u'links:'+other
                print attribute + ' = ' + bindings[1]
                dataset['extras'][attribute] = int(bindings[1])
             else:
                print 'WARNING: ' + other + ' already had an assertion'
+
+      query = select("?other ?size").where((input.subject, ns.OWL['sameAs'],  "?ckan"),
+                                           (input.subject, ns.VOID['subset'],  "?linkset"),
+                                           ("?linkset",    ns.VOID['target'],  "?ckan"),
+                                           ("?linkset",    ns.VOID['target'],  "?other"),
+                                           ("?linkset",    ns.VOID['triples'], "?size"))
+      for bindings in input.session.default_store.execute(query):      # repeated from above
+         if str(bindings[0]) != str(input.subject):                    # repeated from above
+            other = re.sub('^.*/dataset/','',str(bindings[0]))         # repeated from above
+            print linkedTo                                             # repeated from above
+            if other not in linkedTo and other != ckan_id:             # repeated from above
+               linkedTo.append(other)                                  # repeated from above
+               attribute = u'links:'+other                             # repeated from above
+               print attribute + ' = ' + bindings[1]                   # repeated from above
+               dataset['extras'][attribute] = int(bindings[1])         # repeated from above
+            else:                                                      # repeated from above
+               print 'WARNING: ' + other + ' already had an assertion' # repeated from above
 
       # Tags
       if 'tags' not in dataset:
