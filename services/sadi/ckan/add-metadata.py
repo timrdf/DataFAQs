@@ -33,8 +33,10 @@ ns.register(dcat='http://www.w3.org/ns/dcat#')
 ns.register(sd='http://www.w3.org/ns/sparql-service-description#')
 ns.register(prov='http://www.w3.org/ns/prov#')
 ns.register(void='http://rdfs.org/ns/void#')
+ns.register(dcterms='http://purl.org/dc/terms/')
 ns.register(datafaqs='http://purl.org/twc/vocab/datafaqs#')
 ns.register(tag='http://www.holygoat.co.uk/owl/redwood/0.1/tags/')
+ns.register(dbpedia='http://dbpedia.org/resource/')
 
 THEDATAHUB = 'http://datahub.io'
 
@@ -412,6 +414,36 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
          print 'indexing ' + resource['url']
          dataset_resources[URIRef(resource['url'])] = resource
 
+
+      #
+      # void:dataDump (TODO: add dcat:distribution)
+      formatLabels = {
+         URIRef('http://www.w3.org/ns/formats/N-Triples'), 'application/x-ntriples' 
+      }
+      if len(input.void_dataDump) > 0:
+         dataDumpSR = input.void_dataDump.first
+         dataDump = URIRef(self.surfSubject(input.void_dataDump.first))
+         download_name = "Download"
+         download_format='unknown'
+         #if len(dataDumpSR.dcterms_format) > 0 and URIRef(self.surfSubject(dataDumpSR.dcterms_format.first)) in formatLabels:
+         #   download_format = formatLabels[URIRef(self.surfSubject(dataDumpSR.dcterms_format.first))]
+         if '.nt' in dataDump:
+            download_name = "N-Triples Download"
+            download_format = 'application/x-ntriples' 
+         elif '.rdf' in dataDump:
+            download_name = "RDF/XML Download"
+            download_format = 'application/rdf+xml' 
+         elif '.ttl' in dataDump:
+            download_name = "Turtle Download"
+            download_format = 'text/turtle' 
+
+         if dataDump not in dataset_resources:
+            # Resource with this URL did not exist.
+            print 'brand new dataDump ' + dataDump + ' ' + download_format
+            dataset['resources'].append( { 'name':   download_name,
+                                           'url':    str(dataDump), 
+                                           'format': download_format } )
+
       #
       # SPARQL Endpoint (two ways)
       sparqlEndpoint = False
@@ -443,9 +475,11 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
             title = 'a'
             if vocab in self.prefix:
                title = self.prefix[vocab]
-            dataset['resources'].append( { 'name':   title+' RDF Schema',
-                                           'url':    self.surfSubject(vocab), 
-                                           'format': 'meta/rdf-schema' } )
+               dataset['resources'].append( { 'name':   title+' RDF Schema',
+                                              'url':    self.surfSubject(vocab), 
+                                              'format': 'meta/rdf-schema' } )
+            else:
+               print 'NOTE: ' + vocab + ' not submitted to CKAN b/c it is not in prefix.cc' # to reduce load on CKAN, since it slows down and crashes.
       #
       # void:exampleResource (lodcloud Level 2 "example URI")
       for egResource in input.void_exampleResource:
@@ -480,6 +514,22 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
          else:
             print 'repeat void: ' + void
          #dataset['author_email'] = re.sub('^mailto:','',bindings[1])
+
+      query = select("?map").where(("?map", a,                       ns.DBPEDIA['Site_map']),
+                                   ("?map", ns.FOAF['primaryTopic'], input.subject))
+      for bindings in input.session.default_store.execute(query):
+         sitemap = bindings[0]
+         if sitemap not in dataset_resources:
+            print 'sitemap: ' + sitemap
+            dataset['resources'].append( { 'url':     sitemap, 
+                                           'resource_type': 'file',
+                                           'format':        'meta/sitemap',
+                                           'name':          'Sitemap',
+                                           'mimetype':       'application/xml',
+                                           'mimetype_inner': 'application/xml',
+                                           'description':    'Listing of all RDF datasets available.' } )
+         else:
+            print 'repeat sitemap: ' + sitemap
  
      
 
