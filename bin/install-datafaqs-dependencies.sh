@@ -185,7 +185,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
          echo
          if [ "$dryrun" != "true" ]; then
             pw=`whoami``date +%s | sed 's/^.......//'`
-            read -p "Q: Please specify a password for administering tomcat (default will be $pw): " upw
+            read -p "Q: Please specify a password for administering tomcat. NOTE: will appear in PLAIN TEXT at /etc/tomcat6/tomcat-users.xml (default will be $pw): " upw
             if [[ -n "$upw" ]]; then 
                pw=$upw
             fi
