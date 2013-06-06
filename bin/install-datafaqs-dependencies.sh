@@ -155,7 +155,11 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
             echo $sudo ln -s $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
                  $sudo ln -s $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
          fi
-         restart_tomcat="yes"
+         if [[ -e /var/lib/tomcat6/webapps/sadi-services.war ]]; then
+            restart_tomcat="yes"
+         else
+            echo "WARNING: could not create /var/lib/tomcat6/webapps/sadi-services.war"
+         fi
       fi   
    fi
 fi
