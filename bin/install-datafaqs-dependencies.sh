@@ -147,8 +147,14 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
       read -p "Q: May we install the Java SADI services using the command above? [y/n] " -u 1 install_it
       if [[ "$install_it" == [yY] ]]; then 
          $sudo rm -f /var/lib/tomcat6/webapps/sadi-services.war
-         echo $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
-              $sudo ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+         echo $sudo ln    $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+              $sudo ln    $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+
+         # Fall back to soft link if e.g. 'Invalid cross-device link'
+         if [[ ! -e /var/lib/tomcat6/webapps/sadi-services.war ]]; then
+            echo $sudo ln -s $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+                 $sudo ln -s $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+         fi
          restart_tomcat="yes"
       fi   
    fi
