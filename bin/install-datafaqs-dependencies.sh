@@ -152,6 +152,9 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
 
          # Fall back to soft link if e.g. 'Invalid cross-device link'
          if [[ ! -e /var/lib/tomcat6/webapps/sadi-services.war ]]; then
+            echo
+            echo "^- falling back to soft link since hard link failed"
+            echo
             echo $sudo ln -s $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
                  $sudo ln -s $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
          fi
@@ -168,6 +171,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       # Should contain:
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
+      echo "sudo grep '<role rolename=\"manager\"/>' /etc/tomcat6/tomcat-users.xml"
       if [[ ! `sudo grep '<role rolename="manager"/>' /etc/tomcat6/tomcat-users.xml` ]]; then
          echo
          echo $div
