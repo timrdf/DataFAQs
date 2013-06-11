@@ -201,7 +201,7 @@ class DatasetsByCKANTag(faqt.Service):
          self.ckan.package_search(query) #self.ckan.package_search('tags:lod+tags:helpme')
          tagged = self.ckan.last_message
          for dataset in tagged['results']:
-            ckan_uri = 'http://thedatahub.org/dataset/' + dataset
+            ckan_uri = 'http://datahub.io/dataset/' + dataset
             dataset = Dataset(ckan_uri)
             dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
             dataset.rdf_type.append(ns.DCAT['Dataset'])
@@ -212,7 +212,7 @@ class DatasetsByCKANTag(faqt.Service):
    def doIt(self, output):
       Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
       for dataset in self.intersected:
-         ckan_uri = 'http://thedatahub.org/dataset/' + dataset
+         ckan_uri = 'http://datahub.io/dataset/' + dataset
          dataset = Dataset(ckan_uri)
          dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
          dataset.rdf_type.append(ns.DCAT['Dataset'])
