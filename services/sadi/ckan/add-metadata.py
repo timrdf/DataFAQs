@@ -418,7 +418,7 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
       #
       # void:dataDump (TODO: add dcat:distribution)
       formatLabels = {
-         URIRef('http://www.w3.org/ns/formats/N-Triples'), 'application/x-ntriples' 
+         URIRef('http://www.w3.org/ns/formats/N-Triples'): 'application/x-ntriples' 
       }
       if len(input.void_dataDump) > 0:
          dataDumpSR = input.void_dataDump.first
@@ -532,7 +532,22 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
             print 'repeat sitemap: ' + sitemap
  
      
-
+      query = select("?mappings").where((input.subject, ns.PROV['wasDerivedFrom'], "?mappings"),
+                                                                                  ("?mappings", a, ns.CONVERSION['VocabularyMappings']))
+      for bindings in input.session.default_store.execute(query):
+         mappings = bindings[0]
+         if mappings not in dataset_resources:
+            print 'mappings: ' + mappings
+            dataset['resources'].append( { 'url':             mappings, 
+                                           'resource_type':  'file',
+                                           'format':         'mapping/twc-conversion',
+                                           'name':           'Conversion Enhancement Parameters',
+                                           'mimetype':       'text/turtle',
+                                           'mimetype_inner': 'text/turtle',
+                                           'description':    '' } )
+         else:
+            print 'repeat mappings: ' + mappings
+ 
       # POST the new details of the dataset.
       print dataset
       ckan.package_entity_put(dataset)
