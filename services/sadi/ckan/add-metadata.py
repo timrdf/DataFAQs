@@ -88,6 +88,7 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
 
    def prefixcc(self, prefix, namespace):
       if prefix is not None:
+         print 'Requesting http://prefix.cc/' + prefix + '.file.json'
          response = getResponse('http://prefix.cc/' + prefix + '.file.json')
          if response.status == 200:
             ns = response.msg.dict[prefix]
