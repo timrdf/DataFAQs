@@ -52,7 +52,7 @@ ns.register(prov='http://www.w3.org/ns/prov#')
 ns.register(foaf='http://xmlns.com/foaf/0.1/')
 
 # The Service itself
-class DatasetsByCKANTag(faqt.Service):
+class DatasetsByCKANTag(faqt.CKANReader):
 
    # Service metadata.
    label                  = 'by-ckan-tag'
@@ -116,7 +116,10 @@ class DatasetsByCKANTag(faqt.Service):
       # TODO: handle case where moat_name is not present - parse the URI (yuck).
  
       if input.moat_name:
-         print '   ' + input.moat_name.first
+         self.ckan = self.getCKANAPI(input)
+
+         datahub = re.sub('/api$','',self.ckan.base_location)
+         print '   ' + input.moat_name.first + ' within ckan ' + datahub
 
          #if self.lastCalled is None:
          #   self.lastCalled = datetime.datetime.now()
@@ -198,10 +201,13 @@ class DatasetsByCKANTag(faqt.Service):
          for tag in Tag.all():
             query = query + plus + 'tags:' + tag.moat_name.first
             plus = '+'
+         print 'package_search ' + query
          self.ckan.package_search(query) #self.ckan.package_search('tags:lod+tags:helpme')
          tagged = self.ckan.last_message
+         print 'package_search returned'
          for dataset in tagged['results']:
-            ckan_uri = 'http://datahub.io/dataset/' + dataset
+            print '  ' + dataset + ' -> ' + datahub + '/dataset/' + dataset
+            ckan_uri = datahub + '/dataset/' + dataset
             dataset = Dataset(ckan_uri)
             dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
             dataset.rdf_type.append(ns.DCAT['Dataset'])
@@ -212,7 +218,7 @@ class DatasetsByCKANTag(faqt.Service):
    def doIt(self, output):
       Dataset = output.session.get_class(ns.DATAFAQS['CKANDataset'])
       for dataset in self.intersected:
-         ckan_uri = 'http://datahub.io/dataset/' + dataset
+         ckan_uri = datahub + '/dataset/' + dataset
          dataset = Dataset(ckan_uri)
          dataset.rdf_type.append(ns.DATAFAQS['CKANDataset'])
          dataset.rdf_type.append(ns.DCAT['Dataset'])
