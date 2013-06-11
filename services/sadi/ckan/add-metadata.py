@@ -505,7 +505,7 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
          void = bindings[0]
          if void not in dataset_resources:
             print 'void: ' + void
-            dataset['resources'].append( { 'url':     void, 
+            dataset['resources'].append( { 'url':     self.surfSubject(void), 
                                            'resource_type': 'file',
                                            'format':        'meta/void',
                                            'name':          'VoID Listing',
@@ -522,7 +522,7 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
          sitemap = bindings[0]
          if sitemap not in dataset_resources:
             print 'sitemap: ' + sitemap
-            dataset['resources'].append( { 'url':     sitemap, 
+            dataset['resources'].append( { 'url':     self.surfSubject(sitemap), 
                                            'resource_type': 'file',
                                            'format':        'meta/sitemap',
                                            'name':          'Sitemap',
@@ -539,7 +539,7 @@ class AddCKANMetadata(faqt.CKANReaderWriter):
          mappings = bindings[0]
          if mappings not in dataset_resources:
             print 'mappings: ' + mappings
-            dataset['resources'].append( { 'url':             mappings, 
+            dataset['resources'].append( { 'url':             self.surfSubject(mappings), 
                                            'resource_type':  'file',
                                            'format':         'mapping/twc-conversion',
                                            'name':           'Conversion Enhancement Parameters',
