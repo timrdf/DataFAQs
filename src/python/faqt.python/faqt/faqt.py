@@ -196,6 +196,9 @@ class CKANReader(Service):
       if base is None and re.match('^.*/dataset/',input.subject):
          base = re.sub('/dataset/.*$','',str(input.subject))
          print 'CKAN (by parsing dataset URI): ' + base
+      if base is None and re.match('^.*/tag/',input.subject):
+         base = re.sub('/tag/.*$','',str(input.subject))
+         print 'CKAN (by parsing tag URI): ' + base
 
       if api_key is None and 'X_CKAN_API_Key' in os.environ:
          # Obtain the api key from the shell environment variable (hope that it's right...)
