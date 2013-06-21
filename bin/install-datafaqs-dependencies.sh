@@ -178,6 +178,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
          echo "/etc/tomcat6/tomcat-users.xml does not contain the manager role, which is needed to administer tomcat."
          echo
          if [ "$dryrun" != "true" ]; then
+            echo sudo cat /etc/tomcat6/tomcat-users.xml
             sudo cat /etc/tomcat6/tomcat-users.xml | awk '$1 == "</tomcat-users>" {print "<role rolename=\"manager\"/>"} {print}' | awk '{print "     "$0}'
             echo
             read -p "Q: Add manager role to tomcat by adding the above to /etc/tomcat6/tomcat-users.xml? [y/n] " -u 1 install_it
@@ -325,8 +326,8 @@ if [ "$install_it" == "y" ]; then
    #echo sudo easy_install rdfextras # still got error even after installing sadi.python
    #sudo easy_install rdfextras
 
-   #echo sudo easy_install -U rdflib==3.2.0
-   #sudo easy_install -U rdflib==3.2.0
+   echo sudo easy_install -U rdflib==3.2.1
+   sudo easy_install -U rdflib==3.2.1
 
    #echo sudo easy_install -U surf.rdflib
    #sudo easy_install -U surf.rdflib
