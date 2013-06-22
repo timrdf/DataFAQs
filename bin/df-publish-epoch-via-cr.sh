@@ -17,7 +17,7 @@ if [ `${CSV2RDF4LOD_HOME}/bin/util/is-pwd-a.sh $ACCEPTABLE_PWDs` != "yes" ]; the
    exit 1
 fi
 
-epochID=${1%/}
+epochID=${1%'/'}
 epochID=${epochID#'__PIVOT_epoch/'}
 
 echo $epochID
