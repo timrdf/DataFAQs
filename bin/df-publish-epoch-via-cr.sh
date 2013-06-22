@@ -23,8 +23,8 @@ epochID=${epochID#'__PIVOT_epoch/'}
 
 echo $epochID
 
-if [[ ! -e ../$epochID ]]; then
-   mkdir -p ../$epochID
+if [[ ! -e ../$epochID/source ]]; then
+   mkdir -p ../$epochID/source
 fi
 
 find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf
