@@ -18,12 +18,12 @@ if [ `${CSV2RDF4LOD_HOME}/bin/util/is-pwd-a.sh $ACCEPTABLE_PWDs` != "yes" ]; the
    exit 1
 fi
 
-epochID=${1}
+epochID=${1%'/'}
 epochID=${epochID#'__PIVOT_epoch/'}
 
 echo $epochID
 
-find __PIVOT_epoch/2013-06-12/__PIVOT_dataset -name post.nt.rdf
+find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf
 
-find __PIVOT_faqt -name evaluation.rdf | grep __PIVOT_epoch/2013-06-12
+find __PIVOT_faqt -name evaluation.rdf | grep __PIVOT_epoch/$epochID
 
