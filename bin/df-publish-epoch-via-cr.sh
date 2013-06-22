@@ -23,6 +23,10 @@ epochID=${epochID#'__PIVOT_epoch/'}
 
 echo $epochID
 
+if [[ ! -e ../version/$epochID ]]; then
+   mkdir -p ../version/$epochID
+fi
+
 find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf
 
 find __PIVOT_faqt -name evaluation.rdf | grep __PIVOT_epoch/$epochID
