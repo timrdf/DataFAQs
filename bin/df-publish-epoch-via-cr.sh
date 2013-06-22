@@ -27,7 +27,10 @@ if [[ ! -e ../$epochID/source ]]; then
    mkdir -p ../$epochID/source
 fi
 
-find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf
+for posted in `find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf`; do
+   md5=`md5.sh -qs "$posted"`
+   ln -s $posted ../$epochID/source/posted-$md5.rdf
+done
 
 find __PIVOT_faqt -name evaluation.rdf | grep __PIVOT_epoch/$epochID
 
