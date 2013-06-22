@@ -40,3 +40,7 @@ for evaluation in `find __PIVOT_faqt -name evaluation.rdf | grep __PIVOT_epoch/$
    echo ln -s `pwd`/$evaluation ../$epochID/source/evaluation-$md5.rdf
         ln -s `pwd`/$evaluation ../$epochID/source/evaluation-$md5.rdf
 done
+
+pushd ../$epochID &> /dev/null
+   aggregate-source-rdf.sh --compress --turtle --link-as-latest source/*.rdf
+popd &> /dev/null
