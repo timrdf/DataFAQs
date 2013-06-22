@@ -31,8 +31,8 @@ rm -rf ../$epochID/source/*.rdf
 
 for posted in `find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf`; do
    md5=`md5.sh -qs "$posted"`
-   echo ln -s $posted ../$epochID/source/posted-$md5.rdf
-        ln -s $posted ../$epochID/source/posted-$md5.rdf
+   echo ln -s $posted ../$epochID/source/post-$md5.rdf
+        ln -s $posted ../$epochID/source/post-$md5.rdf
 done
 
 for evaluation in `find __PIVOT_faqt -name evaluation.rdf | grep __PIVOT_epoch/$epochID`; do
