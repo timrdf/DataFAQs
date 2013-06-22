@@ -3,7 +3,7 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/tree/master/bin/df-publish-epoch-via-cr.sh> .
 #
 
-if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+if [[ $# -lt 1 || "$1" == "--help" || "$1" == "-h" ]]; then
    echo "usage: `basename $0` <epoch>"
    echo "  Create publish/bin/publish.sh and invoke for every conversion cockpit within the current directory tree."
    echo "           <epoch> : e.g __PIVOT_epoch/2013-06-22/, 2013-06-22"
@@ -17,7 +17,7 @@ if [ `${CSV2RDF4LOD_HOME}/bin/util/is-pwd-a.sh $ACCEPTABLE_PWDs` != "yes" ]; the
    exit 1
 fi
 
-epochID=${1%'/'}
+epochID=${1}
 epochID=${epochID#'__PIVOT_epoch/'}
 
 echo $epochID
