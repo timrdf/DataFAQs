@@ -7,6 +7,7 @@ if [[ $# -lt 1 || "$1" == "--help" || "$1" == "-h" ]]; then
    echo "usage: `basename $0` <epoch>"
    echo "  Create publish/bin/publish.sh and invoke for every conversion cockpit within the current directory tree."
    echo "           <epoch> : e.g __PIVOT_epoch/2013-06-22/, 2013-06-22"
+   exit
 fi
 
 # cr:data-root cr:source cr:directory-of-datasets cr:dataset cr:directory-of-versions cr:conversion-cockpit
