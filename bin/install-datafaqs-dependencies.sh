@@ -113,7 +113,8 @@ function offer_install_aptget { # NOTE: This adds "dryrun" so that Prizms can in
 }
 
 if [ "$dryrun" != "true" ]; then
-   $sudo apt-get update &> /dev/null
+   echo $sudo apt-get update
+        $sudo apt-get update &> /dev/null
 fi
 
 offer_install_with_apt 'git'          'git-core' # These are dryrun safe.
