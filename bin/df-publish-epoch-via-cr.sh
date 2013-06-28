@@ -29,6 +29,10 @@ fi
 
 rm -rf ../$epochID/source/*.rdf
 
+ln -s `pwd`/__PIVOT_epoch/$epochID/epoch.ttl             ../$epochID/source/
+ln -s `pwd`/__PIVOT_epoch/$epochID/datasets.ttl.rdf      ../$epochID/source/
+ln -s `pwd`/__PIVOT_epoch/$epochID/faqt-services.ttl.rdf ../$epochID/source/
+
 for posted in `find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf`; do
    md5=`md5.sh -qs "$posted"`
    echo ln -s `pwd`/$posted ../$epochID/source/post-$md5.rdf
