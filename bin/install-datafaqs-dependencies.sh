@@ -168,7 +168,7 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
    fi
 fi
 if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
-   if [[ -n "$sudo" && `sudo -v` ]]; then
+   if [[ -n "$sudo" && `sudo -v &> /dev/null` ]]; then
       # Should contain:
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
