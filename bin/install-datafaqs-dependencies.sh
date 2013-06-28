@@ -170,7 +170,7 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
    fi
 fi
 if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
-   if [[ -n "sudo" ]]; then
+   if [[ -n "$sudo" ]]; then
       # Should contain:
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
@@ -196,6 +196,7 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
          fi
       fi
 
+      echo "sudo grep /etc/tomcat6/tomcat-users.xml"
       if [[ ! `sudo grep "<user username=\"\`whoami\`\".*roles=\"manager\"/>" /etc/tomcat6/tomcat-users.xml` ]]; then
          echo
          echo $div
