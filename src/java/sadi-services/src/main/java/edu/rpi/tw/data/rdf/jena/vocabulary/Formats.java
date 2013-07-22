@@ -61,6 +61,11 @@ public class Formats {
 		formats.put("x-trig",     null);
 	}
 
+	/**
+	 * 
+	 * @param label
+	 * @return
+	 */
 	public static Resource getFormat(String label) {
 		return formats.containsKey(label) ? formats.get(label) : null;
 	}
