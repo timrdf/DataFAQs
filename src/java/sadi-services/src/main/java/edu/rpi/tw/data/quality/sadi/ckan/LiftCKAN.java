@@ -1,5 +1,7 @@
 package edu.rpi.tw.data.quality.sadi.ckan;
 
+import java.util.HashMap;
+
 import org.apache.log4j.Logger;
 import org.ckan.CKANException;
 import org.ckan.Client;
@@ -49,6 +51,8 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 	
 	private static final Logger log = Logger.getLogger(LiftCKAN.class);
 	private static final long serialVersionUID = 1L;
+	
+	private HashMap<String,Resource> ephemeralFormats = new HashMap<String,Resource>();
 
 	/**
 	 * 
@@ -184,7 +188,12 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 	        			distribution.addProperty(DCTerms.format, formatPW);
 	        			distribution.addProperty(DCTerms.format, formatPRN);
 	        		}else {
-	    				output.addProperty(DataFAQs.todo, "resource of type " + resource.getFormat());
+	        			distribution.addProperty(FOAF.isPrimaryTopicOf, resourceR);
+	        			distribution.addProperty(DCAT.downloadURL, distribution);
+	        			
+	        			Resource format = getFormat(resource.getFormat(), m);
+	        			
+	        			distribution.addProperty(DCTerms.format, format);
 	        		}
         		}
         	}
@@ -312,6 +321,20 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
         }catch ( CKANException e ) {
             log.error("CKANException " + e.getMessage());
         }
+	}
+	
+	private Resource getFormat(String label, Model m) {
+		Resource formatR = Formats.getFormat(label);
+		if( formatR == null ) {
+			if( !ephemeralFormats.containsKey(label) ) {
+				formatR = m.createResource(DCTerms.FileFormat);
+				ephemeralFormats.put(label, formatR);
+			}
+			formatR = ephemeralFormats.get(label);
+		}
+		formatR.addProperty(RDFS.label, label);
+		formatR.addProperty(DataFAQs.todo, "URI for FileFormat " + label);
+		return formatR;
 	}
 	
 	private void tryTitle(Dataset ds, Resource output) {
