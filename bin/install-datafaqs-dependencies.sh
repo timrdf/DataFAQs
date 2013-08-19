@@ -136,13 +136,16 @@ offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "de
 # (from your local machine) ssh -L 9090:localhost:8080 -p 2216 -l smithj aquarius.tw.rpi.edu
 #                           load http://localhost:9090
 restart_tomcat="no"
+diff $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/sadi-services.war &> /dev/null
+sadi_war_is_different=$?
 if [[ -e /var/lib/tomcat6/webapps/               && \
       -e $HOME/services/sadi/sadi-services.war   && \
     ! -e /var/lib/tomcat6/webapps/sadi-services.war \
     ||                                                 \
       -e $HOME/services/sadi/sadi-services.war      && \
       -e /var/lib/tomcat6/webapps/sadi-services.war && \
-      $HOME/services/sadi/sadi-services.war -nt /var/lib/tomcat6/webapps/sadi-services.war ]]; then
+      $HOME/services/sadi/sadi-services.war -nt /var/lib/tomcat6/webapps/sadi-services.war && \
+      $sadi_war_is_different ]]; then
    echo $TODO ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
    ls -lt $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/sadi-services.war >&2
    if [ "$dryrun" != "true" ]; then
