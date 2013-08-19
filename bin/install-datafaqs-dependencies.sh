@@ -144,6 +144,7 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
       -e /var/lib/tomcat6/webapps/sadi-services.war && \
       $HOME/services/sadi/sadi-services.war -nt /var/lib/tomcat6/webapps/sadi-services.war ]]; then
    echo $TODO ln $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/
+   ls -lt $HOME/services/sadi/sadi-services.war /var/lib/tomcat6/webapps/sadi-services.war >&2
    if [ "$dryrun" != "true" ]; then
       read -p "Q: May we install the Java SADI services using the command above? [y/n] " -u 1 install_it
       if [[ "$install_it" == [yY] ]]; then 
