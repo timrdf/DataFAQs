@@ -97,7 +97,7 @@ function offer_install_aptget { # NOTE: This adds "dryrun" so that Prizms can in
          echo "$TODO $sudo apt-get install $package"
          echo 
          if [ "$dryrun" != "true" ]; then
-            read -p "Q: May we install the package above using the command above? [y/n] " -u 1 install_it
+            read -p "Q: May we install the package $package using the command above? [y/n] " -u 1 install_it
             if [[ "$install_it" == [yY] ]]; then 
                echo $sudo apt-get install $package
                     $sudo apt-get install $package
