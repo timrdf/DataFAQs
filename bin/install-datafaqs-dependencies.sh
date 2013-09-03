@@ -172,6 +172,7 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
    fi
 fi
 i_can_sudo=`sudo -v &> /dev/null`
+i_can_sudo=$?
 if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
    if [[ -n "$sudo" && $i_can_sudo ]]; then
       # Should contain:
