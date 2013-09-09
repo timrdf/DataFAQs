@@ -174,20 +174,10 @@ fi
 i_can_sudo=`sudo -v &> /dev/null`
 i_can_sudo=$?
 if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
-   if [[ -n "$sudo" && $i_can_sudo ]]; then
+   if [[ -n "$sudo" && $i_can_sudo -eq 0 ]]; then
       # Should contain:
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
-      if [[ 1 ]]; then
-         echo one is true  >&2
-      else
-         echo one is false  >&2
-      fi
-      if [[ 0 ]]; then
-         echo zero is true  >&2
-      else
-         echo zero is false  >&2
-      fi
       echo "sudo $sudo ican $i_can_sudo" >&2
       echo "sudo grep '<role rolename=\"manager\"/>' /etc/tomcat6/tomcat-users.xml" >&2
       if [[ ! `sudo grep '<role rolename="manager"/>' /etc/tomcat6/tomcat-users.xml` ]]; then
