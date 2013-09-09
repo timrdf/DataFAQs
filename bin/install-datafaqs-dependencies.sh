@@ -178,6 +178,16 @@ if [[ -e /etc/tomcat6/tomcat-users.xml ]]; then
       # Should contain:
       # <role rolename="manager"/>
       # <user username="lebot" password="lodcloud" roles="manager"/>
+      if [[ 1 ]]; then
+         echo one is true
+      else
+         echo one is false
+      fi
+      if [[ 0 ]]; then
+         echo zero is true
+      else
+         echo zero is false
+      fi
       echo "sudo $sudo ican $i_can_sudo" >&2
       echo "sudo grep '<role rolename=\"manager\"/>' /etc/tomcat6/tomcat-users.xml" >&2
       if [[ ! `sudo grep '<role rolename="manager"/>' /etc/tomcat6/tomcat-users.xml` ]]; then
