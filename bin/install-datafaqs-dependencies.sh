@@ -50,6 +50,9 @@ elif [ "$dryrun" != "true" ]; then
    echo
 fi
 
+i_can_sudo=`sudo -v &> /dev/null`
+i_can_sudo=$?
+
 function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function from prizms installer (below).
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
    # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
@@ -112,7 +115,7 @@ function offer_install_aptget { # NOTE: This adds "dryrun" so that Prizms can in
    return $installed
 }
 
-if [ "$dryrun" != "true" ]; then
+if [[ "$dryrun" != "true" && "$i_can_sudo" -eq 0 ]]; then
    echo $sudo apt-get update
         $sudo apt-get update &> /dev/null
 fi
