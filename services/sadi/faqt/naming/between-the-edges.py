@@ -121,7 +121,7 @@ class BetweenTheEdges(faqt.Service):
    @staticmethod
    def walkPath(base,urlpath,output):
 
-      print '   walking: "' + urlpath + '"'
+      print >> sys.stderr, '   walking: "' + urlpath + '"'
 
       Node = output.session.get_class(ns.BTE['Node'])
 
@@ -147,7 +147,7 @@ class BetweenTheEdges(faqt.Service):
       #
       extension = BetweenTheEdges.extension(urlpath,me) # TODO: This is not asserting the triple.
       if extension is not None:
-         print '              '+re.sub('.',' ',urlpath) + extension
+         print >> sys.stderr, '              '+re.sub('.',' ',urlpath) + extension
          me.bte_extension = extension
          me.save()
 
@@ -159,7 +159,7 @@ class BetweenTheEdges(faqt.Service):
       if match:
          trimmed_path = match.group(1)
          step         = match.group(2)
-         print '             ' + urlpath + ' -> "' + trimmed_path + '" + / + ' + step
+         print >> sys.stderr, '             ' + urlpath + ' -> "' + trimmed_path + '" + / + ' + step
          me.bte_step = step
 
          broader = output.session.get_resource(base+trimmed_path,Node)
@@ -172,14 +172,14 @@ class BetweenTheEdges(faqt.Service):
          me.save()
          return depth
       else:
-         print '           ' + base + ' + "' + urlpath + '" is root. ' + me.subject
+         print >> sys.stderr, '           ' + base + ' + "' + urlpath + '" is root. ' + me.subject
          me.bte_depth = 0
          me.save()
          return 0
 
    def process(self, input, output):
 
-      print 'processing ' + input.subject
+      print >> sys.stderr, 'processing ' + input.subject
 
       length = BetweenTheEdges.length(input,output)
 
@@ -225,7 +225,26 @@ class BetweenTheEdges(faqt.Service):
 resource = BetweenTheEdges()
 
 # Used when this service is manually invoked from the command line (for testing).
+#
+# Usage: <input-rdf-file> [input-rdf-file-syntax] [output-rdf-file]
+#
 if __name__ == '__main__':
-   print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
-   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
-   sadi.publishTwistedService(resource, port=resource.dev_port)
+
+   if len(sys.argv) == 0:
+      print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
+      print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
+      sadi.publishTwistedService(resource, port=resource.dev_port)
+   else:
+      reader= open(sys.argv[1],"r")
+      mimeType = "application/rdf+xml"
+      if len(sys.argv) > 2:
+         mimeType = sys.argv[2]
+      if len(sys.argv) > 3:
+         writer = open(sys.argv[3],"w")
+
+      graph = resource.processGraph(reader,mimeType)
+
+      if len(sys.argv) > 3:
+         writer.write(resource.serialize(graph,mimeType))
+      else:
+         print resource.serialize(graph,mimeType)
