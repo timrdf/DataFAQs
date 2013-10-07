@@ -121,7 +121,7 @@ class BetweenTheEdges(faqt.Service):
    @staticmethod
    def walkPath(base,urlpath,output):
 
-      print >> sys.stderr, '   walking: "' + urlpath + '"'
+      print >> sys.stderr, '   walking: "' + urlpath + '"' #+ ' (base = ' + base + ')'
 
       Node = output.session.get_class(ns.BTE['Node'])
 
@@ -131,6 +131,7 @@ class BetweenTheEdges(faqt.Service):
          # ^ This should only occur when first called by #process(),
          # since walkPath does not include a trailing slash its 
          # recursive calls.
+         # FWIW, this is done in process() for URIs with fragIDs
          trimmed_path = re.sub('/$','',urlpath)
          broader = output.session.get_resource(base+trimmed_path,Node)
          broader.rdf_type.append(ns.BTE['Node'])
@@ -138,18 +139,16 @@ class BetweenTheEdges(faqt.Service):
          output.bte_broader = broader
          return 1 + BetweenTheEdges.walkPath(base, trimmed_path, output)
 
-      me = output.session.get_resource(base+urlpath,Node) # TODO: does a get_resource replace the previous one?
+      me = output.session.get_resource(base+urlpath,Node) if base+urlpath != str(output.subject) else output
       me.rdf_type.append(ns.BTE['Node'])
 
       # e.g.
       #     "http://dailymed.nlm.nih.gov/dailymed/help.cfm"
       #     "http://healthit.hhs.gov/portal/server.pt"
       #
-      extension = BetweenTheEdges.extension(urlpath,me) # TODO: This is not asserting the triple.
+      extension = BetweenTheEdges.extension(urlpath,me)
       if extension is not None:
          print >> sys.stderr, '              '+re.sub('.',' ',urlpath) + extension
-         me.bte_extension = extension
-         me.save()
 
       # e.g.
       #      "/"
@@ -165,8 +164,8 @@ class BetweenTheEdges(faqt.Service):
          broader = output.session.get_resource(base+trimmed_path,Node)
          broader.rdf_type.append(ns.BTE['Node'])
          broader.save()
-
          me.bte_broader = broader
+
          depth = 1 + BetweenTheEdges.walkPath(base, trimmed_path, output)
          me.bte_depth = depth
          me.save()
@@ -183,11 +182,6 @@ class BetweenTheEdges(faqt.Service):
 
       length = BetweenTheEdges.length(input,output)
 
-      if re.match('.*/$',input.subject):
-         output.rdf_type.append(ns.BTE['SlashEndURI'])
-      elif re.match('.*#$',input.subject):
-         output.rdf_type.append(ns.BTE['HashEndURI'])
-
       #
       # Using urlparse - http://docs.python.org/2/library/urlparse.html
       # e.g. ParseResult(scheme='http', netloc='www.cwi.nl:80', path='/%7Eguido/Python.html', params='', query='', fragment='')
@@ -195,8 +189,23 @@ class BetweenTheEdges(faqt.Service):
       url6 = urlparse(str(input.subject))
       scheme   = BetweenTheEdges.scheme(url6,output)
       netloc   = BetweenTheEdges.netloc(url6,output)
-      path     = BetweenTheEdges.path(url6,output)
-      fragment = BetweenTheEdges.fragment(url6,output)
+      path     = BetweenTheEdges.path(url6,output)     # Does NOT include ending '#'.
+      fragment = BetweenTheEdges.fragment(url6,output) # returns portion after '#'; if just '#' returns None.
+
+      if re.match('.*/$',input.subject):
+         # URI ends in '/'
+         output.rdf_type.append(ns.BTE['SlashEndURI'])
+         fragDepth = 0
+      elif re.match('.*#$',input.subject):
+         # URI ends in '#'
+         output.rdf_type.append(ns.BTE['HashEndURI'])
+         fragDepth = 1 
+      elif fragment is not None and len(fragment):
+         fragDepth = 1 
+      else:
+         fragDepth = 0
+
+      # TODO: "netloc" fails if it's an IP.
 
       # <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> 
       #    a bte:RDFNode;
@@ -207,14 +216,24 @@ class BetweenTheEdges(faqt.Service):
       #    bte:length                                                         57;
 
       if scheme in ['http'] and path is not None:
+         if fragDepth > 0:
+            # FWIW, this is done in walkPath() for URIs ending in '/'
+            Node = output.session.get_class(ns.BTE['Node'])
+            trimmed_path = re.sub('#.*$','',input.subject)
+            print >> sys.stderr, '   handling "' + trimmed_path + '#..."' 
+            broader = output.session.get_resource(trimmed_path,Node)
+            broader.rdf_type.append(ns.BTE['Node'])
+            broader.save()
+            output.bte_broader = broader
+
          pathDepth = BetweenTheEdges.walkPath(scheme+'://'+netloc , path, output)
-         fragDepth = 1 if fragment is not None and len(fragment) else 0
          # <http://bioportal.bioontology.org/>                         depth 1 ('' after the slash)
          # <http://aidsinfo.nih.gov/api>                               depth 1
          # <http://bhpr.hrsa.gov/healthworkforce/default.htm>          depth 2
          # <http://bioportal.bioontology.org/ontologies/umls/>         depth 3 ('' after the slash)
          # <http://bioportal.bioontology.org/ontologies/umls/cui>      depth 3
-         # <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> depth 3 (fragID adds one)
+         # <http://dailymed.nlm.nih.gov/dailymed/help.cfm#>            depth 3 (hash adds one)
+         # <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices> depth 3 
          # <http://aspe.hhs.gov/ftp/hsp/TANF-data/>                    depth 4 ('' after the slash)
          output.bte_depth = pathDepth + fragDepth
 
