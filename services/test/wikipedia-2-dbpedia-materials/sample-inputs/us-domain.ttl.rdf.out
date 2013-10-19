@@ -1,0 +1,5 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.w3.org/ns/prov#">
+  <j.0:Entity rdf:about="http://en.wikipedia.org/wiki/.us"/>
+</rdf:RDF>

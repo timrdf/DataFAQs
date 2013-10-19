@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="?xsl" ?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:mygrid="http://www.mygrid.org.uk/mygrid-moby-service#"
+    xmlns:j.0="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <mygrid:serviceDescription rdf:about="">
+    <mygrid:hasOperation>
+      <mygrid:operation>
+        <mygrid:outputParameter>
+          <mygrid:parameter>
+            <mygrid:objectType rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+          </mygrid:parameter>
+        </mygrid:outputParameter>
+        <mygrid:inputParameter>
+          <mygrid:parameter>
+            <mygrid:objectType rdf:resource="http://www.geonames.org/ontology#WikipediaArticle"/>
+          </mygrid:parameter>
+        </mygrid:inputParameter>
+      </mygrid:operation>
+    </mygrid:hasOperation>
+    <mygrid:providedBy>
+      <mygrid:organisation>
+        <mygrid:authoritative rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</mygrid:authoritative>
+        <j.0:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >lebot@rpi.edu</j.0:creator>
+      </mygrid:organisation>
+    </mygrid:providedBy>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >wikipedia-2-dbpedia</rdfs:label>
+    <mygrid:hasServiceNameText rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >wikipedia-2-dbpedia</mygrid:hasServiceNameText>
+  </mygrid:serviceDescription>
+</rdf:RDF>

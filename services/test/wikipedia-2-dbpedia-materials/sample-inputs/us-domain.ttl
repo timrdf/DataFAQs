@@ -1,0 +1,2 @@
+@prefix gn: <http://www.geonames.org/ontology#> .
+<http://en.wikipedia.org/wiki/.us> a gn:WikipediaArticle .
