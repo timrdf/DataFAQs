@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/rdf+xml" -d @opendap.ttl.rdf http://localhost:8080/sadi-services/git2prov > opendap.ttl.rdf.out
