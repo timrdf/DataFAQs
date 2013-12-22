@@ -1,0 +1,4 @@
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+<https://github.com/tetherless-world/opendap.git> a doap:GitRepository .
+<git@github.com:tetherless-world/opendap.git>     a doap:GitRepository .
