@@ -247,6 +247,8 @@ resource = BetweenTheEdges()
 #
 # Usage: <input-rdf-file> [input-rdf-file-syntax] [output-rdf-file]
 #
+# If dependency issues, see https://github.com/timrdf/DataFAQs/issues/125
+#
 if __name__ == '__main__':
 
    if len(sys.argv) == 0:
