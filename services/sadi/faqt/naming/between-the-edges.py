@@ -215,7 +215,7 @@ class BetweenTheEdges(faqt.Service):
       #    bte:fragment                                            "webservices";
       #    bte:length                                                         57;
 
-      if scheme in ['http'] and path is not None:
+      if scheme in ['http', 'https'] and path is not None:
          if fragDepth > 0:
             # FWIW, this is done in walkPath() for URIs ending in '/'
             Node = output.session.get_class(ns.BTE['Node'])
