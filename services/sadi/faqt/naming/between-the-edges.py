@@ -21,6 +21,8 @@ from urlparse import urlparse, urlunparse
 import urllib
 import urllib2
 
+import os.path
+
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
@@ -245,7 +247,7 @@ resource = BetweenTheEdges()
 
 # Used when this service is manually invoked from the command line (for testing).
 #
-# Usage: <input-rdf-file> [input-rdf-file-syntax] [output-rdf-file]
+# Usage: <input-rdf-file> [input-rdf-file-syntax] ( [output-rdf-file] | -od <directory> )
 #
 # If dependency issues, see https://github.com/timrdf/DataFAQs/issues/125
 #
@@ -260,7 +262,12 @@ if __name__ == '__main__':
       mimeType = "application/rdf+xml"
       if len(sys.argv) > 2:
          mimeType = sys.argv[2]
-      if len(sys.argv) > 3:
+      if len(sys.argv) == 5 and sys.argv[3] == '-od':
+         print sys.argv[4]+"/"+os.path.basename(sys.argv[1])+".bte.ttl"
+         if not os.path.exists(sys.argv[4]):
+            os.makedirs(sys.argv[4])
+         writer = open(sys.argv[4]+"/"+os.path.basename(sys.argv[1])+".bte.ttl","w")
+      elif len(sys.argv) > 3:
          writer = open(sys.argv[3],"w")
 
       graph = resource.processGraph(reader,mimeType)
