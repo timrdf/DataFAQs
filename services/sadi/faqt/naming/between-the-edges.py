@@ -123,9 +123,9 @@ class BetweenTheEdges(faqt.Service):
    @staticmethod
    def walkPath(base,urlpath,output):
 
-      debug = False
+      my_print_debug = False
 
-      if debug:
+      if my_print_debug:
          print >> sys.stderr, '   walking: "' + urlpath + '"' #+ ' (base = ' + base + ')'
 
       Node = output.session.get_class(ns.BTE['Node'])
@@ -152,7 +152,7 @@ class BetweenTheEdges(faqt.Service):
       #     "http://healthit.hhs.gov/portal/server.pt"
       #
       extension = BetweenTheEdges.extension(urlpath,me)
-      if debug:
+      if my_print_debug:
          if extension is not None:
             print >> sys.stderr, '              '+re.sub('.',' ',urlpath) + extension
 
@@ -164,7 +164,7 @@ class BetweenTheEdges(faqt.Service):
       if match:
          trimmed_path = match.group(1)
          step         = match.group(2)
-         if debug:
+         if my_print_debug:
             print >> sys.stderr, '             ' + urlpath + ' -> "' + trimmed_path + '" + / + ' + step
          me.bte_step = step
 
@@ -178,13 +178,15 @@ class BetweenTheEdges(faqt.Service):
          me.save()
          return depth
       else:
-         if debug:
+         if my_print_debug:
             print >> sys.stderr, '           ' + base + ' + "' + urlpath + '" is root. ' + me.subject
          me.bte_depth = 0
          me.save()
          return 0
 
    def process(self, input, output):
+
+      my_print_debug = False
 
       print >> sys.stderr, 'processing ' + input.subject
 
@@ -228,7 +230,7 @@ class BetweenTheEdges(faqt.Service):
             # FWIW, this is done in walkPath() for URIs ending in '/'
             Node = output.session.get_class(ns.BTE['Node'])
             trimmed_path = re.sub('#.*$','',input.subject)
-            if debug:
+            if my_print_debug:
                print >> sys.stderr, '   handling "' + trimmed_path + '#..."' 
             broader = output.session.get_resource(trimmed_path,Node)
             broader.rdf_type.append(ns.BTE['Node'])
