@@ -1,0 +1,7 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://sadiframework.org/ontologies/sadi.owl#">
+  <rdf:Description>
+    <j.0:error>com.hp.hpl.jena.shared.ClosedException: already closed</j.0:error>
+  </rdf:Description>
+</rdf:RDF>
