@@ -1,0 +1,139 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix pmlp:       <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix pmlj:       <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix sioc:       <http://rdfs.org/sioc/ns#> .
+@prefix oboro:      <http://obofoundry.org/ro/ro.owl#> .
+@prefix oprov:      <http://openprovenance.org/ontology#> .
+@prefix hartigprov: <http://purl.org/net/provenance/ns#> .
+@prefix irw:        <http://www.ontologydesignpatterns.org/ont/web/irw.owl#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix conv:       <http://purl.org/twc/vocab/conversion/> .
+@prefix httphead:   <http://inference-web.org/registry/MPR/HTTP_1_1_HEAD.owl#> .
+@prefix httpget:    <http://inference-web.org/registry/MPR/HTTP_1_1_GET.owl#> .
+@prefix httppost:   <http://inference-web.org/registry/MPR/HTTP_1_1_POST.owl#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+
+
+<http://aidanhogan.com/misc/RDFAlerts.war>
+   a pmlp:Source, prov:Entity;
+.
+
+<http://aidanhogan.com/misc/RDFAlerts.war>
+   a pmlp:Source, prov:Entity;
+   pmlp:hasModificationDateTime "2011-08-05T17:16:39"^^xsd:dateTime;
+   dcterms:modified             "2011-08-05T17:16:39"^^xsd:dateTime;
+.
+
+<RDFAlerts.war>
+   a nfo:FileDataObject, prov:Entity, pmlp:Information;
+   prov:wasQuotedFrom      <http://aidanhogan.com/misc/RDFAlerts.war>;
+   prov:qualifiedQuotation <quotation_56ef7de6-e5f2-4524-8d9f-feee90af6e01>;
+   pmlp:hasReferenceSourceUsage <sourceUsage56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>;
+.
+<RDFAlerts.war>
+   a nfo:FileDataObject;
+   nfo:fileName "RDFAlerts.war";
+   nfo:hasHash <md5_e8f05b3a596df4fffb8a5316cc8130e6_time_1393857252>;
+.
+<md5_e8f05b3a596df4fffb8a5316cc8130e6_time_1393857252>
+   a nfo:FileHash; 
+   dcterms:date      "2014-03-03T14:34:12+00:00"^^xsd:dateTime;
+   nfo:hashAlgorithm "md5";
+   nfo:hashValue     "e8f05b3a596df4fffb8a5316cc8130e6";
+.
+
+<nodeSet56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>
+   a pmlj:NodeSet;
+   pmlj:hasConclusion <RDFAlerts.war>;
+   pmlj:isConsequentOf <inferenceStep56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>;
+.
+<inferenceStep56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>
+   a pmlj:InferenceStep;
+   pmlj:hasIndex 0;
+   pmlj:hasAntecedentList ();
+   pmlj:hasSourceUsage     <sourceUsage56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>;
+   pmlj:hasInferenceEngine conv:curl_md5_37a520e0682fffef4e8777cdd0152ee2;
+   pmlj:hasInferenceRule   httpget:HTTP_1_1_GET;
+   oboro:has_agent          [ a foaf:OnlineAccount; foaf:accountName "lebot" ];
+   hartigprov:involvedActor [ a foaf:OnlineAccount; foaf:accountName "lebot" ];
+.
+
+<quotation_56ef7de6-e5f2-4524-8d9f-feee90af6e01>
+   a prov:Quotation;
+   prov:entity <http://aidanhogan.com/misc/RDFAlerts.war>;
+   prov:atTime "2014-03-03T14:33:57+00:00"^^xsd:dateTime;
+.
+
+<sourceUsage56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>
+   a pmlp:SourceUsage;
+   pmlp:hasSource        <http://aidanhogan.com/misc/RDFAlerts.war>;
+   pmlp:hasUsageDateTime "2014-03-03T14:33:57+00:00"^^xsd:dateTime;
+.
+
+<wasControlledBy56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>
+   a oprov:WasControlledBy;
+   oprov:cause  [ a foaf:OnlineAccount; foaf:accountName "lebot" ];
+   oprov:effect <inferenceStep56ef7de6-e5f2-4524-8d9f-feee90af6e01_content>;
+   oprov:endTime "2014-03-03T14:33:57+00:00"^^xsd:dateTime;
+.
+ 
+<info56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>
+   a pmlp:Information, conv:HTTPHeader;
+   pmlp:hasRawString """HTTP/1.1 200 OK
+Date: Mon, 03 Mar 2014 14:33:51 GMT
+Server: Apache
+Last-Modified: Fri, 05 Aug 2011 17:16:39 GMT
+ETag: "3a10008-4d9bab-4a9c542ab0bc0"
+Accept-Ranges: bytes
+Content-Length: 5086123
+Content-Type: text/plain
+""";
+   pmlp:hasReferenceSourceUsage <sourceUsage56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>;
+.
+ 
+<nodeSet56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>
+   a pmlj:NodeSet;
+   pmlj:hasConclusion <info56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>;
+   pmlj:isConsequentOf <inferenceStep56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>;
+.
+<inferenceStep56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>
+   a pmlj:InferenceStep;
+   pmlj:hasIndex 0;
+   pmlj:hasAntecedentList ();
+   pmlj:hasSourceUsage     <sourceUsage56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>;
+   pmlj:hasInferenceEngine conv:curl_md5_37a520e0682fffef4e8777cdd0152ee2;
+   pmlj:hasInferenceRule   httphead:HTTP_1_1_HEAD;
+   oboro:has_agent          [ a foaf:OnlineAccount; foaf:accountName "lebot" ];
+   hartigprov:involvedActor [ a foaf:OnlineAccount; foaf:accountName "lebot" ];
+.
+
+<sourceUsage56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>
+   a pmlp:SourceUsage;
+   pmlp:hasSource        <http://aidanhogan.com/misc/RDFAlerts.war>;
+   pmlp:hasUsageDateTime "2014-03-03T14:33:57+00:00"^^xsd:dateTime;
+.
+<wasControlledBy56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>
+   a oprov:WasControlledBy;
+   oprov:cause  [ a foaf:OnlineAccount; foaf:accountName "lebot" ];
+   oprov:effect <nodeSet56ef7de6-e5f2-4524-8d9f-feee90af6e01_url_header>;
+   oprov:endTime "2014-03-03T14:33:57+00:00"^^xsd:dateTime;
+.
+
+
+conv:curl_md5_37a520e0682fffef4e8777cdd0152ee2
+   a prov:Agent, pmlp:InferenceEngine, conv:Curl;
+   dcterms:identifier "md5_37a520e0682fffef4e8777cdd0152ee2";
+   dcterms:description """curl 7.34.0 (x86_64-unknown-linux-gnu) libcurl/7.34.0 OpenSSL/0.9.8k zlib/1.2.3.3
+Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtsp smtp smtps telnet tftp 
+Features: Largefile NTLM NTLM_WB SSL libz """;
+.
+
+conv:Curl rdfs:subClassOf pmlp:InferenceEngine .
