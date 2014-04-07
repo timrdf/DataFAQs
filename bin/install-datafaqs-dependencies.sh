@@ -361,7 +361,7 @@ else
    # distributor=`lsb_release --short --id`
    # codename=`lsb_release --short --codename`
    # RedHatEnterpriseServer Santiago
-   dist="/usr/lib/python/$V/site-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
+   dist="/usr/lib/python$V/site-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
 fi
 # TODO: surf.sparql_protocol installs rdflib>=2.4.2
 eggs="pyparsing surf.sparql_protocol ckanclient BeautifulSoup"
