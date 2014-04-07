@@ -260,7 +260,7 @@ for egg in $eggs; do
    # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
    eggReg=`echo $egg | sed 's/-/./g;s/_/./g'`
           find $dist -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg &> /dev/null; status=$?
-   there=`find $dist -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg` 
+   there=`find $dist -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg 2> /dev/null` 
    if [[ -n "$there" ]]; then 
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    else
@@ -288,7 +288,7 @@ done
 eggs="lib/sadi.python/sadi-0.1.5-py$V.egg src/python/faqt.python/dist/faqt-0.0.2-py$V.egg"
 for egg in $eggs; do
    base=`basename $egg`
-   there=`find $dist -mindepth 1 -maxdepth 1 -type d -name $base`
+   there=`find $dist -mindepth 1 -maxdepth 1 -type d -name $base 2> /dev/null`
    if [[ -n "$there" ]]; then 
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $base $status)"
    else
