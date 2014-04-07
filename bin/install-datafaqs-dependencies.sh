@@ -60,9 +60,9 @@ function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function fr
 
    command="$1"
    package="$2"
-   if [ `which apt-get` ]; then
+   if [ `which apt-get 2> /dev/null` ]; then
       if [[ -n "$command" && -n "$package" ]]; then
-         if [ ! `which $command` ]; then
+         if [ ! `which $command 2> /dev/null` ]; then
             if [ "$dryrun" != "true" ]; then
                echo
             fi
@@ -75,7 +75,7 @@ function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function fr
                fi
             fi
          else
-            echo "[okay] $command already available at `which $command`"
+            echo "[okay] $command already available at `which $command 2> /dev/null`"
          fi
       fi
    else
