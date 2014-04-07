@@ -85,6 +85,46 @@ function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function fr
    return $?
 }
 
+#
+# Use dpkg (not `which`) to determine if it is installed, and install all packages given if it is not.
+#
+function offer_install_yum { # NOTE: This adds "dryrun" so that Prizms can install it - it is modified from Prizms' offer_install_aptget
+   installed=0
+   packages="$1"
+   reason="$2"
+   echo $packages
+   for package in $packages; do
+      echo "The package $package is required to"
+      echo "$reason."
+      if [[ `which yum 2> /dev/null` ]]; then
+         already_there=`yum list installed | grep "^$package"` # See what is available: apt-cache search libapache2-mod
+         if [[ -z "$already_there" ]]; then 
+            echo "The $package package needs to be installed, which can be done with the following command:"
+            echo 
+            echo "$TODO $sudo yum install $package"
+            echo 
+            if [ "$dryrun" != "true" ]; then
+               read -p "Q: May we install the package $package using the command above? [y/n] " -u 1 install_it
+               if [[ "$install_it" == [yY] ]]; then 
+                  echo $sudo yum install $package
+                       $sudo yum install $package
+                  installed=1
+               fi   
+            fi
+         else 
+            echo "($package is already installed)"
+         fi   
+         echo 
+      else
+         echo "[WARNING] Sorry, we need apt-get to install $package for you." >&2
+      fi
+   done 
+   return $installed
+}
+
+#
+# Use dpkg (not `which`) to determine if it is installed, and install all packages given if it is not.
+#
 function offer_install_aptget { # NOTE: This adds "dryrun" so that Prizms can install it - it is modified from Prizms' offer_install_aptget
    installed=0
    packages="$1"
@@ -119,17 +159,78 @@ function offer_install_aptget { # NOTE: This adds "dryrun" so that Prizms can in
    return $installed
 }
 
+# Copied from install-csv2rdf4lod-dependencies.sh Apr 2014.
+function offer_install_with_yum_or_apt_ifnowhich {
+   # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
+   # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
+   # See also Prizms bin/install.sh
+   if [[ -n "$sudo" ]]; then
+      command="$1"
+      package="$2"
+         if [[ -n "$command" && -n "$package" ]]; then
+            if [ ! `which $command 2> /dev/null` ]; then
+               if [ "$dryrun" != "true" ]; then
+                  echo
+               fi
+               if [[ `which apt-get 2> /dev/null` ]]; then
+                  echo $TODO $sudo apt-get install $package
+               elif [[ `which yum 2> /dev/null` ]]; then
+                  echo $TODO $sudo yum install $pacakge
+               else
+                  echo "WARNING: how to install $package without apg-get or yum?"
+               fi
+               if [[ "$dryrun" != "true" && ( `which apt-get 2> /dev/null` || `which yum 2> /dev/null` ) ]]; then
+                  read -p "Q: Could not find $command on path. Try to install with command shown above? (y/n): " -u 1 install_it
+                  if [[ "$install_it" == [yY] ]]; then
+                     if [[ `which apt-get 2> /dev/null` ]]; then
+                        echo $sudo apt-get install $package
+                             $sudo apt-get install $package
+                     elif [[ `which yum 2> /dev/null` ]]; then
+                        echo $sudo yum install $pacakge
+                             $sudo yum install $pacakge
+                     fi
+                  fi
+               fi
+            else
+               echo "[okay] $command already available at `which $command 2> /dev/null`"
+            fi
+         fi
+      which $command >& /dev/null
+      return $?
+   else
+      echo "[WARNING] Skipping $1 $2 b/c no sudo." >&2
+   fi
+}
+
+
 if [[ "$dryrun" != "true" && "$i_can_sudo" -eq 0 ]]; then
    echo $sudo apt-get update
         $sudo apt-get update &> /dev/null
 fi
 
-offer_install_with_apt 'git'          'git-core' # These are dryrun safe.
-offer_install_with_apt 'curl'         'curl'
-offer_install_with_apt 'rapper'       'raptor-utils'
-offer_install_with_apt 'unzip'        'unzip'
-offer_install_with_apt 'sqlite3'      'sqlite3 libsqlite3-dev'
-offer_install_aptget   'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
+offer_install_with_apt                  'git'          'git-core' # These are dryrun safe.
+offer_install_with_apt                  'curl'         'curl'
+
+if [[ `which apt-get 2> /dev/null` ]]; then
+   offer_install_with_apt               'rapper'       'raptor-utils'
+else  
+   offer_install_yum                    'rapper'       'raptor'
+fi
+
+offer_install_with_yum_or_apt_ifnowhich 'unzip'        'unzip'
+
+if [[ `which apt-get 2> /dev/null` ]]; then
+   offer_install_with_apt               'sqlite3'      'sqlite3 libsqlite3-dev'
+else
+   offer_install_yum                    'sqlite' "deploy FAqT (SADI) Services implemented in Java"
+fi
+
+if [[ `which apt-get 2> /dev/null` ]]; then
+   offer_install_aptget                 'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
+else
+   offer_install_yum                    'tomcat6 tomcat6-docs-webapp tomcat6-javadoc tomcat6-admin-webapps' "deploy FAqT (SADI) Services implemented in Java"
+fi
+
 # Thanks to http://www.ubuntugeek.com/how-to-install-tomcat-6-on-ubuntu-9-04-jaunty.html
 #
 # (on your VM)              /etc/tomcat6/tomcat-users.xml:
