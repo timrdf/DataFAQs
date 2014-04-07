@@ -357,7 +357,10 @@ V=`python --version 2>&1 | sed 's/Python \(.\..\).*$/\1/'`
 if [[ -e /usr/local/lib/python$V ]]; then
    dist="/usr/local/lib/python$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
 else 
-   dist="/usr/lib/python/$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
+   # distributor=`lsb_release --short --id`
+   # codename=`lsb_release --short --codename`
+   # RedHatEnterpriseServer Santiago
+   dist="/usr/lib/python/$V/site-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
 fi
 # TODO: surf.sparql_protocol installs rdflib>=2.4.2
 eggs="pyparsing surf.sparql_protocol ckanclient BeautifulSoup"
