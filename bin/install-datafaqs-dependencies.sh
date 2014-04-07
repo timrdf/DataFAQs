@@ -354,14 +354,18 @@ fi
 
 offer_install_with_apt 'easy_install' 'python-setuptools' # dryrun aware
 V=`python --version 2>&1 | sed 's/Python \(.\..\).*$/\1/'`
-dist="/usr/local/lib/python$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
+if [[ -e /usr/local/lib/python$V ]]; then
+   dist="/usr/local/lib/python$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
+else 
+   dist="/usr/lib/python/$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
+fi
 eggs="pyparsing surf.sparql_protocol ckanclient BeautifulSoup"
 for egg in $eggs; do
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
    # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
    eggReg=`echo $egg | sed 's/-/./g;s/_/./g'`
-          find $dist -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg &> /dev/null; status=$?
-   there=`find $dist -mindepth 1 -maxdepth 1 -type d | grep -i $eggReg 2> /dev/null` 
+          find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg &> /dev/null; status=$?
+   there=`find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg 2> /dev/null` 
    if [[ -n "$there" ]]; then 
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    else
@@ -386,6 +390,9 @@ done
 # installs to:
 #   /usr/local/lib/python2.6/dist-packages/sadi-0.1.5-py2.6.egg
 #   /usr/local/lib/python2.6/dist-packages/faqt-0.0.2-py2.6.egg
+#
+# on RedHat, installs into:
+#   /usr/local/lib/python2.6/dist-packages
 eggs="lib/sadi.python/sadi-0.1.5-py$V.egg src/python/faqt.python/dist/faqt-0.0.2-py$V.egg"
 for egg in $eggs; do
    base=`basename $egg`
