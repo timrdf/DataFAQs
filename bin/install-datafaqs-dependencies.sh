@@ -211,11 +211,12 @@ fi
 offer_install_with_apt                  'git'          'git-core' # These are dryrun safe.
 offer_install_with_apt                  'curl'         'curl'
 
-if [[ `which apt-get 2> /dev/null` ]]; then
-   offer_install_with_apt               'rapper'       'raptor-utils'
-else  
-   offer_install_yum                    'rapper'       'raptor'
-fi
+# This is done by install-csv2rdf4lod-dependencies.sh
+#if [[ `which apt-get 2> /dev/null` ]]; then
+#   offer_install_with_apt               'rapper'       'raptor-utils'
+#else  
+#   offer_install_yum                    'rapper'       'raptor'
+#fi
 
 offer_install_with_yum_or_apt_ifnowhich 'unzip'        'unzip'
 
