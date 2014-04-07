@@ -60,27 +60,27 @@ function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function fr
 
    command="$1"
    package="$2"
-   if [ `which apt-get 2> /dev/null` ]; then
       if [[ -n "$command" && -n "$package" ]]; then
          if [ ! `which $command 2> /dev/null` ]; then
             if [ "$dryrun" != "true" ]; then
                echo
             fi
-            echo $TODO $sudo apt-get install $package
-            if [ "$dryrun" != "true" ]; then
-               read -p "Could not find $command on path. Try to install with command shown above? (y/n): " -u 1 install_it
-               if [[ "$install_it" == [yY] ]]; then
-                  echo $sudo apt-get install $package
-                       $sudo apt-get install $package
+            if [ `which apt-get 2> /dev/null` ]; then
+               echo $TODO $sudo apt-get install $package
+               if [ "$dryrun" != "true" ]; then
+                  read -p "Could not find $command on path. Try to install with command shown above? (y/n): " -u 1 install_it
+                  if [[ "$install_it" == [yY] ]]; then
+                     echo $sudo apt-get install $package
+                          $sudo apt-get install $package
+                  fi
                fi
+            else
+               echo "[WARNING] Sorry, we need apt-get to install $command / $package for you." >&2
             fi
          else
             echo "[okay] $command already available at `which $command 2> /dev/null`"
          fi
       fi
-   else
-      echo "[WARNING] Sorry, we need apt-get to install $command / $package for you." >&2
-   fi
    which $command >& /dev/null
    return $?
 }
@@ -113,7 +113,7 @@ function offer_install_aptget { # NOTE: This adds "dryrun" so that Prizms can in
          fi   
          echo 
       else
-         echo "WARNING: handle non-apt-get" >&2
+         echo "[WARNING] Sorry, we need apt-get to install $package for you." >&2
       fi
    done 
    return $installed
