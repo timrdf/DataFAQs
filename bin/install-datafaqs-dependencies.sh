@@ -359,6 +359,7 @@ if [[ -e /usr/local/lib/python$V ]]; then
 else 
    dist="/usr/lib/python/$V/dist-packages" # this path is $base/python/lib/site-packages if -z $sudo TODO
 fi
+# TODO: surf.sparql_protocol installs rdflib>=2.4.2
 eggs="pyparsing surf.sparql_protocol ckanclient BeautifulSoup"
 for egg in $eggs; do
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
