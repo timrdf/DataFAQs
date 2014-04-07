@@ -369,7 +369,7 @@ for egg in $eggs; do
    # See also https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/install-csv2rdf4lod-dependencies.sh
    # See also https://github.com/timrdf/DataFAQs/blob/master/bin/install-datafaqs-dependencies.sh
    eggReg=`echo $egg | sed 's/-/./g;s/_/./g'`
-    echo "find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg" >&2
+   #echo "find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg" >&2
           find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg &> /dev/null; status=$?
    there=`find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg 2> /dev/null` 
    if [[ -n "$there" ]]; then 
