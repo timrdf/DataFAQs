@@ -332,8 +332,13 @@ if [ "$epoch_existed" != "true" ]; then
          pushd    "__PIVOT_epoch/$epoch/datasets/$s/$i" &> /dev/null;
             echo "[INFO]    using input:                     $selector_input"
             echo $selector_input > input.url
-            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-selector-input.sh
-            echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
+            echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                         > get-selector-input.sh
+            if [[ "$selector_input" =~ https ]]; then
+               echo "curl -sL --sslv3 \"$selector_input\" > selector-input"                                                                       >> get-selector-input.sh
+               echo "rdf2ttl.sh selector-input > selector-input.ttl"                                                                              >> get-selector-input.sh
+            else
+               echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
+            fi
             source get-selector-input.sh
 
             #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > datasets.ttl"   > select.sh
