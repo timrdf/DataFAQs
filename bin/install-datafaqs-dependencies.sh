@@ -79,7 +79,7 @@ function offer_install_with_apt { # NOTE: @DEPRECATED use the copied function fr
          fi
       fi
    else
-      echo "[WARNING] Sorry, we need apt-get to install $command / $package for you."
+      echo "[WARNING] Sorry, we need apt-get to install $command / $package for you." >&2
    fi
    which $command >& /dev/null
    return $?
@@ -113,7 +113,7 @@ function offer_install_aptget { # NOTE: This adds "dryrun" so that Prizms can in
          fi   
          echo 
       else
-         echo "WARNING: handle non-apt-get"
+         echo "WARNING: handle non-apt-get" >&2
       fi
    done 
    return $installed
@@ -173,7 +173,7 @@ if [[ -e /var/lib/tomcat6/webapps/               && \
          if [[ -e /var/lib/tomcat6/webapps/sadi-services.war ]]; then
             restart_tomcat="yes"
          else
-            echo "WARNING: could not create /var/lib/tomcat6/webapps/sadi-services.war"
+            echo "WARNING: could not create /var/lib/tomcat6/webapps/sadi-services.war" >&2
          fi
       fi   
    fi
