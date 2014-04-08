@@ -50,7 +50,7 @@ elif [[ "$3 $4" == "dataset evaluations" ]]; then
 elif [[ "$3 $4 $5" == "dataset evaluation requests" ]]; then
    find __PIVOT_faqt -name "request.sh" | grep __PIVOT_epoch/$epoch
 
-elif [[ "$3 $4" == "dataset evaluations" ]]; then
+elif [[ "$3 $4" == "datasets evaluated" ]]; then
    for dir in `$0 in $epoch dataset evaluation requests`; do
       echo $dir
       ls $dir
