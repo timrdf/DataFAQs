@@ -18,7 +18,7 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
    echo "`basename $0` in <epoch> $INVALID_DATASET_DESCRIPTIONS"    >&2
    echo
-   echo "   e.g. " >&2
+   echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/pokepedia-fr/augmentation-1" >&2
    echo
    echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"             >&2
    echo
@@ -34,12 +34,12 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
    echo "`basename $0` in <epoch> $INCOMPLETE_EVALUATIONS"          >&2
    echo
-   echo "   e.g. " >&2
+   echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/eea/__PIVOT_epoch/2014-04-07" >&2
    echo
    echo
    echo "`basename $0` in <epoch> $VALID_EVALUATIONS"               >&2
    echo
-   echo "   e.g. " >&2
+   echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/eagle-i-utep/__PIVOT_epoch/2014-04-07/evaluation.rdf" >&2
    echo
    echo
    echo "`basename $0` in <epoch> $INVALID_EVALUATIONS [and CLEAR]" >&2
