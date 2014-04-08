@@ -275,7 +275,7 @@ if [ "$epoch_existed" != "true" ]; then
    faqt_selectors=`df-core.py $epochDir/epoch.ttl.rdf faqt-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for faqt_selector in $faqt_selectors; do
-      echo "[INFO] Requesting evaluation services from $faqt_selector"
+      echo "[INFO] Requesting evaluation services from $faqt_selector (#$s)"
       let "s=s+1"
       mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
       echo $faqt_selector > __PIVOT_epoch/$epoch/faqt-services/$s/selector
@@ -285,7 +285,7 @@ if [ "$epoch_existed" != "true" ]; then
          mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/faqt-services/$s/$i" &> /dev/null;
             echo $selector_input > input.url
-            echo "[INFO]    using input:                     $selector_input"
+            echo "[INFO]    using input:                     $selector_input (#$i)"
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                      > get-selector-input.sh
             echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             source get-selector-input.sh
@@ -325,7 +325,7 @@ if [ "$epoch_existed" != "true" ]; then
    dataset_selectors=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for dataset_selector in $dataset_selectors; do
-      echo "[INFO] Requesting datasets            from $dataset_selector"
+      echo "[INFO] Requesting datasets            from $dataset_selector (#$s)"
       let "s=s+1"
       mkdir -p "__PIVOT_epoch/$epoch/datasets/$s"
       echo $dataset_selector > "__PIVOT_epoch/$epoch/datasets/$s/selector"
@@ -334,7 +334,7 @@ if [ "$epoch_existed" != "true" ]; then
          let "i=i+1"
          mkdir -p "__PIVOT_epoch/$epoch/datasets/$s/$i"
          pushd    "__PIVOT_epoch/$epoch/datasets/$s/$i" &> /dev/null;
-            echo "[INFO]    using input:                     $selector_input"
+            echo "[INFO]    using input:                     $selector_input (#$i)"
             echo $selector_input > input.url
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                         > get-selector-input.sh
             if [[ "$selector_input" =~ https ]]; then
