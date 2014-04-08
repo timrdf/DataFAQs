@@ -8,6 +8,7 @@ if [[ $# -lt 1 || "$1" == "--help" || "$1" == "-h" ]]; then
    echo "usage: `basename $0` [-n] <epoch>"
    echo
    echo "  Create publish/bin/publish.sh and invoke for every conversion cockpit within the current directory tree."
+   echo "                -n : dryrun; do not actually create the versioned dataset; just list the files involved."
    echo "           <epoch> : e.g __PIVOT_epoch/2013-06-22/, 2013-06-22"
    exit
 fi
@@ -31,13 +32,13 @@ epochID=${epochID#'__PIVOT_epoch/'}
 
 echo $epochID >&2
 
-if [[ -z "$epoch" ]]; then
+if [[ -z "$epochID" ]]; then
    echo "ERROR: epoch must be defined." >&2
    $0 --help
    exit
 fi
-if [[ ! -e __PIVOT_epoch/$epoch ]]; then
-   echo "ERROR: epoch \"$epoch\" does not exist." >&2
+if [[ ! -e __PIVOT_epoch/$epochID ]]; then
+   echo "ERROR: epoch \"$epochID\" does not exist." >&2
    $0 --help
    exit
 fi
