@@ -61,7 +61,26 @@ if [ "$dryrun" != "true" ]; then
    ln -s `pwd`/__PIVOT_epoch/$epochID/faqt-services.ttl.rdf ../$epochID/source/
 fi
 
-# Total dataset descriptions, the RDF POSTed to FAqT Services.
+# The FAqT Services' self-descriptions (and our add-on independent of the version).
+for service in `find __PIVOT_faqt/ -name "faqt-service.ttl" | grep __PIVOT_epoch/$epochID`; do
+
+   # These say "a mygrid:serviceDescription" (from the service)
+   md5=`md5.sh -qs "$service"`
+   echo ln -s `pwd`/$service ../$epochID/source/service-$md5.ttl
+   if [ "$dryrun" != "true" ]; then
+        ln -s `pwd`/$service ../$epochID/source/service-$md5.ttl
+   fi
+
+   # These say "a datafaqs:FAqTService" (from us)
+   versionless=${service%%/__PIVOT_epoch*}/service.ttl
+   md52=`md5.sh -qs "$versionless"`
+   echo ln -s `pwd`/$versionless ../$epochID/source/service-$md5-$md52.ttl
+   if [ "$dryrun" != "true" ]; then
+        ln -s `pwd`/$versionless ../$epochID/source/service-$md5-$md52.ttl
+   fi
+done
+
+# Unioned dataset descriptions, the RDF POSTed to FAqT Services.
 for posted in `find __PIVOT_epoch/$epochID/__PIVOT_dataset -name post.nt.rdf`; do
    md5=`md5.sh -qs "$posted"`
    echo ln -s `pwd`/$posted ../$epochID/source/post-$md5.rdf
@@ -77,17 +96,6 @@ for evaluation in `find __PIVOT_faqt -name evaluation.rdf | grep __PIVOT_epoch/$
    if [ "$dryrun" != "true" ]; then
         ln -s `pwd`/$evaluation ../$epochID/source/evaluation-$md5.rdf
    fi
-done
-
-# The FAqT Services' self-descriptions (and our add-on independent of the version).
-for service in `find __PIVOT_faqt/ -name "faqt-service.ttl" | grep __PIVOT_epoch/$epochID`; do
-   md5=`md5.sh -qs "$service"`
-   echo ln -s `pwd`/$service ../$epochID/source/service-$md5.ttl
-   if [ "$dryrun" != "true" ]; then
-        ln -s `pwd`/$service ../$epochID/source/service-$md5.ttl
-   fi
-   versionless=${service%%/__PIVOT_epoch*}/service.ttl
-   ls -lt $versionless
 done
 
 if [ "$dryrun" != "true" ]; then
