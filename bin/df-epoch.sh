@@ -275,8 +275,8 @@ if [ "$epoch_existed" != "true" ]; then
    faqt_selectors=`df-core.py $epochDir/epoch.ttl.rdf faqt-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for faqt_selector in $faqt_selectors; do
-      echo "[INFO] Requesting evaluation services from $faqt_selector (#$s)"
       let "s=s+1"
+      echo "[INFO] Requesting evaluation services from $faqt_selector (#$s)"
       mkdir -p "__PIVOT_epoch/$epoch/faqt-services/$s"
       echo $faqt_selector > __PIVOT_epoch/$epoch/faqt-services/$s/selector
       i=0 # input to selector
@@ -325,8 +325,8 @@ if [ "$epoch_existed" != "true" ]; then
    dataset_selectors=`df-core.py $epochDir/epoch.ttl.rdf dataset-selectors | awk '{print $1}' | sort -u`
    s=0 # selector
    for dataset_selector in $dataset_selectors; do
-      echo "[INFO] Requesting datasets            from $dataset_selector (#$s)"
       let "s=s+1"
+      echo "[INFO] Requesting datasets            from $dataset_selector (#$s)"
       mkdir -p "__PIVOT_epoch/$epoch/datasets/$s"
       echo $dataset_selector > "__PIVOT_epoch/$epoch/datasets/$s/selector"
       i=0 # input to selector
