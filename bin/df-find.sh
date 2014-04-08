@@ -12,7 +12,7 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo "`basename $0` in <epoch> dataset evaluation requests" >&2
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07/request.sh" >&2
    echo
-   echo "`basename $0` in <epoch> evaluated datasets"          >&2
+   echo "`basename $0` in <epoch> datasets evaluated"          >&2
    echo
    echo "`basename $0` in <epoch> invalid evaluations"         >&2
    exit
@@ -49,6 +49,12 @@ elif [[ "$3 $4" == "dataset evaluations" ]]; then
 
 elif [[ "$3 $4 $5" == "dataset evaluation requests" ]]; then
    find __PIVOT_faqt -name "request.sh" | grep __PIVOT_epoch/$epoch
+
+elif [[ "$3 $4" == "dataset evaluations" ]]; then
+   for dir in `$0 in $epoch dataset evaluation requests`; do
+      echo $dir
+      ls $dir
+   done
 
 elif [[ "$3 $4" == "invalid evaluations" ]]; then
    find __PIVOT_faqt/ -name "evaluation" | grep __PIVOT_epoch/$epoch
