@@ -3,6 +3,7 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
 
 DATASETS='datasets'
+INVALID_DATASET_DESCRIPTIONS='invalid dataset descriptions'
 DATASET_EVALUATIONS='dataset evaluations'
 DATASET_EVALUATION_REQUESTS='dataset evaluation requests'
 DATASETS_EVALUATED='datasets evaluated'
@@ -13,6 +14,10 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo "`basename $0` in <epoch> $DATASETS"                    >&2
    echo
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
+   echo
+   echo "`basename $0` in <epoch> $INVALID_DATASET_DESCRIPTIONS" >&2
+   echo
+   echo "   e.g. " >&2
    echo
    echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"         >&2
    echo
@@ -64,6 +69,9 @@ fi
 if [[ "$3" == "$DATASETS" ]]; then
    find __PIVOT_epoch/$epoch -name 'dataset.ttl'
 
+elif [[ "$3 $4 $5" == "$INVALID_DATASET_DESCRIPTIONS" ]]; then
+   find __PIVOT_epoch/$epoch/__PIVOT_dataset/ -name "augmentation-*" -o -name "reference-*" | xargs valid-rdf.sh -v | grep "^no"
+
 elif [[ "$3 $4" == "$DATASET_EVALUATIONS" ]]; then
    find __PIVOT_faqt -name "$epoch" | grep __PIVOT_dataset | grep __PIVOT_epoch/$epoch
 
@@ -81,6 +89,7 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
    for sh in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       dir=`dirname $sh`
       if [[ "`find $dir -maxdepth 1 -name 'evaluation.*' | wc -l | awk '{print $1}'`" -gt 0 ]]; then
+         # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
          pushd $dir &> /dev/null
             echo $dir
             find . -maxdepth 1 -name 'evaluation.*'
