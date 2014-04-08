@@ -3,9 +3,10 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
 
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
-   echo "`basename $0` in <epoch> dataset evaluations [0]" >&2
-   echo "`basename $0` in <epoch> evaluated datasets"      >&2
-   echo "`basename $0` in <epoch> invalid evaluations"     >&2
+   echo "`basename $0` in <epoch> datasets"            >&2
+   echo "`basename $0` in <epoch> dataset evaluations" >&2
+   echo "`basename $0` in <epoch> evaluated datasets"  >&2
+   echo "`basename $0` in <epoch> invalid evaluations" >&2
    exit
 fi
 
@@ -32,7 +33,7 @@ fi
 
 
 
-if [[ "$3 $4 $5" == "dataset evaluations 0" ]]; then
+if [[ "$3" == "datasets" ]]; then
    find __PIVOT_epoch/$epoch -name 'dataset.ttl'
 
 elif [[ "$3 $4" == "dataset evaluations" ]]; then
