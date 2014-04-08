@@ -804,6 +804,8 @@ for dataset in $datasetsRandom; do # Ordering randomized to distribute load amon
             #
             # Set up request
             #
+            [ "$DATAFAQS_EVALUATION_TIMEOUT" -gt 0 ] && timeout="--max-time $DATAFAQS_EVALUATION_TIMEOUT" || timeout=''
+            echo "max timeout: $timeout" 
             output="evaluation"
             echo "#!/bin/bash"                                                                                                         > request.sh
             # TODO http://code.google.com/p/sadi/issues/detail?id=15
