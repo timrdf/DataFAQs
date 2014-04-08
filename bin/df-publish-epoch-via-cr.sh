@@ -31,6 +31,17 @@ epochID=${epochID#'__PIVOT_epoch/'}
 
 echo $epochID >&2
 
+if [[ -z "$epoch" ]]; then
+   echo "ERROR: epoch must be defined." >&2
+   $0 --help
+   exit
+fi
+if [[ ! -e __PIVOT_epoch/$epoch ]]; then
+   echo "ERROR: epoch \"$epoch\" does not exist." >&2
+   $0 --help
+   exit
+fi
+
 if [ "$dryrun" != "true" ]; then
    if [[ ! -e ../$epochID/source ]]; then
       mkdir -p ../$epochID/source
