@@ -70,7 +70,7 @@ if [[ "$3" == "$DATASETS" ]]; then
    find __PIVOT_epoch/$epoch -name 'dataset.ttl'
 
 elif [[ "$3 $4 $5" == "$INVALID_DATASET_DESCRIPTIONS" ]]; then
-   find __PIVOT_epoch/$epoch/__PIVOT_dataset/ -name "augmentation-*" -o -name "reference-*" | xargs valid-rdf.sh -v | grep "^no"
+   find __PIVOT_epoch/$epoch/__PIVOT_dataset/ -name "augmentation-*" -o -name "reference-*" | xargs valid-rdf.sh -v | grep "^no" | awk '{print $2}'
 
 elif [[ "$3 $4" == "$DATASET_EVALUATIONS" ]]; then
    find __PIVOT_faqt -name "$epoch" | grep __PIVOT_dataset | grep __PIVOT_epoch/$epoch
@@ -92,7 +92,7 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
          # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
          pushd $dir &> /dev/null
             echo $dir
-            find . -maxdepth 1 -name 'evaluation.*'
+            find . -maxdepth 1 -name 'evaluation.*' | grep -v meta.rdf | grep -v sd_name
          popd &> /dev/null
       fi
    done
