@@ -32,7 +32,7 @@ fi
 
 
 
-if [[ "$3 $4" == "dataset evaluations 0" ]]; then
+if [[ "$3 $4 $5" == "dataset evaluations 0" ]]; then
    find __PIVOT_epoch/$epoch -name 'dataset.ttl'
 
 elif [[ "$3 $4" == "dataset evaluations" ]]; then
