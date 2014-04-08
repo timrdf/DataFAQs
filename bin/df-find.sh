@@ -4,6 +4,7 @@
 
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo "`basename $0` in <epoch> datasets"                    >&2
+   echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/2000-us-census-rdf/dataset.ttl" >&2
    echo "`basename $0` in <epoch> dataset evaluation requests" >&2
    echo "`basename $0` in <epoch> evaluated datasets"          >&2
    echo "`basename $0` in <epoch> invalid evaluations"         >&2
