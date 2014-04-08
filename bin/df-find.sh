@@ -5,7 +5,7 @@
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
    DATASETS='datasets'
    echo "`basename $0` in <epoch> $DATASETS"                    >&2
-   echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/2000-us-census-rdf/dataset.ttl" >&2
+   echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
    echo
    DATASET_EVALUATIONS='dataset evaluations'
    echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"         >&2
@@ -17,9 +17,11 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
    DATASETS_EVALUATED='datasets evaluated'
    echo "`basename $0` in <epoch> $DATASETS_EVALUATED"          >&2
+   echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
    echo
    INVALID_EVALUATIONS='invalid evalutions'
    echo "`basename $0` in <epoch> $INVALID_EVALUATIONS"         >&2
+   echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/radatana/__PIVOT_epoch/2014-04-07/evaluation" >&2
    exit
 fi
 
