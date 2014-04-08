@@ -804,7 +804,7 @@ for dataset in $datasetsRandom; do # Ordering randomized to distribute load amon
             #
             # Set up request
             #
-            [ "$DATAFAQS_EVALUATION_TIMEOUT" -gt 0 ] && timeout="--max-time $DATAFAQS_EVALUATION_TIMEOUT" || timeout=''
+            [[ "$DATAFAQS_EVALUATION_TIMEOUT" =~ ^-?[0-9]+$ && "$DATAFAQS_EVALUATION_TIMEOUT" -gt 0 ]] && timeout="--max-time $DATAFAQS_EVALUATION_TIMEOUT" || timeout=''
             echo "max timeout: $timeout" 
             output="evaluation"
             echo "#!/bin/bash"                                                                                                         > request.sh
