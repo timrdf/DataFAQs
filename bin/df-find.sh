@@ -10,6 +10,7 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
 fi
 
 epoch="${2#__PIVOT_epoch/}"
+epoch="${epoch%/}"
 
 # Enforce directory conventions
 #if [ `basename \`pwd\`` != "faqt-brick" ]; then
