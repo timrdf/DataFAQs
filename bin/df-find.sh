@@ -27,6 +27,7 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo "`basename $0` in <epoch> $INVALID_EVALUATIONS"         >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/radatana/__PIVOT_epoch/2014-04-07/evaluation" >&2
+   echo
    exit
 fi
 
