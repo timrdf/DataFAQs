@@ -805,12 +805,11 @@ for dataset in $datasetsRandom; do # Ordering randomized to distribute load amon
             # Set up request
             #
             [[ "$DATAFAQS_EVALUATION_TIMEOUT" =~ ^-?[0-9]+$ && "$DATAFAQS_EVALUATION_TIMEOUT" -gt 0 ]] && timeout="--max-time $DATAFAQS_EVALUATION_TIMEOUT" || timeout=''
-            echo "max timeout: $timeout" 
             output="evaluation"
             echo "#!/bin/bash"                                                                                                         > request.sh
             # TODO http://code.google.com/p/sadi/issues/detail?id=15
             # TODO: ^^> echo curl -s -H "'Content-Type: application/rdf+xml'" -H "'Accept: text/turtle'" -d @$post $faqt >> request.sh # evaluation.sh
-            echo curl -s -H "'Content-Type: application/rdf+xml'" -d @$post $faqt                                                     >> request.sh
+            echo curl -s -H "'Content-Type: application/rdf+xml'" $timeout -d @$post $faqt                                            >> request.sh
 
             #
             # Request
