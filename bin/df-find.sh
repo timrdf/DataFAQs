@@ -11,34 +11,35 @@ VALID_EVALUATIONS='valid evaluations'
 INVALID_EVALUATIONS='invalid evaluations'
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
-   echo "`basename $0` in <epoch> $DATASETS"                    >&2
+   echo "`basename $0` in <epoch> $DATASETS"                        >&2
    echo
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
    echo
-   echo "`basename $0` in <epoch> $INVALID_DATASET_DESCRIPTIONS" >&2
+   echo "`basename $0` in <epoch> $INVALID_DATASET_DESCRIPTIONS"    >&2
    echo
    echo "   e.g. " >&2
    echo
-   echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"         >&2
+   echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"             >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07" >&2
    echo
-   echo "`basename $0` in <epoch> $DATASET_EVALUATION_REQUESTS" >&2
+   echo "`basename $0` in <epoch> $DATASET_EVALUATION_REQUESTS"     >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07/request.sh" >&2
    echo
-   echo "`basename $0` in <epoch> $DATASETS_EVALUATED"          >&2
+   echo "`basename $0` in <epoch> $DATASETS_EVALUATED"              >&2
    echo
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
    echo
-   echo "`basename $0` in <epoch> $VALID_EVALUATIONS"         >&2
+   echo "`basename $0` in <epoch> $VALID_EVALUATIONS"               >&2
    echo
    echo "   e.g. " >&2
    echo
    echo
-   echo "`basename $0` in <epoch> $INVALID_EVALUATIONS"         >&2
+   echo "`basename $0` in <epoch> $INVALID_EVALUATIONS [and CLEAR]" >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/radatana/__PIVOT_epoch/2014-04-07/evaluation" >&2
+   echo "   [and CLEAR] - remove ALL files within the evaluation directory (i.e. request.sh, evaluation*)."
    echo
    exit
 fi
@@ -85,7 +86,6 @@ elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
    done
 
 elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
-   echo $0 in $epoch $DATASET_EVALUATION_REQUESTS
    for sh in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       dir=`dirname $sh`
 
@@ -106,7 +106,6 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
 elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
    # Alternative: find __PIVOT_faqt/ -name "evaluation" | grep __PIVOT_epoch/$epoch
 
-   echo $0 in $epoch $DATASET_EVALUATION_REQUESTS
    for sh in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       dir=`dirname $sh`
 
