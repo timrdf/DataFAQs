@@ -76,10 +76,13 @@ elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
       ls $dir
    done
 
+elif [[ "$3 $4" == "valid evaluations" ]]; then
+   for dir in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
+      if [[ "`find . -maxdepth 1 -name evaluation.* | wc -l | awk '{print $1}'`" -gt 0 ]]; then
+         find . -maxdepth 1 -name evaluation.*
+      fi
+   done
+
 elif [[ "$3 $4" == "invalid evaluations" ]]; then
    find __PIVOT_faqt/ -name "evaluation" | grep __PIVOT_epoch/$epoch
-
-#elif [[ "$3 $4" == "invalid evaluations" ]]; then
-#   if [[ "`find . -maxdepth 1 -name epoch.* | wc -l | awk '{print $1}'`" -gt 0 ]]; then
-#   fi
 fi
