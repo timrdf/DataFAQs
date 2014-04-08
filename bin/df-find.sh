@@ -90,7 +90,7 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
       dir=`dirname $sh`
       #if [[ "`find $dir -maxdepth 1 -name 'evaluation.*' | wc -l | awk '{print $1}'`" -gt 0 ]]; then
       #   # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
-         pushd $dir &> /dev/null
+      #   pushd $dir &> /dev/null
       #      echo $dir
       #      find . -maxdepth 1 -name 'evaluation.*'
       #   popd &> /dev/null
