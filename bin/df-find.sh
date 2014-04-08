@@ -80,9 +80,9 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
    echo $0 in $epoch $DATASET_EVALUATION_REQUESTS
    for dir in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       find $dir -maxdepth 1 -name evaluation.* | wc -l | awk '{print $1}'
-      if [[ "`find $dir -maxdepth 1 -name evaluation.* | wc -l | awk '{print $1}'`" -gt 0 ]]; then
+      if [[ "`find $dir -name evaluation.* | wc -l | awk '{print $1}'`" -gt 0 ]]; then
          pushd $dir &> /dev/null
-            find . -maxdepth 1 -name evaluation.*
+            find . 1 -name evaluation.*
          popd &> /dev/null
       fi
    done
