@@ -88,6 +88,7 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
    echo $0 in $epoch $DATASET_EVALUATION_REQUESTS
    for sh in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       dir=`dirname $sh`
+
       #if [[ "`find $dir -maxdepth 1 -name 'evaluation.*' | wc -l | awk '{print $1}'`" -gt 0 ]]; then
       #   # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
       #   pushd $dir &> /dev/null
@@ -95,9 +96,31 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
       #      find . -maxdepth 1 -name 'evaluation.*'
       #   popd &> /dev/null
       #fi
+
+      # There should only be 4 files in the evaluation directory: 
+      #    request.sh, (evaluation XOR evaluation.{rdf,ttl,nt}), 
+      #                                evaluation.meta.rdf, evaluation.rdf.sd_name
       find $dir -maxdepth 1 -name 'evaluation.*' | grep -v .meta. | grep -v sd_name
    done
 
 elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
-   find __PIVOT_faqt/ -name "evaluation" | grep __PIVOT_epoch/$epoch
+   # Alternative: find __PIVOT_faqt/ -name "evaluation" | grep __PIVOT_epoch/$epoch
+
+   echo $0 in $epoch $DATASET_EVALUATION_REQUESTS
+   for sh in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
+      dir=`dirname $sh`
+
+      if [[ "`find $dir -maxdepth 1 -name 'evaluation.*' | wc -l | awk '{print $1}'`" -lt 3 ]]; then
+         # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
+         pushd $dir &> /dev/null
+            echo $dir
+            find . -maxdepth 1 -name 'evaluation.*'
+         popd &> /dev/null
+      fi
+
+      # There should only be 4 files in the evaluation directory: 
+      #    request.sh, (evaluation XOR evaluation.{rdf,ttl,nt}), 
+      #                                evaluation.meta.rdf, evaluation.rdf.sd_name
+      #find $dir -maxdepth 1 -name 'evaluation.*' | grep -v .meta. | grep -v sd_name
+   done
 fi
