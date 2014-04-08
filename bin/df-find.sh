@@ -3,6 +3,7 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
 
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
+   echo
    DATASETS='datasets'
    echo "`basename $0` in <epoch> $DATASETS"                    >&2
    echo
