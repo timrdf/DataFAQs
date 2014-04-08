@@ -2,35 +2,35 @@
 #
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
 
+DATASETS='datasets'
+DATASET_EVALUATIONS='dataset evaluations'
+DATASET_EVALUATION_REQUESTS='dataset evaluation requests'
+DATASETS_EVALUATED='datasets evaluated'
+VALID_EVALUATIONS='valid evaluations'
+INVALID_EVALUATIONS='invalid evaluations'
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
-   DATASETS='datasets'
    echo "`basename $0` in <epoch> $DATASETS"                    >&2
    echo
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
    echo
-   DATASET_EVALUATIONS='dataset evaluations'
    echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"         >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07" >&2
    echo
-   DATASET_EVALUATION_REQUESTS='dataset evaluation requests'
    echo "`basename $0` in <epoch> $DATASET_EVALUATION_REQUESTS" >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07/request.sh" >&2
    echo
-   DATASETS_EVALUATED='datasets evaluated'
    echo "`basename $0` in <epoch> $DATASETS_EVALUATED"          >&2
    echo
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
    echo
-   VALID_EVALUATIONS='valid evaluations'
    echo "`basename $0` in <epoch> $VALID_EVALUATIONS"         >&2
    echo
    echo "   e.g. " >&2
    echo
    echo
-   INVALID_EVALUATIONS='invalid evaluations'
    echo "`basename $0` in <epoch> $INVALID_EVALUATIONS"         >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/radatana/__PIVOT_epoch/2014-04-07/evaluation" >&2
@@ -76,7 +76,7 @@ elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
       ls $dir
    done
 
-elif [[ "$3 $4" == "valid evaluations" ]]; then
+elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
    echo $0 in $epoch $DATASET_EVALUATION_REQUESTS
    for dir in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       echo FOUND $dir
