@@ -7,6 +7,7 @@ INVALID_DATASET_DESCRIPTIONS='invalid dataset descriptions'
 DATASET_EVALUATIONS='dataset evaluations'
 DATASET_EVALUATION_REQUESTS='dataset evaluation requests'
 DATASETS_EVALUATED='datasets evaluated'
+INCOMPLETE_EVALUATIONS='incomplete evaluations'
 VALID_EVALUATIONS='valid evaluations'
 INVALID_EVALUATIONS='invalid evaluations'
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
@@ -30,6 +31,11 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo "`basename $0` in <epoch> $DATASETS_EVALUATED"              >&2
    echo
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
+   echo
+   echo "`basename $0` in <epoch> $INCOMPLETE_EVALUATIONS"          >&2
+   echo
+   echo "   e.g. " >&2
+   echo
    echo
    echo "`basename $0` in <epoch> $VALID_EVALUATIONS"               >&2
    echo
@@ -85,6 +91,20 @@ elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
       ls $dir
    done
 
+elif [[ "$3 $4" == "$INCOMPLETE_EVALUATIONS" ]]; then
+   for dir in `$0 in $epoch $DATASET_EVALUATIONS`; do
+      if [[ "`find $dir -mindepth 1 -maxdepth 1 | wc -l | awk '{print $1}'`" -eq 1 ]]; then
+         #pushd $dir &> /dev/null
+         echo $dir
+            #find . -maxdepth 1 -name 'evaluation.*'
+         #   find . -mindepth 1 -maxdepth 1
+         #   if [[ "$5 $6" == 'and CLEAR' ]]; then
+         #      find . -mindepth 1 -maxdepth 1 | xargs rm
+         #   fi
+         #popd &> /dev/null
+      fi
+   done
+
 elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
    for sh in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       dir=`dirname $sh`
@@ -120,10 +140,5 @@ elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
             fi
          popd &> /dev/null
       fi
-
-      # There should only be 4 files in the evaluation directory: 
-      #    request.sh, (evaluation XOR evaluation.{rdf,ttl,nt}), 
-      #                                evaluation.meta.rdf, evaluation.rdf.sd_name
-      #find $dir -maxdepth 1 -name 'evaluation.*' | grep -v .meta. | grep -v sd_name
    done
 fi
