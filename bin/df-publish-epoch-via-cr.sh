@@ -22,15 +22,17 @@ if [ `${CSV2RDF4LOD_HOME}/bin/util/is-pwd-a.sh $ACCEPTABLE_PWDs` != "yes" ]; the
 fi
 
 dryrun="false"
+dryrunL=''
 if [ "$1" == "-n" ]; then
    dryrun="true"
+   dryrunL='(dryrun only) '
    shift
 fi
 
 epochID=${1%'/'}
 epochID=${epochID#'__PIVOT_epoch/'}
 
-echo $epochID >&2
+echo publishing $epochID $dryrunL... >&2
 
 if [[ -z "$epochID" ]]; then
    echo "ERROR: epoch must be defined." >&2
