@@ -35,7 +35,7 @@ fi
 if [[ "$3 $4" == "dataset evaluations 0" ]]; then
    find __PIVOT_epoch/$epoch -name 'dataset.ttl'
 
-elif [[ "$3" == "dataset evaluations" ]]; then
+elif [[ "$3 $4" == "dataset evaluations" ]]; then
    find __PIVOT_faqt -name "$epoch" | grep __PIVOT_dataset | grep __PIVOT_epoch/$epoch
 
 elif [[ "$3 $4" == "evaluated datasets" ]]; then
