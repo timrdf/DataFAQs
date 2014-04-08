@@ -3,10 +3,10 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
 
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
-   echo "`basename $0` in <epoch> datasets"            >&2
-   echo "`basename $0` in <epoch> dataset evaluations" >&2
-   echo "`basename $0` in <epoch> evaluated datasets"  >&2
-   echo "`basename $0` in <epoch> invalid evaluations" >&2
+   echo "`basename $0` in <epoch> datasets"                    >&2
+   echo "`basename $0` in <epoch> dataset evaluation requests" >&2
+   echo "`basename $0` in <epoch> evaluated datasets"          >&2
+   echo "`basename $0` in <epoch> invalid evaluations"         >&2
    exit
 fi
 
@@ -39,7 +39,7 @@ if [[ "$3" == "datasets" ]]; then
 elif [[ "$3 $4" == "dataset evaluations" ]]; then
    find __PIVOT_faqt -name "$epoch" | grep __PIVOT_dataset | grep __PIVOT_epoch/$epoch
 
-elif [[ "$3 $4" == "evaluated datasets" ]]; then
+elif [[ "$3 $4 $5" == "dataset evaluation requests" ]]; then
    find __PIVOT_faqt -name "request.sh" | grep __PIVOT_epoch/$epoch
 
 elif [[ "$3 $4" == "invalid evaluations" ]]; then
