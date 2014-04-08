@@ -93,7 +93,7 @@ elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
 
 elif [[ "$3 $4" == "$INCOMPLETE_EVALUATIONS" ]]; then
    for dir in `$0 in $epoch $DATASET_EVALUATIONS`; do
-      if [[ "`find $dir -mindepth 1 -maxdepth 1 | wc -l | awk '{print $1}'`" -eq 1 ]]; then
+      if [[ "`find $dir -mindepth 1 -maxdepth 1 | wc -l | awk '{print $1}'`" -lt 2 ]]; then
          #pushd $dir &> /dev/null
          echo $dir
             #find . -maxdepth 1 -name 'evaluation.*'
