@@ -67,6 +67,8 @@ public class NamedGraphs extends SimpleSynchronousServiceServlet
 		if( input.hasProperty(VoID.sparqlEndpoint) ) {
 			endpoint = input.getProperty(VoID.sparqlEndpoint).getObject().toString();
 			output.addProperty(VoID.sparqlEndpoint, m.getResource(endpoint));
+		}else if( input.toString().endsWith("/sparql") ) {
+		   endpoint = input.toString();
 		}else {
 			output.addProperty(RDF.type, DataFAQs.Unsatisfactory);
 			return;

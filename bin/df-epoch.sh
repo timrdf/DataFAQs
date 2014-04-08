@@ -729,7 +729,8 @@ if [ "$epoch_existed" != "true" ]; then
       done # end datasets
    popd &> /dev/null
 fi
-# Find references and augmentations that were not RDF:
+# Find references and augmentations that were not RDF (in df-find.sh):
+#
 # find __PIVOT_epoch/2013-04-14/__PIVOT_dataset/ -name "augmentation-*" -o -name "reference-*" | xargs valid-rdf.sh -v | grep "^no"
 
 if [ "$dryrun" == "true" ]; then
@@ -747,12 +748,25 @@ echo "[INFO] Submitting CKAN dataset information to FAqT evaluation services. Wi
 echo
 
 #
-# Total number of datasets that will be evaluated:
+# Total number of datasets that *will be* evaluated:
 #
-# find __PIVOT_epoch/2014-04-07/ -name "dataset.ttl" | wc -l
+# (in df-find.sh)
+# find __PIVOT_epoch/2014-04-07 -name "dataset.ttl" | wc -l
 # 890
-# find __PIVOT_faqt/ -name "request.sh" | grep '__PIVOT_epoch/2014-04-07' | wc -l
+#
+# (in df-find.sh)
+# find __PIVOT_faqt -name 2014-04-07 | grep '__PIVOT_dataset' | grep '__PIVOT_epoch/2014-04-07'
+# 890
+#
+#
+# Total number of datasets that *were* evaluated: (in df-find.sh)
+#
+# find __PIVOT_faqt -name "request.sh" | grep '__PIVOT_epoch/2014-04-07' | wc -l
 # 508
+#
+# Dataset evaluations that were not RDF: (in df-find.sh)
+#
+# find __PIVOT_faqt/ -name "evaluation" | grep '__PIVOT_epoch/2014-04-07'
 
 let "total = numDatasets * numFAqTs"
 f=0 # faqt evaluation service tally

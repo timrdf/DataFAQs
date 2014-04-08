@@ -15,6 +15,12 @@
 @prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix :        <http://purl.org/twc/vocab/datafaqs#> .
 
+:CKAN
+   a owl:Class;
+   rdfs:seeAlso <http://hub.healthdata.gov>, <http://healthdata.tw.rpi.edu/hub>, <http://datahub.io/>;
+   rdfs:comment "An installation of the CKAN data management system, e.g. the flagship installation http://datahub.io.";
+.
+
 :CKANDataset
    a owl:Class;
    rdfs:label   "CKAN Dataset";

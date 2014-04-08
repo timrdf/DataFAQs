@@ -19,4 +19,5 @@ public class SD {
 	
 	public static final Resource NamedGraph      = m_model.createResource(ns+"NamedGraph");
 	public static final Property name            = m_model.createProperty(ns+"name");	
+	
 }

@@ -1,1 +1,4 @@
-curl -H "Content-Type: application/rdf+xml" -d @opendap.ttl.rdf http://localhost:8080/sadi-services/git2prov > opendap.ttl.rdf.out
+echo opendap.ttl.rdf.out
+curl -sH "Content-Type: application/rdf+xml" -d @opendap.ttl.rdf http://localhost:8080/sadi-services/git2prov > opendap.ttl.rdf.out
+echo opendap.ttl.rdf.out.ttl
+rapper -i rdfxml -o turtle opendap.ttl.rdf.out > opendap.ttl.rdf.out.ttl

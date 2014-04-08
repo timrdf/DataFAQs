@@ -135,9 +135,9 @@ elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
          pushd $dir &> /dev/null
             echo $dir
             #find . -maxdepth 1 -name 'evaluation.*'
-            find . -mindepth 1 -maxdepth 1
+            find . -mindepth 1 -maxdepth 1 -type f
             if [[ "$5 $6" == 'and CLEAR' ]]; then
-               find . -mindepth 1 -maxdepth 1 | xargs rm
+               find . -mindepth 1 -maxdepth 1 -type f | xargs rm
             fi
          popd &> /dev/null
       fi

@@ -1,5 +1,5 @@
 @prefix moat: <http://moat-project.org/ns#> .
 
-<http://datahub.io/tag/lod>
+<http://ckan.net/tag/lod>
     moat:name "lod" ;
     a moat:Tag .
