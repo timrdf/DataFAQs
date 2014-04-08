@@ -296,11 +296,11 @@ if [ "$epoch_existed" != "true" ]; then
          popd &> /dev/null
       done
    done
-   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services"                                                                                         > $epochDir/faqt-services.ttl.sd_name
+   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/faqt-services"                                                                 > $epochDir/faqt-services.ttl.sd_name
    # Aggregate all valid FAqT evaluation service listings.
    for input in `find $dir/faqt-services -name "faqt-services.ttl"`; do
       if [ `void-triples.sh $input` -gt 0 ]; then
-         rapper -q -g -o turtle $input                                                                                                                         >> $epochDir/faqt-services.ttl
+         rapper -q -g -o turtle $input                                                                                                 >> $epochDir/faqt-services.ttl
       else
          echo "[WARNING] Could not guess syntax of $input"
       fi
@@ -310,9 +310,13 @@ if [ "$epoch_existed" != "true" ]; then
       exit 1
    fi
    triples=`void-triples.sh $dir/faqt-services.ttl`
-   df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                                                > $epochDir/faqt-services.meta.ttl
-   rapper -q -g -o rdfxml $epochDir/faqt-services.ttl                                                                                                           > $epochDir/faqt-services.ttl.rdf
-   df-core.py $epochDir/faqt-services.ttl.rdf faqt-services | grep "^http://" | sort -u                                                                         > $epochDir/faqt-services.ttl.csv
+   df-epoch-metadata.py faqt-services $DATAFAQS_BASE_URI $epoch $dir/faqt-services.ttl text/turtle ${triples:-0}                             > $epochDir/faqt-services.meta.ttl
+   rapper -q -g -o rdfxml $epochDir/faqt-services.ttl                                                                                        > $epochDir/faqt-services.ttl.rdf
+   df-core.py $epochDir/faqt-services.ttl.rdf faqt-services | grep "^http://" | sort -u                                                      > $epochDir/faqt-services.ttl.csv
+
+
+   # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+   # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
 
    #
@@ -334,6 +338,7 @@ if [ "$epoch_existed" != "true" ]; then
             echo $selector_input > input.url
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                         > get-selector-input.sh
             if [[ "$selector_input" =~ https ]]; then
+               # http://carnivore.it/2011/10/07/error_14077458_ssl_routines_ssl23_get_server_hello_reason_1112
                echo "curl -sL --sslv3 \"$selector_input\" > selector-input"                                                                       >> get-selector-input.sh
                echo "rdf2ttl.sh selector-input > selector-input.ttl"                                                                              >> get-selector-input.sh
             else
@@ -348,11 +353,11 @@ if [ "$epoch_existed" != "true" ]; then
          popd &> /dev/null
       done
    done
-   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                               > $epochDir/datasets.ttl.sd_name
+   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                            > $epochDir/datasets.ttl.sd_name
    # Aggregate all valid dataset listings.
    for input in `find $dir/datasets -name "datasets.ttl"`; do
       if [ `void-triples.sh $input` -gt 0 ]; then
-         rapper -q -g -o turtle $input                                                                                                          >> $epochDir/datasets.ttl
+         rapper -q -g -o turtle $input                                                                                                        >> $epochDir/datasets.ttl
       else
          echo "[WARNING] Could not guess syntax of $input"
       fi
@@ -366,6 +371,10 @@ if [ "$epoch_existed" != "true" ]; then
    # Reserialize
    rapper -q -g -o rdfxml $epochDir/datasets.ttl                                                                                                 > $epochDir/datasets.ttl.rdf
    df-core.py $epochDir/datasets.ttl.rdf datasets                                                                                                > $epochDir/datasets.ttl.csv
+
+
+   # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+   # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
 
    #
@@ -392,9 +401,9 @@ if [ "$epoch_existed" != "true" ]; then
    #   mime=`guess-syntax.sh $send mime`
    #   rsyn=`guess-syntax.sh $send rapper`
    #   # TODO: they aren't accepting conneg!
-   #   echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $dataset_referencer"                                          > $epochDir/dataset-references.sh
+   #   echo "curl -s -H 'Content-Type: $mime' -H 'Accept: text/turtle' -d @$send $dataset_referencer"                                        > $epochDir/dataset-references.sh
    #   rapper -q $rsyn -o rdfxml $send                                                                                                         > $epochDir/datasets.ttl.rdf
-   #   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                               > $epochDir/dataset-references.ttl.sd_name
+   #   echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/dataset-references"                                                     > $epochDir/dataset-references.ttl.sd_name
    #   pushd $epochDir &> /dev/null
    #      df-core.py datasets.ttl.rdf datasets df:chunk &> /dev/null # creates dataset-references.post.1.ttl,
    #      if [ -e dataset-references.post.1.ttl ]; then              #         dataset-references.post.2.ttl in blocks of 25
@@ -421,26 +430,26 @@ if [ "$epoch_existed" != "true" ]; then
    #         exit 1
    #      fi
    #   popd &> /dev/null
-   #   # 502s: source $epochDir/dataset-references.sh                                                                                                  > $epochDir/dataset-references.ttl
+   #   # 502s: source $epochDir/dataset-references.sh                                                                                        > $epochDir/dataset-references.ttl
    #   triples=`void-triples.sh $dir/dataset-references.ttl`
-   #   df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}                 > $epochDir/dataset-references.meta.ttl
+   #   df-epoch-metadata.py dataset-references $DATAFAQS_BASE_URI $epoch $dir/dataset-references.ttl text/turtle ${triples:-0}         > $epochDir/dataset-references.meta.ttl
    #   if [ $triples -le 0 ]; then
    #      echo "[WARNING] $epochDir/dataset-references.ttl did not provide any references."
-   #      touch                                                                                                                                  $epochDir/dataset-references.ttl.nt
+   #      touch                                                                                                                             $epochDir/dataset-references.ttl.nt
    #   else
    #      # This file is grep'ed for each dataset to get the rdfs:seeAlso objects.
-   #      rapper -q -g -o ntriples $epochDir/dataset-references.ttl | sed 's/<//g; s/>//g'                                                     > $epochDir/dataset-references.ttl.nt
+   #      rapper -q -g -o ntriples $epochDir/dataset-references.ttl | sed 's/<//g; s/>//g'                                                > $epochDir/dataset-references.ttl.nt
    #   fi
    #done
 
    if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-      df-load-triple-store.sh --graph `cat $epochDir/epoch.ttl.sd_name`              $epochDir/epoch.ttl                   | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph `cat $epochDir/epoch.ttl.sd_name`                 $epochDir/epoch.ttl                   | awk '{print "[INFO] loaded",$0,"triples"}'
 
-      df-load-triple-store.sh --graph `cat $epochDir/faqt-services.ttl.sd_name`      $epochDir/faqt-services.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
-      df-load-triple-store.sh --graph $metadata_name                                 $epochDir/faqt-services.meta.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph `cat $epochDir/faqt-services.ttl.sd_name`         $epochDir/faqt-services.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph $metadata_name                                    $epochDir/faqt-services.meta.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
 
-      df-load-triple-store.sh --graph `cat $epochDir/datasets.ttl.sd_name`           $epochDir/datasets.ttl                | awk '{print "[INFO] loaded",$0,"triples"}'
-      df-load-triple-store.sh --graph $metadata_name                                 $epochDir/datasets.meta.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph `cat $epochDir/datasets.ttl.sd_name`              $epochDir/datasets.ttl                | awk '{print "[INFO] loaded",$0,"triples"}'
+      df-load-triple-store.sh --graph $metadata_name                                    $epochDir/datasets.meta.ttl           | awk '{print "[INFO] loaded",$0,"triples"}'
 
       if [ -e $epochDir/dataset-references.ttl ]; then
          df-load-triple-store.sh --graph `cat $epochDir/dataset-references.ttl.sd_name` $epochDir/dataset-references.ttl      | awk '{print "[INFO] loaded",$0,"triples"}'
@@ -487,7 +496,7 @@ for faqt in $faqtsRandom; do
    #       faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples
    faqtDir="__PIVOT_faqt/`noprotocolnohash $faqt`"
    mkdir -p $faqtDir &> /dev/null
-   echo "#3> <> prov:wasAttributedTo [ foaf:name \"df-epoch.sh\" ]; . # 482"  > $faqtDir/service.ttl
+   echo "#3> <> prov:wasAttributedTo [ foaf:name \"df-epoch.sh\" ]; . # 499"  > $faqtDir/service.ttl
    echo "@prefix datafaqs: <http://purl.org/twc/vocab/datafaqs#> ."          >> $faqtDir/service.ttl
    echo "<$faqt> a datafaqs:FAqTService ."                                   >> $faqtDir/service.ttl
    #echo "$faqt"                                                              > $faqtDir/service.ttl.sd_name
@@ -500,16 +509,16 @@ for faqt in $faqtsRandom; do
       for dataset in $datasetsRandom; do
          let 'd=d+1'
          datasetDir=`noprotocolnohash $dataset`
-         #                         FAqT Service - - - - - - - - - - - - - - - - - - - -|                 Dataset - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
-         # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/
+         #                         FAqT Service - - - - - - - - - - - - - - - - - - - -|                 Dataset - - - - - - - - - - - - - - - - - - |
+         # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmer...united-states/
          mkdir -p $datasetDir/__PIVOT_epoch/$epoch &> /dev/null
-         echo "#3> <> prov:wasAttributedTo [ foaf:name \"df-epoch.sh\" ]; . # 498"                                                                              > $datasetDir/dataset.ttl
-         echo "@prefix void: <http://rdfs.org/ns/void#> ."                                                                                                     >> $datasetDir/dataset.ttl
-         echo "<$dataset> a void:Dataset ."                                                                                                                    >> $datasetDir/dataset.ttl
-         #echo "$dataset"                                                                                                                                       > $datasetDir/dataset.ttl.sd_name
+         echo "#3> <> prov:wasAttributedTo [ foaf:name \"df-epoch.sh\" ]; . # 515"                                                            > $datasetDir/dataset.ttl
+         echo "@prefix void: <http://rdfs.org/ns/void#> ."                                                                                   >> $datasetDir/dataset.ttl
+         echo "<$dataset> a void:Dataset ."                                                                                                  >> $datasetDir/dataset.ttl
+         #echo "$dataset"                                                                                                                     > $datasetDir/dataset.ttl.sd_name
 
-         #                         FAqT Service - - - - - - - - - - - - - - - - - - - -|                 Dataset - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|               Epoch - -|
-         # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/__PIVOT_epoch/2012-01-14
+         #                         FAqT Service - - - - - - - - - - - - - - - - - - - -|                 Dataset - - - - - - - - - - - - - - - - - - |               Epoch - -|
+         # faqt-brick/__PIVOT_faqt/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmer...united-states/__PIVOT_epoch/2012-01-14
          # (Where the dataset evaluations will be stored)
       done
    popd &> /dev/null
@@ -692,7 +701,7 @@ if [ "$epoch_existed" != "true" ]; then
             rapper -q -i ntriples -o rdfxml post.nt                                                                              > post.nt.rdf
             cr-default-prefixes.sh --turtle > post.nt.ttl0
             cat post.nt.ttl0 post.nt | serdi -i turtle -o turtle -                                                               > post.nt.ttl
-            # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #     For human readability    ^^^^^^^^^^^            
+            # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #     For human readability    /^^^^^^^^^\
             rm post.nt.ttl0
 
 
@@ -728,14 +737,27 @@ if [ "$dryrun" == "true" ]; then
    exit 1
 fi
 
+
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
 echo
 echo "[INFO] Submitting CKAN dataset information to FAqT evaluation services. Will store responses."
 echo
 
+#
+# Total number of datasets that will be evaluated:
+#
+# find __PIVOT_epoch/2014-04-07/ -name "dataset.ttl" | wc -l
+# 890
+# find __PIVOT_faqt/ -name "request.sh" | grep '__PIVOT_epoch/2014-04-07' | wc -l
+# 508
+
 let "total = numDatasets * numFAqTs"
 f=0 # faqt evaluation service tally
-d=0 # dataset tally
-e=0 # evaluation tally
+d=0 # dataset                 tally
+e=0 # evaluation              tally
 for dataset in $datasetsRandom; do # Ordering randomized to distribute load among evaluation services.
    let 'd=d+1'
    datasetDir=`noprotocolnohash $dataset`
@@ -746,35 +768,70 @@ for dataset in $datasetsRandom; do # Ordering randomized to distribute load amon
       echo "[INFO] dataset $d/$numDatasets, FAqT $f/$numFAqTs ($e/$total total)"
       echo "[INFO] $dataset"
       echo "[INFO] $faqt"
-      post="`pwd`/__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.nt.rdf" # pwd b/c paths are variable depth
-      # faqt-brick/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers-markets-geographic-data-united-states/__PIVOT_epoch/2012-01-14
-      evalDir=$faqtDir/__PIVOT_dataset/$datasetDir/__PIVOT_epoch/$epoch
-      pushd $evalDir &> /dev/null
-         output="evaluation"
-         echo "#!/bin/bash" > request.sh
-         # TODO http://code.google.com/p/sadi/issues/detail?id=15
-         # TODO: ^^> echo curl -s -H "'Content-Type: application/rdf+xml'" -H "'Accept: text/turtle'" -d @$post $faqt >> request.sh                     # evaluation.sh
-         echo curl -s -H "'Content-Type: application/rdf+xml'" -d @$post $faqt >> request.sh
-         source request.sh > $output
-         mimetype=`guess-syntax.sh --inspect $output mime`
-         echo "[INFO] `du -sh evaluation | awk '{print $1}'` of $mimetype"
-         rename=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $output`                                                          # evaluation.{ttl,rdf,nt}
-         # Meta
-         if [[ "$rename" == "$output" || "$rename" == "" ]]; then
-            meta=$output.meta.ttl # There was no extension
-            rename="$output"
+
+
+      # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+      post="`pwd`/__PIVOT_epoch/$epoch/__PIVOT_dataset/$datasetDir/post.nt.rdf" # pwd for absolute path of brick root  #
+      #                          Epoch - -|                 Dataset - - - - - - - - - - - - - - - - - - -|             #
+      # faqt-brick/__PIVOT_epoch/2012-01-14/__PIVOT_dataset/thedatahub.org/dataset/farmers...united-states/post.nt.rdf #
+      # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
+
+      # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+      evalDir=$faqtDir/__PIVOT_dataset/$datasetDir/__PIVOT_epoch/$epoch                                                                                        #  
+      #            FAqT Service - - - - - - - - - - - - - - - - - - - -|                 Dataset - - - - - - - - - - - - - - - - - - -|               Epoch - -|
+      # faqt-brick/sparql.tw.rpi.edu/services/datafaqs/faqt/void-triples/__PIVOT_dataset/thedatahub.org/dataset/farmers...united-states/__PIVOT_epoch/2012-01-14
+      # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
+
+      pushd $evalDir &> /dev/null # Directory already placed by loop above that placed 'dataset.ttl' within __PIVOT_faqt/__PIVOT_dataset/__PIVOT_epoch/.
+         # The request.sh HAS NOT been placed until now, when it is about to be run. So it is a flag for whether or not it was already done.
+         if [[ ! -e request.sh ]]; then
+            #
+            # Set up request
+            #
+            output="evaluation"
+            echo "#!/bin/bash"                                                                                                         > request.sh
+            # TODO http://code.google.com/p/sadi/issues/detail?id=15
+            # TODO: ^^> echo curl -s -H "'Content-Type: application/rdf+xml'" -H "'Accept: text/turtle'" -d @$post $faqt >> request.sh # evaluation.sh
+            echo curl -s -H "'Content-Type: application/rdf+xml'" -d @$post $faqt                                                     >> request.sh
+
+            #
+            # Request
+            #
+            source request.sh                                                                                                          > $output # evaluation
+
+            mimetype=`guess-syntax.sh --inspect $output mime`
+            echo "[INFO] `du -sh evaluation | awk '{print $1}'` of $mimetype"
+
+            # Rename 'evaluation' to include a syntax-appropriate extension.
+            rename=`$CSV2RDF4LOD_HOME/bin/util/rename-by-syntax.sh --verbose $output`                                                         # evaluation.{ttl,rdf,nt}
+            # Meta
+            if [[ "$rename" == "$output" || "$rename" == "" ]]; then
+               meta=$output.meta.ttl # There was no extension
+               rename="$output"
+            else
+               # blah.blah.rdf -> blah.blah.meta.rdf
+               meta=`echo $rename | sed 's/\(\.[^.]*\)$/.meta\1/'` # does not append anything if there is no extension
+            fi
+            echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/faqt/$f/dataset/$d" > $rename.sd_name                                              # evaluation.{ttl,rdf,nt}.sd_name
+            dump=$evalDir/$rename
+            triples=`void-triples.sh $rename`
+            echo "# df-epoch-metadata.py evaluation $DATAFAQS_BASE_URI $epoch $faqt $f $dataset $d $dump ${mimetype:-.} ${triples:-0}" > $meta
+                    df-epoch-metadata.py evaluation $DATAFAQS_BASE_URI $epoch $faqt $f $dataset $d $dump ${mimetype:-.} ${triples:-0} >> $meta # evaluation.{ttl,rdf,nt}.meta
+
+            # State when evaluation returned HTML:  State when the evaluation returned RDF (NOTE: even if the RDF is a triple with a SADI error):
+            # request.sh                            request.sh
+            # evaluation                            evaluation.rdf
+            # evaluation.sd_name                    evaluation.rdf.sd_name
+            # evaluation.meta.ttl                   evaluation.meta.rdf
+
+            if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
+               df-load-triple-store.sh --graph `cat $rename.sd_name` $rename | awk '{print "[INFO] loaded",$0,"triples"}'
+               df-load-triple-store.sh --graph $metadata_name $meta          | awk '{print "[INFO] loaded",$0,"triples"}'
+            fi
          else
-            # blah.blah.rdf -> blah.blah.meta.rdf
-            meta=`echo $rename | sed 's/\(\.[^.]*\)$/.meta\1/'` # does not append anything if there is no extension
-         fi
-         echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/faqt/$f/dataset/$d" > $rename.sd_name                                               # evaluation.{ttl,rdf,nt}.sd_name
-         dump=$evalDir/$rename
-         triples=`void-triples.sh $rename`
-         echo "# df-epoch-metadata.py evaluation $DATAFAQS_BASE_URI $epoch $faqt $f $dataset $d $dump ${mimetype:-.} ${triples:-0}" > $meta
-         df-epoch-metadata.py evaluation $DATAFAQS_BASE_URI $epoch $faqt $f $dataset $d $dump ${mimetype:-.} ${triples:-0}         >> $meta # evaluation.{ttl,rdf,nt}.meta
-         if [ "$DATAFAQS_PUBLISH_THROUGHOUT_EPOCH" == "true" ]; then
-            df-load-triple-store.sh --graph `cat $rename.sd_name` $rename | awk '{print "[INFO] loaded",$0,"triples"}'
-            df-load-triple-store.sh --graph $metadata_name $meta          | awk '{print "[INFO] loaded",$0,"triples"}'
+            echo "[INFO] (evaluation already gathered; skipping)"
          fi
       popd &> /dev/null
       echo
