@@ -3,18 +3,23 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
 
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
-   echo "`basename $0` in <epoch> datasets"                    >&2
+   DATASETS='datasets'
+   echo "`basename $0` in <epoch> $DATASETS"                    >&2
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/2000-us-census-rdf/dataset.ttl" >&2
    echo
-   echo "`basename $0` in <epoch> dataset evaluations" >&2
+   DATASET_EVALUATIONS='dataset evaluations'
+   echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"         >&2
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07" >&2
    echo
-   echo "`basename $0` in <epoch> dataset evaluation requests" >&2
+   DATASET_EVALUATION_REQUESTS='dataset evaluation requests'
+   echo "`basename $0` in <epoch> $DATASET_EVALUATION_REQUESTS" >&2
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07/request.sh" >&2
    echo
-   echo "`basename $0` in <epoch> datasets evaluated"          >&2
+   DATASETS_EVALUATED='datasets evaluated'
+   echo "`basename $0` in <epoch> $DATASETS_EVALUATED"          >&2
    echo
-   echo "`basename $0` in <epoch> invalid evaluations"         >&2
+   INVALID_EVALUATIONS='invalid evalutions'
+   echo "`basename $0` in <epoch> $INVALID_EVALUATIONS"         >&2
    exit
 fi
 
@@ -41,22 +46,22 @@ fi
 
 
 
-if [[ "$3" == "datasets" ]]; then
+if [[ "$3" == "$DATASETS" ]]; then
    find __PIVOT_epoch/$epoch -name 'dataset.ttl'
 
-elif [[ "$3 $4" == "dataset evaluations" ]]; then
+elif [[ "$3 $4" == "$DATASET_EVALUATIONS" ]]; then
    find __PIVOT_faqt -name "$epoch" | grep __PIVOT_dataset | grep __PIVOT_epoch/$epoch
 
-elif [[ "$3 $4 $5" == "dataset evaluation requests" ]]; then
+elif [[ "$3 $4 $5" == "$DATASET_EVALUATION_REQUESTS" ]]; then
    find __PIVOT_faqt -name "request.sh" | grep __PIVOT_epoch/$epoch
 
-elif [[ "$3 $4" == "datasets evaluated" ]]; then
-   for dir in `$0 in $epoch dataset evaluation requests`; do
+elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
+   for dir in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       echo $dir
       ls $dir
    done
 
-elif [[ "$3 $4" == "invalid evaluations" ]]; then
+elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
    find __PIVOT_faqt/ -name "evaluation" | grep __PIVOT_epoch/$epoch
 
 #elif [[ "$3 $4" == "invalid evaluations" ]]; then
