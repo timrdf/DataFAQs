@@ -46,13 +46,13 @@ fi
 
 
 
-if [[ "$3" == "$DATASETS" ]]; then
+if [[ "$3" == "datasets" ]]; then
    find __PIVOT_epoch/$epoch -name 'dataset.ttl'
 
-elif [[ "$3 $4" == "$DATASET_EVALUATIONS" ]]; then
+elif [[ "$3 $4" == "dataset evaluations" ]]; then
    find __PIVOT_faqt -name "$epoch" | grep __PIVOT_dataset | grep __PIVOT_epoch/$epoch
 
-elif [[ "$3 $4 $5" == "$DATASET_EVALUATION_REQUESTS" ]]; then
+elif [[ "$3 $4 $5" == "dataset evaluation requests" ]]; then
    find __PIVOT_faqt -name "request.sh" | grep __PIVOT_epoch/$epoch
 
 elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
@@ -61,7 +61,7 @@ elif [[ "$3 $4" == "$DATASETS_EVALUATED" ]]; then
       ls $dir
    done
 
-elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
+elif [[ "$3 $4" == "invalid evaluations" ]]; then
    find __PIVOT_faqt/ -name "evaluation" | grep __PIVOT_epoch/$epoch
 
 #elif [[ "$3 $4" == "invalid evaluations" ]]; then
