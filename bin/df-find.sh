@@ -88,13 +88,14 @@ elif [[ "$3 $4" == "$VALID_EVALUATIONS" ]]; then
    echo $0 in $epoch $DATASET_EVALUATION_REQUESTS
    for sh in `$0 in $epoch $DATASET_EVALUATION_REQUESTS`; do
       dir=`dirname $sh`
-      if [[ "`find $dir -maxdepth 1 -name 'evaluation.*' | wc -l | awk '{print $1}'`" -gt 0 ]]; then
-         # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
+      #if [[ "`find $dir -maxdepth 1 -name 'evaluation.*' | wc -l | awk '{print $1}'`" -gt 0 ]]; then
+      #   # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
          pushd $dir &> /dev/null
-            echo $dir
-            find . -maxdepth 1 -name 'evaluation.*' | grep -v meta.rdf | grep -v sd_name
-         popd &> /dev/null
-      fi
+      #      echo $dir
+      #      find . -maxdepth 1 -name 'evaluation.*'
+      #   popd &> /dev/null
+      #fi
+      find $dir -maxdepth 1 -name 'evaluation.*' | grep -v .meta. | grep -v sd_name
    done
 
 elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
