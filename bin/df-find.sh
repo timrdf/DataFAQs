@@ -3,9 +3,9 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
 
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
-   echo "`basename` in <epoch> datasets [1|2]"      >&2
-   echo "`basename` in <epoch> evaluated datasets"  >&2
-   echo "`basename` in <epoch> invalid evaluations" >&2
+   echo "`basename $0` in <epoch> datasets [1|2]"      >&2
+   echo "`basename $0` in <epoch> evaluated datasets"  >&2
+   echo "`basename $0` in <epoch> invalid evaluations" >&2
    exit
 fi
 
