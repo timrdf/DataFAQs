@@ -5,8 +5,15 @@
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo "`basename $0` in <epoch> datasets"                    >&2
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/2000-us-census-rdf/dataset.ttl" >&2
+   echo
+   echo "`basename $0` in <epoch> dataset evaluations" >&2
+   echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07" >&2
+   echo
    echo "`basename $0` in <epoch> dataset evaluation requests" >&2
+   echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07/request.sh" >&2
+   echo
    echo "`basename $0` in <epoch> evaluated datasets"          >&2
+   echo
    echo "`basename $0` in <epoch> invalid evaluations"         >&2
    exit
 fi
