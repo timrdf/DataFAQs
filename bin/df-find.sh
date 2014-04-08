@@ -24,6 +24,12 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
    echo
+   VALID_EVALUATIONS='valid evalutions'
+   echo "`basename $0` in <epoch> $VALID_EVALUATIONS"         >&2
+   echo
+   echo "   e.g. " >&2
+   echo
+   echo
    INVALID_EVALUATIONS='invalid evalutions'
    echo "`basename $0` in <epoch> $INVALID_EVALUATIONS"         >&2
    echo
