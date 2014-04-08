@@ -114,7 +114,11 @@ elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
          # 'evaluation' was renamed to a valid RDF extension, e.g. 'evaluation.rdf'
          pushd $dir &> /dev/null
             echo $dir
-            find . -maxdepth 1 -name 'evaluation.*'
+            #find . -maxdepth 1 -name 'evaluation.*'
+            find . -maxdepth 1
+            if [[ "$5 $6" == 'and CLEAR' ]]; then
+               find . -maxdepth 1 | xargs rm
+            fi
          popd &> /dev/null
       fi
 
