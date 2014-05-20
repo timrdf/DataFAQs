@@ -161,6 +161,7 @@
 
     <dcterms:FileFormat rdf:about="http://purl.org/twc/vocab/between-the-edges/format/PrefixTree">
         <rdfs:comment xml:lang="en">A concise tree format organizes strings by their common prefixes. Includes local and recursive weight counts.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://github.com/timrdf/DataFAQs/wiki/BTE-Between-The-Edges#prefixtree"/>
     </dcterms:FileFormat>
 
 </rdf:RDF>
