@@ -25,6 +25,11 @@ bte:Node
     a owl:Class ;
     rdfs:comment "Any rdfs:Resource that is output by a Between The Edges analysis."@en .
 
+bte:PrefixTree
+    a dcterms:FileFormat ;
+    rdfs:comment "A concise tree format organizes strings by their common prefixes. Includes local and recursive weight counts."@en ;
+    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/BTE-Between-The-Edges#prefixtree> .
+
 bte:RDFNode
     a owl:Class ;
     rdfs:comment "An rdfs:Resource that was analyzed by Between The Edges, as opposed to rdfs:Resources that resulted from the Between The Edges analysis."@en ;
@@ -42,10 +47,6 @@ bte:broader
     a owl:ObjectProperty ;
     rdfs:domain bte:Node ;
     rdfs:range bte:Node .
-
-<http://purl.org/twc/vocab/between-the-edges/format/PrefixTree>
-    a dcterms:FileFormat ;
-    rdfs:comment "A concise tree format organizes strings by their common prefixes. Includes local and recursive weight counts."@en .
 
 bte:length
     a owl:DatatypeProperty ;
