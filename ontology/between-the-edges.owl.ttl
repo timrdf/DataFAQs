@@ -3,52 +3,59 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bte: <http://purl.org/twc/vocab/between-the-edges/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix between-the-edges: <http://purl.org/twc/vocab/between-the-edges/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 <http://purl.org/twc/vocab/between-the-edges/>
-    a owl:Ontology .
+    a owl:Ontology ;
+    rdfs:comment "A vocabulary to describe the implicit relationships within the literal URI."@en ;
+    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/BTE-Between-The-Edges> .
 
-between-the-edges:HashEndURI
+bte:HashEndURI
     a owl:Class ;
-    rdfs:subClassOf between-the-edges:HashURI .
+    rdfs:subClassOf bte:HashURI .
 
-between-the-edges:HashURI
+bte:HashURI
     a owl:Class ;
     rdfs:comment "URI contains a hash (#). For example, <http://dailymed.nlm.nih.gov/dailymed/help.cfm#webservices>."@en ;
-    rdfs:subClassOf between-the-edges:RDFNode .
+    rdfs:subClassOf bte:RDFNode .
 
-between-the-edges:Node
+bte:Node
     a owl:Class ;
     rdfs:comment "Any rdfs:Resource that is output by a Between The Edges analysis."@en .
 
-between-the-edges:RDFNode
+bte:RDFNode
     a owl:Class ;
     rdfs:comment "An rdfs:Resource that was analyzed by Between The Edges, as opposed to rdfs:Resources that resulted from the Between The Edges analysis."@en ;
-    rdfs:subClassOf between-the-edges:Node .
+    rdfs:subClassOf bte:Node .
 
-between-the-edges:SlashEndURI
+bte:SlashEndURI
     a owl:Class ;
-    rdfs:subClassOf between-the-edges:SlashURI .
+    rdfs:subClassOf bte:SlashURI .
 
-between-the-edges:SlashURI
+bte:SlashURI
     a owl:Class ;
-    rdfs:subClassOf between-the-edges:RDFNode .
+    rdfs:subClassOf bte:RDFNode .
 
-between-the-edges:broader
+bte:broader
     a owl:ObjectProperty ;
-    rdfs:domain between-the-edges:Node ;
-    rdfs:range between-the-edges:Node .
+    rdfs:domain bte:Node ;
+    rdfs:range bte:Node .
 
-between-the-edges:length
+<http://purl.org/twc/vocab/between-the-edges/format/PrefixTree>
+    a dcterms:FileFormat ;
+    rdfs:comment "A concise tree format organizes strings by their common prefixes. Includes local and recursive weight counts."@en .
+
+bte:length
     a owl:DatatypeProperty ;
     rdfs:comment "The string length of the URI."@en .
 
-between-the-edges:scheme
+bte:scheme
     a owl:DatatypeProperty ;
     rdfs:comment "The addressing scheme of the URL. For example, http, file, gopher, mailto, ftp, etc."@en .
 
-between-the-edges:step
+bte:step
     a owl:DatatypeProperty ;
     rdfs:comment "The local name portion of the URI, after the slash."@en .
 
