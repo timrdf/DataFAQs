@@ -1,4 +1,5 @@
-#3> <> rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/SADI-Semantic-Web-Services-framework#sadi-using-java-take-2>;
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/src/java/sadi-services/create-new-sadi-java-file>;
+#3>    rdfs:seeAlso          <https://github.com/timrdf/DataFAQs/wiki/SADI-Semantic-Web-Services-framework#sadi-using-java-take-2>;
 #3> .
 
 mvn ca.wilkinsonlab.sadi:sadi-generator:generate-service -DserviceClass=edu.rpi.tw.data.provenance.Git2PROV -DinputClass=http://usefulinc.com/ns/doap#GitRepository -DoutputClass=http://www.w3.org/ns/prov#Entity -DcontactEmail=lebot@rpi.edu -DserviceName=git2prov -DserviceDescription="Produces a PROV-O description of a given Git repository."
