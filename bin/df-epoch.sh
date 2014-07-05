@@ -345,17 +345,19 @@ if [ "$epoch_existed" != "true" ]; then
                echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh
             fi
             source get-selector-input.sh
+            rapper -g -o rdfxml selector-input.ttl                                                                                                 > selector-input.ttl.rdf
 
-            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > datasets.ttl"   > select.sh
+            #echo "curl -s -H \"Content-Type: text/turtle\" -H 'Accept: text/turtle' -d @selector-input.ttl $dataset_selector > datasets.ttl"      > select.sh
             # TODO: selector needs to accept conneg.
-            echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > datasets.ttl"                             > select.sh
-            source select.sh                                                                                                       # <- creates   datasets.ttl
+            #echo "curl -s -H \"Content-Type: text/turtle\" -d @selector-input.ttl $dataset_selector > datasets.ttl"                               > select.sh
+            echo "curl -s -H \"Content-Type: application/rdf+xml\" -d @selector-input.ttl.rdf $dataset_selector > datasets.ttl.rdf"                > select.sh
+            source select.sh                                                                                                          # <- creates   datasets.ttl[.rdf]
          popd &> /dev/null
       done
    done
    echo "$DATAFAQS_BASE_URI/datafaqs/epoch/$epoch/config/datasets"                                                                            > $epochDir/datasets.ttl.sd_name
    # Aggregate all valid dataset listings.
-   for input in `find $dir/datasets -name "datasets.ttl"`; do
+   for input in `find $dir/datasets -name "datasets.ttl.rdf"`; do
       if [ `void-triples.sh $input` -gt 0 ]; then
          rapper -q -g -o turtle $input                                                                                                        >> $epochDir/datasets.ttl
       else
