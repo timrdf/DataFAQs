@@ -1,4 +1,6 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/core/select-datasets/by-ckan-group.py>;
+#3>    prov:hadDerivation    <https://github.com/timrdf/DataFAQs/blob/master/src/java/sadi-services/src/main/java/edu/rpi/tw/data/quality/sadi/faqt/core/select/datasets/ByCKANGroup.java>;
+#3>    prov:alternateOf      <https://github.com/timrdf/DataFAQs/blob/master/src/java/sadi-services/src/main/java/edu/rpi/tw/data/quality/sadi/faqt/core/select/datasets/ByCKANGroup.java>;
 #3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service> .
 
 import faqt
