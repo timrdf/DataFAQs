@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/tree/master/bin/df-mirror-endpoint.sh> .
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/tree/master/bin/df-mirror-endpoint.sh>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/csv2rdf4lod-automation/wiki/Named-graphs-that-know-where-they-came-from#mirroring-another-endpoints-named-graph>;
+#3> .
 #
 # Usage:
 #
