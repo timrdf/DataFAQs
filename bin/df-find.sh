@@ -152,6 +152,6 @@ elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
       fi
    done
 elif [[ "$3" == "$STATUS" ]]; then
-   echo "  valid evaluations: `$0 in $epoch "$VALID_EVALUATIONS"   | wc -l`" 
-   echo "invalid evaluations: `$0 in $epoch "$INVALID_EVALUATIONS" | wc -l`" 
+   echo "  valid evaluations: `$0 in $epoch $VALID_EVALUATIONS   | wc -l`" 
+   echo "invalid evaluations: `$0 in $epoch $INVALID_EVALUATIONS | wc -l`" 
 fi
