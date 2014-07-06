@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh> .
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-find.sh>;
+#3>    foaf:homepage         <https://github.com/timrdf/DataFAQs/wiki/df-find>;
+#3> .
 
 DATASETS='datasets'
 INVALID_DATASET_DESCRIPTIONS='invalid dataset descriptions'
@@ -57,6 +59,8 @@ if [[ $# -eq 0 || "$1" == "--help" || "$3" == "--help" || "$1" == "help" || "$3"
    echo "   [and CLEAR] - remove ALL files within the evaluation directory (i.e. request.sh, evaluation*)."
    echo                                                             >&2
    echo "`basename $0` in <epoch> $STATUS" >&2
+   echo                                                             >&2
+   echo "(see also https://github.com/timrdf/DataFAQs/wiki/df-find)">&2
    exit
 fi
 
