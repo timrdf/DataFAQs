@@ -158,5 +158,5 @@ elif [[ "$3" == "$STATUS" ]]; then
    echo "- - -"
    echo "$INCOMPLETE_EVALUATIONS: `$0 in $epoch $INCOMPLETE_EVALUATIONS | wc -l`" 
    echo "     $VALID_EVALUATIONS: `$0 in $epoch $VALID_EVALUATIONS      | wc -l`" 
-   echo "   $INVALID_EVALUATIONS: `$0 in $epoch $INVALID_EVALUATIONS    | wc -l`" 
+   echo "   $INVALID_EVALUATIONS: `$0 in $epoch $INVALID_EVALUATIONS    | grep '^__PIVOT_faqt' | wc -l`" 
 fi
