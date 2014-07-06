@@ -152,6 +152,9 @@ elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
       fi
    done
 elif [[ "$3" == "$STATUS" ]]; then
+   echo "`$0 in $epoch $DATASETS | wc -l` datasets to evaluate." 
+   echo "`$0 in $epoch $INVALID_DATASET_DESCRIPTIONS | wc -l` invalid dataset descriptions." 
+   echo "`$0 in $epoch $DATASET_EVALUATION_REQUESTS  | wc -l`/`$0 in $epoch $DATASET_EVALUATIONS | wc -l` evaluation requests made." 
    echo "incomplete evaluations: `$0 in $epoch $INCOMPLETE_EVALUATIONS | wc -l`" 
    echo "     valid evaluations: `$0 in $epoch $VALID_EVALUATIONS      | wc -l`" 
    echo "   invalid evaluations: `$0 in $epoch $INVALID_EVALUATIONS    | wc -l`" 
