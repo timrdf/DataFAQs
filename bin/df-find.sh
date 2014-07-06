@@ -151,6 +151,6 @@ elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
          popd &> /dev/null
       fi
    done
-elif [[ "$3 $4" == "$STATUS" ]]; then
+elif [[ "$3" == "$STATUS" ]]; then
    echo "invalid evaluations: `$0 $epoch invalid evaluations | wc -l`" 
 fi
