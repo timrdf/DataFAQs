@@ -10,23 +10,34 @@ DATASETS_EVALUATED='datasets evaluated'
 INCOMPLETE_EVALUATIONS='incomplete evaluations'
 VALID_EVALUATIONS='valid evaluations'
 INVALID_EVALUATIONS='invalid evaluations'
+STATUS='status'
 if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
    echo "`basename $0` in <epoch> $DATASETS"                        >&2
    echo
-   echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl" >&2
+   echo "   Returns all files describing a dataset that will be evaluated."                      >&2
+   echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/aemet/dataset.ttl"  >&2
+   echo "   These files are available immediately AFTER the FAqT service and dataset selection," >&2
+   echo "   BEFORE any descriptions are gathered about FAqT services or datasets."               >&2
    echo
    echo "`basename $0` in <epoch> $INVALID_DATASET_DESCRIPTIONS"    >&2
    echo
+   echo "   Returns all dataset descriptions that are not valid RDF."                                     >&2
    echo "   e.g. __PIVOT_epoch/2014-04-07/__PIVOT_dataset/datahub.io/dataset/pokepedia-fr/augmentation-1" >&2
+   echo "   These files are created WHILE dataset descriptions are being gathered,"                       >&2
+   echo "   BEFORE the evaluations are performed by calling the FAqTs."                                   >&2
    echo
    echo "`basename $0` in <epoch> $DATASET_EVALUATIONS"             >&2
    echo
+   echo "   Returns the directories that will contain the dataset evaluations for this epoch."                                                  >&2
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07" >&2
+   echo "   All of these directories are created BEFORE gathering any descriptions about FAqT services or datasets."                            >&2
    echo
    echo "`basename $0` in <epoch> $DATASET_EVALUATION_REQUESTS"     >&2
    echo
+   echo "   Returns the request triggers for all datasets that have been evaluated, or currently are being evaluated."                                    >&2
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/aemet/__PIVOT_epoch/2014-04-07/request.sh" >&2
+   echo "   These files are created WHILE evaluations are being gathered, so their existence indicates completion or (the one) in-progress."               >&2
    echo
    echo "`basename $0` in <epoch> $DATASETS_EVALUATED"              >&2
    echo
@@ -36,11 +47,9 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/eea/__PIVOT_epoch/2014-04-07" >&2
    echo
-   echo
    echo "`basename $0` in <epoch> $VALID_EVALUATIONS"               >&2
    echo
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/eagle-i-utep/__PIVOT_epoch/2014-04-07/evaluation.rdf" >&2
-   echo
    echo
    echo "`basename $0` in <epoch> $INVALID_EVALUATIONS [and CLEAR]" >&2
    echo
@@ -141,4 +150,6 @@ elif [[ "$3 $4" == "$INVALID_EVALUATIONS" ]]; then
          popd &> /dev/null
       fi
    done
+elif [[ "$3 $4" == "$STATUS" ]]; then
+   echo "invalid evaluations: `$0 $epoch invalid evaluations | wc -l`" 
 fi
