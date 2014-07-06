@@ -56,6 +56,7 @@ if [[ $# -eq 0 || "$1" == "--help" ]]; then
    echo "   e.g. __PIVOT_faqt/lodcloud.tw.rpi.edu/sadi-services/named-graphs/__PIVOT_dataset/datahub.io/dataset/radatana/__PIVOT_epoch/2014-04-07/evaluation" >&2
    echo "   [and CLEAR] - remove ALL files within the evaluation directory (i.e. request.sh, evaluation*)."
    echo
+   echo "`basename $0` in <epoch> $STATUS" >&2
    exit
 fi
 
