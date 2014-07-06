@@ -11,7 +11,7 @@ INCOMPLETE_EVALUATIONS='incomplete evaluations'
 VALID_EVALUATIONS='valid evaluations'
 INVALID_EVALUATIONS='invalid evaluations'
 STATUS='status'
-if [[ $# -eq 0 || "$1" == "--help" || "$3" == "--help" ]]; then
+if [[ $# -eq 0 || "$1" == "--help" || "$3" == "--help" || "$1" == "help" || "$3" == "help" ]]; then
    echo                                                             >&2
    echo "`basename $0` in <epoch> $DATASETS"                        >&2
    echo                                                             >&2
