@@ -1,5 +1,7 @@
 #3> <> prov:specializationOf <https://raw.github.com/timrdf/DataFAQs/master/services/sadi/core/select-datasets/by-ckan-tag.rpy> .
-#
+#3>    prov:hadDerivation <https://github.com/timrdf/DataFAQs/blob/master/src/java/sadi-services/src/main/java/edu/rpi/tw/data/quality/sadi/faqt/core/select/datasets/ByCKANTag.java>;
+#3>    prov:alternateOf   <https://github.com/timrdf/DataFAQs/blob/master/src/java/sadi-services/src/main/java/edu/rpi/tw/data/quality/sadi/faqt/core/select/datasets/ByCKANTag.java>;
+#3> .
 #3> <http://sparql.tw.rpi.edu/services/datafaqs/core/select-datasets/by-ckan-tag>
 #3>    a datafaqs:DatasetSelector .
 #3> []
