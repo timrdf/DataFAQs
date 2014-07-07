@@ -2,4 +2,4 @@
 #3>    rdfs:seeAlso          <https://github.com/timrdf/DataFAQs/wiki/SADI-Semantic-Web-Services-framework#sadi-using-java-take-2>;
 #3> .
 
-mvn ca.wilkinsonlab.sadi:sadi-generator:generate-service -DserviceClass=edu.rpi.tw.data.quality.sadi.faqt.core.select.datasets.ByCKANGroup -DinputClass=http://www.w3.org/ns/prov#Entity -DoutputClass=http://www.w3.org/ns/prov#Entity -DcontactEmail=lebot@rpi.edu -DserviceName=select-datasets-by-ckan-group -DserviceDescription="Links a CKAN group to the datasets that are in the group."
+mvn ca.wilkinsonlab.sadi:sadi-generator:generate-service -DserviceClass=edu.rpi.tw.data.quality.sadi.faqt.core.select.datasets.ByCKANTag -DinputClass=http://www.w3.org/ns/prov#Entity -DoutputClass=http://www.w3.org/ns/prov#Entity -DcontactEmail=lebot@rpi.edu -DserviceName=select-datasets-by-ckan-tag -DserviceDescription="Links a CKAN tag to the datasets that are in the tag."
