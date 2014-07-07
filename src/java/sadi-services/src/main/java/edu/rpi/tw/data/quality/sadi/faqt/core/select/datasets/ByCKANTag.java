@@ -23,10 +23,14 @@ import edu.rpi.tw.data.rdf.jena.vocabulary.DCAT;
 import edu.rpi.tw.data.rdf.jena.vocabulary.DataFAQs;
 import edu.rpi.tw.data.rdf.jena.vocabulary.Prefixes;
 
+/**
+ * Java alternative to https://github.com/timrdf/DataFAQs/blob/master/services/sadi/core/select-datasets/by-ckan-tag.py
+ * 
+ */
 @Name("select-datasets-by-ckan-tag")
 @Description("Links a CKAN tag to the datasets that are in the tag.")
 @ContactEmail("lebot@rpi.edu")
-@InputClass("http://www.w3.org/ns/prov#Entity")
+@InputClass("http://moat-project.org/ns#Tag")
 @OutputClass("http://purl.org/twc/vocab/datafaqs#DatasetCollection")
 public class ByCKANTag extends SimpleSynchronousServiceServlet {
    
@@ -44,13 +48,15 @@ public class ByCKANTag extends SimpleSynchronousServiceServlet {
       Prefixes.setNsPrefixes(m);
       
       String base = CKANReader.getBaseURI(input);
+      log.warn("ckan base URI "+base);
+      log.warn("ckan API "+CKANReader.getCKANAPI(input));
       // (Taken from LiftCKAN)
       Client client = new Client( new Connection( CKANReader.getCKANAPI(input) ), "");
       //                                          ^ e.g. "http://datahub.io"     <key>
       
       try {
          output.addProperty(RDF.type, DataFAQs.DatasetCollection);
-         for( Dataset dataset : client.findDatasetsByTag(tagID).results ) {
+         for( Dataset dataset : client.findDatasetsByTag(tagID) ) {
             //log.warn(groupID + " has dataset "+dataset.getName());
             Resource datasetR = m.createResource(base+"/dataset/"+dataset.getName(), DataFAQs.CKANDataset);
             datasetR.addProperty(RDF.type, DCAT.Dataset);
