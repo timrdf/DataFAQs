@@ -23,4 +23,5 @@ public class DataFAQs {
 	public static final Resource CKANDataset  = m_model.createResource(ns+"CKANDataset");
 	public static final Resource CKANGroup    = m_model.createResource(ns+"CKANGroup");
 	public static final Resource CKANResource = m_model.createResource(ns+"CKANResource");
+	public static final Resource DatasetCollection = m_model.createResource(ns+"DatasetCollection");
 }
