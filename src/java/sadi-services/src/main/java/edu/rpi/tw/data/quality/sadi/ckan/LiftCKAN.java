@@ -69,8 +69,8 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
            	
            	String base = CKANReader.getBaseURI(input); // inputS.replaceFirst("\\/dataset\\/.*$", "");
            	
-           	log.warn("processing id "+CKANReader.getCKANIdentiifer(input));
-           	Dataset ds = client.getDataset(CKANReader.getCKANIdentiifer(input));
+           	log.warn("processing id "+CKANReader.getCKANIdentifier(input));
+           	Dataset ds = client.getDataset(CKANReader.getCKANIdentifier(input));
            	//                             ^ e.g. "farmers-markets-geographic-data-united-states"
            	
            	Model m = output.getModel();
@@ -254,7 +254,7 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
            			linkset.addProperty(VoID.target, otherR);
            			linkset.addProperty(VoID.target, output);
            			
-           			log.warn("void:subset "+linkset.getURI().toString());
+           			//log.warn("void:subset "+linkset.getURI().toString());
            			output.addProperty(VoID.subset, linkset);
            		}else if( "preferred_uri".equals(extra.getKey()) && valid(extra.getValue()) ) {
            			output.addProperty(CON.preferredURI, m.createResource(trim(extra.getValue())));
@@ -292,7 +292,7 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
            	//
            	// Dataset entry revisions
            	//
-           	for( DatasetRevision revision : client.getDatasetRevisions(CKANReader.getCKANIdentiifer(input)) ) {
+           	for( DatasetRevision revision : client.getDatasetRevisions(CKANReader.getCKANIdentifier(input)) ) {
            		Resource revisionR = m.createResource(base+"/revision/"+revision.getID());
            		
            		Resource user = null;
@@ -348,6 +348,11 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 		return formatR;
 	}
 	
+	/**
+	 * 
+	 * @param ds
+	 * @param output
+	 */
 	private void tryTitle(Dataset ds, Resource output) {
 		try {
 	    	// Title
@@ -359,10 +364,20 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param string
+	 * @return
+	 */
 	private boolean valid(String string) {
 		return string != null && string.length() > 0;
 	}
 	
+	/**
+	 * 
+	 * @param string
+	 * @return
+	 */
 	private String trim(String string) {
 		return valid(string) ? string.replaceAll("^\"", "").replaceAll("\"$", "") : string;
 	}
