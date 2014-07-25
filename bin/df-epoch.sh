@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh> .
+#3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/blob/master/bin/df-epoch.sh>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Brick>;
+#3> .
 #
 # DataFAqTs core evaluation engine:
 #   Retrieves dataset and FAqT evaluation service lists,
