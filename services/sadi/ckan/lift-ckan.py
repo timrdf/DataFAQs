@@ -1,5 +1,6 @@
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/raw/master/services/sadi/ckan/lift-ckan.py>;
-#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service>;
+#3>    rdfs:seeAlso <https://github.com/timrdf/DataFAQs/wiki/FAqT-Service>,
+#3>                 <https://github.com/timrdf/DataFAQs/wiki/CKAN#-beyond-data-hub---and-on-to-lod>;
 #3>    prov:alternateOf <https://github.com/lod-cloud/datahub2void>;
 #3> .
 
