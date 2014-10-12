@@ -80,8 +80,8 @@ class W3CMailingListGroups(faqt.Service):
       #print 'sleeping...'
       #time.sleep(2)
 
-      print '- - - - - - - - -'
-      print 'processing ' + input.subject
+      print >> sys.stderr, '- - - - - - - - -'
+      print >> sys.stderr, 'processing ' + input.subject
       base = re.sub('/[^/]*$','',input.subject)
 
       Site      = output.session.get_class(ns.SIOC['Site'])
@@ -105,7 +105,7 @@ class W3CMailingListGroups(faqt.Service):
          groupR.save()
          output.dcterms_hasPart.append(groupR)
          output.save()
-         print group + ' ' + groupID
+         print >> sys.stderr, group + ' ' + groupID
 
       # Get the body as prov:value: print  soup.find('pre', {'id': 'body'}).findAll(text=True)
 
@@ -118,7 +118,25 @@ class W3CMailingListGroups(faqt.Service):
 resource = W3CMailingListGroups()
 
 # Used when this service is manually invoked from the command line (for testing).
+#
+# Usage: <input-rdf-file> [input-rdf-file-syntax] [output-rdf-file]
+#
 if __name__ == '__main__':
-   print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
-   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
-   sadi.publishTwistedService(resource, port=resource.dev_port)
+   if len(sys.argv) == 0:
+      print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
+      print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
+      sadi.publishTwistedService(resource, port=resource.dev_port)
+   else:
+      reader= open(sys.argv[1],"r")
+      mimeType = "application/rdf+xml"
+      if len(sys.argv) > 2:
+         mimeType = sys.argv[2]
+      if len(sys.argv) > 3:
+         writer = open(sys.argv[3],"w")
+
+      graph = resource.processGraph(reader,mimeType)
+
+      if len(sys.argv) > 3:
+         writer.write(resource.serialize(graph,mimeType))
+      else:
+         print resource.serialize(graph,mimeType)
