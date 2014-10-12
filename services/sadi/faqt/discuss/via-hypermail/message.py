@@ -78,7 +78,7 @@ class W3CMailingListMessage(faqt.Service):
    def process(self, input, output):
 
       #print 'sleeping...'
-      #time.sleep(2)
+      time.sleep(2)
 
       print '- - - - - - - - -'
       print 'processing ' + input.subject
