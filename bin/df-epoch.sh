@@ -209,6 +209,8 @@ fi
 
 # # # # Hard coded parameters
 
+# Use rapper http://richard.cyganiak.de/2008/03/rdfbugs/accept.php
+# See http://richard.cyganiak.de/blog/2008/03/what-is-your-rdf-browsers-accept-header/
 ACCEPT_HEADER="Accept: text/turtle; application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6"
 ACCEPT_HEADER="Accept: text/turtle; application/x-turtle; q=0.9, application/rdf+xml; q=0.8, text/plain; q=0.6, */*; q=0.4"
