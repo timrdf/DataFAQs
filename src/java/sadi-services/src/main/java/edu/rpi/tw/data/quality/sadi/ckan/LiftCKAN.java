@@ -45,7 +45,7 @@ import edu.rpi.tw.data.rdf.jena.vocabulary.VoID;
  */
 @Name("lift-ckan")
 @ContactEmail("lebot@rpi.edu")
-@InputClass("http://purl.org/twc/vocab/datafaqs#CKANDataset") 
+@InputClass("http://purl.org/twc/vocab/datafaqs#CKANDataset")
 @OutputClass("http://purl.org/twc/vocab/datafaqs#CKANDataset")
 public class LiftCKAN extends SimpleSynchronousServiceServlet {
 	
@@ -246,9 +246,15 @@ public class LiftCKAN extends SimpleSynchronousServiceServlet {
            			/*Resource linkset = m.createResource("#linkset-"+otherID+"-"+
            												NameFactory.getMD5(inputS+otherID+ds.getRevision_id()),
            												VoID.Linkset);*/
-           			Resource linkset = m.createResource(NameFactory.INSTANCE_HUB+"linkset/"+otherID+"/"+
-   														NameFactory.getMD5(inputS+otherID+ds.getRevision_id()),
-   														VoID.Linkset);
+           			log.warn("naming linkset using MD5 of inputS " + inputS  + "\n"+
+           			         "                           otherID " + otherID + "\n"+
+           			         "               ds.getRevision_id() " + ds.getRevision_id());
+           			// TODO: secondar param for ns https://github.com/timrdf/DataFAQs/issues/132
+           			Resource linkset = m.createResource(
+           			                        NameFactory.INSTANCE_HUB + // TODO: What namespace to use?
+           			                        "linkset/" + otherID+"/"+
+   											   	NameFactory.getMD5(inputS + otherID + ds.getRevision_id()),
+   													VoID.Linkset);
            			long size = Long.parseLong(extra.getValue().replaceAll("[^0-9]", ""));
            			linkset.addLiteral(VoID.triples, size);
            			linkset.addProperty(VoID.target, otherR);

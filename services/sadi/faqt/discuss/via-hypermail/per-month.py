@@ -143,6 +143,22 @@ resource = W3CMailingListPerMonth()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
-   print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
-   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
-   sadi.publishTwistedService(resource, port=resource.dev_port)
+
+   if len(sys.argv) == 0:
+      print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
+      print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
+      sadi.publishTwistedService(resource, port=resource.dev_port)
+   else:
+      reader= open(sys.argv[1],"r")
+      mimeType = "application/rdf+xml"
+      if len(sys.argv) > 2:
+         mimeType = sys.argv[2]
+      if len(sys.argv) > 3:
+         writer = open(sys.argv[3],"w")
+
+      graph = resource.processGraph(reader,mimeType)
+
+      if len(sys.argv) > 3:
+         writer.write(resource.serialize(graph,mimeType))
+      else:
+         print resource.serialize(graph,mimeType)

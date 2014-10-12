@@ -73,7 +73,7 @@ class W3CMailingList(faqt.Service):
 
    def process(self, input, output):
 
-      print 'processing ' + input.subject
+      print >> sys.stderr, 'processing ' + input.subject
 
       Container = output.session.get_class(ns.SIOC['Container'])
 
@@ -94,14 +94,14 @@ class W3CMailingList(faqt.Service):
                for cell in cells:
                   for a in cell.findAll('a'):
                      if a.string == 'by author':
-                        print period + ' ' + count + ' ' + input.subject+'/'+a['href']
+                        print >> sys.stderr, period + ' ' + count + ' ' + input.subject+'/'+a['href']
                         periodR = Container(input.subject+'/'+period)
                         periodR.sioc_has_space = output
                         periodR.sioc_num_items = int(count)
                         periodR.dcterms_date   = str(periodLabel)
                         periodR.save()
                         output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
-                        print '----'
+                        print >> sys.stderr, '----'
 
       # Query the RDF graph POSTed: input.session.default_store.execute
 
@@ -119,6 +119,22 @@ resource = W3CMailingList()
 
 # Used when this service is manually invoked from the command line (for testing).
 if __name__ == '__main__':
-   print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
-   print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
-   sadi.publishTwistedService(resource, port=resource.dev_port)
+
+   if len(sys.argv) == 0:
+      print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
+      print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
+      sadi.publishTwistedService(resource, port=resource.dev_port)
+   else:
+      reader= open(sys.argv[1],"r")
+      mimeType = "application/rdf+xml"
+      if len(sys.argv) > 2:
+         mimeType = sys.argv[2]
+      if len(sys.argv) > 3:
+         writer = open(sys.argv[3],"w")
+
+      graph = resource.processGraph(reader,mimeType)
+
+      if len(sys.argv) > 3:
+         writer.write(resource.serialize(graph,mimeType))
+      else:
+         print resource.serialize(graph,mimeType)
