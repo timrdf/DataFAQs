@@ -68,6 +68,5 @@ public class ByCKANGroup extends SimpleSynchronousServiceServlet {
       }catch (CKANException e) {
          e.printStackTrace();
       }
-	}
-	
+	}	
 }

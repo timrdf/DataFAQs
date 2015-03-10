@@ -228,6 +228,7 @@ fi
 
 if [[ `which apt-get 2> /dev/null` ]]; then
    offer_install_aptget                 'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
+   # sudo update-rc.d tomcat6 disable
 else
    offer_install_yum                    'tomcat6 tomcat6-docs-webapp tomcat6-javadoc tomcat6-admin-webapps' "deploy FAqT (SADI) Services implemented in Java"
 fi
