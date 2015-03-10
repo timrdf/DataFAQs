@@ -343,7 +343,9 @@ if [ "$epoch_existed" != "true" ]; then
             echo "pcurl.sh $selector_input -n selector-input &> /dev/null"                                                                         > get-selector-input.sh
             if [[ "$selector_input" =~ https ]]; then
                # http://carnivore.it/2011/10/07/error_14077458_ssl_routines_ssl23_get_server_hello_reason_1112
-               echo "curl -sL --sslv3 \"$selector_input\" > selector-input"                                                                       >> get-selector-input.sh
+               #echo "curl -sSL --sslv3 \"$selector_input\" > selector-input"                                                                      >> get-selector-input.sh
+               # curl: (35) error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure
+               echo "curl -sSL \"$selector_input\" > selector-input"                                                                              >> get-selector-input.sh
                echo "rdf2ttl.sh selector-input > selector-input.ttl"                                                                              >> get-selector-input.sh
             else
                echo "rapper -q \`guess-syntax.sh --inspect selector-input rapper\` -o turtle selector-input $selector_input > selector-input.ttl" >> get-selector-input.sh

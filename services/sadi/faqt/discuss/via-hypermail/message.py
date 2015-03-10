@@ -25,6 +25,8 @@ import time
 
 from BeautifulSoup import BeautifulSoup
 
+from dateutil.parser import parse
+
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
@@ -159,8 +161,11 @@ class W3CMailingListMessage(faqt.Service):
                   output.rdf_type.append(ns.DATAFAQS['Satisfactory'])
                   output.save()
       try:
-         date = soup.find('span', {'id':'date'}).contents[1].replace(': ','')
-         output.dcterms_date = date
+         prettyDate = soup.find('span', {'id':'date'}).contents[1].replace(': ','')
+         parsedDate = parse(prettyDate)
+         print prettyDate + ' -> ' + parsedDate.isoformat()
+         #output.dcterms_date = prettyDate
+         output.dcterms_date = parsedDate.isoformat()
          output.save()
 
          messageID = soup.find('span', {'id':'message-id'}).contents[1].replace(': &lt;','').replace('&gt;','').strip()

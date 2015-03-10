@@ -262,7 +262,7 @@ resource = BetweenTheEdges()
 #
 if __name__ == '__main__':
 
-   if len(sys.argv) == 0:
+   if len(sys.argv) == 1:
       print resource.name + ' running on port ' + str(resource.dev_port) + '. Invoke it with:'
       print 'curl -H "Content-Type: text/turtle" -d @my.ttl http://localhost:' + str(resource.dev_port) + '/' + resource.name
       sadi.publishTwistedService(resource, port=resource.dev_port)

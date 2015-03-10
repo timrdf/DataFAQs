@@ -23,6 +23,8 @@ import urllib2
 
 from BeautifulSoup import BeautifulSoup
 
+from dateutil.parser import parse
+
 # These are the namespaces we are using beyond those already available
 # (see http://packages.python.org/SuRF/modules/namespace.html#registered-general-purpose-namespaces)
 ns.register(moat='http://moat-project.org/ns#')
@@ -119,9 +121,13 @@ class W3CMailingListPerMonth(faqt.Service):
             #    sioc:has_container <http://lists.w3.org/Archives/Public/public-prov-wg/2012Mar>;
             # .         
 
+            prettyDate = str(date).strip('(').strip(')')
+            parsedDate = parse(prettyDate)
+            print prettyDate + ' -> ' + parsedDate.isoformat()
             item = Item(base + '/' + page)
             item.sioc_has_container = Container(base)
-            item.dcterms_date       = str(date).strip('(').strip(')')
+            #item.dcterms_date       = str(date).strip('(').strip(')')
+            item.dcterms_date       = parsedDate.isoformat()
             item.dcterms_identifier = str(messageID)
             item.dcterms_author     = str(authorName)
             item.save()
