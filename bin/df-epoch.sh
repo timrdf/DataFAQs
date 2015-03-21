@@ -304,7 +304,8 @@ if [ "$epoch_existed" != "true" ]; then
    # Aggregate all valid FAqT evaluation service listings.
    for input in `find $dir/faqt-services -name "faqt-services.ttl"`; do
       if [ `void-triples.sh $input` -gt 0 ]; then
-         rapper -q -g -o turtle $input                                                                                                 >> $epochDir/faqt-services.ttl
+         in=`guess-syntax.sh --inspect "$input" rapper`
+         rapper -q $in -o turtle $input                                                                                                 >> $epochDir/faqt-services.ttl
       else
          echo "[WARNING] Could not guess syntax of $input"
       fi
@@ -365,7 +366,8 @@ if [ "$epoch_existed" != "true" ]; then
    # Aggregate all valid dataset listings.
    for input in `find $dir/datasets -name "datasets.ttl.rdf"`; do
       if [ `void-triples.sh $input` -gt 0 ]; then
-         rapper -q -g -o turtle $input                                                                                                        >> $epochDir/datasets.ttl
+         in=`guess-syntax.sh --inspect "$input" rapper`
+         rapper -q $in -o turtle $input                                                                                                        >> $epochDir/datasets.ttl
       else
          echo "[WARNING] Could not guess syntax of $input"
       fi

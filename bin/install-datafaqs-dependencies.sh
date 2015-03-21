@@ -227,10 +227,19 @@ else
 fi
 
 if [[ `which apt-get 2> /dev/null` ]]; then
-   offer_install_aptget                 'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
+  #offer_install_aptget                 'tomcat6 tomcat6-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
    # sudo update-rc.d tomcat6 disable
    # https://www.howtoforge.com/tomcat-on-ubuntu-14.04-install
    # https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get
+
+
+   # From apt-get on Ubuntu 14:
+   #    tomcat7          - Servlet and JSP
+   #    tomcat7-admin    - Servlet and JSP engine -- admin web applications
+   #    tomcat7-common   - Servlet and JSP engine -- common files
+   #    tomcat7-docs     - Servlet and JSP engine -- documentation
+   #    tomcat7-examples - Servlet and JSP engine -- example web applications
+   offer_install_aptget                 'tomcat7 tomcat7-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
 else
    offer_install_yum                    'tomcat6 tomcat6-docs-webapp tomcat6-javadoc tomcat6-admin-webapps' "deploy FAqT (SADI) Services implemented in Java"
 fi
