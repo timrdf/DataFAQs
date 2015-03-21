@@ -239,7 +239,7 @@ if [[ `which apt-get 2> /dev/null` ]]; then
    #    tomcat7-common   - Servlet and JSP engine -- common files
    #    tomcat7-docs     - Servlet and JSP engine -- documentation
    #    tomcat7-examples - Servlet and JSP engine -- example web applications
-   offer_install_aptget                 'tomcat7 tomcat7-docs tomcat6-examples tomcat6-admin' "deploy FAqT (SADI) Services implemented in Java"
+   offer_install_aptget                 'tomcat7 tomcat7-docs tomcat7-examples tomcat7-admin' "deploy FAqT (SADI) Services implemented in Java"
 else
    offer_install_yum                    'tomcat6 tomcat6-docs-webapp tomcat6-javadoc tomcat6-admin-webapps' "deploy FAqT (SADI) Services implemented in Java"
 fi
