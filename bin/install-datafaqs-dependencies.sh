@@ -388,6 +388,7 @@ for egg in $eggs; do
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    else
       echo $pdiv
+      echo "http_proxy=$http_proxy HTTP_PROXY=$HTTP_PROXY" >&2
       echo $TODO $sudo easy_install -U $egg
       if [ "$dryrun" != "true" ]; then
          read -p "Try to install python module $egg using the command above? (y/n) " -u 1 install_it
