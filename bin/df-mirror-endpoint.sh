@@ -94,7 +94,7 @@ while [[ $# -gt 0 ]]; do
             #     \./
             cat $me.rq | perl -pi -e "s|SDNAME|$sdname|" > sdname.rq
             if [ ! -e sdname/sdname.rq.xml ]; then
-               cache-queries.sh $endpoint -o xml -q sdname.rq -od sdname # Find out the RDF filed loaded.
+               cache-queries.sh $endpoint -o xml -q sdname.rq -od sdname # Find out the RDF file loaded into NG.
             fi
             if [ ! -e inputs.csv ]; then
                saxon.sh $HOME/bin/get-binding.xsl a a -v name=input -in sdname/sdname.rq.xml > inputs.csv
