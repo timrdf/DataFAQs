@@ -94,7 +94,8 @@ while [[ $# -gt 0 ]]; do
             #     \./
             cat $me.rq | perl -pi -e "s|SDNAME|$sdname|" > sdname.rq
             if [ ! -e sdname/sdname.rq.xml ]; then
-               cache-queries.sh $endpoint -o xml -q sdname.rq -od sdname # Find out the RDF file loaded into NG.
+               cache-queries.sh $endpoint -o xml -q sdname.rq -od sdname # Find out the RDF file(s) loaded into NG.
+               # ^^ For example, see http://bit.ly/files-used-to-load-ieeevis-sparql-endpoint
             fi
             if [ ! -e inputs.csv ]; then
                saxon.sh $HOME/bin/get-binding.xsl a a -v name=input -in sdname/sdname.rq.xml > inputs.csv
@@ -102,7 +103,7 @@ while [[ $# -gt 0 ]]; do
             for input in `cat inputs.csv`; do
                hash=`md5.sh -qs $input`
                if [ ! -e input_$hash ]; then
-                  pcurl.sh $input -n input_$hash # Download the RDF file that was loaded into NG.
+                  pcurl.sh $input -n input_$hash # Download the RDF file that was loaded into the NG.
                   retrieved=`rename-by-syntax.sh -v input_$hash`
                   echo "<$retrieved> prov:alternateOf <input_$hash> ." >> input_$hash.prov.ttl
                   echo $sdname > $retrieved.sd_name
