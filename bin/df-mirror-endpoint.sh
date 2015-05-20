@@ -102,7 +102,7 @@ while [[ $# -gt 0 ]]; do
             for input in `cat inputs.csv`; do
                hash=`md5.sh -qs $input`
                if [ ! -e input_$hash ]; then
-                  pcurl.sh $input -n input_$hash
+                  pcurl.sh $input -n input_$hash # Download the RDF file that was loaded into NG.
                   retrieved=`rename-by-syntax.sh -v input_$hash`
                   echo "<$retrieved> prov:alternateOf <input_$hash> ." >> input_$hash.prov.ttl
                   echo $sdname > $retrieved.sd_name
