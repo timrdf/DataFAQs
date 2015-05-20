@@ -1,7 +1,8 @@
 #!/bin/bash
 #
 #3> <> prov:specializationOf <https://github.com/timrdf/DataFAQs/tree/master/bin/df-mirror-endpoint.sh>;
-#3>    rdfs:seeAlso <https://github.com/timrdf/csv2rdf4lod-automation/wiki/Named-graphs-that-know-where-they-came-from#mirroring-another-endpoints-named-graph>;
+#3>    prov:alternateOf <https://github.com/timrdf/csv2rdf4lod-automation/blob/master/bin/util/mirror-endpoint.sh>;
+#3>    rdfs:seeAlso     <https://github.com/timrdf/csv2rdf4lod-automation/wiki/Named-graphs-that-know-where-they-came-from#mirroring-another-endpoints-named-graph>;
 #3> .
 #
 # Usage:
@@ -88,6 +89,9 @@ while [[ $# -gt 0 ]]; do
          mkdir -p $sdname_path
          pushd $sdname_path &> /dev/null
             echo $sdname > sdname.csv
+            # Note: this query depends on csv2rdf4lod-automation's provenance (via its pvload.sh)
+            #    \\.//
+            #     \./
             cat $me.rq | perl -pi -e "s|SDNAME|$sdname|" > sdname.rq
             if [ ! -e sdname/sdname.rq.xml ]; then
                cache-queries.sh $endpoint -o xml -q sdname.rq -od sdname # Find out the RDF filed loaded.
