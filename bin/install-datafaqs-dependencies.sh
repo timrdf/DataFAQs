@@ -383,7 +383,11 @@ for egg in $eggs; do
    eggReg=`echo $egg | sed 's/-/./g;s/_/./g'`
    #echo "find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg" >&2
           find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg &> /dev/null; status=$?
-   there=`find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg 2> /dev/null` 
+   #there=`find $dist -mindepth 1 -maxdepth 1 -type d 2> /dev/null | grep -i $eggReg 2> /dev/null` 
+   # ^^ type -d prevented finding surf.sparql_protocol-1.0.0_r336-py2.7.egg's un-expanded file,
+   #                              BeautifulSoup-3.2.1-py2.7.egg's un-expanded file, and
+   #                              faqt-0.0.2-py2.7.egg's un-expanded file.
+   there=`find $dist -mindepth 1 -maxdepth 1 2> /dev/null | grep -i $eggReg 2> /dev/null` 
    if [[ -n "$there" ]]; then 
       echo "[okay] python egg \"$egg\" is already available at $there (${#there} $eggReg $status)"
    else
