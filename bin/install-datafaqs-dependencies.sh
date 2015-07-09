@@ -39,13 +39,13 @@ if [ "$1" == "--avoid-sudo" ]; then
    # This option is here to support Prizms installer.
    exit 1
 elif [ "$1" == "--use-sudo" ]; then
-   sudo="sudo "
+   sudo="sudo -E"
    shift
 elif [ "$dryrun" != "true" ]; then
    echo
    read -p "Q: Try to install things as sudo? (if 'N', will try to install as `whoami`) [y/N] " -u 1 use_sudo
    if [[ "$use_sudo" == [yY] ]]; then
-      sudo="sudo "
+      sudo="sudo -E"
    fi
    echo
 fi
