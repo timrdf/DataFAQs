@@ -36,7 +36,7 @@
     <properties>
         <sesame.version>2.6.0</sesame.version>
         <ripple.version>0.8-SNAPSHOT</ripple.version>
-        <restlet.version>2.1-RC3</restlet.version>
+        <restlet.version>3.0-SNAPSHOT</restlet.version>
         <junit.version>4.5</junit.version>
     </properties>
 
